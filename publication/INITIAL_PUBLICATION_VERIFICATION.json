@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "timestamp_utc": "2026-10-19T08:47:43.965299+00:00",
+  "status": "PASS",
+  "scope": "INITIAL_PUBLIC_COMMIT_ANONYMOUS_HTTP_READ_AND_REMOTE_HEAD",
+  "repository": "folklazy/Human_Parsing_Study",
+  "repository_id": 1425343165,
+  "public_url": "https://github.com/folklazy/Human_Parsing_Study",
+  "visibility": "public",
+  "default_branch": "main",
+  "verified_commit": "effd4ba4983cce74358236f70b7d47c570e0bc6d",
+  "remote_HEAD_matches_local": true,
+  "remote_main_matches_local": true,
+  "request_authorization_header_sent": false,
+  "request_cookies_sent": false,
+  "credential_helper_disabled_for_ls_remote": true,
+  "anonymous_files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/README.md",
+      "http_status": 200,
+      "bytes": 4565,
+      "sha256": "932b1c34422430e15c4cebdfff8cfa3a3f2e3a3526eba633ffca78ca8e82b909",
+      "local_bytes_match": true
+    },
+    {
+      "path": "REPORT.md",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/REPORT.md",
+      "http_status": 200,
+      "bytes": 5137,
+      "sha256": "7da95874c5a52b3af53bd9f16e25827dceac0ee9a281370e52cc10f0a41685a1",
+      "local_bytes_match": true
+    },
+    {
+      "path": "AGENTS.md",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/AGENTS.md",
+      "http_status": 200,
+      "bytes": 2396,
+      "sha256": "e601bbae54af15e918558507d06aefa8d487d3d708fa20653423a0c29d81672a",
+      "local_bytes_match": true
+    },
+    {
+      "path": "DATA_SCHEMA.md",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/DATA_SCHEMA.md",
+      "http_status": 200,
+      "bytes": 5525,
+      "sha256": "71ce35e73c61dacb3a81d97dea88dfbafed2b67aa12f80eb49c1f738e6524299",
+      "local_bytes_match": true
+    },
+    {
+      "path": "EXPERIMENT_PROTOCOL.md",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/EXPERIMENT_PROTOCOL.md",
+      "http_status": 200,
+      "bytes": 3819,
+      "sha256": "28df73fbc71c256508497f5336f50a75e404945500e857fcd98ab7f9c9d58616",
+      "local_bytes_match": true
+    },
+    {
+      "path": "STUDY_STATE.json",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/STUDY_STATE.json",
+      "http_status": 200,
+      "bytes": 1388,
+      "sha256": "5f24ab93f7ce405ecdcaa1a82ccced217eedf5711c3e0664457fea631875352e",
+      "local_bytes_match": true
+    },
+    {
+      "path": "publication/PUBLIC_FILE_MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/publication/PUBLIC_FILE_MANIFEST.json",
+      "http_status": 200,
+      "bytes": 172438,
+      "sha256": "d3ea086efa1f70ac3fb25f7ba579ebf43d052f36ff97ca8ecd73e8abf396bce6",
+      "local_bytes_match": true
+    },
+    {
+      "path": "metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+      "http_status": 200,
+      "bytes": 954,
+      "sha256": "142965e738d4f99c2af26bc75f42de0e50a8cd701bbac025015982a4edb457eb",
+      "local_bytes_match": true
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v12.yaml",
+      "url": "https://raw.githubusercontent.com/folklazy/Human_Parsing_Study/effd4ba4983cce74358236f70b7d47c570e0bc6d/configs/application_v2_first_cohort_v12.yaml",
+      "http_status": 200,
+      "bytes": 53892,
+      "sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce",
+      "local_bytes_match": true
+    }
+  ],
+  "downstream_agent_execution_tested": false,
+  "GPU_benchmark_rerun": false
+}

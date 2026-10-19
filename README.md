@@ -44,4 +44,6 @@ No company CCTV, source dataset photos, native model source trees, weights or bu
 
 ## Publication
 
-The user approved a new **PUBLIC** repository, `folklazy/Human_Parsing_Study`, based on post-run snapshot `2d78f85b8785e87a568fd6ac8f9e1006a40972b0`. Publication is approved and being prepared; public availability is not yet claimed. [Current publication state](publication/PUBLICATION_STATE.json) is separate from the unchanged scientific run status. Subsequent publication commits are also post-run records, not launch revisions.
+Published **PUBLIC** repository: [folklazy/Human_Parsing_Study](https://github.com/folklazy/Human_Parsing_Study). The approved base `2d78f85b8785e87a568fd6ac8f9e1006a40972b0` and subsequent publication commits are **post-run snapshots**, not launch revisions.
+
+Anonymous README/result/config reads and remote HEAD were verified at the [initial public commit](publication/INITIAL_PUBLICATION_VERIFICATION.json). [Current publication state](publication/PUBLICATION_STATE.json) is separate from the unchanged scientific run status. The canonical research working copy remains `Human_Parsing_MHPv2_Study`; this repository is its reviewed public snapshot, with explicit synchronization instructions in [HANDOFF.md](HANDOFF.md).

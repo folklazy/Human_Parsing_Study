@@ -12,10 +12,12 @@
   "symlinks": 0,
   "benchmark_inference": false,
   "deferred_links": [],
-  "timestamp_utc": "2026-10-19T08:46:22.002864+00:00",
+  "timestamp_utc": "2026-10-19T08:49:02.876869+00:00",
+  "scope_note": "Publication-only checks after first successful public push; final containing commit is verified separately after its push",
   "approved_base_commit": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
-  "scope_note": "Publication-only changes; previous 133 portable CPU tests retained with all 85 test-input hashes unchanged",
   "CPU_tests_rerun": false,
+  "previous_133_CPU_test_inputs_unchanged": 85,
   "third_party_archive_scripts_redistribution": "PASS_MIT_NOTICES_RETAINED",
-  "additional_withheld_files": []
+  "additional_withheld_files": [],
+  "initial_public_commit_anonymous_reads": 9
 }

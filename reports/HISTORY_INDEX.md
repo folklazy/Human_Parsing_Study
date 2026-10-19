@@ -2,6 +2,8 @@
 
 Current authority: [EXPERIMENT_PROTOCOL.md](../EXPERIMENT_PROTOCOL.md), [STUDY_STATE.json](../STUDY_STATE.json), [terminal report](../REPORT.md). Older Stage 0 reports may say benchmark unauthorized or checkpoints unavailable; those were dated facts, not current authority. No historical text is rewritten to anticipate later outcomes.
 
+Current GitHub publication authority: [publication state](../publication/PUBLICATION_STATE.json), [explicit approval record](../publication/PUBLICATION_APPROVAL.json), and [initial anonymous verification](../publication/INITIAL_PUBLICATION_VERIFICATION.json). The original [publication preparation review](../publication/PUBLICATION_REVIEW_TH.md) records the earlier pending-approval stage and is retained as history. Publication commits are post-run snapshots, separate from benchmark freeze evidence.
+
 [Machine index](../publication/HISTORY_INDEX.json) contains hashes and publication status. Historical deep links may reference external artifacts; use ARTIFACTS.md. Original pre-public landing/schema/standard/state documents are preserved under archive/pre_public_snapshot/.
 
 | Report | Role |
