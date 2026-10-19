@@ -1,0 +1,381 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "timestamp_utc": "2026-10-19T08:16:15.206890+00:00",
+  "clean_checkout_method": "git checkout-index into empty directory",
+  "tested_git_staged_tree": "9d9d5193fbe12f5985b0e742dd0bcbaee94d9c46",
+  "commit_at_test": null,
+  "commit_at_test_reason": "Fresh staged-tree checkout tested before post-run publication commit",
+  "CPU_tests_executed": 133,
+  "CPU_tests_passed": 133,
+  "CPU_test_failures": 0,
+  "CPU_test_skips": 0,
+  "asset_dependent_tests_not_counted_as_passing": [
+    "2 launch-plan tests require actual checkpoint/config files",
+    "7 fresh-integration tests require detailed GT validation packages",
+    "9 validation-launch tests require detailed GT packages"
+  ],
+  "initial_attempt": {
+    "tests": 135,
+    "errors": 2,
+    "cause": "Two launch-plan tests depended on external model files; kept unchanged and explicitly classified outside portable scope",
+    "evidence": "publication/validation/CLEAN_CPU_ATTEMPT_1.log"
+  },
+  "successful_attempt_log": "publication/validation/CLEAN_CPU_ATTEMPT_2.log",
+  "benchmark_CPU_tests_historical": 151,
+  "historical_151_not_claimed_as_clean_clone_count": true,
+  "tests_original_source_modified": false,
+  "fake_models_or_GT_created": false,
+  "new_packages_installed": false,
+  "model_loading": false,
+  "GPU_inference": false,
+  "full_benchmark": false,
+  "test_scope_hashes": [
+    {
+      "path": "src/contracts/prediction.py",
+      "sha256": "ef0335ea0c7a045d6cee4df84f6ae2ab14310fc6735560b634059551a574ac92"
+    },
+    {
+      "path": "src/data/ccihp_quality.py",
+      "sha256": "7b07f919fc3cf76bc0a2be2b66c8018b4e71be7e0550f0fc9bd9aefd3b958a1a"
+    },
+    {
+      "path": "src/data/cihp_datasetninja.py",
+      "sha256": "f49bc283b152c30da8abdcfc617d2524750f58ed54f5fcbcdc0ea5c88aaced7b"
+    },
+    {
+      "path": "src/data/ccihp_gt.py",
+      "sha256": "f9827c5588d72d21518f1bed7769c27b0372525c464dfa096ba07226146f791e"
+    },
+    {
+      "path": "src/data/mhpv2.py",
+      "sha256": "48971a71dc2a03ab785d408c1cb5c013e777df583ad8d7d4b7861d49f2f01fb6"
+    },
+    {
+      "path": "src/application_v2/cohorts.py",
+      "sha256": "e6fa28ef15040252b6710c10bbc7eca5a664c139b0f54b33275d5f45bd08cef7"
+    },
+    {
+      "path": "src/application_v2/acquisition.py",
+      "sha256": "d7e6ad302b47c524c32adc41303d902a89492e23a7fc79238a8ae040ba0332f1"
+    },
+    {
+      "path": "src/application_v2/validation_packages.py",
+      "sha256": "b3b7427b276e757ac6f2664fbc58c8b8870c4e12f27faf594bd9265b4e4d979b"
+    },
+    {
+      "path": "src/application_v2/first_cohort_fresh.py",
+      "sha256": "708a45567e4c614934c482d1dccd6738931ae9e0a9431047fd9593114f62631a"
+    },
+    {
+      "path": "src/application_v2/artifacts.py",
+      "sha256": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478"
+    },
+    {
+      "path": "src/application_v2/first_cohort_validation.py",
+      "sha256": "1069e4411a655a79865223f800d5d2cc926fa578f4a77b906f75cead28343e99"
+    },
+    {
+      "path": "src/application_v2/__init__.py",
+      "sha256": "0375e209e4f6e5d613a62df6d3124ab92c51ec266f75c49c7fa4a40e5a51d07b"
+    },
+    {
+      "path": "src/application_v2/taxonomy.py",
+      "sha256": "74b546d7f88f206b13015833e2e5d7ada267a490ae2aaf8aaa4df90a7bdf31ac"
+    },
+    {
+      "path": "src/application_v2/contexts.py",
+      "sha256": "8b5da7391b82e393b4d7d78b12492f7b25fb11e86dce22428326db7b2aefe4dc"
+    },
+    {
+      "path": "src/application_v2/comparison.py",
+      "sha256": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d"
+    },
+    {
+      "path": "src/application_v2/first_cohort_replay.py",
+      "sha256": "bb4a8deaeb0e892e9dc0ef788551ea3f2371116e86bf3fbb63f7426144551631"
+    },
+    {
+      "path": "src/application_v2/policy.py",
+      "sha256": "7df683f725fe1f2f36b0f4c122092c3ce904983c3d54319686760b7b2bee388b"
+    },
+    {
+      "path": "src/application_v2/immutable_config.py",
+      "sha256": "d9eb7173cce9678958a9f8caec77a07ae5b5e5886bfdf624e29228fccb4a9d41"
+    },
+    {
+      "path": "src/application_v2/validation_data.py",
+      "sha256": "0fb40e90c83f052d2c21534e69407a19b507b1a2807bc038637fb8f2a4059d93"
+    },
+    {
+      "path": "src/application_v2/runner.py",
+      "sha256": "3771a3ac239a21c0c6fdb9b2b81f5353ea41da7e31c624fe3cb7d511353dffb5"
+    },
+    {
+      "path": "src/application_v2/contracts.py",
+      "sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4"
+    },
+    {
+      "path": "src/application_v2/plan.py",
+      "sha256": "c052fabbbf236d07d8489541305df5b5b149143d0f1f5d7f0361d3af6d1761d4"
+    },
+    {
+      "path": "src/application_v2/validation_launch.py",
+      "sha256": "1f610a4111d2dadb449a2eabae7e966ec7e017a7cf38a739bee9e4e640c67d63"
+    },
+    {
+      "path": "src/application_v2/scoring.py",
+      "sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7"
+    },
+    {
+      "path": "src/application_v2/evaluation.py",
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba"
+    },
+    {
+      "path": "src/adapters/fashn.py",
+      "sha256": "1fecd7bdea17c55eefb241651f27e623708f5edbfe42a3545c0e49a58a0ed74b"
+    },
+    {
+      "path": "src/adapters/base.py",
+      "sha256": "81e143c474fc2d414789b96d431057c5ccb2e0a7528eb9a3e532bc3bf8ff4b70"
+    },
+    {
+      "path": "src/evaluation/common_metrics.py",
+      "sha256": "49e4b1d35d37cc5d849cf7a0d4e86bbf8cbb1b5ec66f4ffa894e01536500c3af"
+    },
+    {
+      "path": "src/evaluation/official_mhp_compat.py",
+      "sha256": "e0bd0f5d8ba58f858952bc7d95aed3bd9afecd28e4be5d93b8144e9f95d11c46"
+    },
+    {
+      "path": "tests/test_ccihp_gt.py",
+      "sha256": "536e13dc471ecfb703ebb274a5762190bb5e36c03b0705609b241db3d29d7a41"
+    },
+    {
+      "path": "tests/test_application_v2_immutable_config.py",
+      "sha256": "8b557ea31f83678d4fee4f79f86c01609d94896d4ca8b7e5a3f5ed41d617f497"
+    },
+    {
+      "path": "tests/test_application_v2_contexts.py",
+      "sha256": "e9ec08335017edc70a39604ece27ff1681e36cc77221e7cf470a428d966ad88a"
+    },
+    {
+      "path": "tests/test_official_mhp_compat.py",
+      "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
+    },
+    {
+      "path": "tests/test_application_v2_fresh_integration.py",
+      "sha256": "3b9e4decb05207833b14070d15e1bf4b52060c6e5bc68e20e7f6fb9bac52da62"
+    },
+    {
+      "path": "tests/test_application_v2_handoff.py",
+      "sha256": "3f7de09e205ad8c65c392cf16bacc083041ea3d8f4c962cc4b76e88681cf327b"
+    },
+    {
+      "path": "tests/test_application_v2_cpi_evidence_acceptance.py",
+      "sha256": "d0cadb67a5eed77d15426096a808d472ae0e3450d8b6b3eb29f6a9d089243ed3"
+    },
+    {
+      "path": "tests/test_cihp_archive_preflight.py",
+      "sha256": "e5e4086001c504272b7e537cd7bd29b54af7195838e994c8231c61c03854b272"
+    },
+    {
+      "path": "tests/test_mhpv2_stage0.py",
+      "sha256": "39c5c7446cca7694b5c437b2e459fd3b66d4a1f543a959e0bf0fbb7809a1397f"
+    },
+    {
+      "path": "tests/test_application_v2_acquisition.py",
+      "sha256": "7cdb82b6ccae7b569b3f5ac4cb44a2e4f15b74d2b7e20bdd05d8a8cd759e0572"
+    },
+    {
+      "path": "tests/test_application_v2_first_cohort_policy.py",
+      "sha256": "ce9852b669ce188c609ad6e271963e9bdf22ade5d82649cba71b81bd07bff9cb"
+    },
+    {
+      "path": "tests/test_application_v2_yolo_bootstrap.py",
+      "sha256": "54490cb8fc7624f972ba649852cb02aa305c0c19f78d6cc922a14277444238f2"
+    },
+    {
+      "path": "tests/test_dataset_reassessment.py",
+      "sha256": "5a4ff56f51ba1f7552cc333ad04e19175bb7e63afeef240ba4f7ea48a9316a0b"
+    },
+    {
+      "path": "tests/test_ccihp_quality.py",
+      "sha256": "b16b9ae33a637c049b958053786b91a7328acff1b95a8315e5b96b1cb844fedd"
+    },
+    {
+      "path": "tests/test_application_v2_comparison.py",
+      "sha256": "5ec5e66d7df7f0543ab508888c72f7158e4edf76c56facf0606a09cdc182f0bf"
+    },
+    {
+      "path": "tests/test_application_v2.py",
+      "sha256": "b5057541817aa395cc651c112e0314f57344675364b218e522ad4ed678cecc6b"
+    },
+    {
+      "path": "tests/test_application_v2_validation_launch.py",
+      "sha256": "3cc3f51ff30fa1d259086518b8c942af583eceb9d78ab0079ece0f65b8e9529d"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v8.yaml",
+      "sha256": "77e900d6455b702af0ce5a24b8cb4114f00fa2d53f482e57d073b12874d06635"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v6.yaml",
+      "sha256": "60dd2d441b8e9746e0abf3dd6309aad9083a321ac1da1640bae19903cd831fee"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v4.yaml",
+      "sha256": "69b6668249d624a850fbcc01b60c9987bdcc1b154cee5bb6f28efdff9852e036"
+    },
+    {
+      "path": "configs/research_scope.yaml",
+      "sha256": "1c7894943865a8ff504ed353ad78b671a368bb56434d8468da53d339610bdde5"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v7.yaml",
+      "sha256": "ed5fa23d94d8a3264b3a8febc5c9d2a63f1bde0bc5430957d7e9156ac3e3a984"
+    },
+    {
+      "path": "configs/application_v2_handoff_v3.yaml",
+      "sha256": "bd9bb7af89b6b73cf79743b9bd7a74c12663c6a3a542961603595361177a3c3c"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v11.yaml",
+      "sha256": "e4bfffe627001055835850a2d8b29d2397babc9bfd8a7abaa98ef7a079867a55"
+    },
+    {
+      "path": "configs/dataset.yaml",
+      "sha256": "eeffdb49df8df5075fea9346eb1ed7d8d838d35c580f8d7d57011b831e9bc88a"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v5.yaml",
+      "sha256": "c04ac3adc86f72565387b7197c7a7defa5239c320b3394273d9977f666a3ee6b"
+    },
+    {
+      "path": "configs/application_v2.yaml",
+      "sha256": "eaa9c97c2db376ac1c8b69d47629365ac7b5f6cdd8c1ba5264a14084287e672d"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v12.yaml",
+      "sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v10.yaml",
+      "sha256": "354d76df3f20b7878f3c589f225b88091cc7f049a76c27cb11596d4cd8c02896"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v9.yaml",
+      "sha256": "690b53e82975450da3c86d4de84ab667c6098cfedeafe5c67cc819fd3c8c5d16"
+    },
+    {
+      "path": "configs/study.yaml",
+      "sha256": "a093ce8a950f8c20e09eeab44692c1e82fd7e3b1b0c4cc21b7de37f808ae7c48"
+    },
+    {
+      "path": "taxonomy/CCIHP_PERSON_EVALUATION_COHORTS_DRAFT_V1.yaml",
+      "sha256": "a31e2e5ec637b1e2fec5823215617b2ec51870f6654e432e3c36e8dbe98990a3"
+    },
+    {
+      "path": "taxonomy/APPLICATION_HANDOFF_VIEW_CARDS_DRAFT_V1.json",
+      "sha256": "ab9140a1ef8f6a427e2ef4520b56e656421247ec26837ef2cf56584b3b893e8c"
+    },
+    {
+      "path": "taxonomy/APPLICATION_CCIHP_NATIVE_DIAGNOSTIC_V1.json",
+      "sha256": "f6a4343f815f6cc083096d36b61ceaa48a63abc7555aea4c9e757cca6fccd27a"
+    },
+    {
+      "path": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V2.json",
+      "sha256": "0848a6f8ab6439a92a57f23acd8e09b0943d8c8918cdd2c01336b2b55365fa50"
+    },
+    {
+      "path": "taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+      "sha256": "a7f8f40994465d6b1852248e922af1a397d8ff974d601ee99b47282a1ff28648"
+    },
+    {
+      "path": "taxonomy/COMMON_HP_EXTENDED_DRAFT.yaml",
+      "sha256": "9d74ab22818cdd652ad64b6d2d8684391c4fe8dafa5d5d94cb7a9e3a6056989d"
+    },
+    {
+      "path": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_ACCEPTED_V2.csv",
+      "sha256": "1c32910ab6e69332b4f53ce25eab3836faa0c3449b0c697cb708706a51a24db0"
+    },
+    {
+      "path": "taxonomy/CIHP_COMMON_HP_PROPOSAL_V1.yaml",
+      "sha256": "dea330703b056cfda458e3a2fcba9f5495a90574a69aa708e95870f0947286a6"
+    },
+    {
+      "path": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V1.json",
+      "sha256": "7986ec4a7e17dc69958bfcf460c72be348a8c5b84d477ec4d0b5016ac736939e"
+    },
+    {
+      "path": "taxonomy/APPLICATION_HANDOFF_VIEW_CARDS_DRAFT_V2.json",
+      "sha256": "f19c849f1a456478b5c047f3ef58f9f51cb043132c4cae1fda0159cacac52dab"
+    },
+    {
+      "path": "taxonomy/MHPV2_NATIVE.json",
+      "sha256": "bb773b899d22bee415957301af7198848ff7780ed9944c4f038c5843fb59099e"
+    },
+    {
+      "path": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_V1.csv",
+      "sha256": "b0cc2f8324d0b37a3b805e96d932b9bc7ec5c9a524766afe8dd2bebd25f02eb1"
+    },
+    {
+      "path": "taxonomy/CIHP_NATIVE_SOURCE_INVENTORY_DRAFT.yaml",
+      "sha256": "12c3f09ffb5d285b63fbe283d626177a3ca8f241e12674d629f16bff7e70b54b"
+    },
+    {
+      "path": "taxonomy/TAXONOMY_REPRESENTABILITY_MATRIX.csv",
+      "sha256": "f7775f9e8b4338c9a58085d200569d438ad326a7842dc8393d513b570e6d908a"
+    },
+    {
+      "path": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+      "sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e"
+    },
+    {
+      "path": "taxonomy/COMMON_HP_CORE_DRAFT.yaml",
+      "sha256": "653e37d57762da62bb902ae79f63154e68dd24a87e799a3830d18bb63e90cbaf"
+    },
+    {
+      "path": "taxonomy/native/D2FP_CIHP.yaml",
+      "sha256": "2425f9cd545763368bae550713a36be72abcc550d71f2aa100b0d43a8172626d"
+    },
+    {
+      "path": "taxonomy/native/SCHP_LIP.yaml",
+      "sha256": "19279fc4b937e854a308a357f43cad61433ac8e71e2d3c5e6d14b2043601758f"
+    },
+    {
+      "path": "taxonomy/native/D2FP_LIP.yaml",
+      "sha256": "edd980def4a4ecd9a6de05b3152ce2e3e94a910b6c103e4eb443d0b98d12a30d"
+    },
+    {
+      "path": "taxonomy/native/FASHN.yaml",
+      "sha256": "5d392a2f3b9038fdddffd73e9682a90e00000381ecee179ba3bf1c4dac22d6ae"
+    },
+    {
+      "path": "taxonomy/native/CPI_MHPV2.yaml",
+      "sha256": "6d6c79be63c040e7f3491632a3d493b59fcecb972758a134e0343a9eea06950e"
+    },
+    {
+      "path": "taxonomy/native/M2FP_MHPV2.yaml",
+      "sha256": "20330dd547be17818c5535a8bcb7860bd4d67bca42c09cc2c71e7e7c6d580a57"
+    },
+    {
+      "path": "scripts/run_portable_cpu_tests.py",
+      "sha256": "bbfee8d006baa272d0fbae23a79ce00e37c905d4738708695aa23fc674e0b807"
+    },
+    {
+      "path": "scripts/first_cohort_yolo_bootstrap_worker.py",
+      "sha256": "bb59f671ad215a053a4d32f58d6ad74585b70fb007a6a4c806086e231bd2cecc"
+    },
+    {
+      "path": "scripts/first_cohort_entrypoint.py",
+      "sha256": "9ed7147cdf609454ebacb0ab7e5809aee53dbadc4cc1db7bbf0e691c9436002a"
+    }
+  ],
+  "tested_CPU_python": "3.10.21 (main, Sep  1 2026, 14:16:49) [Clang 22.1.3 ]",
+  "tested_CPU_dependency_versions": [
+    "PyYAML==6.0.3",
+    "numpy==2.2.6",
+    "pillow==11.3.0",
+    "scipy==1.15.3"
+  ]
+}

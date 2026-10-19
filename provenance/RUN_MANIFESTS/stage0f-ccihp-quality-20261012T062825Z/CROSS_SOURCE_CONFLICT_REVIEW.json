@@ -1,0 +1,980 @@
+{
+  "objects": [
+    {
+      "split": "Training",
+      "image_id": "0002948",
+      "part_object_id": 53871944,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 932
+      },
+      "CC_human_pixels": {
+        "1": 931,
+        "2": 1
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0002948",
+      "part_object_id": 53871918,
+      "CIHP_category": 9,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "7": 1545,
+        "9": 3104
+      },
+      "CC_human_pixels": {
+        "6": 4643,
+        "7": 6
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0017246",
+      "part_object_id": 54131983,
+      "CIHP_category": 12,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 2,
+        "12": 681
+      },
+      "CC_human_pixels": {
+        "0": 2,
+        "3": 681
+      },
+      "unassigned_pixels": 2,
+      "unassigned_CCIHP_background_pixels": 2,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339556,
+      "CIHP_category": 2,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "2": 529,
+        "13": 1,
+        "15": 1
+      },
+      "CC_human_pixels": {
+        "1": 530,
+        "2": 1
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339548,
+      "CIHP_category": 5,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 6,
+        "5": 2275
+      },
+      "CC_human_pixels": {
+        "0": 6,
+        "1": 2275
+      },
+      "unassigned_pixels": 6,
+      "unassigned_CCIHP_background_pixels": 6,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339544,
+      "CIHP_category": 9,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 10,
+        "9": 3081
+      },
+      "CC_human_pixels": {
+        "0": 10,
+        "1": 3080,
+        "2": 1
+      },
+      "unassigned_pixels": 10,
+      "unassigned_CCIHP_background_pixels": 10,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339543,
+      "CIHP_category": 13,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "13": 126,
+        "15": 1
+      },
+      "CC_human_pixels": {
+        "1": 126,
+        "2": 1
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339541,
+      "CIHP_category": 9,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 49,
+        "9": 1119
+      },
+      "CC_human_pixels": {
+        "0": 49,
+        "1": 2,
+        "2": 1117
+      },
+      "unassigned_pixels": 49,
+      "unassigned_CCIHP_background_pixels": 49,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0029775",
+      "part_object_id": 54339540,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 11,
+        "15": 620
+      },
+      "CC_human_pixels": {
+        "0": 11,
+        "1": 620
+      },
+      "unassigned_pixels": 11,
+      "unassigned_CCIHP_background_pixels": 11,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0027637",
+      "part_object_id": 54304554,
+      "CIHP_category": 16,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "16": 630
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "2": 630
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0027637",
+      "part_object_id": 54304544,
+      "CIHP_category": 17,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "17": 447
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 447
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0027637",
+      "part_object_id": 54304541,
+      "CIHP_category": 15,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 1,
+        "14": 2,
+        "15": 1291
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 1280,
+        "2": 13
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "part_object_id": 54407377,
+      "CIHP_category": 18,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 113,
+        "18": 37
+      },
+      "CC_human_pixels": {
+        "0": 113,
+        "6": 37
+      },
+      "unassigned_pixels": 113,
+      "unassigned_CCIHP_background_pixels": 113,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "part_object_id": 54407372,
+      "CIHP_category": 2,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "2": 1140,
+        "4": 3,
+        "5": 2,
+        "21": 2
+      },
+      "CC_human_pixels": {
+        "7": 13,
+        "8": 1134
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "part_object_id": 54407356,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 1228
+      },
+      "CC_human_pixels": {
+        "7": 2,
+        "8": 1226
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "part_object_id": 54407327,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 830,
+        "10": 3,
+        "12": 1,
+        "20": 25
+      },
+      "CC_human_pixels": {
+        "7": 857,
+        "8": 2
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033954",
+      "part_object_id": 54409409,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 2124,
+        "13": 1
+      },
+      "CC_human_pixels": {
+        "3": 2,
+        "4": 2123
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0033954",
+      "part_object_id": 54409403,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 1656,
+        "13": 1
+      },
+      "CC_human_pixels": {
+        "3": 1649,
+        "4": 8
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932287,
+      "CIHP_category": 2,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 209,
+        "2": 883
+      },
+      "CC_human_pixels": {
+        "0": 209,
+        "2": 883
+      },
+      "unassigned_pixels": 209,
+      "unassigned_CCIHP_background_pixels": 209,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932285,
+      "CIHP_category": 14,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "14": 129
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 129
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932279,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 2,
+        "15": 765,
+        "17": 7
+      },
+      "CC_human_pixels": {
+        "0": 2,
+        "2": 772
+      },
+      "unassigned_pixels": 2,
+      "unassigned_CCIHP_background_pixels": 2,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932273,
+      "CIHP_category": 5,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 16,
+        "5": 4871,
+        "7": 8,
+        "16": 1,
+        "20": 2,
+        "21": 3
+      },
+      "CC_human_pixels": {
+        "0": 7,
+        "2": 4894
+      },
+      "unassigned_pixels": 7,
+      "unassigned_CCIHP_background_pixels": 7,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932272,
+      "CIHP_category": 9,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 13,
+        "9": 5699
+      },
+      "CC_human_pixels": {
+        "0": 13,
+        "2": 5699
+      },
+      "unassigned_pixels": 13,
+      "unassigned_CCIHP_background_pixels": 13,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "part_object_id": 53932270,
+      "CIHP_category": 7,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 29,
+        "2": 8,
+        "7": 3047
+      },
+      "CC_human_pixels": {
+        "0": 29,
+        "2": 3055
+      },
+      "unassigned_pixels": 29,
+      "unassigned_CCIHP_background_pixels": 29,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0012811",
+      "part_object_id": 54051649,
+      "CIHP_category": 13,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "10": 101,
+        "13": 168
+      },
+      "CC_human_pixels": {
+        "1": 2,
+        "2": 267
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0012811",
+      "part_object_id": 54051642,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 4088,
+        "7": 8215,
+        "15": 2
+      },
+      "CC_human_pixels": {
+        "1": 12,
+        "2": 12293
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0031948",
+      "part_object_id": 54373373,
+      "CIHP_category": 2,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "2": 5529,
+        "21": 18
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "2": 5547
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0031948",
+      "part_object_id": 54373362,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 4,
+        "15": 380
+      },
+      "CC_human_pixels": {
+        "0": 4,
+        "1": 380
+      },
+      "unassigned_pixels": 4,
+      "unassigned_CCIHP_background_pixels": 4,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0004233",
+      "part_object_id": 53893663,
+      "CIHP_category": 6,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "5": 10588,
+        "11": 269,
+        "12": 5660
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 16517
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "CIHP dress6 is split across CCIHP upper5/skirt12; raw ID6 is FaceMask",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0004233",
+      "part_object_id": 53893655,
+      "CIHP_category": 6,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "5": 10948,
+        "11": 163,
+        "12": 11814
+      },
+      "CC_human_pixels": {
+        "1": 1,
+        "2": 22924
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "CIHP dress6 is split across CCIHP upper5/skirt12; raw ID6 is FaceMask",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0004233",
+      "part_object_id": 53893651,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "15": 625
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "2": 625
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0004233",
+      "part_object_id": 53893650,
+      "CIHP_category": 7,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 262,
+        "7": 8656
+      },
+      "CC_human_pixels": {
+        "0": 262,
+        "1": 8656
+      },
+      "unassigned_pixels": 262,
+      "unassigned_CCIHP_background_pixels": 262,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0026173",
+      "part_object_id": 54281711,
+      "CIHP_category": 6,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 17,
+        "5": 2162,
+        "12": 1906
+      },
+      "CC_human_pixels": {
+        "0": 17,
+        "3": 4068
+      },
+      "unassigned_pixels": 17,
+      "unassigned_CCIHP_background_pixels": 17,
+      "definition_note": "CIHP dress6 is split across CCIHP upper5/skirt12; raw ID6 is FaceMask",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0026173",
+      "part_object_id": 54281708,
+      "CIHP_category": 12,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "9": 3,
+        "12": 4511
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "4": 4514
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0026173",
+      "part_object_id": 54281699,
+      "CIHP_category": 15,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 1,
+        "15": 40
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "3": 38,
+        "4": 2
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0026173",
+      "part_object_id": 54281695,
+      "CIHP_category": 5,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 49,
+        "5": 378
+      },
+      "CC_human_pixels": {
+        "0": 49,
+        "3": 378
+      },
+      "unassigned_pixels": 49,
+      "unassigned_CCIHP_background_pixels": 49,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0026173",
+      "part_object_id": 54281689,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 4,
+        "15": 473
+      },
+      "CC_human_pixels": {
+        "0": 4,
+        "4": 473
+      },
+      "unassigned_pixels": 4,
+      "unassigned_CCIHP_background_pixels": 4,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0023269",
+      "part_object_id": 54523214,
+      "CIHP_category": 7,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 10,
+        "5": 41,
+        "7": 3180
+      },
+      "CC_human_pixels": {
+        "0": 10,
+        "1": 3221
+      },
+      "unassigned_pixels": 10,
+      "unassigned_CCIHP_background_pixels": 10,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0023269",
+      "part_object_id": 54523205,
+      "CIHP_category": 15,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 2,
+        "15": 68
+      },
+      "CC_human_pixels": {
+        "0": 2,
+        "1": 68
+      },
+      "unassigned_pixels": 2,
+      "unassigned_CCIHP_background_pixels": 2,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037710",
+      "part_object_id": 54574289,
+      "CIHP_category": 14,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "14": 372
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 372
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037710",
+      "part_object_id": 54574283,
+      "CIHP_category": 7,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 2,
+        "5": 1,
+        "7": 2923,
+        "9": 1,
+        "15": 3
+      },
+      "CC_human_pixels": {
+        "0": 2,
+        "1": 2926,
+        "3": 2
+      },
+      "unassigned_pixels": 2,
+      "unassigned_CCIHP_background_pixels": 2,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037710",
+      "part_object_id": 54574279,
+      "CIHP_category": 5,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "0": 1,
+        "5": 4,
+        "7": 757,
+        "14": 57
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "1": 4,
+        "2": 814
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Validation",
+      "image_id": "0016932",
+      "part_object_id": 54508055,
+      "CIHP_category": 14,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "14": 3132
+      },
+      "CC_human_pixels": {
+        "1": 4,
+        "2": 3128
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0005008",
+      "part_object_id": 53909145,
+      "CIHP_category": 12,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "12": 7162,
+        "21": 1
+      },
+      "CC_human_pixels": {
+        "1": 7162,
+        "2": 1
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0012008",
+      "part_object_id": 54036029,
+      "CIHP_category": 12,
+      "prior_status": "MULTIPLE_HUMANS",
+      "CC_category_pixels": {
+        "12": 7688
+      },
+      "CC_human_pixels": {
+        "1": 8,
+        "2": 7680
+      },
+      "unassigned_pixels": 0,
+      "unassigned_CCIHP_background_pixels": 0,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0032190",
+      "part_object_id": 54377976,
+      "CIHP_category": 6,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 1,
+        "5": 2742,
+        "7": 55342
+      },
+      "CC_human_pixels": {
+        "0": 1,
+        "2": 58084
+      },
+      "unassigned_pixels": 1,
+      "unassigned_CCIHP_background_pixels": 1,
+      "definition_note": "CIHP dress6 is split across CCIHP upper5/skirt12; raw ID6 is FaceMask",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    },
+    {
+      "split": "Training",
+      "image_id": "0032190",
+      "part_object_id": 54377973,
+      "CIHP_category": 5,
+      "prior_status": "ONE_HUMAN_WITH_UNASSIGNED_PIXELS",
+      "CC_category_pixels": {
+        "0": 5,
+        "5": 26855,
+        "21": 2
+      },
+      "CC_human_pixels": {
+        "0": 5,
+        "1": 26857
+      },
+      "unassigned_pixels": 5,
+      "unassigned_CCIHP_background_pixels": 5,
+      "definition_note": "Same numeric ID does not prove same category scope or boundaries",
+      "cause": "UNRESOLVED_PHYSICAL_OWNERSHIP; structural cross-source discrepancy verified",
+      "no_majority_repair": true
+    }
+  ],
+  "status_counts": {
+    "MULTIPLE_HUMANS": 21,
+    "ONE_HUMAN_WITH_UNASSIGNED_PIXELS": 26
+  },
+  "native_CIHP_human_reference_available": false,
+  "physical_causes_confirmed": false,
+  "same_numeric_class_is_not_semantic_equivalence": true
+}

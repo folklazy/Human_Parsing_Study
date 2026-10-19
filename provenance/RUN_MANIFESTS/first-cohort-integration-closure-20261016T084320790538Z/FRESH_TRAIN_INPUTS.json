@@ -1,0 +1,42 @@
+{
+  "split": "Training",
+  "images": [
+    {
+      "image_id": "0021834",
+      "split": "Training",
+      "wh": [
+        500,
+        321
+      ],
+      "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+      "rgb_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0021834.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0021834.jpg"
+    },
+    {
+      "image_id": "0000930",
+      "split": "Training",
+      "wh": [
+        500,
+        346
+      ],
+      "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+      "rgb_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0000930.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0000930.jpg"
+    },
+    {
+      "image_id": "0001368",
+      "split": "Training",
+      "wh": [
+        500,
+        375
+      ],
+      "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+      "rgb_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0001368.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0001368.jpg"
+    }
+  ],
+  "source_manifest_sha256": "bd9665e5599424d1e1854c1ee83ad0612c7e7d1b571de261135fdf4def74f0f9"
+}

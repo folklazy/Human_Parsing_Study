@@ -1,0 +1,42 @@
+schema_version: '1.0'
+study_id: human_parsing_mhpv2
+status: STAGE0_BLOCKED_WAITING_FOR_REVIEW
+config_status: DRAFT_NOT_BENCHMARK_AUTHORIZATION
+workspace_resolution: parent_of_study_directory
+dataset_root_environment: MHPV2_DATASET_ROOT
+dataset_root_default_workspace_relative: datasets/LV-MHP-v2
+asset_roots:
+  environments: .venvs
+  checkpoints: models/human_parsing
+  source: third_party/human_parsing
+precision_proposal: FP32
+seed: 20261008
+stage0:
+  maximum_model_smoke_images: 3
+  smoke_split: train
+  actual_model_smokes_executed: 0
+  large_downloads_authorized_now: false
+  mhp_dependent_inference_allowed_now: false
+  parser_checkpoint_downloads_deferred_by_user: true
+  source_dataset_synthetic_tests_only_now: true
+scope:
+  ppss: PAUSED_DO_NOT_ACCESS
+  yolo_study: IMMUTABLE
+  full_benchmark: NOT_AUTHORIZED
+  training: NOT_AUTHORIZED
+  hybrid: NOT_AUTHORIZED
+  color_analysis: NOT_AUTHORIZED
+tracks_draft:
+  A: ORACLE_PERSON
+  B: YOLO26X_CONDITIONED
+  C: NATIVE_REFERENCE
+  D: FULL_FRAME_ASSOCIATION_ALTERNATIVE_DESIGN_ONLY
+review_required:
+  - Required RGB decode failures and provenance of source replacements
+  - Native GT person ownership anomaly
+  - Exact train-validation content overlap and checkpoint exposure
+  - Candidate weight permissions and intended-checkpoint GPU smoke tests
+  - Shared taxonomy projections and evaluation denominators
+  - Target-person ownership and crop geometry
+  - Native evaluator empty-prediction guard and parity
+  - Workload-specific timing boundaries

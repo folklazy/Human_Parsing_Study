@@ -1,0 +1,89 @@
+{
+  "split": "Training",
+  "full_benchmark": false,
+  "images": [
+    {
+      "image_id": "0021834",
+      "split": "Training",
+      "wh": [
+        500,
+        321
+      ],
+      "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+      "rgb_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0021834.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0021834.jpg"
+    },
+    {
+      "image_id": "0000930",
+      "split": "Training",
+      "wh": [
+        500,
+        346
+      ],
+      "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+      "rgb_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0000930.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0000930.jpg"
+    },
+    {
+      "image_id": "0001368",
+      "split": "Training",
+      "wh": [
+        500,
+        375
+      ],
+      "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+      "rgb_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+      "input_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0001368.npz",
+      "jpeg_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/inputs/0001368.jpg"
+    }
+  ],
+  "systems": {
+    "CPI_R50_CIHP": {
+      "checkpoint_workspace_relative": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config_workspace_relative": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "resolved_config_evidence_sha256": "001caf403319d7d5e953a4aca5a1efccd93814e67a85b58ebe47e631c507cd6b",
+      "environment_workspace_relative": ".venvs/parser-legacy-cu113",
+      "native_taxonomy": "CIHP",
+      "score_threshold_source": "first_cohort.protocol.matching.native_score_thresholds.CPI_R50_CIHP",
+      "kind": "cpi",
+      "source_workspace_relative": "third_party/human_parsing/CPI-Parser",
+      "native_score_threshold": 0.01
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "checkpoint_workspace_relative": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config_workspace_relative": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "resolved_config_evidence_sha256": "5dedfd51e6c5db8da9481c6e604d2ac3eb1a013f2792d883095e9ac64a943fb5",
+      "environment_workspace_relative": ".venvs/parser-legacy-cu113",
+      "native_taxonomy": "CIHP",
+      "score_threshold_source": "first_cohort.protocol.matching.native_score_thresholds.CPI_ConvNeXtB_CIHP",
+      "kind": "cpi",
+      "source_workspace_relative": "third_party/human_parsing/CPI-Parser",
+      "native_score_threshold": 0.05
+    },
+    "YOLO26X_FROZEN": {
+      "checkpoint_workspace_relative": "models/yolo26x-seg.pt",
+      "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+      "environment_workspace_relative": ".venv",
+      "settings_source": "inference_dependencies.frozen_yolo_engineering_options",
+      "kind": "yolo",
+      "settings": {
+        "checkpoint": "models/yolo26x-seg.pt",
+        "imgsz": 640,
+        "conf": 0.25,
+        "iou": 0.7,
+        "max_det": 200,
+        "retina_masks": true
+      }
+    }
+  },
+  "config_path": "configs/application_v2_first_cohort_v9.yaml",
+  "config_sha256": "16cae51480f20deaf4470e25e6c735b9220d3db0415d66fb41692c5d38c4fc0d"
+}

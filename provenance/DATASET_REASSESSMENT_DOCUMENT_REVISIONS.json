@@ -1,0 +1,70 @@
+{
+  "run_id": "dataset-reassessment-20261008T095241Z",
+  "entries": [
+    {
+      "original_path": "README.md",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/README.md",
+      "sha256_before": "eb849af39add54619107331ed2099c24e0bd0b1034c5d60098c1cf97a86a74a8",
+      "sha256_after": "18e1f88cdc1da1bfda21dd3c986b0888db058f7e02844edf4e2d885dee562ca8",
+      "reason": "Reflect user-approved flexible dataset roles and bounded current evidence",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "STUDY_STANDARD.md",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/STUDY_STANDARD.md",
+      "sha256_before": "c3b535874b382410296c4bdc302286cdafaab6ad54490507b588a2bb0f12255f",
+      "sha256_after": "9b7b2af1cce71fe25c1f935287ee8bd00b3e851e60c9b9f07efd969aceced697",
+      "reason": "Accepted readable-view gate and unfrozen dataset suitability",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "EXPERIMENT_PROTOCOL_DRAFT.md",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "sha256_before": "df8fcbce249cb843978778d53e92678ecddbe6c788ec969acf0dc3abd562fa22",
+      "sha256_after": "55d7a205fa193e58351aafe99c609315fda8ae87a071f1731387d79e5208a697",
+      "reason": "Draft protocol reflects approved populations, tested wrapper and pending primary selection",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "DATA_SCHEMA.md",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/DATA_SCHEMA.md",
+      "sha256_before": "a9ac53141b377bb325f0fc34431f067f63e961d131996f890b01f77ecfe7d42a",
+      "sha256_after": "c25d20cbb123eec6fa64569425ac48ddd19cbe3fd9ad930488d1fb351af063bb",
+      "reason": "Document versioned population, quality-review and wrapper evidence contracts",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "configs/study.yaml",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/configs/study.yaml",
+      "sha256_before": "7c8c7f68148586b26739e4fc03384804a922b26c2fee7b412009cb61fc5aefd2",
+      "sha256_after": "6a796cebb6a2ef81922c7fd4a3b311d1538debe089ee8058b2b953a12f15a1db",
+      "reason": "Draft roles and approved readable preparation; inference flags remain false",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "configs/dataset.yaml",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/configs/dataset.yaml",
+      "sha256_before": "6f122e842ee95f9013647b949a5599fc08cfaa37454c00f8ebb912cbe4d9a4a7",
+      "sha256_after": "eeffdb49df8df5075fea9346eb1ed7d8d838d35c580f8d7d57011b831e9bc88a",
+      "reason": "Source remains defective; versioned approved views are explicit",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "STUDY_STATE.json",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/STUDY_STATE.json",
+      "sha256_before": "7058798f861cf11c5ac23cc9ddb6ca6fe41dcf7383c13c4943027a526a5b4fe2",
+      "sha256_after": "eb8a8caa7de1e2416bf60f4bf9b70a03b6b9884584c896da2078989d861a229e",
+      "reason": "Append current reassessment; preserve historical/paused nodes",
+      "timestamp_utc": "20261008T101743Z"
+    },
+    {
+      "original_path": "../README.md",
+      "archive": "reports/archive/dataset_reassessment_20261008T101743Z/WORKSPACE_README.md",
+      "sha256_before": "ddd898d645d6e237ff086f6f920b9aa515b0e41a1822d7525d897bfcaf129371",
+      "sha256_after": "25915aee0c068cfcfc394c55b37dbf05ceb8467f9f85be779be375bf9488ddbc",
+      "reason": "Keep workspace navigation current without rewriting historical sections",
+      "timestamp_utc": "20261008T101743Z"
+    }
+  ],
+  "historical_validation_and_datasets_modified": false
+}

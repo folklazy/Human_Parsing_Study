@@ -1,0 +1,142 @@
+[
+  {
+    "id": "A01",
+    "status": "PASS",
+    "evidence_scope": "ConfiguredRunner.score_frame: checkpoint/config/head/class order mismatch rejected using accepted synthetic context",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A02",
+    "status": "PASS",
+    "evidence_scope": "score_frame rejects LIP unsupported Exposed_torso in common-capability fixture",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A03",
+    "status": "NOT_IMPLEMENTED",
+    "evidence_scope": "Live ConfiguredRunner rejects DRAFT/UNKNOWN/hash changes; cached scoring is absent and disabled",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A04",
+    "status": "PASS",
+    "evidence_scope": "Trusted original W/H checked on scored arrays, including no GT",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A05",
+    "status": "PASS",
+    "evidence_scope": "Unmatched/no-GT invalid IDs/dtype/score/duplicate identities rejected",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A06",
+    "status": "PASS",
+    "evidence_scope": "G_loc=1 G_sem=0 no prediction => FN1 recall0 semantic null",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A07",
+    "status": "PASS",
+    "evidence_scope": "10 GT semantic persons with 8 perfect outputs => Q=.8, G_sem=10",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A08",
+    "status": "PASS",
+    "evidence_scope": "Actual person runner failure ledger through final matching; other valid output => no duplicate FN",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A09",
+    "status": "PASS",
+    "evidence_scope": "Actual PERSON failure retains other valid final outputs under explicit fixture policy",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A10",
+    "status": "PASS",
+    "evidence_scope": "Strict/operational eligibility and invalid/incomplete states tested; finalizer contract failure distinguished",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A11",
+    "status": "PASS",
+    "evidence_scope": "Empty GT/output and GT-supported/prediction-only/undefined cases tested across actual numerical API",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A12",
+    "status": "PASS",
+    "evidence_scope": "100 correct A + 900 B leakage => semantic IoU1 / foreground IoU.1",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A13",
+    "status": "PASS",
+    "evidence_scope": "Known-negative FP versus void, owner-unknown global/person handling tested",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A14",
+    "status": "PASS",
+    "evidence_scope": "Permuted GT/prediction rows with immutable IDs produce identical matched IDs and metrics",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A15",
+    "status": "PASS",
+    "evidence_scope": "Actual scoring uses declared evaluation bbox provenance, independently of conditioning bbox",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A16",
+    "status": "NOT_IMPLEMENTED",
+    "evidence_scope": "Existing packet resume hash/finalization/fingerprint rejection tests pass; workflow resume/cached scorer absent",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A17",
+    "status": "NOT_IMPLEMENTED",
+    "evidence_scope": "Retention capability API rejects probabilities from hard labels; production re-scoring API remains disabled",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A18",
+    "status": "NOT_IMPLEMENTED",
+    "evidence_scope": "Inference/scoring fingerprint separation tested, including scoring context; actual cached re-score route absent",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A19",
+    "status": "NOT_IMPLEMENTED",
+    "evidence_scope": "Declared artifact-set checks reject missing/partial shards and distinguish duplicate content; acquired set hash-verified. Immutable-version resume policy not implemented for mutable Drive shares; not certified.",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  },
+  {
+    "id": "A20",
+    "status": "PASS",
+    "evidence_scope": "21 actual checkpoint/component FP32 TRAIN smokes; CPI canonical T1/T3B exports pass. Limited to these routes; all-variant YOLO integration and joint runtime NOT_TESTED",
+    "validation": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/validation_20261015T071746Z/VALIDATION.json",
+    "source_revision_sha256": "18173aa15adb899876499f30d3068f256be186fd8b546215f7705db9dbf43f95"
+  }
+]

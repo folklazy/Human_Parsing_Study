@@ -1,0 +1,30 @@
+{
+  "superseded_authorization_bindings": [
+    {
+      "decision": "CONFIG_AUTHORITY",
+      "path": "authorization.full_benchmark",
+      "before": false,
+      "after": true
+    },
+    {
+      "decision": "BOUNDED_TRAIN_INTEGRATION",
+      "path": "authorization.allowed_modes",
+      "before": [
+        "CPU_FIXTURES",
+        "SAVED_TRAIN_REPLAY",
+        "BOUNDED_TRAIN",
+        "FRESH_TRAIN_INTEGRATION"
+      ],
+      "after": [
+        "CPU_FIXTURES",
+        "SAVED_TRAIN_REPLAY",
+        "BOUNDED_TRAIN",
+        "FRESH_TRAIN_INTEGRATION",
+        "VALIDATION_BENCHMARK"
+      ]
+    }
+  ],
+  "five_scientific_policies_unchanged": true,
+  "candidate_verified": true,
+  "approval_record": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/USER_APPROVAL.json"
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_validation_worker.py", line 142, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_validation_worker.py", line 30, in main
+    cfg=load_config(args.config,benchmark=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/policy.py", line 130, in load_config
+    from .scoring import check_context
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/scoring.py", line 10, in <module>
+    from .evaluation import evaluate_persons, validate_person_inputs
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py", line 3, in <module>
+    from scipy.optimize import linear_sum_assignment
+ModuleNotFoundError: No module named 'scipy'

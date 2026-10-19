@@ -1,0 +1,4534 @@
+{
+  "unknown_inventory": [
+    {
+      "split": "Training",
+      "image_id": "0000224",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000343",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000499",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000615",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000645",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000709",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000744",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0000975",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0001128",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0001148",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0001383",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0001392",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0001516",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002016",
+      "unknown_pixels": 6,
+      "unknown_positive_human_pixels": 6,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002017",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002145",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002270",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002374",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002385",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002435",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002580",
+      "unknown_pixels": 66,
+      "unknown_positive_human_pixels": 66,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002633",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002752",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0002806",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003253",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003326",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003369",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003550",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003571",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0003662",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0004923",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005180",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005226",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005261",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005372",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005601",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005671",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005780",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005877",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0005878",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006157",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006221",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006253",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006296",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006380",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006464",
+      "unknown_pixels": 254,
+      "unknown_positive_human_pixels": 254,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006595",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0006785",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0007017",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0007019",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0007484",
+      "unknown_pixels": 10,
+      "unknown_positive_human_pixels": 10,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2,
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0007819",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0007924",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0008243",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0008845",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0008977",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        10
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009015",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009018",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009087",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009226",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009317",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009384",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009505",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009600",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009622",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009670",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009784",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009803",
+      "unknown_pixels": 9,
+      "unknown_positive_human_pixels": 9,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009806",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009915",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0009938",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010030",
+      "unknown_pixels": 7,
+      "unknown_positive_human_pixels": 7,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010146",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010205",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010477",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010505",
+      "unknown_pixels": 2938,
+      "unknown_positive_human_pixels": 2938,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010638",
+      "unknown_pixels": 1454,
+      "unknown_positive_human_pixels": 1454,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010642",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0010973",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011087",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011137",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011146",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011194",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011259",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011417",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011544",
+      "unknown_pixels": 8,
+      "unknown_positive_human_pixels": 8,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011626",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011798",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0011990",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0012023",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0012446",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        11
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0012674",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0012684",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013030",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013053",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013108",
+      "unknown_pixels": 202,
+      "unknown_positive_human_pixels": 202,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2,
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013203",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013316",
+      "unknown_pixels": 1265,
+      "unknown_positive_human_pixels": 1265,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013379",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013431",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0013982",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014142",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014149",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014240",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014285",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014387",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014476",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014512",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014538",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014634",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0014855",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015176",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015249",
+      "unknown_pixels": 30,
+      "unknown_positive_human_pixels": 30,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015468",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015533",
+      "unknown_pixels": 58,
+      "unknown_positive_human_pixels": 58,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2,
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015615",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015796",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0015843",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016140",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016169",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016194",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016275",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016306",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016519",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016638",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016681",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0016732",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017139",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        9
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017277",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017278",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017344",
+      "unknown_pixels": 6,
+      "unknown_positive_human_pixels": 6,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1,
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017612",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017658",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        9
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017935",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017960",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017978",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0017987",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018003",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018074",
+      "unknown_pixels": 84,
+      "unknown_positive_human_pixels": 84,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018363",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018584",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018685",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018738",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0018778",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0019158",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0019183",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0019303",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0019405",
+      "unknown_pixels": 97,
+      "unknown_positive_human_pixels": 97,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0019457",
+      "unknown_pixels": 36,
+      "unknown_positive_human_pixels": 36,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1,
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0020353",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0020518",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0020969",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0021110",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0021246",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0021456",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0021475",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0021749",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022128",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022139",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022267",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022623",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022655",
+      "unknown_pixels": 48,
+      "unknown_positive_human_pixels": 48,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0022812",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0023146",
+      "unknown_pixels": 8,
+      "unknown_positive_human_pixels": 8,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0023554",
+      "unknown_pixels": 226,
+      "unknown_positive_human_pixels": 226,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0023894",
+      "unknown_pixels": 55,
+      "unknown_positive_human_pixels": 55,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0023963",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0024335",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0024974",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0025173",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1,
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0025275",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0025746",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0025814",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026051",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026104",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026199",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026259",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026299",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026366",
+      "unknown_pixels": 103,
+      "unknown_positive_human_pixels": 103,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026510",
+      "unknown_pixels": 13,
+      "unknown_positive_human_pixels": 13,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026580",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026801",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        9
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026805",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0026864",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0027076",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0027722",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0027847",
+      "unknown_pixels": 16,
+      "unknown_positive_human_pixels": 16,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0028128",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0028143",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0028515",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0028958",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0028970",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029081",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029286",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029576",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029822",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029868",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0029931",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0030337",
+      "unknown_pixels": 160,
+      "unknown_positive_human_pixels": 160,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0030371",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0030604",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0030807",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0030821",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031415",
+      "unknown_pixels": 32,
+      "unknown_positive_human_pixels": 32,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031416",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031651",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031736",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031790",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031802",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031908",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0031993",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032084",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032447",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032488",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032564",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032660",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032816",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0032951",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033044",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033257",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        10
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033382",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033546",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033638",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033934",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033956",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033962",
+      "unknown_pixels": 212,
+      "unknown_positive_human_pixels": 212,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0033994",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034141",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034174",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034290",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034371",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034465",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034527",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034557",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034653",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034674",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034741",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034747",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034778",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034852",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0034894",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035006",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035035",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035202",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035203",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035333",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035375",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035491",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035516",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035538",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        9
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035638",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035786",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035790",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035806",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035821",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        17
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035886",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0035908",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0036019",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0036088",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        6
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Training",
+      "image_id": "0036106",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0000312",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0002383",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0005997",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        7
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0006002",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0007669",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0011143",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0013101",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0013396",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0014392",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0015110",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0015435",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0015527",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0016414",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0016620",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0018280",
+      "unknown_pixels": 8,
+      "unknown_positive_human_pixels": 8,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0018686",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0018734",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0018832",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0019419",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0019693",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0024045",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0024163",
+      "unknown_pixels": 7,
+      "unknown_positive_human_pixels": 7,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0024605",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0025104",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0025867",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0027329",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0027495",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0027858",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        11
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0028925",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0029102",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0029794",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0029993",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0030375",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0032202",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0032908",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0033781",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0034848",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0034938",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0035285",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0035619",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0036285",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0036428",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0036473",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0036632",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037091",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        4
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037186",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037208",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037322",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        5
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037382",
+      "unknown_pixels": 5,
+      "unknown_positive_human_pixels": 5,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037404",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037416",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037472",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037802",
+      "unknown_pixels": 155,
+      "unknown_positive_human_pixels": 155,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037818",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037819",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037855",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        8
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037968",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0038123",
+      "unknown_pixels": 3,
+      "unknown_positive_human_pixels": 3,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        9
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0038157",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        1
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0038322",
+      "unknown_pixels": 4,
+      "unknown_positive_human_pixels": 4,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        3
+      ],
+      "unknown_labels": [
+        22
+      ]
+    },
+    {
+      "split": "Validation",
+      "image_id": "0038450",
+      "unknown_pixels": 2,
+      "unknown_positive_human_pixels": 2,
+      "unknown_positive_instance_pixels": 0,
+      "unknown_human_ids": [
+        2
+      ],
+      "unknown_labels": [
+        22
+      ]
+    }
+  ],
+  "unknown_pixels": 8268,
+  "all_unknowns_have_human_support": true,
+  "all_unknowns_without_attribute_instance": true,
+  "diagnostic_cases": [
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 2,
+          "human_pixel_counts": {
+            "6": 2
+          },
+          "bbox_xyxy_half_open": [
+            301,
+            162,
+            303,
+            163
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0033810_unknown_Category22_ROI.png",
+            "sha256": "42e6fc57381c41186bcc3f08a835001b83e8fe49065dbb31a8caf8219bfb814d",
+            "source_xyxy": [
+              289,
+              150,
+              315,
+              175
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        },
+        "Human_positive_Category0": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0033810_full.png",
+      "sha256": "f0eb2d2a1c06026f46ca3ae8ccee688dbd1199207863146863526898bf3e3f50"
+    },
+    {
+      "split": "Training",
+      "image_id": "0014422",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        },
+        "Human_positive_Category0": {
+          "pixels": 91332,
+          "human_pixel_counts": {
+            "1": 91332
+          },
+          "bbox_xyxy_half_open": [
+            0,
+            0,
+            274,
+            367
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0014422_Human_positive_Category0_ROI.png",
+            "sha256": "e8bbd6bee6c5294c5f7577efadf3573d15b3243a587abd11a1ed74ebcd8cb04e",
+            "source_xyxy": [
+              0,
+              0,
+              286,
+              367
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0014422_full.png",
+      "sha256": "83cd7149f323d6524b36598447f78581dbe874f452530f712548064265ac731d"
+    },
+    {
+      "split": "Training",
+      "image_id": "0010505",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 2938,
+          "human_pixel_counts": {
+            "1": 2938
+          },
+          "bbox_xyxy_half_open": [
+            107,
+            112,
+            376,
+            333
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0010505_unknown_Category22_ROI.png",
+            "sha256": "4c270b52eb8bd316db0fb07f8f941a53391b30b215f9339d58c0cfef67511f15",
+            "source_xyxy": [
+              95,
+              100,
+              388,
+              336
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        },
+        "Human_positive_Category0": {
+          "pixels": 4,
+          "human_pixel_counts": {
+            "1": 4
+          },
+          "bbox_xyxy_half_open": [
+            211,
+            120,
+            217,
+            132
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0010505_Human_positive_Category0_ROI.png",
+            "sha256": "8212f5c4c9c911ebd962a8d370934d8b76bd745f46eaa53591b35764512b56ac",
+            "source_xyxy": [
+              199,
+              108,
+              229,
+              144
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0010505_full.png",
+      "sha256": "1dbcccbfca935b38dfa071952361e7fd164e7f120f7e59cb2410a1d876e1ddcd"
+    },
+    {
+      "split": "Training",
+      "image_id": "0010638",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 1454,
+          "human_pixel_counts": {
+            "1": 1454
+          },
+          "bbox_xyxy_half_open": [
+            0,
+            235,
+            45,
+            295
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0010638_unknown_Category22_ROI.png",
+            "sha256": "d7033425228d831a7a491bd505677dc0fc754ea6b1f810521469f7cade88b89f",
+            "source_xyxy": [
+              0,
+              223,
+              57,
+              307
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        },
+        "Human_positive_Category0": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0010638_full.png",
+      "sha256": "0f5588d079e95f6085ec5ab641690a7c0aa79bbc0ad769a6f595c975bf29fa7a"
+    },
+    {
+      "split": "Training",
+      "image_id": "0013316",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 1265,
+          "human_pixel_counts": {
+            "5": 1265
+          },
+          "bbox_xyxy_half_open": [
+            28,
+            117,
+            111,
+            177
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0013316_unknown_Category22_ROI.png",
+            "sha256": "1132784d0359944a433b254dfa4d8e51eb13b337521fb0fcf9b05451df2513fc",
+            "source_xyxy": [
+              16,
+              105,
+              123,
+              189
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        },
+        "Human_positive_Category0": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0013316_full.png",
+      "sha256": "1fe4d6adce98510c8aa41b4c78603054a5615654f75b5d40c37c99abe153c311"
+    },
+    {
+      "split": "Training",
+      "image_id": "0006282",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        },
+        "Human_positive_Category0": {
+          "pixels": 10,
+          "human_pixel_counts": {
+            "2": 10
+          },
+          "bbox_xyxy_half_open": [
+            112,
+            129,
+            132,
+            284
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0006282_Human_positive_Category0_ROI.png",
+            "sha256": "e8555bd6b5fcec9d035979f2cd8281d8b73d77383772314642a4dbd6467522b5",
+            "source_xyxy": [
+              100,
+              117,
+              144,
+              296
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0006282_full.png",
+      "sha256": "51f9801c1d17490c450a18eae47bdbbcdd299a5dccae4ea50791c5031fdd522e"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0037710",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        },
+        "Human_positive_Category0": {
+          "pixels": 1,
+          "human_pixel_counts": {
+            "2": 1
+          },
+          "bbox_xyxy_half_open": [
+            233,
+            165,
+            234,
+            166
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0037710_Human_positive_Category0_ROI.png",
+            "sha256": "6f2f2ac77aca0bdf8b1a6d5559cdba21ffd6530ae0db16dcfc20dc269d9bb94d",
+            "source_xyxy": [
+              221,
+              153,
+              246,
+              178
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0037710_full.png",
+      "sha256": "1e1dd0854c5aba17a5faf0b4bd013dec33cf5b109367553e04cece5df353cd97"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0012253",
+      "purpose": "PURPOSIVE_WARNING_NOT_RANDOM_PREVALENCE_SAMPLE",
+      "masks": {
+        "unknown_Category22": {
+          "pixels": 0,
+          "human_pixel_counts": {},
+          "bbox_xyxy_half_open": null
+        },
+        "Human_positive_Category0": {
+          "pixels": 1,
+          "human_pixel_counts": {
+            "1": 1
+          },
+          "bbox_xyxy_half_open": [
+            110,
+            332,
+            111,
+            333
+          ],
+          "ROI": {
+            "path": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0012253_Human_positive_Category0_ROI.png",
+            "sha256": "455c165bdba6d25aae64d6301cb5e093a5c87d33623476bc2d80a2e88ba0c9d8",
+            "source_xyxy": [
+              98,
+              320,
+              123,
+              333
+            ],
+            "display_scale": 4,
+            "resampling": "NEAREST_DISPLAY_ONLY"
+          }
+        }
+      },
+      "physical_error_confirmation": "NOT_ADJUDICATED",
+      "full_image": "outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0012253_full.png",
+      "sha256": "816c4571c883aa38e9cd4a6eeed8c33aa052e0ad09ee3967c0249416d2b0828f"
+    }
+  ],
+  "no_unknown_background_relabeling": true,
+  "physical_semantic_quality": "HUMAN_REVIEW_PENDING"
+}

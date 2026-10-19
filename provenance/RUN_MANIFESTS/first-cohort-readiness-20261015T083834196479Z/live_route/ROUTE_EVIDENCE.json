@@ -1,0 +1,30 @@
+[
+  {
+    "model": "CPI_R50_CIHP",
+    "image_id": "0000930",
+    "YOLO_opportunities": 2,
+    "native_instances": 2,
+    "final_instances": 2,
+    "native_run": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/outputs/cpi_r50_cihp-20261015T084636Z/RUN.json",
+    "canonical_packet": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/canonical/CPI_R50_CIHP",
+    "all_components_actual_inference": true,
+    "native_config_source_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+    "native_checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+    "joint_resident_pipeline": false,
+    "GT_metric_scores_computed": false
+  },
+  {
+    "model": "CPI_ConvNeXtB_CIHP",
+    "image_id": "0000930",
+    "YOLO_opportunities": 2,
+    "native_instances": 2,
+    "final_instances": 2,
+    "native_run": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/outputs/cpi_convnextb_cihp-20261015T084648Z/RUN.json",
+    "canonical_packet": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/canonical/CPI_ConvNeXtB_CIHP",
+    "all_components_actual_inference": true,
+    "native_config_source_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+    "native_checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+    "joint_resident_pipeline": false,
+    "GT_metric_scores_computed": false
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "evidence": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/final_source_snapshot_20261014T102209214496Z/FINAL_EVIDENCE.json",
+  "evidence_sha256": "cbd4a8fc86409a93f3720b58bd73f2f34cea11dfde8f6c8051ce15d9fb2e4953",
+  "status": "PASS_IMPLEMENTATION_AND_BOUNDED_TRAIN_WITH_DRAFT_SCIENTIFIC_POLICIES",
+  "tests_passed": 109
+}

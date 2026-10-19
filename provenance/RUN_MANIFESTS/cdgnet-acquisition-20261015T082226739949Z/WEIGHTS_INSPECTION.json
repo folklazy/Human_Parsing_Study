@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-15T08:23:08.938721+00:00",
+  "checkpoint_sha256": "26003d4cd38ff63b3bc54e3e8840d873a5be09e3924f9a3eb741b101fb4c8df8",
+  "torch": "2.14.0+cu130",
+  "device": "CPU",
+  "weights_only": true,
+  "model_built": false,
+  "model_inference": false,
+  "status": "PASS_WEIGHTS_ONLY_STRUCTURAL_INSPECTION",
+  "pytorch_zip_crc": "NOT_ZIP_SERIALIZATION",
+  "tensor_entries": 603,
+  "tensor_elements_including_buffers": 66838456,
+  "dtypes": [
+    "torch.float32"
+  ],
+  "finite_tensors": true,
+  "parser_head_shapes": {
+    "module.layer6.conv4.weight": [
+      20,
+      256,
+      1,
+      1
+    ],
+    "module.layer6.conv4.bias": [
+      20
+    ]
+  },
+  "parsing_classes_in_head": 20,
+  "limitations": "Structural inspection only; strict architecture load and inference NOT_TESTED",
+  "completed_utc": "2026-10-15T08:23:10.115743+00:00"
+}

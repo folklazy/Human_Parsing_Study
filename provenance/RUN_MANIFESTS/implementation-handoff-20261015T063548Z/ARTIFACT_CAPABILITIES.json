@@ -1,0 +1,14 @@
+{
+  "status": "DRAFT_ENGINEERING_CAPABILITIES",
+  "native_hard_labels": "Retained for every successful checkpoint smoke",
+  "native_logits_probabilities": "Retained where current worker exposes them; NPZ keys and hashes in RUN manifests; not universal",
+  "native_instance_masks_scores": "Retained for native multi-human interfaces where provided; semantic parsers have no invented native identity",
+  "CPI_canonical": "8 immutable T1/T3B packets; all native masks and boxes also retained",
+  "cached_scoring": "NOT_IMPLEMENTED_DISABLED",
+  "packet_integrity_resume": "IMPLEMENTED_TESTED_ARTIFACT_ONLY",
+  "workflow_resume": "NOT_IMPLEMENTED_DISABLED",
+  "hard_label_probability_aggregation": "REJECTED_BY_CAPABILITY_CHECK",
+  "joint_resident_pipeline_memory": "NOT_MEASURED",
+  "resource_timing_use": "Smoke only; concurrent asset/hash/download activity may exist; no latency ranking",
+  "affected_results": "No published full benchmark scores exist for these application mappings. Historical synthetic/application summaries must be read with source revision; saved native outputs retained. Do not mix old and corrected projected scores."
+}

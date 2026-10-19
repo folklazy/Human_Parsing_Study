@@ -1,0 +1,34 @@
+# External assets and runtime output only; do not ignore all JSON/CSV/images.
+/.venv/
+/.venvs/
+/parser_envs/
+/datasets/
+/models/
+/third_party/
+/predictions/
+/outputs/
+/logs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.pth
+*.pt
+*.safetensors
+*.npz
+*.npy
+
+# Explicit bulk run artifacts; compact views and small result manifests remain versioned.
+/provenance/RUN_MANIFESTS/**/native/
+/provenance/RUN_MANIFESTS/**/source_rgb/
+/provenance/RUN_MANIFESTS/**/packets/
+/provenance/RUN_MANIFESTS/**/FRAMES.jsonl
+/provenance/RUN_MANIFESTS/**/PRIMARY_FRAME_SCORES.json*
+/provenance/RUN_MANIFESTS/**/SECONDARY_FRAME_SCORES.json*
+/provenance/RUN_MANIFESTS/**/PERSON_GT_BINDINGS.jsonl
+/provenance/RUN_MANIFESTS/**/IMAGE_BINDINGS.jsonl
+/provenance/MODEL_SOURCE_AUDIT.json

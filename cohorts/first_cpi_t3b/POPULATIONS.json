@@ -1,0 +1,21 @@
+{
+  "source": "Unchanged accepted config and source report totals",
+  "main": {
+    "images": 4961,
+    "G_loc": 17434,
+    "G_sem": 17390,
+    "role": "EXACT_SOURCE_OVERLAP_CONTROLLED"
+  },
+  "reference": {
+    "images": 5000,
+    "G_loc": 17548,
+    "G_sem": 17504,
+    "role": "ORIGINAL_RELEASED_VALIDATION"
+  },
+  "excluded_from_main": 39,
+  "inference_populations": 1,
+  "scoring_populations": 2,
+  "posthoc_exclusions": false,
+  "full_person_GT_bindings": "EXTERNAL_NOT_REDISTRIBUTED",
+  "membership_authority": "configs/application_v2_first_cohort_v12.yaml"
+}

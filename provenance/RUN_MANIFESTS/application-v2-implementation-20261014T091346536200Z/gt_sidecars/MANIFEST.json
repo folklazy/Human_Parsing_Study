@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0",
+  "status": "DRAFT_DERIVED_GT_SUPPORT",
+  "benchmark_authorized": false,
+  "mapping_accepted": false,
+  "population_roles_accepted": false,
+  "source_audit_sha256": "08ee85c702e5a71c098ecef99e6290aeec5ee533c74350fe062cbe3dd2a2dc49",
+  "population_manifest_sha256": "a1a3b166e0c27765b2db867683985ab4d420000ef74acad377747b24876edad0",
+  "candidate_mapping_sha256": "7986ec4a7e17dc69958bfcf460c72be348a8c5b84d477ec4d0b5016ac736939e",
+  "native_mapping_sha256": "f6a4343f815f6cc083096d36b61ceaa48a63abc7555aea4c9e757cca6fccd27a",
+  "scope": "GT metadata only. No model scores or validation inference. Structural G_loc is not human-certified identity.",
+  "populations": {
+    "original_source_target": {
+      "images": 5000,
+      "G_native": 17548,
+      "G_loc_structural_draft": 17548,
+      "G_sem_native_known_draft": 17539,
+      "G_sem_common_candidate_draft": 17504,
+      "native_known_gt_pixels": 350991511,
+      "candidate_gt_pixels": 294938926,
+      "candidate_class_support": {
+        "1": 36960110,
+        "2": 12203295,
+        "3": 27991326,
+        "4": 6474803,
+        "5": 207338644,
+        "6": 3970748
+      },
+      "sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+      "sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676"
+    },
+    "overlap_controlled_source_target": {
+      "images": 4961,
+      "G_native": 17434,
+      "G_loc_structural_draft": 17434,
+      "G_sem_native_known_draft": 17425,
+      "G_sem_common_candidate_draft": 17390,
+      "native_known_gt_pixels": 349049126,
+      "candidate_gt_pixels": 293181132,
+      "candidate_class_support": {
+        "1": 36850096,
+        "2": 12164626,
+        "3": 27831409,
+        "4": 6396402,
+        "5": 205999127,
+        "6": 3939472
+      },
+      "sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+      "sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "PASS_SAVED_TRAIN_CONTRACT_INTEGRATION",
+  "input_ids": [
+    "0021834",
+    "0000930",
+    "0001368"
+  ],
+  "saved_cases": [
+    {
+      "model": "FASHN_B4",
+      "image_id": "0021834",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "FASHN_B4",
+      "image_id": "0000930",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "FASHN_B4",
+      "image_id": "0001368",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "SCHP_R101_LIP",
+      "image_id": "0021834",
+      "source_track": "T2",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "SCHP_R101_LIP",
+      "image_id": "0000930",
+      "source_track": "T2",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "SCHP_R101_LIP",
+      "image_id": "0001368",
+      "source_track": "T2",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "CPI_R50_CIHP",
+      "image_id": "0021834",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "CPI_R50_CIHP",
+      "image_id": "0000930",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    },
+    {
+      "model": "CPI_R50_CIHP",
+      "image_id": "0001368",
+      "source_track": "T1",
+      "status": "CONTRACT_ARTIFACT_ROUNDTRIP_PASS"
+    }
+  ],
+  "native_and_oracle_and_semantic_interfaces_checked": true,
+  "source_arrays_unchanged": true,
+  "new_inference": false,
+  "model_scores_generated": false,
+  "live_T3a_validated": false,
+  "live_T3b_validated": false,
+  "limitation": "T3b association uses explicit synthetic opportunities; no claim of YOLO-conditioned execution."
+}

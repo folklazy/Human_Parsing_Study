@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "suite_results": [
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_application_v2*.py"
+      ],
+      "exit_code": 0,
+      "tests": 93,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_application_v2ALL.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_mhpv2_stage0.py"
+      ],
+      "exit_code": 0,
+      "tests": 25,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_mhpv2_stage0.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_official_mhp_compat.py"
+      ],
+      "exit_code": 0,
+      "tests": 19,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_official_mhp_compat.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_dataset_reassessment.py"
+      ],
+      "exit_code": 0,
+      "tests": 7,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_dataset_reassessment.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_gt.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_ccihp_gt.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_quality.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/test_ccihp_quality.py.log"
+    }
+  ],
+  "tests": 160,
+  "protected_hashes_checked": 126,
+  "protected_changed": [],
+  "archive_stat_changes": [],
+  "frozen_YOLO_checkpoint": "PASS",
+  "benchmark_guard": "PASS_REJECTED",
+  "actual_route": "PASS_BOUNDED_TRAIN_ONLY",
+  "canonical_V5_packet_dependency_checks": [
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_R50_CIHP",
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_ConvNeXtB_CIHP"
+  ],
+  "population_checks": [
+    {
+      "population": "original_source_target",
+      "frames": 5000,
+      "G_loc": 17548,
+      "G_sem_draft": 17504,
+      "status": "PASS_METADATA_ONLY_ROLE_NOT_ACCEPTED"
+    },
+    {
+      "population": "overlap_controlled_source_target",
+      "frames": 4961,
+      "G_loc": 17434,
+      "G_sem_draft": 17390,
+      "status": "PASS_METADATA_ONLY_ROLE_NOT_ACCEPTED"
+    }
+  ],
+  "real_scoring_context_accepted": false,
+  "two_user_policies_accepted": true,
+  "scientific_freeze": false,
+  "full_benchmark_started": false,
+  "source_change_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/SOURCE_CHANGES.json",
+  "source_snapshot": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/source_snapshot",
+  "source_revision_sha256": "613c1a6f979304fcdcd0efd00368ad5bc483912781c6383881276c57f2c418c1"
+}

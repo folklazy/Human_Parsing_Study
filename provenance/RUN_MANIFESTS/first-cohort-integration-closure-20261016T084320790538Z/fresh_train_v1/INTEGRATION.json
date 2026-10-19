@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "scope": "TWO_CPI_SYSTEMS_THREE_FIXED_TRAIN_IMAGES_ONLY",
+  "frames": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0021834",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 6,
+          "denominator": 6,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 2,
+      "YOLO_opportunities": 6,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_R50_CIHP/0021834",
+      "packet_scored_after_integrity_check": true
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0021834",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 6,
+          "denominator": 6,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 2,
+      "YOLO_opportunities": 6,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_ConvNeXtB_CIHP/0021834",
+      "packet_scored_after_integrity_check": true
+    },
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0000930",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 2,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_R50_CIHP/0000930",
+      "packet_scored_after_integrity_check": true
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0000930",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 2,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_ConvNeXtB_CIHP/0000930",
+      "packet_scored_after_integrity_check": true
+    },
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0001368",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 8,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_R50_CIHP/0001368",
+      "packet_scored_after_integrity_check": true
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0001368",
+      "execution_status": "COMPLETE",
+      "failure_events": [],
+      "stage_rates": {
+        "native": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "association": {
+          "stage": "T3B_association",
+          "unit": "YOLO_opportunity",
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        }
+      },
+      "status": "PASS",
+      "native_instances": 3,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "packet": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/packets/CPI_ConvNeXtB_CIHP/0001368",
+      "packet_scored_after_integrity_check": true
+    }
+  ],
+  "config_sha256": "16cae51480f20deaf4470e25e6c735b9220d3db0415d66fb41692c5d38c4fc0d",
+  "model_loading": true,
+  "new_inference": true,
+  "semantic_scores_computed": true,
+  "thresholds": [
+    0.5,
+    0.75
+  ],
+  "validation_package_binding": {
+    "status": "PASS_BOUND_NOT_AUTHORIZED",
+    "populations": {
+      "main": {
+        "images": 4961,
+        "contexts": 9922,
+        "G_loc": 17434,
+        "G_sem": 17390
+      },
+      "reference": {
+        "images": 5000,
+        "contexts": 10000,
+        "G_loc": 17548,
+        "G_sem": 17504
+      }
+    },
+    "package_manifest_sha256": "5785ab8b84fe060ce062851087c0ccafb5c9eb1dceef675ac3929a4ad6ffbc4b",
+    "config_sha256": "16cae51480f20deaf4470e25e6c735b9220d3db0415d66fb41692c5d38c4fc0d",
+    "GT_regenerated": false,
+    "validation_inference": false
+  },
+  "validation_inference": false,
+  "GT_regenerated": false,
+  "ranking_generated": false,
+  "timing_ranking": false,
+  "full_benchmark": false,
+  "scientific_freeze": false
+}

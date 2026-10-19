@@ -1,0 +1,187 @@
+{
+  "status": "VISUAL_REVIEW_COMPLETED_WITH_INSTANCE_OWNERSHIP_WARNING",
+  "cases": [
+    {
+      "reason": "ordinary",
+      "split": "train",
+      "image_id": "967",
+      "focus_person_file_id": 3,
+      "person_count": 8,
+      "source_image_sha256": "8d4fb7716d8d52060f19257df7e8939a42c7c677a40bfaeadbd3a5c7d184f71e",
+      "source_annotation_hashes": [
+        "50ee0425263614c6770d6d96b229740f08cd3e4c08e208c2570bbcea086f9f53",
+        "125320833292d590abd02a3bbbee12cbc72efa5c15872149ae8b8a447441032e",
+        "ea499332b29e998265ef051a2b113c0aec4a7e843f237375f723c5eaeb1a0f12",
+        "160691aa5a2c24d934f9b181d289cca3c7d8bcfdbdedc16a76ecc006cffc7788",
+        "df3ebe6096c32da7c7ecc4030d3229bd6712ee899422cc21ae0e82447b0e3dca",
+        "fd1d21f4ad19e0e8796582c5dc882be17b50f1233bd71e496879e801e27a5bf4",
+        "8cc646d2f6981f5eb43c2e4806a47a648e6ac011141e1012b8feaf873ca373d1",
+        "95f2a5ecac1a5311d2d46e343d807242482348f87d9718a737d3f8d4cc5b9aff"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_01_gt.png",
+      "sha256": "f68760678e184775a3d0a36805fe36e78fe28b911fcf71b54ac029a81445dbcc",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Eight people are outlined in corresponding RGB positions; selected parsing/native planes are identical."
+    },
+    {
+      "reason": "most_persons",
+      "split": "train",
+      "image_id": "1025",
+      "focus_person_file_id": 18,
+      "person_count": 26,
+      "source_image_sha256": "c82d10c8224e0d99e8e57f28af6d28bafdd7a3dd331ac690ffbf5567203e205b",
+      "source_annotation_hashes": [
+        "146beee884c191566f8a4a85bc12f2c7870472e3923d34012938575c4ebdc5de",
+        "7c4dd2c884f4d3a3e348349c0fa09b62752d26e9f9b66784390dcf3fb8caaa98",
+        "af6e87de2f3097493a6026780a878813a427ae7decc103a76138985fce700423",
+        "4f4708e7c080e999487aedba32ae1bd46f6ed20ab2175ffe1140ee25e9230881",
+        "f0415b5925a7fabb303aacc94f79308dd4509f8f44d7f3031d57b78f79165409",
+        "5285d5736078edc50ef947d4eeefb5534cc4ca4cfdd35dbc835385891ccd7fa7",
+        "636910f35119288f00b0693a7106082782736b3ef20eeb85e8e2bdafdba38115",
+        "d6a9acaaf8bf325523399b3b68c551d6646719512236e0f1bc71dd2217f8fb87",
+        "cc04fb7a964c97d2b1b8a798fc5e3b67aaa14c9734e061cd94ee4f57f186201d",
+        "17395a2eca48a321dae73c0d1f960355ed85d33ec7a03b49ce3b265feb097fee",
+        "5562744ab660c225e9f6070ebe0a50fb9ead1728524f42c6dd054f0560667226",
+        "efb7f0e2b2c7076188a0b9b2e32795f84547299a14d576222cb76246d3c98995",
+        "a09e3b09049e6c22f188163a8f66b2ce875a12578d5dfb91db01ba1219637db2",
+        "09ffa1007d2ce6a163828217fc4029ae6850761fb7b10f6718969ee76cedbcd8",
+        "79e3afc7a1ea2deaa5810500eb9f528b7cde723396bdd3cdb8e6c8b493226069",
+        "5b20dbfc1570afb8f5ec39e9fce491235fc84f28547276f8c3ee914c3204e577",
+        "a16860d2c7b39cfadbdc1947f6ad94434a7d58412f0b982d1bb30d3fe0ada5e8",
+        "54a80a454cd71ae79048e340169ffe8bfeda9d93009f52fe69cbc9b4524d4b6b",
+        "34871224b313f32f1e19e01f288e745e62e323252fe862cc7347faaf0f025caf",
+        "4af28d0d15b2fc6e031a0883851fafb76a75158a8e72c71694eb16e5e93656a2",
+        "b72a2ec2207e7b18dd022e6b3a091d53316fc17b355bf40682174bf761cc5fb8",
+        "b77e1dc4fcd94a8de910de07c7db715015128808104cff0abbb60c2e057e03aa",
+        "0417636048d3e35baf650983d638058ef47dfad04cec7c17c62fab160779d94a",
+        "48def0707ac16d0bdb735c810af7f16b1e9946e5b2a848e2fb521646e755535e",
+        "5938522e6882cde9dfc1e01d9bb48f7ef0e9cbb6e5fec0cb9652172b0fdce7fe",
+        "24578864760616be7878062f369d82c0f195a56a919e9901272e80d451aa42fa"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_02_gt.png",
+      "sha256": "65d0f6bae406aeec4d3f493026b44bec92133e877f1296d286f4c89b3466cb30",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Twenty-six people appear in the group; individual parsing IDs are retained; selected small full-body plane aligns at coarse display scale."
+    },
+    {
+      "reason": "most_overlap",
+      "split": "train",
+      "image_id": "9968",
+      "focus_person_file_id": 1,
+      "person_count": 2,
+      "source_image_sha256": "5a5cc1b7e8d654badec9d16b1597a9cf46affca02c8d0f5ec8dc87b4ef919f51",
+      "source_annotation_hashes": [
+        "2f5a6a7a18cf325ec41f878492a9bc341edbdc4870acc60a6242bd01872628f1",
+        "3db8d6011880023eb4b5aa0e3f27ce9ec2ae8cd579e96f0b196ee8e2fa565bbf"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_03_gt.png",
+      "sha256": "e9b4727a477c86b2ff32dcdb5c152102d5efdbf13cf255948f7cec8153a67f2b",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "WARNING_INSTANCE_OWNERSHIP",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Selected ID 1 includes parsing regions at both adults; ownership anomaly needs review, while native-to-canonical pixels remain identical."
+    },
+    {
+      "reason": "smallest_person",
+      "split": "train",
+      "image_id": "10253",
+      "focus_person_file_id": 3,
+      "person_count": 3,
+      "source_image_sha256": "c3b1348a601698d17bc1ec45ee0eef5fa6b9d2e37a98729e47dc7e8800f7015c",
+      "source_annotation_hashes": [
+        "1457b0249cca519facbe58c3829aa10f97643da7a073e8f786dff0e0662f3368",
+        "3e29e9c8e749b4253db672a9056b764d21152283021ce9b92c1506dd070d3f21",
+        "ee0dc30029a7710f45b2a2222354a56580eb32f0fd9eacb15740a2929213f306"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_04_gt.png",
+      "sha256": "a42b402cfed221dc8788e3c95867fa9a6e376330af207be59080baa5c41cb689",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Third target is a small baby face region near the held child, not an empty mask; no full body is invented."
+    },
+    {
+      "reason": "largest_person",
+      "split": "train",
+      "image_id": "1439",
+      "focus_person_file_id": 2,
+      "person_count": 2,
+      "source_image_sha256": "fd8283889101c7e95ed642a0fda5038fdb099aa113fdc0aded0c9b0e1e6adebc",
+      "source_annotation_hashes": [
+        "fa96ec8dd45c8ec301b8ad186718b6ff5a4df53323dafe8506cb20a70d4e5b52",
+        "6fea1a102ec01e81c867ed60a0405308ed189cd0dba528dc3ea588f55891feef"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_05_gt.png",
+      "sha256": "9d2b3ff6ff14ad50c45b26df3c2ef8783216aa8f9fd21755d0ddaeb5a3b0cee6",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Large-person annotation follows the selected foreground adult; native/canonical equality confirmed."
+    },
+    {
+      "reason": "rare_class_51",
+      "split": "train",
+      "image_id": "8815",
+      "focus_person_file_id": 1,
+      "person_count": 2,
+      "source_image_sha256": "473265f82486c0bfff26cf195d7d14d55629bc1c507e14b140638afeeb88a0ff",
+      "source_annotation_hashes": [
+        "b153b6f8b1d63e9aee311f23949bf0c7e05817a6e43eed0dc9270d2a5d67c7f9",
+        "97be4ea1118cf1c19afad528b6f6063d8c427d15843b6de3334db1cddbf09c2c"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_06_gt.png",
+      "sha256": "d8e665f0111905bbd93b66825dd9e06e7b1013a1b6d8fbaca3df022338f5e4dd",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Native umbrella label follows the carried object; parsing support extends beyond anatomy."
+    },
+    {
+      "reason": "rare_class_42",
+      "split": "train",
+      "image_id": "2543",
+      "focus_person_file_id": 2,
+      "person_count": 2,
+      "source_image_sha256": "dfbcdf2324d3162e329df51dca9f2babc839c9adb45a440e0d6030fd36616086",
+      "source_annotation_hashes": [
+        "edfc3756e58254e9943b2f3fb3b2e442165a2cb0a07aa4931596439e25011162",
+        "26179940b27352f05a333143fd49fc278fa9bc9d962f740525faa934a3b931d6"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_07_gt.png",
+      "sha256": "f5f8a6c7a48183eda1ca6804678e255d8c1f25bbbb04eacfe19b698e8e17ce63",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Selected person and a small detached object region retain native labels; no claim of validated object category identity."
+    },
+    {
+      "reason": "rare_class_46",
+      "split": "train",
+      "image_id": "162",
+      "focus_person_file_id": 2,
+      "person_count": 3,
+      "source_image_sha256": "78e4c392c189a71c063ebbc507e2eacfe1d5b851a182997fa498ad601fb61a6d",
+      "source_annotation_hashes": [
+        "d0543456b85c7b79273e97d778e8c03fb37a4584198286b274a2409d9fb610fd",
+        "85d2ef2ccf87541181139e61b505b7b5c20ede43462da7b53ff646e1fa84d14d",
+        "2c3f2c9d1f3d3117a532857f8f00ac247f036c30c013926d31be1ab9dbfd4279"
+      ],
+      "image": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/case_08_gt.png",
+      "sha256": "72d313affd5af8bc7d1d53842d6846f924388349bec5be8322b9319dc0f1b0b8",
+      "native_vs_canonical_pixels_identical": true,
+      "manual_review": "PASS_WITH_LIMITATIONS",
+      "identity_display_precedence": "Last person only for display; shared support highlighted magenta; individual native planes retained",
+      "direct_observation": "Cases category includes a carried object at the selected adult; associated accessory support retained."
+    }
+  ],
+  "contact_sheet": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/contact_sheet.png",
+  "test_or_validation_used": false,
+  "no_model_inference": true,
+  "source_dataset_modified": false,
+  "all_semantic_pixel_ownership_verified": false,
+  "metrics_truth_not_visual_composite": true
+}

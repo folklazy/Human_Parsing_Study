@@ -1,0 +1,38 @@
+{
+  "status": "RESTORED_SHARED_DETECTOR_PROFILE_FROZEN",
+  "timestamp_utc": "2026-10-19T03:04:55.636209+00:00",
+  "original_invalid_trial_retained": true,
+  "config": "configs/application_v2_first_cohort_v12.yaml",
+  "config_sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce",
+  "decision": "provenance/APPLICATION_V2_DECISIONS_V11.json",
+  "decision_sha256": "56ac3ad2417cba16307e9dd151d015387cdcccba9b7389225a42c356b11e175c",
+  "restoration": {
+    "initial_trial": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution",
+    "prior_YOLO_image_attempts": 0,
+    "CPI_inference_retries": 0,
+    "native_source_config_sha256": "230c78f4780b596e2799f2f19a4322e889a58aabbf55fb6479d4507971433d3e",
+    "native_components": {
+      "CPI_R50_CIHP": {
+        "manifest": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_R50_CIHP/RUN.json",
+        "manifest_sha256": "c7fb48985738fe33b8d14dcfcd14bef4050260d9a525e9809d1692930b3547fe",
+        "ledger": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_R50_CIHP/FRAMES.jsonl",
+        "ledger_sha256": "17f5f1e96eb88ddb17a79b465dc906a01fbb510168deb25ad4471f2e274974a2"
+      },
+      "CPI_ConvNeXtB_CIHP": {
+        "manifest": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP_COMBINED/RUN.json",
+        "manifest_sha256": "cac4c4654c9931a903069b141cd28a7bcdd5817f5986c867bc0dac0adad7dbac",
+        "ledger": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP_COMBINED/FRAMES.jsonl",
+        "ledger_sha256": "b4e5d95a4ce335a1d2de43b5698015889c0c1cd76134ad5a0435066fdd17dddb"
+      }
+    },
+    "detector_worker": "scripts/first_cohort_yolo_bootstrap_worker.py",
+    "environment_packages_changed": false,
+    "scientific_values_changed": false,
+    "execution_driver": "scripts/restore_first_cohort_detector.py",
+    "rationale": "Initial detector aborted before model import because evaluator validation imported unavailable SciPy. CPU validates config; isolated detector verifies a frozen receipt."
+  },
+  "user_approval": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/USER_APPROVAL.json",
+  "scientific_policies_unchanged": true,
+  "CPI_inference_rerun": false,
+  "model_frame_retry_count": 0
+}

@@ -1,0 +1,1495 @@
+{
+  "method": {
+    "method": "64bit DCT pHash; 32x32 grayscale LANCZOS; top8x8 median incl DC; Hamming<=4; aspect relative difference<=5%",
+    "purpose": "candidate risk flags, not exclusion or proof of same scene"
+  },
+  "eligible_RGB_images": 33280,
+  "pairs": [
+    {
+      "a": [
+        "Training",
+        "0001261"
+      ],
+      "b": [
+        "Validation",
+        "0002245"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0010863"
+      ],
+      "b": [
+        "Validation",
+        "0002612"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0008700"
+      ],
+      "b": [
+        "Validation",
+        "0016126"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0002806"
+      ],
+      "b": [
+        "Validation",
+        "0018231"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0002040"
+      ],
+      "b": [
+        "Validation",
+        "0018976"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023276"
+      ],
+      "b": [
+        "Validation",
+        "0019711"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025969"
+      ],
+      "b": [
+        "Validation",
+        "0019711"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0001749"
+      ],
+      "b": [
+        "Validation",
+        "0019926"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.00805641554867561,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025822"
+      ],
+      "b": [
+        "Validation",
+        "0019998"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0010193679918449987,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020953"
+      ],
+      "b": [
+        "Validation",
+        "0020254"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021878"
+      ],
+      "b": [
+        "Validation",
+        "0020254"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.001042219731382675,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021290"
+      ],
+      "b": [
+        "Validation",
+        "0020463"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.04153354632587858,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024963"
+      ],
+      "b": [
+        "Validation",
+        "0020500"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0016474464579900867,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024761"
+      ],
+      "b": [
+        "Validation",
+        "0020843"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025123"
+      ],
+      "b": [
+        "Validation",
+        "0020851"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0015015015015015054,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022327"
+      ],
+      "b": [
+        "Validation",
+        "0020864"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.00381679389312974,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023327"
+      ],
+      "b": [
+        "Validation",
+        "0020864"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.004661016949152621,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020570"
+      ],
+      "b": [
+        "Validation",
+        "0020993"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023889"
+      ],
+      "b": [
+        "Validation",
+        "0021073"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026601"
+      ],
+      "b": [
+        "Validation",
+        "0021132"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025693"
+      ],
+      "b": [
+        "Validation",
+        "0021132"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024245"
+      ],
+      "b": [
+        "Validation",
+        "0021279"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0014645187058980236,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0019736"
+      ],
+      "b": [
+        "Validation",
+        "0021484"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0019858"
+      ],
+      "b": [
+        "Validation",
+        "0021514"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0033112582781456854,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020570"
+      ],
+      "b": [
+        "Validation",
+        "0021648"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0020993"
+      ],
+      "b": [
+        "Validation",
+        "0021648"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022579"
+      ],
+      "b": [
+        "Validation",
+        "0022004"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025403"
+      ],
+      "b": [
+        "Validation",
+        "0022100"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0029069767441860387,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020408"
+      ],
+      "b": [
+        "Validation",
+        "0022172"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024744"
+      ],
+      "b": [
+        "Validation",
+        "0022228"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022190"
+      ],
+      "b": [
+        "Validation",
+        "0022281"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.003076923076923002,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027396"
+      ],
+      "b": [
+        "Validation",
+        "0022527"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0023529411764706154,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024234"
+      ],
+      "b": [
+        "Validation",
+        "0022555"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.010550809956146103,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023027"
+      ],
+      "b": [
+        "Validation",
+        "0022590"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.00222803448609906,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024528"
+      ],
+      "b": [
+        "Validation",
+        "0022590"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.003003003003003112,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022728"
+      ],
+      "b": [
+        "Validation",
+        "0022590"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025326"
+      ],
+      "b": [
+        "Validation",
+        "0022635"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0007642242284274978,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025177"
+      ],
+      "b": [
+        "Validation",
+        "0022831"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021483"
+      ],
+      "b": [
+        "Validation",
+        "0022835"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023915"
+      ],
+      "b": [
+        "Validation",
+        "0023035"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027626"
+      ],
+      "b": [
+        "Validation",
+        "0023109"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.004566210045662156,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023403"
+      ],
+      "b": [
+        "Validation",
+        "0023158"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03869262196587355,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026921"
+      ],
+      "b": [
+        "Validation",
+        "0023158"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027150"
+      ],
+      "b": [
+        "Validation",
+        "0023220"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0016233766233765268,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021887"
+      ],
+      "b": [
+        "Validation",
+        "0023260"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.009132420091324162,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025775"
+      ],
+      "b": [
+        "Validation",
+        "0023278"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.002985074626865633,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023060"
+      ],
+      "b": [
+        "Validation",
+        "0023431"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026724"
+      ],
+      "b": [
+        "Validation",
+        "0023469"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0030211480362537157,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023403"
+      ],
+      "b": [
+        "Validation",
+        "0023522"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03869262196587355,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026921"
+      ],
+      "b": [
+        "Validation",
+        "0023522"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0023158"
+      ],
+      "b": [
+        "Validation",
+        "0023522"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025428"
+      ],
+      "b": [
+        "Validation",
+        "0023586"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020230"
+      ],
+      "b": [
+        "Validation",
+        "0023586"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0018018"
+      ],
+      "b": [
+        "Validation",
+        "0023906"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0006988120195666131,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023034"
+      ],
+      "b": [
+        "Validation",
+        "0023906"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0006988120195666131,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025580"
+      ],
+      "b": [
+        "Validation",
+        "0024005"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0009999999999999406,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021423"
+      ],
+      "b": [
+        "Validation",
+        "0024249"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0010145454545454342,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022796"
+      ],
+      "b": [
+        "Validation",
+        "0024249"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021017"
+      ],
+      "b": [
+        "Validation",
+        "0024252"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027177"
+      ],
+      "b": [
+        "Validation",
+        "0024258"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022125"
+      ],
+      "b": [
+        "Validation",
+        "0024258"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024676"
+      ],
+      "b": [
+        "Validation",
+        "0024258"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0029661"
+      ],
+      "b": [
+        "Validation",
+        "0024559"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.00958466453674109,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0023463"
+      ],
+      "b": [
+        "Validation",
+        "0024608"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0029940119760478237,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027243"
+      ],
+      "b": [
+        "Validation",
+        "0024846"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0013315579227695107,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021713"
+      ],
+      "b": [
+        "Validation",
+        "0024903"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0037950664136622257,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022241"
+      ],
+      "b": [
+        "Validation",
+        "0025281"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0015015015015015054,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025280"
+      ],
+      "b": [
+        "Validation",
+        "0025505"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0009999999999999406,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026171"
+      ],
+      "b": [
+        "Validation",
+        "0025526"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.043200000000000106,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023983"
+      ],
+      "b": [
+        "Validation",
+        "0025618"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.015469613259668618,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0019819"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.03367187499999995,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022110"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03221874999999994,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023779"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.03221874999999994,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024118"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.03221874999999994,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025643"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.03221874999999994,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026514"
+      ],
+      "b": [
+        "Validation",
+        "0025744"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.02931250000000002,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021756"
+      ],
+      "b": [
+        "Validation",
+        "0025957"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0027173913043477328,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026589"
+      ],
+      "b": [
+        "Validation",
+        "0025986"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0009999999999999406,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025398"
+      ],
+      "b": [
+        "Validation",
+        "0026151"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0006775067750676921,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024739"
+      ],
+      "b": [
+        "Validation",
+        "0026356"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03541666666666679,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024691"
+      ],
+      "b": [
+        "Validation",
+        "0026422"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023798"
+      ],
+      "b": [
+        "Validation",
+        "0026431"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023091"
+      ],
+      "b": [
+        "Validation",
+        "0026489"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025087"
+      ],
+      "b": [
+        "Validation",
+        "0026661"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0005224541716830957,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022421"
+      ],
+      "b": [
+        "Validation",
+        "0026729"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0019379844961240759,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026818"
+      ],
+      "b": [
+        "Validation",
+        "0027030"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021880"
+      ],
+      "b": [
+        "Validation",
+        "0027065"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.001383125864453757,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022670"
+      ],
+      "b": [
+        "Validation",
+        "0027085"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021527"
+      ],
+      "b": [
+        "Validation",
+        "0027085"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025728"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0004997501249375998,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026449"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03595890410958904,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0027248"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03595890410958904,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0036069"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0004997501249375998,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026991"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.03595890410958904,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020931"
+      ],
+      "b": [
+        "Validation",
+        "0027282"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0004997501249375998,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0025200"
+      ],
+      "b": [
+        "Validation",
+        "0027423"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0009999999999999406,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0021432"
+      ],
+      "b": [
+        "Validation",
+        "0027441"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0020484"
+      ],
+      "b": [
+        "Validation",
+        "0027495"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0026386"
+      ],
+      "b": [
+        "Validation",
+        "0027572"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.003003224939532294,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0031969"
+      ],
+      "b": [
+        "Validation",
+        "0028363"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0032389"
+      ],
+      "b": [
+        "Validation",
+        "0029428"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.003666507253307742,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0030890"
+      ],
+      "b": [
+        "Validation",
+        "0030763"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0005476451259583474,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0031235"
+      ],
+      "b": [
+        "Validation",
+        "0030849"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.003333333333333355,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0029777"
+      ],
+      "b": [
+        "Validation",
+        "0030911"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0015999999999999944,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0032544"
+      ],
+      "b": [
+        "Validation",
+        "0031749"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.006166666666666687,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0028015"
+      ],
+      "b": [
+        "Validation",
+        "0032295"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.003003003003003112,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0029813"
+      ],
+      "b": [
+        "Validation",
+        "0032846"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.003003003003003112,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0023050"
+      ],
+      "b": [
+        "Validation",
+        "0033696"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0022149"
+      ],
+      "b": [
+        "Validation",
+        "0036646"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0028148148148146837,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0025476"
+      ],
+      "b": [
+        "Validation",
+        "0036658"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.0,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0035186"
+      ],
+      "b": [
+        "Validation",
+        "0036703"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.0007656967840734752,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Training",
+        "0024114"
+      ],
+      "b": [
+        "Validation",
+        "0037390"
+      ],
+      "phash_hamming": 4,
+      "aspect_relative_difference": 0.010473754719278978,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0036610"
+      ],
+      "b": [
+        "Validation",
+        "0037508"
+      ],
+      "phash_hamming": 0,
+      "aspect_relative_difference": 0.02799999999999998,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    },
+    {
+      "a": [
+        "Validation",
+        "0020537"
+      ],
+      "b": [
+        "Validation",
+        "0038278"
+      ],
+      "phash_hamming": 2,
+      "aspect_relative_difference": 0.0019685039370079195,
+      "status": "AUTOMATED_CANDIDATE_NOT_CONFIRMED_DUPLICATE"
+    }
+  ],
+  "candidate_pairs": 114,
+  "auto_exclusion": false,
+  "human_confirmation": "PENDING",
+  "missed_similarity_possible": true
+}

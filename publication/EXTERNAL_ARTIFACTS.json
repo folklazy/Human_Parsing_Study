@@ -1,0 +1,589 @@
+{
+  "no_public_artifact_host_created": true,
+  "files": [
+    {
+      "path": "manifests/mhpv2_readable_v1/TRAIN_READABLE.json",
+      "bytes": 2714675,
+      "sha256": "7abeed70563a24e755558a77bf2bc6f1049f623b440f38dc96d76d94680445d1",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+      "bytes": 24736194,
+      "sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+      "bytes": 24577473,
+      "sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/mhp_native_sidecars/VALIDATION_OVERLAP_CONTROLLED_READABLE.jsonl",
+      "bytes": 7137450,
+      "sha256": "2980088d8287027a59760e275960d28bb3b560f47a2d28cbb8014490218084f2",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/mhp_native_sidecars/VALIDATION_READABLE.jsonl",
+      "bytes": 8303471,
+      "sha256": "ed8caf14a2ac33972f133d0f76f551423b38326c231cef0f6c789cf7a9e57689",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/ANNOTATION_SUMMARY.jsonl",
+      "bytes": 10861967,
+      "sha256": "844ecfb7b740546214ae766af8cc7d6f9ebcb844793fc392c1b972c530e52878",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/TAR_MEMBER_SHA256.jsonl",
+      "bytes": 13702377,
+      "sha256": "d8e4f01ba8a52dbb48a50ac92b6811945cb9ac0c499d96c4f73eaf4a419ee13b",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/dataset-reassessment-20261008T095241Z/sources/CIHP_DATASET_FOLDER_METADATA.json",
+      "bytes": 4122,
+      "sha256": "b1b8d121942f465000eb0d5fe531906635d247b8413bf996039be2fd57cc0178",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042648Z/local_sources/CPI-Parser/README.md",
+      "bytes": 2489,
+      "sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042648Z/local_sources/D2FP/README.md",
+      "bytes": 3293,
+      "sha256": "a1d01cadd0579c47b2f01598cc42734811b6b0b801ded6f0bc9edfd055ba188d",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042648Z/local_sources/M2FP/README.md",
+      "bytes": 3322,
+      "sha256": "70d3ee9583768655351af4514997ff90067613f3790b05ec52620fe26fa6a2e7",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042648Z/local_sources/SCHP/README.md",
+      "bytes": 5988,
+      "sha256": "91db28cf69c4d21d58ade026467bd886596c27d4b12955f95b42b1997e0910f4",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/CPI-Parser/README.md",
+      "bytes": 2489,
+      "sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/D2FP/README.md",
+      "bytes": 3293,
+      "sha256": "a1d01cadd0579c47b2f01598cc42734811b6b0b801ded6f0bc9edfd055ba188d",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/M2FP/README.md",
+      "bytes": 3322,
+      "sha256": "70d3ee9583768655351af4514997ff90067613f3790b05ec52620fe26fa6a2e7",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/SCHP/README.md",
+      "bytes": 5988,
+      "sha256": "91db28cf69c4d21d58ade026467bd886596c27d4b12955f95b42b1997e0910f4",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/fashn-human-parser/README.md",
+      "bytes": 4875,
+      "sha256": "fa4a279452a148e269798b0171ab20521d1557d2dc4c8d19f9d181bfffde8432",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/CDGNET_TREE.json",
+      "bytes": 21411,
+      "sha256": "8e4d1795900f060683dc204bab514c1c5b1cfb986d32420de09b6b9e782a02f2",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/SOURCE_MANIFEST.json",
+      "bytes": 4289,
+      "sha256": "b1fd949aa06e682f37b228828c52e6f81d37db0a22adb9922ebfab8711b667b2",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/abn_license.txt",
+      "bytes": 1538,
+      "sha256": "005e3e456e6bbce6463d51eb7dce6c6614758d94b5db072153b84e5f7f133f2c",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/d2fp_release.txt",
+      "bytes": 4907,
+      "sha256": "2ea225d237a69ab11bf3d5532631606cca149385bfb6543953b96de564251282",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/detectron2_license.txt",
+      "bytes": 10256,
+      "sha256": "ceb78ee847e76f67a6a521a5732dc3373aed07eee003d738a572dc96705f08ff",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/fashn_model_card.txt",
+      "bytes": 4929,
+      "sha256": "e23eb885bde6f74b89cb0b9733287e566b9e169eea3a15f99ea2ffa951ebc721",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/mhp_terms.txt",
+      "bytes": 13621,
+      "sha256": "34d270ab31ddcf6b7034682fa0f21d1dbd6299a81c1ba4988f42b35c15f54d5b",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/mmcv_license.txt",
+      "bytes": 11413,
+      "sha256": "866d999d3ca92d2c5dc9b0afc941c5fac6529e2d180fc638274f91f7fce161d7",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/mmdet_license.txt",
+      "bytes": 11398,
+      "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/qanet_license.txt",
+      "bytes": 1061,
+      "sha256": "ecefcc958932296424fe2a81acccce733ffbd923d2c823e01b5b1e5d3c2731e8",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/rprcnn_license.txt",
+      "bytes": 1061,
+      "sha256": "ecefcc958932296424fe2a81acccce733ffbd923d2c823e01b5b1e5d3c2731e8",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/sapiens2_license.txt",
+      "bytes": 9931,
+      "sha256": "1c77a629ee16972ddb9844378038b20321143a6faf0cac26c2c04dc9b61c5288",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/segformer_license.txt",
+      "bytes": 4065,
+      "sha256": "f549820c06519e3105e5174a2fd7285224ffd2268a7f879a843b1a255fd04a61",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP/FRAMES.jsonl",
+      "bytes": 492238,
+      "sha256": "5f5310a0d2c29c4b6d66273443b08c0ba5f697bfdd09fbd3ebc28ab62a0f4c02",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP_COMBINED/FRAMES.jsonl",
+      "bytes": 1994912,
+      "sha256": "b4e5d95a4ce335a1d2de43b5698015889c0c1cd76134ad5a0435066fdd17dddb",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_ConvNeXtB_CIHP/FRAMES.jsonl",
+      "bytes": 1502106,
+      "sha256": "f229a4157c6f6ff0ed32d77122bce1e1793d94ca39cd9ff75cdbb0184f933058",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_R50_CIHP/FRAMES.jsonl",
+      "bytes": 3551121,
+      "sha256": "17f5f1e96eb88ddb17a79b465dc906a01fbb510168deb25ad4471f2e274974a2",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_PRIMARY_REPORT.json",
+      "bytes": 7703345,
+      "sha256": "13757995b7ace820550e3977bfc7a2f46d8cc56c6417ffa3fa59f2b8ae6e6170",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_SECONDARY_REPORT.json",
+      "bytes": 7703351,
+      "sha256": "6a2657672791dfe4747e5c9b1904c50e13bb6c469f4345343a8a64306019d8f3",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_PRIMARY_REPORT.json",
+      "bytes": 7749216,
+      "sha256": "0b492d461d2c6c1056aec7e01fd7f9ded66d003a3e5f7c0bf4023e5bc8c58be2",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_SECONDARY_REPORT.json",
+      "bytes": 7749220,
+      "sha256": "ada91bdae8f77f29e0a76cadeeacbfacba5d89364f47ddbf7886c99839b0d5ca",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/PRIMARY_FRAME_SCORES.json",
+      "bytes": 30682,
+      "sha256": "7010be8ee8778ce2a07195031d76f0465da0bb8b193aeb95384bfb5e44f571bc",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/SECONDARY_FRAME_SCORES.json",
+      "bytes": 30682,
+      "sha256": "2dda047793ac19056a9f569def05c3d686a08efa452abf52c736f318bc4c7042",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/outputs/cpi_convnextb_cihp-20261015T084648Z/RUN.json",
+      "bytes": 16022,
+      "sha256": "fdfc2710c18953f6364260f77e61d54ab9ba2939e4d55177cd4f5da4d07d906a",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/outputs/cpi_r50_cihp-20261015T084636Z/RUN.json",
+      "bytes": 15777,
+      "sha256": "447bcd5b75864cf40a824535c430e3237268a0dd04c01106d9c13ade66af0bc3",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+      "bytes": 4329815,
+      "sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+      "bytes": 4296364,
+      "sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_cihp-20261015T064421Z/RUN.json",
+      "bytes": 16010,
+      "sha256": "b4328c730caddd3b2a7cb21ebe2d401838b1b703c06e8bb0bd2c1421550f027a",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_mhpv2-20261015T064433Z/RUN.json",
+      "bytes": 22550,
+      "sha256": "96b26c89ed4ce48c047463b59ac5efdc9dfe344d7a19be96a0c02c69211f7e7f",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_cihp-20261015T064358Z/RUN.json",
+      "bytes": 15765,
+      "sha256": "a637a4a9edef0e33d9bd8052f3446303c8a9e025b68024b4471dc22837f2d327",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_mhpv2-20261015T064415Z/RUN.json",
+      "bytes": 22014,
+      "sha256": "a17a646c5b0eb4ef9a1ff7e773564e64630cfca184e41b7294e48e8a56864b58",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_cihp-20261015T064526Z/RUN.json",
+      "bytes": 14355,
+      "sha256": "254aaee571f2b9086e6ea7aeb63e20ca90dbc89674f207f5605188d4dfead7e5",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_lip-20261015T064543Z/RUN.json",
+      "bytes": 14180,
+      "sha256": "d637ca5b2f9e00d402ae92dfb68f44e4b5fa4c2c046fa132034476830bc4e76f",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/fashn-20261015T064349Z/RUN.json",
+      "bytes": 4640,
+      "sha256": "380147ccde2f6e3205ba67cea939b00640eb1d6915283ec4ad2b580dbb15e3d4",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_cihp-20261015T064449Z/RUN.json",
+      "bytes": 14325,
+      "sha256": "7cc45119b11559df4bc132efc49176d9a82457e42ba0a53eb8e682fb18b625ad",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_lip-20261015T064514Z/RUN.json",
+      "bytes": 13999,
+      "sha256": "eba17ee540655f335ea7e2a022ed7528d18974acddbbaed1747d7e520e1c16da",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_mhpv2-20261015T064505Z/RUN.json",
+      "bytes": 19025,
+      "sha256": "80c7a69afdb9984f9400ff7b59144f39b7fbb1aa9d4b259a656ebf83e4d740f7",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp-20261015T064600Z/RUN.json",
+      "bytes": 11678,
+      "sha256": "be1c1af0abe8cfcbffb00a353b19c718dc09515cc25d4a6c54e2639c7fbc2445",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp_hrnetw48_512x384-20261015T065534Z/RUN.json",
+      "bytes": 11692,
+      "sha256": "93a1c56f063acb2ae8909bef5ac175da98f26756f90e8df7f1ad36147947c7ca",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_lip-20261015T064608Z/RUN.json",
+      "bytes": 11449,
+      "sha256": "1f482a63c66d63fc1b53203e0cc751e0332c1cbb76c6593df361e7d22fb38756",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_lip_hrnetw48_544x416-20261015T065545Z/RUN.json",
+      "bytes": 11738,
+      "sha256": "ad9787fabe47202a0019a8916017fb9e8b50e9bcc481b6141ea54f1b6adc3b72",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_cihp-20261015T064615Z/RUN.json",
+      "bytes": 20859,
+      "sha256": "cf7dfec7ede5f57a04a55f6c7c64dc84f8f2d29bc61a231652762ead40683db8",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_mhpv2-20261015T064627Z/RUN.json",
+      "bytes": 25547,
+      "sha256": "f1292123e4c14de81d00ad303ab93b5c203c7fb0fa15c6ee6410a9a0f1349676",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_cihp_global_component-20261015T065656Z/RUN.json",
+      "bytes": 5020,
+      "sha256": "cedff052850ee52634a073be329b50cb2bb61ed484537b313351f06695e3e2d5",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_cihp_local_component-20261015T065707Z/RUN.json",
+      "bytes": 4848,
+      "sha256": "8753509380334038c8180e3b4e67b02f8fa970a778706e9d95374cf0476c1df2",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_atr-20261015T065335Z/RUN.json",
+      "bytes": 4701,
+      "sha256": "56ee1825158f48854705c1c0e91cb4be3b3305dc917b4ff85921d4203adc5a21",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_lip-20261015T065323Z/RUN.json",
+      "bytes": 4920,
+      "sha256": "6cd4e93f19ec85bd2f80201f049d4cc4b86ebe1d3a305235a7202e66f3b068eb",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_pascal_person_part-20261015T065339Z/RUN.json",
+      "bytes": 3295,
+      "sha256": "505edd87a6736c47703b3d3d52d387f0d75ff674efbe8245d38aeedd95a1bc5a",
+      "reason": "Bulk output or cache retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0-20261008T063349Z/CANONICAL_GT_INDEX_V2.jsonl",
+      "bytes": 53056435,
+      "sha256": "81358626da696ae2ec552f195fcc318df0d5c22011fe120d97cc038095cf2f54",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0-20261008T063349Z/DATASET_SHA256.jsonl",
+      "bytes": 13071024,
+      "sha256": "2864eea092e7424d80aa6241100243b31dd6f7f3214eba7f040b8094df6f5822",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-cihp-20261012T043947Z/sources/SOURCE_MANIFEST.json",
+      "bytes": 2131,
+      "sha256": "d60a0b1d1a27de49948d2eb5e0a444169d52d3a0a49512f4448b9478443d9641",
+      "reason": "Paused PPSS or third-party/source dataset content retained externally",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/ZIP_MEMBER_SHA256.jsonl",
+      "bytes": 42096254,
+      "sha256": "9949e3bdc741fabd83fbb458bdd93a6662b9a002d8c81f76d5e61a2b5db5e89b",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/IMAGE_AUDIT.jsonl",
+      "bytes": 57665144,
+      "sha256": "08ee85c702e5a71c098ecef99e6290aeec5ee533c74350fe062cbe3dd2a2dc49",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/PERSON_AUDIT.jsonl",
+      "bytes": 24510921,
+      "sha256": "72eb680b81b740afb131f0bca7ecf9e91b8df89c84d076f95d293972b57eb5ba",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/PERSON_SEMANTIC_SUPPORT_WARNINGS.json",
+      "bytes": 2289831,
+      "sha256": "2e0084116934b872c31fa9c5b37697d8ecceda9ce142caf946baf16d897f1c82",
+      "reason": "Bulk artifact or detailed GT annotation bindings; source hash retained, no redistribution grant inferred",
+      "public_download_url": null,
+      "availability": "LOCAL_CUSTODIAN_ONLY_OR_REBUILD_WITH_AUTHORIZED_ASSETS"
+    },
+    {
+      "path": "provenance/MODEL_SOURCE_AUDIT.json",
+      "bytes": 626653,
+      "sha256": "b771111a2f44a8ed5c39cfc461f53df4f794e00bd9fb0c2543c54af2048fc0a7",
+      "reason": "Raw historic HTTP response headers include cookies/transient access material; publication copy withheld without changing the original",
+      "public_download_url": null,
+      "availability": "LOCAL_PRIVATE_EVIDENCE_ONLY"
+    }
+  ]
+}

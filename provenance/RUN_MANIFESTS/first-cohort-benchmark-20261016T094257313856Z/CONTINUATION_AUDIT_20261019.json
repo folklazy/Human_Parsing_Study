@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-19T02:49:08.302386+00:00",
+  "native_R50_committed_frames": 5000,
+  "native_ConvNeXt_committed_frames": 3779,
+  "original_ConvNeXt_RUN_status": "RUNNING_WITH_NO_LIVE_PROCESS",
+  "cause_of_termination": "UNKNOWN_NO_FINAL_MANIFEST",
+  "last_committed_id": "0034893",
+  "first_uncommitted_id": "0034896",
+  "extra_artifact_ids": {
+    "execution/CPI_ConvNeXtB_CIHP": [
+      "0034896"
+    ],
+    "execution/CPI_ConvNeXtB_CIHP/native/val_seg": [
+      "0034896"
+    ],
+    "execution/CPI_ConvNeXtB_CIHP/native/val_parsing": [
+      "0034896"
+    ]
+  },
+  "policy": "Do not retry prior COMPLETE/FAILED rows. Conservatively retain next uncommitted frame as unresolved interruption; continue only later unattempted IDs."
+}

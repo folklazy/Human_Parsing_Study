@@ -1,0 +1,57 @@
+{
+  "current_config": "configs/application_v2_first_cohort_v5.yaml",
+  "current_config_sha256": "c04ac3adc86f72565387b7197c7a7defa5239c320b3394273d9977f666a3ee6b",
+  "executed_config": "configs/application_v2_first_cohort_v4.yaml",
+  "executed_config_sha256": "69b6668249d624a850fbcc01b60c9987bdcc1b154cee5bb6f28efdff9852e036",
+  "GT_projection_unchanged": true,
+  "native_input_and_preprocessing_unchanged": true,
+  "source_outputs_are_actual_inference": true,
+  "derived_analysis_uses_saved_outputs_only": true,
+  "model_inference_rerun_in_this_review": false,
+  "models": [
+    {
+      "model": "CPI_R50_CIHP",
+      "native_artifact_sha256": "a8e9ef839e8fec089a7876b527b5813d132fe3e44f0539ad7230037f52e278e1",
+      "YOLO_artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+      "association_identical_to_executed_V4_route": true,
+      "GT_evaluation_threshold_not_used_for_association": true,
+      "old_canonical_packet_reused_as_V5_inference": false,
+      "quality_scores_computed": false,
+      "canonical_V5_packet": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_R50_CIHP",
+      "inference_dependencies": {
+        "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+        "native_checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+        "native_source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+        "native_config_source_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+        "native_resolved_config_sha256": "a9010c51a4fcae5b2d52825bfb65b523bf41f000e88c4ea063ca06ef2eae0cbb",
+        "native_class_order_sha256": "d5c7a041f9608c90fdb48827cdbb62e61f9118eee28a14ce55db7c105fd0862f",
+        "YOLO_checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+        "native_artifact_sha256": "a8e9ef839e8fec089a7876b527b5813d132fe3e44f0539ad7230037f52e278e1",
+        "YOLO_artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+        "adapter_revision": "87c873d63ec4ac31b1a1722360dcb1ed08d258b1b2ff24f9a384f0332f1284ef"
+      }
+    },
+    {
+      "model": "CPI_ConvNeXtB_CIHP",
+      "native_artifact_sha256": "675192fb4c8d1bef2b7847bded854d65ac314509801bb055b11e228397bf70a2",
+      "YOLO_artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+      "association_identical_to_executed_V4_route": true,
+      "GT_evaluation_threshold_not_used_for_association": true,
+      "old_canonical_packet_reused_as_V5_inference": false,
+      "quality_scores_computed": false,
+      "canonical_V5_packet": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_ConvNeXtB_CIHP",
+      "inference_dependencies": {
+        "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+        "native_checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+        "native_source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+        "native_config_source_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+        "native_resolved_config_sha256": "144ac1f0ac34710c562e345d583094e113c386884411679d78f2ff2169112b40",
+        "native_class_order_sha256": "d5c7a041f9608c90fdb48827cdbb62e61f9118eee28a14ce55db7c105fd0862f",
+        "YOLO_checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+        "native_artifact_sha256": "675192fb4c8d1bef2b7847bded854d65ac314509801bb055b11e228397bf70a2",
+        "YOLO_artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+        "adapter_revision": "87c873d63ec4ac31b1a1722360dcb1ed08d258b1b2ff24f9a384f0332f1284ef"
+      }
+    }
+  ]
+}

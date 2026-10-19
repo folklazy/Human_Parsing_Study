@@ -1,0 +1,95 @@
+[
+  {
+    "original_relative_path": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "9fedb0ac5795ae4a99d57336bb8ab43ce0c75286e0c92bfac5399ae7ab7614c2",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Full exhaustive read-only structural evidence; human-quality gate separate",
+    "editorial_intermediate": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/generated_before_editorial/reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md"
+  },
+  {
+    "original_relative_path": "reports/CCIHP_SPLIT_LEAKAGE_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "4b1bb51bb23d4645e66017b9a17306cddaf20ec8cc6b1f492988271cd6041500",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Exact decoded and near duplicate risk evidence, separate proposed populations"
+  },
+  {
+    "original_relative_path": "reports/CCIHP_HUMAN_REVIEW_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "a9cb60d5e3a3724e8bbdd224ee93851c7f50d4da563e28a8e948fe75faaaefc3",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Reproducible human review package; review pending without prevalence fabrication",
+    "editorial_intermediate": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/generated_before_editorial/reports/CCIHP_HUMAN_REVIEW_STAGE0F.md"
+  },
+  {
+    "original_relative_path": "reports/CCIHP_CROSS_SOURCE_WARNINGS_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "0c067f54e5571e39de27e79686bf0c47329003c2397f0c52f451332fae6cbf17",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "47 previous cross-source flags rechecked without majority reassignment"
+  },
+  {
+    "original_relative_path": "reports/CCIHP_EVALUATION_PROTOCOL_DRAFT_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "0fd15e87109fdca2f1602188e3995b978ee406bef4b9c3d9e6a714ca4fac4441",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "CCIHP-specific draft, no threshold/taxonomy freeze",
+    "editorial_intermediate": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/generated_before_editorial/reports/CCIHP_EVALUATION_PROTOCOL_DRAFT_STAGE0F.md"
+  },
+  {
+    "original_relative_path": "reports/CCIHP_PRIMARY_DATASET_DECISION_STAGE0F.md",
+    "archive_relative_path": null,
+    "sha256_before": null,
+    "sha256_after": "db187981a8fd7b2918e467743e637d46c78a19b0a30d141ee24fc8024a77326e",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Evidence-based primary decision D, without reversing Stage0E compatibility B",
+    "editorial_intermediate": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/generated_before_editorial/reports/CCIHP_PRIMARY_DATASET_DECISION_STAGE0F.md"
+  },
+  {
+    "original_relative_path": "reports/CIHP_QUALITY_AUDIT.md",
+    "archive_relative_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/CIHP_QUALITY_AUDIT.md",
+    "sha256_before": "1754588e2c65dda61a1a1fcefc7ff5ecbe04d75c5edee055699efa400247ee8a",
+    "sha256_after": "6f0896e768c41c1f172cbb7b87269a215010e3ca4defe095fa41f5ed0376ed21",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Expose completed Stage0F audit and pending human-review gate; historical context retained"
+  },
+  {
+    "original_relative_path": "reports/PRIMARY_DATASET_DECISION.md",
+    "archive_relative_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/PRIMARY_DATASET_DECISION.md",
+    "sha256_before": "253e203fc9198a37ea8fbec49e89a8957a51cf36fbb608b13458098a902c2576",
+    "sha256_after": "a242c73b1356a5f0592ec2c8649cdf5326ab609b87e2774221225fe34a536154",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Expose completed Stage0F audit and pending human-review gate; historical context retained"
+  },
+  {
+    "original_relative_path": "reports/STAGE0_NEXT_ACTIONS.md",
+    "archive_relative_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/STAGE0_NEXT_ACTIONS.md",
+    "sha256_before": "5980501b07db95e648f6adc3a8fc870fe323ec9f29f2d6fd04682a02ba3adc72",
+    "sha256_after": "0fcb8eb7f60c89e22492dead3fa20b040d372dc36e90da8156c09ad3fb834c67",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Expose completed Stage0F audit and pending human-review gate; historical context retained"
+  },
+  {
+    "original_relative_path": "README.md",
+    "archive_relative_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/README.md",
+    "sha256_before": "b27ad6254d805042d9d3eb3bb97fa441c5bcaffd0f1a51fc3d3902b23a3eb0cf",
+    "sha256_after": "c34d50179055d2e319fe57025b8682c3607a414e52c555f7fa2351404218dc0a",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Current Stage0F navigation without erasing historical study evidence",
+    "editorial_intermediate": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/generated_before_editorial/README.md"
+  },
+  {
+    "original_relative_path": "STUDY_STATE.json",
+    "archive_relative_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/STUDY_STATE.json",
+    "sha256_before": "a67e1ad4a0f75ef80cdf5853e8d17738903ca70e07dc7c991c323e3611f38fbc",
+    "sha256_after": "4b2903d0f6eceeade1da391bdcbb283216030cb399e13bbff9cc77d09889478b",
+    "timestamp_utc": "2026-10-12T06:46:12.338173+00:00",
+    "reason": "Add Stage0F independently; prior/PPSS state preserved"
+  }
+]

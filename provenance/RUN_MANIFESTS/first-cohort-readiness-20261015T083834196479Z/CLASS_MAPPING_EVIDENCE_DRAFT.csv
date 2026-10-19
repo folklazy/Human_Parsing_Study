@@ -1,0 +1,24 @@
+GT_native_id,GT_declared_name,GT_disposition,GT_target_id,CIHP_prediction_name,prediction_disposition,prediction_target_id,scope_note,review_status
+0,Reserved zero; background/unknown policy under review,MAP,0,Background,MAP,0,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+1,Hat,VOID,,Hat,OUTSIDE_TARGET,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+2,Hair,VOID,,Hair,OUTSIDE_TARGET,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+3,Glove,VOID,,Gloves,OUTSIDE_TARGET,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+4,Sunglasses/Glasses,VOID,,Sunglasses,OUTSIDE_TARGET,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+5,UpperClothes,MAP,5,UpperClothes,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+6,Face Mask,VOID,,Dress,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+7,Coat,MAP,5,Coat,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+8,Socks,MAP,5,Socks,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+9,Pants,MAP,5,Pants,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+10,Torso-skin,MAP,2,Torso-skin,MAP,2,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+11,Scarf,MAP,5,Scarf,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+12,Skirt,MAP,5,Skirt,MAP,5,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+13,Face,MAP,1,Face,MAP,1,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+14,Left-arm (naked part),MAP,3,Left-arm,MAP,3,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+15,Right-arm (naked part),MAP,3,Right-arm,MAP,3,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+16,Left-leg (naked part),MAP,4,Left-leg,MAP,4,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+17,Right-leg (naked part),MAP,4,Right-leg,MAP,4,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+18,Left-shoe,MAP,6,Left-shoe,MAP,6,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+19,Right-shoe,MAP,6,Right-shoe,MAP,6,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+20,Bag,VOID,,NO_NATIVE_CLASS,UNSUPPORTED,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+21,Others,VOID,,NO_NATIVE_CLASS,UNSUPPORTED,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN
+22,UNDEFINED_RELEASE_ID_22,VOID,,NO_NATIVE_CLASS,UNSUPPORTED,,Same numeric ID does not imply same semantics; GT6 Face Mask and prediction6 Dress intentionally differ,DRAFT_DOCUMENTED_CONCEPTS_NOT_FROZEN

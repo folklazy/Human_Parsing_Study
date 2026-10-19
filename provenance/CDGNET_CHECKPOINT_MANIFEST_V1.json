@@ -1,0 +1,74 @@
+{
+  "run_id": "cdgnet-acquisition-20261015T082226739949Z",
+  "created_utc": "2026-10-15T08:22:26.740114+00:00",
+  "official_repository": "https://github.com/tjpulkl/CDGNet.git",
+  "source_commit": "9daf7ddee6045c151c90a2e300946ea5f5717591",
+  "author_link": "https://drive.google.com/open?id=1rzLU-wK6rEorCNJfwrmIu5hY2wRMyKTK",
+  "official_folder": "https://drive.google.com/drive/folders/1rzLU-wK6rEorCNJfwrmIu5hY2wRMyKTK",
+  "status": "DOWNLOADED_SIZE_AND_SHA256_VERIFIED",
+  "model_inference": false,
+  "full_benchmark": false,
+  "code_execution_license": "UNRESOLVED_PRIOR_CODE_LICENSE_REVIEW; acquisition does not establish execution eligibility",
+  "folder_members": [
+    {
+      "file_id": "1X9dWbu1jI8tYEX8T88luP_nI3myoxes-",
+      "filename": "LIP_epoch_149.pth",
+      "source_url": "https://drive.google.com/file/d/1X9dWbu1jI8tYEX8T88luP_nI3myoxes-/view",
+      "expected_bytes": 267470799
+    },
+    {
+      "file_id": "16LuwD83iColELOZOcQk8o_a5QpDUKzNp",
+      "filename": "resnet101-imagenet.pth",
+      "source_url": "https://drive.google.com/file/d/16LuwD83iColELOZOcQk8o_a5QpDUKzNp/view",
+      "expected_bytes": 179190439
+    }
+  ],
+  "free_bytes_before": 571530395648,
+  "planned_download_bytes": 267470799,
+  "backbone_action": "NOT_DOWNLOADED_NOT_REQUIRED_BY_OFFICIAL_EVALUATION_PATH",
+  "destination": "models/human_parsing/cdgnet/CDGNet_R101_LIP/LIP_epoch_149.pth",
+  "sha256": "26003d4cd38ff63b3bc54e3e8840d873a5be09e3924f9a3eb741b101fb4c8df8",
+  "acquisition": "NEW_DOWNLOAD",
+  "bytes": 267470799,
+  "author_checksum": null,
+  "checksum_interpretation": "Local content fingerprint; provenance from author-linked Drive folder",
+  "torch_loaded": false,
+  "model_loaded": false,
+  "inference_status": "NOT_TESTED",
+  "completed_utc": "2026-10-15T08:22:46.325187+00:00",
+  "tensor_inspection": {
+    "started_utc": "2026-10-15T08:23:08.938721+00:00",
+    "checkpoint_sha256": "26003d4cd38ff63b3bc54e3e8840d873a5be09e3924f9a3eb741b101fb4c8df8",
+    "torch": "2.14.0+cu130",
+    "device": "CPU",
+    "weights_only": true,
+    "model_built": false,
+    "model_inference": false,
+    "status": "PASS_WEIGHTS_ONLY_STRUCTURAL_INSPECTION",
+    "pytorch_zip_crc": "NOT_ZIP_SERIALIZATION",
+    "tensor_entries": 603,
+    "tensor_elements_including_buffers": 66838456,
+    "dtypes": [
+      "torch.float32"
+    ],
+    "finite_tensors": true,
+    "parser_head_shapes": {
+      "module.layer6.conv4.weight": [
+        20,
+        256,
+        1,
+        1
+      ],
+      "module.layer6.conv4.bias": [
+        20
+      ]
+    },
+    "parsing_classes_in_head": 20,
+    "limitations": "Structural inspection only; strict architecture load and inference NOT_TESTED",
+    "completed_utc": "2026-10-15T08:23:10.115743+00:00"
+  },
+  "checkpoint_path": "models/human_parsing/cdgnet/CDGNet_R101_LIP/LIP_epoch_149.pth",
+  "strict_architecture_load": "NOT_TESTED",
+  "GPU_inference": "NOT_TESTED",
+  "registry": "provenance/MODEL_VARIANT_REGISTRY_HANDOFF_V5.csv"
+}

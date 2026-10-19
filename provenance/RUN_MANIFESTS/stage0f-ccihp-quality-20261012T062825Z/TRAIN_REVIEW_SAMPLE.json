@@ -1,0 +1,2084 @@
+{
+  "run_id": "stage0f-ccihp-quality-20261012T062825Z",
+  "seed": 20261012,
+  "selection": "stratified simple random without replacement; positive inclusion probability in every populated stratum",
+  "sampling_frame_images": 28280,
+  "sampling_frame_SHA256": "d516731e14a47abf872f819057874d7e576317d3803c17af2d015aeb007cb190",
+  "sampling_frame_exclusions": [],
+  "strata": [
+    {
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 114,
+      "sample": 1,
+      "inclusion_probability": 0.008771929824561403,
+      "weight": 114.0
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 90,
+      "sample": 1,
+      "inclusion_probability": 0.011111111111111112,
+      "weight": 90.0
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 44,
+      "sample": 1,
+      "inclusion_probability": 0.022727272727272728,
+      "weight": 44.0
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 4,
+      "sample": 1,
+      "inclusion_probability": 0.25,
+      "weight": 4.0
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 2953,
+      "sample": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "weight": 155.42105263157896
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 1480,
+      "sample": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "weight": 164.44444444444446
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 11856,
+      "sample": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "weight": 152.0
+    },
+    {
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 1539,
+      "sample": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "weight": 153.9
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 3,
+      "sample": 1,
+      "inclusion_probability": 0.3333333333333333,
+      "weight": 3.0
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 4,
+      "sample": 1,
+      "inclusion_probability": 0.25,
+      "weight": 4.0
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 8,
+      "sample": 1,
+      "inclusion_probability": 0.125,
+      "weight": 8.0
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 1,
+      "sample": 1,
+      "inclusion_probability": 1.0,
+      "weight": 1.0
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 321,
+      "sample": 2,
+      "inclusion_probability": 0.006230529595015576,
+      "weight": 160.5
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 85,
+      "sample": 1,
+      "inclusion_probability": 0.011764705882352941,
+      "weight": 85.0
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 1165,
+      "sample": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "weight": 166.42857142857142
+    },
+    {
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 78,
+      "sample": 1,
+      "inclusion_probability": 0.01282051282051282,
+      "weight": 78.0
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 377,
+      "sample": 2,
+      "inclusion_probability": 0.005305039787798408,
+      "weight": 188.5
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 28,
+      "sample": 1,
+      "inclusion_probability": 0.03571428571428571,
+      "weight": 28.0
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 487,
+      "sample": 3,
+      "inclusion_probability": 0.006160164271047228,
+      "weight": 162.33333333333334
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 849,
+      "sample": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "weight": 169.8
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 94,
+      "sample": 1,
+      "inclusion_probability": 0.010638297872340425,
+      "weight": 94.0
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 5040,
+      "sample": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "weight": 152.72727272727272
+    },
+    {
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 45,
+      "sample": 1,
+      "inclusion_probability": 0.022222222222222223,
+      "weight": 45.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 10,
+      "sample": 1,
+      "inclusion_probability": 0.1,
+      "weight": 10.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 1,
+      "sample": 1,
+      "inclusion_probability": 1.0,
+      "weight": 1.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 27,
+      "sample": 1,
+      "inclusion_probability": 0.037037037037037035,
+      "weight": 27.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 28,
+      "sample": 1,
+      "inclusion_probability": 0.03571428571428571,
+      "weight": 28.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 214,
+      "sample": 1,
+      "inclusion_probability": 0.004672897196261682,
+      "weight": 214.0
+    },
+    {
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "population": 1,
+      "sample": 1,
+      "inclusion_probability": 1.0,
+      "weight": 1.0
+    },
+    {
+      "stratum": "8+|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 154,
+      "sample": 1,
+      "inclusion_probability": 0.006493506493506494,
+      "weight": 154.0
+    },
+    {
+      "stratum": "8+|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 418,
+      "sample": 2,
+      "inclusion_probability": 0.004784688995215311,
+      "weight": 209.0
+    },
+    {
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 50,
+      "sample": 1,
+      "inclusion_probability": 0.02,
+      "weight": 50.0
+    },
+    {
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "population": 1,
+      "sample": 1,
+      "inclusion_probability": 1.0,
+      "weight": 1.0
+    },
+    {
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 667,
+      "sample": 4,
+      "inclusion_probability": 0.005997001499250375,
+      "weight": 166.75
+    },
+    {
+      "stratum": "8+|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "population": 3,
+      "sample": 1,
+      "inclusion_probability": 0.3333333333333333,
+      "weight": 3.0
+    },
+    {
+      "stratum": "8+|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "population": 23,
+      "sample": 1,
+      "inclusion_probability": 0.043478260869565216,
+      "weight": 23.0
+    },
+    {
+      "stratum": "8+|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "population": 1,
+      "sample": 1,
+      "inclusion_probability": 1.0,
+      "weight": 1.0
+    },
+    {
+      "stratum": "8+|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "population": 17,
+      "sample": 1,
+      "inclusion_probability": 0.058823529411764705,
+      "weight": 17.0
+    }
+  ],
+  "sample_count": 200,
+  "samples": [
+    {
+      "split": "Training",
+      "image_id": "0013186",
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 114,
+      "n_h": 1,
+      "inclusion_probability": 0.008771929824561403,
+      "design_weight": 114.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000452",
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 90,
+      "n_h": 1,
+      "inclusion_probability": 0.011111111111111112,
+      "design_weight": 90.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001368",
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 44,
+      "n_h": 1,
+      "inclusion_probability": 0.022727272727272728,
+      "design_weight": 44.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001679",
+      "stratum": "2-3|pixels<=250000|min-area<1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 4,
+      "n_h": 1,
+      "inclusion_probability": 0.25,
+      "design_weight": 4.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002711",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0003225",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0004646",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0005141",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0012072",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0015631",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0016378",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0016549",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0020796",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0023240",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0024723",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0027685",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0028325",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0028708",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0028878",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0028947",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0030735",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0032807",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0033590",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 2953,
+      "n_h": 19,
+      "inclusion_probability": 0.006434134778191669,
+      "design_weight": 155.42105263157896
+    },
+    {
+      "split": "Training",
+      "image_id": "0005115",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0007051",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0007723",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0015231",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0019595",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0026160",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0027396",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0028338",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0035420",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1480,
+      "n_h": 9,
+      "inclusion_probability": 0.006081081081081081,
+      "design_weight": 164.44444444444446
+    },
+    {
+      "split": "Training",
+      "image_id": "0000271",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000570",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001065",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001225",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001423",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001547",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001848",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001863",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002822",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002891",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0003360",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0003476",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0003650",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0003768",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0004012",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0004055",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0004195",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0004381",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0004995",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0005926",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0006587",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007155",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007214",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007738",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007940",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0008830",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0009091",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0009209",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0010514",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0010664",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0010941",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0012172",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0012207",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0012597",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013812",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013864",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013866",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013934",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0015036",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0015260",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0015264",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0016014",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0016329",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0017262",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0018273",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0018606",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0019103",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0019356",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0019602",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0019700",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0020361",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0020714",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0021718",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0021834",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0022069",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0022295",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0022579",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0022741",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0023090",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0023371",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0023422",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0024391",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0024808",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0025330",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0025758",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0025791",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0026757",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0027771",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0028252",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0028282",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0029422",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0029821",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0030147",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0031813",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034027",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034605",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034701",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0035086",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 11856,
+      "n_h": 78,
+      "inclusion_probability": 0.006578947368421052,
+      "design_weight": 152.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000930",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0003121",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0006085",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0006968",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0008624",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0009367",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0010413",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0012046",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0020836",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0034455",
+      "stratum": "2-3|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1539,
+      "n_h": 10,
+      "inclusion_probability": 0.00649772579597141,
+      "design_weight": 153.9
+    },
+    {
+      "split": "Training",
+      "image_id": "0029788",
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 3,
+      "n_h": 1,
+      "inclusion_probability": 0.3333333333333333,
+      "design_weight": 3.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001462",
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 4,
+      "n_h": 1,
+      "inclusion_probability": 0.25,
+      "design_weight": 4.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007396",
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 8,
+      "n_h": 1,
+      "inclusion_probability": 0.125,
+      "design_weight": 8.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0030090",
+      "stratum": "2-3|pixels>250000|min-area<1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1,
+      "n_h": 1,
+      "inclusion_probability": 1.0,
+      "design_weight": 1.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0022076",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 321,
+      "n_h": 2,
+      "inclusion_probability": 0.006230529595015576,
+      "design_weight": 160.5
+    },
+    {
+      "split": "Training",
+      "image_id": "0023273",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 321,
+      "n_h": 2,
+      "inclusion_probability": 0.006230529595015576,
+      "design_weight": 160.5
+    },
+    {
+      "split": "Training",
+      "image_id": "0031290",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 85,
+      "n_h": 1,
+      "inclusion_probability": 0.011764705882352941,
+      "design_weight": 85.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0020965",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0025519",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0029536",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0030889",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0031399",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0033173",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0035515",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 1165,
+      "n_h": 7,
+      "inclusion_probability": 0.006008583690987125,
+      "design_weight": 166.42857142857142
+    },
+    {
+      "split": "Training",
+      "image_id": "0025944",
+      "stratum": "2-3|pixels>250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 78,
+      "n_h": 1,
+      "inclusion_probability": 0.01282051282051282,
+      "design_weight": 78.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000120",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 377,
+      "n_h": 2,
+      "inclusion_probability": 0.005305039787798408,
+      "design_weight": 188.5
+    },
+    {
+      "split": "Training",
+      "image_id": "0003610",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 377,
+      "n_h": 2,
+      "inclusion_probability": 0.005305039787798408,
+      "design_weight": 188.5
+    },
+    {
+      "split": "Training",
+      "image_id": "0008519",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 28,
+      "n_h": 1,
+      "inclusion_probability": 0.03571428571428571,
+      "design_weight": 28.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000473",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 487,
+      "n_h": 3,
+      "inclusion_probability": 0.006160164271047228,
+      "design_weight": 162.33333333333334
+    },
+    {
+      "split": "Training",
+      "image_id": "0016211",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 487,
+      "n_h": 3,
+      "inclusion_probability": 0.006160164271047228,
+      "design_weight": 162.33333333333334
+    },
+    {
+      "split": "Training",
+      "image_id": "0025404",
+      "stratum": "4-7|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 487,
+      "n_h": 3,
+      "inclusion_probability": 0.006160164271047228,
+      "design_weight": 162.33333333333334
+    },
+    {
+      "split": "Training",
+      "image_id": "0008613",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 849,
+      "n_h": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "design_weight": 169.8
+    },
+    {
+      "split": "Training",
+      "image_id": "0017800",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 849,
+      "n_h": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "design_weight": 169.8
+    },
+    {
+      "split": "Training",
+      "image_id": "0023467",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 849,
+      "n_h": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "design_weight": 169.8
+    },
+    {
+      "split": "Training",
+      "image_id": "0033231",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 849,
+      "n_h": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "design_weight": 169.8
+    },
+    {
+      "split": "Training",
+      "image_id": "0035705",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 849,
+      "n_h": 5,
+      "inclusion_probability": 0.005889281507656066,
+      "design_weight": 169.8
+    },
+    {
+      "split": "Training",
+      "image_id": "0024166",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 94,
+      "n_h": 1,
+      "inclusion_probability": 0.010638297872340425,
+      "design_weight": 94.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000252",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0001023",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0001946",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0003431",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0004316",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0004733",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0005005",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0005013",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0005780",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0006472",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0006498",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0007965",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0008350",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0008356",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0009589",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0011503",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0012174",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0015785",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0016149",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0017070",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0019562",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0019691",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0019704",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0020572",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0023259",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0025181",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0026062",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0026977",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0030082",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0034516",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0034767",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0034914",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0035660",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 5040,
+      "n_h": 33,
+      "inclusion_probability": 0.006547619047619048,
+      "design_weight": 152.72727272727272
+    },
+    {
+      "split": "Training",
+      "image_id": "0031447",
+      "stratum": "4-7|pixels<=250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 45,
+      "n_h": 1,
+      "inclusion_probability": 0.022222222222222223,
+      "design_weight": 45.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034613",
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 10,
+      "n_h": 1,
+      "inclusion_probability": 0.1,
+      "design_weight": 10.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0025388",
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1,
+      "n_h": 1,
+      "inclusion_probability": 1.0,
+      "design_weight": 1.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0030479",
+      "stratum": "4-7|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 27,
+      "n_h": 1,
+      "inclusion_probability": 0.037037037037037035,
+      "design_weight": 27.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0033404",
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 28,
+      "n_h": 1,
+      "inclusion_probability": 0.03571428571428571,
+      "design_weight": 28.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0036135",
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 214,
+      "n_h": 1,
+      "inclusion_probability": 0.004672897196261682,
+      "design_weight": 214.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0015633",
+      "stratum": "4-7|pixels>250000|min-area>=1pct|occupancy>=25pct|no-bbox-proximity",
+      "N_h": 1,
+      "n_h": 1,
+      "inclusion_probability": 1.0,
+      "design_weight": 1.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034324",
+      "stratum": "8+|pixels<=250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 154,
+      "n_h": 1,
+      "inclusion_probability": 0.006493506493506494,
+      "design_weight": 154.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0011767",
+      "stratum": "8+|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 418,
+      "n_h": 2,
+      "inclusion_probability": 0.004784688995215311,
+      "design_weight": 209.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0019124",
+      "stratum": "8+|pixels<=250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 418,
+      "n_h": 2,
+      "inclusion_probability": 0.004784688995215311,
+      "design_weight": 209.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0034448",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 50,
+      "n_h": 1,
+      "inclusion_probability": 0.02,
+      "design_weight": 50.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0031818",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy<25pct|no-bbox-proximity",
+      "N_h": 1,
+      "n_h": 1,
+      "inclusion_probability": 1.0,
+      "design_weight": 1.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0000779",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 667,
+      "n_h": 4,
+      "inclusion_probability": 0.005997001499250375,
+      "design_weight": 166.75
+    },
+    {
+      "split": "Training",
+      "image_id": "0019349",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 667,
+      "n_h": 4,
+      "inclusion_probability": 0.005997001499250375,
+      "design_weight": 166.75
+    },
+    {
+      "split": "Training",
+      "image_id": "0023046",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 667,
+      "n_h": 4,
+      "inclusion_probability": 0.005997001499250375,
+      "design_weight": 166.75
+    },
+    {
+      "split": "Training",
+      "image_id": "0035046",
+      "stratum": "8+|pixels<=250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 667,
+      "n_h": 4,
+      "inclusion_probability": 0.005997001499250375,
+      "design_weight": 166.75
+    },
+    {
+      "split": "Training",
+      "image_id": "0017643",
+      "stratum": "8+|pixels>250000|min-area<1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 3,
+      "n_h": 1,
+      "inclusion_probability": 0.3333333333333333,
+      "design_weight": 3.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0003983",
+      "stratum": "8+|pixels>250000|min-area<1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 23,
+      "n_h": 1,
+      "inclusion_probability": 0.043478260869565216,
+      "design_weight": 23.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0014332",
+      "stratum": "8+|pixels>250000|min-area>=1pct|occupancy<25pct|bbox-proximity",
+      "N_h": 1,
+      "n_h": 1,
+      "inclusion_probability": 1.0,
+      "design_weight": 1.0
+    },
+    {
+      "split": "Training",
+      "image_id": "0036189",
+      "stratum": "8+|pixels>250000|min-area>=1pct|occupancy>=25pct|bbox-proximity",
+      "N_h": 17,
+      "n_h": 1,
+      "inclusion_probability": 0.058823529411764705,
+      "design_weight": 17.0
+    }
+  ],
+  "proximity_is_not_verified_occlusion": true,
+  "selection_independent_of_prior_anomaly_sample": true,
+  "review_status": "PENDING_INDEPENDENT_HUMAN_REVIEW",
+  "error_prevalence": "NOT_ESTIMATED",
+  "taxonomy_frozen": false
+}

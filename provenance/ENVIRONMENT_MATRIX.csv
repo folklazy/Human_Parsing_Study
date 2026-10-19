@@ -1,0 +1,7 @@
+environment_id,workspace_relative_path,python,purpose,status,package_freeze_sha256,model_checkpoint_smoke,yolo_environment_modified
+mhpv2-stage0,.venvs/mhpv2-stage0,Python 3.10.21,Dataset/GT/taxonomy/evaluator fixtures,TESTED,97d4c39e8d51de8c17c27ca8a87ea7455080b93777fff6e96101b33cfb63d5d9,NOT_RUN,False
+fashn-stage0,.venvs/fashn-stage0,Python 3.12.3,FASHN dependency imports and synthetic GPU check only,TESTED,8d48499d417477524f4748c17a9eb23dadd640bf7fb9da4d51472af96a52c256,NOT_RUN,False
+M2FP,NOT_CREATED,NOT_TESTED,Native legacy parser stack,BLOCKED_PREREQUISITES_OR_DEFERRED,,NOT_RUN,False
+CPI-Parser,NOT_CREATED,NOT_TESTED,Native legacy parser stack,BLOCKED_PREREQUISITES_OR_DEFERRED,,NOT_RUN,False
+D2FP,NOT_CREATED,NOT_TESTED,Native legacy parser stack,BLOCKED_PREREQUISITES_OR_DEFERRED,,NOT_RUN,False
+SCHP,NOT_CREATED,NOT_TESTED,Native legacy parser stack,BLOCKED_PREREQUISITES_OR_DEFERRED,,NOT_RUN,False

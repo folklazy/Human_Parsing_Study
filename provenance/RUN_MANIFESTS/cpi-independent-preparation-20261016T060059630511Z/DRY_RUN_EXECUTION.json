@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-10-16T06:02:11.103568+00:00",
+  "argv_workspace_relative": [
+    ".venvs/mhpv2-stage0/bin/python",
+    "-B",
+    "Human_Parsing_MHPv2_Study/scripts/first_cohort_entrypoint.py",
+    "--config",
+    "Human_Parsing_MHPv2_Study/configs/application_v2_first_cohort_v7.yaml",
+    "--dry-run",
+    "--output",
+    "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-independent-preparation-20261016T060059630511Z/DRY_RUN_PLAN.json"
+  ],
+  "exit_code": 0,
+  "python_version": "3.10.21 (main, Sep  1 2026, 14:16:49) [Clang 22.1.3 ]",
+  "same_plan_as_previous_review": true,
+  "model_loading": false,
+  "inference": false,
+  "scoring": false
+}

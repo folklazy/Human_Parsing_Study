@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-10-19T08:19:54.828759+00:00",
+  "repositories": [
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    },
+    {
+      "repository": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    },
+    {
+      "repository": "YOLO_Nano_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "status_unchanged": true
+    }
+  ],
+  "read_reference_file_hashes_unchanged": 17,
+  "YOLO_inference_started": false
+}

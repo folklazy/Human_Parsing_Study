@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-08T10:40:28.980976+00:00",
+  "class_mapping_consistency_counts": {
+    "annotations": 38280,
+    "objects": 768446
+  },
+  "description_counts": {
+    "image_nonempty_description": 0,
+    "object_nonempty_description": 0
+  },
+  "mismatch_examples": [],
+  "special_case": {
+    "member": "training/ann/0035374.jpg.json",
+    "xy": [
+      314,
+      158
+    ],
+    "converted_native_label_at_source_special_case": 10,
+    "original_native_category_pixels": "NOT_AVAILABLE_FOR_THIS_ID",
+    "converter_exception_exists": true,
+    "full_original_pixel_fidelity_claimed": false
+  },
+  "actual_export_converter_commit": "NOT_EMBEDDED_NOT_VERIFIED",
+  "audited_converter_reference_commit": "5a2b59d64627665fca7dd72261789e4813c623a8",
+  "license_provider_declares": "MIT",
+  "authoritative_dataset_rights_grant": "UNKNOWN",
+  "source_identity": "5 official repo demo RGB byte and semantic pixel matches, complete official-val metadata ID match, provider counts match; not full source archive parity"
+}

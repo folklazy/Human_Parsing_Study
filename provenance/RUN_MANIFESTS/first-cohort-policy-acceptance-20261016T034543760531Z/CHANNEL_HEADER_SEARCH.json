@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-10-16T03:45:44.472445+00:00",
+  "scope": "Official repository/release/issue metadata and pinned tree only; no dataset or checkpoint acquisition",
+  "requests": [
+    {
+      "name": "repo",
+      "url": "https://api.github.com/repos/HAG-uestc/CPI-Parser",
+      "http_status": 200,
+      "bytes": 17111,
+      "sha256": "f3422db6cb6e5e904906de68108a0c423e4ed6e1660ea578bb51615c93fc68a9",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/official_metadata/repo.json"
+    },
+    {
+      "name": "releases",
+      "url": "https://api.github.com/repos/HAG-uestc/CPI-Parser/releases?per_page=20",
+      "http_status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/official_metadata/releases.json"
+    },
+    {
+      "name": "issues",
+      "url": "https://api.github.com/repos/HAG-uestc/CPI-Parser/issues?state=all&per_page=50",
+      "http_status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/official_metadata/issues.json"
+    }
+  ],
+  "pinned_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+  "tracked_annotation_JSON_paths": [],
+  "repository_metadata": {
+    "full_name": "HAG-uestc/CPI-Parser",
+    "default_branch": "master",
+    "has_issues": false,
+    "html_url": "https://github.com/HAG-uestc/CPI-Parser"
+  },
+  "release_assets": [],
+  "issue_metadata": []
+}

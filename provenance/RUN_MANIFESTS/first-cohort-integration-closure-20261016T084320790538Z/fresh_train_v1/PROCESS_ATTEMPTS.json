@@ -1,0 +1,62 @@
+[
+  {
+    "model_id": "YOLO26X_FROZEN",
+    "command": [
+      "/home/skyaidev/folk/Human-Body-Extraction/.venv/bin/python",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_gpu_worker.py",
+      "--plan",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/WORKER_PLAN.json",
+      "--kind",
+      "yolo",
+      "--model",
+      "YOLO26X_FROZEN",
+      "--output",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN"
+    ],
+    "start_utc": "2026-10-16T08:48:02.991397+00:00",
+    "end_utc": "2026-10-16T08:48:11.000555+00:00",
+    "exit_code": 0,
+    "status": "PASS",
+    "run_manifest": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/RUN.json"
+  },
+  {
+    "model_id": "CPI_R50_CIHP",
+    "command": [
+      "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_gpu_worker.py",
+      "--plan",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/WORKER_PLAN.json",
+      "--kind",
+      "cpi",
+      "--model",
+      "CPI_R50_CIHP",
+      "--output",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/CPI_R50_CIHP"
+    ],
+    "start_utc": "2026-10-16T08:48:11.036508+00:00",
+    "end_utc": "2026-10-16T08:48:31.206035+00:00",
+    "exit_code": 0,
+    "status": "PASS",
+    "run_manifest": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/CPI_R50_CIHP/RUN.json"
+  },
+  {
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "command": [
+      "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_gpu_worker.py",
+      "--plan",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/WORKER_PLAN.json",
+      "--kind",
+      "cpi",
+      "--model",
+      "CPI_ConvNeXtB_CIHP",
+      "--output",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/CPI_ConvNeXtB_CIHP"
+    ],
+    "start_utc": "2026-10-16T08:48:31.238312+00:00",
+    "end_utc": "2026-10-16T08:48:58.940539+00:00",
+    "exit_code": 0,
+    "status": "PASS",
+    "run_manifest": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/CPI_ConvNeXtB_CIHP/RUN.json"
+  }
+]

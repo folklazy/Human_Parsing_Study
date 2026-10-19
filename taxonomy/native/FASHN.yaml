@@ -1,0 +1,23 @@
+status: SOURCE_VERIFIED_CHECKPOINT_VALIDATION_SEPARATE
+labels:
+  0: background
+  1: face
+  2: hair
+  3: top
+  4: dress
+  5: skirt
+  6: pants
+  7: belt
+  8: bag
+  9: hat
+  10: scarf
+  11: glasses
+  12: arms
+  13: hands
+  14: legs
+  15: feet
+  16: torso
+  17: jewelry
+source_workspace_relative: third_party/human_parsing/fashn-human-parser/src/fashn_human_parser/labels.py
+source_sha256: b7247afa1618dfc0115e0b75d2ed23829a1b6653578ad7045c0d342f0cb6318d
+auxiliary_human_id: null

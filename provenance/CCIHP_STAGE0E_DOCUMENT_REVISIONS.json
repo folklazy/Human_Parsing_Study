@@ -1,0 +1,52 @@
+{
+  "run_id": "stage0e-ccihp-cihp-20261012T043947Z",
+  "revisions": [
+    {
+      "original_relative": "reports/CIHP_QUALITY_AUDIT.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/CIHP_QUALITY_AUDIT.md",
+      "sha256_before": "6713bd070f879f65f085e0f5f12e28cab6d21a372661c77cc3ee890f2b551ded",
+      "sha256_after": "f345745fe3bc5aea0c28f59dc15a7fdda29a9817997bda57b5800471c02453fe",
+      "reason": "Stage 0E actual archive identity, missing person GT and compatibility evidence",
+      "timestamp_utc": "2026-10-12T04:48:41.675211+00:00"
+    },
+    {
+      "original_relative": "reports/PRIMARY_DATASET_DECISION.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/PRIMARY_DATASET_DECISION.md",
+      "sha256_before": "75abc92c486dee2925938407c5cb28d9835c76fef68656ea816a44617f61c0e9",
+      "sha256_after": "3657771477b91a6425e24bfff9dd58e904517acae5b7e19fb132acf1ccb614fc",
+      "reason": "Stage 0E actual archive identity, missing person GT and compatibility evidence",
+      "timestamp_utc": "2026-10-12T04:48:41.675211+00:00"
+    },
+    {
+      "original_relative": "reports/STAGE0_NEXT_ACTIONS.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "sha256_before": "7ff0f4b28e5419574afb12e6c323b04e2c93dd1e750b3b84bfa85e1960d4e799",
+      "sha256_after": "078ac59710cfdeb5d438adbaa5a3f7b9b113b0608c769fd33336d1cc29382a4f",
+      "reason": "Stage 0E actual archive identity, missing person GT and compatibility evidence",
+      "timestamp_utc": "2026-10-12T04:48:41.675211+00:00"
+    },
+    {
+      "original_relative": "README.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/README.md",
+      "sha256_before": "cdeea226f2bff5dafeecaf598955dbbd6c62cede7311ac18d245d5634eada080",
+      "sha256_after": "eff92a3172d0f7d22bbbe21e846f369a70a63bf8f2a04de822eda450dfc17ef4",
+      "reason": "Stage 0E actual archive identity, missing person GT and compatibility evidence",
+      "timestamp_utc": "2026-10-12T04:48:41.675211+00:00"
+    },
+    {
+      "original_relative": "STUDY_STATE.json",
+      "archived_relative": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/STUDY_STATE.json",
+      "sha256_before": "41f8faec875c1458d06ffb610372ed9ecc876c209d89c4ad57cf5dbc5d608b1c",
+      "sha256_after": "0a905f5b6d8e89e11260218c86f1067cc665161081d1ca1d7ff1669b45dc64ea",
+      "reason": "Stage 0E actual archive identity, missing person GT and compatibility evidence",
+      "timestamp_utc": "2026-10-12T04:48:41.675211+00:00"
+    }
+  ],
+  "new_artifacts": [
+    "taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+    "provenance/CCIHP_ARCHIVE_AUDIT.json",
+    "reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md",
+    "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+    "reports/CIHP_GROUND_TRUTH_RECOVERY_DECISION.md"
+  ]
+}

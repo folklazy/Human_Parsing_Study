@@ -1,0 +1,166 @@
+{
+  "timestamp_utc": "2026-10-19T03:31:15.135649+00:00",
+  "scope": "Exact code/config/decision bytes used for native continuation, isolated detector bootstrap, scoring and final export checks; no datasets, weights or environments copied",
+  "files": [
+    {
+      "source": "configs/application_v2_first_cohort_v11.yaml",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/configs/application_v2_first_cohort_v11.yaml",
+      "sha256": "e4bfffe627001055835850a2d8b29d2397babc9bfd8a7abaa98ef7a079867a55"
+    },
+    {
+      "source": "configs/application_v2_first_cohort_v12.yaml",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/configs/application_v2_first_cohort_v12.yaml",
+      "sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce"
+    },
+    {
+      "source": "provenance/APPLICATION_V2_DECISIONS_V10.json",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/provenance/APPLICATION_V2_DECISIONS_V10.json",
+      "sha256": "80486e9b45db2b8e9a59e342bf653c64e5ef67d9bcdab1f07f1db52c06dbdeee"
+    },
+    {
+      "source": "provenance/APPLICATION_V2_DECISIONS_V11.json",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/provenance/APPLICATION_V2_DECISIONS_V11.json",
+      "sha256": "56ac3ad2417cba16307e9dd151d015387cdcccba9b7389225a42c356b11e175c"
+    },
+    {
+      "source": "scripts/activate_first_cohort_detector_restoration.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/activate_first_cohort_detector_restoration.py",
+      "sha256": "8e00d3f2de506fd238d85110bf4130ed88066271dd3352ae2c4910dbecd7a3bf"
+    },
+    {
+      "source": "scripts/complete_first_cohort_after_continuation.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/complete_first_cohort_after_continuation.py",
+      "sha256": "fd79b8e1092bf452b3d9a5fde93c45209fa62f69cc6be1867d803959f6f7e11f"
+    },
+    {
+      "source": "scripts/first_cohort_cpi_continuation_worker.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/first_cohort_cpi_continuation_worker.py",
+      "sha256": "c50042afe96aac53e8240c5424d1d237d865541314924bcb002f514abeb39caf"
+    },
+    {
+      "source": "scripts/first_cohort_yolo_bootstrap_worker.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/first_cohort_yolo_bootstrap_worker.py",
+      "sha256": "bb59f671ad215a053a4d32f58d6ad74585b70fb007a6a4c806086e231bd2cecc"
+    },
+    {
+      "source": "scripts/merge_first_cohort_native_continuation.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/merge_first_cohort_native_continuation.py",
+      "sha256": "19de59a420f99202b8dcf1ac2b3a36bb16110f580b1d2b17e52adc95cb76e54e"
+    },
+    {
+      "source": "scripts/publish_first_cohort_benchmark_results.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/publish_first_cohort_benchmark_results.py",
+      "sha256": "1ca0ad1d8c0342c3a14ba289e3f8037945f27f97ea582f247175d49a2823b45e"
+    },
+    {
+      "source": "scripts/restore_first_cohort_detector.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/restore_first_cohort_detector.py",
+      "sha256": "9b9a45420eb00b9ed5cee7a053ae858ba8e449ec749188fce66f4e634db95f04"
+    },
+    {
+      "source": "scripts/verify_first_cohort_benchmark_exports.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/scripts/verify_first_cohort_benchmark_exports.py",
+      "sha256": "0031ca39348e3987cb3fad4fc7d1cb27a19903e11ff16838d89c7240cb85a857"
+    },
+    {
+      "source": "src/application_v2/__init__.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/__init__.py",
+      "sha256": "0375e209e4f6e5d613a62df6d3124ab92c51ec266f75c49c7fa4a40e5a51d07b"
+    },
+    {
+      "source": "src/application_v2/acquisition.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/acquisition.py",
+      "sha256": "d7e6ad302b47c524c32adc41303d902a89492e23a7fc79238a8ae040ba0332f1"
+    },
+    {
+      "source": "src/application_v2/artifacts.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/artifacts.py",
+      "sha256": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478"
+    },
+    {
+      "source": "src/application_v2/cohorts.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/cohorts.py",
+      "sha256": "e6fa28ef15040252b6710c10bbc7eca5a664c139b0f54b33275d5f45bd08cef7"
+    },
+    {
+      "source": "src/application_v2/comparison.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/comparison.py",
+      "sha256": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d"
+    },
+    {
+      "source": "src/application_v2/contexts.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/contexts.py",
+      "sha256": "8b5da7391b82e393b4d7d78b12492f7b25fb11e86dce22428326db7b2aefe4dc"
+    },
+    {
+      "source": "src/application_v2/contracts.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/contracts.py",
+      "sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4"
+    },
+    {
+      "source": "src/application_v2/evaluation.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/evaluation.py",
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba"
+    },
+    {
+      "source": "src/application_v2/first_cohort_fresh.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/first_cohort_fresh.py",
+      "sha256": "708a45567e4c614934c482d1dccd6738931ae9e0a9431047fd9593114f62631a"
+    },
+    {
+      "source": "src/application_v2/first_cohort_replay.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/first_cohort_replay.py",
+      "sha256": "bb4a8deaeb0e892e9dc0ef788551ea3f2371116e86bf3fbb63f7426144551631"
+    },
+    {
+      "source": "src/application_v2/first_cohort_validation.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/first_cohort_validation.py",
+      "sha256": "1069e4411a655a79865223f800d5d2cc926fa578f4a77b906f75cead28343e99"
+    },
+    {
+      "source": "src/application_v2/immutable_config.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/immutable_config.py",
+      "sha256": "d9eb7173cce9678958a9f8caec77a07ae5b5e5886bfdf624e29228fccb4a9d41"
+    },
+    {
+      "source": "src/application_v2/plan.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/plan.py",
+      "sha256": "c052fabbbf236d07d8489541305df5b5b149143d0f1f5d7f0361d3af6d1761d4"
+    },
+    {
+      "source": "src/application_v2/policy.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/policy.py",
+      "sha256": "7df683f725fe1f2f36b0f4c122092c3ce904983c3d54319686760b7b2bee388b"
+    },
+    {
+      "source": "src/application_v2/runner.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/runner.py",
+      "sha256": "3771a3ac239a21c0c6fdb9b2b81f5353ea41da7e31c624fe3cb7d511353dffb5"
+    },
+    {
+      "source": "src/application_v2/scoring.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/scoring.py",
+      "sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7"
+    },
+    {
+      "source": "src/application_v2/taxonomy.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/taxonomy.py",
+      "sha256": "74b546d7f88f206b13015833e2e5d7ada267a490ae2aaf8aaa4df90a7bdf31ac"
+    },
+    {
+      "source": "src/application_v2/validation_data.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/validation_data.py",
+      "sha256": "0fb40e90c83f052d2c21534e69407a19b507b1a2807bc038637fb8f2a4059d93"
+    },
+    {
+      "source": "src/application_v2/validation_launch.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/validation_launch.py",
+      "sha256": "1f610a4111d2dadb449a2eabae7e966ec7e017a7cf38a739bee9e4e640c67d63"
+    },
+    {
+      "source": "src/application_v2/validation_packages.py",
+      "snapshot": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/restored_profile_source_snapshot_v1/src/application_v2/validation_packages.py",
+      "sha256": "b3b7427b276e757ac6f2664fbc58c8b8870c4e12f27faf594bd9265b4e4d979b"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "MATERIALIZED_AND_STRUCTURALLY_VALIDATED_NOT_ACTIVATED",
+  "storage": "Lossless context templates + ordered per-image bindings; expand without changing content",
+  "context_status_scope": "Derived from accepted policies, not a new full-benchmark execution decision",
+  "populations": {
+    "reference": {
+      "images": 5000,
+      "contexts": 10000,
+      "G_loc_per_system": 17548,
+      "G_sem_per_system": 17504,
+      "context_registry_validation": "PASS"
+    },
+    "main": {
+      "images": 4961,
+      "contexts": 9922,
+      "G_loc_per_system": 17434,
+      "G_sem_per_system": 17390,
+      "context_registry_validation": "PASS"
+    }
+  },
+  "source_GT_member_hashes_checked": 15000,
+  "person_bindings": 17548,
+  "original_GT_archive_stat_unchanged": true,
+  "full_RGB_audit_reused": true,
+  "new_RGB_decode": false,
+  "new_GT_domain_reconstruction": true,
+  "predictions_read": false,
+  "new_inference": false,
+  "scores_computed": false,
+  "current_executable_config_unchanged": true,
+  "scoring_activation": "PENDING_VERSIONED_CONFIG_DECISION_BINDING",
+  "GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+  "domain_policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+  "source_image_audit_sha256": "08ee85c702e5a71c098ecef99e6290aeec5ee533c74350fe062cbe3dd2a2dc49",
+  "source_manifests_sha256": {
+    "main": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+    "reference": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd"
+  },
+  "artifacts": {
+    "IMAGE_BINDINGS.jsonl": "ae882a1dffc7bced721713202e9e2188d7883b2670d612521f0ee8c6a4697d47",
+    "MODEL_CONTEXT_TEMPLATES.json": "f13b06f28bb89e680919123ab087dda9ad2562e0d770dc1d267f9f30ecb78ada",
+    "PERSON_GT_BINDINGS.jsonl": "0414a3f2ce3b551ca19ad6cfe129444e40e988184abc4f32b7facf06de1139ec"
+  },
+  "script_sha256": "a76802a0291a68ec2c84d93c3ff2acba86f8ad429113c3d579700b102945d513"
+}

@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "model_id": "CPI_R50_CIHP",
+      "published_model_url": "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view",
+      "local_checkpoint": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "local_SHA256_from_prior_verified_download": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "publisher_SHA256_required": false,
+      "publisher_SHA256_available": false,
+      "header_relation": "MISSING",
+      "shared_header_sufficient_only_if_linked_to_both_checkpoint_training_releases": true,
+      "source_commit_role": "PINNED_REVIEW_RUNTIME_NOT_PROVEN_TRAINING_REVISION",
+      "creator_training_revision": "UNKNOWN"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "published_model_url": "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view",
+      "local_checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "local_SHA256_from_prior_verified_download": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "publisher_SHA256_required": false,
+      "publisher_SHA256_available": false,
+      "header_relation": "MISSING",
+      "shared_header_sufficient_only_if_linked_to_both_checkpoint_training_releases": true,
+      "source_commit_role": "PINNED_REVIEW_RUNTIME_NOT_PROVEN_TRAINING_REVISION",
+      "creator_training_revision": "UNKNOWN"
+    }
+  ],
+  "weight_hashes_recomputed_this_run": false,
+  "prior_manifest": "../Human_Parsing_CCIHP_10_Image_Pilot/provenance/CHECKPOINT_MANIFEST_FINAL.json",
+  "prior_manifest_sha256": "ba9868ef9b1ee06d86b67496a2f00334fb399100b9dc584fd9823c9ad59e316a",
+  "meaning": "Local hashes identify the reviewed binaries; creator need not have published those hashes"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "DERIVED_METADATA_VERIFIED_POPULATION_ROLE_DRAFT",
+  "source_population_manifest": "manifests/CCIHP_VALIDATION_POPULATIONS_STAGE0F_DRAFT_V1.json",
+  "source_population_sha256": "a1a3b166e0c27765b2db867683985ab4d420000ef74acad377747b24876edad0",
+  "GT_projection_content_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+  "V1_V2_GT_projection_identity": true,
+  "new_GT_decoding_on_validation": false,
+  "populations": {
+    "original_source_target": {
+      "frames": 5000,
+      "G_loc_structural_draft": 17548,
+      "G_sem_candidate_draft": 17504,
+      "semantic_undefined_reasons": {
+        "no_candidate_semantic_support": 44,
+        "no_native_known_support": 9,
+        "known_only_outside_candidate": 35
+      },
+      "target_class_pixel_support": {
+        "1": 36960110,
+        "2": 12203295,
+        "3": 27991326,
+        "4": 6474803,
+        "5": 207338644,
+        "6": 3970748
+      },
+      "expected_frame_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+      "expected_frame_manifest_sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+      "original_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+      "original_person_sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+      "role_accepted": false,
+      "physical_person_certification": false
+    },
+    "overlap_controlled_source_target": {
+      "frames": 4961,
+      "G_loc_structural_draft": 17434,
+      "G_sem_candidate_draft": 17390,
+      "semantic_undefined_reasons": {
+        "no_candidate_semantic_support": 44,
+        "no_native_known_support": 9,
+        "known_only_outside_candidate": 35
+      },
+      "target_class_pixel_support": {
+        "1": 36850096,
+        "2": 12164626,
+        "3": 27831409,
+        "4": 6396402,
+        "5": 205999127,
+        "6": 3939472
+      },
+      "expected_frame_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+      "expected_frame_manifest_sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+      "original_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+      "original_person_sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+      "role_accepted": false,
+      "physical_person_certification": false
+    }
+  }
+}

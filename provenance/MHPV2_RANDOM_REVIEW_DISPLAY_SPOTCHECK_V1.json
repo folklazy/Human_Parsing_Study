@@ -1,0 +1,27 @@
+{
+  "review_type": "ASSISTANT_VISUAL_DISPLAY_SPOTCHECK_NOT_COMPLETED_HUMAN_QUALITY_AUDIT",
+  "inspected_contact_sheet": {
+    "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_01.png",
+    "sha256": "d990b01bd8a7851768ab74154cd27a51a3bda49b9c80d1dd62de84cafe564d39"
+  },
+  "inspected_full_panel": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/01_train_7922.png",
+  "contact_image_ids": [
+    "7922",
+    "1205",
+    "11999",
+    "6544",
+    "4124",
+    "7581"
+  ],
+  "direct_observations": [
+    "train/7922 shows two adults; independent colored parsing planes principally follow separate visible people.",
+    "The first contact sheet displays original RGB and all recorded native planes for 6 random images, including a four-person scene and an adult with a child.",
+    "No systematic translated/rescaled display-grid displacement is apparent at the viewed diagnostic scale."
+  ],
+  "limitations": [
+    "Display spotcheck cannot verify every semantic boundary, occluded ownership, missing GT or rare category.",
+    "Remaining 24 individual diagnostics not manually inspected in this run; all 30 decoded/hash/grid checks passed.",
+    "Human checklist remains PENDING; no annotation-error prevalence or clean-dataset claim."
+  ],
+  "source_GT_modified": false
+}

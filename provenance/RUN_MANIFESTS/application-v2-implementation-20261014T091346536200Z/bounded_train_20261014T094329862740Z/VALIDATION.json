@@ -1,0 +1,17 @@
+{
+  "status": "PASS_BOUNDED_TRAIN_INTEGRATION",
+  "input_ids": [
+    "0021834",
+    "0000930",
+    "0001368"
+  ],
+  "new_YOLO_and_FASHN_inference": true,
+  "full_benchmark": false,
+  "validation_inference": false,
+  "common_accuracy_scores_or_ranking": false,
+  "timing_benchmark": false,
+  "T3A_native_contract_ownership_integration": "PASS",
+  "T3B_actual_YOLO_plus_saved_native_association": "PASS",
+  "live_T3B_parser_runtime_validation": "NOT_EXECUTED",
+  "protocol_frozen": false
+}

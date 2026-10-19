@@ -1,0 +1,20 @@
+{
+  "status": "VISUAL_INSTANCE_OWNERSHIP_ANOMALY_REQUIRES_REVIEW",
+  "image_id": "9968",
+  "split": "train",
+  "source_parsing_files": [
+    "train/parsing_annos/9968_02_01.png",
+    "train/parsing_annos/9968_02_02.png"
+  ],
+  "source_sha256": [
+    "2f5a6a7a18cf325ec41f878492a9bc341edbdc4870acc60a6242bd01872628f1",
+    "3db8d6011880023eb4b5aa0e3f27ce9ec2ae8cd579e96f0b196ee8e2fa565bbf"
+  ],
+  "visual": "outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/instance_ownership_9968.png",
+  "visual_sha256": "b1e096ff8101bb20b25d7ea4aa8b9a90480feabbd42e66ea709d7d385e3e6ddb",
+  "direct_observation": "Parsing ID 1 first-channel plane includes face/garment regions at both adult locations; parsing ID 2 overlaps broad support. This exceeds a simple boundary overlap explanation in this selected example.",
+  "all_overlap_annotations_declared_corrupt": false,
+  "whole_dataset_owner_error_count": "NOT_ESTABLISHED",
+  "gt_fixed_or_reassigned": false,
+  "recommendation": "Verify original annotations with dataset owner before assuming file identity guarantees physical ownership"
+}

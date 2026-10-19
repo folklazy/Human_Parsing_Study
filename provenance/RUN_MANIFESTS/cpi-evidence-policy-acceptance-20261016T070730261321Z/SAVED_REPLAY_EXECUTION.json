@@ -1,0 +1,28 @@
+{
+  "start_utc": "2026-10-16T08:09:53.700486+00:00",
+  "end_utc": "2026-10-16T08:09:54.538213+00:00",
+  "command_workspace_relative": [
+    ".venvs/mhpv2-stage0/bin/python",
+    "-B",
+    "Human_Parsing_MHPv2_Study/scripts/first_cohort_entrypoint.py",
+    "--config",
+    "Human_Parsing_MHPv2_Study/configs/application_v2_first_cohort_v8.yaml",
+    "--saved-train-replay",
+    "--output",
+    "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final"
+  ],
+  "exit_code": 0,
+  "new_inference": false,
+  "scoring": false,
+  "earlier_attempts": [
+    {
+      "directory": "saved_replay_v1",
+      "status": "FAILED_BEFORE_PACKET_OUTPUT",
+      "reason": "Resolved config repeats identical threshold at detector/head; parser originally demanded one occurrence"
+    },
+    {
+      "directory": "saved_replay_v2",
+      "status": "PASS_PRIOR_TO_FINAL_FINGERPRINT_AND_METADATA_UPDATE"
+    }
+  ]
+}

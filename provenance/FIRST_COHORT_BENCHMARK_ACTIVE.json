@@ -1,0 +1,10 @@
+{
+  "run": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z",
+  "status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "execution_finished": true,
+  "finalized_utc": "2026-10-19T03:57:58.337687+00:00",
+  "report": "reports/FIRST_COHORT_T3B_BENCHMARK_REPORT_TH_20261019.md",
+  "validation": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FINAL_BENCHMARK_VALIDATION.json",
+  "post_export_verification": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/POST_EXPORT_VERIFICATION.json",
+  "new_experiment_authorized": false
+}

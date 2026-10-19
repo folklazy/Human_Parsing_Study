@@ -1,0 +1,141 @@
+{
+  "status": "PASS_WITH_LIMITATIONS",
+  "timestamp_utc": "2026-10-16T08:22:42.576841+00:00",
+  "accepted_evidence_confidence": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+  "direct_header_verified": false,
+  "mapping_numeric_values_changed": false,
+  "CPU_application_tests": 131,
+  "CPU_tests_log_sha256": "53664787a40fb9f7d3d97410029493da9e2e4c12d855a624602b84c84b801623",
+  "TRAIN_visual_images_inspected": 3,
+  "TRAIN_contexts_active": 6,
+  "saved_TRAIN_replay_jobs": 6,
+  "saved_TRAIN_replay": "PASS",
+  "validation_context_packages": {
+    "reference": {
+      "images": 5000,
+      "contexts": 10000,
+      "G_loc_per_system": 17548,
+      "G_sem_per_system": 17504,
+      "context_registry_validation": "PASS"
+    },
+    "main": {
+      "images": 4961,
+      "contexts": 9922,
+      "G_loc_per_system": 17434,
+      "G_sem_per_system": 17390,
+      "context_registry_validation": "PASS"
+    }
+  },
+  "validation_context_activation": "PENDING_VERSIONED_EXECUTION_CONFIG_BINDING",
+  "fresh_joint_model_route": "NOT_TESTED",
+  "semantic_scoring_enabled": false,
+  "new_model_inference": false,
+  "model_loading": false,
+  "full_benchmark": false,
+  "GT_validation_source_members_verified": 15000,
+  "prior_GT_TRAIN_reconstruction_reused": true,
+  "original_dataset_modified": false,
+  "protected_existing_files_checked": 37,
+  "protected_hashes_unchanged": true,
+  "git": "NOT_A_GIT_REPOSITORY",
+  "remote_git_actions": false,
+  "creator_contacted": false,
+  "errors": [],
+  "source_snapshot": [
+    {
+      "path": "configs/application_v2_first_cohort_v8.yaml",
+      "sha256": "77e900d6455b702af0ce5a24b8cb4114f00fa2d53f482e57d073b12874d06635"
+    },
+    {
+      "path": "provenance/APPLICATION_V2_DECISIONS_V7.json",
+      "sha256": "78420afd1a907d3be77af799998bad79c2f300df51fad45bed2f51c15497fcff"
+    },
+    {
+      "path": "scripts/accept_cpi_converging_evidence.py",
+      "sha256": "6117843839da74e59b663803563e0248add5651ba47b4d19e16cfce230cf44f1"
+    },
+    {
+      "path": "scripts/first_cohort_entrypoint.py",
+      "sha256": "21efcb3713de0780afa70c728e5bd01d10072ec20c246c1aa1f57e501aab25c8"
+    },
+    {
+      "path": "scripts/prepare_cpi_saved_train_review.py",
+      "sha256": "d7bb576d06a26fca6c8c3181db2ee6ee6d6172ffeccb51af35f809af68032f00"
+    },
+    {
+      "path": "scripts/prepare_cpi_validation_contexts.py",
+      "sha256": "a76802a0291a68ec2c84d93c3ff2acba86f8ad429113c3d579700b102945d513"
+    },
+    {
+      "path": "src/application_v2/__init__.py",
+      "sha256": "0375e209e4f6e5d613a62df6d3124ab92c51ec266f75c49c7fa4a40e5a51d07b"
+    },
+    {
+      "path": "src/application_v2/acquisition.py",
+      "sha256": "d7e6ad302b47c524c32adc41303d902a89492e23a7fc79238a8ae040ba0332f1"
+    },
+    {
+      "path": "src/application_v2/artifacts.py",
+      "sha256": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478"
+    },
+    {
+      "path": "src/application_v2/cohorts.py",
+      "sha256": "e6fa28ef15040252b6710c10bbc7eca5a664c139b0f54b33275d5f45bd08cef7"
+    },
+    {
+      "path": "src/application_v2/comparison.py",
+      "sha256": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d"
+    },
+    {
+      "path": "src/application_v2/contexts.py",
+      "sha256": "b550db7afba1a8dd9088b83aaec3bb2a7f34e47a35e9e0de786c9a307864efe2"
+    },
+    {
+      "path": "src/application_v2/contracts.py",
+      "sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4"
+    },
+    {
+      "path": "src/application_v2/evaluation.py",
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba"
+    },
+    {
+      "path": "src/application_v2/first_cohort_replay.py",
+      "sha256": "bb4a8deaeb0e892e9dc0ef788551ea3f2371116e86bf3fbb63f7426144551631"
+    },
+    {
+      "path": "src/application_v2/plan.py",
+      "sha256": "12a038d29fda34d283197cc9d8e059620d76ef552d35349a4b1f600b80cd5fdc"
+    },
+    {
+      "path": "src/application_v2/policy.py",
+      "sha256": "512cd770de23370db7f9afb389eed72d4852fbb90696f8ba4951a25b89640eda"
+    },
+    {
+      "path": "src/application_v2/runner.py",
+      "sha256": "5bd16d403953cf36376349baca09256e53f299e0d7cf1410f1feab87486fab98"
+    },
+    {
+      "path": "src/application_v2/scoring.py",
+      "sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7"
+    },
+    {
+      "path": "src/application_v2/taxonomy.py",
+      "sha256": "74b546d7f88f206b13015833e2e5d7ada267a490ae2aaf8aaa4df90a7bdf31ac"
+    },
+    {
+      "path": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+      "sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e"
+    },
+    {
+      "path": "tests/test_application_v2_cpi_evidence_acceptance.py",
+      "sha256": "d0cadb67a5eed77d15426096a808d472ae0e3450d8b6b3eb29f6a9d089243ed3"
+    }
+  ],
+  "limitations": [
+    "No direct original CPI training header",
+    "Bounded visual review does not certify every native class or accuracy",
+    "Full GT packages are structurally validated, not activated for model scoring",
+    "Saved replay does not certify fresh GPU execution"
+  ],
+  "local_doc_links_checked": 80
+}

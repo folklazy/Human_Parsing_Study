@@ -1,0 +1,756 @@
+{
+  "schema_version": "1.0",
+  "run_id": "cihp-archive-preflight-20261008T102552Z",
+  "end_utc": "2026-10-08T10:37:50.405994+00:00",
+  "archive_workspace_relative": "datasets/cihp-DatasetNinja.tar",
+  "archive_bytes": 2015375360,
+  "archive_sha256": "085d2b694a8c4e0081292a905972e1f31af9d454c12698427b187c7af67a2793",
+  "archive_sha256_after": "085d2b694a8c4e0081292a905972e1f31af9d454c12698427b187c7af67a2793",
+  "archive_modified": false,
+  "extraction_performed": false,
+  "container_integrity": "PASS",
+  "counts": {
+    "members": 76573,
+    "directories": 10,
+    "regular_files": 76563,
+    "testing_annotations": 5000,
+    "testing_empty_annotations": 5000,
+    "testing_images": 5000,
+    "training_annotations": 28280,
+    "bitmap_decoded": 768446,
+    "training_images": 28280,
+    "validation_annotations": 5000,
+    "validation_images": 5000
+  },
+  "annotation_objects_by_split": {
+    "testing": 0,
+    "training": 647072,
+    "validation": 121374
+  },
+  "class_object_counts": {
+    "left_arm": 70363,
+    "left_shoe": 29430,
+    "torso_skin": 92365,
+    "hat": 16945,
+    "face": 104477,
+    "coat": 38731,
+    "right_shoe": 29437,
+    "pants": 60430,
+    "right_arm": 73282,
+    "left_leg": 17873,
+    "hair": 99636,
+    "dress": 9288,
+    "upperclothes": 85544,
+    "right_leg": 17781,
+    "sunglasses": 4250,
+    "scarf": 3561,
+    "socks": 7398,
+    "skirt": 3880,
+    "glove": 3775
+  },
+  "object_field_counts": {
+    "id": 768446,
+    "classId": 768446,
+    "description": 768446,
+    "geometryType": 768446,
+    "labelerLogin": 768446,
+    "createdAt": 768446,
+    "updatedAt": 768446,
+    "tags": 768446,
+    "classTitle": 768446,
+    "bitmap": 768446
+  },
+  "annotation_field_counts": {
+    "description": 38280,
+    "tags": 38280,
+    "size": 38280,
+    "objects": 38280
+  },
+  "annotation_image_tag_count": 0,
+  "annotation_object_tag_count": 0,
+  "ownership_field_counts": {},
+  "errors": {},
+  "error_examples": [],
+  "duplicate_member_names": [],
+  "end_zero_blocks_validation": true,
+  "payload_integrity_limit": "Plain TAR headers have checksums, payloads do not. All payloads read and fingerprinted; no publisher checksum available.",
+  "missing_image_annotation_pairs": [],
+  "header_annotation_dimension_mismatches": [],
+  "official_validation_reference": "Pinned PGN repository complete 5000 evaluation/Instance_part_val/*.txt IDs",
+  "official_validation_ID_set_exact_match": true,
+  "official_train_test_ID_lists": "NOT_VERIFIED_FULL_LISTS_UNAVAILABLE_IN_REFERENCE_REPO",
+  "split_IDs_disjoint": true,
+  "all_IDs_complete_1_to_38280": false,
+  "native_PGN_train_val_demo_lists": "Both contain same 5 demo IDs; not official full split lists",
+  "byte_duplicate_image_groups": 224,
+  "byte_duplicate_cross_split_groups": 83,
+  "exact_decoded_RGB_leakage_audit": "NOT_PERFORMED_IN_PREFLIGHT",
+  "archive_meta": {
+    "LICENSE.md": "CIHP: Crowd Instance-level Human Parsing is under [MIT](https://spdx.org/licenses/MIT.html) license.",
+    "README.md": "# CIHP: Crowd Instance-level Human Parsing\n\nCIHP is a dataset for instance segmentation, semantic segmentation, and object detection tasks.",
+    "meta.json": {
+      "classes": [
+        {
+          "title": "coat",
+          "shape": "bitmap",
+          "color": "#0F5D8A",
+          "geometry_config": {},
+          "id": 6462883,
+          "hotkey": ""
+        },
+        {
+          "title": "dress",
+          "shape": "bitmap",
+          "color": "#840F8A",
+          "geometry_config": {},
+          "id": 6462882,
+          "hotkey": ""
+        },
+        {
+          "title": "face",
+          "shape": "bitmap",
+          "color": "#00FF15",
+          "geometry_config": {},
+          "id": 6462889,
+          "hotkey": ""
+        },
+        {
+          "title": "glove",
+          "shape": "bitmap",
+          "color": "#8A820F",
+          "geometry_config": {},
+          "id": 6462879,
+          "hotkey": ""
+        },
+        {
+          "title": "hair",
+          "shape": "bitmap",
+          "color": "#8B572A",
+          "geometry_config": {},
+          "id": 6462878,
+          "hotkey": ""
+        },
+        {
+          "title": "hat",
+          "shape": "bitmap",
+          "color": "#FCFF38",
+          "geometry_config": {},
+          "id": 6462877,
+          "hotkey": ""
+        },
+        {
+          "title": "left_arm",
+          "shape": "bitmap",
+          "color": "#0F6C8A",
+          "geometry_config": {},
+          "id": 6462890,
+          "hotkey": ""
+        },
+        {
+          "title": "left_leg",
+          "shape": "bitmap",
+          "color": "#002BFF",
+          "geometry_config": {},
+          "id": 6462892,
+          "hotkey": ""
+        },
+        {
+          "title": "left_shoe",
+          "shape": "bitmap",
+          "color": "#F000FF",
+          "geometry_config": {},
+          "id": 6462894,
+          "hotkey": ""
+        },
+        {
+          "title": "pants",
+          "shape": "bitmap",
+          "color": "#7FC880",
+          "geometry_config": {},
+          "id": 6462885,
+          "hotkey": ""
+        },
+        {
+          "title": "right_arm",
+          "shape": "bitmap",
+          "color": "#8A0F15",
+          "geometry_config": {},
+          "id": 6462891,
+          "hotkey": ""
+        },
+        {
+          "title": "right_leg",
+          "shape": "bitmap",
+          "color": "#FF4C00",
+          "geometry_config": {},
+          "id": 6462893,
+          "hotkey": ""
+        },
+        {
+          "title": "right_shoe",
+          "shape": "bitmap",
+          "color": "#AB0078",
+          "geometry_config": {},
+          "id": 6462895,
+          "hotkey": ""
+        },
+        {
+          "title": "scarf",
+          "shape": "bitmap",
+          "color": "#58DCE7",
+          "geometry_config": {},
+          "id": 6462887,
+          "hotkey": ""
+        },
+        {
+          "title": "skirt",
+          "shape": "bitmap",
+          "color": "#8A800F",
+          "geometry_config": {},
+          "id": 6462888,
+          "hotkey": ""
+        },
+        {
+          "title": "socks",
+          "shape": "bitmap",
+          "color": "#8A0F2E",
+          "geometry_config": {},
+          "id": 6462884,
+          "hotkey": ""
+        },
+        {
+          "title": "sunglasses",
+          "shape": "bitmap",
+          "color": "#3A8A0F",
+          "geometry_config": {},
+          "id": 6462880,
+          "hotkey": ""
+        },
+        {
+          "title": "torso_skin",
+          "shape": "bitmap",
+          "color": "#00FCFF",
+          "geometry_config": {},
+          "id": 6462886,
+          "hotkey": ""
+        },
+        {
+          "title": "upperclothes",
+          "shape": "bitmap",
+          "color": "#8A0F44",
+          "geometry_config": {},
+          "id": 6462881,
+          "hotkey": ""
+        }
+      ],
+      "tags": [],
+      "projectType": "images"
+    }
+  },
+  "taxonomy_native_mapping": {
+    "hat": 1,
+    "hair": 2,
+    "glove": 3,
+    "sunglasses": 4,
+    "upperclothes": 5,
+    "dress": 6,
+    "coat": 7,
+    "socks": 8,
+    "pants": 9,
+    "torso_skin": 10,
+    "scarf": 11,
+    "skirt": 12,
+    "face": 13,
+    "left_arm": 14,
+    "right_arm": 15,
+    "left_leg": 16,
+    "right_leg": 17,
+    "left_shoe": 18,
+    "right_shoe": 19
+  },
+  "all_annotation_bitmaps_full_decode_and_PNG_CRC": "PASS",
+  "sample_strict_RGB_decode": [
+    {
+      "split": "testing",
+      "image_id": "0003313",
+      "image_member": "testing/img/0003313.jpg",
+      "image_sha256": "1c3375cf7f10ccb8c5bb895f2d6e2168a953003d36f4b69d855068a8324e3a3b",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        333
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 0,
+      "semantic_array_sha256": "18c7875c0329d1812c3f087b6c6fdff41358facb89c565d131f6c715fa021e82"
+    },
+    {
+      "split": "testing",
+      "image_id": "0022278",
+      "image_member": "testing/img/0022278.jpg",
+      "image_sha256": "233b61221cf0e22c7a5a5a98f0723e09960bc28baf462ef67df1b9e380945e97",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        333
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 0,
+      "semantic_array_sha256": "18c7875c0329d1812c3f087b6c6fdff41358facb89c565d131f6c715fa021e82"
+    },
+    {
+      "split": "training",
+      "image_id": "0001871",
+      "image_member": "training/img/0001871.jpg",
+      "image_sha256": "2a6d29676978c271bd48b7bb152ca7121a90fd83f7b11d41f83bd9f474f89b71",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        150,
+        112
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 33,
+      "semantic_array_sha256": "67c899a70be271e8cdf795a6b2272e0c2089d892c66522c1f8388c471a87c857",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0001871_semantic_diagnostic.png",
+      "diagnostic_sha256": "8d09a35c0d7da3f184e5f796d246937cc2d51f92937a06a63f91af556c184027"
+    },
+    {
+      "split": "training",
+      "image_id": "0002190",
+      "image_member": "training/img/0002190.jpg",
+      "image_sha256": "6fdd3d736c865f098279cf3c5f09138835f3d40eb59ebf13c1959eb4e43dcae7",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        300,
+        200
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 10,
+      "semantic_array_sha256": "bf03b4221b158b6826edc9b80a578e73a819f409e45c1ce85e21bfccbe22a62f",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0002190_semantic_diagnostic.png",
+      "diagnostic_sha256": "f1aedb1675e3346cd66ce5dab61c546b6fe8e60350e7e3bac49476c1e5fadec8"
+    },
+    {
+      "split": "training",
+      "image_id": "0005008",
+      "image_member": "training/img/0005008.jpg",
+      "image_sha256": "1e39e929cac2874d653a17c9cfc56f6df062637d790042a424a32253c5aa4f84",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        576,
+        313
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 53,
+      "semantic_array_sha256": "7c53acead0bf3ce045765f21ae5e61ecea3414d56822d5c16f8fcd7663751a93",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0005008_semantic_diagnostic.png",
+      "diagnostic_sha256": "b7ab5d691739937dc208586e6a0e71661faf17c87bacb9a4028cd6762a962950"
+    },
+    {
+      "split": "training",
+      "image_id": "0006450",
+      "image_member": "training/img/0006450.jpg",
+      "image_sha256": "691412ba01a90664f87a66b00cd1e0ce3d2bb7aba90bdb191037ae2069ab030e",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        333,
+        500
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 15,
+      "semantic_array_sha256": "f7941be5a8eac6118ad460a43ffc6dc79d0b8a073c8eae1b06523f342260ab9b"
+    },
+    {
+      "split": "training",
+      "image_id": "0010139",
+      "image_member": "training/img/0010139.jpg",
+      "image_sha256": "f6d9ec6a247b0368de8f9c43ba597fa7041aca6028b812f58ae93e8d06795a2e",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        300,
+        363
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 19,
+      "semantic_array_sha256": "0810926d8323a91c1b78df2937ee8c5112f6f7eb08a66ecb693b56b6bd11fa97"
+    },
+    {
+      "split": "training",
+      "image_id": "0011838",
+      "image_member": "training/img/0011838.jpg",
+      "image_sha256": "bfc97a4233c30427adb8604cdd933f99b2833eda1ce13e195a68a7b2c9a02d2e",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        634,
+        411
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 18,
+      "semantic_array_sha256": "7a758426dd871008fb78e9fa9ca9e62721bfade31ceba0be7166217ddc31ce35"
+    },
+    {
+      "split": "training",
+      "image_id": "0012008",
+      "image_member": "training/img/0012008.jpg",
+      "image_sha256": "32fb2ff9a9c6ca10f5f054e906614dbf50a1084e9d79b19c387ec9e276c00d65",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        458
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 30,
+      "semantic_array_sha256": "8898a8ec96eda2f45a24976cf5c59725d3b99b0bf3931a8c5dd18bb1f103c599",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0012008_semantic_diagnostic.png",
+      "diagnostic_sha256": "8aa419e7fab40233823ed5b85d84adb68630af44ef9e0a046e688ff76d965795"
+    },
+    {
+      "split": "training",
+      "image_id": "0012374",
+      "image_member": "training/img/0012374.jpg",
+      "image_sha256": "1777db8ad88ccbb9f22651da11b2a763d19bc9ed11fcbc206c58046f917c48be",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        550,
+        367
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 15,
+      "semantic_array_sha256": "01600dc3c17e4c6ba7bc7e3b617cf0100862885c628b8b6c0c96a46d8682c1bd"
+    },
+    {
+      "split": "training",
+      "image_id": "0018539",
+      "image_member": "training/img/0018539.jpg",
+      "image_sha256": "e3419bfba3fad4976e87d18fcac2c4b65d4d445db8b1215db4431ac4c77d606b",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        334,
+        500
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 12,
+      "semantic_array_sha256": "4a7b16092f6e5cd9cd4f266c3780969fc1b8741942573c867333264ba84aea54"
+    },
+    {
+      "split": "training",
+      "image_id": "0026375",
+      "image_member": "training/img/0026375.jpg",
+      "image_sha256": "69f7db06fb9635cd5357b17741806bb2021c80b2084c189e622b316e48b29531",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        498
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 13,
+      "semantic_array_sha256": "db6eda025d8c5b20a2b5c0028c764bea1c3823fd9b500479e80d0549658f47d2",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0026375_semantic_diagnostic.png",
+      "diagnostic_sha256": "024091847b5a0100fa1b595b5aac8811dd44f71e37635b6dd1232bda8ee36f2e"
+    },
+    {
+      "split": "training",
+      "image_id": "0032190",
+      "image_member": "training/img/0032190.jpg",
+      "image_sha256": "f0667f6888376c5b272a7b8d8a5c2b578c7c465b8f0b202c0515ab441dbf47f5",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        752
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 14,
+      "semantic_array_sha256": "56921daa386f22bcc5039662fb0cc949ce5e6540a8d89718537df01c1236ff01",
+      "diagnostic": "outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0032190_semantic_diagnostic.png",
+      "diagnostic_sha256": "3d111767a05342ff8aaf99b7f92b1cdd738daf5d455c2853f05d8a5d8695ea4d"
+    },
+    {
+      "split": "training",
+      "image_id": "0035374",
+      "image_member": "training/img/0035374.jpg",
+      "image_sha256": "4e2327e2244bf8f70490b076895392094a20dec6eb1580e21e801b21f6785676",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        333
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 24,
+      "semantic_array_sha256": "b1836264efda07faeeaaa13a787e5184ea3c611bf5e4ecfb47f0b58744b0c806"
+    },
+    {
+      "split": "validation",
+      "image_id": "0003559",
+      "image_member": "validation/img/0003559.jpg",
+      "image_sha256": "92b8431b810c11237ce6b7e6ceba4ad1b565c89e0cff438b3ed874d43f1fcb7b",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        375
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 20,
+      "semantic_array_sha256": "1e8c3fa56cd268ebe6032671b80f6c59b924d8ff51270cc957298a93595e7ae9"
+    },
+    {
+      "split": "validation",
+      "image_id": "0011634",
+      "image_member": "validation/img/0011634.jpg",
+      "image_sha256": "bf0e5a4ccc3dfc921ed528dd1a2286986976f516ec54ed8edc89e9687bd1712c",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        375
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 11,
+      "semantic_array_sha256": "560ad46aeb550cd1078fb601b00ffe89d0adee0a008b55c2c32166fe4bb86105"
+    },
+    {
+      "split": "validation",
+      "image_id": "0018186",
+      "image_member": "validation/img/0018186.jpg",
+      "image_sha256": "78bbb49bde2f863bd9cf901654744b5fd5a02b64b30ea19a350fedeb08567af0",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        375
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 51,
+      "semantic_array_sha256": "e729bf861b9511b368be70ee2507798c9835ec58cd264220eab959df196c3a89"
+    },
+    {
+      "split": "validation",
+      "image_id": "0021160",
+      "image_member": "validation/img/0021160.jpg",
+      "image_sha256": "9e1facb22c000552ad386a35382e2bc1019bec6a7220988ec97a8c903c6f9452",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        450,
+        338
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 17,
+      "semantic_array_sha256": "2c5cc65f7eb4ed174bbbf5824ac1819c645b77b8cebf5b218ded0fdcd98e8a73"
+    },
+    {
+      "split": "validation",
+      "image_id": "0022068",
+      "image_member": "validation/img/0022068.jpg",
+      "image_sha256": "2f16757c74f90ce424fe7a9dd67720e61d9c815fc068347eaf57cadfea41f5bc",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        500,
+        340
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 24,
+      "semantic_array_sha256": "6a3faa7be5a2cd668910e54745c37d91b0cfd0fa9d39f370edf385109b43dfb6"
+    },
+    {
+      "split": "validation",
+      "image_id": "0033083",
+      "image_member": "validation/img/0033083.jpg",
+      "image_sha256": "1c14beacb074a5f3663344df06c3ad9a5139432f6f63ca840539397fbe972b40",
+      "strict_full_RGB_decode": "PASS",
+      "wh": [
+        400,
+        579
+      ],
+      "overlap_pixels": 0,
+      "cross_class_overwrite_events": 0,
+      "person_identity": "NOT_AVAILABLE",
+      "uncovered_pixels": "implicit converted background; original void fidelity unverified",
+      "objects": 14,
+      "semantic_array_sha256": "dfba8fd62523455233c46264afde8dc47a19418609840a9029e2aff115621ff2"
+    }
+  ],
+  "native_reference_semantic_comparisons": [
+    {
+      "image_id": "0002190",
+      "archive_split": "training",
+      "same_JPEG_bytes": true,
+      "RGB_pixels_identical": true,
+      "GT_dimensions_identical": true,
+      "GT_semantic_pixels_identical": true,
+      "native_reference_labels": [
+        0,
+        2,
+        5,
+        10,
+        13,
+        15
+      ],
+      "mismatched_pixels": 0,
+      "native_GT_sha256": "c0eb3ddbb562023a3bf73d17a90cda7bad254ecb0048728ccdcdf6c4c93b4291",
+      "reference_scope": "Five official repository demo semantic maps; not whole-release or human-ID fidelity"
+    },
+    {
+      "image_id": "0005008",
+      "archive_split": "training",
+      "same_JPEG_bytes": true,
+      "RGB_pixels_identical": true,
+      "GT_dimensions_identical": true,
+      "GT_semantic_pixels_identical": true,
+      "native_reference_labels": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "mismatched_pixels": 0,
+      "native_GT_sha256": "dbec705eb076374ad99618463c8dedd85d3e4d8e4d467d1b09f0c2d7363349de",
+      "reference_scope": "Five official repository demo semantic maps; not whole-release or human-ID fidelity"
+    },
+    {
+      "image_id": "0012008",
+      "archive_split": "training",
+      "same_JPEG_bytes": true,
+      "RGB_pixels_identical": true,
+      "GT_dimensions_identical": true,
+      "GT_semantic_pixels_identical": true,
+      "native_reference_labels": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mismatched_pixels": 0,
+      "native_GT_sha256": "0eacf2b35baeb2b6012e86ff24eeccc1d511a57436d6c62aefacb28917efe354",
+      "reference_scope": "Five official repository demo semantic maps; not whole-release or human-ID fidelity"
+    },
+    {
+      "image_id": "0026375",
+      "archive_split": "training",
+      "same_JPEG_bytes": true,
+      "RGB_pixels_identical": true,
+      "GT_dimensions_identical": true,
+      "GT_semantic_pixels_identical": true,
+      "native_reference_labels": [
+        0,
+        2,
+        5,
+        13,
+        14,
+        15
+      ],
+      "mismatched_pixels": 0,
+      "native_GT_sha256": "ff477c6585bcc4d4f2b8e92c2d284096270ba9cbeb414f8d7e11defc47677e07",
+      "reference_scope": "Five official repository demo semantic maps; not whole-release or human-ID fidelity"
+    },
+    {
+      "image_id": "0032190",
+      "archive_split": "training",
+      "same_JPEG_bytes": true,
+      "RGB_pixels_identical": true,
+      "GT_dimensions_identical": true,
+      "GT_semantic_pixels_identical": true,
+      "native_reference_labels": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "mismatched_pixels": 0,
+      "native_GT_sha256": "ee8f4d3a682b1c27f140831acba84e623a50920fbeeebbab205c633e6abb81be",
+      "reference_scope": "Five official repository demo semantic maps; not whole-release or human-ID fidelity"
+    }
+  ],
+  "human_instance_GT_status": "MISSING_NATIVE_HUMAN_OWNERSHIP_INFORMATION",
+  "conversion_fidelity": "FAIL_FOR_PERSON_INSTANCE_CONTRACT; semantic/part full-native parity unverified",
+  "local_full_quality_review": "NOT_RUN",
+  "primary_dataset_promoted": false,
+  "model_inference": false,
+  "tool_sha256": "f83b989229bedef6ad4641b7f28d6877f7ddefded010c2ce2d4619e7249faa01",
+  "decoder_sha256": "f49bc283b152c30da8abdcfc617d2524750f58ed54f5fcbcdc0ea5c88aaced7b",
+  "member_inventory": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/TAR_MEMBER_SHA256.jsonl",
+  "member_inventory_sha256": "d8e4f01ba8a52dbb48a50ac92b6811945cb9ac0c499d96c4f73eaf4a419ee13b",
+  "annotation_summary": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/ANNOTATION_SUMMARY.jsonl",
+  "annotation_summary_sha256": "844ecfb7b740546214ae766af8cc7d6f9ebcb844793fc392c1b972c530e52878"
+}

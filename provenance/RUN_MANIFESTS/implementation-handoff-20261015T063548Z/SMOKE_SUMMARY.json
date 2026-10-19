@@ -1,0 +1,443 @@
+[
+  {
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 796.88037109375,
+    "peak_reserved_mib": 1178.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_cihp-20261015T064421Z/RUN.json",
+    "run_manifest_sha256": "b4328c730caddd3b2a7cb21ebe2d401838b1b703c06e8bb0bd2c1421550f027a",
+    "component_only": false,
+    "canonical_contract": "PASS_T1_AND_T3B_SAVED_YOLO"
+  },
+  {
+    "model_id": "CPI_ConvNeXtB_MHPV2",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "d32dc48334b6d201cacf86c7153eeb06876a3e613123d459ed19490c9b7cdfc1",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "checkpoint_loaded": true,
+    "native_class_count": 59,
+    "native_class_order_sha256": "522937166c77ebf9f72665c86fa794266555dd63074adb8fe61df9b7796b98e7",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 1404.951171875,
+    "peak_reserved_mib": 1888.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_mhpv2-20261015T064433Z/RUN.json",
+    "run_manifest_sha256": "96b26c89ed4ce48c047463b59ac5efdc9dfe344d7a19be96a0c02c69211f7e7f",
+    "component_only": false,
+    "canonical_contract": "PASS_T1_AND_T3B_SAVED_YOLO"
+  },
+  {
+    "model_id": "CPI_R50_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 584.16162109375,
+    "peak_reserved_mib": 1110.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_cihp-20261015T064358Z/RUN.json",
+    "run_manifest_sha256": "a637a4a9edef0e33d9bd8052f3446303c8a9e025b68024b4471dc22837f2d327",
+    "component_only": false,
+    "canonical_contract": "PASS_T1_AND_T3B_SAVED_YOLO"
+  },
+  {
+    "model_id": "CPI_R50_MHPV2",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "00204f3756cf67d8c62522f4409f8dc234f0f7407d762f2c9caeb984d3c83c42",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "checkpoint_loaded": true,
+    "native_class_count": 59,
+    "native_class_order_sha256": "522937166c77ebf9f72665c86fa794266555dd63074adb8fe61df9b7796b98e7",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 1200.884765625,
+    "peak_reserved_mib": 1924.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_mhpv2-20261015T064415Z/RUN.json",
+    "run_manifest_sha256": "a17a646c5b0eb4ef9a1ff7e773564e64630cfca184e41b7294e48e8a56864b58",
+    "component_only": false,
+    "canonical_contract": "PASS_T1_AND_T3B_SAVED_YOLO"
+  },
+  {
+    "model_id": "D2FP_R101_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+    "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "NATIVE_FULL_FRAME",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 1323.0478515625,
+    "peak_reserved_mib": 1938.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_cihp-20261015T064526Z/RUN.json",
+    "run_manifest_sha256": "254aaee571f2b9086e6ea7aeb63e20ca90dbc89674f207f5605188d4dfead7e5",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "D2FP_R101_LIP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "599e2866a64b4ca4033f38ec323254faf01c80303589899988f1523cd66a4b46",
+    "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ec902b0107e8f09483bbc25dd9e3b4422fba092562b77acff9caa1da53e20816",
+    "mode": "ORACLE_CROP_LARGEST_PERSON",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 989.05859375,
+    "peak_reserved_mib": 2286.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_lip-20261015T064543Z/RUN.json",
+    "run_manifest_sha256": "d637ca5b2f9e00d402ae92dfb68f44e4b5fa4c2c046fa132034476830bc4e76f",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "FASHN_B4",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "e43c8c8a9b04f28798f0a4630cf18caa2cdb27a0d454fae43a5716e6f7078244",
+    "source_commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+    "checkpoint_loaded": true,
+    "native_class_count": 18,
+    "native_class_order_sha256": "ba13f0e514e162cb95793e07c8f9c591ce89c2c689d6784768bc42de4fb63b30",
+    "mode": "FULL_IMAGE_SEMANTIC_NO_PERSON_IDENTITIES",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 643.515625,
+    "peak_reserved_mib": 714.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/fashn-20261015T064349Z/RUN.json",
+    "run_manifest_sha256": "380147ccde2f6e3205ba67cea939b00640eb1d6915283ec4ad2b580dbb15e3d4",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "M2FP_R101_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+    "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "NATIVE_FULL_FRAME",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 965.4453125,
+    "peak_reserved_mib": 1286.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_cihp-20261015T064449Z/RUN.json",
+    "run_manifest_sha256": "7cc45119b11559df4bc132efc49176d9a82457e42ba0a53eb8e682fb18b625ad",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "M2FP_R101_LIP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "28af4ee7291cd289242f60735cb8c87df6d7024297b14bcda119a7734baf77c4",
+    "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ec902b0107e8f09483bbc25dd9e3b4422fba092562b77acff9caa1da53e20816",
+    "mode": "ORACLE_CROP_LARGEST_PERSON",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 709.4658203125,
+    "peak_reserved_mib": 1812.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_lip-20261015T064514Z/RUN.json",
+    "run_manifest_sha256": "eba17ee540655f335ea7e2a022ed7528d18974acddbbaed1747d7e520e1c16da",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "M2FP_R101_MHPV2",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "5b9252a29dbf9f5b93d614ec7b981068b0557c4714fe62fc4024d6379675749e",
+    "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "checkpoint_loaded": true,
+    "native_class_count": 59,
+    "native_class_order_sha256": "522937166c77ebf9f72665c86fa794266555dd63074adb8fe61df9b7796b98e7",
+    "mode": "NATIVE_FULL_FRAME",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 1054.66796875,
+    "peak_reserved_mib": 1316.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_mhpv2-20261015T064505Z/RUN.json",
+    "run_manifest_sha256": "80c7a69afdb9984f9400ff7b59144f39b7fbb1aa9d4b259a656ebf83e4d740f7",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "QANet_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "1180aee52f4ec6db87d4d13f95b41c7b5cadc47ef0ab02fc472b2ef8ee56ea19",
+    "source_commit": "61615c4491979569771020bc4beff86d63974829",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "ORACLE_PERSON_NATIVE_ROI_ALIGN",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 250.7509765625,
+    "peak_reserved_mib": 342.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp-20261015T064600Z/RUN.json",
+    "run_manifest_sha256": "be1c1af0abe8cfcbffb00a353b19c718dc09515cc25d4a6c54e2639c7fbc2445",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "QANet_CIHP_HRNetW48_512x384",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+    "source_commit": "61615c4491979569771020bc4beff86d63974829",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "ORACLE_PERSON_NATIVE_ROI_ALIGN",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 390.7060546875,
+    "peak_reserved_mib": 498.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp_hrnetw48_512x384-20261015T065534Z/RUN.json",
+    "run_manifest_sha256": "93a1c56f063acb2ae8909bef5ac175da98f26756f90e8df7f1ad36147947c7ca",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "QANet_LIP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "643a2d995d5eec97abb4bc6c380326fac88048b08bbb0a996df56faa171406bf",
+    "source_commit": "61615c4491979569771020bc4beff86d63974829",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ec902b0107e8f09483bbc25dd9e3b4422fba092562b77acff9caa1da53e20816",
+    "mode": "ORACLE_PERSON_NATIVE_ROI_ALIGN",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 388.5654296875,
+    "peak_reserved_mib": 512.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_lip-20261015T064608Z/RUN.json",
+    "run_manifest_sha256": "1f482a63c66d63fc1b53203e0cc751e0332c1cbb76c6593df361e7d22fb38756",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "QANet_LIP_HRNetW48_544x416",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "794b21ae0dc0bc53dccf482e69b8509f7d8743a592a7e7fd43c803daf9a92f5c",
+    "source_commit": "61615c4491979569771020bc4beff86d63974829",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ec902b0107e8f09483bbc25dd9e3b4422fba092562b77acff9caa1da53e20816",
+    "mode": "ORACLE_PERSON_NATIVE_ROI_ALIGN",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 979.2705078125,
+    "peak_reserved_mib": 1172.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_lip_hrnetw48_544x416-20261015T065545Z/RUN.json",
+    "run_manifest_sha256": "ad9787fabe47202a0019a8916017fb9e8b50e9bcc481b6141ea54f1b6adc3b72",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "RPR_CIHP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+    "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 642.11376953125,
+    "peak_reserved_mib": 698.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_cihp-20261015T064615Z/RUN.json",
+    "run_manifest_sha256": "cf7dfec7ede5f57a04a55f6c7c64dc84f8f2d29bc61a231652762ead40683db8",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "RPR_MHPV2",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "c2a0c33b486d56477a9c89d00d5c6ebb409be0f044d886cbda39668ee1d326c5",
+    "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+    "checkpoint_loaded": true,
+    "native_class_count": 59,
+    "native_class_order_sha256": "522937166c77ebf9f72665c86fa794266555dd63074adb8fe61df9b7796b98e7",
+    "mode": "NATIVE_FULL_FRAME_INTERNAL_DETECTOR",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 719.953125,
+    "peak_reserved_mib": 774.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_mhpv2-20261015T064627Z/RUN.json",
+    "run_manifest_sha256": "f1292123e4c14de81d00ad303ab93b5c203c7fb0fa15c6ee6410a9a0f1349676",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "SCHP_CIHP_GLOBAL_COMPONENT",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "da871540b7212c547eab7a372de3ee571ed35983136823b88c0b0ef81d441e7b",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "GLOBAL_SEMANTIC_COMPONENT",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 519.56982421875,
+    "peak_reserved_mib": 572.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_cihp_global_component-20261015T065656Z/RUN.json",
+    "run_manifest_sha256": "cedff052850ee52634a073be329b50cb2bb61ed484537b313351f06695e3e2d5",
+    "component_only": true,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "SCHP_CIHP_LOCAL_COMPONENT",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "d6b555f89deb7c49fe9d338c118dde0edea3e9c96f3c0f37864c3787ea882e72",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ddfbbe5afa4c93797b129ccac83df97f56f79c4ba4960e628753d8f34f49c615",
+    "mode": "LOCAL_COMPONENT_ORACLE_CROP",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 519.56982421875,
+    "peak_reserved_mib": 572.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_cihp_local_component-20261015T065707Z/RUN.json",
+    "run_manifest_sha256": "8753509380334038c8180e3b4e67b02f8fa970a778706e9d95374cf0476c1df2",
+    "component_only": true,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "SCHP_R101_ATR",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "e9d7c91ce3b4e7133df56b599fc817b533e3439c5e8d282a59126d2fda339a2a",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checkpoint_loaded": true,
+    "native_class_count": 18,
+    "native_class_order_sha256": "40cc2882a37e3eb75c103da48850e01d055f12098615e8e273d4e018d3f6d4c6",
+    "mode": "ORACLE_CROP_LARGEST_PERSON",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 530.22998046875,
+    "peak_reserved_mib": 586.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_atr-20261015T065335Z/RUN.json",
+    "run_manifest_sha256": "56ee1825158f48854705c1c0e91cb4be3b3305dc917b4ff85921d4203adc5a21",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "SCHP_R101_LIP",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "24fa3254ceeb74c8435458994a64b522fb439a3635b7b86ff470457e0413da00",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checkpoint_loaded": true,
+    "native_class_count": 20,
+    "native_class_order_sha256": "ec902b0107e8f09483bbc25dd9e3b4422fba092562b77acff9caa1da53e20816",
+    "mode": "ORACLE_CROP_LARGEST_PERSON",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 519.56982421875,
+    "peak_reserved_mib": 572.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_lip-20261015T065323Z/RUN.json",
+    "run_manifest_sha256": "6cd4e93f19ec85bd2f80201f049d4cc4b86ebe1d3a305235a7202e66f3b068eb",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  },
+  {
+    "model_id": "SCHP_R101_PASCAL_PERSON_PART",
+    "status": "BOUNDED_NATIVE_PASS",
+    "checkpoint_sha256": "3b03d343c39fb0696f75d45c44c67b2fc23f5d0bf0925a82c0465e415799fa85",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checkpoint_loaded": true,
+    "native_class_count": 7,
+    "native_class_order_sha256": "ef0512aedd71e78821b10a4cc17a4a0b0764ac557776b0024d02d95342aa29a7",
+    "mode": "ORACLE_CROP_LARGEST_PERSON",
+    "input_ids": [
+      "0000930"
+    ],
+    "precision": "FP32",
+    "cases": 1,
+    "peak_allocated_mib": 530.20849609375,
+    "peak_reserved_mib": 586.0,
+    "run_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/schp_r101_pascal_person_part-20261015T065339Z/RUN.json",
+    "run_manifest_sha256": "505edd87a6736c47703b3d3d52d387f0d75ff674efbe8245d38aeedd95a1bc5a",
+    "component_only": false,
+    "canonical_contract": "NOT_TESTED_IN_THIS_NATIVE_RUN"
+  }
+]

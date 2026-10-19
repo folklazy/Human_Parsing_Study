@@ -1,0 +1,282 @@
+{
+  "run_id": "stage0f-ccihp-quality-20261012T062825Z",
+  "validation_status": "PASS",
+  "scientific_quality_status": "PASS_WITH_WARNINGS_AUTOMATED_ONLY",
+  "primary_readiness": "D_HUMAN_REVIEW_REQUIRED",
+  "checks": [
+    {
+      "name": "all_33280_unique_image_records",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_PNG_RGB_decoding_and_grids",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_source_count_and_pixels",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_independent_class_support_totals",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_independent_warning_totals",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_native_person_ID_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_per_image_complete_pixel_denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_native_encodings",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Training_positive_instance_single_class_single_owner",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_source_count_and_pixels",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_independent_class_support_totals",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_independent_warning_totals",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_native_person_ID_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_per_image_complete_pixel_denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_native_encodings",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Validation_positive_instance_single_class_single_owner",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "per_person_ledger_unique_and_valid_boxes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "200_unique_TRAIN_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sample_independent_review_pending",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sampling_frame_28280",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stratum_allocation_and_positive_probabilities",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inclusion_probabilities_and_weights",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "human_checklist_200_PENDING",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "review_full_resolution_panel_geometry",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "review_all_201_artifact_hashes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "review_GT_pixel_exact_roundtrip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact_overlap_control_math",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_source_target_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "overlap_controlled_source_target_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "overlap_controlled_source_target_membership",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "readable_source_view_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "overlap_controlled_readable_view_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "overlap_controlled_readable_view_membership",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "near_screen_candidate_math",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_unknown_pixel_investigation_accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "background_only_and_unknown_only_person_flags_preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "prior_47_flags_rechecked_no_majority_assignment",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "protected_YOLO_metrics_MHP_PPSS_checkpoint_metadata_hashes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "archive_source_stats_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_YOLO26x_checkpoint_matches_prior_SHA256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PPSS_historical_state_nodes_preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "previous_stage0e_evidence_state_preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no_benchmark_or_primary_promotion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "taxonomy_cohorts_remain_DRAFT",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_documents_archived_exact_before_hashes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "active_local_document_visual_links_resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "existing_Git_working_trees_preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "25_unit_tests_executed_PASS",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 48,
+  "checks_total": 48,
+  "unit_tests_passed": 25,
+  "independent_human_reviews_completed": 0,
+  "annotation_error_prevalence": "NOT_ESTIMATED",
+  "safety": {
+    "original_dataset_modified": false,
+    "PPSS_activity": false,
+    "YOLO_modified": false,
+    "checkpoint_download": false,
+    "parser_inference": false,
+    "full_benchmark": false,
+    "training": false,
+    "CCTV_inference": false,
+    "attribute_evaluation": false,
+    "remote_Git_actions": false
+  },
+  "git_status_before": {
+    "YOLO_Medium_Seg_MOTS20_Benchmark": "",
+    "YOLO_Large_Seg_MOTS20_Benchmark": "?? manifests/benchmark-20260929T0520Z_preflight.json\n?? metrics/benchmark-20260929T0520Z/candidate_counts.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.json\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-aggregates.csv\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.png\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.png\n?? outputs/plots/benchmark-20260929T0520Z/ap50_ap75.pdf\n?? outputs/plots/benchmark-20260929T0520Z/fps.pdf\n?? outputs/plots/benchmark-20260929T0520Z/inference_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/mask_map.pdf\n?? outputs/plots/benchmark-20260929T0520Z/matched_mask_quality.pdf\n?? outputs/plots/benchmark-20260929T0520Z/peak_vram.pdf\n?? outputs/plots/benchmark-20260929T0520Z/pipeline_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/provenance.json\n?? reports/benchmark-20260929T0520Z/SUMMARY.md\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_full_freeze.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_preflight.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/requirements.txt\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/frozen_pilot/visualize.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/report.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/validate.py\n?? reports/benchmark-20260929T0520Z/terminal_summary.txt\n?? requirements.txt\n?? src/benchmark.py\n?? src/benchmark_adapter.py\n?? src/frozen_pilot/\n?? src/refine_scatter_plots.py\n?? src/report.py\n?? src/report_clean_timing.py\n?? src/validate.py\n?? timing/benchmark-20260929T0520Z/clean_repetition/runs.json\n?? timing/benchmark-20260929T0520Z/round1-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/runs.json\n?? timing/benchmark-20260929T0520Z/summary.csv\n",
+    "YOLO_Small_Seg_MOTS20_Benchmark": "",
+    "YOLO_Nano_Seg_MOTS20_Benchmark": "",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark": "",
+    "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": "?? YOLO_PARSING_SELECTION_PLAN_TH.md\n"
+  },
+  "git_status_after": {
+    "YOLO_Medium_Seg_MOTS20_Benchmark": "",
+    "YOLO_Large_Seg_MOTS20_Benchmark": "?? manifests/benchmark-20260929T0520Z_preflight.json\n?? metrics/benchmark-20260929T0520Z/candidate_counts.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.json\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-aggregates.csv\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.png\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.png\n?? outputs/plots/benchmark-20260929T0520Z/ap50_ap75.pdf\n?? outputs/plots/benchmark-20260929T0520Z/fps.pdf\n?? outputs/plots/benchmark-20260929T0520Z/inference_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/mask_map.pdf\n?? outputs/plots/benchmark-20260929T0520Z/matched_mask_quality.pdf\n?? outputs/plots/benchmark-20260929T0520Z/peak_vram.pdf\n?? outputs/plots/benchmark-20260929T0520Z/pipeline_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/provenance.json\n?? reports/benchmark-20260929T0520Z/SUMMARY.md\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_full_freeze.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_preflight.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/requirements.txt\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/frozen_pilot/visualize.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/report.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/validate.py\n?? reports/benchmark-20260929T0520Z/terminal_summary.txt\n?? requirements.txt\n?? src/benchmark.py\n?? src/benchmark_adapter.py\n?? src/frozen_pilot/\n?? src/refine_scatter_plots.py\n?? src/report.py\n?? src/report_clean_timing.py\n?? src/validate.py\n?? timing/benchmark-20260929T0520Z/clean_repetition/runs.json\n?? timing/benchmark-20260929T0520Z/round1-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/runs.json\n?? timing/benchmark-20260929T0520Z/summary.csv\n",
+    "YOLO_Small_Seg_MOTS20_Benchmark": "",
+    "YOLO_Nano_Seg_MOTS20_Benchmark": "",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark": "",
+    "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": "?? YOLO_PARSING_SELECTION_PLAN_TH.md\n"
+  },
+  "end_utc": "2026-10-12T07:02:53.338716+00:00"
+}

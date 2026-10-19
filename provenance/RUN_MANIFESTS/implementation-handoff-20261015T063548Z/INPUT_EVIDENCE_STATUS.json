@@ -1,0 +1,8 @@
+{
+  "remote_CPU_patch": "NOT_FOUND_NOT_APPLIED",
+  "referenced_guide_2": "NOT_FOUND",
+  "implementation_basis": "Existing server source, independently reproduced failures, supplied handoff1.1",
+  "remote_103_tests": "REPORTED_NOT_REVERIFIED",
+  "prior_109_and_14_probes": "REUSED_PRIOR_EVIDENCE_PLUS_NEW_SERVER_REGRESSIONS",
+  "remote_patch_parity": "NOT_CLAIMED"
+}

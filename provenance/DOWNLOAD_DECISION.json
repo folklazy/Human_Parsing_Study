@@ -1,0 +1,8 @@
+{
+  "large_downloads_authorized": false,
+  "user_decision": "Inspect source/dataset/tests first; do not download large files",
+  "model_checkpoints_downloaded": 0,
+  "torch_dependencies_reused_from_verified_local_uv_cache": true,
+  "new_small_dependency_installations": "Pillow, NumPy, SciPy, PyYAML audit environment; transformers/opencv/safetensors FASHN isolated environment",
+  "original_yolo_environment_modified": false
+}

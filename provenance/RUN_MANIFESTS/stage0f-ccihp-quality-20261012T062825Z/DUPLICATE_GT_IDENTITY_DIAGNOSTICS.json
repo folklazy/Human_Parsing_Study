@@ -1,0 +1,474 @@
+{
+  "comparisons": [
+    {
+      "train_id": "0000904",
+      "validation_id": "0007767",
+      "RGB_decoded_sha256": "6351519090d5ae20971205a32c0b3daa1d230e2ac5ffb631a32b012e0959b6ca",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0003402",
+      "validation_id": "0008200",
+      "RGB_decoded_sha256": "31df2024b5a357fcec52cb6329d6db714da03ea7f86cbe0ed6ac6d4766c5280e",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0008290",
+      "validation_id": "0003859",
+      "RGB_decoded_sha256": "f786d3aa8be321440e56f879346fb1ad07f841535ce457879d3e7116733e5b04",
+      "same_person_count": false,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0009346",
+      "validation_id": "0011640",
+      "RGB_decoded_sha256": "6bb7d44b99f04191de0389c17ad1efbcffa02c9c2670aa04e3b18cd9f93ee35b",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0010458",
+      "validation_id": "0004574",
+      "RGB_decoded_sha256": "54d19bd9b8fea2c675731970a1d966a0db6013e6fc67015a6fd54e8c28cc4bc9",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0010525",
+      "validation_id": "0005347",
+      "RGB_decoded_sha256": "97aaf3788ae26845848f6cf5e76fc7533b0f09f08dc774a680880799209800d9",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0012013",
+      "validation_id": "0003429",
+      "RGB_decoded_sha256": "551c940ec300b1ff03ef1360e19442c79dce0c8d878d73abf86f17b5b09ebc15",
+      "same_person_count": false,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0014912",
+      "validation_id": "0010025",
+      "RGB_decoded_sha256": "7664581de9b153cfad1be645c5f470a8ca9927c4f95c38cf56810b59948087aa",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0017229",
+      "validation_id": "0010497",
+      "RGB_decoded_sha256": "3e384e1b05f66099a5797c8c405c67440977219124201e9476c0d50c63e43bb7",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0020057",
+      "validation_id": "0021274",
+      "RGB_decoded_sha256": "dbc2c500a4e5cadbd3a028b7c3905de4e8fbdf9529d9d2f4d64c6535bbbe669b",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0020625",
+      "validation_id": "0036658",
+      "RGB_decoded_sha256": "1f646e1d46d56c3243bc96b2870210a3332e5bc9315f430436864b5468b4ccad",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0020724",
+      "validation_id": "0025334",
+      "RGB_decoded_sha256": "182b88c4327f9cabdf90c487fe97b092700c6c5055c78ed890d340c6baba239b",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0021647",
+      "validation_id": "0037426",
+      "RGB_decoded_sha256": "f74d845f831454f85e0ce7ae1f40d233ce5ad4515a5b49073f3ceb580b6445ec",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0022073",
+      "validation_id": "0019902",
+      "RGB_decoded_sha256": "e6a7670107b22213917ac06e0f61beebffb15a2e997f3a1c3a66b011c9d000cb",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0022802",
+      "validation_id": "0027278",
+      "RGB_decoded_sha256": "16020d82196554c3411c39460d45889748a92d35f208aa9113d4fe69ea9e9fc2",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023046",
+      "validation_id": "0022435",
+      "RGB_decoded_sha256": "e7baad60279e00de4014de52b9e2b4578b85e00d444edd16fe760716622229ac",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023112",
+      "validation_id": "0022222",
+      "RGB_decoded_sha256": "64d7ba83b520e1fd3bda9e3791530b0111080df46b67ce7799797c889d75e1bf",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023499",
+      "validation_id": "0027412",
+      "RGB_decoded_sha256": "b1f7c81fedb37a54224eec781f810a6ac39ce55e1cc055a716cd6dc0e979e96a",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023554",
+      "validation_id": "0021114",
+      "RGB_decoded_sha256": "696843a25aef8fa6d4863c571befa1f1827facd21e0b1c44d8830ff6bc9da0c9",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023577",
+      "validation_id": "0021022",
+      "RGB_decoded_sha256": "8dcb993d8749629ac90cee3de99139f6f479843830d6f90bf8b7bb89579bffe2",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0023609",
+      "validation_id": "0026422",
+      "RGB_decoded_sha256": "178ebcddd412ef8b2988da89495d1a4dd44f033202de794f4954a5f51b4965a6",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0024020",
+      "validation_id": "0036030",
+      "RGB_decoded_sha256": "e0ef665c0649c70767888e1778aa7b69501c5e0cb09702527af1dbf812a7d089",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0024317",
+      "validation_id": "0021656",
+      "RGB_decoded_sha256": "bfd03af645eae2e77a7daf3e3be65f56885b071474d98871dca591ba8e157729",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0024498",
+      "validation_id": "0021657",
+      "RGB_decoded_sha256": "d3b7a83b83aa12bfc66a2fe827ea8a6d0963366fc012682bd5d594be116fbceb",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0025431",
+      "validation_id": "0023440",
+      "RGB_decoded_sha256": "5c9807b49434b3b435b55a667255705fe5708669c6b4b16840f268b88d1f0bd2",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0025737",
+      "validation_id": "0022347",
+      "RGB_decoded_sha256": "6c4033c03a458c6b463aa91702274be45efd61e68dc055dbbaa8e3b3ad680be0",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0025964",
+      "validation_id": "0021791",
+      "RGB_decoded_sha256": "61ca7bcda2c472fbca0beb6e866a964191b465a06a267370f5532c2d64740b66",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026235",
+      "validation_id": "0024243",
+      "RGB_decoded_sha256": "0652f71186ab89ca4a52931205738204e6a4ab6164e02ef4f5d09bda2bdbd3ad",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026641",
+      "validation_id": "0019952",
+      "RGB_decoded_sha256": "c0c9968adcf01e3e4b7e3d28b998b5161039a2730ab2d2a8dca887dfc380ed04",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026764",
+      "validation_id": "0024509",
+      "RGB_decoded_sha256": "8cb001d38b3d7ad5f5d2ee25adb88c56f58a735b02e54d58b141d9f679f4f77f",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026900",
+      "validation_id": "0022530",
+      "RGB_decoded_sha256": "38d55a15d0cb2449e9256d8a64b45a1ec2b45cd86577a45336c8a250503662b5",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026901",
+      "validation_id": "0036352",
+      "RGB_decoded_sha256": "18dd4d543988cabed4b068afb796abb68d5cc711e40feaa8e2a3049fb00eeec1",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0026974",
+      "validation_id": "0022453",
+      "RGB_decoded_sha256": "c7c67c3e11971ec7c98686215d578d3b24ff9981d35a68263a2591eed092d3ec",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0027011",
+      "validation_id": "0025978",
+      "RGB_decoded_sha256": "dee44319b5defbfb369b5f1c87d20555abfe7f11283573e08337649b538c520d",
+      "same_person_count": false,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0027088",
+      "validation_id": "0025671",
+      "RGB_decoded_sha256": "a54fe491b3efb2d8d8bd74a109cd3c9053c7ab979df2037a680b61eca7375978",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0027153",
+      "validation_id": "0024600",
+      "RGB_decoded_sha256": "f7c6b18495ec63c953b5308b6e89a6fb8a135be9722ee5b31f26fea86fc34b17",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0027255",
+      "validation_id": "0019731",
+      "RGB_decoded_sha256": "c220c06786c592eaddac4e8ee3b47904094cf23a65ab6bed346980ee3767e176",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0027712",
+      "validation_id": "0036603",
+      "RGB_decoded_sha256": "21c674f7d6af82d0334ad4a7540368fcff17db2bd17f3ed63f7407b495e0e419",
+      "same_person_count": false,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    },
+    {
+      "train_id": "0035410",
+      "validation_id": "0025450",
+      "RGB_decoded_sha256": "fe0e051046ae89d481cae43edc99dfbe256f5fec6448491ab53aeebf66ee42ae",
+      "same_person_count": true,
+      "PNG_byte_identity_by_component": {
+        "Category_ids": false,
+        "Human_ids": false,
+        "Instance_ids": false
+      },
+      "not_person_id_invariant_semantic_equality_test": true
+    }
+  ],
+  "native_maps_repaired": false,
+  "no_memorization_claim": true
+}

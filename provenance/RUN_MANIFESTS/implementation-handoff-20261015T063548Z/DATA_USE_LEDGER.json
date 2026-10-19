@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-15T07:12:42.306840+00:00",
+  "input_role_ledger": [
+    {
+      "population": "CCIHP_TRAIN",
+      "ids": [
+        "0000930"
+      ],
+      "use_this_revision": "NATIVE_CHECKPOINT_FEASIBILITY_ONLY",
+      "selection_policy": "fixed existing engineering manifest ID, not selected from runtime or accuracy",
+      "label_use": "oracle crop geometry for compatible workers; no class labels fed to parser"
+    },
+    {
+      "population": "CCIHP_TRAIN",
+      "ids": [
+        "0021834",
+        "0000930",
+        "0001368"
+      ],
+      "use_prior_revision": "YOLO/FASHN bounded integration and saved prediction association; native outputs retained",
+      "evidence": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/"
+    },
+    {
+      "population": "CCIHP_VALIDATION",
+      "use_this_revision": "metadata/sidecar evidence reuse only; no inference, tuning or model ranking",
+      "historical_use": "GT integrity/quality and support audit; not relabeled as development",
+      "full_historical_decision_exposure": "UNKNOWN_OUTSIDE_RECORDED_ARTIFACTS"
+    }
+  ],
+  "selection_dataset_approved": false,
+  "full_benchmark": false,
+  "CCTV": false
+}

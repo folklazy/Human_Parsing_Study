@@ -1,0 +1,8 @@
+{
+  "approval": "อนุมัติ",
+  "scope": "Launch candidate V10: two CPI CIHP systems plus frozen YOLO26x T3b FP32; reference5000 inference once, main4961/reference5000 separately; matching0.50/0.75; STRICT_COMPLETE; quality-only",
+  "approved": true,
+  "timestamp_utc": "2026-10-16T09:42:57.331064+00:00",
+  "candidate": "provenance/RUN_MANIFESTS/first-cohort-validation-launch-20261016T091821919536Z/LAUNCH_FREEZE_CANDIDATE.json",
+  "candidate_hashes_verified": true
+}

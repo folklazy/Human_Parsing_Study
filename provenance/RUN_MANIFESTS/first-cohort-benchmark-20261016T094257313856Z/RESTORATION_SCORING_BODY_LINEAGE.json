@@ -1,0 +1,9 @@
+{
+  "original_source": "src/application_v2/first_cohort_validation.py",
+  "original_source_sha256": "1069e4411a655a79865223f800d5d2cc926fa578f4a77b906f75cead28343e99",
+  "original_scoring_body_sha256": "8d4663183bc7de41d91b42ba4c46712dfff334492aac50a2c1ce67a19185021c",
+  "scoring_math_changed": false,
+  "only_additional_instrumentation": "Per-frame JSONL score journal and progress counters; no inference, matching, denominator or metric changes",
+  "driver_sha256": "9b9a45420eb00b9ed5cee7a053ae858ba8e449ec749188fce66f4e634db95f04",
+  "additional_pre_freeze_correction": "Import fingerprints used by copied scoring code; static global binding check passed before any restored scoring execution"
+}

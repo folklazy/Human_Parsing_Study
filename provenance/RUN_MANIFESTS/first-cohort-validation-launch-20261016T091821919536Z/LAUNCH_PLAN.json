@@ -1,0 +1,46 @@
+{
+  "status": "PREPARED_NOT_AUTHORIZED",
+  "parser_systems": [
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "detector_dependencies": [
+    "YOLO26X_FROZEN"
+  ],
+  "track": "T3B",
+  "unique_RGB_inputs": 5000,
+  "detector_frame_jobs": 5000,
+  "parser_frame_jobs": 10000,
+  "populations": {
+    "main": {
+      "images": 4961,
+      "G_loc": 17434,
+      "G_sem": 17390,
+      "population_sha256": "e6ad0d4d8549fa517c4774ede7c7f8c3988a848057fb72c2056470ada04e3ed9",
+      "per_image_contexts": 9922
+    },
+    "reference": {
+      "images": 5000,
+      "G_loc": 17548,
+      "G_sem": 17504,
+      "population_sha256": "0191861a5598fd1ffe88f5b72a47583d15f34c7f7c6fe3024df4875f4133dd0d",
+      "per_image_contexts": 10000
+    }
+  },
+  "shared_score_reuse": "ONLY_IDENTICAL_IMAGE_CONTEXT_AND_MATCHING_VIEW",
+  "primary_matching": 0.5,
+  "secondary_matching": 0.75,
+  "native_score_thresholds": {
+    "CPI_R50_CIHP": 0.01,
+    "CPI_ConvNeXtB_CIHP": 0.05
+  },
+  "failure_policy": "STRICT_COMPLETE",
+  "precision": "FP32",
+  "timing_or_VRAM_ranking": false,
+  "model_loading": false,
+  "validation_inference": false,
+  "full_benchmark": false,
+  "launch_spec_sha256": "b24f3e9a110278fdd69be69cd9d80c4ae0b1290b6d402fdf6ac59bc1ca6c080e",
+  "config_sha256": "7824ce3aee44017fec0553c37c367a14bcf4afe30c8474d7d20dd7dc6c719b77",
+  "heavyweight_frameworks_imported": []
+}

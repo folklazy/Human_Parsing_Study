@@ -1,0 +1,184 @@
+{
+  "status": "READY_FOR_POLICY_REVIEW_NOT_BENCHMARK_AUTHORIZATION",
+  "created_utc": "2026-10-16T03:27:41.448698+00:00",
+  "config": "configs/application_v2_first_cohort_v6.yaml",
+  "decision_record": "provenance/APPLICATION_V2_DECISIONS_V5.json",
+  "systems": [
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "track": "T3B",
+  "proposals": {
+    "mapping": {
+      "mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V2.json",
+      "mapping_file_sha256": "0848a6f8ab6439a92a57f23acd8e09b0943d8c8918cdd2c01336b2b55365fa50",
+      "target_catalog": {
+        "0": "Background",
+        "1": "Exposed_face",
+        "2": "Exposed_torso",
+        "3": "Exposed_arms",
+        "4": "Exposed_legs",
+        "5": "Garments_coarse",
+        "6": "Footwear"
+      },
+      "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+      "GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+      "per_checkpoint_native_projections": {
+        "CPI_R50_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358",
+        "CPI_ConvNeXtB_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358"
+      },
+      "evidence_table": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_V1.csv",
+      "evidence_table_sha256": "b0cc2f8324d0b37a3b805e96d932b9bc7ec5c9a524766afe8dd2bebd25f02eb1",
+      "groups": {
+        "body": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "clothing": [
+          5
+        ],
+        "footwear": [
+          6
+        ]
+      },
+      "excluded_GT_ids": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        20,
+        21,
+        22
+      ],
+      "policy": "FIXED_COMMON_TARGET_WITH_CHECKPOINT_SPECIFIC_NATIVE_PROJECTIONS",
+      "fine_clothing_or_accessory_quality_claim": false,
+      "native_CIHP_equivalence_claim": false,
+      "definitions": {
+        "1": "Source-declared Face region; not a claim of an independent skin detector",
+        "2": "Torso-skin",
+        "3": "Union of left/right naked arm regions; hands only if included by source labels",
+        "4": "Union of left/right naked leg regions",
+        "5": "Selected garments: GT5,7,8,9,11,12; CIHP5,6,7,8,9,11,12. Socks/scarf included; headwear/gloves excluded",
+        "6": "Union of left/right shoe labels; no independent bare-foot target"
+      }
+    },
+    "domain": {
+      "policy_id": "CCIHP_RELEASED_ANNOTATION_RELATIVE_CORE_R1",
+      "reference": "RELEASED_CCIHP_CATEGORY_AND_HUMAN_IDS_NOT_EXHAUSTIVE_PHYSICAL_TRUTH",
+      "category0_human0": "KNOWN_NEGATIVE_RELATIVE_TO_RELEASED_ANNOTATION",
+      "category0_human_positive": "VOID_UNKNOWN",
+      "unknown22": "VOID_SHARED_RAW_PRESERVED",
+      "known_outside_target": "VOID_SHARED",
+      "category_positive_human0": "VOID_OWNER_UNKNOWN",
+      "other_known_person_pixels": "NEGATIVE_FOR_TARGET_PERSON_WHERE_SHARED_VALID",
+      "association_uses_GT": false,
+      "categorical_resampling": "NONE_GT_ORIGINAL_GRID",
+      "FP_wording": "UNMATCHED_PREDICTION_RELATIVE_TO_RELEASED_ANNOTATION_UNDER_THIS_POLICY",
+      "person_mask": "NATIVE_HUMAN_ID_FOREGROUND_ALL_SOURCE_SEMANTICS",
+      "G_loc": "EVERY_POSITIVE_NATIVE_HUMAN_ID_WITH_NONEMPTY_RELEASED_MASK",
+      "G_sem": "G_LOC_SUBSET_WITH_AT_LEAST_ONE_VALID_TARGET_1_TO_6_PIXEL",
+      "person_semantic_truth": "TARGET_LABEL_INSIDE_THIS_HUMAN_ID_ELSE_BG_ON_SHARED_VALID_DOMAIN",
+      "per_image_GT_domain_binding": "SOURCE_MAP_HASHES_PLUS_GT_PROJECTION_DOMAIN_POLICY_AND_G_LOC_G_SEM",
+      "recipe_hash_is_decoded_mask_hash": false,
+      "policy_sha256": "f555e66fc8e5fcb7dd9624356e6fab1cd8f361f00cc6fe8489baa1936066d7cf"
+    },
+    "population": {
+      "main": "overlap_controlled_source_target",
+      "reference": "original_source_target",
+      "main_images": 4961,
+      "main_G_loc": 17434,
+      "main_G_sem": 17390,
+      "reference_images": 5000,
+      "reference_G_loc": 17548,
+      "reference_G_sem": 17504,
+      "main_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+      "main_manifest_sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+      "reference_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+      "reference_manifest_sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+      "main_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+      "main_person_sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+      "reference_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+      "reference_person_sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+      "exclusions": "39_VALIDATION_IDS_WITH_EXACT_DECODED_TRAIN_RGB_REUSE_ONLY",
+      "within_validation_duplicates": "RETAIN_SOURCE_MEMBERSHIP_2_IDS_1_GROUP_DISCLOSED",
+      "near_duplicates": "114_PAIRS_RISK_SCREEN_ONLY_NO_NEW_EXCLUSIONS",
+      "exposure_claim": "NOT_TRAINING_EXPOSURE_FREE_OR_ARCHITECTURE_CONTROLLED"
+    },
+    "matching": {
+      "association": {
+        "threshold": 0.5,
+        "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+        "left_bbox_source": "FROZEN_YOLO26X_BOX",
+        "right_bbox_source": "NATIVE_PARSER_BOX",
+        "uses_GT": false,
+        "accepted_for_benchmark": false
+      },
+      "final_prediction_to_GT": {
+        "threshold": 0.5,
+        "secondary_threshold": 0.75,
+        "geometry": "BBOX_XYXY_HALF_OPEN",
+        "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+        "tie_policy": "SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY_1_15_3",
+        "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+        "GT_bbox_source": "ORIGINAL_HUMAN_ID_HALF_OPEN_BBOX",
+        "conditioning_bbox_source": "FROZEN_YOLO26X_BOX",
+        "class_guided_rematching": false
+      },
+      "native_unassociated": "NOT_FINAL_T3B_OUTPUT_REPORT_NATIVE_ASSOCIATION_DIAGNOSTIC",
+      "unmatched_YOLO": "NO_FINAL_PERSON_RETAIN_OPPORTUNITY_DIAGNOSTIC",
+      "final_unmatched_GT": "LOC_FN_AND_ZERO_QUALITY_IF_G_SEM",
+      "final_unmatched_prediction": "ANNOTATION_RELATIVE_FP",
+      "semantic_undefined_GT": "RETAIN_G_LOC_NEVER_FORCE_SEMANTIC_ZERO_UNION_SCORE",
+      "zero_YOLO": "RUN_NATIVE_AS_CONFIGURED_FINAL_EMPTY_EXECUTION_COMPLETE_IF_NO_FAILURE",
+      "confidence_policy": "KEEP_OFFICIAL_CHECKPOINT_SPECIFIC_NATIVE_DEFAULTS_NO_QUALITY_TUNING",
+      "native_score_thresholds": {
+        "CPI_R50_CIHP": 0.01,
+        "CPI_ConvNeXtB_CIHP": 0.05
+      },
+      "visualization_threshold_is_metric_filter": false
+    },
+    "runtime": {
+      "claim_scope": "QUALITY_ONLY_FIRST_COMPARISON",
+      "primary_precision": "FP32",
+      "compare_latency": false,
+      "compare_FPS": false,
+      "compare_VRAM": false,
+      "cost_Pareto": false,
+      "smoke_profiles": "FEASIBILITY_ONLY_NOT_REPEATED_COST_MEASUREMENTS",
+      "cost_extension": "SEPARATE_ACCEPTED_WORKLOAD_RESIDENCY_WARMUPS_SYNCHRONIZATION_CLEAN_REPEATS_REQUIRED"
+    }
+  },
+  "source_manifest": {
+    "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/README.md": "4b73782345d94752e3a4a015ca0f8c9aa6bffe38d9568af7018071160f00bc5f",
+    "../third_party/human_parsing/M2FP/m2fp/data/datasets/register_cihp_parsing.py": "6e1fd778a3cda04994f0742c9a248c84c62cbd9c5a9e7e6a42a8cf01835c8496",
+    "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/FULL_STRUCTURAL_AUDIT.json": "57d96c33b5007414390a31915b9f4b7868beedc8ecf158d3939a939a76cb0e0a",
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/POPULATION_BINDINGS_DRAFT.json": "3c827cbe8cf75337bcb8c9955fc7ef4c197a99aa6696f25dfdf39c097f1c5e6c",
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/CHECKPOINT_SUPPORT_BINDINGS_DRAFT.json": "3908c750fee5088e28ec392366338d424b90cfb0216ff3e60e6f6369ac30f496",
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/ROUTE_EVIDENCE.json": "04754219768763854817c3324c50fdea1564eac59dc31a17df88841db15cd2f5",
+    "../third_party/human_parsing/CPI-Parser/mmdet/datasets/pipelines/loading.py": "c5931d3327bc58736a9513310f393c251ae07c6bb6c060cb83c717cbe3dace4b",
+    "../third_party/human_parsing/CPI-Parser/mmdet/datasets/cihp.py": "5cd76a1b9d0567a51368bf771a529eb31f9e8a16ddc2e4c6ab91733fda5970ee",
+    "../third_party/human_parsing/CPI-Parser/utils/eval.py": "3353749b11cb03468439bfa9725deec0e884c3fc1c256e03d8bf58df1e72e4b3"
+  },
+  "no_new_population_counts": true,
+  "no_new_model_inference": true,
+  "source_label22_meaning": "UNRESOLVED_SHARED_VOID",
+  "published_training_channel_order": "INDIRECT_EVIDENCE_EXPLICIT_LIMITATION",
+  "unresolved_points": [
+    "User approval of the five concrete policy proposals",
+    "Before scoring: materialize accepted checkpoint/image contexts and validate actual GT reconstruction against bound sources",
+    "Full benchmark execution requires separate future approval"
+  ],
+  "benchmark_authorized": false,
+  "scientific_freeze": false,
+  "reused_validation_warning_counts": {
+    "category_without_human": 0,
+    "human_without_category": 638,
+    "instance_without_human": 0,
+    "instance_without_category": 0,
+    "human_category_without_instance": 310,
+    "unknown_category_pixels": 310
+  }
+}

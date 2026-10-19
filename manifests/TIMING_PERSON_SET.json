@@ -1,0 +1,1412 @@
+{
+  "status": "DRAFT_FIXED_BEFORE_TIMING_NO_EXECUTION",
+  "split": "train",
+  "seed": 20261008,
+  "samples": [
+    {
+      "image_id": "23845",
+      "person_id": "23845:parsing:2",
+      "bbox_draft": [
+        420,
+        39,
+        652,
+        914
+      ],
+      "original_wh": [
+        790,
+        926
+      ]
+    },
+    {
+      "image_id": "24815",
+      "person_id": "24815:parsing:1",
+      "bbox_draft": [
+        102,
+        35,
+        660,
+        1200
+      ],
+      "original_wh": [
+        800,
+        1200
+      ]
+    },
+    {
+      "image_id": "9616",
+      "person_id": "9616:parsing:2",
+      "bbox_draft": [
+        133,
+        4,
+        320,
+        320
+      ],
+      "original_wh": [
+        320,
+        320
+      ]
+    },
+    {
+      "image_id": "15655",
+      "person_id": "15655:parsing:1",
+      "bbox_draft": [
+        0,
+        69,
+        401,
+        720
+      ],
+      "original_wh": [
+        480,
+        720
+      ]
+    },
+    {
+      "image_id": "20873",
+      "person_id": "20873:parsing:1",
+      "bbox_draft": [
+        71,
+        72,
+        155,
+        434
+      ],
+      "original_wh": [
+        300,
+        450
+      ]
+    },
+    {
+      "image_id": "12965",
+      "person_id": "12965:parsing:2",
+      "bbox_draft": [
+        565,
+        90,
+        1023,
+        650
+      ],
+      "original_wh": [
+        1024,
+        650
+      ]
+    },
+    {
+      "image_id": "2662",
+      "person_id": "2662:parsing:3",
+      "bbox_draft": [
+        148,
+        133,
+        331,
+        508
+      ],
+      "original_wh": [
+        339,
+        508
+      ]
+    },
+    {
+      "image_id": "19246",
+      "person_id": "19246:parsing:5",
+      "bbox_draft": [
+        281,
+        112,
+        344,
+        316
+      ],
+      "original_wh": [
+        480,
+        360
+      ]
+    },
+    {
+      "image_id": "4233",
+      "person_id": "4233:parsing:2",
+      "bbox_draft": [
+        69,
+        66,
+        166,
+        327
+      ],
+      "original_wh": [
+        531,
+        351
+      ]
+    },
+    {
+      "image_id": "21537",
+      "person_id": "21537:parsing:2",
+      "bbox_draft": [
+        516,
+        550,
+        929,
+        1386
+      ],
+      "original_wh": [
+        960,
+        1440
+      ]
+    },
+    {
+      "image_id": "13118",
+      "person_id": "13118:parsing:7",
+      "bbox_draft": [
+        579,
+        127,
+        657,
+        451
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "277",
+      "person_id": "277:parsing:3",
+      "bbox_draft": [
+        397,
+        236,
+        557,
+        419
+      ],
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "16284",
+      "person_id": "16284:parsing:5",
+      "bbox_draft": [
+        515,
+        196,
+        697,
+        683
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "24154",
+      "person_id": "24154:parsing:2",
+      "bbox_draft": [
+        265,
+        181,
+        402,
+        681
+      ],
+      "original_wh": [
+        1280,
+        800
+      ]
+    },
+    {
+      "image_id": "11874",
+      "person_id": "11874:parsing:7",
+      "bbox_draft": [
+        548,
+        88,
+        645,
+        348
+      ],
+      "original_wh": [
+        800,
+        450
+      ]
+    },
+    {
+      "image_id": "10126",
+      "person_id": "10126:parsing:2",
+      "bbox_draft": [
+        35,
+        24,
+        211,
+        546
+      ],
+      "original_wh": [
+        400,
+        588
+      ]
+    },
+    {
+      "image_id": "16855",
+      "person_id": "16855:parsing:2",
+      "bbox_draft": [
+        360,
+        317,
+        519,
+        657
+      ],
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "24250",
+      "person_id": "24250:parsing:1",
+      "bbox_draft": [
+        435,
+        87,
+        560,
+        669
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "18960",
+      "person_id": "18960:parsing:2",
+      "bbox_draft": [
+        75,
+        62,
+        187,
+        418
+      ],
+      "original_wh": [
+        300,
+        450
+      ]
+    },
+    {
+      "image_id": "3500",
+      "person_id": "3500:parsing:2",
+      "bbox_draft": [
+        331,
+        69,
+        429,
+        361
+      ],
+      "original_wh": [
+        474,
+        361
+      ]
+    },
+    {
+      "image_id": "11198",
+      "person_id": "11198:parsing:2",
+      "bbox_draft": [
+        124,
+        73,
+        223,
+        400
+      ],
+      "original_wh": [
+        500,
+        400
+      ]
+    },
+    {
+      "image_id": "19141",
+      "person_id": "19141:parsing:1",
+      "bbox_draft": [
+        35,
+        28,
+        264,
+        548
+      ],
+      "original_wh": [
+        480,
+        720
+      ]
+    },
+    {
+      "image_id": "16639",
+      "person_id": "16639:parsing:2",
+      "bbox_draft": [
+        417,
+        69,
+        683,
+        1024
+      ],
+      "original_wh": [
+        683,
+        1024
+      ]
+    },
+    {
+      "image_id": "9737",
+      "person_id": "9737:parsing:2",
+      "bbox_draft": [
+        125,
+        25,
+        267,
+        415
+      ],
+      "original_wh": [
+        284,
+        415
+      ]
+    },
+    {
+      "image_id": "20122",
+      "person_id": "20122:parsing:3",
+      "bbox_draft": [
+        181,
+        52,
+        282,
+        280
+      ],
+      "original_wh": [
+        420,
+        280
+      ]
+    },
+    {
+      "image_id": "11939",
+      "person_id": "11939:parsing:3",
+      "bbox_draft": [
+        400,
+        104,
+        567,
+        523
+      ],
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "19941",
+      "person_id": "19941:parsing:2",
+      "bbox_draft": [
+        193,
+        18,
+        375,
+        367
+      ],
+      "original_wh": [
+        550,
+        367
+      ]
+    },
+    {
+      "image_id": "6788",
+      "person_id": "6788:parsing:2",
+      "bbox_draft": [
+        16,
+        131,
+        278,
+        501
+      ],
+      "original_wh": [
+        334,
+        501
+      ]
+    },
+    {
+      "image_id": "15586",
+      "person_id": "15586:parsing:6",
+      "bbox_draft": [
+        837,
+        18,
+        1024,
+        680
+      ],
+      "original_wh": [
+        1024,
+        680
+      ]
+    },
+    {
+      "image_id": "9667",
+      "person_id": "9667:parsing:3",
+      "bbox_draft": [
+        450,
+        105,
+        700,
+        483
+      ],
+      "original_wh": [
+        700,
+        483
+      ]
+    },
+    {
+      "image_id": "23102",
+      "person_id": "23102:parsing:3",
+      "bbox_draft": [
+        403,
+        102,
+        607,
+        747
+      ],
+      "original_wh": [
+        1024,
+        795
+      ]
+    },
+    {
+      "image_id": "24934",
+      "person_id": "24934:parsing:4",
+      "bbox_draft": [
+        386,
+        149,
+        525,
+        492
+      ],
+      "original_wh": [
+        1024,
+        682
+      ]
+    },
+    {
+      "image_id": "11016",
+      "person_id": "11016:parsing:1",
+      "bbox_draft": [
+        81,
+        22,
+        293,
+        593
+      ],
+      "original_wh": [
+        391,
+        594
+      ]
+    },
+    {
+      "image_id": "9605",
+      "person_id": "9605:parsing:2",
+      "bbox_draft": [
+        173,
+        69,
+        406,
+        503
+      ],
+      "original_wh": [
+        429,
+        594
+      ]
+    },
+    {
+      "image_id": "127",
+      "person_id": "127:parsing:1",
+      "bbox_draft": [
+        122,
+        98,
+        221,
+        419
+      ],
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "236",
+      "person_id": "236:parsing:2",
+      "bbox_draft": [
+        323,
+        115,
+        446,
+        420
+      ],
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "10132",
+      "person_id": "10132:parsing:2",
+      "bbox_draft": [
+        140,
+        69,
+        312,
+        590
+      ],
+      "original_wh": [
+        391,
+        594
+      ]
+    },
+    {
+      "image_id": "16061",
+      "person_id": "16061:parsing:1",
+      "bbox_draft": [
+        162,
+        182,
+        314,
+        371
+      ],
+      "original_wh": [
+        1024,
+        685
+      ]
+    },
+    {
+      "image_id": "9091",
+      "person_id": "9091:parsing:1",
+      "bbox_draft": [
+        0,
+        4,
+        226,
+        429
+      ],
+      "original_wh": [
+        226,
+        431
+      ]
+    },
+    {
+      "image_id": "7919",
+      "person_id": "7919:parsing:2",
+      "bbox_draft": [
+        287,
+        117,
+        340,
+        310
+      ],
+      "original_wh": [
+        507,
+        338
+      ]
+    },
+    {
+      "image_id": "23431",
+      "person_id": "23431:parsing:1",
+      "bbox_draft": [
+        123,
+        0,
+        468,
+        950
+      ],
+      "original_wh": [
+        790,
+        986
+      ]
+    },
+    {
+      "image_id": "25392",
+      "person_id": "25392:parsing:2",
+      "bbox_draft": [
+        117,
+        37,
+        323,
+        428
+      ],
+      "original_wh": [
+        325,
+        450
+      ]
+    },
+    {
+      "image_id": "8730",
+      "person_id": "8730:parsing:1",
+      "bbox_draft": [
+        40,
+        94,
+        170,
+        336
+      ],
+      "original_wh": [
+        500,
+        364
+      ]
+    },
+    {
+      "image_id": "9130",
+      "person_id": "9130:parsing:1",
+      "bbox_draft": [
+        2,
+        21,
+        114,
+        231
+      ],
+      "original_wh": [
+        300,
+        231
+      ]
+    },
+    {
+      "image_id": "21582",
+      "person_id": "21582:parsing:2",
+      "bbox_draft": [
+        230,
+        10,
+        393,
+        590
+      ],
+      "original_wh": [
+        420,
+        590
+      ]
+    },
+    {
+      "image_id": "995",
+      "person_id": "995:parsing:6",
+      "bbox_draft": [
+        899,
+        300,
+        1153,
+        957
+      ],
+      "original_wh": [
+        1280,
+        960
+      ]
+    },
+    {
+      "image_id": "13089",
+      "person_id": "13089:parsing:1",
+      "bbox_draft": [
+        0,
+        154,
+        494,
+        815
+      ],
+      "original_wh": [
+        683,
+        1024
+      ]
+    },
+    {
+      "image_id": "21832",
+      "person_id": "21832:parsing:1",
+      "bbox_draft": [
+        149,
+        371,
+        284,
+        775
+      ],
+      "original_wh": [
+        750,
+        870
+      ]
+    },
+    {
+      "image_id": "21227",
+      "person_id": "21227:parsing:1",
+      "bbox_draft": [
+        111,
+        166,
+        312,
+        800
+      ],
+      "original_wh": [
+        600,
+        800
+      ]
+    },
+    {
+      "image_id": "1563",
+      "person_id": "1563:parsing:1",
+      "bbox_draft": [
+        43,
+        99,
+        194,
+        414
+      ],
+      "original_wh": [
+        414,
+        414
+      ]
+    },
+    {
+      "image_id": "6579",
+      "person_id": "6579:parsing:1",
+      "bbox_draft": [
+        74,
+        0,
+        258,
+        253
+      ],
+      "original_wh": [
+        474,
+        264
+      ]
+    },
+    {
+      "image_id": "18361",
+      "person_id": "18361:parsing:5",
+      "bbox_draft": [
+        466,
+        34,
+        600,
+        360
+      ],
+      "original_wh": [
+        600,
+        360
+      ]
+    },
+    {
+      "image_id": "19103",
+      "person_id": "19103:parsing:2",
+      "bbox_draft": [
+        88,
+        63,
+        696,
+        720
+      ],
+      "original_wh": [
+        844,
+        720
+      ]
+    },
+    {
+      "image_id": "20478",
+      "person_id": "20478:parsing:2",
+      "bbox_draft": [
+        509,
+        16,
+        1022,
+        682
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "19058",
+      "person_id": "19058:parsing:9",
+      "bbox_draft": [
+        827,
+        110,
+        960,
+        559
+      ],
+      "original_wh": [
+        960,
+        600
+      ]
+    },
+    {
+      "image_id": "2364",
+      "person_id": "2364:parsing:2",
+      "bbox_draft": [
+        219,
+        100,
+        361,
+        477
+      ],
+      "original_wh": [
+        361,
+        477
+      ]
+    },
+    {
+      "image_id": "13375",
+      "person_id": "13375:parsing:2",
+      "bbox_draft": [
+        376,
+        604,
+        499,
+        915
+      ],
+      "original_wh": [
+        683,
+        1024
+      ]
+    },
+    {
+      "image_id": "24423",
+      "person_id": "24423:parsing:3",
+      "bbox_draft": [
+        285,
+        37,
+        421,
+        584
+      ],
+      "original_wh": [
+        421,
+        600
+      ]
+    },
+    {
+      "image_id": "13229",
+      "person_id": "13229:parsing:5",
+      "bbox_draft": [
+        537,
+        163,
+        659,
+        525
+      ],
+      "original_wh": [
+        1024,
+        615
+      ]
+    },
+    {
+      "image_id": "21624",
+      "person_id": "21624:parsing:7",
+      "bbox_draft": [
+        1206,
+        298,
+        1383,
+        1132
+      ],
+      "original_wh": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "image_id": "18088",
+      "person_id": "18088:parsing:12",
+      "bbox_draft": [
+        870,
+        115,
+        1011,
+        568
+      ],
+      "original_wh": [
+        1024,
+        681
+      ]
+    },
+    {
+      "image_id": "19922",
+      "person_id": "19922:parsing:2",
+      "bbox_draft": [
+        232,
+        137,
+        357,
+        584
+      ],
+      "original_wh": [
+        600,
+        584
+      ]
+    },
+    {
+      "image_id": "15910",
+      "person_id": "15910:parsing:2",
+      "bbox_draft": [
+        198,
+        224,
+        367,
+        710
+      ],
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "18935",
+      "person_id": "18935:parsing:3",
+      "bbox_draft": [
+        409,
+        62,
+        545,
+        306
+      ],
+      "original_wh": [
+        568,
+        320
+      ]
+    },
+    {
+      "image_id": "16681",
+      "person_id": "16681:parsing:1",
+      "bbox_draft": [
+        0,
+        170,
+        211,
+        420
+      ],
+      "original_wh": [
+        852,
+        420
+      ]
+    },
+    {
+      "image_id": "24490",
+      "person_id": "24490:parsing:1",
+      "bbox_draft": [
+        98,
+        40,
+        308,
+        693
+      ],
+      "original_wh": [
+        790,
+        721
+      ]
+    },
+    {
+      "image_id": "25220",
+      "person_id": "25220:parsing:2",
+      "bbox_draft": [
+        199,
+        31,
+        416,
+        568
+      ],
+      "original_wh": [
+        640,
+        568
+      ]
+    },
+    {
+      "image_id": "19162",
+      "person_id": "19162:parsing:3",
+      "bbox_draft": [
+        413,
+        109,
+        735,
+        510
+      ],
+      "original_wh": [
+        809,
+        510
+      ]
+    },
+    {
+      "image_id": "10930",
+      "person_id": "10930:parsing:4",
+      "bbox_draft": [
+        435,
+        5,
+        528,
+        410
+      ],
+      "original_wh": [
+        594,
+        424
+      ]
+    },
+    {
+      "image_id": "21092",
+      "person_id": "21092:parsing:1",
+      "bbox_draft": [
+        139,
+        70,
+        317,
+        799
+      ],
+      "original_wh": [
+        1280,
+        853
+      ]
+    },
+    {
+      "image_id": "14476",
+      "person_id": "14476:parsing:3",
+      "bbox_draft": [
+        557,
+        187,
+        1024,
+        768
+      ],
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "17060",
+      "person_id": "17060:parsing:4",
+      "bbox_draft": [
+        720,
+        176,
+        962,
+        653
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "23652",
+      "person_id": "23652:parsing:1",
+      "bbox_draft": [
+        759,
+        201,
+        1137,
+        1256
+      ],
+      "original_wh": [
+        2000,
+        1330
+      ]
+    },
+    {
+      "image_id": "19670",
+      "person_id": "19670:parsing:1",
+      "bbox_draft": [
+        165,
+        153,
+        299,
+        888
+      ],
+      "original_wh": [
+        600,
+        898
+      ]
+    },
+    {
+      "image_id": "20981",
+      "person_id": "20981:parsing:1",
+      "bbox_draft": [
+        202,
+        110,
+        519,
+        538
+      ],
+      "original_wh": [
+        2000,
+        538
+      ]
+    },
+    {
+      "image_id": "2730",
+      "person_id": "2730:parsing:2",
+      "bbox_draft": [
+        109,
+        24,
+        305,
+        413
+      ],
+      "original_wh": [
+        415,
+        413
+      ]
+    },
+    {
+      "image_id": "15636",
+      "person_id": "15636:parsing:5",
+      "bbox_draft": [
+        720,
+        93,
+        984,
+        680
+      ],
+      "original_wh": [
+        1024,
+        680
+      ]
+    },
+    {
+      "image_id": "25102",
+      "person_id": "25102:parsing:1",
+      "bbox_draft": [
+        16,
+        52,
+        211,
+        273
+      ],
+      "original_wh": [
+        450,
+        300
+      ]
+    },
+    {
+      "image_id": "15398",
+      "person_id": "15398:parsing:5",
+      "bbox_draft": [
+        434,
+        77,
+        586,
+        450
+      ],
+      "original_wh": [
+        800,
+        450
+      ]
+    },
+    {
+      "image_id": "21333",
+      "person_id": "21333:parsing:3",
+      "bbox_draft": [
+        217,
+        131,
+        319,
+        417
+      ],
+      "original_wh": [
+        417,
+        417
+      ]
+    },
+    {
+      "image_id": "147",
+      "person_id": "147:parsing:6",
+      "bbox_draft": [
+        408,
+        123,
+        505,
+        393
+      ],
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "22861",
+      "person_id": "22861:parsing:7",
+      "bbox_draft": [
+        1028,
+        380,
+        1258,
+        1058
+      ],
+      "original_wh": [
+        2000,
+        1333
+      ]
+    },
+    {
+      "image_id": "9354",
+      "person_id": "9354:parsing:1",
+      "bbox_draft": [
+        35,
+        70,
+        282,
+        500
+      ],
+      "original_wh": [
+        500,
+        500
+      ]
+    },
+    {
+      "image_id": "4000",
+      "person_id": "4000:parsing:2",
+      "bbox_draft": [
+        194,
+        112,
+        372,
+        414
+      ],
+      "original_wh": [
+        414,
+        414
+      ]
+    },
+    {
+      "image_id": "14620",
+      "person_id": "14620:parsing:1",
+      "bbox_draft": [
+        69,
+        108,
+        479,
+        683
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "6155",
+      "person_id": "6155:parsing:1",
+      "bbox_draft": [
+        29,
+        180,
+        157,
+        507
+      ],
+      "original_wh": [
+        338,
+        507
+      ]
+    },
+    {
+      "image_id": "3234",
+      "person_id": "3234:parsing:2",
+      "bbox_draft": [
+        251,
+        56,
+        508,
+        339
+      ],
+      "original_wh": [
+        508,
+        339
+      ]
+    },
+    {
+      "image_id": "20773",
+      "person_id": "20773:parsing:2",
+      "bbox_draft": [
+        134,
+        82,
+        263,
+        277
+      ],
+      "original_wh": [
+        500,
+        334
+      ]
+    },
+    {
+      "image_id": "14724",
+      "person_id": "14724:parsing:4",
+      "bbox_draft": [
+        528,
+        171,
+        1024,
+        683
+      ],
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "5043",
+      "person_id": "5043:parsing:1",
+      "bbox_draft": [
+        211,
+        63,
+        297,
+        339
+      ],
+      "original_wh": [
+        508,
+        339
+      ]
+    },
+    {
+      "image_id": "10654",
+      "person_id": "10654:parsing:2",
+      "bbox_draft": [
+        157,
+        80,
+        396,
+        388
+      ],
+      "original_wh": [
+        476,
+        388
+      ]
+    },
+    {
+      "image_id": "15377",
+      "person_id": "15377:parsing:3",
+      "bbox_draft": [
+        603,
+        21,
+        1024,
+        500
+      ],
+      "original_wh": [
+        1024,
+        721
+      ]
+    },
+    {
+      "image_id": "20051",
+      "person_id": "20051:parsing:4",
+      "bbox_draft": [
+        592,
+        14,
+        729,
+        446
+      ],
+      "original_wh": [
+        750,
+        500
+      ]
+    },
+    {
+      "image_id": "17840",
+      "person_id": "17840:parsing:1",
+      "bbox_draft": [
+        0,
+        71,
+        296,
+        499
+      ],
+      "original_wh": [
+        334,
+        500
+      ]
+    },
+    {
+      "image_id": "11271",
+      "person_id": "11271:parsing:5",
+      "bbox_draft": [
+        573,
+        185,
+        807,
+        749
+      ],
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "15448",
+      "person_id": "15448:parsing:2",
+      "bbox_draft": [
+        326,
+        172,
+        637,
+        1024
+      ],
+      "original_wh": [
+        683,
+        1024
+      ]
+    },
+    {
+      "image_id": "15328",
+      "person_id": "15328:parsing:2",
+      "bbox_draft": [
+        391,
+        110,
+        535,
+        643
+      ],
+      "original_wh": [
+        1024,
+        679
+      ]
+    },
+    {
+      "image_id": "241",
+      "person_id": "241:parsing:2",
+      "bbox_draft": [
+        448,
+        112,
+        506,
+        318
+      ],
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "2381",
+      "person_id": "2381:parsing:2",
+      "bbox_draft": [
+        133,
+        101,
+        281,
+        460
+      ],
+      "original_wh": [
+        395,
+        501
+      ]
+    },
+    {
+      "image_id": "10959",
+      "person_id": "10959:parsing:1",
+      "bbox_draft": [
+        133,
+        47,
+        360,
+        847
+      ],
+      "original_wh": [
+        613,
+        848
+      ]
+    }
+  ],
+  "precision": "FP32",
+  "benchmark_authorized": false,
+  "selection": "Content-independent of observed runtimes; SHA256-ranked GT source IDs",
+  "crop_policy_frozen": false,
+  "dataset_manifest_sha256": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22"
+}

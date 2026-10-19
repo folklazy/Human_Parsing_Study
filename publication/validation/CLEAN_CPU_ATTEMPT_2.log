@@ -1,0 +1,8 @@
+PORTABLE CPU SCOPE: test_application_v2, test_application_v2_handoff, test_application_v2_contexts, test_application_v2_comparison, test_application_v2_acquisition, test_application_v2_first_cohort_policy, test_application_v2_cpi_evidence_acceptance, test_application_v2_immutable_config, test_application_v2_yolo_bootstrap
+EXTERNAL-ASSET TESTS NOT RUN: fresh_integration, validation_launch, original dataset/evaluator suites
+EXTERNAL-ASSET PLAN TESTS NOT RUN (not counted as passing): test_application_v2_first_cohort_policy.FirstCohortPolicyTests.test_plan_uses_two_CPI_systems_and_frozen_dependency_only, test_application_v2_first_cohort_policy.FirstCohortPolicyTests.test_selector_does_not_fall_back_to_legacy_roster
+.....................................................................................................................................
+----------------------------------------------------------------------
+Ran 133 tests in 3.860s
+
+OK

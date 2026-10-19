@@ -1,0 +1,24 @@
+{
+  "status": "DRAFT_NATIVE_MHP_GT_METADATA",
+  "source_index_sha256": "81358626da696ae2ec552f195fcc318df0d5c22011fe120d97cc038095cf2f54",
+  "benchmark_authorized": false,
+  "populations": {
+    "VALIDATION_READABLE": {
+      "images": 4999,
+      "G_native": 13257,
+      "G_loc_structural_draft": 13257,
+      "G_sem_native_known_draft": 13257,
+      "sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/mhp_native_sidecars/VALIDATION_READABLE.jsonl",
+      "sidecar_sha256": "ed8caf14a2ac33972f133d0f76f551423b38326c231cef0f6c789cf7a9e57689"
+    },
+    "VALIDATION_OVERLAP_CONTROLLED_READABLE": {
+      "images": 4347,
+      "G_native": 11408,
+      "G_loc_structural_draft": 11408,
+      "G_sem_native_known_draft": 11408,
+      "sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/mhp_native_sidecars/VALIDATION_OVERLAP_CONTROLLED_READABLE.jsonl",
+      "sidecar_sha256": "2980088d8287027a59760e275960d28bb3b560f47a2d28cbb8014490218084f2"
+    }
+  },
+  "scope": "Existing verified index only; no original MHP images or masks redecoded; no flattening or common-taxonomy score."
+}

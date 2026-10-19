@@ -1,0 +1,45 @@
+status: DRAFT_NOT_EXECUTABLE_GT_SEMANTICS_PENDING
+mapping_frozen: false
+native_label_10: torso-skin in CIHP; jumpsuit in LIP; never reuse same ID mapping
+  blindly
+potential_cohorts:
+- CIHP-native full-frame instance models
+- cross-dataset crop semantic models on a shared body/clothing projection
+- MHP-v2 fine-grained secondary native models
+proposed_shared_concepts:
+  face:
+  - 13
+  hair:
+  - 2
+  coarse_arms:
+  - 14
+  - 15
+  coarse_legs:
+  - 16
+  - 17
+  upper_garment_including_coat:
+  - 5
+  - 7
+  pants:
+  - 9
+  skirt:
+  - 12
+  dress:
+  - 6
+  footwear:
+  - 18
+  - 19
+ambiguous:
+- arm extent versus separately labeled MHP hands
+- torso-skin versus anatomical torso
+- full-body garment categories
+- hat versus helmet/headwear
+- class boundary differences across releases/checkpoints
+unsupported_fine_MHP_concepts:
+- separate bare feet/hands
+- shoe versus boot versus sandal versus high heel
+- many carried objects and small accessories
+denominator_policy: Every cohort uses exactly the same GT projection and valid pixel
+  domain, with retained semantic/pixel support counts; unsupported GT never background;
+  proposed concept lists are not complete mappings or authorized scores
+no_all_model_universal_leaderboard: true

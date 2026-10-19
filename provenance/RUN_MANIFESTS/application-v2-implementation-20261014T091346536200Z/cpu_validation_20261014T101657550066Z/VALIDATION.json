@@ -1,0 +1,58 @@
+{
+  "status": "PASS_IMPLEMENTATION_AND_BOUNDED_TRAIN_WITH_DRAFT_SCIENTIFIC_POLICIES",
+  "validated_at_utc": "2026-10-14T10:17:00.957102+00:00",
+  "regression_suites": [
+    {
+      "suite": "test_application_v2.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_application_v2.py.log"
+    },
+    {
+      "suite": "test_mhpv2_stage0.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_mhpv2_stage0.py.log"
+    },
+    {
+      "suite": "test_official_mhp_compat.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_official_mhp_compat.py.log"
+    },
+    {
+      "suite": "test_dataset_reassessment.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_dataset_reassessment.py.log"
+    },
+    {
+      "suite": "test_ccihp_gt.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_ccihp_gt.py.log"
+    },
+    {
+      "suite": "test_ccihp_quality.py",
+      "exit_code": 0,
+      "log": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/cpu_validation_20261014T101657550066Z/test_ccihp_quality.py.log"
+    }
+  ],
+  "packet_integrity_pass": 18,
+  "protected_hashes_unchanged": 126,
+  "GT_sidecars_integrity": "PASS",
+  "config_accepted_decision_consistency": "PASS",
+  "benchmark_execution_guard": "PASS_BLOCKED_AS_REQUIRED",
+  "full_benchmark_started": false,
+  "new_bounded_TRAIN_inference": true,
+  "parser_training": false,
+  "validation_inference": false,
+  "PPSS_activity": false,
+  "canonical_measured_values_changed": false,
+  "protocol_frozen": false,
+  "cohort_mappings_accepted": false,
+  "bounded_train_evidence": [
+    "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/bounded_train_20261014T094329862740Z/VALIDATION.json"
+  ],
+  "not_yet_validated": [
+    "joint_resident_pipeline_timing_and_memory",
+    "live_CPI_T3b_parser_worker",
+    "all_20_variant_application_routing",
+    "accepted_common_taxonomy_and_population_freeze"
+  ]
+}

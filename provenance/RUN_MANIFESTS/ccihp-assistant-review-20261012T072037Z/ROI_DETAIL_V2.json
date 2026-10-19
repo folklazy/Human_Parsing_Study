@@ -1,0 +1,104 @@
+{
+  "artifacts": [
+    {
+      "image_id": "0014422",
+      "roi_xyxy_half_open": [
+        0,
+        0,
+        274,
+        367
+      ],
+      "scale_display_only": 2,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0014422_ROI_v2.png",
+      "sha256": "d8441646a530eb03601b05994792ef943fd6f5cb1696b45e787f9bf7845b91da",
+      "roi_category_pixels": {
+        "0": 91332,
+        "2": 8556,
+        "13": 86,
+        "15": 584
+      },
+      "revision": "Raw source arrays; no Human ID text covers any source pixel. v1 retained."
+    },
+    {
+      "image_id": "0010505",
+      "roi_xyxy_half_open": [
+        326,
+        170,
+        400,
+        336
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0010505_ROI_v2.png",
+      "sha256": "fb6bfc6644169a304206e52cec28250aebc91da0ed945c42304b54e891193045",
+      "roi_category_pixels": {
+        "0": 225,
+        "5": 556,
+        "7": 4212,
+        "14": 487,
+        "15": 4135,
+        "22": 2669
+      },
+      "revision": "Raw source arrays; no Human ID text covers any source pixel. v1 retained."
+    },
+    {
+      "image_id": "0000287",
+      "roi_xyxy_half_open": [
+        54,
+        241,
+        87,
+        274
+      ],
+      "scale_display_only": 8,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0000287_ROI_v2.png",
+      "sha256": "82b5d28c506f12c78347c63739420bb7b1383e9f1acfd59b656e024529e37264",
+      "roi_category_pixels": {
+        "0": 1,
+        "5": 1069,
+        "9": 19
+      },
+      "revision": "Raw source arrays; no Human ID text covers any source pixel. v1 retained."
+    },
+    {
+      "image_id": "0034455",
+      "roi_xyxy_half_open": [
+        155,
+        130,
+        249,
+        227
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0034455_ROI_v2.png",
+      "sha256": "50f9db2053bf2fad5bc7d163ebbdee74176a0009f61535ace8c1b916c7b19b22",
+      "roi_category_pixels": {
+        "0": 6818,
+        "7": 1385,
+        "15": 891,
+        "21": 24
+      },
+      "revision": "Raw source arrays; no Human ID text covers any source pixel. v1 retained."
+    },
+    {
+      "image_id": "0008613",
+      "roi_xyxy_half_open": [
+        283,
+        235,
+        349,
+        488
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0008613_ROI_v2.png",
+      "sha256": "ea6f342efc2039c277ca53f76261fc86b027adb2f607faf0e1f42a882d19a64a",
+      "roi_category_pixels": {
+        "0": 16698
+      },
+      "revision": "Raw source arrays; no Human ID text covers any source pixel. v1 retained."
+    }
+  ],
+  "previous_version": "DETAIL_ADJUDICATION.json::roi_artifacts",
+  "source_masks_modified": false
+}

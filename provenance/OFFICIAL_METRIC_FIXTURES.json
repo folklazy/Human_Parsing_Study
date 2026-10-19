@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "Five synthetic fixtures through source functions; no full evaluation and no claim of full official parity",
+  "source_file": "third_party/human_parsing/Multi-Human-Parsing/Evaluation/Multi-Human-Parsing/v2/eval_mhp.py",
+  "source_sha256": "1f0bee0315f7d23e8020bed6d842c4be2d0334be6b20bd11a0bd08de77d889e2",
+  "compatibility_changes": [
+    "Python2 print/xrange to Python3",
+    "np.float/np.int aliases to np.float64/np.int64",
+    "Select metric functions only; disable caching, sparse/pickle loading, progress UI"
+  ],
+  "fixtures": [
+    {
+      "fixture": "perfect",
+      "ap_p50": 1.0,
+      "pcp50": 1.0,
+      "status": "PASS"
+    },
+    {
+      "fixture": "wrong_class",
+      "ap_p50": 0.0,
+      "pcp50": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture": "no_foreground",
+      "ap_p50": 0.0,
+      "pcp50": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture": "duplicate",
+      "ap_p50": 1.0,
+      "pcp50": 1.0,
+      "status": "PASS"
+    },
+    {
+      "fixture": "native_RGBA_first_channel",
+      "status": "PASS"
+    }
+  ],
+  "ap_p_vol_not_run": true,
+  "official_native_metric_not_mixed_with_common_miou": true
+}

@@ -1,0 +1,33 @@
+schema_version: '1.0'
+dataset: LV-MHP-v2
+version: '2.0'
+status: DATASET_BLOCKED
+root_environment: MHPV2_DATASET_ROOT
+root_workspace_relative: datasets/LV-MHP-v2
+immutable_source: true
+manifest: manifests/DATASET_MANIFEST.json
+official_split_lists:
+  train: list/train.txt
+  validation: list/val.txt
+  test: list/test_all.txt
+image_format: JPEG
+native_annotation:
+  format: per_person_PNG
+  rgba_labels: first_channel_R
+  palette_labels: stored_indices
+  foreground_ids: [1, 58]
+  background_id: 0
+  observed_ignore_ids: []
+  alpha_255_is_ignore: false
+  person_identity: image_id_plus_parsing_file_person_id
+  pose_identity_equals_parsing_id: false
+  overlapping_planes: preserve_independently
+  coordinate_frame: original_unoriented_RGB_grid
+  categorical_resampling: nearest_neighbor_only_if_explicitly_authorized
+required_rgb_failures:
+  train: ['1396', '18613', '24328']
+  validation: ['17844']
+original_split_exclusions: []
+development_manifest: manifests/DEVELOPMENT_SET.json
+final_validation_manifest: manifests/FINAL_VALIDATION_SET.json
+leakage_audit: manifests/LEAKAGE_AUDIT.json

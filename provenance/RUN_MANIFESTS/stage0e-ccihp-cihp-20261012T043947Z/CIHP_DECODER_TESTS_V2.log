@@ -1,0 +1,16 @@
+test_RGBA_alpha_support (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_conflicting_part_masks_report_ambiguity (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_native_IDs_are_not_datasetninja_numeric_class_IDs (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_origin_places_pixels_in_original_grid (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_palette_transparency_support (test_cihp_archive_preflight.ConvertedCIHPTests) ... /home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests/test_cihp_archive_preflight.py:17: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  image=Image.fromarray(mask.astype(np.uint8),'P');image.putpalette([0,0,0,255,255,255]+[0]*762)
+ok
+test_person_ID_not_derived_from_part_object_ID (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_reject_corrupt_encoding_and_compression (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_reject_out_of_bounds_and_negative_origin (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+test_reject_unknown_class_and_empty_support (test_cihp_archive_preflight.ConvertedCIHPTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.060s
+
+OK

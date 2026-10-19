@@ -1,0 +1,12 @@
+{
+  "gpu": "Tesla T4, 15360 MiB, 14912 MiB, 580.178.04, 7.5",
+  "jobs": "",
+  "disk": "Filesystem                         Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv  785G  118G  627G  16% /",
+  "ram": "total        used        free      shared  buff/cache   available\nMem:            31Gi       4.2Gi       3.0Gi        87Mi        24Gi        27Gi\nSwap:          8.0Gi        13Mi       8.0Gi",
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "nvcc": null,
+  "cuda_toolkit_verified": false,
+  "system_python": "3.12.3",
+  "cuda_visible_devices": null,
+  "read_utc": "2026-10-08T06:33:51.037874+00:00"
+}

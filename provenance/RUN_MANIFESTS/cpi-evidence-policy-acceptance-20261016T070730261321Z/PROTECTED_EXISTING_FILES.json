@@ -1,0 +1,150 @@
+[
+  {
+    "path": "configs/application_v2.yaml",
+    "sha256": "eaa9c97c2db376ac1c8b69d47629365ac7b5f6cdd8c1ba5264a14084287e672d"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v4.yaml",
+    "sha256": "69b6668249d624a850fbcc01b60c9987bdcc1b154cee5bb6f28efdff9852e036"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v5.yaml",
+    "sha256": "c04ac3adc86f72565387b7197c7a7defa5239c320b3394273d9977f666a3ee6b"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v6.yaml",
+    "sha256": "60dd2d441b8e9746e0abf3dd6309aad9083a321ac1da1640bae19903cd831fee"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v7.yaml",
+    "sha256": "ed5fa23d94d8a3264b3a8febc5c9d2a63f1bde0bc5430957d7e9156ac3e3a984"
+  },
+  {
+    "path": "configs/application_v2_handoff_v3.yaml",
+    "sha256": "bd9bb7af89b6b73cf79743b9bd7a74c12663c6a3a542961603595361177a3c3c"
+  },
+  {
+    "path": "configs/dataset.yaml",
+    "sha256": "eeffdb49df8df5075fea9346eb1ed7d8d838d35c580f8d7d57011b831e9bc88a"
+  },
+  {
+    "path": "configs/research_scope.yaml",
+    "sha256": "1c7894943865a8ff504ed353ad78b671a368bb56434d8468da53d339610bdde5"
+  },
+  {
+    "path": "configs/study.yaml",
+    "sha256": "a093ce8a950f8c20e09eeab44692c1e82fd7e3b1b0c4cc21b7de37f808ae7c48"
+  },
+  {
+    "path": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V1.json",
+    "sha256": "7986ec4a7e17dc69958bfcf460c72be348a8c5b84d477ec4d0b5016ac736939e"
+  },
+  {
+    "path": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V2.json",
+    "sha256": "0848a6f8ab6439a92a57f23acd8e09b0943d8c8918cdd2c01336b2b55365fa50"
+  },
+  {
+    "path": "taxonomy/APPLICATION_CCIHP_NATIVE_DIAGNOSTIC_V1.json",
+    "sha256": "f6a4343f815f6cc083096d36b61ceaa48a63abc7555aea4c9e757cca6fccd27a"
+  },
+  {
+    "path": "taxonomy/APPLICATION_HANDOFF_VIEW_CARDS_DRAFT_V1.json",
+    "sha256": "ab9140a1ef8f6a427e2ef4520b56e656421247ec26837ef2cf56584b3b893e8c"
+  },
+  {
+    "path": "taxonomy/APPLICATION_HANDOFF_VIEW_CARDS_DRAFT_V2.json",
+    "sha256": "f19c849f1a456478b5c047f3ef58f9f51cb043132c4cae1fda0159cacac52dab"
+  },
+  {
+    "path": "taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+    "sha256": "a7f8f40994465d6b1852248e922af1a397d8ff974d601ee99b47282a1ff28648"
+  },
+  {
+    "path": "taxonomy/CCIHP_PERSON_EVALUATION_COHORTS_DRAFT_V1.yaml",
+    "sha256": "a31e2e5ec637b1e2fec5823215617b2ec51870f6654e432e3c36e8dbe98990a3"
+  },
+  {
+    "path": "taxonomy/CIHP_COMMON_HP_PROPOSAL_V1.yaml",
+    "sha256": "dea330703b056cfda458e3a2fcba9f5495a90574a69aa708e95870f0947286a6"
+  },
+  {
+    "path": "taxonomy/CIHP_NATIVE_SOURCE_INVENTORY_DRAFT.yaml",
+    "sha256": "12c3f09ffb5d285b63fbe283d626177a3ca8f241e12674d629f16bff7e70b54b"
+  },
+  {
+    "path": "taxonomy/COMMON_HP_CORE_DRAFT.yaml",
+    "sha256": "653e37d57762da62bb902ae79f63154e68dd24a87e799a3830d18bb63e90cbaf"
+  },
+  {
+    "path": "taxonomy/COMMON_HP_EXTENDED_DRAFT.yaml",
+    "sha256": "9d74ab22818cdd652ad64b6d2d8684391c4fe8dafa5d5d94cb7a9e3a6056989d"
+  },
+  {
+    "path": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_V1.csv",
+    "sha256": "b0cc2f8324d0b37a3b805e96d932b9bc7ec5c9a524766afe8dd2bebd25f02eb1"
+  },
+  {
+    "path": "taxonomy/MHPV2_NATIVE.json",
+    "sha256": "bb773b899d22bee415957301af7198848ff7780ed9944c4f038c5843fb59099e"
+  },
+  {
+    "path": "taxonomy/PPSS_NATIVE_LABEL_INVENTORY.json",
+    "sha256": "ddd1045361f059240f2803011e838ae14f6c7d91e17fb53da7f6ff37a0a0c5ef"
+  },
+  {
+    "path": "taxonomy/PPSS_TO_COMMON_HP_DRAFT.yaml",
+    "sha256": "40ea7ed5bf61afd3d7aeaf4e5fcb43402def12043b8b281cc3a18f852bf4c03a"
+  },
+  {
+    "path": "taxonomy/TAXONOMY_REPRESENTABILITY_MATRIX.csv",
+    "sha256": "f7775f9e8b4338c9a58085d200569d438ad326a7842dc8393d513b570e6d908a"
+  },
+  {
+    "path": "taxonomy/native/CPI_MHPV2.yaml",
+    "sha256": "6d6c79be63c040e7f3491632a3d493b59fcecb972758a134e0343a9eea06950e"
+  },
+  {
+    "path": "taxonomy/native/D2FP_CIHP.yaml",
+    "sha256": "2425f9cd545763368bae550713a36be72abcc550d71f2aa100b0d43a8172626d"
+  },
+  {
+    "path": "taxonomy/native/D2FP_LIP.yaml",
+    "sha256": "edd980def4a4ecd9a6de05b3152ce2e3e94a910b6c103e4eb443d0b98d12a30d"
+  },
+  {
+    "path": "taxonomy/native/FASHN.yaml",
+    "sha256": "5d392a2f3b9038fdddffd73e9682a90e00000381ecee179ba3bf1c4dac22d6ae"
+  },
+  {
+    "path": "taxonomy/native/M2FP_MHPV2.yaml",
+    "sha256": "20330dd547be17818c5535a8bcb7860bd4d67bca42c09cc2c71e7e7c6d580a57"
+  },
+  {
+    "path": "taxonomy/native/SCHP_LIP.yaml",
+    "sha256": "19279fc4b937e854a308a357f43cad61433ac8e71e2d3c5e6d14b2043601758f"
+  },
+  {
+    "path": "metrics/DATASET_NATIVE_CLASS_SUPPORT.csv",
+    "sha256": "7bf91ac15b8bd5693a693cbc072933684553b4b539fd56e881b1aed17de22efa"
+  },
+  {
+    "path": "metrics/DATASET_PERSON_STATISTICS.csv",
+    "sha256": "0cec451c29aaad634c491e1640da516139a83220811a232c08850a02206cec9d"
+  },
+  {
+    "path": "provenance/APPLICATION_V2_DECISIONS_V6.json",
+    "sha256": "e86477fa229c5ffc0ceef83a531a613277c1fb72581dc412b51177a878a7829f"
+  },
+  {
+    "path": "provenance/CHECKPOINT_INVENTORY_CURRENT_V1.json",
+    "sha256": "ee9bbe47c5c4214b2c6707a0507ee1a1a7ac0b3dfcd3f0673163f3c66319d634"
+  },
+  {
+    "path": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/CHANNEL_ORDER_EVIDENCE.json",
+    "sha256": "4ce3c59d3aaae281061e0fc75a28dc8a9f86885107f325dd935b862bdd726370"
+  },
+  {
+    "path": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/GT_TRAIN_RECONSTRUCTION/MANIFEST.json",
+    "sha256": "d028171416f2d388b3c67878b9f821ca43d61cec60ac68c0b2ab5b265b166be2"
+  }
+]

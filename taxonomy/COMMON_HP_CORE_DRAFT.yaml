@@ -1,0 +1,53 @@
+schema_version: '1.0'
+status: DRAFT_REQUIRES_USER_REVIEW
+mapping_frozen: false
+evaluation_authorized: false
+purpose: Candidate common concepts; no universal leaderboard authorized
+concepts:
+  background:
+  - 0
+  face:
+  - 3
+  hair:
+  - 4
+  arms_coarse:
+  - 5
+  - 6
+  hands_coarse:
+  - 7
+  - 8
+  legs_coarse:
+  - 30
+  - 31
+  upper_clothing_coarse:
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 34
+  - 57
+  lower_clothing_coarse:
+  - 17
+  - 18
+  - 19
+  dress:
+  - 35
+universal_concept_subset_provisionally_comparable:
+- face
+- hair
+ambiguities:
+- Footwear is not FASHN feet by definition
+- Torso skin is not necessarily anatomic torso
+- LIP hands are not independently labeled
+- Full-body garments cannot be split by lookup table
+- Native same-name boundaries still need GT visual review
+policy:
+  unsupported_gt_to_background: FORBIDDEN
+  valid_domain: Shared across every member in a cohort, with retained foreground and
+    class support disclosed
+  unsupported_predictions: Explicit UNMAPPED; valid-domain GT support retained; report
+    unmapped burden and background hallucinations separately
+  background_in_primary_miou: false
+  empty_union: UNDEFINED, never automatic perfect score
+  all_model_common_score: NOT_FROZEN

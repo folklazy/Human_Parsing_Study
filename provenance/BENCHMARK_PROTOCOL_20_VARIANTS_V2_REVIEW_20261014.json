@@ -1,0 +1,157 @@
+{
+  "recorded_at_utc": "2026-10-14T06:25:42.627777+00:00",
+  "scope": "V2_PROTOCOL_REVIEW_ONLY",
+  "protocol_path": "HUMAN_PARSING_BENCHMARK_PROTOCOL_20_VARIANTS_V2_TH_20261014.md",
+  "protocol_sha256_before": "593a041864ddee0ca6c7f44b3d97289712e8c8b5896e051b38618dba33dc550b",
+  "protocol_sha256_after": "593a041864ddee0ca6c7f44b3d97289712e8c8b5896e051b38618dba33dc550b",
+  "protocol_unchanged": true,
+  "review_path": "Human_Parsing_MHPv2_Study/reports/BENCHMARK_PROTOCOL_20_VARIANTS_V2_REVIEW_TH_20261014.md",
+  "review_sha256": "f03f1ef37e91930557a8d27a30cfa7fb43d611dc40f5c3d383cbd1defe2c70ad",
+  "local_links_checked": 5,
+  "local_links_resolve": true,
+  "scientific_source_files_inspected": {
+    "src/evaluation/common_metrics.py": "49e4b1d35d37cc5d849cf7a0d4e86bbf8cbb1b5ec66f4ffa894e01536500c3af",
+    "src/evaluation/official_mhp_compat.py": "e0bd0f5d8ba58f858952bc7d95aed3bd9afecd28e4be5d93b8144e9f95d11c46",
+    "src/contracts/prediction.py": "ef0335ea0c7a045d6cee4df84f6ae2ab14310fc6735560b634059551a574ac92"
+  },
+  "tests_executed_this_review": {
+    "command": "PYTHONPATH=Human_Parsing_MHPv2_Study/tests .venvs/mhpv2-stage0/bin/python -m unittest test_mhpv2_stage0.MetricTests test_mhpv2_stage0.MatchingOwnershipTests test_mhpv2_stage0.PredictionContractTests -q",
+    "test_count": 20,
+    "exit_code": 0,
+    "status": "PASS",
+    "type": "SYNTHETIC_METRIC_MATCHING_OWNERSHIP_CONTRACT_FIXTURES"
+  },
+  "prior_tests_reused_not_rerun": {
+    "official_mhp_compat": 19,
+    "dataset_reassessment": 7
+  },
+  "bounded_checks_executed": {
+    "assignment_objective": {
+      "type": "MOCKED_EDGE_WEIGHTS_TO_ISOLATE_ASSIGNMENT_OBJECTIVE_NOT_REAL_GT_IOU",
+      "weights": [
+        [
+          0.95,
+          0.46
+        ],
+        [
+          0.46,
+          0.0
+        ]
+      ],
+      "threshold": 0.45,
+      "weight_only_one_match_sum": 0.95,
+      "two_match_sum": 0.92,
+      "actual_current_code_matches": [
+        [
+          0,
+          1,
+          0.46
+        ],
+        [
+          1,
+          0,
+          0.46
+        ]
+      ],
+      "finding": "Current code maximizes eligible cardinality then sum IoU; V2 maximum-weight wording requires clarification."
+    },
+    "foreground_vs_semantics": {
+      "gt": [
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "prediction": [
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      "actual_foreground_iou": 1.0,
+      "actual_semantic_miou": 0.0
+    },
+    "global_vs_person_quality": {
+      "shape_hw": [
+        4,
+        6
+      ],
+      "gt_person1": "class1 rows0:2 cols0:2; class2 rows2:4 cols0:2; otherwise0",
+      "gt_person2": "class1 rows0:2 cols4:6; class2 rows2:4 cols4:6; otherwise0",
+      "pred_person1": "all class1 pixels of both GT persons",
+      "pred_person2": "all class2 pixels of both GT persons",
+      "pairing": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "actual_global_semantic_miou": 1.0,
+      "actual_per_person_foreground_iou": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "actual_person_semantic_miou": 0.25
+    },
+    "class_averaging_policy": {
+      "gt": [
+        [
+          1,
+          0
+        ]
+      ],
+      "prediction": [
+        [
+          1,
+          2
+        ]
+      ],
+      "native_labels": [
+        0,
+        1,
+        2
+      ],
+      "fixed_scored_foreground_classes": [
+        1
+      ],
+      "fixed_scored_class_miou": 1.0,
+      "actual_existing_generic_scores_miou": 0.5,
+      "finding": "Old generic scores averages union-supported foreground labels, including prediction-only classes."
+    }
+  },
+  "derived_storage_scenario": {
+    "source_validation_pixels": 876659024,
+    "definition": "One FP32 dense logit grid at original image resolution per sample; uncompressed scenario, not measured benchmark output size.",
+    "per_variant_GiB": {
+      "29": 94.70847135782242,
+      "59": 192.68275207281113
+    },
+    "three_29_class_variants_GiB": 284.12541407346725
+  },
+  "review_limits": [
+    "No full NPZ numerical revalidation",
+    "No repeated full dataset integrity audit",
+    "No actual T3 inference/association execution",
+    "No new license eligibility determination",
+    "No protocol freeze"
+  ],
+  "safety": {
+    "parser_or_yolo_inference": false,
+    "full_benchmark": false,
+    "checkpoint_downloads": false,
+    "package_installs": false,
+    "dataset_modifications": false,
+    "PPSS_activity": false,
+    "scientific_source_edits": false,
+    "protocol_or_state_edits": false,
+    "remote_git_actions": false
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "original_archives_unchanged": true,
+  "scope": "Historical Markdown archive inventory; no PPSS read or dataset/image distribution",
+  "entries": [
+    {
+      "original_path": "reports/archive/application_v2_20261014T091346536200Z/DATA_SCHEMA.md",
+      "bytes": 6879,
+      "sha256": "0577698e8881b8b8bd57cf344b2314faf78cdb9d7131064ab92083720257cb81",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/application_v2_20261014T091346536200Z/README.md",
+      "bytes": 3124,
+      "sha256": "c34d50179055d2e319fe57025b8682c3607a414e52c555f7fa2351404218dc0a",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cdgnet_acquisition_20261015T082408501060Z/README.md",
+      "bytes": 6233,
+      "sha256": "e58c7363ca4e4e1d9043d689f24e9b0ea220f85e7d00c7d835a14713a6ac8dc5",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/DATA_SCHEMA.md",
+      "bytes": 5858,
+      "sha256": "c25d20cbb123eec6fa64569425ac48ddd19cbe3fd9ad930488d1fb351af063bb",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "bytes": 10949,
+      "sha256": "55d7a205fa193e58351aafe99c609315fda8ae87a071f1731387d79e5208a697",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/README.md",
+      "bytes": 4844,
+      "sha256": "18e1f88cdc1da1bfda21dd3c986b0888db058f7e02844edf4e2d885dee562ca8",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/WORKSPACE_README.md",
+      "bytes": 15991,
+      "sha256": "25915aee0c068cfcfc394c55b37dbf05ceb8467f9f85be779be375bf9488ddbc",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/CIHP_QUALITY_AUDIT.md",
+      "bytes": 7499,
+      "sha256": "cfd1edc00e0c506ab826d538f727256314f9179c898ba0812d70b97e057b5f32",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/DATASET_REASSESSMENT.md",
+      "bytes": 6285,
+      "sha256": "ab04e3e2b441679ec9c3f3cd01964848f31f8dcfe1b4b1f663899ae6a35dd911",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/PRIMARY_DATASET_DECISION.md",
+      "bytes": 7397,
+      "sha256": "9f4c203d157b33204f8965add18c9505de873255c274b8551fb4c812ec8e980f",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 8653,
+      "sha256": "4dd2222b948df4a8885c8bf94399da29a6bc8ca2daf723c0da7485d6e4c9267a",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/conditional_policies_first_cohort_20261015T090341577135Z/DATA_SCHEMA.md",
+      "bytes": 13523,
+      "sha256": "686822c80add9021e3f0133aa8e49bc736de4d83266ff3e667de2d44d3be3e8a",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/conditional_policies_first_cohort_20261015T090341577135Z/README.md",
+      "bytes": 6748,
+      "sha256": "e182e39e932c7515a1b5f30b022187c97d61225230457bbe59c2227449cf647e",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/conditional_policies_first_cohort_20261015T090341577135Z/reports/APPLICATION_HANDOFF_POLICIES_TH_20261015.md",
+      "bytes": 11244,
+      "sha256": "b83bd8511c32c5f286555c8989f77f5687e0be1136301727ce56b42d9bb053a6",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/conditional_policies_first_cohort_20261015T090341577135Z/reports/PROTOCOL_REVIEW.md",
+      "bytes": 5341,
+      "sha256": "8b2bd5a60b9bd5f9b7c1329cb6951b0ab316a936fd01eeb041d62081cc8d51f0",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/conditional_policies_first_cohort_20261015T090341577135Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 2902,
+      "sha256": "5e17db1e4b4b8829de6c92f42b621d48ed08d3095e5f6416a61eea49efe38712",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/DATA_SCHEMA.md",
+      "bytes": 11370,
+      "sha256": "2c895254dec2cf0029f81ac1d46a042dc6d7369b52f81699aee641569f14c2d6",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/README.md",
+      "bytes": 6574,
+      "sha256": "aacedb4820b08a62437dbb1aa30ebcf6b2834d1d038653536077655c1d7bbb81",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "bytes": 20260,
+      "sha256": "5967c52173296903bf4f6f3873fb41bafed19d24e2df63b7dd540268b3cf1bd6",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/MODEL_COMPATIBILITY_REPORT.md",
+      "bytes": 9023,
+      "sha256": "63c84f1e85b38803d41814c5bfb3a9bfa5d17eaf2466ab4ff85e611f3ae835af",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/PROTOCOL_REVIEW.md",
+      "bytes": 5050,
+      "sha256": "da2bac002bd8945fec16eeaea746c4a71a6a84a50b7aefea4a45319eaedd3863",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/STAGE0_FEASIBILITY_REPORT.md",
+      "bytes": 8234,
+      "sha256": "dfbb72ad90406b3157f89113107b9ba0af6f5d54bd802cd8499ad2208da1ad1a",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 14716,
+      "sha256": "0fcb8eb7f60c89e22492dead3fa20b040d372dc36e90da8156c09ad3fb834c67",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/current_status_sync_20261015T083210250135Z/reports/TAXONOMY_AUDIT.md",
+      "bytes": 4712,
+      "sha256": "e7fed7260ef9c9f37a2fb3a68d3f3b2b60b18612fdc7293132d4c512e5d98145",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/dataset_reassessment_20261008T101743Z/DATA_SCHEMA.md",
+      "bytes": 4242,
+      "sha256": "a9ac53141b377bb325f0fc34431f067f63e961d131996f890b01f77ecfe7d42a",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/dataset_reassessment_20261008T101743Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "bytes": 9260,
+      "sha256": "df8fcbce249cb843978778d53e92678ecddbe6c788ec969acf0dc3abd562fa22",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/dataset_reassessment_20261008T101743Z/README.md",
+      "bytes": 3749,
+      "sha256": "eb849af39add54619107331ed2099c24e0bd0b1034c5d60098c1cf97a86a74a8",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/dataset_reassessment_20261008T101743Z/STUDY_STANDARD.md",
+      "bytes": 3017,
+      "sha256": "c3b535874b382410296c4bdc302286cdafaab6ad54490507b588a2bb0f12255f",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/dataset_reassessment_20261008T101743Z/WORKSPACE_README.md",
+      "bytes": 15087,
+      "sha256": "ddd898d645d6e237ff086f6f920b9aa515b0e41a1822d7525d897bfcaf129371",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "bytes": 11792,
+      "sha256": "253626003aee5544234a794f25f776d5125968b227e471f5e4fea8acf8683898",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/README.md",
+      "bytes": 5959,
+      "sha256": "4709a956347395ddcbd88eb91fee3df8ef764263ad4bf1d15960718ea278ee00",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/STUDY_STANDARD.md",
+      "bytes": 4662,
+      "sha256": "9b7b2af1cce71fe25c1f935287ee8bd00b3e851e60c9b9f07efd969aceced697",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/DATASET_REASSESSMENT.md",
+      "bytes": 8299,
+      "sha256": "0092d32d73e133ac03ac3a8f4e27f4257e144ffe46ea4a64100f9a7bde25ccf7",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/MODEL_COMPATIBILITY_REPORT.md",
+      "bytes": 7820,
+      "sha256": "83079e4e28dc045948e25272653b8cf39e945ee7e642d2ce9a9ef7a3f9d991bb",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/PROTOCOL_REVIEW.md",
+      "bytes": 4284,
+      "sha256": "3d999180d95ea1ee90f61da82a9f5568217557dcf13eedc4a6484e00c1c05848",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 10395,
+      "sha256": "2af2bfce6c1aecb0f6f06befe5e1f083b3a70d80d6901d4ef007b1ea4aff1cdc",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/decision5a-license-finalization-20261012T042717Z/workspace/README.md",
+      "bytes": 16148,
+      "sha256": "506617252f50e9b9c26edccb1789c67dd4def704d0e04dc0f0adbbd5379d3ea3",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071525Z/README.md",
+      "bytes": 5070,
+      "sha256": "b588e1fb53154a82a9c8b661956bb094a95a053b464cc09b6c65dfb9e4065288",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071654Z/README.md",
+      "bytes": 6190,
+      "sha256": "1eea80e198ca386168ae09214380a26ad16a8739070c2b6039472670e9e18d52",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071654Z/reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "bytes": 20249,
+      "sha256": "9b6f323c38de883ebb5821771ac38352a252ed9f658be6369ca01969909e387d",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071844Z/README.md",
+      "bytes": 6233,
+      "sha256": "e58c7363ca4e4e1d9043d689f24e9b0ea220f85e7d00c7d835a14713a6ac8dc5",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071844Z/reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "bytes": 20260,
+      "sha256": "9438ebf92dc2b98313901c4405fcfd1de59e6fdec003341a54547ac9070f6ed9",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071926Z/README.md",
+      "bytes": 6233,
+      "sha256": "e58c7363ca4e4e1d9043d689f24e9b0ea220f85e7d00c7d835a14713a6ac8dc5",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/implementation_handoff_20261015T071926Z/reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "bytes": 20260,
+      "sha256": "5967c52173296903bf4f6f3873fb41bafed19d24e2df63b7dd540268b3cf1bd6",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/mhpv2_stage0_final_20261008T072417Z/README.md",
+      "bytes": 3231,
+      "sha256": "c20391e2555fbd989f4f290bcc08a33752f010d61fae63631ef45a8c197f0eed",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/mhpv2_stage0_final_20261008T072417Z/workspace/README.md",
+      "bytes": 14405,
+      "sha256": "cba96ad5e55ff9f0cde14f2ce4de33be4aeca56b8f0d078dfa972a0e9c8de3a4",
+      "public_copy": false,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/README.md",
+      "bytes": 6887,
+      "sha256": "cdeea226f2bff5dafeecaf598955dbbd6c62cede7311ac18d245d5634eada080",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/CIHP_QUALITY_AUDIT.md",
+      "bytes": 3740,
+      "sha256": "6713bd070f879f65f085e0f5f12e28cab6d21a372661c77cc3ee890f2b551ded",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/PRIMARY_DATASET_DECISION.md",
+      "bytes": 7942,
+      "sha256": "75abc92c486dee2925938407c5cb28d9835c76fef68656ea816a44617f61c0e9",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-cihp-20261012T043947Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 10962,
+      "sha256": "7ff0f4b28e5419574afb12e6c323b04e2c93dd1e750b3b84bfa85e1960d4e799",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/README.md",
+      "bytes": 7701,
+      "sha256": "eff92a3172d0f7d22bbbe21e846f369a70a63bf8f2a04de822eda450dfc17ef4",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md",
+      "bytes": 10265,
+      "sha256": "1ed15cb2aa7c269ed237dccade2c7179fc3dc3cb19b860820b6e85c125db48f2",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "bytes": 5178,
+      "sha256": "f2e330e2cb2f0a7ce1fd067b570795c718927fe73d89edd39c60af3cdd7ef9cb",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CIHP_GROUND_TRUTH_RECOVERY_DECISION.md",
+      "bytes": 4941,
+      "sha256": "99a40f60c4d68b81a855b555d30a0d98bd07c26c70779175364319f77b6f1ccd",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CIHP_QUALITY_AUDIT.md",
+      "bytes": 5027,
+      "sha256": "f345745fe3bc5aea0c28f59dc15a7fdda29a9817997bda57b5800471c02453fe",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/PRIMARY_DATASET_DECISION.md",
+      "bytes": 8817,
+      "sha256": "3657771477b91a6425e24bfff9dd58e904517acae5b7e19fb132acf1ccb614fc",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 12427,
+      "sha256": "078ac59710cfdeb5d438adbaa5a3f7b9b113b0608c769fd33336d1cc29382a4f",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/README.md",
+      "bytes": 7703,
+      "sha256": "b27ad6254d805042d9d3eb3bb97fa441c5bcaffd0f1a51fc3d3902b23a3eb0cf",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/CIHP_QUALITY_AUDIT.md",
+      "bytes": 6300,
+      "sha256": "1754588e2c65dda61a1a1fcefc7ff5ecbe04d75c5edee055699efa400247ee8a",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/PRIMARY_DATASET_DECISION.md",
+      "bytes": 10135,
+      "sha256": "253e203fc9198a37ea8fbec49e89a8957a51cf36fbb608b13458098a902c2576",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    },
+    {
+      "original_path": "reports/archive/stage0f-ccihp-quality-20261012T062825Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "bytes": 13701,
+      "sha256": "5980501b07db95e648f6adc3a8fc870fe323ec9f29f2d6fd04682a02ba3adc72",
+      "public_copy": true,
+      "role": "HISTORICAL_ARCHIVE_NOT_CURRENT_AUTHORITY",
+      "unpublished_access": "ORIGINAL_WORKING_COPY_CUSTODIAN_NO_PUBLIC_MIRROR"
+    }
+  ]
+}

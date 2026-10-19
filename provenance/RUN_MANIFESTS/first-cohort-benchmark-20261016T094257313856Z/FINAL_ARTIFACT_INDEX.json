@@ -1,0 +1,69 @@
+{
+  "timestamp_utc": "2026-10-19T03:57:58.337687+00:00",
+  "benchmark_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "export_checks": "PASS",
+  "incomplete_main_metrics": "NULL_NOT_ZERO",
+  "new_experiment_authorized": false,
+  "artifacts": [
+    {
+      "path": "reports/FIRST_COHORT_T3B_BENCHMARK_REPORT_TH_20261019.md",
+      "sha256": "dcfeddc1d1aeb320893d79fd1c15c7a2dbb5dc7ece820b5a21e69510792cd00a"
+    },
+    {
+      "path": "README.md",
+      "sha256": "35fdceb4177faa0d2ec28baead9e860c401fdbe82e1d8972bb7c5747a4ed8fd2"
+    },
+    {
+      "path": "STUDY_STATE.json",
+      "sha256": "e3803e889ede7eb23508e476a1617607f794cd445891416a98eeeb9e98e338cb"
+    },
+    {
+      "path": "provenance/CURRENT_STUDY_ARTIFACTS.json",
+      "sha256": "294083830940c30d40954f9d92cf277038d6aeff0f99e8a5f463c0c18640bec4"
+    },
+    {
+      "path": "provenance/FIRST_COHORT_BENCHMARK_ACTIVE.json",
+      "sha256": "1c33daa789b218f600ebc148e492778f4a1e2fd7c3fc211263466c279eb1caad"
+    },
+    {
+      "path": "reports/STAGE0_NEXT_ACTIONS.md",
+      "sha256": "de27df69977872d971657858ac6b079ae25c9a490e2db1c11712dbbf1969afe5"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/POST_EXPORT_VERIFICATION.json",
+      "sha256": "d8b18bbddd4a8d09add41a2340cbbb30f474a016071cca200010966af260ab1b"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FINAL_BENCHMARK_VALIDATION.json",
+      "sha256": "408e716a5a55fd8bdf2d6dcaeb0f3c9e13e2e83cb13dd9cca93db81742150cf5"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/RESTORED_SOURCE_SNAPSHOT.json",
+      "sha256": "de81a9c0debb07aa349d7fcba90a71bc93168ba1b6d36bee65a0a0288d257663"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FINAL_DOCUMENTATION_REVISION.json",
+      "sha256": "c47f4fdfbd43723ebab28e2013dfa44c60d6682bce4449759daa7ee340f1b7df"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/CPU_TESTS_CONTINUATION.log",
+      "sha256": "27e9cba23742faf472753ba45046ea985da58b15a9f37c3661d2e47485541ba2"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/CONTINUATION_FINALIZATION_STATUS.json",
+      "sha256": "895e67bd39bcf7378829b8f4242e588a399bbcce26ed1b49888ef5a4622ca53d"
+    },
+    {
+      "path": "metrics/first-cohort-benchmark-20261016T094257313856Z/FAILURES.csv",
+      "sha256": "03e2bffd5b753a1430bc340fdae7406626372ebd87dd1c617f78c42ee0482132"
+    },
+    {
+      "path": "metrics/first-cohort-benchmark-20261016T094257313856Z/OPERATIONAL_SUCCESS_ONLY_DIAGNOSTICS.csv",
+      "sha256": "4c9f0c120279f1e2450148baf445b3b2ad4626a41863e6e054bd80c7a8196021"
+    },
+    {
+      "path": "metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+      "sha256": "142965e738d4f99c2af26bc75f42de0e50a8cd701bbac025015982a4edb457eb"
+    }
+  ]
+}

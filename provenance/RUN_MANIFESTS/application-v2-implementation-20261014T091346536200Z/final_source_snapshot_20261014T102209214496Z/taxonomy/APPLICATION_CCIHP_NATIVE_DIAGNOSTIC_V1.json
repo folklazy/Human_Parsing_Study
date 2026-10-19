@@ -1,0 +1,215 @@
+{
+  "schema_version": "2.0",
+  "status": "DRAFT",
+  "purpose": "Native CCIHP label-domain diagnostic; not native CIHP or an approved model leaderboard",
+  "source": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+  "target_catalog": {
+    "0": "Background",
+    "1": "Hat",
+    "2": "Hair",
+    "3": "Glove",
+    "4": "Eyewear",
+    "5": "UpperClothes",
+    "6": "FaceMask",
+    "7": "Coat",
+    "8": "Socks",
+    "9": "Pants",
+    "10": "Torso-skin",
+    "11": "Scarf",
+    "12": "Skirt",
+    "13": "Face",
+    "14": "Left-arm",
+    "15": "Right-arm",
+    "16": "Left-leg",
+    "17": "Right-leg",
+    "18": "Left-shoe",
+    "19": "Right-shoe",
+    "20": "Bag",
+    "21": "Others"
+  },
+  "gt_mapping": {
+    "0": {
+      "disposition": "MAP",
+      "target_id": 0
+    },
+    "1": {
+      "disposition": "MAP",
+      "target_id": 1
+    },
+    "2": {
+      "disposition": "MAP",
+      "target_id": 2
+    },
+    "3": {
+      "disposition": "MAP",
+      "target_id": 3
+    },
+    "4": {
+      "disposition": "MAP",
+      "target_id": 4
+    },
+    "5": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "6": {
+      "disposition": "MAP",
+      "target_id": 6
+    },
+    "7": {
+      "disposition": "MAP",
+      "target_id": 7
+    },
+    "8": {
+      "disposition": "MAP",
+      "target_id": 8
+    },
+    "9": {
+      "disposition": "MAP",
+      "target_id": 9
+    },
+    "10": {
+      "disposition": "MAP",
+      "target_id": 10
+    },
+    "11": {
+      "disposition": "MAP",
+      "target_id": 11
+    },
+    "12": {
+      "disposition": "MAP",
+      "target_id": 12
+    },
+    "13": {
+      "disposition": "MAP",
+      "target_id": 13
+    },
+    "14": {
+      "disposition": "MAP",
+      "target_id": 14
+    },
+    "15": {
+      "disposition": "MAP",
+      "target_id": 15
+    },
+    "16": {
+      "disposition": "MAP",
+      "target_id": 16
+    },
+    "17": {
+      "disposition": "MAP",
+      "target_id": 17
+    },
+    "18": {
+      "disposition": "MAP",
+      "target_id": 18
+    },
+    "19": {
+      "disposition": "MAP",
+      "target_id": 19
+    },
+    "20": {
+      "disposition": "MAP",
+      "target_id": 20
+    },
+    "21": {
+      "disposition": "MAP",
+      "target_id": 21
+    },
+    "22": {
+      "disposition": "VOID",
+      "reason": "Undocumented source label retained in original GT"
+    }
+  },
+  "prediction_mapping": {
+    "0": {
+      "disposition": "MAP",
+      "target_id": 0
+    },
+    "1": {
+      "disposition": "MAP",
+      "target_id": 1
+    },
+    "2": {
+      "disposition": "MAP",
+      "target_id": 2
+    },
+    "3": {
+      "disposition": "MAP",
+      "target_id": 3
+    },
+    "4": {
+      "disposition": "MAP",
+      "target_id": 4
+    },
+    "5": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "6": {
+      "disposition": "MAP",
+      "target_id": 6
+    },
+    "7": {
+      "disposition": "MAP",
+      "target_id": 7
+    },
+    "8": {
+      "disposition": "MAP",
+      "target_id": 8
+    },
+    "9": {
+      "disposition": "MAP",
+      "target_id": 9
+    },
+    "10": {
+      "disposition": "MAP",
+      "target_id": 10
+    },
+    "11": {
+      "disposition": "MAP",
+      "target_id": 11
+    },
+    "12": {
+      "disposition": "MAP",
+      "target_id": 12
+    },
+    "13": {
+      "disposition": "MAP",
+      "target_id": 13
+    },
+    "14": {
+      "disposition": "MAP",
+      "target_id": 14
+    },
+    "15": {
+      "disposition": "MAP",
+      "target_id": 15
+    },
+    "16": {
+      "disposition": "MAP",
+      "target_id": 16
+    },
+    "17": {
+      "disposition": "MAP",
+      "target_id": 17
+    },
+    "18": {
+      "disposition": "MAP",
+      "target_id": 18
+    },
+    "19": {
+      "disposition": "MAP",
+      "target_id": 19
+    },
+    "20": {
+      "disposition": "MAP",
+      "target_id": 20
+    },
+    "21": {
+      "disposition": "MAP",
+      "target_id": 21
+    }
+  },
+  "benchmark_eligible": false
+}

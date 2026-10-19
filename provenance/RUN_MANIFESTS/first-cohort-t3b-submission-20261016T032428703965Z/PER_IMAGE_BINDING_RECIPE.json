@@ -1,0 +1,164 @@
+{
+  "status": "PROPOSED_REFERENCE_RECIPE_NOT_ACCEPTED_SCORING_CONTEXT",
+  "common_target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+  "common_GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+  "common_domain_policy": {
+    "policy_id": "CCIHP_RELEASED_ANNOTATION_RELATIVE_CORE_R1",
+    "reference": "RELEASED_CCIHP_CATEGORY_AND_HUMAN_IDS_NOT_EXHAUSTIVE_PHYSICAL_TRUTH",
+    "category0_human0": "KNOWN_NEGATIVE_RELATIVE_TO_RELEASED_ANNOTATION",
+    "category0_human_positive": "VOID_UNKNOWN",
+    "unknown22": "VOID_SHARED_RAW_PRESERVED",
+    "known_outside_target": "VOID_SHARED",
+    "category_positive_human0": "VOID_OWNER_UNKNOWN",
+    "other_known_person_pixels": "NEGATIVE_FOR_TARGET_PERSON_WHERE_SHARED_VALID",
+    "association_uses_GT": false,
+    "categorical_resampling": "NONE_GT_ORIGINAL_GRID",
+    "FP_wording": "UNMATCHED_PREDICTION_RELATIVE_TO_RELEASED_ANNOTATION_UNDER_THIS_POLICY",
+    "person_mask": "NATIVE_HUMAN_ID_FOREGROUND_ALL_SOURCE_SEMANTICS",
+    "G_loc": "EVERY_POSITIVE_NATIVE_HUMAN_ID_WITH_NONEMPTY_RELEASED_MASK",
+    "G_sem": "G_LOC_SUBSET_WITH_AT_LEAST_ONE_VALID_TARGET_1_TO_6_PIXEL",
+    "person_semantic_truth": "TARGET_LABEL_INSIDE_THIS_HUMAN_ID_ELSE_BG_ON_SHARED_VALID_DOMAIN",
+    "per_image_GT_domain_binding": "SOURCE_MAP_HASHES_PLUS_GT_PROJECTION_DOMAIN_POLICY_AND_G_LOC_G_SEM",
+    "recipe_hash_is_decoded_mask_hash": false,
+    "policy_sha256": "f555e66fc8e5fcb7dd9624356e6fab1cd8f361f00cc6fe8489baa1936066d7cf"
+  },
+  "populations": {
+    "main": "overlap_controlled_source_target",
+    "reference": "original_source_target",
+    "main_images": 4961,
+    "main_G_loc": 17434,
+    "main_G_sem": 17390,
+    "reference_images": 5000,
+    "reference_G_loc": 17548,
+    "reference_G_sem": 17504,
+    "main_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+    "main_manifest_sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+    "reference_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+    "reference_manifest_sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+    "main_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+    "main_person_sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+    "reference_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+    "reference_person_sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+    "exclusions": "39_VALIDATION_IDS_WITH_EXACT_DECODED_TRAIN_RGB_REUSE_ONLY",
+    "within_validation_duplicates": "RETAIN_SOURCE_MEMBERSHIP_2_IDS_1_GROUP_DISCLOSED",
+    "near_duplicates": "114_PAIRS_RISK_SCREEN_ONLY_NO_NEW_EXCLUSIONS",
+    "exposure_claim": "NOT_TRAINING_EXPOSURE_FREE_OR_ARCHITECTURE_CONTROLLED"
+  },
+  "per_image_derivation": "Select exact row by image_id from bound manifest; hash source_maps/original_wh/GT_projection_sha256/domain_policy_sha256",
+  "first_row_example": {
+    "image_id": "0000001",
+    "G_loc": 4,
+    "G_sem": 4,
+    "GT_domain_recipe_sha256": "b35441809bcd1d5b92034ab712cc5293832541fafc17e17ab164294f223c7ce4"
+  },
+  "example_recipe": {
+    "image_id": "0000001",
+    "source_maps": [
+      {
+        "component": "Category_ids",
+        "member": "CCIHP_icip/dataset/Validation/Category_ids/0000001.png",
+        "sha256": "5f2247273cf69f63b440624ba68cc0ad4989e8abc66bb9bb5ac5fa1c06ae4a9d",
+        "mode": "L",
+        "dtype": "uint8",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          21
+        ]
+      },
+      {
+        "component": "Human_ids",
+        "member": "CCIHP_icip/dataset/Validation/Human_ids/0000001.png",
+        "sha256": "8c4740cf96995aeba69f33e317d2232fbb28ef2dde2bedf45cb290bd6610672f",
+        "mode": "L",
+        "dtype": "uint8",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "component": "Instance_ids",
+        "member": "CCIHP_icip/dataset/Validation/Instance_ids/0000001.png",
+        "sha256": "b12db650bfc2dc94f5be509b56ed2606fbb378fd7375b14dfb7afbdec42f50e2",
+        "mode": "I;16",
+        "dtype": "uint16",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      }
+    ],
+    "original_wh": [
+      500,
+      375
+    ],
+    "GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+    "domain_policy_sha256": "f555e66fc8e5fcb7dd9624356e6fab1cd8f361f00cc6fe8489baa1936066d7cf"
+  },
+  "GT_pixels_redecoded": false,
+  "membership_recounted": false,
+  "native_mapping_may_differ_by_checkpoint": true,
+  "domain_and_GT_counts_may_differ_by_image": true,
+  "same_image_binding_must_equal_across_systems": true
+}

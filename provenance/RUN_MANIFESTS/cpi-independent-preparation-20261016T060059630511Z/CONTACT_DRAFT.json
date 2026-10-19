@@ -1,0 +1,16 @@
+{
+  "status": "DRAFT_NOT_SENT",
+  "draft": "reports/CPI_CHANNEL_CONFIRMATION_REQUEST_DRAFT_20261016.md",
+  "draft_sha256": "7143aa560462fffd910c0d4f592b6527196ded9b2bbfcd807952732ec6024d7d",
+  "proposed_destination": "https://github.com/JosonChan1998/CPI-Parser/issues",
+  "destination_basis": "Linked upstream already established in completed source investigation; no new search",
+  "channel": "PUBLIC_GITHUB_ISSUE_IF_USER_AUTHORIZES_AND_ACCOUNT_ACCESS_IS_AVAILABLE",
+  "explicit_send_approval_received": false,
+  "recipient_contacted": false,
+  "attachment": "NONE",
+  "question_scope": "OUTPUT_IDS_0_TO_19_FOR_TWO_RELEASED_CIHP_CHECKPOINTS_SAME_STANDARD_ORDER_WITHOUT_REMAP_CONFIRMATION_SUFFICIENT",
+  "requires_full_training_history": false,
+  "requires_full_dataset": false,
+  "semantic_acceptance": "PAUSED",
+  "direct_evidence_scope": "PROJECT_SELECTED_CONFIDENCE_STANDARD_NOT_UNIVERSAL_REQUIREMENT_OR_PROOF_OF_WRONG_ORDER"
+}

@@ -1,0 +1,229 @@
+{
+  "comparison": {
+    "comparison_id": "CCIHP_CORE_CPI_T3B_QUALITY_RELEASED_GT_PROPOSED_R2:48ff467fead7",
+    "definition_sha256": "48ff467fead7a41ac48568f9135034d94f55baa8e03843af6fbaf47a658bcf54"
+  },
+  "policy": "STRICT_COMPLETE",
+  "population_sha256": "2738980a117749c16cee113bd3d7f71161add5fb244f593059a7ae022db5d94a",
+  "systems": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "status": "COMPLETE",
+      "main_score_eligible": true,
+      "main_metrics": {
+        "G_loc": 7,
+        "G_sem": 7,
+        "Q_person_sem_GT": 0.7521968537556002,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1,
+        "localization_recall": 0.8571428571428571,
+        "localization_precision": 1.0
+      },
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 3,
+        "failed": 0,
+        "invalid": 0,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 3,
+        "denominator": 3,
+        "completion_rate": 1.0
+      },
+      "population": {
+        "frames": 3,
+        "G_loc": 7,
+        "G_sem": 7
+      },
+      "operational_diagnostics": {
+        "failure_events": [],
+        "failure_event_count": 0,
+        "native_stage_ledgers": [
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 6,
+              "denominator": 6,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          },
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          },
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          }
+        ]
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 3,
+        "G_loc_observed": 7,
+        "G_sem_observed": 7,
+        "Q_person_sem_GT": 0.7521968537556002,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1
+      }
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "status": "COMPLETE",
+      "main_score_eligible": true,
+      "main_metrics": {
+        "G_loc": 7,
+        "G_sem": 7,
+        "Q_person_sem_GT": 0.7716148193464479,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1,
+        "localization_recall": 0.8571428571428571,
+        "localization_precision": 1.0
+      },
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 3,
+        "failed": 0,
+        "invalid": 0,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 3,
+        "denominator": 3,
+        "completion_rate": 1.0
+      },
+      "population": {
+        "frames": 3,
+        "G_loc": 7,
+        "G_sem": 7
+      },
+      "operational_diagnostics": {
+        "failure_events": [],
+        "failure_event_count": 0,
+        "native_stage_ledgers": [
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 6,
+              "denominator": 6,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          },
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          },
+          {
+            "native": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            },
+            "association": {
+              "stage": "T3B_association",
+              "unit": "YOLO_opportunity",
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0,
+              "status": "DEFINED",
+              "skipped_by_routing": 0
+            }
+          }
+        ]
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 3,
+        "G_loc_observed": 7,
+        "G_sem_observed": 7,
+        "Q_person_sem_GT": 0.7716148193464479,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1
+      }
+    }
+  ],
+  "cross_comparison_ranking": "PROHIBITED_WHEN_VIEW_DOMAIN_OR_TARGET_DIFFER",
+  "benchmark_authorization": false,
+  "purpose": "TRAIN_ENGINEERING_SCORER_REPORTER_INTEGRATION_NOT_MODEL_RANKING",
+  "matching_view": "secondary",
+  "GT_matching_threshold": 0.75
+}

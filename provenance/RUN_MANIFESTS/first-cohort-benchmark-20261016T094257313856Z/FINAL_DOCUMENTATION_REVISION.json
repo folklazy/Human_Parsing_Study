@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-10-19T03:57:58.337687+00:00",
+  "reason": "Close stale preparation status, clarify configuration/test evidence scope, and link terminal checks; no metric, policy, source prediction or inference changes",
+  "files": [
+    {
+      "path": "reports/FIRST_COHORT_T3B_BENCHMARK_REPORT_TH_20261019.md",
+      "archive": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/final_documentation_before_v1/reports/FIRST_COHORT_T3B_BENCHMARK_REPORT_TH_20261019.md",
+      "before_sha256": "2c2c24eb1bea070cb68a8019b5dc6db930763b6b3302bc76c0839f88940d799d",
+      "after_sha256": "dcfeddc1d1aeb320893d79fd1c15c7a2dbb5dc7ece820b5a21e69510792cd00a"
+    },
+    {
+      "path": "README.md",
+      "archive": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/final_documentation_before_v1/README.md",
+      "before_sha256": "60faa140f14fa8ff570e06b7146b9f0329a8fa5dfa931011b9ae80587b63dde6",
+      "after_sha256": "35fdceb4177faa0d2ec28baead9e860c401fdbe82e1d8972bb7c5747a4ed8fd2"
+    },
+    {
+      "path": "STUDY_STATE.json",
+      "archive": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/final_documentation_before_v1/STUDY_STATE.json",
+      "before_sha256": "91aff6de17d5240efa0cb0a17b08b61206612d5db7ac18aefbebe3faee226e61",
+      "after_sha256": "e3803e889ede7eb23508e476a1617607f794cd445891416a98eeeb9e98e338cb"
+    },
+    {
+      "path": "provenance/CURRENT_STUDY_ARTIFACTS.json",
+      "archive": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/final_documentation_before_v1/provenance/CURRENT_STUDY_ARTIFACTS.json",
+      "before_sha256": "8298cd264efcb1eeeabfaf0456c2d6d4cabe9b6e637d2db0b71d87cda9ccc33a",
+      "after_sha256": "294083830940c30d40954f9d92cf277038d6aeff0f99e8a5f463c0c18640bec4"
+    },
+    {
+      "path": "provenance/FIRST_COHORT_BENCHMARK_ACTIVE.json",
+      "archive": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/final_documentation_before_v1/provenance/FIRST_COHORT_BENCHMARK_ACTIVE.json",
+      "before_sha256": "2befcd611e476ffcce5b53622d5438691d662603a8660eda0752a95c19c413ae",
+      "after_sha256": "1c33daa789b218f600ebc148e492778f4a1e2fd7c3fc211263466c279eb1caad"
+    }
+  ]
+}

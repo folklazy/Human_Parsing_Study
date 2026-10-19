@@ -1,0 +1,11 @@
+{
+  "status": "INTERRUPTED_EXTERNAL_CAUSE_UNKNOWN",
+  "observed_utc": "2026-10-19T02:50:14.469871+00:00",
+  "no_active_worker": true,
+  "R50_rows": 5000,
+  "ConvNeXt_committed_rows": 3779,
+  "partial_orphan_id": "0034896",
+  "original_RUNs_preserved": true,
+  "original_shared_YOLO_environment_failure_retained": true,
+  "validation_scoring_started": false
+}

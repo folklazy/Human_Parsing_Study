@@ -1,0 +1,82 @@
+{
+  "old_full_suite": {
+    "total": 190,
+    "application": 123,
+    "foundation": 67,
+    "evidence": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/validation_v2/VALIDATION.json"
+  },
+  "recent_application_only": {
+    "total": 131,
+    "prior_application": 123,
+    "added": 8,
+    "evidence": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/VALIDATION.json"
+  },
+  "old_protected126": {
+    "total": 126,
+    "groups": {
+      "Human_Parsing_MHPv2_Study": 67,
+      "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": 14,
+      "YOLO_Large_Seg_MOTS20_Benchmark": 12,
+      "YOLO_Medium_Seg_MOTS20_Benchmark": 7,
+      "YOLO_Nano_Seg_MOTS20_Benchmark": 7,
+      "YOLO_Second_Largest_Seg_MOTS20_Benchmark": 12,
+      "YOLO_Small_Seg_MOTS20_Benchmark": 7
+    }
+  },
+  "recent_protected37": {
+    "total": 37,
+    "intersection_with_126": [],
+    "is_subset_of_126": false,
+    "rechecked_now": 35,
+    "paused_PPSS_not_reopened": [
+      "Human_Parsing_MHPv2_Study/taxonomy/PPSS_NATIVE_LABEL_INVENTORY.json",
+      "Human_Parsing_MHPv2_Study/taxonomy/PPSS_TO_COMMON_HP_DRAFT.yaml"
+    ],
+    "prior_record": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/PROTECTED_EXISTING_FILES.json"
+  },
+  "protected126_changed": [],
+  "recent_non_PPSS_protected_changed": [],
+  "foundation_test_hash_checks": [
+    {
+      "path": "tests/test_mhpv2_stage0.py",
+      "prior_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot/tests/test_mhpv2_stage0.py",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_official_mhp_compat.py",
+      "prior_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot/tests/test_official_mhp_compat.py",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_dataset_reassessment.py",
+      "prior_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot/tests/test_dataset_reassessment.py",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_ccihp_gt.py",
+      "prior_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot/tests/test_ccihp_gt.py",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_ccihp_quality.py",
+      "prior_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot/tests/test_ccihp_quality.py",
+      "unchanged": true
+    }
+  ],
+  "foundation_production_source_hashes": {
+    "Human_Parsing_MHPv2_Study/src/contracts/prediction.py": "ef0335ea0c7a045d6cee4df84f6ae2ab14310fc6735560b634059551a574ac92",
+    "Human_Parsing_MHPv2_Study/src/data/ccihp_quality.py": "7b07f919fc3cf76bc0a2be2b66c8018b4e71be7e0550f0fc9bd9aefd3b958a1a",
+    "Human_Parsing_MHPv2_Study/src/data/cihp_datasetninja.py": "f49bc283b152c30da8abdcfc617d2524750f58ed54f5fcbcdc0ea5c88aaced7b",
+    "Human_Parsing_MHPv2_Study/src/data/ccihp_gt.py": "f9827c5588d72d21518f1bed7769c27b0372525c464dfa096ba07226146f791e",
+    "Human_Parsing_MHPv2_Study/src/data/mhpv2.py": "48971a71dc2a03ab785d408c1cb5c013e777df583ad8d7d4b7861d49f2f01fb6",
+    "Human_Parsing_MHPv2_Study/src/adapters/fashn.py": "1fecd7bdea17c55eefb241651f27e623708f5edbfe42a3545c0e49a58a0ed74b",
+    "Human_Parsing_MHPv2_Study/src/adapters/base.py": "81e143c474fc2d414789b96d431057c5ccb2e0a7528eb9a3e532bc3bf8ff4b70",
+    "Human_Parsing_MHPv2_Study/src/evaluation/common_metrics.py": "49e4b1d35d37cc5d849cf7a0d4e86bbf8cbb1b5ec66f4ffa894e01536500c3af",
+    "Human_Parsing_MHPv2_Study/src/evaluation/official_mhp_compat.py": "e0bd0f5d8ba58f858952bc7d95aed3bd9afecd28e4be5d93b8144e9f95d11c46"
+  },
+  "foundation_production_changed": [],
+  "foundation_test_execution": "REUSE_PREVIOUS_67_PASS_NO_PRODUCTION_OR_TEST_CHANGES",
+  "foundation_not_newly_executed": true,
+  "original_archive_stat_changes": [],
+  "limitation": "Hashes protect only named files, not every file in the workspace; archive stats are not new full archive hashes"
+}

@@ -1,0 +1,9 @@
+system_id,population,matching_view,IoU_threshold,status,main_score_eligible,frames,G_loc,G_sem,frames_complete,frames_failed,frames_invalid,frames_not_attempted,Q_person_sem_GT,TP,FP,FN,localization_recall,localization_precision
+CPI_R50_CIHP,main,primary,0.5,INCOMPLETE,False,4961,17434,17390,4436,525,0,0,,,,,,
+CPI_ConvNeXtB_CIHP,main,primary,0.5,INCOMPLETE,False,4961,17434,17390,4920,40,1,0,,,,,,
+CPI_R50_CIHP,main,secondary,0.75,INCOMPLETE,False,4961,17434,17390,4436,525,0,0,,,,,,
+CPI_ConvNeXtB_CIHP,main,secondary,0.75,INCOMPLETE,False,4961,17434,17390,4920,40,1,0,,,,,,
+CPI_R50_CIHP,reference,primary,0.5,INCOMPLETE,False,5000,17548,17504,4475,525,0,0,,,,,,
+CPI_ConvNeXtB_CIHP,reference,primary,0.5,INCOMPLETE,False,5000,17548,17504,4959,40,1,0,,,,,,
+CPI_R50_CIHP,reference,secondary,0.75,INCOMPLETE,False,5000,17548,17504,4475,525,0,0,,,,,,
+CPI_ConvNeXtB_CIHP,reference,secondary,0.75,INCOMPLETE,False,5000,17548,17504,4959,40,1,0,,,,,,

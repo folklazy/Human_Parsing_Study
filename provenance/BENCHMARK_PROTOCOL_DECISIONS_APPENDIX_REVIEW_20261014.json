@@ -1,0 +1,171 @@
+{
+  "recorded_at_utc": "2026-10-14T08:14:33.504650+00:00",
+  "scope": "DECISIONS_APPENDIX_REVIEW_ONLY",
+  "source_document": "BENCHMARK_PROTOCOL_20_VARIANTS_V2_DECISIONS_APPENDIX_TH_20261014.md",
+  "source_sha256_before": "0fa45ba933255a474b2ce7b27c7dbe3423063cf63033dd018fcfad7ed9ccc80a",
+  "source_sha256_after": "0fa45ba933255a474b2ce7b27c7dbe3423063cf63033dd018fcfad7ed9ccc80a",
+  "source_unchanged": true,
+  "review_document": "Human_Parsing_MHPv2_Study/reports/BENCHMARK_PROTOCOL_DECISIONS_APPENDIX_REVIEW_TH_20261014.md",
+  "review_sha256": "2b8b214bf24cb29ed1fc78362b6865edd707dc3c6a5cbc92b64eddfb99ab0f27",
+  "local_links_resolve": true,
+  "local_links_checked": 3,
+  "environment": {
+    "path": ".venvs/mhpv2-stage0",
+    "python": "3.10.21",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "checks_executed": {
+    "actual_binary_masks": {
+      "image_shape": [
+        1,
+        20
+      ],
+      "GT1_positive_indices": "0:10",
+      "GT2_positive_indices": "10:20",
+      "P1_positive_indices": [
+        "0:9",
+        "10:12"
+      ],
+      "P2_positive_indices": "0:2",
+      "IoU_matrix": [
+        [
+          0.75,
+          0.2
+        ],
+        [
+          0.10526315789473684,
+          0.0
+        ]
+      ],
+      "threshold": 0.1,
+      "project_matches": [
+        [
+          0,
+          1,
+          0.2
+        ],
+        [
+          1,
+          0,
+          0.10526315789473684
+        ]
+      ],
+      "cardinality": 2,
+      "sum_iou": 0.30526315789473685,
+      "weight_only_best_sum": 0.75,
+      "status": "PASS"
+    },
+    "assignment_oracle": {
+      "graphs": 300,
+      "seed": 20261014,
+      "random_generator": "numpy.random.default_rng",
+      "GT_and_prediction_counts": "rng.integers(1,5,size=2)",
+      "edge_weights": "rng.integers(0,11,size=(ng,npred)).astype(float)/10",
+      "thresholds": [
+        0.1,
+        0.3,
+        0.5,
+        0.75
+      ],
+      "threshold_generation": "rng.choice",
+      "subject": "Unchanged project match_persons; mask_iou mocked to edge matrix to isolate assignment",
+      "reference": "Independent exhaustive partial-assignment enumeration",
+      "objective": "eligible cardinality then sum IoU",
+      "comparison_tolerance": 1e-12,
+      "status": "PASS",
+      "stable_ID_tie_selection_tested": false,
+      "not_original_appendix_test_reproduction": true
+    },
+    "per_person_neighbor_contamination": {
+      "GT_A": [
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "GT_B": [
+        [
+          0,
+          0,
+          2,
+          2
+        ]
+      ],
+      "prediction_A": [
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "prediction_B": [
+        [
+          0,
+          0,
+          2,
+          2
+        ]
+      ],
+      "declared_pairing": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "GT_supported_person_semantic_scores": [
+        1.0,
+        1.0
+      ],
+      "global_semantic_miou": 1.0,
+      "per_person_foreground_iou": [
+        0.5,
+        1.0
+      ],
+      "person_A_predicted_only_neighbor_class_FP_pixels": 2,
+      "bbox_note": "Exact emitted identity boxes assumed; mask-derived box matching is a different condition. Synthetic metric fixture, not application routing validation."
+    },
+    "bbox_vs_mask": {
+      "GT_mask_area": 100,
+      "prediction_mask_area": 1,
+      "declared_emitted_bbox_iou": 1.0,
+      "mask_iou": 0.01,
+      "result": "Localizing an emitted bbox does not prove parsing success."
+    }
+  },
+  "authoritative_reference_checks": [
+    {
+      "URL": "https://detectron2.readthedocs.io/en/latest/_modules/detectron2/evaluation/sem_seg_evaluation.html",
+      "observed": "acc_valid=pos_gt>0; iou_valid includes acc_valid",
+      "claim_scope": "GT-supported class-mean precedent; not full parity or frozen source revision"
+    },
+    {
+      "URL": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html",
+      "claim_scope": "Assignment solver API, not independent proof of study matching semantics"
+    }
+  ],
+  "limits": [
+    "CPU-only synthetic checks, no real dataset or model inputs",
+    "No bbox primitive/integration validation",
+    "No stable ID tie selection certification",
+    "No new taxonomy/dataset promotion or licensing decision",
+    "No rerun of prior 20 or 26 test groups"
+  ],
+  "safety": {
+    "parser_or_yolo_inference": false,
+    "dataset_modified": false,
+    "PPSS_activity": false,
+    "scientific_source_code_modified": false,
+    "study_state_or_protocol_modified": false,
+    "new_download_or_install": false,
+    "full_benchmark_started": false,
+    "git_commit_or_push": false
+  }
+}

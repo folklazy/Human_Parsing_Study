@@ -1,0 +1,245 @@
+{
+  "active_documents_validated_separately": true,
+  "unavailable_historical_references": [
+    {
+      "historical_document": "reports/MHPV2_QUALITY_RISK_REVIEW.md",
+      "target": "../outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_01.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "target": "../provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/logs",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CPI_PAPER_REPOSITORY_TAXONOMY_REASSESSMENT_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/pubmed.xml",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "target": "../outputs/visualizations/stage0e-ccihp-native-20261012T045912Z/case_0002190.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "target": "../outputs/visualizations/stage0e-ccihp-native-20261012T045912Z/case_0005008.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "target": "../outputs/visualizations/stage0e-ccihp-native-20261012T045912Z/case_0012008.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_CONDITIONAL_POLICY_REVIEW_TH_20261015.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/TRAIN_DOMAIN_PROPOSALS.npz",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_CONDITIONAL_POLICY_REVIEW_TH_20261015.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/validation_20261015T085912527266Z/CHANGES.diff",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_T3B_APPROVAL_PACKAGE_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/CHANGES.diff",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_HUMAN_REVIEW_STAGE0F.md",
+      "target": "../outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/index.html",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_FRESH_TRAIN_SCORING_CLOSURE_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/PRIMARY_FRAME_SCORES.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_FRESH_TRAIN_SCORING_CLOSURE_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/SECONDARY_FRAME_SCORES.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_FRESH_TRAIN_SCORING_CLOSURE_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/SOURCE.diff",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CPI_STANDARD_MAPPING_ACCEPTANCE_AND_TRAIN_REPLAY_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0021834_saved_channels.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CPI_STANDARD_MAPPING_ACCEPTANCE_AND_TRAIN_REPLAY_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0000930_saved_channels.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CPI_STANDARD_MAPPING_ACCEPTANCE_AND_TRAIN_REPLAY_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0001368_saved_channels.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/TAXONOMY_AUDIT.md",
+      "target": "../metrics/DATASET_NATIVE_CLASS_SUPPORT.csv",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+      "target": "../provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/IMAGE_AUDIT.jsonl",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+      "target": "../provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/PERSON_AUDIT.jsonl",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+      "target": "../provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/PERSON_SEMANTIC_SUPPORT_WARNINGS.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+      "target": "../outputs/visualizations/stage0f-ccihp-quality-20261012T062825Z/focused_warnings_v2/0014422_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CIHP_ARCHIVE_PREFLIGHT_AUDIT.md",
+      "target": "../outputs/visualizations/cihp-archive-preflight-20261008T102552Z/cihp_preflight/training_0005008_semantic_diagnostic.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CIHP_ARCHIVE_PREFLIGHT_AUDIT.md",
+      "target": "../provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/TAR_MEMBER_SHA256.jsonl",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0014422_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0014422_ROI_v2.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0010505_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0010505_ROI_v2.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0000287_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0000287_ROI_v2.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0034455_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0034455_ROI_v2.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0019562_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0008613_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0008613_ROI_v2.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0004381_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0019700_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0031399_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0026977_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0002891_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "target": "../outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0028338_full.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/APPLICATION_V2_CPU_REVIEW_INDEPENDENT_TH_20261015.md",
+      "target": "../outputs/reviews/application_v2_cpu_review_20261015T025542893148Z/PROBES_AND_SUPPORT.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/APPLICATION_V2_CPU_REVIEW_INDEPENDENT_TH_20261015.md",
+      "target": "../outputs/reviews/application_v2_cpu_review_20261015T025542893148Z/BASE_TESTS.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/APPLICATION_V2_CPU_REVIEW_INDEPENDENT_TH_20261015.md",
+      "target": "../outputs/reviews/application_v2_cpu_review_20261015T025542893148Z/PATCH_BASE_REVIEW.json",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/FIRST_COHORT_POLICY_ACCEPTANCE_AND_READINESS_TH_20261016.md",
+      "target": "../provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/validation_v2/CHANGES.diff",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/MHPV2_DATASET_AUDIT.md",
+      "target": "../outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/instance_ownership_9968.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/MHPV2_DATASET_AUDIT.md",
+      "target": "../metrics/DATASET_PERSON_STATISTICS.csv",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/MHPV2_DATASET_AUDIT.md",
+      "target": "../metrics/DATASET_NATIVE_CLASS_SUPPORT.csv",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    },
+    {
+      "historical_document": "reports/MHPV2_DATASET_AUDIT.md",
+      "target": "../outputs/visualizations/stage0-20261008T063349Z/mhpv2_gt/contact_sheet.png",
+      "status": "EXTERNAL_OR_UNAVAILABLE_NOT_CLAIMED_REPRODUCED"
+    }
+  ]
+}

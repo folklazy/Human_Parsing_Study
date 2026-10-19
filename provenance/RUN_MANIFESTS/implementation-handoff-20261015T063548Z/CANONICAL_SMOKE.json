@@ -1,0 +1,74 @@
+[
+  {
+    "model": "CPI_ConvNeXtB_CIHP",
+    "track": "T1",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_ConvNeXtB_CIHP_T1",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_ConvNeXtB_CIHP",
+    "track": "T3B",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_ConvNeXtB_CIHP_T3B",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_ConvNeXtB_MHPV2",
+    "track": "T1",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_ConvNeXtB_MHPV2_T1",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_ConvNeXtB_MHPV2",
+    "track": "T3B",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_ConvNeXtB_MHPV2_T3B",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_R50_CIHP",
+    "track": "T1",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_R50_CIHP_T1",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_R50_CIHP",
+    "track": "T3B",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_R50_CIHP_T3B",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_R50_MHPV2",
+    "track": "T1",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_R50_MHPV2_T1",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  },
+  {
+    "model": "CPI_R50_MHPV2",
+    "track": "T3B",
+    "persons": 2,
+    "packet": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/canonical_smoke/CPI_R50_MHPV2_T3B",
+    "canonical_contract": "PASS",
+    "scoring": "NOT_EXECUTED_DRAFT",
+    "live_joint_pipeline": false
+  }
+]

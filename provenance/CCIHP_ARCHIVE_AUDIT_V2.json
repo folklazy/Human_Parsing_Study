@@ -1,0 +1,141 @@
+{
+  "schema_version": "2.0",
+  "run_id": "stage0e-ccihp-native-20261012T045912Z",
+  "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+  "requested_ccihp_archive_present": true,
+  "archive_workspace_relative": "datasets/CCIHP_icip.zip",
+  "archive_bytes": 842868844,
+  "archive_sha256": "373f3183bf58c3e5637ba3564c9b8abef923dc434b78f469b3722282d1514829",
+  "release_identity": "CCIHP_icip; included README/license/citation consistent with author CCIHP documentation",
+  "publisher_binary_checksum": "NOT_AVAILABLE",
+  "download_receipt_source": "USER_TRANSFERRED_EXACT_UPSTREAM_DOWNLOAD_NOT_INDEPENDENTLY_VERIFIED",
+  "zip_member_count": 209707,
+  "zip_regular_members": 209688,
+  "all_member_crc": "PASS",
+  "safe_archive_paths": "PASS",
+  "member_inventory": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/ZIP_MEMBER_SHA256.jsonl",
+  "member_inventory_sha256": "9949e3bdc741fabd83fbb458bdd93a6662b9a002d8c81f76d5e61a2b5db5e89b",
+  "CCIHP_train_annotation_sets": 28280,
+  "CCIHP_validation_annotation_sets": 5000,
+  "CCIHP_test_annotation_sets": "NOT_SUPPLIED_EXPECTED",
+  "CCIHP_RGB_images_in_archive": 0,
+  "missing_required_train_val_components": 0,
+  "available_layers": [
+    "Category_ids",
+    "Human_ids",
+    "Instance_ids",
+    "Color_ids",
+    "Pattern_ids",
+    "Size_ids"
+  ],
+  "validation_extra_layer": "Charac_instance_ids (structural identification only)",
+  "CIHP_datasetninja_archive": "datasets/cihp-DatasetNinja.tar",
+  "rehashed_datasetninja_whole_archive": false,
+  "train_validation_membership_vs_datasetninja": "EXACT_BOTH_SPLITS",
+  "semantic_readability_grid_tests": {
+    "images": 30,
+    "pngs": 90,
+    "status": "PASS"
+  },
+  "sample_split_counts": {
+    "Training": 25,
+    "Validation": 5
+  },
+  "validation_integrity_only_not_model_tuning": true,
+  "native_CCIHP_person_planes_in_sample": 96,
+  "all_source_grid_roundtrip": "PASS_30_CASES",
+  "CCIHP_full_person_count": "NOT_COMPUTED_IN_BOUNDED_AUDIT",
+  "declared_foreground_classes": 21,
+  "declared_background": 0,
+  "observed_category_values_sample": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "undocumented_category_values": [
+    {
+      "split": "Training",
+      "image_id": "0033810",
+      "labels": [
+        22
+      ],
+      "pixels": 2,
+      "coordinates_xy": [
+        [
+          301,
+          162
+        ],
+        [
+          302,
+          162
+        ]
+      ]
+    }
+  ],
+  "human_semantic_coverage_gaps_pixels": 12,
+  "category_foreground_without_human_pixels": 0,
+  "attribute_instances_without_human_pixels": 0,
+  "sample_attribute_instances": 840,
+  "single_human_and_category_attribute_instances": 840,
+  "CIHP_parts_checked": 741,
+  "CIHP_part_to_CCIHP_human_association": {
+    "EXACT_ONE_HUMAN_FULL_SUPPORT": 694,
+    "MULTIPLE_HUMANS": 21,
+    "ONE_HUMAN_WITH_UNASSIGNED_PIXELS": 26
+  },
+  "raw_same_numeric_ID_semantic_difference_pixels": 304537,
+  "foreground_difference_pixels": 35492,
+  "numeric_difference_is_not_quality_score_or_harmonized_metric": true,
+  "independent_CCIHP_RGB_identity": "NOT_TESTED_NO_CCIHP_RGB_COPY; use documented shared CIHP RGB",
+  "native_CIHP_semantic_reference_parity": "PASS_5_OFFICIAL_TRAIN_DEMOS_FOR_DATASETNINJA",
+  "native_CIHP_human_reference_parity": "NOT_TESTED_REFERENCE_UNAVAILABLE",
+  "ignore_and_amodal_overlap_conventions": "UNRESOLVED; do not assume semantic holes or unknown22 are ignore",
+  "physical_person_review": {
+    "images": 3,
+    "dominant_foreground_alignment": "OBSERVED",
+    "complete_visible_person_coverage": "NOT_VERIFIED"
+  },
+  "annotation_license": "CC-BY-NC-4.0_VERIFIED_INCLUDED_LICENSE_AND_README",
+  "evaluation_code_license": "MIT_VERIFIED_HEADERS",
+  "scope_decision": "5A_REUSED",
+  "original_CIHP_RGB_rights": "UNRESOLVED_PREVIOUS_ASSESSMENT",
+  "DatasetNinja_terms": "PROVIDER_MIT_NOT_ORIGINAL_RIGHTS_GRANT",
+  "decision": "B",
+  "decision_name": "PARTIALLY_COMPATIBLE",
+  "native_CIHP_GT_ready": false,
+  "custom_CCIHP_person_GT_feasibility": "CONDITIONAL_FULL_QUALITY_TAXONOMY_DATASET_RIGHTS_REVIEW",
+  "official_CIHP_download": "NOT_REQUIRED_TO_CONTINUE_CUSTOM_AUDIT; VERIFIED_NATIVE_GT_REQUIRED_FOR_NATIVE_CIHP_TRACK",
+  "taxonomy_frozen": false,
+  "primary_dataset_promoted": false,
+  "new_inference": false,
+  "originals_modified": false,
+  "dataset_or_checkpoint_download": false,
+  "full_benchmark": false,
+  "ppss_activity": false,
+  "cctv_activity": false,
+  "attributes_evaluated": false,
+  "prior_stage0e_missing_archive_assessment": "Historical C applied before ZIP arrived; preserved in versioned archive",
+  "zip_evidence": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/ZIP_INTEGRITY.json",
+  "cross_dataset_evidence": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/BOUNDED_CROSS_DATASET_COMPARISON.json",
+  "fidelity_evidence": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/CCIHP_GT_FIDELITY.json",
+  "matrix": "taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+  "report": "reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md"
+}

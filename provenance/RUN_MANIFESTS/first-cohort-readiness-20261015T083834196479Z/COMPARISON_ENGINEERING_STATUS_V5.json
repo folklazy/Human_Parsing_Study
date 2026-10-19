@@ -1,0 +1,116 @@
+{
+  "comparison": {
+    "comparison_id": "CCIHP_BODY_CLOTHING_CPI_NATIVE_YOLO_ASSOC_DRAFT_R1:515175f66c95",
+    "definition_sha256": "515175f66c95c1081e8905ac440d9723af540528d1093ea522705509d0e7c9e5"
+  },
+  "policy": "STRICT_COMPLETE",
+  "population_sha256": "f5f884ea8f489e08c016c373fd556f54355999f006167e33f0fa6a757f3a05bd",
+  "systems": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "status": "BLOCKED_SCORING_POLICY",
+      "main_score_eligible": false,
+      "main_metrics": null,
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 1,
+        "failed": 0,
+        "invalid": 0,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 1,
+        "denominator": 1,
+        "completion_rate": 1.0
+      },
+      "population": {
+        "frames": 1,
+        "G_loc": 2,
+        "G_sem": 2
+      },
+      "operational_diagnostics": {
+        "failure_events": [],
+        "failure_event_count": 0,
+        "native_stage_ledgers": [
+          {
+            "native_frame": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1
+            },
+            "association": {
+              "stage": "YOLO_opportunity_association",
+              "unit": "opportunity",
+              "numerator": 2,
+              "denominator": 2
+            }
+          }
+        ]
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 0,
+        "G_loc_observed": 0,
+        "G_sem_observed": 0,
+        "Q_person_sem_GT": null,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0
+      }
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "status": "BLOCKED_SCORING_POLICY",
+      "main_score_eligible": false,
+      "main_metrics": null,
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 1,
+        "failed": 0,
+        "invalid": 0,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 1,
+        "denominator": 1,
+        "completion_rate": 1.0
+      },
+      "population": {
+        "frames": 1,
+        "G_loc": 2,
+        "G_sem": 2
+      },
+      "operational_diagnostics": {
+        "failure_events": [],
+        "failure_event_count": 0,
+        "native_stage_ledgers": [
+          {
+            "native_frame": {
+              "stage": "native_parser",
+              "unit": "frame",
+              "numerator": 1,
+              "denominator": 1
+            },
+            "association": {
+              "stage": "YOLO_opportunity_association",
+              "unit": "opportunity",
+              "numerator": 2,
+              "denominator": 2
+            }
+          }
+        ]
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 0,
+        "G_loc_observed": 0,
+        "G_sem_observed": 0,
+        "Q_person_sem_GT": null,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0
+      }
+    }
+  ],
+  "cross_comparison_ranking": "PROHIBITED_WHEN_VIEW_DOMAIN_OR_TARGET_DIFFER",
+  "benchmark_authorization": false
+}

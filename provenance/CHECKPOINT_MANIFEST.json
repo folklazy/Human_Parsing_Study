@@ -1,0 +1,70 @@
+{
+  "M2FP_R101_MHPV2": {
+    "url": "https://drive.google.com/file/d/1n8Sg7UiBHlx8yB8lQPzsSP52mguWQAdR/view",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "CPI_R50_MHPV2": {
+    "url": "https://drive.google.com/file/d/15yp_c5ZNFbvkFn5K3wVkHix7F-m-3FBZ/view?usp=sharing",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "CPI_CONVNEXT_MHPV2": {
+    "url": "https://drive.google.com/file/d/1qpdS8dEdhdjcYUOiDEiTusIyjifBAYCy/view?usp=sharing",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "SAPIENS2_0_4B": {
+    "url": "NOT_REQUESTED_LICENSE_BLOCKED",
+    "download_status": "NOT_REQUESTED_LICENSE_BLOCKED",
+    "source_link_verified": false,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "FASHN": {
+    "url": "https://huggingface.co/fashn-ai/fashn-human-parser/resolve/1f80c34dbab321c5730dda5c3fea279fd3e97498/model.safetensors",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": false,
+    "revision": "1f80c34dbab321c5730dda5c3fea279fd3e97498",
+    "expected_sha256_from_official_lfs": "e43c8c8a9b04f28798f0a4630cf18caa2cdb27a0d454fae43a5716e6f7078244",
+    "expected_bytes": 256146352,
+    "format": "SAFETENSORS"
+  },
+  "D2FP_CIHP": {
+    "url": "https://github.com/cvlab-yongin/D2FP/releases/download/weights/cihp.pth",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "D2FP_LIP": {
+    "url": "https://github.com/cvlab-yongin/D2FP/releases/download/weights/lip.pth",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  },
+  "SCHP_LIP": {
+    "url": "https://drive.google.com/file/d/1k4dllHpu0bdx38J7H28rVVLpU-kOHmnH/view?usp=sharing",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": true
+  }
+}

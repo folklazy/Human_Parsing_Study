@@ -1,0 +1,106 @@
+{
+  "schema_version": "2.0",
+  "run_id": "decision5a-license-finalization-20261012T042717Z",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "scope_decision": "5A",
+  "download_authorized": false,
+  "inference_authorized": false,
+  "inputs": [
+    {
+      "image_id": "967",
+      "split": "train",
+      "image_workspace_relative": "datasets/LV-MHP-v2/train/images/967.jpg",
+      "source_sha256": "8d4fb7716d8d52060f19257df7e8939a42c7c677a40bfaeadbd3a5c7d184f71e",
+      "decoded_rgb_sha256": "0c2144428328c6638b6869e0b43de5bc5630bef76e9d90f83be07df608ffc17e",
+      "original_wh": [
+        1280,
+        854
+      ],
+      "strict_pixel_load": "PASS",
+      "gt_annotation_workspace_relative": "datasets/LV-MHP-v2/train/parsing_annos/967_08_01.png",
+      "gt_source_sha256": "50ee0425263614c6770d6d96b229740f08cd3e4c08e208c2570bbcea086f9f53",
+      "gt_dimensions_and_class_range": "PASS",
+      "native_person_file_id": 1,
+      "physical_ownership": "NOT_CERTIFIED_BY_FILE_ID"
+    },
+    {
+      "image_id": "14282",
+      "split": "train",
+      "image_workspace_relative": "datasets/LV-MHP-v2/train/images/14282.jpg",
+      "source_sha256": "0307a409a994d5c618f6f50cd6ff967425a23dd3f8a352fbd8b9f93a60f7bcff",
+      "decoded_rgb_sha256": "bcd5ad5684cdec90fc13cf248bddf39a0a3d04a8cc59eed010a8650551216044",
+      "original_wh": [
+        683,
+        1024
+      ],
+      "strict_pixel_load": "PASS",
+      "gt_annotation_workspace_relative": "datasets/LV-MHP-v2/train/parsing_annos/14282_03_01.png",
+      "gt_source_sha256": "eb4d365f1b45e4b01b8a02e46bb539d148fde5f54802c446f845f6afd9d4b8cf",
+      "gt_dimensions_and_class_range": "PASS",
+      "native_person_file_id": 1,
+      "physical_ownership": "NOT_CERTIFIED_BY_FILE_ID"
+    },
+    {
+      "image_id": "4480",
+      "split": "train",
+      "image_workspace_relative": "datasets/LV-MHP-v2/train/images/4480.jpg",
+      "source_sha256": "1bb46de89543417eb71006923b014edec1b4aac35492d6ea247a270a4b563881",
+      "decoded_rgb_sha256": "2eb3227f45e6c405de0a629c433c1e1c36a1c30e19aebef47986d90e4a8a1abd",
+      "original_wh": [
+        501,
+        334
+      ],
+      "strict_pixel_load": "PASS",
+      "gt_annotation_workspace_relative": "datasets/LV-MHP-v2/train/parsing_annos/4480_02_01.png",
+      "gt_source_sha256": "a744f3b5983152597286b2afaee4a9d1aaf3bd9920ed3c878df04282de333270",
+      "gt_dimensions_and_class_range": "PASS",
+      "native_person_file_id": 1,
+      "physical_ownership": "NOT_CERTIFIED_BY_FILE_ID"
+    }
+  ],
+  "input_selection_source": "manifests/DEVELOPMENT_SET.json",
+  "readable_source": "manifests/mhpv2_readable_v1/TRAIN_READABLE.json",
+  "dataset_manifest_sha256": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22",
+  "checkpoint": {
+    "url": "https://huggingface.co/fashn-ai/fashn-human-parser/resolve/1f80c34dbab321c5730dda5c3fea279fd3e97498/model.safetensors",
+    "download_status": "NOT_DOWNLOADED_USER_DEFERRED",
+    "source_link_verified": true,
+    "loaded": false,
+    "sha256": null,
+    "weights_only_loader_required_for_pickle_based_weights": false,
+    "revision": "1f80c34dbab321c5730dda5c3fea279fd3e97498",
+    "expected_sha256_from_official_lfs": "e43c8c8a9b04f28798f0a4630cf18caa2cdb27a0d454fae43a5716e6f7078244",
+    "expected_bytes": 256146352,
+    "format": "SAFETENSORS"
+  },
+  "download_budget_bytes": 300000000,
+  "checkpoint_expected_bytes": 256146352,
+  "allowed_small_metadata": "Same pinned official checkpoint config/card/license only; combined download cap 300 MB",
+  "dependency_install_authorized": false,
+  "environment_workspace_relative": ".venvs/fashn-stage0",
+  "precision": "FP32",
+  "native_wh": [
+    384,
+    576
+  ],
+  "initial_images": 1,
+  "maximum_images": 3,
+  "maximum_model_forward_calls": 4,
+  "additional_forward_reason": "One native API parity check on first input",
+  "mode": "GT geometry crop for feasibility only; no model quality metric/ranking",
+  "crop_margin_draft": 0.1,
+  "crop_policy_frozen": false,
+  "crop_policy_is_benchmark_selection": false,
+  "runner_gate": "Existing runner keeps raw DATASET_BLOCKED guard; approval-specific readable-view gate adaptation required after permission and before execution",
+  "stop_conditions": [
+    "Checkpoint hash/size mismatch",
+    "GPU contention",
+    "Dependency change/download needed",
+    "License/identity mismatch",
+    "FP32 OOM or incompatible output"
+  ],
+  "full_benchmark": false,
+  "validation_inference": false,
+  "cctv_inference": false,
+  "available_disk_bytes_at_preparation": 661028216832
+}

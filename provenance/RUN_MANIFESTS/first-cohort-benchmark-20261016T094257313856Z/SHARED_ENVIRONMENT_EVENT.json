@@ -1,0 +1,10 @@
+{
+  "status": "INVALID_ENV_BEFORE_YOLO_MODEL_LOADING",
+  "component": "YOLO26X_FROZEN",
+  "cause": "SciPy imported by config/scoring validation in isolated YOLO environment; no scipy there",
+  "model_load_attempts": 0,
+  "image_inference_attempts": 0,
+  "source_log": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/YOLO26X_FROZEN.log",
+  "policy": "Retain original invalid trial; restore detector-only profile separately; no CPI image retries or confidence/mapping changes",
+  "original_worker_or_environment_modified": false
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "method": "M2FP",
+    "repository": "https://github.com/soeaver/M2FP",
+    "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/M2FP/LICENSE",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/M2FP/LICENSE",
+    "sha256": "afaea842ddf9f92923765854cf3ccdc61dc9786480420784dd2faffe3d3d8010"
+  },
+  {
+    "method": "M2FP",
+    "repository": "https://github.com/soeaver/M2FP",
+    "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/M2FP/README.md",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/M2FP/README.md",
+    "sha256": "70d3ee9583768655351af4514997ff90067613f3790b05ec52620fe26fa6a2e7"
+  },
+  {
+    "method": "CPI-Parser",
+    "repository": "https://github.com/HAG-uestc/CPI-Parser",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/CPI-Parser/LICENSE",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/CPI-Parser/LICENSE",
+    "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1"
+  },
+  {
+    "method": "CPI-Parser",
+    "repository": "https://github.com/HAG-uestc/CPI-Parser",
+    "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/CPI-Parser/README.md",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/CPI-Parser/README.md",
+    "sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70"
+  },
+  {
+    "method": "D2FP",
+    "repository": "https://github.com/cvlab-yongin/D2FP",
+    "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/D2FP/LICENSE",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/D2FP/LICENSE",
+    "sha256": "fc6a3027fe1c76125344b0e99805a51a6baf048c05cd17e7f11db5490582e02d"
+  },
+  {
+    "method": "D2FP",
+    "repository": "https://github.com/cvlab-yongin/D2FP",
+    "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/D2FP/README.md",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/D2FP/README.md",
+    "sha256": "a1d01cadd0579c47b2f01598cc42734811b6b0b801ded6f0bc9edfd055ba188d"
+  },
+  {
+    "method": "SCHP",
+    "repository": "https://github.com/GoGoDuck912/Self-Correction-Human-Parsing",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/SCHP/LICENSE",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/SCHP/LICENSE",
+    "sha256": "4b6f33d1127bad303130ad839fd79541e4390c43a4c4de3e9ebbdd90978df941"
+  },
+  {
+    "method": "SCHP",
+    "repository": "https://github.com/GoGoDuck912/Self-Correction-Human-Parsing",
+    "source_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/SCHP/README.md",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/SCHP/README.md",
+    "sha256": "91db28cf69c4d21d58ade026467bd886596c27d4b12955f95b42b1997e0910f4"
+  },
+  {
+    "method": "fashn-human-parser",
+    "repository": "https://github.com/fashn-AI/fashn-human-parser",
+    "source_commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/fashn-human-parser/LICENSE",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/fashn-human-parser/LICENSE",
+    "sha256": "873ccdc8a7d59a7919ad953a7d4fea8ad1948f67ff5d5ae1cc2418d51a281e86"
+  },
+  {
+    "method": "fashn-human-parser",
+    "repository": "https://github.com/fashn-AI/fashn-human-parser",
+    "source_commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+    "git_status": "",
+    "source_workspace_relative": "third_party/human_parsing/fashn-human-parser/README.md",
+    "snapshot": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/local_sources/fashn-human-parser/README.md",
+    "sha256": "fa4a279452a148e269798b0171ab20521d1557d2dc4c8d19f9d181bfffde8432"
+  }
+]

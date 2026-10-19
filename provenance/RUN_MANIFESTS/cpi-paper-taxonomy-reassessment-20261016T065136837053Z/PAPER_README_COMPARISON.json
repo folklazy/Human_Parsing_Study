@@ -1,0 +1,24 @@
+{
+  "source_paper": "https://arxiv.org/html/2308.12218v1#S4.T1",
+  "scope": "Related 2023 CIParsing preprint, not full 2024 TIP article",
+  "comparison_order": [
+    "mIoU",
+    "APvol",
+    "APp50",
+    "PCP50"
+  ],
+  "R50_paper_and_official_README": [
+    59.0,
+    58.4,
+    72.2,
+    67.8
+  ],
+  "ConvNeXtB_paper_and_official_README": [
+    66.5,
+    63.1,
+    80.9,
+    74.6
+  ],
+  "all_eight_values_equal": true,
+  "meaning": "Supports paper/model-release relationship; not per-checkpoint tensor-channel name proof"
+}

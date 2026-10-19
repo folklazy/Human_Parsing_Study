@@ -1,0 +1,14 @@
+[
+  {
+    "path": "scripts/restore_first_cohort_detector.py",
+    "unresolved_globals": []
+  },
+  {
+    "path": "scripts/first_cohort_yolo_bootstrap_worker.py",
+    "unresolved_globals": []
+  },
+  {
+    "path": "scripts/publish_first_cohort_benchmark_results.py",
+    "unresolved_globals": []
+  }
+]

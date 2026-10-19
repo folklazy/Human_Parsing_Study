@@ -1,0 +1,9 @@
+{
+  "root": ".",
+  "expected_ccihp_archive_exists": false,
+  "ccihp_data_candidates": [],
+  "directories_visited": 622,
+  "excluded_roots": "environments, git, generated outputs/predictions, PPSS directories",
+  "user_identified_archive": "datasets/cihp-DatasetNinja.tar",
+  "actual_target_exists": true
+}

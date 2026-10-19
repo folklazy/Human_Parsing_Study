@@ -1,0 +1,106 @@
+{
+  "schema_version": "2.0",
+  "record_id": "USER_IMPLEMENTATION_HANDOFF_20261015_V3",
+  "accepted_scope": "User requested implementation sequence including bounded TRAIN integration; no full benchmark or freeze.",
+  "source": "../HUMAN_PARSING_CODEX_IMPLEMENTATION_HANDOFF_TH_20261015.md",
+  "decisions": [
+    {
+      "id": "IDENTITY_PROVENANCE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Native capability and externally conditioned final identity are distinct; T3b retains both origins.",
+      "bindings": {
+        "identity.external_identity_establishes_native_capability": false,
+        "identity.retain_both_origins": true,
+        "identity.unsupported_native_count": null,
+        "identity.supported_empty_native_count": 0
+      }
+    },
+    {
+      "id": "STAGE_RATES",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Stage/unit/numerator/denominator required; routing skips differ from completion/failure.",
+      "bindings": {
+        "rates.require_stage_and_counts": true,
+        "rates.zero_denominator": null,
+        "rates.skip_status": "SKIPPED_BY_ROUTING",
+        "rates.eligibility_source": "FROZEN_POLICY"
+      }
+    },
+    {
+      "id": "CONFIG_AUTHORITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Executable config is the sole runtime authority; accepted decision conflicts must fail.",
+      "bindings": {
+        "governance.runner_source": "EXECUTABLE_CONFIG",
+        "governance.reject_decision_conflicts": true,
+        "governance.drafts_allowed_for_development": true,
+        "authorization.full_benchmark": false
+      }
+    },
+    {
+      "id": "PRIMARY_POPULATION",
+      "status": "PROPOSED",
+      "reason": "Controlled4961/source5000 requires role acceptance and actual cohort sidecars.",
+      "bindings": {}
+    },
+    {
+      "id": "COMMON_TAXONOMY",
+      "status": "PROPOSED",
+      "reason": "Numeric candidate mappings do not imply semantic equivalence or a frozen universal leaderboard.",
+      "bindings": {}
+    },
+    {
+      "id": "APPLICATION_MATCHING",
+      "status": "PROPOSED",
+      "reason": "BBox0.50/0.75 and cardinality-first are development defaults pending complete readiness.",
+      "bindings": {}
+    },
+    {
+      "id": "FULL_BENCHMARK_EXECUTION",
+      "status": "PROPOSED",
+      "reason": "Explicit execution scope is not authorized by design review.",
+      "bindings": {}
+    },
+    {
+      "id": "BOUNDED_TRAIN_INTEGRATION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User explicitly requested step4 bounded TRAIN integration for missing track checks; existing YOLO26x/FASHN checkpoints and prior approved parser workflow reused.",
+      "bindings": {
+        "authorization.bounded_train_inference": true,
+        "authorization.allowed_modes": [
+          "CPU_FIXTURES",
+          "SAVED_TRAIN_REPLAY",
+          "BOUNDED_TRAIN"
+        ],
+        "bounded_train.input_ids": [
+          "0021834",
+          "0000930",
+          "0001368"
+        ],
+        "bounded_train.maximum_frames": 3,
+        "bounded_train.maximum_person_jobs": 10,
+        "bounded_train.models": [
+          "YOLO26X_FROZEN",
+          "FASHN_B4"
+        ],
+        "authorization.new_inference": true
+      }
+    },
+    {
+      "id": "OFFICIAL_ACQUISITION_AND_NATIVE_FEASIBILITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Handoff1.1 appendix: all public official parser variants; licensed TRAIN1-3 FP32 only, no full benchmark",
+      "bindings": {
+        "acquisition.public_official_only": true,
+        "acquisition.individual_approval_required": false,
+        "acquisition.preserve_existing": true,
+        "native_feasibility.maximum_frames_per_variant": 3,
+        "native_feasibility.split": "Training",
+        "native_feasibility.precision": "FP32",
+        "native_feasibility.license_gate_required": true
+      }
+    }
+  ],
+  "supersedes": "APPLICATION_V2_DECISIONS_V2",
+  "source_sha256": "2078f5f1ce522cfe5f9c4c99d78a2644c7b4d9ac9159d9b42a2f89f82d728043"
+}

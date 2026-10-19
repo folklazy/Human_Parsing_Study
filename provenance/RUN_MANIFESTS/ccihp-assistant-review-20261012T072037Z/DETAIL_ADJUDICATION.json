@@ -1,0 +1,279 @@
+{
+  "cases": [
+    {
+      "image_id": "0014422",
+      "reviewer": "ASSISTANT",
+      "status": "CONFIRMED_SEMANTIC_SUPPORT_GAP",
+      "observation": "H1 exists (91332 pixels), all Category0 and Instance0; cause unknown.",
+      "verified_numeric_evidence": {
+        "human_id": 1,
+        "pixels": 91332,
+        "category_support": 0,
+        "instance_support": 0
+      },
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0010505",
+      "reviewer": "ASSISTANT",
+      "status": "CONFIRMED_UNDOCUMENTED_LABEL",
+      "observation": "2938 Category22 pixels; all H1, Instance0; native class meaning unresolved.",
+      "verified_numeric_evidence": {
+        "unknown_category": 22,
+        "pixels": 2938,
+        "human_ids": [
+          1
+        ],
+        "instance_values": [
+          0
+        ]
+      },
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0000287",
+      "reviewer": "ASSISTANT",
+      "status": "CONFIRMED_DEGENERATE_HUMAN_ID",
+      "observation": "H3 consists of one pixel (70,257), Category0/Instance0; no useful person extent.",
+      "verified_numeric_evidence": {
+        "human_id": 3,
+        "pixels": 1,
+        "xy": [
+          70,
+          257
+        ],
+        "category": 0,
+        "instance": 0
+      },
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0034455",
+      "reviewer": "ASSISTANT",
+      "status": "VISIBLE_PERSON_UNASSIGNED_POLICY_UNCERTAIN",
+      "observation": "Patient face/arm visible; no person identity there. Exhaustiveness policy unknown.",
+      "verified_numeric_evidence": {
+        "illustrative_visible_face_xy": [
+          211,
+          159
+        ],
+        "point_human_category_instance": [
+          0,
+          0,
+          0
+        ],
+        "point_is_illustrative_not_pixelwise_manual_GT": "true",
+        "exhaustiveness_policy": "UNRESOLVED"
+      },
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0008613",
+      "reviewer": "ASSISTANT",
+      "status": "VISIBLE_PERSON_UNASSIGNED_POLICY_UNCERTAIN",
+      "observation": "Marching group has four annotated IDs; visible rightmost marcher unassigned.",
+      "verified_numeric_evidence": {
+        "illustrative_visible_face_xy": [
+          300,
+          274
+        ],
+        "point_human_category_instance": [
+          0,
+          0,
+          0
+        ],
+        "point_is_illustrative_not_pixelwise_manual_GT": "true",
+        "exhaustiveness_policy": "UNRESOLVED"
+      },
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0004381",
+      "reviewer": "ASSISTANT",
+      "status": "EXPLAINED_ACCESSORY_SUPPORT",
+      "observation": "H3 contains28494 Bag20 pixels; broad silhouette is supported accessory semantics.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0019700",
+      "reviewer": "ASSISTANT",
+      "status": "EXPLAINED_NATIVE_CONVENTION",
+      "observation": "Scalp regions are Hair2; included README explicitly permits sparse/bald hair characterization.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0002891",
+      "reviewer": "ASSISTANT",
+      "status": "AMBIGUOUS_NOT_CONFIRMED_ERROR",
+      "observation": "Pants9 triangular region may be seated bent knee; image alone insufficient to call carried-object leakage.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0026977",
+      "reviewer": "ASSISTANT",
+      "status": "UNCERTAIN_PARTIAL_PERSON_OWNERSHIP",
+      "observation": "H4 has1716 pixels with categories5/9/14; possible partially hidden person. Do not delete by visible head count.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0019562",
+      "reviewer": "ASSISTANT",
+      "status": "CONTROL_PATIENT_ANNOTATED",
+      "observation": "Patient H6 has2683 pixels with six supported categories; no general all-patients omission claim.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0003009",
+      "reviewer": "ASSISTANT",
+      "status": "CONTACT_NOTE_CORRECTED",
+      "observation": "Native view is military group with three IDs; earlier instrument hypothesis was mistaken and withdrawn.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0031399",
+      "reviewer": "ASSISTANT",
+      "status": "OCCLUDING_BLANKET_POLICY_UNCERTAIN",
+      "observation": "Baby H3 has7847 pixels, categories1/2/5/13; blanket excluded, no evidence of required amodal completion.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    },
+    {
+      "image_id": "0028338",
+      "reviewer": "ASSISTANT",
+      "status": "LOWER_REGION_COVERAGE_POLICY_UNCERTAIN",
+      "observation": "Visible lower torso beneath burned-in subtitle bands largely unassigned; do not infer amodal policy.",
+      "verified_numeric_evidence": {},
+      "source_manifest_reference": "DETAIL_SOURCE_MANIFEST.json",
+      "independent_human_review": "PENDING",
+      "dataset_wide_error_prevalence_estimated": false
+    }
+  ],
+  "roi_artifacts": [
+    {
+      "image_id": "0014422",
+      "roi_xyxy_half_open": [
+        0,
+        0,
+        274,
+        367
+      ],
+      "scale_display_only": 2,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0014422_ROI.png",
+      "sha256": "3a469466d1e3d3744cc8e9641bf6b4ffa697be685457837e88b4af287f5823cb",
+      "roi_category_pixels": {
+        "0": 91332,
+        "2": 8556,
+        "13": 86,
+        "15": 584
+      }
+    },
+    {
+      "image_id": "0010505",
+      "roi_xyxy_half_open": [
+        326,
+        170,
+        400,
+        336
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0010505_ROI.png",
+      "sha256": "c87c0e4d3b31c180c3101cff7072e9b9c776b5a3a1422ea9a0af5f2fe1b27fbc",
+      "roi_category_pixels": {
+        "0": 225,
+        "5": 556,
+        "7": 4212,
+        "14": 487,
+        "15": 4135,
+        "22": 2669
+      }
+    },
+    {
+      "image_id": "0000287",
+      "roi_xyxy_half_open": [
+        54,
+        241,
+        87,
+        274
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0000287_ROI.png",
+      "sha256": "e35c3d651c634194bbd0bd0984134045aa5b947f22d03274534cd8cb2f93bfb9",
+      "roi_category_pixels": {
+        "0": 1,
+        "5": 1069,
+        "9": 19
+      }
+    },
+    {
+      "image_id": "0034455",
+      "roi_xyxy_half_open": [
+        155,
+        130,
+        249,
+        227
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0034455_ROI.png",
+      "sha256": "5a05391d45b930c17475732b570375b7937190f770784ab5fdb32e66d5864178",
+      "roi_category_pixels": {
+        "0": 6818,
+        "7": 1385,
+        "15": 891,
+        "21": 24
+      }
+    },
+    {
+      "image_id": "0008613",
+      "roi_xyxy_half_open": [
+        283,
+        235,
+        349,
+        488
+      ],
+      "scale_display_only": 4,
+      "interpolation": "NEAREST",
+      "output": "outputs/visualizations/ccihp-assistant-review-20261012T072037Z/details/0008613_ROI.png",
+      "sha256": "7052ddadf5b48430beedd8e04d2d73bb53fb397f2a3f887c3e5ec3720cff7e2e",
+      "roi_category_pixels": {
+        "0": 16698
+      }
+    }
+  ],
+  "human_review_completed": false,
+  "source_readme": "CCIHP_icip.zip::CCIHP_icip/README.md",
+  "source_readme_claim": "Sparse/bald for Hair attribute only; Bag20 carried on oneself"
+}

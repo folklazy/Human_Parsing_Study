@@ -1,0 +1,36 @@
+{
+  "schema_version": "public-1.0",
+  "study_id": "human_parsing_mhpv2",
+  "display_name": "Human Parsing Study",
+  "current_run_id": "first-cohort-benchmark-20261016T094257313856Z",
+  "benchmark_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "stage": "FIRST_COHORT_EXECUTION_FINISHED",
+  "current_config": "configs/application_v2_first_cohort_v12.yaml",
+  "current_decision": "provenance/APPLICATION_V2_DECISIONS_V11.json",
+  "current_mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+  "semantic_mapping_evidence": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+  "populations": {
+    "main": {
+      "images": 4961,
+      "G_loc": 17434,
+      "G_sem": 17390
+    },
+    "reference": {
+      "images": 5000,
+      "G_loc": 17548,
+      "G_sem": 17504
+    }
+  },
+  "primary_reporting_policy": "STRICT_COMPLETE",
+  "main_score_eligible": false,
+  "matching_primary": 0.5,
+  "matching_secondary": 0.75,
+  "quality_only": true,
+  "new_experiment_authorized": false,
+  "publication_status": "PENDING_PUBLIC_APPROVAL",
+  "public_url": null,
+  "historical_stage0_full_roster_status": "BLOCKED_NOT_THE_CURRENT_COHORT_STATUS",
+  "authoritative_result_csv": "metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+  "run_manifest": "cohorts/first_cpi_t3b/RUN_MANIFEST.json",
+  "original_study_state_archive": "reports/archive/pre_public_snapshot/STUDY_STATE.json"
+}

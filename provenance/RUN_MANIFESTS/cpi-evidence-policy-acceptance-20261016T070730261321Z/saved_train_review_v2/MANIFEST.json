@@ -1,0 +1,860 @@
+{
+  "status": "PREPARED_AWAITING_VISUAL_INSPECTION",
+  "images": [
+    {
+      "image_id": "0021834",
+      "split": "Training",
+      "input": {
+        "image_id": "0021834",
+        "split": "Training",
+        "wh": [
+          500,
+          321
+        ],
+        "native_person_ids": [
+          1,
+          2
+        ],
+        "native_person_count": 2,
+        "rgb_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0021834.png",
+            "sha256": "1bc60e2366b38e40a3d09db9cb53ac9160cc51418d057fba616f626379ea282c",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              2,
+              5,
+              7,
+              10,
+              13,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0021834.png",
+            "sha256": "9ddc276694b8fd6ed4db84d9c579364413b1e87c078105539dff453d7cab5b7a",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0021834.png",
+            "sha256": "20c5e0fda5d1a269f4d7e447092607744c313bdfe5d3b5467d44b9deef303e7d",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        ],
+        "input": "outputs/inputs/0021834.npz",
+        "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+        "preview": "outputs/inputs/0021834.png",
+        "category_pixels": {
+          "0": 78314,
+          "2": 32108,
+          "5": 8285,
+          "7": 26134,
+          "10": 6149,
+          "13": 9395,
+          "21": 115
+        },
+        "oracle_crop_target_human_id": 1,
+        "oracle_crop_xyxy": [
+          0,
+          0,
+          362,
+          321
+        ]
+      },
+      "cached_gt": {
+        "image_id": "0021834",
+        "split": "Training",
+        "original_wh": [
+          500,
+          321
+        ],
+        "status": "GT_RECONSTRUCTION_VERIFIED_PARSER_CHANNEL_BINDING_BLOCKED",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0021834.png",
+            "sha256": "1bc60e2366b38e40a3d09db9cb53ac9160cc51418d057fba616f626379ea282c",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              2,
+              5,
+              7,
+              10,
+              13,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0021834.png",
+            "sha256": "9ddc276694b8fd6ed4db84d9c579364413b1e87c078105539dff453d7cab5b7a",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0021834.png",
+            "sha256": "20c5e0fda5d1a269f4d7e447092607744c313bdfe5d3b5467d44b9deef303e7d",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              321
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        ],
+        "RGB_source": "PRIOR_HASH_VERIFIED_RGB_INPUT_NO_NEW_ARCHIVE_RGB_DECODE",
+        "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+        "G_loc": 2,
+        "G_sem": 2,
+        "persons": [
+          {
+            "person_id": 1,
+            "bbox": [
+              25,
+              6,
+              331,
+              321
+            ],
+            "G_loc": true,
+            "G_sem": true
+          },
+          {
+            "person_id": 2,
+            "bbox": [
+              250,
+              99,
+              424,
+              321
+            ],
+            "G_loc": true,
+            "G_sem": true
+          }
+        ],
+        "image_binding": {
+          "image_id": "0021834",
+          "G_loc": 2,
+          "G_sem": 2,
+          "GT_domain_recipe_sha256": "400fc44b39fa2bd20c2a686561147b79057ac7ed71d6a5e804dcb3e9e52783f6"
+        },
+        "global_valid_pixels": 128277,
+        "global_valid_pixels_sha256": "12c896617c1de34d9b32ca8d194fae91e31dcf966f2abe96da048fe57325b4d5",
+        "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/GT_TRAIN_RECONSTRUCTION/0021834.npz",
+        "artifact_sha256": "bdf0f3bd40559ee2fb80addff895d8bffa0288459f2cec75dba5441e5e8c2088",
+        "per_person_valid_pixels_sha256": [
+          "12c896617c1de34d9b32ca8d194fae91e31dcf966f2abe96da048fe57325b4d5",
+          "12c896617c1de34d9b32ca8d194fae91e31dcf966f2abe96da048fe57325b4d5"
+        ],
+        "native_source_roundtrip": "EXACT",
+        "original_grid_transform": "IDENTITY_NO_RESAMPLING",
+        "target_display_names": {
+          "1": "Face region"
+        },
+        "accepted_parser_context": false
+      },
+      "original_grid": true,
+      "native_predictions": {
+        "CPI_R50_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T094956Z/RUN.json",
+          "manifest_sha256": "3743c44b7eb06afbc785dc7dd1e57e9c315b2cf241d596144e8eae644a21b74f",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T082944Z/0021834_native.npz",
+          "artifact_sha256": "31da9ad91289469cc7abe170dde64f264d8ff1be9ce0fb783e561a8d10d333e2",
+          "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "native_instances": 2,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        },
+        "CPI_ConvNeXtB_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/RUN.json",
+          "manifest_sha256": "32753efd30d1acb296310745853bda3d159bade7702f6aad9b44a5c8235510c8",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/0021834_native.npz",
+          "artifact_sha256": "0a29b92d1a728dd28d241d80e3248074dfd996f590f15ab65fd632f89819846e",
+          "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "native_instances": 2,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        }
+      },
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0021834_saved_channels.png",
+      "visualization_sha256": "4c4a416463ec817de36813bd150dc4f69b262c635b937f5437fac42b5dd9357f"
+    },
+    {
+      "image_id": "0000930",
+      "split": "Training",
+      "input": {
+        "image_id": "0000930",
+        "split": "Training",
+        "wh": [
+          500,
+          346
+        ],
+        "native_person_ids": [
+          1,
+          2
+        ],
+        "native_person_count": 2,
+        "rgb_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0000930.png",
+            "sha256": "881414275a9664e4e673d1b876cdfcd03b649f0e935d860ca8cf9b82d5fb63d3",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7,
+              11,
+              12,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0000930.png",
+            "sha256": "716ceaf850fb2fd0b475ab146026aafbb82605d1e3d54556c0a649f295fbb6d6",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0000930.png",
+            "sha256": "acce4cf76b16caf69438063b5f7d02c46963d49251555ae17a2782d14475c2e4",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          }
+        ],
+        "input": "outputs/inputs/0000930.npz",
+        "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+        "preview": "outputs/inputs/0000930.png",
+        "category_pixels": {
+          "0": 123484,
+          "1": 3693,
+          "3": 1251,
+          "5": 5207,
+          "6": 1197,
+          "7": 6635,
+          "11": 514,
+          "12": 30613,
+          "21": 406
+        },
+        "oracle_crop_target_human_id": 2,
+        "oracle_crop_xyxy": [
+          200,
+          0,
+          379,
+          346
+        ]
+      },
+      "cached_gt": {
+        "image_id": "0000930",
+        "split": "Training",
+        "original_wh": [
+          500,
+          346
+        ],
+        "status": "GT_RECONSTRUCTION_VERIFIED_PARSER_CHANNEL_BINDING_BLOCKED",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0000930.png",
+            "sha256": "881414275a9664e4e673d1b876cdfcd03b649f0e935d860ca8cf9b82d5fb63d3",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7,
+              11,
+              12,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0000930.png",
+            "sha256": "716ceaf850fb2fd0b475ab146026aafbb82605d1e3d54556c0a649f295fbb6d6",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0000930.png",
+            "sha256": "acce4cf76b16caf69438063b5f7d02c46963d49251555ae17a2782d14475c2e4",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              346
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          }
+        ],
+        "RGB_source": "PRIOR_HASH_VERIFIED_RGB_INPUT_NO_NEW_ARCHIVE_RGB_DECODE",
+        "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+        "G_loc": 2,
+        "G_sem": 2,
+        "persons": [
+          {
+            "person_id": 1,
+            "bbox": [
+              17,
+              35,
+              154,
+              335
+            ],
+            "G_loc": true,
+            "G_sem": true
+          },
+          {
+            "person_id": 2,
+            "bbox": [
+              215,
+              8,
+              364,
+              346
+            ],
+            "G_loc": true,
+            "G_sem": true
+          }
+        ],
+        "image_binding": {
+          "image_id": "0000930",
+          "G_loc": 2,
+          "G_sem": 2,
+          "GT_domain_recipe_sha256": "c7d5ac50c0ed3a7c7def36463bf6be8698f95a35a901e8fc78efb05d3768d860"
+        },
+        "global_valid_pixels": 166453,
+        "global_valid_pixels_sha256": "994c995fb2dba39dfca7e57df52eb07205bb828421c154fc3f4da5abf0c57744",
+        "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/GT_TRAIN_RECONSTRUCTION/0000930.npz",
+        "artifact_sha256": "b70544b04f909387c3fee980aba51ca7a1f1ac63ef748c15feef728102009b0a",
+        "per_person_valid_pixels_sha256": [
+          "994c995fb2dba39dfca7e57df52eb07205bb828421c154fc3f4da5abf0c57744",
+          "994c995fb2dba39dfca7e57df52eb07205bb828421c154fc3f4da5abf0c57744"
+        ],
+        "native_source_roundtrip": "EXACT",
+        "original_grid_transform": "IDENTITY_NO_RESAMPLING",
+        "target_display_names": {
+          "1": "Face region"
+        },
+        "accepted_parser_context": false
+      },
+      "original_grid": true,
+      "native_predictions": {
+        "CPI_R50_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T094956Z/RUN.json",
+          "manifest_sha256": "3743c44b7eb06afbc785dc7dd1e57e9c315b2cf241d596144e8eae644a21b74f",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T082944Z/0000930_native.npz",
+          "artifact_sha256": "a8e9ef839e8fec089a7876b527b5813d132fe3e44f0539ad7230037f52e278e1",
+          "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            1,
+            3,
+            6,
+            11,
+            13
+          ],
+          "native_instances": 2,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        },
+        "CPI_ConvNeXtB_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/RUN.json",
+          "manifest_sha256": "32753efd30d1acb296310745853bda3d159bade7702f6aad9b44a5c8235510c8",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/0000930_native.npz",
+          "artifact_sha256": "675192fb4c8d1bef2b7847bded854d65ac314509801bb055b11e228397bf70a2",
+          "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            1,
+            3,
+            6,
+            11,
+            13
+          ],
+          "native_instances": 2,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        }
+      },
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0000930_saved_channels.png",
+      "visualization_sha256": "8761283413821f7d052813bb0022fb6e0e8281ea3115bce1877bf10ff1462ddf"
+    },
+    {
+      "image_id": "0001368",
+      "split": "Training",
+      "input": {
+        "image_id": "0001368",
+        "split": "Training",
+        "wh": [
+          500,
+          375
+        ],
+        "native_person_ids": [
+          1,
+          2,
+          3
+        ],
+        "native_person_count": 3,
+        "rgb_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0001368.png",
+            "sha256": "126c2f4c91338659cf38a1368e18c1324e508187e71ee7679aba5b6fc0a057c1",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              2,
+              5,
+              7,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0001368.png",
+            "sha256": "62623b7cdad5f9b275cb42ed010ac7fd769b1f52aa500752541039c285faefee",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0001368.png",
+            "sha256": "1dc34c9d76161357703bf6daea46a6bb37dd21db70f984303239f26603d731e9",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        ],
+        "input": "outputs/inputs/0001368.npz",
+        "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+        "preview": "outputs/inputs/0001368.png",
+        "category_pixels": {
+          "0": 131372,
+          "2": 11381,
+          "5": 14558,
+          "7": 4656,
+          "9": 909,
+          "10": 5772,
+          "12": 4661,
+          "13": 3838,
+          "14": 3357,
+          "15": 6596,
+          "21": 400
+        },
+        "oracle_crop_target_human_id": 1,
+        "oracle_crop_xyxy": [
+          95,
+          3,
+          448,
+          375
+        ]
+      },
+      "cached_gt": {
+        "image_id": "0001368",
+        "split": "Training",
+        "original_wh": [
+          500,
+          375
+        ],
+        "status": "GT_RECONSTRUCTION_VERIFIED_PARSER_CHANNEL_BINDING_BLOCKED",
+        "source_gt": [
+          {
+            "component": "Category_ids",
+            "member": "CCIHP_icip/dataset/Training/Category_ids/0001368.png",
+            "sha256": "126c2f4c91338659cf38a1368e18c1324e508187e71ee7679aba5b6fc0a057c1",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              2,
+              5,
+              7,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              21
+            ]
+          },
+          {
+            "component": "Human_ids",
+            "member": "CCIHP_icip/dataset/Training/Human_ids/0001368.png",
+            "sha256": "62623b7cdad5f9b275cb42ed010ac7fd769b1f52aa500752541039c285faefee",
+            "mode": "L",
+            "dtype": "uint8",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "component": "Instance_ids",
+            "member": "CCIHP_icip/dataset/Training/Instance_ids/0001368.png",
+            "sha256": "1dc34c9d76161357703bf6daea46a6bb37dd21db70f984303239f26603d731e9",
+            "mode": "I;16",
+            "dtype": "uint16",
+            "wh": [
+              500,
+              375
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        ],
+        "RGB_source": "PRIOR_HASH_VERIFIED_RGB_INPUT_NO_NEW_ARCHIVE_RGB_DECODE",
+        "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+        "G_loc": 3,
+        "G_sem": 3,
+        "persons": [
+          {
+            "person_id": 1,
+            "bbox": [
+              125,
+              37,
+              418,
+              375
+            ],
+            "G_loc": true,
+            "G_sem": true
+          },
+          {
+            "person_id": 2,
+            "bbox": [
+              384,
+              162,
+              500,
+              334
+            ],
+            "G_loc": true,
+            "G_sem": true
+          },
+          {
+            "person_id": 3,
+            "bbox": [
+              465,
+              272,
+              500,
+              331
+            ],
+            "G_loc": true,
+            "G_sem": true
+          }
+        ],
+        "image_binding": {
+          "image_id": "0001368",
+          "G_loc": 3,
+          "G_sem": 3,
+          "GT_domain_recipe_sha256": "81d58c2d81e9b3b6de1a408f80d40530ac513e42eaa7104a6808b18091587558"
+        },
+        "global_valid_pixels": 175719,
+        "global_valid_pixels_sha256": "33af3ada72533109edd381170c6156d25463fc21e464d1a3c29962591d5c15d4",
+        "artifact": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/GT_TRAIN_RECONSTRUCTION/0001368.npz",
+        "artifact_sha256": "4e1ca55ae693ae44c921543ee8c19477ccac636afe80d0f248201268541bdc49",
+        "per_person_valid_pixels_sha256": [
+          "33af3ada72533109edd381170c6156d25463fc21e464d1a3c29962591d5c15d4",
+          "33af3ada72533109edd381170c6156d25463fc21e464d1a3c29962591d5c15d4",
+          "33af3ada72533109edd381170c6156d25463fc21e464d1a3c29962591d5c15d4"
+        ],
+        "native_source_roundtrip": "EXACT",
+        "original_grid_transform": "IDENTITY_NO_RESAMPLING",
+        "target_display_names": {
+          "1": "Face region"
+        },
+        "accepted_parser_context": false
+      },
+      "original_grid": true,
+      "native_predictions": {
+        "CPI_R50_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T094956Z/RUN.json",
+          "manifest_sha256": "3743c44b7eb06afbc785dc7dd1e57e9c315b2cf241d596144e8eae644a21b74f",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_r50_cihp-20261012T082944Z/0001368_native.npz",
+          "artifact_sha256": "16a8d2a2add715afee37a2b0c8a42d2fd189107f505edfa7cb7fd113a8d4f13c",
+          "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            2,
+            5,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "native_instances": 8,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        },
+        "CPI_ConvNeXtB_CIHP": {
+          "manifest_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/RUN.json",
+          "manifest_sha256": "32753efd30d1acb296310745853bda3d159bade7702f6aad9b44a5c8235510c8",
+          "artifact_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/cpi_convnextb_cihp-20261012T083010Z/0001368_native.npz",
+          "artifact_sha256": "14c5101262d54b5ea0ce95a8cd76837f232052395181f1c7cd1fa3619660bc90",
+          "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+          "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+          "present_ids": [
+            0,
+            2,
+            5,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "native_instances": 3,
+          "source_precision": "FP32",
+          "source_history": "Existing pilot; retain original run memory-adapter/control notes; not a fresh runtime measurement"
+        }
+      },
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0001368_saved_channels.png",
+      "visualization_sha256": "616390e7864ae1d4b02f1083979726bc535e67ee920a799aa24608b66d8a29f9"
+    }
+  ],
+  "selection": "Existing three predeclared TRAIN inputs, not chosen by model accuracy",
+  "requirement": "Check for conspicuous channel/geometry contradiction, not all-classes-correct prediction",
+  "composite": "All saved native predictions; highest score wins overlap for display only; no metric filtering",
+  "GT_reconstructed_again": false,
+  "new_inference": false,
+  "metrics_computed": false,
+  "script_sha256": "d7bb576d06a26fca6c8c3181db2ee6ee6d6172ffeccb51af35f809af68032f00"
+}

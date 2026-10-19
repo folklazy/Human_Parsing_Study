@@ -1,0 +1,372 @@
+{
+  "current_documents": [
+    "README.md",
+    "STUDY_STANDARD.md",
+    "EXPERIMENT_PROTOCOL.md",
+    "DATASET_DETAILS.md",
+    "REPORT.md",
+    "DATA_SCHEMA.md",
+    "HANDOFF.md"
+  ],
+  "current_config": "configs/application_v2_first_cohort_v12.yaml",
+  "current_decision": "provenance/APPLICATION_V2_DECISIONS_V11.json",
+  "history": [
+    {
+      "path": "reports/APPLICATION_HANDOFF_IMPLEMENTATION_TH_20261015.md",
+      "sha256": "d02835616b73742f2755a924464184b7489c59d07dd03aaff1321853a1e68c49",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/APPLICATION_HANDOFF_POLICIES_TH_20261015.md",
+      "sha256": "9fa5d4041ed9ffba4181fb962581e564e14191dd86d3dd78abbf268a0e9db5bd",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/APPLICATION_V2_CPU_REVIEW_INDEPENDENT_TH_20261015.md",
+      "sha256": "ac54892a24d1e22b470fb77bd59faa95acf5d8cc6fdc4fe46d69bb83a75d89b3",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/APPLICATION_V2_IMPLEMENTATION_TH.md",
+      "sha256": "cb640874536fcf49ea2a643e7c019167ccf0da9e4298d64572ec563dedbc6d12",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/BENCHMARK_PROTOCOL_20_VARIANTS_REVIEW_TH_20261014.md",
+      "sha256": "6f163e67e06be94b71b781e2cd501b0c66c1c08abde79060af97ca59a92d1680",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/BENCHMARK_PROTOCOL_20_VARIANTS_V2_REVIEW_TH_20261014.md",
+      "sha256": "f03f1ef37e91930557a8d27a30cfa7fb43d611dc40f5c3d383cbd1defe2c70ad",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/BENCHMARK_PROTOCOL_DECISIONS_APPENDIX_REVIEW_TH_20261014.md",
+      "sha256": "2b8b214bf24cb29ed1fc78362b6865edd707dc3c6a5cbc92b64eddfb99ab0f27",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/BENCHMARK_PROTOCOL_V2_IMPLEMENTATION_HANDOFF_REVIEW_TH_20261014.md",
+      "sha256": "70e360d2484cd625bb13658e4a9c9004784f5bfe79b8a2c374e5afc4d267a730",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_ASSISTANT_ANNOTATION_REVIEW_TH.md",
+      "sha256": "3fbaebe91a99ba0216d35609e579c852ceb46f1e9de13d70779fb6ca907bdbfd",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md",
+      "sha256": "fe99bd5943ce346196f01ff671c1ad5ff8a2d077225dfcdb0b631647aa6dbb76",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_CROSS_SOURCE_WARNINGS_STAGE0F.md",
+      "sha256": "0c067f54e5571e39de27e79686bf0c47329003c2397f0c52f451332fae6cbf17",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_EVALUATION_PROTOCOL_DRAFT_STAGE0F.md",
+      "sha256": "0fd15e87109fdca2f1602188e3995b978ee406bef4b9c3d9e6a714ca4fac4441",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+      "sha256": "9fedb0ac5795ae4a99d57336bb8ab43ce0c75286e0c92bfac5399ae7ab7614c2",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_HUMAN_REVIEW_STAGE0F.md",
+      "sha256": "a9cb60d5e3a3724e8bbdd224ee93851c7f50d4da563e28a8e948fe75faaaefc3",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "sha256": "7ac9b3d1a38ada56b711aee5e4838387274895307b6ba43ebcd796ed3db1009e",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_PRIMARY_DATASET_DECISION_STAGE0F.md",
+      "sha256": "db187981a8fd7b2918e467743e637d46c78a19b0a30d141ee24fc8024a77326e",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CCIHP_SPLIT_LEAKAGE_STAGE0F.md",
+      "sha256": "4b1bb51bb23d4645e66017b9a17306cddaf20ec8cc6b1f492988271cd6041500",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CDGNET_ACQUISITION_TH_20261015.md",
+      "sha256": "e99816c8c6fd74097fc2edacf16a4c59ffd2aa307a7b65b619be0f011622f983",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CIHP_ARCHIVE_PREFLIGHT_AUDIT.md",
+      "sha256": "b98ae4408b0a6943de2c7f40024390a375305cb5f983064f2a6a247cfce8aa91",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CIHP_GROUND_TRUTH_RECOVERY_DECISION.md",
+      "sha256": "9cb2529aed9cea51bcfc15a4fcc628e37f1000340404c13b59ecb693fe623663",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CIHP_QUALITY_AUDIT.md",
+      "sha256": "6f0896e768c41c1f172cbb7b87269a215010e3ca4defe095fa41f5ed0376ed21",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_CHANNEL_CONFIRMATION_REQUEST_DRAFT_20261016.md",
+      "sha256": "7143aa560462fffd910c0d4f592b6527196ded9b2bbfcd807952732ec6024d7d",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_CHANNEL_EVIDENCE_ALTERNATIVES_TH_20261016.md",
+      "sha256": "9f0db1c46f523a9ec5c17042e2f082c2ce1526eb367d3d68896c5a54f5dc78f0",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_CHANNEL_ORDER_SOURCE_BLOCKER_TH_20261016.md",
+      "sha256": "b449a5f0283f613c3f6c46aa22bf43055198e7121e04008006dd79b70bcafbef",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_INDEPENDENT_PREPARATION_TH_20261016.md",
+      "sha256": "9b36ec6c9b637bed9faa5c307b46b31c84dfb5007adf91933d4131e018642ecd",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_PAPER_REPOSITORY_TAXONOMY_REASSESSMENT_TH_20261016.md",
+      "sha256": "12e1ceaefd92edf2d0c476152daafda1a9796090d1a4fefc364d1e61f88f6cb8",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/CPI_STANDARD_MAPPING_ACCEPTANCE_AND_TRAIN_REPLAY_TH_20261016.md",
+      "sha256": "dbf1ce7204cf1bad9335f279fec548f3bb350ef04623bba8f02bfa7e28aa5372",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/DATASET_REASSESSMENT.md",
+      "sha256": "cf83a230cb5211edf4bee549cc91725fa773ed4ad726ec7ab744fafd271e064c",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/DATASET_SELECTION_AFTER_20_VARIANT_PILOT_TH.md",
+      "sha256": "7446a98035bef6ec00327b597b99236a91fbaf9ec2068d3e6894d969fa5e0ba6",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_CONDITIONAL_POLICY_REVIEW_TH_20261015.md",
+      "sha256": "303beeb837cbfdf28033110725dd8db0c6a80295c974a106d8d404182c3a175f",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_CONTEXT_CLOSURE_TH_20261016.md",
+      "sha256": "936502dbd84d68f5791ff26115b4e422e72b0600a4393552cefb6f6027ad551b",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_FRESH_TRAIN_SCORING_CLOSURE_TH_20261016.md",
+      "sha256": "f20d89d9b2111d3d53c64a8abd04eecf26650bb83b339a4f081045e7e69d9525",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_POLICY_ACCEPTANCE_AND_READINESS_TH_20261016.md",
+      "sha256": "049bb54d8a318b9a9b945d2a7a8739bb23603e66ddfc68cb154007d97a49ff94",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_T3B_APPROVAL_PACKAGE_TH_20261016.md",
+      "sha256": "e44ab3e01b1e34fbea693b1eb89a925f071cb358a0d15f373b560ccbe9b95e19",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/FIRST_COHORT_T3B_BENCHMARK_REPORT_TH_20261019.md",
+      "sha256": "dcfeddc1d1aeb320893d79fd1c15c7a2dbb5dc7ece820b5a21e69510792cd00a",
+      "public_copy": true,
+      "role": "TERMINAL_EXECUTION_REPORT"
+    },
+    {
+      "path": "reports/FIRST_COHORT_VALIDATION_LAUNCH_READY_TH_20261016.md",
+      "sha256": "a93e8d567c49e026a8cd8d2c733beb006bf2f3706736a3853537ed6018a09c20",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/LICENSE_ELIGIBILITY_REASSESSMENT.md",
+      "sha256": "b7e7e0a0ae075130ce2535952dc605a4fd772eb1f936036f596e01b9438129a2",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/MHPV2_DATASET_AUDIT.md",
+      "sha256": "05b0e9083970d997df35d6d1c342577a0d6a5d1c905831403aab3107d1459fc2",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/MHPV2_NEW_ZIP_RGB_VERIFICATION.md",
+      "sha256": "b7367e4e249a79c175e5bd76159b028a4dae1777bc2e7fa94bd0321ea7a41b16",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/MHPV2_QUALITY_RISK_REVIEW.md",
+      "sha256": "533bbad6dc57121ebbf5b4ef5d8cccb1cc643f52e3da0d9474b67ac698d9b7cb",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/MODEL_COMPATIBILITY_REPORT.md",
+      "sha256": "fc667a607298d000cdfcf9e563f04c7ba03643fc74e488207fdf605b0b4f9636",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/PRIMARY_DATASET_DECISION.md",
+      "sha256": "a242c73b1356a5f0592ec2c8649cdf5326ab609b87e2774221225fe34a536154",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/PROTOCOL_REVIEW.md",
+      "sha256": "a4424d9c0baaaa04f6c1fe3af33b48e44268f2c770311e236f5de62f6f82c398",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/STAGE0_BLOCKER_REVIEW_TH_20261008T082918Z.md",
+      "sha256": "c0bdb3b4c609f4c0c1dd8e947a14db5a86a89e5affbf1b2725ccd1d2fb2cc13d",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/STAGE0_FEASIBILITY_REPORT.md",
+      "sha256": "904bb1ea4b90214625d7b8a3436740b79f9158f2c30836226b60f085ccc9dfa0",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/STAGE0_NEXT_ACTIONS.md",
+      "sha256": "de27df69977872d971657858ac6b079ae25c9a490e2db1c11712dbbf1969afe5",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    },
+    {
+      "path": "reports/TAXONOMY_AUDIT.md",
+      "sha256": "26f94d5430e6f4d4f01414035758a460c7e4108eed2e0959de23852cacdd08b8",
+      "public_copy": true,
+      "role": "HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION"
+    }
+  ],
+  "original_reports_unchanged": true,
+  "external_link_policy": "Historical references may require local artifacts; do not treat unavailable evidence as reproduced",
+  "configuration_versions": [
+    {
+      "path": "configs/application_v2.yaml",
+      "sha256": "eaa9c97c2db376ac1c8b69d47629365ac7b5f6cdd8c1ba5264a14084287e672d",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v10.yaml",
+      "sha256": "354d76df3f20b7878f3c589f225b88091cc7f049a76c27cb11596d4cd8c02896",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v11.yaml",
+      "sha256": "e4bfffe627001055835850a2d8b29d2397babc9bfd8a7abaa98ef7a079867a55",
+      "role": "EXECUTED_ORIGINAL_LAUNCH_CONFIG"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v12.yaml",
+      "sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce",
+      "role": "EXECUTED_INFRASTRUCTURE_RESTORATION_CONFIG"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v4.yaml",
+      "sha256": "69b6668249d624a850fbcc01b60c9987bdcc1b154cee5bb6f28efdff9852e036",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v5.yaml",
+      "sha256": "c04ac3adc86f72565387b7197c7a7defa5239c320b3394273d9977f666a3ee6b",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v6.yaml",
+      "sha256": "60dd2d441b8e9746e0abf3dd6309aad9083a321ac1da1640bae19903cd831fee",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v7.yaml",
+      "sha256": "ed5fa23d94d8a3264b3a8febc5c9d2a63f1bde0bc5430957d7e9156ac3e3a984",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v8.yaml",
+      "sha256": "77e900d6455b702af0ce5a24b8cb4114f00fa2d53f482e57d073b12874d06635",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_first_cohort_v9.yaml",
+      "sha256": "690b53e82975450da3c86d4de84ab667c6098cfedeafe5c67cc819fd3c8c5d16",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/application_v2_handoff_v3.yaml",
+      "sha256": "bd9bb7af89b6b73cf79743b9bd7a74c12663c6a3a542961603595361177a3c3c",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/dataset.yaml",
+      "sha256": "eeffdb49df8df5075fea9346eb1ed7d8d838d35c580f8d7d57011b831e9bc88a",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/research_scope.yaml",
+      "sha256": "1c7894943865a8ff504ed353ad78b671a368bb56434d8468da53d339610bdde5",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "configs/study.yaml",
+      "sha256": "a093ce8a950f8c20e09eeab44692c1e82fd7e3b1b0c4cc21b7de37f808ae7c48",
+      "role": "SUPERSEDED_OR_SCOPE_SPECIFIC_NOT_CURRENT_EXECUTION_AUTHORITY"
+    }
+  ],
+  "archived_report_index": "publication/ARCHIVED_REPORT_INDEX.json"
+}

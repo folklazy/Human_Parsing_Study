@@ -1,0 +1,89 @@
+{
+  "run_id": "stage0e-ccihp-native-20261012T045912Z",
+  "revisions": [
+    {
+      "original_relative": "taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/taxonomy/CCIHP_CIHP_COMPATIBILITY_DRAFT.csv",
+      "sha256_before": "39a8b14277f1317883ff8fff44d701dedb01949c29238e9ab19fb16926150d80",
+      "sha256_after": "a7f8f40994465d6b1852248e922af1a397d8ff974d601ee99b47282a1ff28648",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "provenance/CCIHP_ARCHIVE_AUDIT.json",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/provenance/CCIHP_ARCHIVE_AUDIT.json",
+      "sha256_before": "d3f4efb59941e6cc9b7fa1d722469bee0973ebe469a1e0d54724c316753397ac",
+      "sha256_after": "7aa85221fcece8e870e024da4560d3f0d0a8f85fc2559f5eb70b57b631a60bd6",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CCIHP_CIHP_COMPATIBILITY_AUDIT.md",
+      "sha256_before": "1ed15cb2aa7c269ed237dccade2c7179fc3dc3cb19b860820b6e85c125db48f2",
+      "sha256_after": "fe99bd5943ce346196f01ff671c1ad5ff8a2d077225dfcdb0b631647aa6dbb76",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CCIHP_PERSON_INSTANCE_VERIFICATION.md",
+      "sha256_before": "f2e330e2cb2f0a7ce1fd067b570795c718927fe73d89edd39c60af3cdd7ef9cb",
+      "sha256_after": "7ac9b3d1a38ada56b711aee5e4838387274895307b6ba43ebcd796ed3db1009e",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/CIHP_GROUND_TRUTH_RECOVERY_DECISION.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CIHP_GROUND_TRUTH_RECOVERY_DECISION.md",
+      "sha256_before": "99a40f60c4d68b81a855b555d30a0d98bd07c26c70779175364319f77b6f1ccd",
+      "sha256_after": "9cb2529aed9cea51bcfc15a4fcc628e37f1000340404c13b59ecb693fe623663",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/CIHP_QUALITY_AUDIT.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/CIHP_QUALITY_AUDIT.md",
+      "sha256_before": "f345745fe3bc5aea0c28f59dc15a7fdda29a9817997bda57b5800471c02453fe",
+      "sha256_after": "1754588e2c65dda61a1a1fcefc7ff5ecbe04d75c5edee055699efa400247ee8a",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/PRIMARY_DATASET_DECISION.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/PRIMARY_DATASET_DECISION.md",
+      "sha256_before": "3657771477b91a6425e24bfff9dd58e904517acae5b7e19fb132acf1ccb614fc",
+      "sha256_after": "253e203fc9198a37ea8fbec49e89a8957a51cf36fbb608b13458098a902c2576",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "reports/STAGE0_NEXT_ACTIONS.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "sha256_before": "078ac59710cfdeb5d438adbaa5a3f7b9b113b0608c769fd33336d1cc29382a4f",
+      "sha256_after": "5980501b07db95e648f6adc3a8fc870fe323ec9f29f2d6fd04682a02ba3adc72",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "README.md",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/README.md",
+      "sha256_before": "eff92a3172d0f7d22bbbe21e846f369a70a63bf8f2a04de822eda450dfc17ef4",
+      "sha256_after": "b27ad6254d805042d9d3eb3bb97fa441c5bcaffd0f1a51fc3d3902b23a3eb0cf",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    },
+    {
+      "original_relative": "STUDY_STATE.json",
+      "archived_relative": "reports/archive/stage0e-ccihp-native-20261012T045912Z/STUDY_STATE.json",
+      "sha256_before": "0a905f5b6d8e89e11260218c86f1067cc665161081d1ca1d7ff1669b45dc64ea",
+      "sha256_after": "a67e1ad4a0f75ef80cdf5853e8d17738903ca70e07dc7c991c323e3611f38fbc",
+      "timestamp_utc": "2026-10-12T05:16:28.099611+00:00",
+      "reason": "Actual CCIHP added: supersede missing-input gate with bounded compatibility evidence"
+    }
+  ],
+  "new_artifacts": [
+    "provenance/CCIHP_ARCHIVE_AUDIT_V2.json",
+    "manifests/CCIHP_QUALITY_REVIEW_PLAN_V1.json"
+  ]
+}

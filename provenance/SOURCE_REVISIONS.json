@@ -1,0 +1,79 @@
+{
+  "CPI-Parser": {
+    "commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "remote": "https://github.com/HAG-uestc/CPI-Parser.git",
+    "branch": "master",
+    "status": "",
+    "local_path": "third_party/human_parsing/CPI-Parser",
+    "relevant_hashes": {
+      "README.md": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+      "LICENSE": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+      "requirements.txt": "3cc819a7e7b317393169b06a89a8ecf7d96145a47779656f970e28c0d6eea3ed"
+    }
+  },
+  "D2FP": {
+    "commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "remote": "https://github.com/cvlab-yongin/D2FP.git",
+    "branch": "main",
+    "status": "",
+    "local_path": "third_party/human_parsing/D2FP",
+    "relevant_hashes": {
+      "README.md": "a1d01cadd0579c47b2f01598cc42734811b6b0b801ded6f0bc9edfd055ba188d",
+      "LICENSE": "fc6a3027fe1c76125344b0e99805a51a6baf048c05cd17e7f11db5490582e02d"
+    }
+  },
+  "M2FP": {
+    "commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "remote": "https://github.com/soeaver/M2FP.git",
+    "branch": "main",
+    "status": "",
+    "local_path": "third_party/human_parsing/M2FP",
+    "relevant_hashes": {
+      "README.md": "70d3ee9583768655351af4514997ff90067613f3790b05ec52620fe26fa6a2e7",
+      "LICENSE": "afaea842ddf9f92923765854cf3ccdc61dc9786480420784dd2faffe3d3d8010",
+      "INSTALL.md": "be05bbe432689d95e552792ed87fab8f47a0a398490d04fd61f6422645b5a3d4",
+      "requirements.txt": "0299a9b2dbbfb7962bdcab0402948c378820dcb7f066219b1debdde48d068487"
+    }
+  },
+  "Multi-Human-Parsing": {
+    "commit": "de6148ea06afc17e007271f5aff7990cb7bb2a31",
+    "remote": "https://github.com/ZhaoJ9014/Multi-Human-Parsing.git",
+    "branch": "master",
+    "status": "",
+    "local_path": "third_party/human_parsing/Multi-Human-Parsing",
+    "relevant_hashes": {
+      "README.md": "577b96605426b8bee8320a3adf65b49e2f0d9413245eb0c9feec67470e284527",
+      "LICENSE": "68bbc0fb9e335de4bdfd285de99b5f506bc9b60228d9f5aa7bb74309fe26914b"
+    }
+  },
+  "SCHP": {
+    "commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "remote": "https://github.com/GoGoDuck912/Self-Correction-Human-Parsing.git",
+    "branch": "master",
+    "status": "",
+    "local_path": "third_party/human_parsing/SCHP",
+    "relevant_hashes": {
+      "README.md": "91db28cf69c4d21d58ade026467bd886596c27d4b12955f95b42b1997e0910f4",
+      "LICENSE": "4b6f33d1127bad303130ad839fd79541e4390c43a4c4de3e9ebbdd90978df941",
+      "requirements.txt": "3fff4303a3922114b620ac1a0e4010de425be6b711063514bf11a6b2df35400b"
+    }
+  },
+  "fashn-human-parser": {
+    "commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+    "remote": "https://github.com/fashn-AI/fashn-human-parser.git",
+    "branch": "main",
+    "status": "",
+    "local_path": "third_party/human_parsing/fashn-human-parser",
+    "relevant_hashes": {
+      "README.md": "fa4a279452a148e269798b0171ab20521d1557d2dc4c8d19f9d181bfffde8432",
+      "LICENSE": "873ccdc8a7d59a7919ad953a7d4fea8ad1948f67ff5d5ae1cc2418d51a281e86"
+    }
+  },
+  "Sapiens2": {
+    "repository": "facebookresearch/sapiens2",
+    "commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+    "license_status": "LICENSE_BLOCKED_PENDING_CLARIFICATION",
+    "source_cloned": false,
+    "checkpoint_downloaded": false
+  }
+}

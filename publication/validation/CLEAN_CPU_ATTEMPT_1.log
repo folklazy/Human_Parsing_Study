@@ -1,0 +1,27 @@
+PORTABLE CPU SCOPE: test_application_v2, test_application_v2_handoff, test_application_v2_contexts, test_application_v2_comparison, test_application_v2_acquisition, test_application_v2_first_cohort_policy, test_application_v2_cpi_evidence_acceptance, test_application_v2_immutable_config, test_application_v2_yolo_bootstrap
+EXTERNAL-ASSET TESTS NOT RUN: fresh_integration, validation_launch, original dataset/evaluator suites
+........................................................................................................................E.E............
+======================================================================
+ERROR: test_plan_uses_two_CPI_systems_and_frozen_dependency_only (test_application_v2_first_cohort_policy.FirstCohortPolicyTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/human-parsing-public-clean-ejjz63jr/tests/test_application_v2_first_cohort_policy.py", line 38, in test_plan_uses_two_CPI_systems_and_frozen_dependency_only
+    plan = first_cohort_plan(self.config, S)
+  File "/tmp/human-parsing-public-clean-ejjz63jr/src/application_v2/plan.py", line 32, in first_cohort_plan
+    raise ValueError('Declared parser checkpoint/config is missing')
+ValueError: Declared parser checkpoint/config is missing
+
+======================================================================
+ERROR: test_selector_does_not_fall_back_to_legacy_roster (test_application_v2_first_cohort_policy.FirstCohortPolicyTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/human-parsing-public-clean-ejjz63jr/tests/test_application_v2_first_cohort_policy.py", line 50, in test_selector_does_not_fall_back_to_legacy_roster
+    plan = first_cohort_plan(self.config, S)
+  File "/tmp/human-parsing-public-clean-ejjz63jr/src/application_v2/plan.py", line 32, in first_cohort_plan
+    raise ValueError('Declared parser checkpoint/config is missing')
+ValueError: Declared parser checkpoint/config is missing
+
+----------------------------------------------------------------------
+Ran 135 tests in 4.333s
+
+FAILED (errors=2)

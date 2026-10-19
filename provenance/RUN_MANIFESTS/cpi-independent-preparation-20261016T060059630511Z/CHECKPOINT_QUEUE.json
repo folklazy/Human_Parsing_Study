@@ -1,0 +1,402 @@
+{
+  "timestamp_utc": "2026-10-16T06:02:11.103568+00:00",
+  "prior_inventory": "provenance/CHECKPOINT_INVENTORY_CURRENT_V1.json",
+  "prior_inventory_sha256": "ee9bbe47c5c4214b2c6707a0507ee1a1a7ac0b3dfcd3f0673163f3c66319d634",
+  "registry": "provenance/MODEL_VARIANT_REGISTRY_HANDOFF_V6.csv",
+  "registry_sha256": "ad1657213fd7bde61a266971eb1fd2a5dab6f30cf5013c122dd4657868ec2260",
+  "status": "ALL_RECORDED_ASSETS_PRESENT_NO_ACTIONABLE_MISSING_DOWNLOAD",
+  "path_entries_checked": 31,
+  "unique_artifacts_from_prior_verified_inventory": 27,
+  "checks": [
+    {
+      "path": "models/human_parsing/d2fp/D2FP_R101_LIP/model.pth",
+      "exists": true,
+      "bytes": 958249837,
+      "recorded_bytes": 958249837,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "exists": true,
+      "bytes": 958247405,
+      "recorded_bytes": 958247405,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "exists": true,
+      "bytes": 1626451404,
+      "recorded_bytes": 1626451404,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.4b/model.safetensors",
+      "exists": true,
+      "bytes": 1626451404,
+      "recorded_bytes": 1626451404,
+      "size_match": true,
+      "is_symlink": true
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "exists": true,
+      "bytes": 3310187452,
+      "recorded_bytes": 3310187452,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.8b/model.safetensors",
+      "exists": true,
+      "bytes": 3310187452,
+      "recorded_bytes": 3310187452,
+      "size_match": true,
+      "is_symlink": true
+    },
+    {
+      "path": "models/human_parsing/sapiens2/1b/model.safetensors",
+      "exists": true,
+      "bytes": 5883353380,
+      "recorded_bytes": 5883353380,
+      "size_match": true,
+      "is_symlink": true
+    },
+    {
+      "path": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "exists": true,
+      "bytes": 5883353380,
+      "recorded_bytes": 5883353380,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/sapiens2/5b/model.safetensors",
+      "exists": true,
+      "bytes": 20358459120,
+      "recorded_bytes": 20358459120,
+      "size_match": true,
+      "is_symlink": true
+    },
+    {
+      "path": "models/human_parsing/sapiens2/5b/sapiens2_5b_seg.safetensors",
+      "exists": true,
+      "bytes": 20358459120,
+      "recorded_bytes": 20358459120,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "exists": true,
+      "bytes": 1301413296,
+      "recorded_bytes": 1301413296,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/cpi_parser/CPI_R50_MHPV2/model.pth",
+      "exists": true,
+      "bytes": 566676956,
+      "recorded_bytes": 566676956,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "exists": true,
+      "bytes": 571901148,
+      "recorded_bytes": 571901148,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_MHPV2/model.pth",
+      "exists": true,
+      "bytes": 1299250784,
+      "recorded_bytes": 1299250784,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_R101_ATR/model.pth",
+      "exists": true,
+      "bytes": 267445237,
+      "recorded_bytes": 267445237,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_R101_LIP/model.pth",
+      "exists": true,
+      "bytes": 267449349,
+      "recorded_bytes": 267449349,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_R101_PASCAL_PERSON_PART/model.pth",
+      "exists": true,
+      "bytes": 267422621,
+      "recorded_bytes": 267422621,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "exists": true,
+      "bytes": 757764792,
+      "recorded_bytes": 757764792,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/m2fp/M2FP_R101_MHPV2/model.pth",
+      "exists": true,
+      "bytes": 757779078,
+      "recorded_bytes": 757779078,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/m2fp/M2FP_R101_LIP/model.pth",
+      "exists": true,
+      "bytes": 757659590,
+      "recorded_bytes": 757659590,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/rp_r_cnn/RPR_MHPV2/model.pth",
+      "exists": true,
+      "bytes": 236429872,
+      "recorded_bytes": 236429872,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "exists": true,
+      "bytes": 234931960,
+      "recorded_bytes": 234931960,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/fashn/FASHN_B4/model.safetensors",
+      "exists": true,
+      "bytes": 256146352,
+      "recorded_bytes": 256146352,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/qanet/QANet_LIP/model.pth",
+      "exists": true,
+      "bytes": 277952663,
+      "recorded_bytes": 277952663,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/qanet/QANet_CIHP/model.pth",
+      "exists": true,
+      "bytes": 126283641,
+      "recorded_bytes": 126283641,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_OFFICIAL_MULTIPERSON/detectron2_maskrcnn_cihp_finetune.pth",
+      "exists": true,
+      "bytes": 1458766794,
+      "recorded_bytes": 1458766794,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_OFFICIAL_MULTIPERSON/exp_schp_multi_cihp_global.pth",
+      "exists": true,
+      "bytes": 267449322,
+      "recorded_bytes": 267449322,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/schp/SCHP_OFFICIAL_MULTIPERSON/exp_schp_multi_cihp_local.pth",
+      "exists": true,
+      "bytes": 267449322,
+      "recorded_bytes": 267449322,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "exists": true,
+      "bytes": 277950114,
+      "recorded_bytes": 277950114,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/qanet/QANet_LIP_HRNetW48_544x416/weights_latest.pth",
+      "exists": true,
+      "bytes": 290732562,
+      "recorded_bytes": 290732562,
+      "size_match": true,
+      "is_symlink": false
+    },
+    {
+      "path": "models/human_parsing/cdgnet/CDGNet_R101_LIP/LIP_epoch_149.pth",
+      "exists": true,
+      "bytes": 267470799,
+      "recorded_bytes": 267470799,
+      "size_match": true,
+      "is_symlink": false
+    }
+  ],
+  "approved_existing_download_plan_entries": [
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "M2FP_R101_MHPV2",
+      "destination": "models/human_parsing/m2fp/M2FP_R101_MHPV2/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "M2FP_R101_CIHP",
+      "destination": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "M2FP_R101_LIP",
+      "destination": "models/human_parsing/m2fp/M2FP_R101_LIP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "CPI_R50_MHPV2",
+      "destination": "models/human_parsing/cpi_parser/CPI_R50_MHPV2/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "CPI_ConvNeXtB_MHPV2",
+      "destination": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_MHPV2/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "CPI_R50_CIHP",
+      "destination": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "destination": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "FASHN_B4",
+      "destination": "models/human_parsing/fashn/FASHN_B4/model.safetensors",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "D2FP_R101_CIHP",
+      "destination": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "D2FP_R101_LIP",
+      "destination": "models/human_parsing/d2fp/D2FP_R101_LIP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "SCHP_R101_LIP",
+      "destination": "models/human_parsing/schp/SCHP_R101_LIP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "SCHP_R101_ATR",
+      "destination": "models/human_parsing/schp/SCHP_R101_ATR/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN.json",
+      "model_id": "SCHP_R101_PASCAL_PERSON_PART",
+      "destination": "models/human_parsing/schp/SCHP_R101_PASCAL_PERSON_PART/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_D2FP_RETRY.json",
+      "model_id": "D2FP_R101_CIHP",
+      "destination": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_D2FP_RETRY.json",
+      "model_id": "D2FP_R101_LIP",
+      "destination": "models/human_parsing/d2fp/D2FP_R101_LIP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_OPTIONAL.json",
+      "model_id": "QANet_CIHP",
+      "destination": "models/human_parsing/qanet/QANet_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_OPTIONAL.json",
+      "model_id": "QANet_LIP",
+      "destination": "models/human_parsing/qanet/QANet_LIP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_OPTIONAL.json",
+      "model_id": "RPR_CIHP",
+      "destination": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "exists": true
+    },
+    {
+      "plan": "Human_Parsing_CCIHP_10_Image_Pilot/configs/CHECKPOINT_DOWNLOAD_PLAN_OPTIONAL.json",
+      "model_id": "RPR_MHPV2",
+      "destination": "models/human_parsing/rp_r_cnn/RPR_MHPV2/model.pth",
+      "exists": true
+    }
+  ],
+  "not_obtained_no_official_link_in_existing_audit": [
+    {
+      "model_id": "M2FP_PASCAL",
+      "acquisition_status": "NOT_OBTAINED",
+      "reason": "Official model table has no checkpoint link",
+      "official_checkpoint_url": ""
+    },
+    {
+      "model_id": "QANet_MHPV2",
+      "acquisition_status": "NOT_OBTAINED",
+      "reason": "No official trained parser release in audited table",
+      "official_checkpoint_url": ""
+    },
+    {
+      "model_id": "QANet_CIHP_ResNet101",
+      "acquisition_status": "NOT_OBTAINED",
+      "reason": "Official table row has no download link",
+      "official_checkpoint_url": ""
+    }
+  ],
+  "new_network_search": false,
+  "new_download_bytes": 0,
+  "weights_rehashed_this_run": false,
+  "verification_scope": "EXISTENCE_AND_BYTE_SIZE_AGAINST_PRIOR_HASHED_INVENTORY_NOT_NEW_CONTENT_HASH_VALIDATION",
+  "CDGNet": "DOWNLOADED_ALREADY_GPU_INFERENCE_NOT_TESTED_LICENSE_REVIEW_REMAINS",
+  "Sapiens2": "NO_NEW_ACTION_LICENSE_STATUS_UNCHANGED_5B_EXCLUDED"
+}

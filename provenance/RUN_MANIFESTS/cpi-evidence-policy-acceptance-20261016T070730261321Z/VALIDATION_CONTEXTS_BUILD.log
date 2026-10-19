@@ -1,0 +1,6 @@
+[GT CONTEXTS] 1000/5000: verified; no inference
+[GT CONTEXTS] 2000/5000: verified; no inference
+[GT CONTEXTS] 3000/5000: verified; no inference
+[GT CONTEXTS] 4000/5000: verified; no inference
+[GT CONTEXTS] 5000/5000: verified; no inference
+{"status": "MATERIALIZED_AND_STRUCTURALLY_VALIDATED_NOT_ACTIVATED", "populations": {"reference": {"images": 5000, "contexts": 10000, "G_loc_per_system": 17548, "G_sem_per_system": 17504, "context_registry_validation": "PASS"}, "main": {"images": 4961, "contexts": 9922, "G_loc_per_system": 17434, "G_sem_per_system": 17390, "context_registry_validation": "PASS"}}, "inference": false, "scoring": false}

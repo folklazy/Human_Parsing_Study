@@ -1,0 +1,9 @@
+[
+  {
+    "split": "Training",
+    "image_id": "0033810",
+    "unexpected_category_pixels": {
+      "22": 2
+    }
+  }
+]

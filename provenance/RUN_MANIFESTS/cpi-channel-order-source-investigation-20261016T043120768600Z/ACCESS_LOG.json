@@ -1,0 +1,108 @@
+[
+  {
+    "name": "upstream_readme",
+    "url": "https://raw.githubusercontent.com/JosonChan1998/CPI-Parser/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/JosonChan1998/CPI-Parser/master/README.md",
+    "http_status": 200,
+    "bytes": 2489,
+    "sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+    "content_type": "text/plain; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/upstream_readme.md"
+  },
+  {
+    "name": "hag_current_readme",
+    "url": "https://raw.githubusercontent.com/HAG-uestc/CPI-Parser/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/HAG-uestc/CPI-Parser/master/README.md",
+    "http_status": 200,
+    "bytes": 2489,
+    "sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+    "content_type": "text/plain; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/hag_current_readme.md"
+  },
+  {
+    "name": "upstream_readme_commits",
+    "url": "https://api.github.com/repos/JosonChan1998/CPI-Parser/commits?path=README.md&per_page=10",
+    "final_url": "https://api.github.com/repos/JosonChan1998/CPI-Parser/commits?path=README.md&per_page=10",
+    "http_status": 200,
+    "bytes": 13336,
+    "sha256": "bccd828082e7fa4a7a78f4c348d86386632a8ca4667af54017ac6f1de3ff1a28",
+    "content_type": "application/json; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/upstream_readme_commits.json"
+  },
+  {
+    "name": "upstream_issues",
+    "url": "https://api.github.com/repos/JosonChan1998/CPI-Parser/issues?state=all&per_page=50",
+    "final_url": "https://api.github.com/repos/JosonChan1998/CPI-Parser/issues?state=all&per_page=50",
+    "http_status": 200,
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "content_type": "application/json; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/upstream_issues.json"
+  },
+  {
+    "name": "r50_drive_preview",
+    "url": "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view",
+    "final_url": "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view",
+    "http_status": 200,
+    "bytes": 82444,
+    "sha256": "c3f063f6a18c893f586ac25966cca02876137604ebab1d51565115d5891f5ffa",
+    "content_type": "text/html; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/r50_drive_preview.html"
+  },
+  {
+    "name": "convnext_drive_preview",
+    "url": "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view",
+    "final_url": "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view",
+    "http_status": 200,
+    "bytes": 82428,
+    "sha256": "8dd9df053711da75fbdbc23e7d09a9efef9ea54cae43f8115664a57d504c5429",
+    "content_type": "text/html; charset=utf-8",
+    "truncated": false,
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/convnext_drive_preview.html"
+  },
+  {
+    "name": "history_readme_6bf469c01e6d",
+    "url": "https://raw.githubusercontent.com/JosonChan1998/CPI-Parser/6bf469c01e6d5438f42f3ff9ae96ce26c0676326/README.md",
+    "http_status": 200,
+    "bytes": 2325,
+    "sha256": "ef603153e0faf09959252b05f33bde598d4550e169382e327aafa06fc6070182",
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/README_6bf469c01e6d.md",
+    "links": [
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation",
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation",
+      "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view?usp=share_link",
+      "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view?usp=sharing"
+    ]
+  },
+  {
+    "name": "history_readme_1a8461bd4779",
+    "url": "https://raw.githubusercontent.com/JosonChan1998/CPI-Parser/1a8461bd47797898ddefc5d2f7970b6508dd660b/README.md",
+    "http_status": 200,
+    "bytes": 2203,
+    "sha256": "be61559c235c00c919391164d231ca8a9ba083f6096bf6dd722a4bd798ccd7ee",
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/README_1a8461bd4779.md",
+    "links": [
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation",
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation",
+      "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view?usp=share_link",
+      "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view?usp=sharing"
+    ]
+  },
+  {
+    "name": "history_readme_0b12505600d4",
+    "url": "https://raw.githubusercontent.com/JosonChan1998/CPI-Parser/0b12505600d40d0081c15b4b078a7ed34e0dae7b/README.md",
+    "http_status": 200,
+    "bytes": 2036,
+    "sha256": "989b820f34236a30ea9408212c16b858887c1e2df92698882c47312b3c90978c",
+    "artifact": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/external_metadata/README_0b12505600d4.md",
+    "links": [
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation",
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation"
+    ]
+  }
+]

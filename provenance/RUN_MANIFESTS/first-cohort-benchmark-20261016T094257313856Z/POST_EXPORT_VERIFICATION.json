@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-19T03:57:15.921187+00:00",
+  "verifier_sha256": "0031ca39348e3987cb3fad4fc7d1cb27a19903e11ff16838d89c7240cb85a857",
+  "scope": "Export/binding/provenance checks, not successful scientific completion",
+  "benchmark_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "quality_rows": 8,
+  "populations": {
+    "main": 4961,
+    "reference": 5000
+  },
+  "strict_complete_null_metrics_verified": true,
+  "source_reports": [
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_PRIMARY_REPORT.json",
+      "sha256": "13757995b7ace820550e3977bfc7a2f46d8cc56c6417ffa3fa59f2b8ae6e6170"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_SECONDARY_REPORT.json",
+      "sha256": "6a2657672791dfe4747e5c9b1904c50e13bb6c469f4345343a8a64306019d8f3"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_PRIMARY_REPORT.json",
+      "sha256": "0b492d461d2c6c1056aec7e01fd7f9ded66d003a3e5f7c0bf4023e5bc8c58be2"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_SECONDARY_REPORT.json",
+      "sha256": "ada91bdae8f77f29e0a76cadeeacbfacba5d89364f47ddbf7886c99839b0d5ca"
+    }
+  ],
+  "components": {
+    "YOLO26X_FROZEN": {
+      "COMPLETE": 5000
+    },
+    "CPI_R50_CIHP": {
+      "COMPLETE": 4475,
+      "FAILED": 525
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "COMPLETE": 4959,
+      "FAILED": 40,
+      "INVALID": 1
+    }
+  },
+  "retained_failures": 566,
+  "retries": 0,
+  "protected_files_unchanged": 126,
+  "source_archive_stats_unchanged": true,
+  "existing_repository_status": [
+    {
+      "path": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "status_unchanged": true
+    },
+    {
+      "path": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "status_unchanged": true
+    },
+    {
+      "path": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "status_unchanged": true
+    },
+    {
+      "path": "YOLO_Nano_Seg_MOTS20_Benchmark",
+      "status_unchanged": true
+    },
+    {
+      "path": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "status_unchanged": true
+    },
+    {
+      "path": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "status_unchanged": true
+    }
+  ],
+  "active_document_links": "PASS",
+  "inference_performed_by_verifier": false
+}

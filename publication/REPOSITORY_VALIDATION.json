@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "PUBLIC_METADATA_AND_SYNTHETIC_BOUNDARIES_NOT_FULL_ARTIFACT_REPRODUCTION",
+  "original_copied_files": 754,
+  "quality_rows": 8,
+  "failure_rows": 566,
+  "inventory_records": 29,
+  "strict_null_metrics": true,
+  "active_document_links": "PASS",
+  "secrets_pattern_scan": "PASS_NOT_A_GUARANTEE",
+  "no_datasets_weights_or_bulk_predictions": true,
+  "symlinks": 0,
+  "benchmark_inference": false,
+  "deferred_links": [],
+  "timestamp_utc": "2026-10-19T08:22:26.329792+00:00",
+  "scope_note": "Published metadata checks, not full benchmark completion",
+  "historical_external_deep_links_are_not_active_broken_links": "Recorded separately in HISTORICAL_EXTERNAL_LINKS.json"
+}

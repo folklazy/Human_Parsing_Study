@@ -1,0 +1,20 @@
+test_cihp_archive_preflight (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_cihp_archive_preflight (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_cihp_archive_preflight
+Traceback (most recent call last):
+  File "/home/skyaidev/.local/share/uv/python/cpython-3.10.21-linux-x86_64-gnu/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/skyaidev/.local/share/uv/python/cpython-3.10.21-linux-x86_64-gnu/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests/test_cihp_archive_preflight.py", line 8, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

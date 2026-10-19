@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE",
+  "image_id": "0000930",
+  "original_wh": [
+    500,
+    346
+  ],
+  "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+  "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+  "opportunities": [
+    {
+      "id": "0000930:YOLO:0",
+      "bbox": [
+        216.45481872558594,
+        8.307385444641113,
+        362.7947082519531,
+        343.2044982910156
+      ],
+      "score": 0.9230802655220032
+    },
+    {
+      "id": "0000930:YOLO:1",
+      "bbox": [
+        17.58049774169922,
+        34.624576568603516,
+        154.50234985351562,
+        336.1106872558594
+      ],
+      "score": 0.9203540086746216
+    }
+  ],
+  "artifact": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/outputs/YOLO_NATIVE.npz",
+  "artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+  "torch": "2.14.0+cu130",
+  "cuda_runtime": "13.0",
+  "precision": "FP32",
+  "TF32": false,
+  "warmups": 0,
+  "batch": 1,
+  "predict_call_seconds_engineering_only": 2.996449523139745,
+  "peak_allocated_mib": 403.19873046875,
+  "peak_reserved_mib": 468.0,
+  "GT_used_for_inference": false,
+  "source_sha256": "e41caa02c482eb93633fdc04bfaca34db541ee82aff30d4f233a7101cde5fae3"
+}

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+status: DRAFT_IMPLEMENTATION
+decision_record: provenance/APPLICATION_V2_DECISIONS_V2.json
+decision_record_id: USER_IMPLEMENTATION_AND_BOUNDED_TRAIN_20261014_V2
+decision_record_sha256: 867b8560de0a1c73759837f303d6f053822ee2e1bb156a0bfcb5ad2a76713ef6
+identity:
+  external_identity_establishes_native_capability: false
+  retain_both_origins: true
+  unsupported_native_count: null
+  supported_empty_native_count: 0
+rates:
+  require_stage_and_counts: true
+  zero_denominator: null
+  skip_status: SKIPPED_BY_ROUTING
+  eligibility_source: FROZEN_POLICY
+governance:
+  runner_source: EXECUTABLE_CONFIG
+  reject_decision_conflicts: true
+  drafts_allowed_for_development: true
+authorization:
+  full_benchmark: false
+  new_inference: true
+  allowed_modes:
+  - CPU_FIXTURES
+  - SAVED_TRAIN_REPLAY
+  - BOUNDED_TRAIN
+  bounded_train_inference: true
+routing:
+  person_failure_scope: PERSON
+  skip_native_if_no_opportunities: false
+  native_frame_failure_scope: FRAME
+  model_failure_retries: 0
+  external_invalid_trials: INCOMPLETE_REQUIRES_RESTORED_PROFILE
+evaluation:
+  geometry: BBOX_XYXY_HALF_OPEN
+  threshold: 0.5
+  secondary_threshold: 0.75
+  objective: ELIGIBLE_CARDINALITY_THEN_IOU
+  tie_policy: SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY
+  scipy_pin: 1.15.3
+  global_class_policy: FIXED_GT_SUPPORTED_K
+  person_foreground_catalog: ALL_COHORT_TARGET_CLASSES_PLUS_UNMAPPED
+cohort:
+  mapping: taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V1.json
+  status: DRAFT_REQUIRES_SEMANTIC_REVIEW
+  native_reference: taxonomy/APPLICATION_CCIHP_NATIVE_DIAGNOSTIC_V1.json
+  mapping_sha256: 7986ec4a7e17dc69958bfcf460c72be348a8c5b84d477ec4d0b5016ac736939e
+  native_reference_sha256: f6a4343f815f6cc083096d36b61ceaa48a63abc7555aea4c9e757cca6fccd27a
+  sidecars_manifest: provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/MANIFEST.json
+  sidecars_manifest_sha256: e1b446be3ff1e6f3b6a724e21e674721b8e2cfee1b87b531e690a618b906f748
+populations:
+  CCIHP_primary_candidate: overlap_controlled_source_target
+  CCIHP_source_reference: original_source_target
+  manifest: manifests/CCIHP_VALIDATION_POPULATIONS_STAGE0F_DRAFT_V1.json
+  roles_accepted: false
+execution:
+  model_loading: BOUNDED_TRAIN_ONLY
+  precision_profile: BOUNDED_TRAIN_FP32_OTHER_MODES_NO_MODEL_LOADING
+  warmups: null
+  measured_rounds: null
+  gpu_inference: BOUNDED_TRAIN_ONLY
+systems:
+  registry: ../Human_Parsing_CCIHP_10_Image_Pilot/metrics/MODEL_PILOT_STATUS.csv
+  variants: 20
+  new_inference_adapters_ready: false
+pending_score_decisions:
+- numeric_mapping_acceptance
+- primary_population_role
+- G_loc_physical_validity
+- runtime_workload_profile
+- T3a_and_T3b_live_integration
+required_freeze_decisions:
+- IDENTITY_PROVENANCE
+- STAGE_RATES
+- CONFIG_AUTHORITY
+- PRIMARY_POPULATION
+- COMMON_TAXONOMY
+- APPLICATION_MATCHING
+- FULL_BENCHMARK_EXECUTION
+bounded_train:
+  input_ids:
+  - 0021834
+  - 0000930
+  - 0001368
+  maximum_frames: 3
+  maximum_person_jobs: 10
+  models:
+  - YOLO26X_FROZEN
+  - FASHN_B4
+  yolo:
+    checkpoint: models/yolo26x-seg.pt
+    imgsz: 640
+    conf: 0.25
+    iou: 0.7
+    max_det: 200
+    retina_masks: true
+  crop_margin_per_side: 0.1
+  ownership: YOLO_MASK_WINNER_BY_SCORE_THEN_STABLE_ID
+  association_threshold: 0.5
+  scope: TRAIN_ENGINEERING_DRAFT_PARAMETERS_NOT_FINAL_BENCHMARK_SETTINGS
+  common_metrics_or_ranking: false

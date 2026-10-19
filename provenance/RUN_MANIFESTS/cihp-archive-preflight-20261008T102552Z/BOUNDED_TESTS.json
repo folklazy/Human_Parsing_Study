@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-08T10:35:28.634430+00:00",
+  "tests_run": 60,
+  "failures": 0,
+  "errors": 0,
+  "status": "PASS",
+  "patterns": [
+    "test_cihp_archive_preflight.py",
+    "test_official_mhp_compat.py",
+    "test_mhpv2_stage0.py",
+    "test_dataset_reassessment.py"
+  ],
+  "log": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/BOUNDED_TESTS.log",
+  "log_sha256": "1129e0cadc1b2dd55b54a642985b34ffdbea86fdda2e8fe4857bb95cac90046b",
+  "model_inference": false,
+  "PPSS_tests": false
+}

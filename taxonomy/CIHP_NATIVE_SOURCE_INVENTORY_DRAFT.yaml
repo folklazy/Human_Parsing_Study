@@ -1,0 +1,29 @@
+status: SOURCE_LABELS_VERIFIED_LOCAL_GT_NOT_AVAILABLE
+labels:
+  0: Background
+  1: Hat
+  2: Hair
+  3: Gloves
+  4: Sunglasses
+  5: UpperClothes
+  6: Dress
+  7: Coat
+  8: Socks
+  9: Pants
+  10: Torso-skin
+  11: Scarf
+  12: Skirt
+  13: Face
+  14: Left-arm
+  15: Right-arm
+  16: Left-leg
+  17: Right-leg
+  18: Left-shoe
+  19: Right-shoe
+background_id: 0
+ignore_255: declared framework ignore; actual dataset pixels unverified
+auxiliary_Human_20: model target only; not original 20-class CIHP taxonomy
+source: third_party/human_parsing/D2FP/d2fp/data/datasets/register_cihp_parsing.py
+source_sha256: 6e1fd778a3cda04994f0742c9a248c84c62cbd9c5a9e7e6a42a8cf01835c8496
+paper: https://arxiv.org/html/1808.00157
+mapping_frozen: false

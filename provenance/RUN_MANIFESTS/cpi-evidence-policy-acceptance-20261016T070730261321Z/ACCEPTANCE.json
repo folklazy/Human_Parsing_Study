@@ -1,0 +1,21 @@
+{
+  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE_NOT_DIRECT_VERIFIED",
+  "config": {
+    "path": "configs/application_v2_first_cohort_v8.yaml",
+    "sha256": "77e900d6455b702af0ce5a24b8cb4114f00fa2d53f482e57d073b12874d06635"
+  },
+  "decision": {
+    "path": "provenance/APPLICATION_V2_DECISIONS_V7.json",
+    "sha256": "78420afd1a907d3be77af799998bad79c2f300df51fad45bed2f51c15497fcff"
+  },
+  "mapping": {
+    "path": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+    "sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e"
+  },
+  "TRAIN_images": 3,
+  "TRAIN_contexts": 6,
+  "GT_reconstruction_reused": true,
+  "full_validation_contexts_materialized": false,
+  "full_benchmark": false,
+  "new_inference": false
+}

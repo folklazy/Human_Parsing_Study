@@ -1,0 +1,1405 @@
+{
+  "schema_version": "2.0",
+  "record_id": "APPLICATION_V2_DECISIONS_V10",
+  "accepted_scope": "User requested implementation sequence including bounded TRAIN integration; no full benchmark or freeze.",
+  "source": "Explicit user acceptance of all five first-cohort policies, native thresholds and three bounded corrections; no freeze/full benchmark",
+  "decisions": [
+    {
+      "id": "IDENTITY_PROVENANCE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Native capability and externally conditioned final identity are distinct; T3b retains both origins.",
+      "bindings": {
+        "identity.external_identity_establishes_native_capability": false,
+        "identity.retain_both_origins": true,
+        "identity.unsupported_native_count": null,
+        "identity.supported_empty_native_count": 0
+      }
+    },
+    {
+      "id": "STAGE_RATES",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Stage/unit/numerator/denominator required; routing skips differ from completion/failure.",
+      "bindings": {
+        "rates.require_stage_and_counts": true,
+        "rates.zero_denominator": null,
+        "rates.skip_status": "SKIPPED_BY_ROUTING",
+        "rates.eligibility_source": "FROZEN_POLICY"
+      }
+    },
+    {
+      "id": "CONFIG_AUTHORITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Executable config is the sole runtime authority; accepted decision conflicts must fail.",
+      "bindings": {
+        "governance.runner_source": "EXECUTABLE_CONFIG",
+        "governance.reject_decision_conflicts": true,
+        "governance.drafts_allowed_for_development": true,
+        "authorization.full_benchmark": true
+      }
+    },
+    {
+      "id": "PRIMARY_POPULATION",
+      "status": "PROPOSED",
+      "reason": "Controlled4961/source5000 requires role acceptance and actual cohort sidecars.",
+      "bindings": {}
+    },
+    {
+      "id": "COMMON_TAXONOMY",
+      "status": "PROPOSED",
+      "reason": "Numeric candidate mappings do not imply semantic equivalence or a frozen universal leaderboard.",
+      "bindings": {}
+    },
+    {
+      "id": "APPLICATION_MATCHING",
+      "status": "PROPOSED",
+      "reason": "BBox0.50/0.75 and cardinality-first are development defaults pending complete readiness.",
+      "bindings": {}
+    },
+    {
+      "id": "FULL_BENCHMARK_EXECUTION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Explicit execution scope is not authorized by design review.",
+      "bindings": {
+        "authorization.full_benchmark": true,
+        "status": "FROZEN"
+      },
+      "evidence": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/USER_APPROVAL.json"
+    },
+    {
+      "id": "BOUNDED_TRAIN_INTEGRATION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User explicitly requested step4 bounded TRAIN integration for missing track checks; existing YOLO26x/FASHN checkpoints and prior approved parser workflow reused.",
+      "bindings": {
+        "authorization.bounded_train_inference": true,
+        "authorization.allowed_modes": [
+          "CPU_FIXTURES",
+          "SAVED_TRAIN_REPLAY",
+          "BOUNDED_TRAIN",
+          "FRESH_TRAIN_INTEGRATION",
+          "VALIDATION_BENCHMARK"
+        ],
+        "bounded_train.input_ids": [
+          "0021834",
+          "0000930",
+          "0001368"
+        ],
+        "bounded_train.maximum_frames": 3,
+        "bounded_train.maximum_person_jobs": 10,
+        "bounded_train.models": [
+          "YOLO26X_FROZEN",
+          "FASHN_B4"
+        ],
+        "authorization.new_inference": true
+      }
+    },
+    {
+      "id": "OFFICIAL_ACQUISITION_AND_NATIVE_FEASIBILITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Handoff1.1 appendix: all public official parser variants; licensed TRAIN1-3 FP32 only, no full benchmark",
+      "bindings": {
+        "acquisition.public_official_only": true,
+        "acquisition.individual_approval_required": false,
+        "acquisition.preserve_existing": true,
+        "native_feasibility.maximum_frames_per_variant": 3,
+        "native_feasibility.split": "Training",
+        "native_feasibility.precision": "FP32",
+        "native_feasibility.license_gate_required": true
+      }
+    },
+    {
+      "id": "PRIMARY_SCORE_COMPLETENESS",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepts STRICT_COMPLETE as main score; preserve INCOMPLETE rows and operational diagnostics; valid empty is successful execution",
+      "acceptance_scope": "Policy definition only. Actual mapping/domain/population/matching/route/runtime and full benchmark remain unaccepted.",
+      "bindings": {
+        "primary_reporting_policy": {
+          "main_score": "STRICT_COMPLETE",
+          "incomplete_systems_retained": true,
+          "incomplete_main_score": null,
+          "success_only_is_main_score": false,
+          "operational_diagnostics_required": true,
+          "valid_empty_is_execution_success": true,
+          "posthoc_population_exclusion": false,
+          "posthoc_model_retries": false,
+          "reference_unit": "FROZEN_POPULATION_FRAME",
+          "eligibility_source": "PREDECLARED_POPULATION",
+          "stage_rates_separate": true
+        }
+      }
+    },
+    {
+      "id": "CHECKPOINT_SPECIFIC_COHORTS",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepts grouping by verified checkpoint-specific target support/mapping, not dataset names; no selective voiding or cross-domain rankings",
+      "acceptance_scope": "Policy definition only. Actual mapping/domain/population/matching/route/runtime and full benchmark remain unaccepted.",
+      "bindings": {
+        "cohort_policy": {
+          "membership_basis": "CHECKPOINT_SPECIFIC_VERIFIED_SUPPORT_AND_MAPPING_EVIDENCE",
+          "dataset_name_implies_eligibility": false,
+          "per_model_target_voiding": false,
+          "cross_domain_rankings": false,
+          "shared_view_requires_comparison_revision": true,
+          "first_ready_group_need_not_wait_for_shared_view": true,
+          "support_binding_required": true
+        }
+      }
+    },
+    {
+      "id": "PATCH_PROVENANCE_SCOPE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Missing remote ZIP is provenance limitation, not a gate if current source behavior is independently tested",
+      "bindings": {
+        "governance.missing_patch_zip_is_freeze_gate": false
+      }
+    },
+    {
+      "id": "FIRST_COHORT_MAPPING",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified; metadata-only mapping reference revision, all numeric projections unchanged",
+      "bindings": {
+        "first_cohort.protocol.mapping": {
+          "mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+          "mapping_file_sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e",
+          "target_catalog": {
+            "0": "Background",
+            "1": "Exposed_face",
+            "2": "Exposed_torso",
+            "3": "Exposed_arms",
+            "4": "Exposed_legs",
+            "5": "Garments_coarse",
+            "6": "Footwear"
+          },
+          "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+          "GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+          "per_checkpoint_native_projections": {
+            "CPI_R50_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358",
+            "CPI_ConvNeXtB_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358"
+          },
+          "evidence_table": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_V1.csv",
+          "evidence_table_sha256": "b0cc2f8324d0b37a3b805e96d932b9bc7ec5c9a524766afe8dd2bebd25f02eb1",
+          "groups": {
+            "body": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "clothing": [
+              5
+            ],
+            "footwear": [
+              6
+            ]
+          },
+          "excluded_GT_ids": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            20,
+            21,
+            22
+          ],
+          "policy": "FIXED_COMMON_TARGET_WITH_CHECKPOINT_SPECIFIC_NATIVE_PROJECTIONS",
+          "fine_clothing_or_accessory_quality_claim": false,
+          "native_CIHP_equivalence_claim": false,
+          "definitions": {
+            "1": "Source-declared Face region; not a claim of an independent skin detector",
+            "2": "Torso-skin",
+            "3": "Union of left/right naked arm regions; hands only if included by source labels",
+            "4": "Union of left/right naked leg regions",
+            "5": "Selected garments: GT5,7,8,9,11,12; CIHP5,6,7,8,9,11,12. Socks/scarf included; headwear/gloves excluded",
+            "6": "Union of left/right shoe labels; no independent bare-foot target"
+          },
+          "display_names": {
+            "1": "Face region"
+          }
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_GT_DOMAIN",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.domain": {
+          "policy_id": "CCIHP_RELEASED_ANNOTATION_RELATIVE_CORE_R1",
+          "reference": "RELEASED_CCIHP_CATEGORY_AND_HUMAN_IDS_NOT_EXHAUSTIVE_PHYSICAL_TRUTH",
+          "category0_human0": "KNOWN_NEGATIVE_RELATIVE_TO_RELEASED_ANNOTATION",
+          "category0_human_positive": "VOID_UNKNOWN",
+          "unknown22": "VOID_SHARED_RAW_PRESERVED",
+          "known_outside_target": "VOID_SHARED",
+          "other_known_person_pixels": "NEGATIVE_FOR_TARGET_PERSON_WHERE_SHARED_VALID",
+          "association_uses_GT": false,
+          "categorical_resampling": "NONE_GT_ORIGINAL_GRID",
+          "FP_wording": "UNMATCHED_PREDICTION_RELATIVE_TO_RELEASED_ANNOTATION_UNDER_THIS_POLICY",
+          "person_mask": "NATIVE_HUMAN_ID_FOREGROUND_ALL_SOURCE_SEMANTICS",
+          "G_loc": "EVERY_POSITIVE_NATIVE_HUMAN_ID_WITH_NONEMPTY_RELEASED_MASK",
+          "G_sem": "G_LOC_SUBSET_WITH_AT_LEAST_ONE_VALID_TARGET_1_TO_6_PIXEL",
+          "person_semantic_truth": "TARGET_LABEL_INSIDE_THIS_HUMAN_ID_ELSE_BG_ON_SHARED_VALID_DOMAIN",
+          "per_image_GT_domain_binding": "SOURCE_MAP_HASHES_PLUS_GT_PROJECTION_DOMAIN_POLICY_AND_G_LOC_G_SEM",
+          "recipe_hash_is_decoded_mask_hash": false,
+          "category_positive_human0_global": "KEEP_KNOWN_TARGET_ON_SHARED_GLOBAL_SEMANTIC_DOMAIN",
+          "category_positive_human0_per_person": "VOID_OWNER_UNKNOWN",
+          "owner_unknown_scope_clarification_is_policy_change": false,
+          "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_POPULATION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.population": {
+          "main": "overlap_controlled_source_target",
+          "reference": "original_source_target",
+          "main_images": 4961,
+          "main_G_loc": 17434,
+          "main_G_sem": 17390,
+          "reference_images": 5000,
+          "reference_G_loc": 17548,
+          "reference_G_sem": 17504,
+          "main_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+          "main_manifest_sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+          "reference_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+          "reference_manifest_sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+          "main_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+          "main_person_sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+          "reference_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+          "reference_person_sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+          "exclusions": "39_VALIDATION_IDS_WITH_EXACT_DECODED_TRAIN_RGB_REUSE_ONLY",
+          "within_validation_duplicates": "RETAIN_SOURCE_MEMBERSHIP_2_IDS_1_GROUP_DISCLOSED",
+          "near_duplicates": "114_PAIRS_RISK_SCREEN_ONLY_NO_NEW_EXCLUSIONS",
+          "exposure_claim": "NOT_TRAINING_EXPOSURE_FREE_OR_ARCHITECTURE_CONTROLLED"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_MATCHING",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.matching": {
+          "association": {
+            "threshold": 0.5,
+            "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+            "left_bbox_source": "FROZEN_YOLO26X_BOX",
+            "right_bbox_source": "NATIVE_PARSER_BOX",
+            "uses_GT": false,
+            "accepted_for_benchmark": false
+          },
+          "final_prediction_to_GT": {
+            "threshold": 0.5,
+            "secondary_threshold": 0.75,
+            "geometry": "BBOX_XYXY_HALF_OPEN",
+            "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+            "tie_policy": "SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY_1_15_3",
+            "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+            "GT_bbox_source": "ORIGINAL_HUMAN_ID_HALF_OPEN_BBOX",
+            "conditioning_bbox_source": "FROZEN_YOLO26X_BOX",
+            "class_guided_rematching": false
+          },
+          "native_unassociated": "NOT_FINAL_T3B_OUTPUT_REPORT_NATIVE_ASSOCIATION_DIAGNOSTIC",
+          "unmatched_YOLO": "NO_FINAL_PERSON_RETAIN_OPPORTUNITY_DIAGNOSTIC",
+          "final_unmatched_GT": "LOC_FN_AND_ZERO_QUALITY_IF_G_SEM",
+          "final_unmatched_prediction": "ANNOTATION_RELATIVE_FP",
+          "semantic_undefined_GT": "RETAIN_G_LOC_NEVER_FORCE_SEMANTIC_ZERO_UNION_SCORE",
+          "zero_YOLO": "RUN_NATIVE_AS_CONFIGURED_FINAL_EMPTY_EXECUTION_COMPLETE_IF_NO_FAILURE",
+          "confidence_policy": "KEEP_OFFICIAL_CHECKPOINT_SPECIFIC_NATIVE_DEFAULTS_NO_QUALITY_TUNING",
+          "native_score_thresholds": {
+            "CPI_R50_CIHP": 0.01,
+            "CPI_ConvNeXtB_CIHP": 0.05
+          },
+          "visualization_threshold_is_metric_filter": false
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_RUNTIME_CLAIM",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.runtime": {
+          "claim_scope": "QUALITY_ONLY_FIRST_COMPARISON",
+          "primary_precision": "FP32",
+          "compare_latency": false,
+          "compare_FPS": false,
+          "compare_VRAM": false,
+          "cost_Pareto": false,
+          "smoke_profiles": "FEASIBILITY_ONLY_NOT_REPEATED_COST_MEASUREMENTS",
+          "cost_extension": "SEPARATE_ACCEPTED_WORKLOAD_RESIDENCY_WARMUPS_SYNCHRONIZATION_CLEAN_REPEATS_REQUIRED"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_CHANNEL_GATE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepts converging paper/release/config/numeric-source and bounded TRAIN behavioral evidence without DIRECT_VERIFIED or all-classes-correct requirement",
+      "bindings": {
+        "first_cohort.channel_order_evidence": {
+          "required": true,
+          "manifest": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json",
+          "manifest_sha256": "504c46941ba1cfbcd9788fcb4db0c982ed5066d535d2cf4f77e25a0cbf751a8e",
+          "accepted_statuses": [
+            "DIRECT_VERIFIED",
+            "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+          ],
+          "semantic_binding_without_gate": "PROHIBITED",
+          "policy_acceptance_satisfies_gate": false,
+          "evidence_policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1"
+        },
+        "first_cohort.entrypoint": {
+          "mode": "DRY_RUN_AND_FRESH_TRAIN_INTEGRATION",
+          "script": "scripts/first_cohort_entrypoint.py",
+          "roster_source": "first_cohort.models",
+          "settings_source": "first_cohort.execution_spec",
+          "legacy_engineering_is_active_roster": false,
+          "model_loading": true,
+          "replay_manifest": {
+            "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/SAVED_TRAIN_REPLAY_INPUTS.json",
+            "sha256": "e019b4fa9109c777c30e70307fa5d472ad044e801166787fd0e16098130464e1"
+          },
+          "fresh_inputs": {
+            "path": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/FRESH_TRAIN_INPUTS.json",
+            "sha256": "652f85d7b17ddd5269cd6e089cfa8bb5f46efaa2f20971ddec82c0e5346b5d4c"
+          },
+          "GT_cache": {
+            "path": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/GT_TRAIN_RECONSTRUCTION/MANIFEST.json",
+            "sha256": "d028171416f2d388b3c67878b9f821ca43d61cec60ac68c0b2ab5b265b166be2"
+          },
+          "worker": {
+            "path": "scripts/first_cohort_gpu_worker.py",
+            "sha256": "f5a9b3e79a6d5b572ec80d6990a99c311effcf1baf22fd844b4d4c16151e0380"
+          }
+        },
+        "first_cohort.models": [
+          "CPI_R50_CIHP",
+          "CPI_ConvNeXtB_CIHP"
+        ],
+        "first_cohort.track": "T3B",
+        "first_cohort.execution_spec.actual_inference_enabled": true,
+        "first_cohort.execution_spec.semantic_scoring_enabled": true
+      },
+      "supersedes": "Direct-header-only requirement in decision V6; V6 remains immutable"
+    },
+    {
+      "id": "SCORING_CONTEXTS",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Materialization of the accepted mapping/domain policies for three predeclared TRAIN inputs only; no semantic scores, no validation benchmark",
+      "bindings": {
+        "scoring_contexts": {
+          "CPI_R50_CIHP": {
+            "0021834": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0021834",
+                "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+                "RGB_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+                "original_wh": [
+                  500,
+                  321
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0021834",
+                  "G_loc": 2,
+                  "G_sem": 2,
+                  "GT_domain_recipe_sha256": "400fc44b39fa2bd20c2a686561147b79057ac7ed71d6a5e804dcb3e9e52783f6"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            },
+            "0000930": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0000930",
+                "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+                "RGB_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+                "original_wh": [
+                  500,
+                  346
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0000930",
+                  "G_loc": 2,
+                  "G_sem": 2,
+                  "GT_domain_recipe_sha256": "c7d5ac50c0ed3a7c7def36463bf6be8698f95a35a901e8fc78efb05d3768d860"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            },
+            "0001368": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0001368",
+                "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+                "RGB_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+                "original_wh": [
+                  500,
+                  375
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0001368",
+                  "G_loc": 3,
+                  "G_sem": 3,
+                  "GT_domain_recipe_sha256": "81d58c2d81e9b3b6de1a408f80d40530ac513e42eaa7104a6808b18091587558"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                "config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            }
+          },
+          "CPI_ConvNeXtB_CIHP": {
+            "0021834": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0021834",
+                "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+                "RGB_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+                "original_wh": [
+                  500,
+                  321
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0021834",
+                  "G_loc": 2,
+                  "G_sem": 2,
+                  "GT_domain_recipe_sha256": "400fc44b39fa2bd20c2a686561147b79057ac7ed71d6a5e804dcb3e9e52783f6"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            },
+            "0000930": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0000930",
+                "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+                "RGB_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+                "original_wh": [
+                  500,
+                  346
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0000930",
+                  "G_loc": 2,
+                  "G_sem": 2,
+                  "GT_domain_recipe_sha256": "c7d5ac50c0ed3a7c7def36463bf6be8698f95a35a901e8fc78efb05d3768d860"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            },
+            "0001368": {
+              "status": "ACCEPTED",
+              "scope": "ACCEPTED_TRAIN_ENGINEERING_SCORING_ONLY_NOT_VALIDATION_EXECUTION",
+              "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+              "model_binding": {
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order": [
+                  "Background",
+                  "Hat",
+                  "Hair",
+                  "Gloves",
+                  "Sunglasses",
+                  "UpperClothes",
+                  "Dress",
+                  "Coat",
+                  "Socks",
+                  "Pants",
+                  "Torso-skin",
+                  "Scarf",
+                  "Skirt",
+                  "Face",
+                  "Left-arm",
+                  "Right-arm",
+                  "Left-leg",
+                  "Right-leg",
+                  "Left-shoe",
+                  "Right-shoe"
+                ],
+                "native_taxonomy": "CIHP",
+                "head_classes": 20
+              },
+              "input_binding": {
+                "status": "VERIFIED",
+                "image_id": "0001368",
+                "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+                "RGB_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+                "original_wh": [
+                  500,
+                  375
+                ],
+                "dataset": "CCIHP",
+                "split": "Training"
+              },
+              "domain": {
+                "status": "ACCEPTED",
+                "evidence": "RELEASED_ANNOTATION_RELATIVE_POLICY_AND_PRIOR_HASH_BOUND_GT_CACHE",
+                "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0",
+                "image_binding": {
+                  "image_id": "0001368",
+                  "G_loc": 3,
+                  "G_sem": 3,
+                  "GT_domain_recipe_sha256": "81d58c2d81e9b3b6de1a408f80d40530ac513e42eaa7104a6808b18091587558"
+                }
+              },
+              "target_support_policy": "COMMON_CAPABILITY",
+              "failure_policy": "STRICT_COMPLETE",
+              "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+              "threshold": 0.5,
+              "require_checkpoint_specific_support": true,
+              "require_channel_order_evidence": true,
+              "accepted_channel_evidence_statuses": [
+                "DIRECT_VERIFIED",
+                "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+              ],
+              "support_binding": {
+                "status": "VERIFIED",
+                "verification_scope": "HASH_BINDINGS_AND_ACCEPTED_TARGET_SUPPORT",
+                "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                "config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+                "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                "native_class_order_sha256": "4ddb22622f434638468bcbfa64b4bbdc1d8088c242be54f3ab54d0f2be5ec1b5",
+                "mapping_sha256": "51fd89b00cc19238a084cc966946db5dfceec560ca05572f1c63e2a20fa0d6bf",
+                "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+                "evidence_references": [
+                  "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/CHANNEL_ORDER_EVIDENCE_V2.json"
+                ],
+                "semantic_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                "supported_target_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "channel_order_evidence": {
+                  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+                  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+                  "expected_native_class_order": [
+                    "Background",
+                    "Hat",
+                    "Hair",
+                    "Gloves",
+                    "Sunglasses",
+                    "UpperClothes",
+                    "Dress",
+                    "Coat",
+                    "Socks",
+                    "Pants",
+                    "Torso-skin",
+                    "Scarf",
+                    "Skirt",
+                    "Face",
+                    "Left-arm",
+                    "Right-arm",
+                    "Left-leg",
+                    "Right-leg",
+                    "Left-shoe",
+                    "Right-shoe"
+                  ],
+                  "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+                  "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+                  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+                  "original_training_header_verified": false,
+                  "components": {
+                    "PUBLISHED_PAPER_REPOSITORY_LINK": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+                      "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+                    },
+                    "OFFICIAL_RELEASE_TABLE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+                      "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+                    },
+                    "CHECKPOINT_EMBEDDED_CONFIG": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+                      "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+                    },
+                    "NUMERIC_PROCESSING_SOURCE_TRACE": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+                      "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+                    },
+                    "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+                      "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+                      "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+                    }
+                  },
+                  "limitations": [
+                    "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+                    "Visual sanity is not all-class accuracy certification"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "scoring_population": [
+          {
+            "image_id": "0021834",
+            "G_loc": 2,
+            "G_sem": 2
+          },
+          {
+            "image_id": "0000930",
+            "G_loc": 2,
+            "G_sem": 2
+          },
+          {
+            "image_id": "0001368",
+            "G_loc": 3,
+            "G_sem": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Latest user instruction explicitly accepts standard CIHP mapping from converging evidence and a bounded saved TRAIN sanity review",
+      "bindings": {
+        "cohort.mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+        "cohort.mapping_sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e"
+      }
+    },
+    {
+      "id": "VALIDATION_PACKAGE_PREPARATION_BINDING",
+      "status": "ACCEPTED_BY_USER",
+      "evidence": "User requested binding existing full validation packages while full_benchmark=false",
+      "bindings": {
+        "validation_context_packages": {
+          "role": "PREPARATION_ONLY",
+          "execution_authorized": false,
+          "manifest": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/validation_contexts_v1/MANIFEST.json",
+          "manifest_sha256": "5785ab8b84fe060ce062851087c0ccafb5c9eb1dceef675ac3929a4ad6ffbc4b",
+          "populations": {
+            "main": {
+              "images": 4961,
+              "contexts": 9922,
+              "G_loc": 17434,
+              "G_sem": 17390
+            },
+            "reference": {
+              "images": 5000,
+              "contexts": 10000,
+              "G_loc": 17548,
+              "G_sem": 17504
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "FRESH_TRAIN_SCORING_INTEGRATION",
+      "status": "ACCEPTED_BY_USER",
+      "evidence": "User authorized two CPI plus frozen YOLO fresh TRAIN and configured scorer/reporter integration; no ranking/tuning",
+      "bindings": {
+        "first_cohort.engineering.semantic_scoring_integration": "TRAIN_ONLY_NO_RANKING_OR_TUNING"
+      }
+    },
+    {
+      "id": "FIRST_COHORT_VALIDATION_LAUNCH",
+      "status": "ACCEPTED_BY_USER",
+      "rationale": "User accepts bounded integration closure; explicitly states benchmark execution not yet approved",
+      "bindings": {
+        "validation_launch": {
+          "status": "ACCEPTED",
+          "execution_authorized": true,
+          "scope": "TWO_CPI_T3B_QUALITY_ONLY",
+          "inference_population": "reference",
+          "scoring_populations": [
+            "main",
+            "reference"
+          ],
+          "one_inference_per_system_image": true,
+          "model_retries": 0,
+          "precision": "FP32",
+          "inputs": {
+            "path": "provenance/RUN_MANIFESTS/first-cohort-validation-launch-20261016T091821919536Z/VALIDATION_INPUTS.jsonl",
+            "sha256": "4be1f402a9b28ed31ef7046fc7f4ee3453b8b08e8ba9d3873e47999b116e5d23"
+          },
+          "RGB_archive_workspace_relative": "datasets/cihp-DatasetNinja.tar",
+          "GT_archive_workspace_relative": "datasets/CCIHP_icip.zip",
+          "RGB_inventory": {
+            "path": "provenance/RUN_MANIFESTS/cihp-archive-preflight-20261008T102552Z/TAR_MEMBER_SHA256.jsonl",
+            "sha256": "d8e4f01ba8a52dbb48a50ac92b6811945cb9ac0c499d96c4f73eaf4a419ee13b"
+          },
+          "worker": "scripts/first_cohort_validation_worker.py",
+          "code_hashes": {
+            "src/application_v2/cohorts.py": "e6fa28ef15040252b6710c10bbc7eca5a664c139b0f54b33275d5f45bd08cef7",
+            "src/application_v2/acquisition.py": "d7e6ad302b47c524c32adc41303d902a89492e23a7fc79238a8ae040ba0332f1",
+            "src/application_v2/validation_packages.py": "b3b7427b276e757ac6f2664fbc58c8b8870c4e12f27faf594bd9265b4e4d979b",
+            "src/application_v2/first_cohort_fresh.py": "708a45567e4c614934c482d1dccd6738931ae9e0a9431047fd9593114f62631a",
+            "src/application_v2/artifacts.py": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478",
+            "src/application_v2/first_cohort_validation.py": "1069e4411a655a79865223f800d5d2cc926fa578f4a77b906f75cead28343e99",
+            "src/application_v2/__init__.py": "0375e209e4f6e5d613a62df6d3124ab92c51ec266f75c49c7fa4a40e5a51d07b",
+            "src/application_v2/taxonomy.py": "74b546d7f88f206b13015833e2e5d7ada267a490ae2aaf8aaa4df90a7bdf31ac",
+            "src/application_v2/contexts.py": "8b5da7391b82e393b4d7d78b12492f7b25fb11e86dce22428326db7b2aefe4dc",
+            "src/application_v2/comparison.py": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d",
+            "src/application_v2/first_cohort_replay.py": "bb4a8deaeb0e892e9dc0ef788551ea3f2371116e86bf3fbb63f7426144551631",
+            "src/application_v2/policy.py": "7df683f725fe1f2f36b0f4c122092c3ce904983c3d54319686760b7b2bee388b",
+            "src/application_v2/validation_data.py": "0fb40e90c83f052d2c21534e69407a19b507b1a2807bc038637fb8f2a4059d93",
+            "src/application_v2/runner.py": "3771a3ac239a21c0c6fdb9b2b81f5353ea41da7e31c624fe3cb7d511353dffb5",
+            "src/application_v2/contracts.py": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4",
+            "src/application_v2/plan.py": "c052fabbbf236d07d8489541305df5b5b149143d0f1f5d7f0361d3af6d1761d4",
+            "src/application_v2/validation_launch.py": "1f610a4111d2dadb449a2eabae7e966ec7e017a7cf38a739bee9e4e640c67d63",
+            "src/application_v2/scoring.py": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7",
+            "src/application_v2/evaluation.py": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+            "scripts/first_cohort_entrypoint.py": "9ed7147cdf609454ebacb0ab7e5809aee53dbadc4cc1db7bbf0e691c9436002a",
+            "scripts/first_cohort_validation_worker.py": "6d54e9d77dc0219216d50401fa0dfe222c1e9b686de9c4fdac9e8dae501d5011",
+            "scripts/first_cohort_gpu_worker.py": "f5a9b3e79a6d5b572ec80d6990a99c311effcf1baf22fd844b4d4c16151e0380",
+            "scripts/prepare_first_cohort_validation_launch.py": "9d1911a0d5aa0f81a19537df1f124c76a719a2785a9d503a0f7285c1fad3784f",
+            "src/application_v2/immutable_config.py": "d9eb7173cce9678958a9f8caec77a07ae5b5e5886bfdf624e29228fccb4a9d41"
+          },
+          "approval": "EXPLICIT_USER_APPROVAL_อนุมัติ",
+          "current_scope": "APPROVED_REFERENCE_ONCE_TWO_SCORING_POPULATIONS_QUALITY_ONLY"
+        }
+      },
+      "evidence": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/USER_APPROVAL.json"
+    }
+  ],
+  "supersedes": "APPLICATION_V2_DECISIONS_V5",
+  "prior_record": "provenance/APPLICATION_V2_DECISIONS_V6.json"
+}

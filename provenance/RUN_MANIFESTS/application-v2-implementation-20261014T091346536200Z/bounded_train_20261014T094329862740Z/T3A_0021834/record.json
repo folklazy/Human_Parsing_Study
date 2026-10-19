@@ -1,0 +1,302 @@
+{
+  "schema_version": "2.0",
+  "study_id": "human_parsing_mhpv2",
+  "run_id": "bounded_train_20261014T094329862740Z",
+  "system_id": "FASHN_YOLO_TRAIN_DRAFT",
+  "model_id": "FASHN_B4",
+  "image_id": "0021834",
+  "source_track": "T3A",
+  "source_commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+  "adapter_revision": "2f83dc7beaa83d53cac3d9f3425ae0df0ab95f47d0769510bd43f065e55fad6d",
+  "execution_profile": "BOUNDED_TRAIN_FP32_NOT_TIMING_BENCHMARK",
+  "precision_profile": {
+    "parameters": "FP32",
+    "autocast": false,
+    "TF32": false
+  },
+  "geometry_metadata": {
+    "native_input_wh": [
+      384,
+      576
+    ],
+    "opportunities": [
+      {
+        "id": "0021834:YOLO:0",
+        "bbox": [
+          24.899173736572266,
+          8.211708068847656,
+          329.8865051269531,
+          319.2259216308594
+        ],
+        "score": 0.9319053292274475,
+        "crop": [
+          0,
+          0,
+          361,
+          321
+        ]
+      },
+      {
+        "id": "0021834:YOLO:1",
+        "bbox": [
+          0.016224384307861328,
+          111.02743530273438,
+          106.0887680053711,
+          318.4573669433594
+        ],
+        "score": 0.930048406124115,
+        "crop": [
+          0,
+          90,
+          117,
+          321
+        ]
+      },
+      {
+        "id": "0021834:YOLO:2",
+        "bbox": [
+          248.67190551757812,
+          100.50269317626953,
+          426.1182861328125,
+          318.5106201171875
+        ],
+        "score": 0.9201679229736328,
+        "crop": [
+          230,
+          78,
+          444,
+          321
+        ]
+      },
+      {
+        "id": "0021834:YOLO:3",
+        "bbox": [
+          464.1573791503906,
+          170.73440551757812,
+          499.8282470703125,
+          320.2507629394531
+        ],
+        "score": 0.7679917216300964,
+        "crop": [
+          460,
+          155,
+          500,
+          321
+        ]
+      },
+      {
+        "id": "0021834:YOLO:4",
+        "bbox": [
+          437.054931640625,
+          160.97470092773438,
+          494.3704528808594,
+          319.3240966796875
+        ],
+        "score": 0.7184015512466431,
+        "crop": [
+          431,
+          145,
+          500,
+          321
+        ]
+      },
+      {
+        "id": "0021834:YOLO:5",
+        "bbox": [
+          389.2317199707031,
+          137.78143310546875,
+          445.3701477050781,
+          317.4312744140625
+        ],
+        "score": 0.5634095072746277,
+        "crop": [
+          383,
+          119,
+          451,
+          321
+        ]
+      }
+    ],
+    "ownership_policy": "YOLO_MASK_WINNER_BY_SCORE_THEN_STABLE_ID",
+    "RGB_hard_mask_before_parser": false
+  },
+  "checkpoint_sha256": "e43c8c8a9b04f28798f0a4630cf18caa2cdb27a0d454fae43a5716e6f7078244",
+  "config_sha256": "8f590cb8d6acace61344c6b77d95b91a4dc91e209a93ea63398cea9d5c83f882",
+  "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+  "original_wh": [
+    500,
+    321
+  ],
+  "mask_grid_space": "ORIGINAL",
+  "label_space": "NATIVE_OWNERSHIP_DERIVED",
+  "label_catalog": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "native_identity_supported": false,
+  "native_instance_ids": null,
+  "persons": [
+    {
+      "identity": {
+        "origin": "YOLO_CONDITIONED",
+        "native_identity_supported": false,
+        "native_instance_id": null,
+        "conditioning_source": "YOLO",
+        "source_opportunity_id": "0021834:YOLO:0",
+        "final_person_id": "FASHN:0021834:YOLO:0"
+      },
+      "score": null,
+      "conditioning_score": 0.9319053292274475,
+      "bbox": [
+        24.899173736572266,
+        8.211708068847656,
+        329.8865051269531,
+        319.2259216308594
+      ],
+      "crop": [
+        0,
+        0,
+        361,
+        321
+      ],
+      "native_foreground_nonempty": true,
+      "owned_native_foreground_nonempty": true
+    },
+    {
+      "identity": {
+        "origin": "YOLO_CONDITIONED",
+        "native_identity_supported": false,
+        "native_instance_id": null,
+        "conditioning_source": "YOLO",
+        "source_opportunity_id": "0021834:YOLO:1",
+        "final_person_id": "FASHN:0021834:YOLO:1"
+      },
+      "score": null,
+      "conditioning_score": 0.930048406124115,
+      "bbox": [
+        0.016224384307861328,
+        111.02743530273438,
+        106.0887680053711,
+        318.4573669433594
+      ],
+      "crop": [
+        0,
+        90,
+        117,
+        321
+      ],
+      "native_foreground_nonempty": true,
+      "owned_native_foreground_nonempty": true
+    },
+    {
+      "identity": {
+        "origin": "YOLO_CONDITIONED",
+        "native_identity_supported": false,
+        "native_instance_id": null,
+        "conditioning_source": "YOLO",
+        "source_opportunity_id": "0021834:YOLO:2",
+        "final_person_id": "FASHN:0021834:YOLO:2"
+      },
+      "score": null,
+      "conditioning_score": 0.9201679229736328,
+      "bbox": [
+        248.67190551757812,
+        100.50269317626953,
+        426.1182861328125,
+        318.5106201171875
+      ],
+      "crop": [
+        230,
+        78,
+        444,
+        321
+      ],
+      "native_foreground_nonempty": true,
+      "owned_native_foreground_nonempty": true
+    },
+    {
+      "identity": {
+        "origin": "YOLO_CONDITIONED",
+        "native_identity_supported": false,
+        "native_instance_id": null,
+        "conditioning_source": "YOLO",
+        "source_opportunity_id": "0021834:YOLO:4",
+        "final_person_id": "FASHN:0021834:YOLO:4"
+      },
+      "score": null,
+      "conditioning_score": 0.7184015512466431,
+      "bbox": [
+        437.054931640625,
+        160.97470092773438,
+        494.3704528808594,
+        319.3240966796875
+      ],
+      "crop": [
+        431,
+        145,
+        500,
+        321
+      ],
+      "native_foreground_nonempty": true,
+      "owned_native_foreground_nonempty": true
+    },
+    {
+      "identity": {
+        "origin": "YOLO_CONDITIONED",
+        "native_identity_supported": false,
+        "native_instance_id": null,
+        "conditioning_source": "YOLO",
+        "source_opportunity_id": "0021834:YOLO:5",
+        "final_person_id": "FASHN:0021834:YOLO:5"
+      },
+      "score": null,
+      "conditioning_score": 0.5634095072746277,
+      "bbox": [
+        389.2317199707031,
+        137.78143310546875,
+        445.3701477050781,
+        317.4312744140625
+      ],
+      "crop": [
+        383,
+        119,
+        451,
+        321
+      ],
+      "native_foreground_nonempty": true,
+      "owned_native_foreground_nonempty": true
+    }
+  ],
+  "dataset_split": "TRAIN",
+  "common_taxonomy_projected": false,
+  "opportunity_completion_rate": {
+    "stage": "parser_opportunity",
+    "unit": "person",
+    "numerator": 6,
+    "denominator": 6,
+    "value": 1.0,
+    "status": "DEFINED",
+    "skipped_by_routing": 0
+  },
+  "fingerprints": {
+    "inference": "5cd757842a8f92d75ba96c8be9949f3d3a0c0a1debb287b2d09416055d0c3dd0",
+    "scoring": "2d8c8df8116f4b66e8d60c6dde0ae1e6e62c0d7bb149bf8c67fa0bb18f0db777"
+  },
+  "array_sha256": "a8517425e8d4101530c299c502557b74629f037ed565b611e67064114ad8d2d4"
+}

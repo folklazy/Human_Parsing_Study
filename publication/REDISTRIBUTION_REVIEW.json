@@ -1,0 +1,12 @@
+{
+  "scope": "Files actually selected for publication; reuses prior research license matrix rather than reauditing every model",
+  "dataset_images_and_pixel_GT_included": false,
+  "model_weights_included": false,
+  "native_model_source_trees_included": false,
+  "company_CCTV_included": false,
+  "CPI_configuration_excerpts": "Apache-2.0 attribution and license retained",
+  "CPI_license_sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+  "first_party_license": "NO_NEW_LICENSE_GRANT_SELECTED",
+  "publication_approval": "PENDING",
+  "new_downloads": false
+}

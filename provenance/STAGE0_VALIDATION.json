@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "run_id": "stage0-20261008T063349Z",
+  "overall_status": "BLOCKED",
+  "audit_execution_completed": true,
+  "stage1_ready": false,
+  "next_action": "WAIT_FOR_USER_APPROVAL",
+  "gates": {
+    "A": "PASS",
+    "B": "BLOCKED",
+    "C": "BLOCKED_DEFERRED",
+    "D": "PASS_SYNTHETIC_ONLY_DRAFT",
+    "E": "DRAFT",
+    "F": "PARTIAL_NATIVE_PARITY_BLOCKED",
+    "G": "DRAFT_FOR_REVIEW",
+    "H": "PASS"
+  },
+  "checks": {
+    "all_100134_original_dataset_file_hashes_unchanged": "PASS",
+    "native_instance_index_source_hashes_counts_and_fidelity_records": "PASS",
+    "official_split_identity_and_auxiliary_test_lists": "PASS",
+    "required_rgb_readability": "BLOCKED_FOUR_VERIFIED_FAILURES",
+    "exact_content_leakage_bookkeeping": "PASS_FINDING_REQUIRES_REVIEW",
+    "train_only_draft_workloads_and_original_validation_reservation": "PASS",
+    "dataset_statistics_population": "PASS",
+    "source_native_taxonomy_and_draft_matrix": "PASS_DRAFT_NOT_FROZEN",
+    "source_checkpoint_environment_status_not_overstated": "PASS_NO_MODEL_SMOKES",
+    "study_specific_synthetic_evaluator_and_contract_tests": "PASS_25_TESTS",
+    "official_function_limited_fixtures": "PASS_5_FIXTURES",
+    "full_native_official_metric_parity": "BLOCKED_UPSTREAM_EMPTY_PREDICTION_EDGE_AND_UNTESTED_VOL",
+    "eight_train_gt_visuals_hashes_and_review_records": "PASS_WITH_OWNERSHIP_WARNING",
+    "protected_yolo_files_checkpoint_environment_metadata_and_git_status": "PASS",
+    "previous_shared_state_nodes_preserved": "PASS",
+    "new_mhp_document_links_and_python_syntax": "PASS",
+    "shared_document_archives_before_after_hashes": "PASS"
+  },
+  "scope": {
+    "ppss_dataset_reports_manifests_results_read_or_modified": false,
+    "original_mhp_dataset_modified": false,
+    "previous_yolo_artifacts_modified": false,
+    "yolo_environment_modified": false,
+    "frozen_yolo_weights_modified": false,
+    "full_benchmark_started": false,
+    "training_started": false,
+    "hybrid_fusion_started": false,
+    "color_study_started": false,
+    "parser_model_inference_started": false,
+    "stage1_started": false,
+    "remote_repository_created_or_pushed": false
+  },
+  "actual_parser_smoke_models": [],
+  "dataset_manifest_sha256": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22",
+  "inventory_sha256": "2864eea092e7424d80aa6241100243b31dd6f7f3214eba7f040b8094df6f5822",
+  "protected_yolo_files_verified": 1344,
+  "git": {
+    "workspace": "NOT_A_GIT_REPOSITORY",
+    "study": "NOT_A_GIT_REPOSITORY",
+    "six_yolo_statuses_unchanged": true,
+    "commit_created": false,
+    "push_performed": false
+  },
+  "validated_utc": "2026-10-08T07:30:07.725601+00:00"
+}

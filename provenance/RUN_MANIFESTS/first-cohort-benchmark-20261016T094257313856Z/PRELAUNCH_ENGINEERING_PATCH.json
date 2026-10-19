@@ -1,0 +1,18 @@
+{
+  "reason": "Measured registry digest0.766s per call across20,000 scoring calls; seal benchmark metadata once. Enable metadata-only validation-plan for an approved frozen config.",
+  "scientific_values_changed": false,
+  "changes": [
+    {
+      "path": "src/application_v2/runner.py",
+      "before_sha256": "e67f7cb5288ba0f251bfd7918645aa25ad7fe679b2d96ab34fa9639468393a11",
+      "after_sha256": "3771a3ac239a21c0c6fdb9b2b81f5353ea41da7e31c624fe3cb7d511353dffb5"
+    },
+    {
+      "path": "scripts/first_cohort_entrypoint.py",
+      "before_sha256": "d91ed097142a411c085cefffbe491a8f60a399f16903801be8998b25e3f566e6",
+      "after_sha256": "9ed7147cdf609454ebacb0ab7e5809aee53dbadc4cc1db7bbf0e691c9436002a"
+    }
+  ],
+  "new_module": "src/application_v2/immutable_config.py",
+  "new_module_sha256": "d9eb7173cce9678958a9f8caec77a07ae5b5e5886bfdf624e29228fccb4a9d41"
+}

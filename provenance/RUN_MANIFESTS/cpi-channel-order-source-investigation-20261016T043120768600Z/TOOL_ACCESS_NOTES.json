@@ -1,0 +1,15 @@
+{
+  "web_tool_limits": [
+    {
+      "target": "GitHub upstream README commit-history HTML",
+      "result": "Tool reported restricted URL; server GitHub API history request succeeded HTTP200"
+    },
+    {
+      "target": "Two README Google Drive file previews",
+      "result": "Web tool could not access; server HTTP requests succeeded HTTP200"
+    }
+  ],
+  "access_log_scope": "ACCESS_LOG.json records actual bounded server requests with status/bytes/hash; it is not a list of every search-engine request",
+  "annotation_download_attempted": false,
+  "reason": "No official annotation download URL was identified from the inspected related sources"
+}

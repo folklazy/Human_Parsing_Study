@@ -1,0 +1,91 @@
+{
+  "status": "SOURCE_WIRING_PREPARED_NOT_CONNECTED_OR_EXECUTED",
+  "config": "configs/application_v2_first_cohort_v7.yaml",
+  "config_sha256": "ed5fa23d94d8a3264b3a8febc5c9d2a63f1bde0bc5430957d7e9156ac3e3a984",
+  "decision": "provenance/APPLICATION_V2_DECISIONS_V6.json",
+  "entry_point_mode": "DRY_RUN_ONLY",
+  "source_symbols": {
+    "configuration_selection": {
+      "path": "src/application_v2/plan.py",
+      "symbol": "first_cohort_plan",
+      "line": 8,
+      "sha256": "6c32b5f38436e8f047446194913d11bd6e61d0f2f54b8d7e4ed3dda57f653641",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "native_frame_lifecycle": {
+      "path": "src/application_v2/runner.py",
+      "symbol": "ConfiguredRunner.native_frame",
+      "line": 147,
+      "sha256": "acf353873f2a56c67c55a07d2688197a1b33f548c8022f1e3b735e345cfafa56",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "prediction_only_association": {
+      "path": "src/application_v2/evaluation.py",
+      "symbol": "associate_native",
+      "line": 62,
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "native_numeric_packet_validation": {
+      "path": "src/application_v2/contracts.py",
+      "symbol": "validate_frame",
+      "line": 50,
+      "sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "lossless_artifact_commit": {
+      "path": "src/application_v2/artifacts.py",
+      "symbol": "commit_packet",
+      "line": 20,
+      "sha256": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "semantic_scoring_gate": {
+      "path": "src/application_v2/runner.py",
+      "symbol": "ConfiguredRunner.score_frame",
+      "line": 152,
+      "sha256": "acf353873f2a56c67c55a07d2688197a1b33f548c8022f1e3b735e345cfafa56",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    },
+    "comparison_report": {
+      "path": "src/application_v2/runner.py",
+      "symbol": "ConfiguredRunner.comparison_report",
+      "line": 177,
+      "sha256": "acf353873f2a56c67c55a07d2688197a1b33f548c8022f1e3b735e345cfafa56",
+      "status": "EXISTING_SOURCE_ENTRY_POINT_LOCATED_NOT_EXECUTED"
+    }
+  },
+  "intended_roster": [
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "dependencies": [
+    "YOLO26X_FROZEN"
+  ],
+  "settings_source": "first_cohort.execution_spec",
+  "association": {
+    "threshold": 0.5,
+    "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+    "left_bbox_source": "FROZEN_YOLO26X_BOX",
+    "right_bbox_source": "NATIVE_PARSER_BOX",
+    "uses_GT": false,
+    "accepted_for_benchmark": false
+  },
+  "precision": "FP32",
+  "reuse_reference_export": "scripts/export_handoff_cpi_contract.py",
+  "reference_export_scope": "HISTORICAL_TRAIN_HARDCODED_HANDOFF_V3_NOT_CURRENT_EXECUTOR",
+  "next_code_work": "Wire selected native workers, frozen YOLO opportunities, ConfiguredRunner lifecycle, prediction-only association and native packet export through the declared V7 settings; preserve scoring gate and do not launch inference during preparation",
+  "must_not_reuse_as_cohort_dispatcher": [
+    "scripts/run_handoff_smokes.py",
+    "scripts/bounded_train_application_v2.py",
+    "scripts/export_handoff_cpi_contract.py"
+  ],
+  "why_not_reuse_directly": "These scripts select broader model lists, legacy bounded_train YOLO/FASHN settings, historical config/active pointers or fixed sample IDs. Reuse functions/adapters only after explicit V7 wiring, not these script entry points wholesale.",
+  "target_identity": "NATIVE_AND_YOLO_RETAIN_BOTH_IDS",
+  "zero_YOLO": "RUN_NATIVE_AS_CONFIGURED_FINAL_GATED_EMPTY",
+  "semantic_scoring": "BLOCKED_CHANNEL_ORDER",
+  "accepted_parser_contexts_created": 0,
+  "current_execution_enabled": false,
+  "pipeline_integration_tested": false,
+  "full_benchmark": false
+}

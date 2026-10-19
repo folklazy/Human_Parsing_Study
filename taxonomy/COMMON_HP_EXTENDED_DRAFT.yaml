@@ -1,0 +1,349 @@
+schema_version: '1.0'
+status: DRAFT_REQUIRES_USER_REVIEW
+mapping_frozen: false
+evaluation_authorized: false
+cohorts:
+  MHP_NATIVE:
+    models:
+    - M2FP_MHPV2
+    - CPI_R50_MHPV2
+    - CPI_CONVNEXT_MHPV2
+    gt_ids:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    coverage: All native parsing support; includes associated/carried objects; checkpoints
+      not yet smoke-verified
+  MHP_LIP_STYLE:
+    models:
+    - SCHP_LIP
+    - D2FP_LIP
+    - M2FP_MHPV2
+    - CPI_R50_MHPV2
+    mhp_projection_candidate:
+      1: &id004
+      - 1
+      - COARSE_ONLY
+      2:
+      - 1
+      - AMBIGUOUS
+      3:
+      - 13
+      - EXACT
+      4: &id007
+      - 2
+      - EXACT
+      5:
+      - 14
+      - EXACT
+      6:
+      - 15
+      - EXACT
+      7: &id012
+      - 14
+      - AMBIGUOUS
+      8: &id013
+      - 15
+      - AMBIGUOUS
+      11: &id001
+      - 5
+      - COARSE_ONLY
+      12: *id001
+      13: *id001
+      14: *id001
+      15: *id001
+      17:
+      - 9
+      - EXACT
+      18: &id005
+      - 9
+      - COARSE_ONLY
+      19:
+      - 12
+      - EXACT
+      20: &id020
+      - 8
+      - AMBIGUOUS
+      21:
+      - 8
+      - EXACT
+      22: &id002
+      - 18
+      - COARSE_ONLY
+      23: &id003
+      - 19
+      - COARSE_ONLY
+      24:
+      - 18
+      - EXACT
+      25:
+      - 19
+      - EXACT
+      26: *id002
+      27: *id003
+      28: *id002
+      29: *id003
+      30:
+      - 16
+      - EXACT
+      31:
+      - 17
+      - EXACT
+      32:
+      - 18
+      - AMBIGUOUS
+      33:
+      - 19
+      - AMBIGUOUS
+      34: &id018
+      - 7
+      - EXACT
+      35: &id011
+      - 6
+      - EXACT
+      36: &id025
+      - 6
+      - AMBIGUOUS
+      37: &id022
+      - 10
+      - EXACT
+      38:
+      - 10
+      - AMBIGUOUS
+      39: *id004
+      47: &id016
+      - 4
+      - EXACT
+      48: &id017
+      - 4
+      - AMBIGUOUS
+      49:
+      - 3
+      - EXACT
+      50:
+      - 11
+      - EXACT
+      57: *id001
+      58: &id006
+      - 9
+      - AMBIGUOUS
+    gate: Ambiguous mappings require common-domain decision; source relations are
+      not a frozen evaluator
+  MHP_FASHN_COARSE:
+    models:
+    - FASHN
+    - M2FP_MHPV2
+    - CPI_R50_MHPV2
+    mhp_projection_candidate:
+      1: *id005
+      2: *id006
+      3:
+      - 1
+      - EXACT
+      4: *id007
+      5: &id008
+      - 12
+      - COARSE_ONLY
+      6: *id008
+      7: &id009
+      - 13
+      - COARSE_ONLY
+      8: *id009
+      10: &id024
+      - 3
+      - AMBIGUOUS
+      11: &id010
+      - 3
+      - COARSE_ONLY
+      12: *id010
+      13: *id010
+      14: *id010
+      15: *id010
+      16:
+      - 16
+      - AMBIGUOUS
+      17: *id011
+      18:
+      - 6
+      - COARSE_ONLY
+      19:
+      - 5
+      - EXACT
+      20: *id012
+      21: *id013
+      22: *id013
+      23: *id013
+      24: *id013
+      25: *id013
+      26: *id013
+      27: *id013
+      28: *id013
+      29: *id013
+      30: &id014
+      - 14
+      - COARSE_ONLY
+      31: *id014
+      32: &id015
+      - 15
+      - COARSE_ONLY
+      33: *id015
+      34: *id010
+      35: *id016
+      36: *id017
+      37: *id017
+      38: *id017
+      39: *id005
+      40: &id019
+      - 8
+      - COARSE_ONLY
+      43: *id018
+      45: *id019
+      46: *id020
+      47: &id021
+      - 11
+      - COARSE_ONLY
+      48: *id021
+      49:
+      - 13
+      - AMBIGUOUS
+      50: *id022
+      52: *id020
+      53: &id023
+      - 17
+      - AMBIGUOUS
+      54: *id023
+      55: *id024
+      56: *id023
+      57: *id010
+      58: *id025
+    gate: Fine native clothes/accessories cannot be scored universally
+  FOOTWEAR_SUBSET:
+    models:
+    - M2FP_MHPV2
+    - CPI_R50_MHPV2
+    - SCHP_LIP
+    - D2FP_LIP
+    - D2FP_CIHP
+    FASHN: EXCLUDED_UNTIL_FEET_SHOES_SCOPE_VERIFIED
+analysis_groups:
+  body:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 16
+  - 30
+  - 31
+  - 32
+  - 33
+  clothing:
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 34
+  - 35
+  - 36
+  - 37
+  - 38
+  - 57
+  - 58
+  footwear:
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  accessories_and_carried:
+  - 1
+  - 2
+  - 9
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  - 47
+  - 48
+  - 49
+  - 50
+  - 51
+  - 52
+  - 53
+  - 54
+  - 55
+  - 56
+group_aggregation: Mean of supported class IoU within each stated group; class support
+  and common denominator required. Groups are semantic summaries, not predetermined
+  model expert roles.

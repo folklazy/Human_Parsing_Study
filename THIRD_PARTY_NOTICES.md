@@ -1,0 +1,12 @@
+# Third-Party and Redistribution Notes
+
+This repository publishes a post-run research snapshot, not a bundle of pretrained models or datasets. No blanket third-party rights are inferred from public download access. The prior component-specific research-scope assessment is retained in provenance/LICENSE_MATRIX_DECISION5A_V1.csv and reports/LICENSE_ELIGIBILITY_REASSESSMENT.md; those dated findings are not renewed commercial permission.
+
+- CPI-Parser: official HAG-uestc/CPI-Parser, source d62cae523ba913fec4a7fda5816bc1d96bbf644d, Apache-2.0. Preserved config excerpts/resolved configuration metadata in run evidence retain applicable Apache terms; see licenses/CPI-Parser-Apache-2.0.txt. Native source tree/weights are external. No third-party parser source patch is silently applied by publication.
+- M2FP, FASHN, D2FP, SCHP, QANet, RP-R-CNN and CDGNet: source/weights/dependency conditions are independent. Inventory and factual evidence do not redistribute their native code or checkpoints or grant permissions absent upstream terms. Historical native technical passes do not override usage restrictions.
+- Sapiens2: historical files/technical pilot status remain distinguishable from current USE_RESTRICTED_SURVEILLANCE_RESEARCH; no new permission is asserted. 5B is excluded for resources. No Sapiens checkpoint/source distribution or execution is performed.
+- Native MHP evaluator compatibility is first-party wrapper code referencing an external MIT implementation/revision; original evaluator sources are not vendored here. It was not the official metric used by the current custom CCIHP cohort.
+- NumPy, SciPy, Pillow and PyYAML are dependencies installed separately under their own licenses. No environment/package binary is shipped. YOLO/Ultralytics remains an external frozen dependency under its own terms, not relicensed here.
+- CIHP image rights, CCIHP annotation rights and DatasetNinja conversion terms are separate. No RGB/GT pixel examples are redistributed. The completion plot is generated solely from this study's execution counts.
+
+First-party source licensing has not been newly selected by this preparation task. Public readability/publication approval must not be presented as an unrestricted commercial software license. See LICENSE.md.

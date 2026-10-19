@@ -1,0 +1,27 @@
+{
+  "run_id": "decision5a-license-finalization-20261012T042717Z",
+  "finalized_utc": "2026-10-12T04:27:17.486415+00:00",
+  "source_collection_utc": "2026-10-08",
+  "online_recheck_date": "2026-10-12",
+  "source_manifest": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/sources/SOURCE_MANIFEST.json",
+  "local_source_manifest": "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/LOCAL_SOURCE_MANIFEST.json",
+  "installed_dependency_license_evidence": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z/INSTALLED_DEPENDENCY_LICENSES.json",
+  "scope": "configs/research_scope.yaml",
+  "matrix": "provenance/LICENSE_MATRIX_DECISION5A_V1.csv",
+  "registry": "provenance/MODEL_VARIANT_REGISTRY_V3.csv",
+  "smoke_proposal": "manifests/FASHN_SMOKE_PROPOSAL_V2.json",
+  "evidence_limits": [
+    "No full transitive SBOM certification",
+    "Legacy environments not installed",
+    "Weight-scope ambiguity separately retained",
+    "No model/checkpoint execution",
+    "No original dataset permission assumed from converter license"
+  ],
+  "checkpoint_downloads": 0,
+  "heavy_dependency_installs": 0,
+  "model_inference": 0,
+  "full_benchmark": false,
+  "ppss_activity": false,
+  "stage0_overall": "BLOCKED",
+  "review_gate": "WAITING_FOR_USER_APPROVAL"
+}

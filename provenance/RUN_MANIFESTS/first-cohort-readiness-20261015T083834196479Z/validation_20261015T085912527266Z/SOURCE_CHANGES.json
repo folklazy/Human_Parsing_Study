@@ -1,0 +1,72 @@
+[
+  {
+    "path": "src/application_v2/cohorts.py",
+    "before_sha256": null,
+    "after_sha256": "e04db6a0f7e661e6554de347262fb61ce1e954962884d677e70e1bba6633abc0"
+  },
+  {
+    "path": "src/application_v2/comparison.py",
+    "before_sha256": null,
+    "after_sha256": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d"
+  },
+  {
+    "path": "src/application_v2/policy.py",
+    "before_sha256": "5677ee7f666196146d20608e9ced6bcbee7110b8ad683d61c5aa39a3f8f4802c",
+    "after_sha256": "78ed526bc895f847f40e53e216ec58287bff6030d3ab8bf87d70cc2200b29c8a"
+  },
+  {
+    "path": "src/application_v2/runner.py",
+    "before_sha256": "fa2aed6c8c09ab38dfccd994ac298fa780c8e736a3e655bf8aeef083678272ff",
+    "after_sha256": "68f22d255674b16db75ef0065068275d7f3f37f91e5e00d5353fc59216aacb09"
+  },
+  {
+    "path": "src/application_v2/scoring.py",
+    "before_sha256": "2b97c100f59ed92fa1e435c553a1c2e61f3a353ab29e7268f442d1a95739528d",
+    "after_sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7"
+  },
+  {
+    "path": "tests/test_application_v2_handoff.py",
+    "before_sha256": "a63e4a45a8eee3ac366d108a4bc1029d4fdb51797e39103ed69dba0977789cbd",
+    "after_sha256": "3f7de09e205ad8c65c392cf16bacc083041ea3d8f4c962cc4b76e88681cf327b"
+  },
+  {
+    "path": "tests/test_application_v2_comparison.py",
+    "before_sha256": null,
+    "after_sha256": "5ec5e66d7df7f0543ab508888c72f7158e4edf76c56facf0606a09cdc182f0bf"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v4.yaml",
+    "before_sha256": null,
+    "after_sha256": "69b6668249d624a850fbcc01b60c9987bdcc1b154cee5bb6f28efdff9852e036"
+  },
+  {
+    "path": "configs/application_v2_first_cohort_v5.yaml",
+    "before_sha256": null,
+    "after_sha256": "c04ac3adc86f72565387b7197c7a7defa5239c320b3394273d9977f666a3ee6b"
+  },
+  {
+    "path": "provenance/APPLICATION_V2_DECISIONS_V4.json",
+    "before_sha256": null,
+    "after_sha256": "1fc2e524cc8845a70ec5d4fecafb50a9ca6d6131a50bff52ba2e6ac264ae42bc"
+  },
+  {
+    "path": "scripts/build_first_cohort_evidence.py",
+    "before_sha256": null,
+    "after_sha256": "cd4e1fc21c26120bad818e0a16e0f9c4c008d43a2c3f349048caf6bdcafa378c"
+  },
+  {
+    "path": "scripts/first_cohort_live_route.py",
+    "before_sha256": null,
+    "after_sha256": "e41caa02c482eb93633fdc04bfaca34db541ee82aff30d4f233a7101cde5fae3"
+  },
+  {
+    "path": "scripts/review_first_cohort_v5.py",
+    "before_sha256": null,
+    "after_sha256": "87c873d63ec4ac31b1a1722360dcb1ed08d258b1b2ff24f9a384f0332f1284ef"
+  },
+  {
+    "path": "scripts/validate_first_cohort_readiness.py",
+    "before_sha256": null,
+    "after_sha256": "10663692b12a12feb709f6f0b22d6c2284db26a8a5f874d13b624b896d44509e"
+  }
+]

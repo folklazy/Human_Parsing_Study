@@ -1,0 +1,286 @@
+{
+  "unknown_category": {
+    "pixels": 8268,
+    "images": 322,
+    "labels": [
+      22
+    ],
+    "by_split": {
+      "Training": {
+        "images": 261,
+        "pixels": 7958
+      },
+      "Validation": {
+        "images": 61,
+        "pixels": 310
+      }
+    }
+  },
+  "human_without_category": {
+    "pixels": 94856,
+    "images": 762,
+    "by_split": {
+      "Training": {
+        "images": 618,
+        "pixels": 94218
+      },
+      "Validation": {
+        "images": 144,
+        "pixels": 638
+      }
+    }
+  },
+  "known_train_0033810": {
+    "split": "Training",
+    "image_id": "0033810",
+    "person_count": 8,
+    "instance_count": 82,
+    "association_conflicts": [],
+    "counts": {
+      "category_without_human": 0,
+      "human_without_category": 0,
+      "instance_without_human": 0,
+      "instance_without_category": 0,
+      "human_category_without_instance": 2,
+      "unknown_category_pixels": 2
+    },
+    "category_pixels": {
+      "0": 145661,
+      "1": 2291,
+      "2": 3113,
+      "4": 106,
+      "5": 10680,
+      "7": 3002,
+      "9": 4724,
+      "10": 909,
+      "12": 2234,
+      "13": 1745,
+      "14": 3745,
+      "15": 2184,
+      "16": 2676,
+      "17": 1600,
+      "18": 937,
+      "19": 378,
+      "20": 1361,
+      "21": 152,
+      "22": 2
+    },
+    "category_labels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "human_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "instance_max": 82,
+    "unknown_ids": [
+      22
+    ],
+    "bbox_intersection_pairs": 6,
+    "human_occupancy": 0.22314133333333333,
+    "min_person_area_fraction": 0.009856,
+    "wh": [
+      500,
+      375
+    ],
+    "source_maps": [
+      {
+        "component": "Category_ids",
+        "member": "CCIHP_icip/dataset/Training/Category_ids/0033810.png",
+        "sha256": "509c816b7f51f9a42bc0e85d80c3e34727a8c83a9aeb323d2df43ef919d8c47f",
+        "mode": "L",
+        "dtype": "uint8",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "component": "Human_ids",
+        "member": "CCIHP_icip/dataset/Training/Human_ids/0033810.png",
+        "sha256": "1f9628083f1829468c21518c53c94bce7bd3c5364d710c733b7baabf377e4d11",
+        "mode": "L",
+        "dtype": "uint8",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "component": "Instance_ids",
+        "member": "CCIHP_icip/dataset/Training/Instance_ids/0033810.png",
+        "sha256": "607e77d5d4749608ec06874d25f9ab9f42b3a97050632fb4464f7121bbbf7ca5",
+        "mode": "I;16",
+        "dtype": "uint16",
+        "wh": [
+          500,
+          375
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82
+        ]
+      }
+    ],
+    "GT_decode": "PASS",
+    "unknown_coordinates_xy": [
+      [
+        301,
+        162
+      ],
+      [
+        302,
+        162
+      ]
+    ],
+    "RGB_sha256": "dd57e4d423b6fed9485c6237a1cea7330c20f2912ac38cc257b738e78f42d881",
+    "RGB_decoded_sha256": "faad9afd093f39ce87b2f96c7273ac7a35cb3a7022615d53fc44403894d6e4c7",
+    "RGB_wh": [
+      500,
+      375
+    ],
+    "RGB_decode": "PASS",
+    "RGB_GT_dimensions_match": true,
+    "phash64": "c81386f8c1abbcd6"
+  },
+  "all_anomalies": "ANOMALIES.jsonl",
+  "confirmed_physical_person_errors": "NOT_ESTIMATED_NOT_HUMAN_REVIEWED"
+}

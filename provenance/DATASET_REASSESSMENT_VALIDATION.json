@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "run_id": "dataset-reassessment-20261008T095241Z",
+  "end_utc": "2026-10-08T10:20:39.700058+00:00",
+  "preparation_status": "PASS_WITH_WARNINGS",
+  "overall_stage0_status": "BLOCKED",
+  "review_gate": "WAITING_FOR_USER_APPROVAL",
+  "checks": {
+    "historical_study_evidence_unchanged": "PASS",
+    "archives_and_after_hashes": "PASS",
+    "paused_state_nodes_preserved": "PASS",
+    "no_primary_freeze_or_benchmark": "PASS",
+    "official_evaluator_source_unchanged": "PASS",
+    "executed_tests": "PASS",
+    "population_manifest_hashes": "PASS",
+    "population_sources_unchanged": "PASS",
+    "random_sample_source_and_visual_hashes": "PASS",
+    "contact_sheet_hashes": "PASS",
+    "human_review_not_fabricated": "PASS",
+    "registry_no_false_inference_claim": "PASS",
+    "registry_config_hashes": "PASS",
+    "parser_sources_unchanged": "PASS",
+    "previous_YOLO_repositories_and_user_changes_preserved": "PASS",
+    "frozen_YOLO26x_checkpoint_unchanged": "PASS",
+    "YOLO_environment_metadata_unchanged": "PASS",
+    "source_snapshots_hashes": "PASS",
+    "CIHP_unverified_local_quality_not_fabricated": "PASS",
+    "active_documentation_links_resolve": "PASS"
+  },
+  "failures": [],
+  "missing_links": [],
+  "YOLO_changed": [],
+  "YOLO_protected_files_compared": 1344,
+  "git_status": {
+    "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": {
+      "head": "5551593459646fe42494958192e5410805ab4b48",
+      "branch": "main",
+      "status": "?? YOLO_PARSING_SELECTION_PLAN_TH.md",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study.git (push)"
+    },
+    "YOLO_Large_Seg_MOTS20_Benchmark": {
+      "head": "172e21b9f2996bae74fb591cfdd1740e6e92dd46",
+      "branch": "main",
+      "status": "?? manifests/benchmark-20260929T0520Z_preflight.json\n?? metrics/benchmark-20260929T0520Z/candidate_counts.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.json\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-aggregates.csv\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.png\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.png\n?? outputs/plots/benchmark-20260929T0520Z/ap50_ap75.pdf\n?? outputs/plots/benchmark-20260929T0520Z/fps.pdf\n?? outputs/plots/benchmark-20260929T0520Z/inference_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/mask_map.pdf\n?? outputs/plots/benchmark-20260929T0520Z/matched_mask_quality.pdf\n?? outputs/plots/benchmark-20260929T0520Z/peak_vram.pdf\n?? outputs/plots/benchmark-20260929T0520Z/pipeline_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/provenance.json\n?? reports/benchmark-20260929T0520Z/SUMMARY.md\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_full_freeze.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_preflight.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/requirements.txt\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/frozen_pilot/visualize.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/report.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/validate.py\n?? reports/benchmark-20260929T0520Z/terminal_summary.txt\n?? requirements.txt\n?? src/benchmark.py\n?? src/benchmark_adapter.py\n?? src/frozen_pilot/\n?? src/refine_scatter_plots.py\n?? src/report.py\n?? src/report_clean_timing.py\n?? src/validate.py\n?? timing/benchmark-20260929T0520Z/clean_repetition/runs.json\n?? timing/benchmark-20260929T0520Z/round1-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/runs.json\n?? timing/benchmark-20260929T0520Z/summary.csv",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Medium_Seg_MOTS20_Benchmark": {
+      "head": "40df395545754be0847f6aa144ffb59f63389af6",
+      "branch": "main",
+      "status": "",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Nano_Seg_MOTS20_Benchmark": {
+      "head": "c4ceca0aaba1982d10cfa3fe9d4209baab0dba96",
+      "branch": "main",
+      "status": "",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark": {
+      "head": "3c0bd7845166d23df1eb52d312e24fad930f9298",
+      "branch": "main",
+      "status": "",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Small_Seg_MOTS20_Benchmark": {
+      "head": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "branch": "main",
+      "status": "",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark.git (push)"
+    }
+  },
+  "study_git_initialized": false,
+  "scientific_invariants": {
+    "original_MHP_dataset_modified": false,
+    "original_GT_modified": false,
+    "official_split_files_modified": false,
+    "previous_YOLO_modified": false,
+    "PPSS_file_contents_accessed_or_modified": false,
+    "parser_inference": false,
+    "validation_inference": false,
+    "full_benchmark": false,
+    "training": false,
+    "hybrid": false,
+    "color_attributes": false,
+    "company_CCTV_inference": false,
+    "checkpoint_download": false,
+    "CIHP_archive_download": false,
+    "heavyweight_installation": false,
+    "remote_created_or_pushed": false
+  },
+  "scope_of_dataset_preservation_check": "Reused prior exhaustive inventory; compared its/index hashes and directly hashed 30 diagnostic image/GT source sets. No new exhaustive 100134-file rehash.",
+  "warning_gates": [
+    "CIHP absent: GT integrity/ownership/license unverified",
+    "MHP human random quality review pending",
+    "Exact overlap control not full independence",
+    "No intended-checkpoint parser smoke pass",
+    "Synthetic evaluator parity is not published-score or CIHP evaluator parity",
+    "Taxonomy/protocol/dataset roles remain draft"
+  ],
+  "executed_tests": {
+    "start_utc": "2026-10-08T10:09:35.968290+00:00",
+    "end_utc": "2026-10-08T10:09:37.456510+00:00",
+    "python": "3.10.21",
+    "tests_run": 51,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS",
+    "patterns": [
+      "test_mhpv2_stage0.py",
+      "test_official_mhp_compat.py",
+      "test_dataset_reassessment.py"
+    ],
+    "log": "provenance/RUN_MANIFESTS/dataset-reassessment-20261008T095241Z/BOUNDED_TESTS_V2.log",
+    "log_sha256": "fd306c5ea2f54ec704b9b305c3f3ac8143c23928b568aab4610c896ed6b8f562",
+    "PPSS_tests": false,
+    "parser_inference": false,
+    "benchmark": false
+  },
+  "archive_record": "provenance/DATASET_REASSESSMENT_DOCUMENT_REVISIONS.json"
+}

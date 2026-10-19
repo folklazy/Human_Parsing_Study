@@ -1,0 +1,76 @@
+[
+  {
+    "model_id": "CPI_R50_CIHP",
+    "metadata_sha256": "c1a9bd33a109d8a4e33042eb7007841058840bdb7144c20d9b102d4313f0a2d7",
+    "embedded_config_artifact": "CPI_R50_CIHP_EMBEDDED_CONFIG.txt",
+    "embedded_config_sha256": "8e94148394fa59d737737ba8bd1f4492544bb9c5ad080270d662d51d3ebc375f",
+    "selected_lines": [
+      "    dict(type='LoadParseAnnotations', num_parse_classes=20),",
+      "        ann_file='data/CIHP/annotations/CIHP_train.json',",
+      "        parsing_prefix='data/CIHP/train_parsing/',",
+      "            dict(type='LoadParseAnnotations', num_parse_classes=20),",
+      "        ann_file='data/CIHP/annotations/CIHP_val.json',",
+      "        parsing_prefix='data/CIHP/val_parsing/',",
+      "        ann_file='data/CIHP/annotations/CIHP_val.json',",
+      "        parsing_prefix='data/CIHP/val_parsing/',",
+      "        num_parse_classes=20,",
+      "        score_thr=0.1,",
+      "        save_root='work_dirs/causal_parser_r50_inter_8_45k_cihp'))"
+    ],
+    "flip_map": [
+      [
+        14,
+        15
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        18,
+        19
+      ]
+    ],
+    "detection_CLASSS": "person only, see previous static metadata inspection",
+    "semantic_names_in_metadata": "NOT_FOUND_BY_PREVIOUS_STATIC_STRING_SCAN",
+    "pickle_executed": false,
+    "model_loaded": false
+  },
+  {
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "metadata_sha256": "101ea1817bedce1bc978477a2e9da3d7920388bdeb64bf748349f5d144d3076f",
+    "embedded_config_artifact": "CPI_ConvNeXtB_CIHP_EMBEDDED_CONFIG.txt",
+    "embedded_config_sha256": "cb417c4b91490e1ad9f407238ad4fc6dd4000fd380125b6d7c2d332df23f4a11",
+    "selected_lines": [
+      "    dict(type='LoadParseAnnotations', num_parse_classes=20),",
+      "        ann_file='data/CIHP/annotations/CIHP_train.json',",
+      "        parsing_prefix='data/CIHP/train_parsing/',",
+      "            dict(type='LoadParseAnnotations', num_parse_classes=20),",
+      "        ann_file='data/CIHP/annotations/CIHP_val.json',",
+      "        parsing_prefix='data/CIHP/val_parsing/',",
+      "        ann_file='data/CIHP/annotations/CIHP_val.json',",
+      "        parsing_prefix='data/CIHP/val_parsing/',",
+      "        num_parse_classes=20,",
+      "        score_thr=0.05,",
+      "        save_root='work_dirs/causal_parser_convnext_b_inter_8_135k_cihp'))"
+    ],
+    "flip_map": [
+      [
+        14,
+        15
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        18,
+        19
+      ]
+    ],
+    "detection_CLASSS": "person only, see previous static metadata inspection",
+    "semantic_names_in_metadata": "NOT_FOUND_BY_PREVIOUS_STATIC_STRING_SCAN",
+    "pickle_executed": false,
+    "model_loaded": false
+  }
+]

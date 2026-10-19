@@ -1,0 +1,22 @@
+{
+  "run_id": "stage0e-ccihp-cihp-20261012T043947Z",
+  "timestamp_utc": "2026-10-12T04:49:20.730335+00:00",
+  "command": [
+    "/home/skyaidev/.local/share/uv/python/cpython-3.10.21-linux-x86_64-gnu/bin/python3.10",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_cihp_archive_preflight.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "status": "FAIL",
+  "log": "provenance/RUN_MANIFESTS/stage0e-ccihp-cihp-20261012T043947Z/CIHP_DECODER_TESTS.log",
+  "log_sha256": "ac5a5d06a7ad2fa86d4469617710b084cceabc03aed099cbd20a5be8ca2861d1",
+  "model_inference": false,
+  "ccihp_pixel_tests_run": false,
+  "scope": "Existing converted-part decoder synthetic tests only"
+}

@@ -1,0 +1,32 @@
+{
+  "run_id": "stage0f-ccihp-quality-20261012T062825Z",
+  "run_path": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z",
+  "full_audit": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/FULL_STRUCTURAL_AUDIT.json",
+  "sample": "provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/TRAIN_REVIEW_SAMPLE.json",
+  "decision": "D",
+  "physical_review": "PENDING",
+  "warnings": {
+    "pixels": 8268,
+    "images": 322,
+    "labels": [
+      22
+    ],
+    "by_split": {
+      "Training": {
+        "images": 261,
+        "pixels": 7958
+      },
+      "Validation": {
+        "images": 61,
+        "pixels": 310
+      }
+    }
+  },
+  "input_sha256": {
+    "CCIHP": "373f3183bf58c3e5637ba3564c9b8abef923dc434b78f469b3722282d1514829",
+    "CIHP_DatasetNinja": "085d2b694a8c4e0081292a905972e1f31af9d454c12698427b187c7af67a2793"
+  },
+  "source_modification": false,
+  "model_inference": false,
+  "primary_promoted": false
+}

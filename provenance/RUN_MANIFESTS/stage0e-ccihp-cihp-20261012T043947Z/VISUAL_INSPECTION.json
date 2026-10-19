@@ -1,0 +1,17 @@
+{
+  "viewer": "Codex visual inspection",
+  "images": [
+    "0002190",
+    "0005008",
+    "0012008"
+  ],
+  "source": "Bounded original RGB + native CIHP semantic-reference panels",
+  "findings": [
+    "0002190: two nearby visible people; semantic overlay agreement; no human-ID evidence",
+    "0005008: group of nearby people with clothing boundaries; 53 part objects are not a person count",
+    "0012008: foreground people and umbrella visible; semantic overlays agree; ownership not derivable from class colours"
+  ],
+  "physical_person_GT_verified": false,
+  "ccihp_visuals_generated": false,
+  "model_visuals_generated": false
+}

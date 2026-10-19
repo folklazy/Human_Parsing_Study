@@ -1,0 +1,216 @@
+[
+  {
+    "family": "M2FP",
+    "remote": "https://github.com/soeaver/M2FP.git",
+    "local_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+    "checked_utc": "2026-10-15T06:44:01.846398+00:00",
+    "readme_sha256": "70d3ee9583768655351af4514997ff90067613f3790b05ec52620fe26fa6a2e7",
+    "release_assets": [],
+    "drive_folders": [
+      "https://drive.google.com/drive/folders/1UCyo2c1zJqncItyydC64PE78KaX0iR2F",
+      "https://drive.google.com/drive/folders/1i-OFPzPRfRQ3prCtC60gmq5h-Ke1vo9o",
+      "https://drive.google.com/drive/folders/1lSRMJy_g5Q7FsH4dlahST9bIgNusMuCR"
+    ],
+    "checkpoint_links": [
+      "https://arxiv.org/pdf/2301.00394.pdf",
+      "https://drive.google.com/drive/folders/1UCyo2c1zJqncItyydC64PE78KaX0iR2F?usp=share_link",
+      "https://drive.google.com/drive/folders/1i-OFPzPRfRQ3prCtC60gmq5h-Ke1vo9o?usp=share_link",
+      "https://drive.google.com/drive/folders/1lSRMJy_g5Q7FsH4dlahST9bIgNusMuCR?usp=share_link",
+      "https://github.com/facebookresearch/Mask2Former",
+      "https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg",
+      "https://img.shields.io/badge/Paper-arxiv-b31b1b",
+      "https://licensebuttons.net/l/by-nc/4.0/88x31.png",
+      "https://pan.baidu.com/s/17S-932D-bs1VlU3MANge9A",
+      "https://pan.baidu.com/s/1ah-0RJ_BdPjLqklWmcoiFA",
+      "https://pan.baidu.com/s/1oquw4pujHdkCEPtUHFyG7g"
+    ]
+  },
+  {
+    "family": "CPI-Parser",
+    "remote": "https://github.com/HAG-uestc/CPI-Parser.git",
+    "local_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+    "checked_utc": "2026-10-15T06:44:02.681626+00:00",
+    "readme_sha256": "f34eae4bf22f43f0c5733c4e38f17725c88838730e2da97a6e4f5055ac805c70",
+    "release_assets": [],
+    "drive_folders": [],
+    "checkpoint_links": [
+      "https://drive.google.com/file/d/117grkZS6Q-v5tbeTLdyENSI0fSRD09lK/view?usp=sharing",
+      "https://drive.google.com/file/d/15yp_c5ZNFbvkFn5K3wVkHix7F-m-3FBZ/view?usp=sharing",
+      "https://drive.google.com/file/d/1qpdS8dEdhdjcYUOiDEiTusIyjifBAYCy/view?usp=sharing",
+      "https://drive.google.com/file/d/1uiqPVZNWIEIKquMNhZ7tv3OTZrc9WGt0/view?usp=share_link",
+      "https://mmdetection.readthedocs.io/en/latest/get_started.html#installation"
+    ]
+  },
+  {
+    "family": "D2FP",
+    "remote": "https://github.com/cvlab-yongin/D2FP.git",
+    "local_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+    "checked_utc": "2026-10-15T06:44:03.680884+00:00",
+    "readme_sha256": "a1d01cadd0579c47b2f01598cc42734811b6b0b801ded6f0bc9edfd055ba188d",
+    "release_assets": [
+      {
+        "name": "cihp.pth",
+        "bytes": 958247405,
+        "url": "https://github.com/cvlab-yongin/D2FP/releases/download/weights/cihp.pth"
+      },
+      {
+        "name": "lip.pth",
+        "bytes": 958249837,
+        "url": "https://github.com/cvlab-yongin/D2FP/releases/download/weights/lip.pth"
+      }
+    ],
+    "drive_folders": [],
+    "checkpoint_links": [
+      "https://detectron2.readthedocs.io/tutorials/install.html",
+      "https://github.com/facebookresearch/MaskFormer/blob/main/MODEL_ZOO.md",
+      "https://github.com/facebookresearch/detectron2",
+      "https://github.com/pytorch/vision/",
+      "https://github.com/soeaver/M2FP",
+      "https://github.com/user-attachments/assets/674286d2-7355-44cf-a311-9dc3ecd221ea",
+      "https://openaccess.thecvf.com/content/WACV2025/html/Hong_D2FP_Learning_Implicit_Prior_for_Human_Parsing_WACV_2025_paper.html",
+      "https://pytorch.org",
+      "https://sysu-hcp.net/lip/overview.php."
+    ]
+  },
+  {
+    "family": "SCHP",
+    "remote": "https://github.com/GoGoDuck912/Self-Correction-Human-Parsing.git",
+    "local_commit": "eb84c432cc697f494d99662a05f2335eb2f26095",
+    "checked_utc": "2026-10-15T06:44:04.656045+00:00",
+    "readme_sha256": "91db28cf69c4d21d58ade026467bd886596c27d4b12955f95b42b1997e0910f4",
+    "release_assets": [],
+    "drive_folders": [
+      "https://drive.google.com/drive/folders/1uOaQCpNtosIjEL2phQKEdiYd0Td18jNo"
+    ],
+    "checkpoint_links": [
+      "https://colab.research.google.com/drive/1JOwOPaChoc9GzyBi5FUEYTSaP2qxJl10?usp=sharing",
+      "https://drive.google.com/drive/folders/1uOaQCpNtosIjEL2phQKEdiYd0Td18jNo?usp=sharing",
+      "https://drive.google.com/file/d/1E5YwNKW2VOEayK9mWCS3Kpsxf-3z04ZE/view?usp=sharing",
+      "https://drive.google.com/file/d/1k4dllHpu0bdx38J7H28rVVLpU-kOHmnH/view?usp=sharing",
+      "https://drive.google.com/file/d/1ruJg4lqR_jgQPj-9K0PP-L2vJERYOxLP/view?usp=sharing",
+      "https://github.com/PaddlePaddle/PaddleSeg/tree/develop/contrib/ACE2P",
+      "https://github.com/levindabhi",
+      "https://github.com/mapillary/inplace_abn",
+      "https://img.shields.io/badge/License-MIT-green.svg",
+      "https://img.shields.io/badge/python-3.6-green.svg",
+      "https://opensource.org/licenses/MIT"
+    ]
+  },
+  {
+    "family": "QANet",
+    "remote": "https://github.com/soeaver/QANet.git",
+    "local_commit": "61615c4491979569771020bc4beff86d63974829",
+    "checked_utc": "2026-10-15T06:44:05.501313+00:00",
+    "readme_sha256": "cec4489fcc3174c8005b5b0bd701e1edef17969fb495d50c14ee808202ec7292",
+    "release_assets": [],
+    "drive_folders": [
+      "https://drive.google.com/drive/folders/145SAx0wTqu8y5JvW2L1TvVP5nczCt1_n",
+      "https://drive.google.com/drive/folders/1ASYmUvexB_j6Aiu4UaXbE3Bhw2F9QbSQ",
+      "https://drive.google.com/drive/folders/1DEqkkTKCbAvLXhJeoy2NC5CYZlr41Wak",
+      "https://drive.google.com/drive/folders/1QRAhtuaDWDidxEoyBCf7wiHrUamKQUb_"
+    ],
+    "checkpoint_links": [
+      "https://drive.google.com/drive/folders/145SAx0wTqu8y5JvW2L1TvVP5nczCt1_n?usp=sharing",
+      "https://drive.google.com/drive/folders/1ASYmUvexB_j6Aiu4UaXbE3Bhw2F9QbSQ?usp=sharing",
+      "https://drive.google.com/drive/folders/1DEqkkTKCbAvLXhJeoy2NC5CYZlr41Wak?usp=sharing",
+      "https://drive.google.com/drive/folders/1QRAhtuaDWDidxEoyBCf7wiHrUamKQUb_?usp=sharing",
+      "https://drive.google.com/file/d/15Un6LfPzQgRXDZRgPKiXmxbJ7hVOxzOp/view?usp=sharing",
+      "https://drive.google.com/file/d/1P-39VSDgZzm7YoTsS_WXzjDeB4kRTf-f/view?usp=sharing",
+      "https://drive.google.com/file/d/1_jA9sa2G_QKzFRgicQjZoL4gA51Fh6XJ/view?usp=sharing",
+      "https://drive.google.com/file/d/1gCqiQ9QIlVvanE-Res3hczvdrv4agsJc/view?usp=sharing",
+      "https://github.com/soeaver/QANet/blob/master/LICENSE",
+      "https://github.com/soeaver/QANet/blob/master/docs/DATA_PREPARE.md#data_prepare",
+      "https://github.com/soeaver/QANet/blob/master/docs/INSTALL.md#install"
+    ]
+  },
+  {
+    "family": "RP-R-CNN",
+    "remote": "https://github.com/soeaver/RP-R-CNN.git",
+    "local_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+    "checked_utc": "2026-10-15T06:44:06.319111+00:00",
+    "readme_sha256": "63eb0826167b6a6a7175086d7b141c97112dbbf28d5a85fb4a67958f3dca2673",
+    "release_assets": [],
+    "drive_folders": [
+      "https://drive.google.com/drive/folders/1So_iJ-vQ2z4cMOeM9XlaQ7CcRNDxWHxx",
+      "https://drive.google.com/drive/folders/1brKDrFmqVrLWFuU0uy660B_MREJenmMk"
+    ],
+    "checkpoint_links": [
+      "https://arxiv.org/abs/1811.12596",
+      "https://arxiv.org/abs/2009.09447",
+      "https://drive.google.com/drive/folders/1So_iJ-vQ2z4cMOeM9XlaQ7CcRNDxWHxx?usp=sharing",
+      "https://drive.google.com/drive/folders/1brKDrFmqVrLWFuU0uy660B_MREJenmMk?usp=sharing",
+      "https://drive.google.com/open?id=1EtqFhrFTdBJNbp67effArVrTNx4q_ELr",
+      "https://drive.google.com/open?id=1c4OSVZIZtDT49B0DTC0tK3vcRgJpzR9n",
+      "https://github.com/soeaver/RP-R-CNN/blob/master/INSTALL.md#install",
+      "https://github.com/soeaver/RP-R-CNN/blob/master/LICENSE"
+    ]
+  },
+  {
+    "family": "CDGNet",
+    "remote": "https://github.com/tjpulkl/CDGNet.git",
+    "local_commit": "9daf7ddee6045c151c90a2e300946ea5f5717591",
+    "checked_utc": "2026-10-15T06:44:07.219431+00:00",
+    "readme_sha256": "ffd17ccbf0ed68191e9f5a7040999c98dadf0f4e9b1cf98ed7b10d50d3125719",
+    "release_assets": [],
+    "drive_folders": [],
+    "checkpoint_links": [
+      "https://drive.google.com/open?id=1rzLU-wK6rEorCNJfwrmIu5hY2wRMyKTK",
+      "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_CDGNet_Class_Distribution_Guided_Network_for_Human_Parsing_CVPR_2022_paper.html",
+      "https://pan.baidu.com/s/1NoxI_JetjSVa7uqgVSKdPw",
+      "https://pan.baidu.com/s/1WyifPOOE0SqIzCje-d1kzA?pwd=81la"
+    ]
+  },
+  {
+    "family": "fashn-human-parser",
+    "remote": "https://github.com/fashn-AI/fashn-human-parser.git",
+    "local_commit": "f2771f2fb8655349e87e2869bbde7ace0bd06f2c",
+    "checked_utc": "2026-10-15T06:44:08.149642+00:00",
+    "readme_sha256": "fa4a279452a148e269798b0171ab20521d1557d2dc4c8d19f9d181bfffde8432",
+    "release_assets": [],
+    "drive_folders": [],
+    "checkpoint_links": [
+      "https://fashn.ai/",
+      "https://github.com/NVlabs/SegFormer/blob/master/LICENSE",
+      "https://github.com/fashn-AI/fashn-human-parser",
+      "https://huggingface.co/fashn-ai/fashn-human-parser",
+      "https://huggingface.co/nvidia/mit-b4",
+      "https://huggingface.co/spaces/fashn-ai/fashn-human-parser",
+      "https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue",
+      "https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue",
+      "https://static.fashn.ai/repositories/fashn-human-parser/example.webp\""
+    ]
+  },
+  {
+    "family": "sapiens2",
+    "remote": "https://github.com/facebookresearch/sapiens2.git",
+    "local_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+    "checked_utc": "2026-10-15T06:44:09.025434+00:00",
+    "readme_sha256": "d6b50f59a9f9ef2020f23f595246d42d2996feab90ac3b26be9a6b1a8edc25f4",
+    "release_assets": [],
+    "drive_folders": [],
+    "checkpoint_links": [
+      "https://about.meta.com/realitylabs/\"",
+      "https://arxiv.org/pdf/2604.21681\"",
+      "https://github.com/facebookresearch/dinov3",
+      "https://github.com/facebookresearch/sapiens2.git",
+      "https://github.com/huggingface/accelerate",
+      "https://github.com/open-mmlab",
+      "https://huggingface.co/collections/facebook/sapiens2'",
+      "https://huggingface.co/spaces/facebook/sapiens2-matting'",
+      "https://huggingface.co/spaces/facebook/sapiens2-normal'",
+      "https://huggingface.co/spaces/facebook/sapiens2-pointmap'",
+      "https://huggingface.co/spaces/facebook/sapiens2-pose'",
+      "https://huggingface.co/spaces/facebook/sapiens2-seg'",
+      "https://img.shields.io/badge/HuggingFace-Hub-orange?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=FF5500&color=orange'",
+      "https://img.shields.io/badge/Paper-PDF-green?style=for-the-badge&logo=adobeacrobatreader&logoWidth=20&logoColor=white&labelColor=66cc00&color=94DD15'",
+      "https://img.shields.io/badge/Sapiens2-Page-purple?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=4A148C&color=9C27B0'",
+      "https://raw.githubusercontent.com/facebookresearch/sapiens2/main/sapiens/backbones/standalone/sapiens2.py",
+      "https://rawalkhirodkar.github.io/\"",
+      "https://rawalkhirodkar.github.io/sapiens2/'",
+      "https://shunsukesaito.github.io/\"",
+      "https://una-dinosauria.github.io/\"",
+      "https://www.linkedin.com/in/hewen/\"",
+      "https://www.linkedin.com/in/ydong142857/\""
+    ]
+  }
+]

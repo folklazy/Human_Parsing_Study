@@ -1,0 +1,12 @@
+{
+  "derivation": "Existing canonical component counts only; no model inference",
+  "matplotlib": "3.11.2",
+  "input": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FINAL_BENCHMARK_VALIDATION.json",
+  "input_sha256": "408e716a5a55fd8bdf2d6dcaeb0f3c9e13e2e83cb13dd9cca93db81742150cf5",
+  "script_sha256": "c301b86ac20c2b038ba99ae2b38c6ee67221297ee170917840912ea5091e8db3",
+  "plot": "plots/first_cohort_completion.png",
+  "plot_sha256": "adebdbe46bae3d17e59e68990feebacf04f42d2bda01159c3d4991236e7b3f0c",
+  "source_dataset_photos_used": false,
+  "plot_script_original_execution_sha256": "559d2ac6621f239c3c2d270e44fac5c0ad2dcee042f216f2882edf99a851d3e8",
+  "post_generation_change": "Added refusal to overwrite existing figure; drawing/data logic unchanged"
+}

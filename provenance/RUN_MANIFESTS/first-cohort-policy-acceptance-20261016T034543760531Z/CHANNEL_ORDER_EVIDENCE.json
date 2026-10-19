@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "status": "INDIRECT_ONLY",
+  "semantic_binding_eligible": false,
+  "policy_acceptance_is_channel_verification": false,
+  "source_search": "provenance/RUN_MANIFESTS/first-cohort-policy-acceptance-20261016T034543760531Z/CHANNEL_HEADER_SEARCH.json",
+  "user_has_additional_header": false,
+  "models": {
+    "CPI_R50_CIHP": {
+      "status": "INDIRECT_ONLY",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "expected_native_class_order": [
+        "Background",
+        "Hat",
+        "Hair",
+        "Gloves",
+        "Sunglasses",
+        "UpperClothes",
+        "Dress",
+        "Coat",
+        "Socks",
+        "Pants",
+        "Torso-skin",
+        "Scarf",
+        "Skirt",
+        "Face",
+        "Left-arm",
+        "Right-arm",
+        "Left-leg",
+        "Right-leg",
+        "Left-shoe",
+        "Right-shoe"
+      ],
+      "indirect_evidence": [
+        "Published CIHP checkpoint/config",
+        "20-class strict checkpoint load",
+        "ID-preserving loader",
+        "Standard CIHP catalog from another implementation"
+      ],
+      "proof_kind": null,
+      "document": null,
+      "document_sha256": null,
+      "provenance_review": "NOT_DIRECTLY_VERIFIED",
+      "release_relationship_evidence": null,
+      "semantic_binding_status": "BLOCKED_CHANNEL_ORDER"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "status": "INDIRECT_ONLY",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "expected_native_class_order": [
+        "Background",
+        "Hat",
+        "Hair",
+        "Gloves",
+        "Sunglasses",
+        "UpperClothes",
+        "Dress",
+        "Coat",
+        "Socks",
+        "Pants",
+        "Torso-skin",
+        "Scarf",
+        "Skirt",
+        "Face",
+        "Left-arm",
+        "Right-arm",
+        "Left-leg",
+        "Right-leg",
+        "Left-shoe",
+        "Right-shoe"
+      ],
+      "indirect_evidence": [
+        "Published CIHP checkpoint/config",
+        "20-class strict checkpoint load",
+        "ID-preserving loader",
+        "Standard CIHP catalog from another implementation"
+      ],
+      "proof_kind": null,
+      "document": null,
+      "document_sha256": null,
+      "provenance_review": "NOT_DIRECTLY_VERIFIED",
+      "release_relationship_evidence": null,
+      "semantic_binding_status": "BLOCKED_CHANNEL_ORDER"
+    }
+  }
+}

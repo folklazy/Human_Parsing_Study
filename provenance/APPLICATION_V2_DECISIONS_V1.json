@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0",
+  "record_id": "USER_IMPLEMENTATION_GOVERNANCE_20261014_V1",
+  "accepted_scope": "Implementation, CPU fixtures and saved TRAIN replay; no full benchmark freeze",
+  "source": "Explicit user response after implementation handoff review",
+  "decisions": [
+    {
+      "id": "IDENTITY_PROVENANCE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Native capability and externally conditioned final identity are distinct; T3b retains both origins.",
+      "bindings": {
+        "identity.external_identity_establishes_native_capability": false,
+        "identity.retain_both_origins": true,
+        "identity.unsupported_native_count": null,
+        "identity.supported_empty_native_count": 0
+      }
+    },
+    {
+      "id": "STAGE_RATES",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Stage/unit/numerator/denominator required; routing skips differ from completion/failure.",
+      "bindings": {
+        "rates.require_stage_and_counts": true,
+        "rates.zero_denominator": null,
+        "rates.skip_status": "SKIPPED_BY_ROUTING",
+        "rates.eligibility_source": "FROZEN_POLICY"
+      }
+    },
+    {
+      "id": "CONFIG_AUTHORITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Executable config is the sole runtime authority; accepted decision conflicts must fail.",
+      "bindings": {
+        "governance.runner_source": "EXECUTABLE_CONFIG",
+        "governance.reject_decision_conflicts": true,
+        "governance.drafts_allowed_for_development": true,
+        "authorization.full_benchmark": false
+      }
+    },
+    {
+      "id": "PRIMARY_POPULATION",
+      "status": "PROPOSED",
+      "reason": "Controlled4961/source5000 requires role acceptance and actual cohort sidecars.",
+      "bindings": {}
+    },
+    {
+      "id": "COMMON_TAXONOMY",
+      "status": "PROPOSED",
+      "reason": "Numeric candidate mappings do not imply semantic equivalence or a frozen universal leaderboard.",
+      "bindings": {}
+    },
+    {
+      "id": "APPLICATION_MATCHING",
+      "status": "PROPOSED",
+      "reason": "BBox0.50/0.75 and cardinality-first are development defaults pending complete readiness.",
+      "bindings": {}
+    },
+    {
+      "id": "FULL_BENCHMARK_EXECUTION",
+      "status": "PROPOSED",
+      "reason": "Explicit execution scope is not authorized by design review.",
+      "bindings": {}
+    }
+  ]
+}

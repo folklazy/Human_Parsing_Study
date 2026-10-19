@@ -1,0 +1,66 @@
+[
+  {
+    "model_id": "CPI_R50_CIHP",
+    "image_id": "0000930",
+    "source_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_cihp-20261015T064358Z/RUN.json",
+    "manifest_sha256": "a637a4a9edef0e33d9bd8052f3446303c8a9e025b68024b4471dc22837f2d327",
+    "native_artifact": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_r50_cihp-20261015T064358Z/0000930_native.npz",
+    "native_artifact_sha256": "a8e9ef839e8fec089a7876b527b5813d132fe3e44f0539ad7230037f52e278e1",
+    "shape": [
+      2,
+      346,
+      500
+    ],
+    "dtype": "uint8",
+    "numeric_ids_present": [
+      0,
+      1,
+      3,
+      6,
+      11,
+      13
+    ],
+    "display_names_using_declared_catalog": {
+      "0": "Background",
+      "1": "Hat",
+      "3": "Gloves",
+      "6": "Dress",
+      "11": "Scarf",
+      "13": "Face"
+    },
+    "display_name_origin": "External NATIVE_CLASS_INVENTORY.json read by run_cpi.py, not names recovered from model output",
+    "inference_rerun": false
+  },
+  {
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "image_id": "0000930",
+    "source_manifest": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_cihp-20261015T064421Z/RUN.json",
+    "manifest_sha256": "b4328c730caddd3b2a7cb21ebe2d401838b1b703c06e8bb0bd2c1421550f027a",
+    "native_artifact": "provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/cpi_convnextb_cihp-20261015T064421Z/0000930_native.npz",
+    "native_artifact_sha256": "675192fb4c8d1bef2b7847bded854d65ac314509801bb055b11e228397bf70a2",
+    "shape": [
+      2,
+      346,
+      500
+    ],
+    "dtype": "uint8",
+    "numeric_ids_present": [
+      0,
+      1,
+      3,
+      6,
+      11,
+      13
+    ],
+    "display_names_using_declared_catalog": {
+      "0": "Background",
+      "1": "Hat",
+      "3": "Gloves",
+      "6": "Dress",
+      "11": "Scarf",
+      "13": "Face"
+    },
+    "display_name_origin": "External NATIVE_CLASS_INVENTORY.json read by run_cpi.py, not names recovered from model output",
+    "inference_rerun": false
+  }
+]

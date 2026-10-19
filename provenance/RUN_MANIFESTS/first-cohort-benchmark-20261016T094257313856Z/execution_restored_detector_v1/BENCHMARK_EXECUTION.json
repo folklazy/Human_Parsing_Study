@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED_WITH_RETAINED_STATUS_ROWS",
+  "end_utc": "2026-10-19T03:56:43.224771+00:00",
+  "reference_images": 5000,
+  "detector_jobs": 5000,
+  "parser_jobs": 10000,
+  "separate_populations": [
+    "main",
+    "reference"
+  ],
+  "config_sha256": "54b4143ac063e1b02be04e000eeb8c0ce4c379e53c63c3b54e8457624a0e4f39",
+  "timing_ranking": false
+}

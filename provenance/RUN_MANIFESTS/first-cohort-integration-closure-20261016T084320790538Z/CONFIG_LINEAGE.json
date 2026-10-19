@@ -1,0 +1,13 @@
+{
+  "old_config": "configs/application_v2_first_cohort_v8.yaml",
+  "new_config": "configs/application_v2_first_cohort_v9.yaml",
+  "unchanged_protocol_sections": [
+    "mapping",
+    "domain",
+    "population",
+    "matching",
+    "runtime"
+  ],
+  "validation_GT_regenerated": false,
+  "full_benchmark": false
+}

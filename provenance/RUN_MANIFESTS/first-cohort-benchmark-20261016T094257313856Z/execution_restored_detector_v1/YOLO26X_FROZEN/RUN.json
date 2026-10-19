@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE",
+  "model_id": "YOLO26X_FROZEN",
+  "precision": "FP32",
+  "config_sha256": "54b4143ac063e1b02be04e000eeb8c0ce4c379e53c63c3b54e8457624a0e4f39",
+  "receipt_sha256": "b89ebab675dc7a50b5950fc38511864a55e5a13d2faaefd60af623301c843253",
+  "worker_sha256": "bb59f671ad215a053a4d32f58d6ad74585b70fb007a6a4c806086e231bd2cecc",
+  "model_retries": 0,
+  "start_utc": "2026-10-19T03:05:00.529490+00:00",
+  "checkpoint_loaded": true,
+  "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+  "torch": "2.14.0+cu130",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "cuda_runtime": "13.0",
+  "GPU": "Tesla T4",
+  "autocast": false,
+  "TF32": false,
+  "frames": 5000,
+  "failed_frames": 0,
+  "end_utc": "2026-10-19T03:11:30.398115+00:00"
+}

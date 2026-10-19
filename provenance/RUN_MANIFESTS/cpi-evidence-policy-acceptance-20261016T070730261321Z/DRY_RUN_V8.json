@@ -1,0 +1,100 @@
+{
+  "status": "DRY_RUN_PLAN_ONLY",
+  "roster_source": "first_cohort.models",
+  "settings_source": "first_cohort.execution_spec",
+  "track": "T3B",
+  "parser_systems": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "checkpoint_workspace_relative": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config_workspace_relative": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "resolved_config_evidence_sha256": "001caf403319d7d5e953a4aca5a1efccd93814e67a85b58ebe47e631c507cd6b",
+      "environment_workspace_relative": ".venvs/parser-legacy-cu113",
+      "native_taxonomy": "CIHP",
+      "score_threshold_source": "first_cohort.protocol.matching.native_score_thresholds.CPI_R50_CIHP",
+      "native_score_threshold": 0.01,
+      "checkpoint_hash_source": "PRIOR_VERIFIED_INVENTORY_NOT_REHASHED_BY_DRY_RUN",
+      "channel_order_status": "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "checkpoint_workspace_relative": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config_workspace_relative": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "resolved_config_evidence_sha256": "5dedfd51e6c5db8da9481c6e604d2ac3eb1a013f2792d883095e9ac64a943fb5",
+      "environment_workspace_relative": ".venvs/parser-legacy-cu113",
+      "native_taxonomy": "CIHP",
+      "score_threshold_source": "first_cohort.protocol.matching.native_score_thresholds.CPI_ConvNeXtB_CIHP",
+      "native_score_threshold": 0.05,
+      "checkpoint_hash_source": "PRIOR_VERIFIED_INVENTORY_NOT_REHASHED_BY_DRY_RUN",
+      "channel_order_status": "ACCEPTED_WITH_INDIRECT_EVIDENCE"
+    }
+  ],
+  "shared_dependencies": [
+    {
+      "dependency_id": "YOLO26X_FROZEN",
+      "checkpoint_workspace_relative": "models/yolo26x-seg.pt",
+      "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+      "environment_workspace_relative": ".venv",
+      "settings_source": "inference_dependencies.frozen_yolo_engineering_options",
+      "settings": {
+        "checkpoint": "models/yolo26x-seg.pt",
+        "imgsz": 640,
+        "conf": 0.25,
+        "iou": 0.7,
+        "max_det": 200,
+        "retina_masks": true
+      }
+    }
+  ],
+  "association": {
+    "threshold": 0.5,
+    "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+    "left_bbox_source": "FROZEN_YOLO26X_BOX",
+    "right_bbox_source": "NATIVE_PARSER_BOX",
+    "uses_GT": false,
+    "accepted_for_benchmark": false
+  },
+  "GT_matching": {
+    "threshold": 0.5,
+    "secondary_threshold": 0.75,
+    "geometry": "BBOX_XYXY_HALF_OPEN",
+    "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+    "tie_policy": "SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY_1_15_3",
+    "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+    "GT_bbox_source": "ORIGINAL_HUMAN_ID_HALF_OPEN_BBOX",
+    "conditioning_bbox_source": "FROZEN_YOLO26X_BOX",
+    "class_guided_rematching": false
+  },
+  "evaluator_runtime": {
+    "geometry": "BBOX_XYXY_HALF_OPEN",
+    "threshold": 0.5,
+    "secondary_threshold": 0.75,
+    "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+    "tie_policy": "SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY",
+    "scipy_pin": "1.15.3",
+    "global_class_policy": "FIXED_GT_SUPPORTED_K",
+    "person_foreground_catalog": "ALL_COHORT_TARGET_CLASSES_PLUS_UNMAPPED"
+  },
+  "precision": "FP32",
+  "model_loading": false,
+  "full_benchmark": false,
+  "semantic_scoring": "DISABLED_PREPARATION_ONLY",
+  "ignored_legacy_fields": {
+    "systems.variants": 20,
+    "bounded_train.models": [
+      "YOLO26X_FROZEN",
+      "FASHN_B4"
+    ],
+    "execution.model_loading": "BOUNDED_TRAIN_ONLY"
+  },
+  "legacy_engineering_used_for_roster": false,
+  "config_path": "configs/application_v2_first_cohort_v8.yaml",
+  "config_content_sha256": "778bbdf9d7d4034a3f54ccb6f963cbab85af74485a7319a29338a72bf1965e4b",
+  "heavyweight_frameworks_imported": []
+}

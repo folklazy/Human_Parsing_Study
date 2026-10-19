@@ -1,0 +1,97 @@
+{
+  "comparison": {
+    "comparison_id": "CCIHP_CORE_CPI_T3B_QUALITY_RELEASED_GT_PROPOSED_R2:reference:4a5578ac85b4",
+    "definition_sha256": "4a5578ac85b49b9a2ccd770c3ef6ca6b42b3fd00eb65fa8ec808426972c9f44b"
+  },
+  "policy": "STRICT_COMPLETE",
+  "population_sha256": "0191861a5598fd1ffe88f5b72a47583d15f34c7f7c6fe3024df4875f4133dd0d",
+  "systems": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "status": "INCOMPLETE",
+      "main_score_eligible": false,
+      "main_metrics": null,
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 4475,
+        "failed": 525,
+        "invalid": 0,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 4475,
+        "denominator": 5000,
+        "completion_rate": 0.895
+      },
+      "population": {
+        "frames": 5000,
+        "G_loc": 17548,
+        "G_sem": 17504
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 4475,
+        "G_loc_observed": 14127,
+        "G_sem_observed": 14095,
+        "Q_person_sem_GT": 0.7073253464167668,
+        "TP": 13355,
+        "FP": 2015,
+        "FN": 772
+      },
+      "operational_diagnostics_summary": {
+        "failure_event_count": 525,
+        "native_stage_ledger_rows": 5000,
+        "full_events_and_ledgers": "EXTERNAL_SOURCE_REPORT; failures retained separately in FAILURES.csv"
+      }
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "status": "INCOMPLETE",
+      "main_score_eligible": false,
+      "main_metrics": null,
+      "execution": {
+        "stage": "final_pipeline_frame",
+        "unit": "frame",
+        "completed": 4959,
+        "failed": 40,
+        "invalid": 1,
+        "not_attempted_or_unscheduled": 0,
+        "numerator": 4959,
+        "denominator": 5000,
+        "completion_rate": 0.9918
+      },
+      "population": {
+        "frames": 5000,
+        "G_loc": 17548,
+        "G_sem": 17504
+      },
+      "success_only_diagnostic": {
+        "label": "SUCCESS_ONLY_DIAGNOSTIC_NOT_MAIN_SCORE",
+        "scored_frames": 4959,
+        "G_loc_observed": 17227,
+        "G_sem_observed": 17184,
+        "Q_person_sem_GT": 0.7190177773754346,
+        "TP": 16105,
+        "FP": 2616,
+        "FN": 1122
+      },
+      "operational_diagnostics_summary": {
+        "failure_event_count": 41,
+        "native_stage_ledger_rows": 5000,
+        "full_events_and_ledgers": "EXTERNAL_SOURCE_REPORT; failures retained separately in FAILURES.csv"
+      }
+    }
+  ],
+  "cross_comparison_ranking": "PROHIBITED_WHEN_VIEW_DOMAIN_OR_TARGET_DIFFER",
+  "benchmark_authorization": false,
+  "population_role": "reference",
+  "matching_view": "primary",
+  "GT_matching_threshold": 0.5,
+  "publication_derivation": {
+    "status": "DERIVED_FROM_EXISTING_CANONICAL_RESULTS_NO_RESCORING",
+    "source_path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_PRIMARY_REPORT.json",
+    "source_sha256": "0b492d461d2c6c1056aec7e01fd7f9ded66d003a3e5f7c0bf4023e5bc8c58be2",
+    "source_bytes": 7749216,
+    "source_raw_report_in_git": false,
+    "change": "Only bulk operational diagnostics replaced by counts; score/denominator/completeness fields unchanged"
+  }
+}

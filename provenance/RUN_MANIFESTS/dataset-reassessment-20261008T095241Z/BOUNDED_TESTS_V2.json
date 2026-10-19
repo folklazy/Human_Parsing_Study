@@ -1,0 +1,19 @@
+{
+  "start_utc": "2026-10-08T10:09:35.968290+00:00",
+  "end_utc": "2026-10-08T10:09:37.456510+00:00",
+  "python": "3.10.21",
+  "tests_run": 51,
+  "failures": 0,
+  "errors": 0,
+  "status": "PASS",
+  "patterns": [
+    "test_mhpv2_stage0.py",
+    "test_official_mhp_compat.py",
+    "test_dataset_reassessment.py"
+  ],
+  "log": "provenance/RUN_MANIFESTS/dataset-reassessment-20261008T095241Z/BOUNDED_TESTS_V2.log",
+  "log_sha256": "fd306c5ea2f54ec704b9b305c3f3ac8143c23928b568aab4610c896ed6b8f562",
+  "PPSS_tests": false,
+  "parser_inference": false,
+  "benchmark": false
+}

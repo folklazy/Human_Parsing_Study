@@ -1,0 +1,690 @@
+{
+  "schema_version": "1.0",
+  "start_utc": "2026-10-08T09:29:38.669653+00:00",
+  "end_utc": "2026-10-08T09:30:04.657606+00:00",
+  "verification_status": "PASS_VERIFICATION_RGB_BLOCKER_REMAINS",
+  "source_provenance": {
+    "user_declared_source": "Newly downloaded official dataset ZIP transferred to server",
+    "independent_download_URL_log_or_publisher_SHA256_available": false,
+    "identity_claim_scope": "Cryptographic equality to historical archive hash; does not establish all publisher releases identical"
+  },
+  "archive": {
+    "workspace_relative_path": "datasets/LV-MHP-v2.zip",
+    "bytes": 5429618040,
+    "sha256": "89f010742d4797d3efd7a7eab83a405d9828749381da20638a03df947238059e",
+    "previous_import_sha256": "89f010742d4797d3efd7a7eab83a405d9828749381da20638a03df947238059e",
+    "previous_hash_comparison": "BYTE_IDENTICAL_TO_PREVIOUS_RECORDED_ARCHIVE",
+    "central_directory_parse": "PASS",
+    "central_directory_entries": 179896,
+    "central_directory_start": 5411221889,
+    "duplicate_names": 0,
+    "local_header_filename_method_bounds_validation": "PASS",
+    "wrapped_offsets_resolved_in_memory": 122426,
+    "original_archive_offsets_or_bytes_modified": false,
+    "dataset_member_root": "LV-MHP-v2",
+    "dataset_version": "2.0",
+    "README_bytes_equal_existing": true,
+    "expected_split_inventories": {
+      "train": {
+        "images": 15403,
+        "person_parsing_PNGs": 41056,
+        "pose_MATs": 15403,
+        "official_split_bytes_equal_existing": true
+      },
+      "val": {
+        "images": 5000,
+        "person_parsing_PNGs": 13260,
+        "pose_MATs": 5000,
+        "official_split_bytes_equal_existing": true
+      },
+      "test": {
+        "images": 5000,
+        "person_parsing_PNGs": 0,
+        "pose_MATs": 0,
+        "official_split_bytes_equal_existing": true
+      }
+    },
+    "all_archive_members_CRC_retested": false,
+    "CRC_scope": "Selected 4 JPEG + 16 associated GT + README + 3 official lists, complete member reads",
+    "members_CRC_verified_count": 24,
+    "file_size_mtime_inode_unchanged_during_read": true
+  },
+  "decoders": {
+    "pillow": "12.3.0",
+    "opencv": "4.11.0",
+    "Pillow_LOAD_TRUNCATED_IMAGES": false,
+    "header_only_success_is_sufficient": false,
+    "permissive_OpenCV_success_alone_is_sufficient": false
+  },
+  "cases": [
+    {
+      "split": "train",
+      "image_id": "1396",
+      "old_relative_path": "train/images/1396.jpg",
+      "old_sha256": "41d6fa43f171276aabb7fe5755f4c889ec47aeb9f5f50667bc74c43f011d4bfd",
+      "old_bytes": 379497,
+      "new_archive_member": "LV-MHP-v2/train/images/1396.jpg",
+      "new_sha256": "41d6fa43f171276aabb7fe5755f4c889ec47aeb9f5f50667bc74c43f011d4bfd",
+      "new_uncompressed_bytes": 379497,
+      "same_bytes": true,
+      "zip_crc": "PASS",
+      "old_decode": {
+        "pillow_header_wh": [
+          1024,
+          640
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (21 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "new_decode": {
+        "pillow_header_wh": [
+          1024,
+          640
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (21 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "GT": [
+        {
+          "person_id": "1396:parsing:1",
+          "annotation_path": "train/parsing_annos/1396_06_01.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "54ea9c29eb49ab0dc9c5130b81d9c941c0d7e9f72f48af06f2d52167356fbeca",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "1396:parsing:2",
+          "annotation_path": "train/parsing_annos/1396_06_02.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "adbfc4c19573efd49fecc43906709ddb4f952fbae18667335d015cbbb46b4cb6",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "1396:parsing:3",
+          "annotation_path": "train/parsing_annos/1396_06_03.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "baf219b6b9c59f02f9e1a4b4b7322f12ee21ba678f761a329a94bbe1236ef7a9",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "1396:parsing:4",
+          "annotation_path": "train/parsing_annos/1396_06_04.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "d90c61c0ac73b943183624b5d17344f51fad79366c855c885cdaf7b07c63fe42",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "1396:parsing:5",
+          "annotation_path": "train/parsing_annos/1396_06_05.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "c1178a4050a3bf8071ce9d7cb02630b5aea98a099d74bc6aae4eb126df6bf72c",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "1396:parsing:6",
+          "annotation_path": "train/parsing_annos/1396_06_06.png",
+          "original_wh": [
+            1024,
+            640
+          ],
+          "source_sha256": "51a2daf28deb770e7188cfe50401cda0a3a0c8de45705413ee6596ac2b9c968c",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        }
+      ],
+      "visual_pixel_alignment_verified": false,
+      "replacement_activated": false,
+      "image_identity_evidence": "Exact image member bytes match existing file",
+      "header_wh_equals_existing_GT": true,
+      "complete_RGB_to_GT_alignment_verified": false,
+      "result": "SAME_DEFECTIVE_BYTES"
+    },
+    {
+      "split": "train",
+      "image_id": "18613",
+      "old_relative_path": "train/images/18613.jpg",
+      "old_sha256": "972661e3d580252c443c7dad706bb81449cbfd70222192c2debd2517a33506b5",
+      "old_bytes": 577978,
+      "new_archive_member": "LV-MHP-v2/train/images/18613.jpg",
+      "new_sha256": "972661e3d580252c443c7dad706bb81449cbfd70222192c2debd2517a33506b5",
+      "new_uncompressed_bytes": 577978,
+      "same_bytes": true,
+      "zip_crc": "PASS",
+      "old_decode": {
+        "pillow_header_wh": [
+          1920,
+          1200
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (0 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "new_decode": {
+        "pillow_header_wh": [
+          1920,
+          1200
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (0 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "GT": [
+        {
+          "person_id": "18613:parsing:1",
+          "annotation_path": "train/parsing_annos/18613_05_01.png",
+          "original_wh": [
+            1920,
+            1200
+          ],
+          "source_sha256": "0b3095c150af776ddadda6c38350d7579a8409dcf1eb6ae28621ffe5ae2c1db8",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "18613:parsing:2",
+          "annotation_path": "train/parsing_annos/18613_05_02.png",
+          "original_wh": [
+            1920,
+            1200
+          ],
+          "source_sha256": "39b3cc530f9b5288516a14bbed81600533786f05043bc768c1f9e2d1abb07914",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "18613:parsing:3",
+          "annotation_path": "train/parsing_annos/18613_05_03.png",
+          "original_wh": [
+            1920,
+            1200
+          ],
+          "source_sha256": "2ad5a67f832f8b2b065a798657f7a1c5eec8700b4ab3be67c83bd4c48727418b",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "18613:parsing:4",
+          "annotation_path": "train/parsing_annos/18613_05_04.png",
+          "original_wh": [
+            1920,
+            1200
+          ],
+          "source_sha256": "ff1650b26be608ee8963c3f3d7aa1c4f52aee45f139463e310f29788b239ced7",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "18613:parsing:5",
+          "annotation_path": "train/parsing_annos/18613_05_05.png",
+          "original_wh": [
+            1920,
+            1200
+          ],
+          "source_sha256": "0ea8594ea6342a8e76e7c562129b1001b462387bcc79658580b53cb170e3a8b0",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        }
+      ],
+      "visual_pixel_alignment_verified": false,
+      "replacement_activated": false,
+      "image_identity_evidence": "Exact image member bytes match existing file",
+      "header_wh_equals_existing_GT": true,
+      "complete_RGB_to_GT_alignment_verified": false,
+      "result": "SAME_DEFECTIVE_BYTES"
+    },
+    {
+      "split": "train",
+      "image_id": "24328",
+      "old_relative_path": "train/images/24328.jpg",
+      "old_sha256": "9fa5cfb69834a81dfa18b2f22719fce431db9b35cee276a74a0b60b882bf31c1",
+      "old_bytes": 320069,
+      "new_archive_member": "LV-MHP-v2/train/images/24328.jpg",
+      "new_sha256": "9fa5cfb69834a81dfa18b2f22719fce431db9b35cee276a74a0b60b882bf31c1",
+      "new_uncompressed_bytes": 320069,
+      "same_bytes": true,
+      "zip_crc": "PASS",
+      "old_decode": {
+        "pillow_header_wh": [
+          1080,
+          1620
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (19 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "new_decode": {
+        "pillow_header_wh": [
+          1080,
+          1620
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (19 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "GT": [
+        {
+          "person_id": "24328:parsing:1",
+          "annotation_path": "train/parsing_annos/24328_02_01.png",
+          "original_wh": [
+            1080,
+            1620
+          ],
+          "source_sha256": "4526848ded6089ca2e8ce13a136ad8b1b5990ec71eab0e0a756a4688219e626c",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "24328:parsing:2",
+          "annotation_path": "train/parsing_annos/24328_02_02.png",
+          "original_wh": [
+            1080,
+            1620
+          ],
+          "source_sha256": "f1bea0187389ba704e78ca2cb4ce3b3793a2590f08c06b395f7f3a69962236a3",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        }
+      ],
+      "visual_pixel_alignment_verified": false,
+      "replacement_activated": false,
+      "image_identity_evidence": "Exact image member bytes match existing file",
+      "header_wh_equals_existing_GT": true,
+      "complete_RGB_to_GT_alignment_verified": false,
+      "result": "SAME_DEFECTIVE_BYTES"
+    },
+    {
+      "split": "val",
+      "image_id": "17844",
+      "old_relative_path": "val/images/17844.jpg",
+      "old_sha256": "01e647b1f38f6aeddfe8959c5af23b9aeda4565bd3770b06fa0454f2154feb87",
+      "old_bytes": 440931,
+      "new_archive_member": "LV-MHP-v2/val/images/17844.jpg",
+      "new_sha256": "01e647b1f38f6aeddfe8959c5af23b9aeda4565bd3770b06fa0454f2154feb87",
+      "new_uncompressed_bytes": 440931,
+      "same_bytes": true,
+      "zip_crc": "PASS",
+      "old_decode": {
+        "pillow_header_wh": [
+          1024,
+          731
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (26 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "new_decode": {
+        "pillow_header_wh": [
+          1024,
+          731
+        ],
+        "pillow_format": "JPEG",
+        "pillow_full_pixel_load": false,
+        "pillow_verify_pass": false,
+        "pillow_error": "OSError: image file is truncated (26 bytes not processed)",
+        "opencv_nonempty": false,
+        "opencv_wh": null,
+        "opencv_error": null,
+        "complete_pixels_verified": false
+      },
+      "GT": [
+        {
+          "person_id": "17844:parsing:1",
+          "annotation_path": "val/parsing_annos/17844_03_01.png",
+          "original_wh": [
+            1024,
+            731
+          ],
+          "source_sha256": "609fe5f5468ea26a7dc02961527570ad054a3257b9599efd2b2ea3c1888739e7",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "17844:parsing:2",
+          "annotation_path": "val/parsing_annos/17844_03_02.png",
+          "original_wh": [
+            1024,
+            731
+          ],
+          "source_sha256": "d56ab6f9c803455cd8c0959acd24fe5c3c5a70329dac8034ed1880da67adce3d",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        },
+        {
+          "person_id": "17844:parsing:3",
+          "annotation_path": "val/parsing_annos/17844_03_03.png",
+          "original_wh": [
+            1024,
+            731
+          ],
+          "source_sha256": "ab9ca58636de171083f241f72ed5958570bff29e935d314ffc132db92c176203",
+          "archive_vs_existing_bytes_equal": true,
+          "native_label_pixels_fidelity": "PASS",
+          "zip_crc": "PASS"
+        }
+      ],
+      "visual_pixel_alignment_verified": false,
+      "replacement_activated": false,
+      "image_identity_evidence": "Exact image member bytes match existing file",
+      "header_wh_equals_existing_GT": true,
+      "complete_RGB_to_GT_alignment_verified": false,
+      "result": "SAME_DEFECTIVE_BYTES"
+    }
+  ],
+  "members_verified": [
+    {
+      "path": "LV-MHP-v2/README.txt",
+      "bytes": 3323,
+      "sha256": "d169c3f7a993f22b5bb6b9f5cb2f5c8ae874248cd4bf0e5492d10b748d27bf4b",
+      "crc32_expected": "b2449010",
+      "crc32_actual": "b2449010",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/list/train.txt",
+      "bytes": 101097,
+      "sha256": "5b03bf5df32fb71446042d3d7163df2fbbb5d341795dd00c3e4b979dfe15be5b",
+      "crc32_expected": "86ea899e",
+      "crc32_actual": "86ea899e",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/list/val.txt",
+      "bytes": 32806,
+      "sha256": "266bd27738079b41cd48c1a278671d6d15702d053ce0e8ada05250bc38a222fb",
+      "crc32_expected": "f7134037",
+      "crc32_actual": "f7134037",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/list/test_all.txt",
+      "bytes": 32822,
+      "sha256": "36dae75066c52894fd86a7f10769bdea5888716bdaedeb6e2d5958fce3c05fb9",
+      "crc32_expected": "4d96075f",
+      "crc32_actual": "4d96075f",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/images/1396.jpg",
+      "bytes": 379497,
+      "sha256": "41d6fa43f171276aabb7fe5755f4c889ec47aeb9f5f50667bc74c43f011d4bfd",
+      "crc32_expected": "c82e7e46",
+      "crc32_actual": "c82e7e46",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_01.png",
+      "bytes": 19258,
+      "sha256": "54ea9c29eb49ab0dc9c5130b81d9c941c0d7e9f72f48af06f2d52167356fbeca",
+      "crc32_expected": "4ec92f73",
+      "crc32_actual": "4ec92f73",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_02.png",
+      "bytes": 19606,
+      "sha256": "adbfc4c19573efd49fecc43906709ddb4f952fbae18667335d015cbbb46b4cb6",
+      "crc32_expected": "77a7c840",
+      "crc32_actual": "77a7c840",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_03.png",
+      "bytes": 20636,
+      "sha256": "baf219b6b9c59f02f9e1a4b4b7322f12ee21ba678f761a329a94bbe1236ef7a9",
+      "crc32_expected": "c3423738",
+      "crc32_actual": "c3423738",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_04.png",
+      "bytes": 21413,
+      "sha256": "d90c61c0ac73b943183624b5d17344f51fad79366c855c885cdaf7b07c63fe42",
+      "crc32_expected": "5f0b031b",
+      "crc32_actual": "5f0b031b",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_05.png",
+      "bytes": 19827,
+      "sha256": "c1178a4050a3bf8071ce9d7cb02630b5aea98a099d74bc6aae4eb126df6bf72c",
+      "crc32_expected": "4781bb86",
+      "crc32_actual": "4781bb86",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/1396_06_06.png",
+      "bytes": 20345,
+      "sha256": "51a2daf28deb770e7188cfe50401cda0a3a0c8de45705413ee6596ac2b9c968c",
+      "crc32_expected": "c1230bee",
+      "crc32_actual": "c1230bee",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/images/18613.jpg",
+      "bytes": 577978,
+      "sha256": "972661e3d580252c443c7dad706bb81449cbfd70222192c2debd2517a33506b5",
+      "crc32_expected": "12228582",
+      "crc32_actual": "12228582",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/18613_05_01.png",
+      "bytes": 21978,
+      "sha256": "0b3095c150af776ddadda6c38350d7579a8409dcf1eb6ae28621ffe5ae2c1db8",
+      "crc32_expected": "b42ae580",
+      "crc32_actual": "b42ae580",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/18613_05_02.png",
+      "bytes": 58134,
+      "sha256": "39b3cc530f9b5288516a14bbed81600533786f05043bc768c1f9e2d1abb07914",
+      "crc32_expected": "43bf3d16",
+      "crc32_actual": "43bf3d16",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/18613_05_03.png",
+      "bytes": 56960,
+      "sha256": "2ad5a67f832f8b2b065a798657f7a1c5eec8700b4ab3be67c83bd4c48727418b",
+      "crc32_expected": "18886f77",
+      "crc32_actual": "18886f77",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/18613_05_04.png",
+      "bytes": 55197,
+      "sha256": "ff1650b26be608ee8963c3f3d7aa1c4f52aee45f139463e310f29788b239ced7",
+      "crc32_expected": "70d6ce10",
+      "crc32_actual": "70d6ce10",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/18613_05_05.png",
+      "bytes": 19853,
+      "sha256": "0ea8594ea6342a8e76e7c562129b1001b462387bcc79658580b53cb170e3a8b0",
+      "crc32_expected": "02fac494",
+      "crc32_actual": "02fac494",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/images/24328.jpg",
+      "bytes": 320069,
+      "sha256": "9fa5cfb69834a81dfa18b2f22719fce431db9b35cee276a74a0b60b882bf31c1",
+      "crc32_expected": "9b3261b1",
+      "crc32_actual": "9b3261b1",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/24328_02_01.png",
+      "bytes": 63151,
+      "sha256": "4526848ded6089ca2e8ce13a136ad8b1b5990ec71eab0e0a756a4688219e626c",
+      "crc32_expected": "4b362501",
+      "crc32_actual": "4b362501",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/train/parsing_annos/24328_02_02.png",
+      "bytes": 53600,
+      "sha256": "f1bea0187389ba704e78ca2cb4ce3b3793a2590f08c06b395f7f3a69962236a3",
+      "crc32_expected": "c0d40975",
+      "crc32_actual": "c0d40975",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/val/images/17844.jpg",
+      "bytes": 440931,
+      "sha256": "01e647b1f38f6aeddfe8959c5af23b9aeda4565bd3770b06fa0454f2154feb87",
+      "crc32_expected": "8cf784c1",
+      "crc32_actual": "8cf784c1",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/val/parsing_annos/17844_03_01.png",
+      "bytes": 19307,
+      "sha256": "609fe5f5468ea26a7dc02961527570ad054a3257b9599efd2b2ea3c1888739e7",
+      "crc32_expected": "9f0851fb",
+      "crc32_actual": "9f0851fb",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/val/parsing_annos/17844_03_02.png",
+      "bytes": 23631,
+      "sha256": "d56ab6f9c803455cd8c0959acd24fe5c3c5a70329dac8034ed1880da67adce3d",
+      "crc32_expected": "52a74a15",
+      "crc32_actual": "52a74a15",
+      "crc_status": "PASS"
+    },
+    {
+      "path": "LV-MHP-v2/val/parsing_annos/17844_03_03.png",
+      "bytes": 20535,
+      "sha256": "ab9ca58636de171083f241f72ed5958570bff29e935d314ffc132db92c176203",
+      "crc32_expected": "99f250cc",
+      "crc32_actual": "99f250cc",
+      "crc_status": "PASS"
+    }
+  ],
+  "outcome_counts": {
+    "SAME_DEFECTIVE_BYTES": 4
+  },
+  "actually_recovered_images": 0,
+  "still_unreadable_images": 4,
+  "verified_replacement_overlay_available": false,
+  "overlay_activated": false,
+  "dataset_status": "DATASET_BLOCKED",
+  "remaining_integrity_blockers": [
+    "Four required RGB members are not verified complete JPEG inputs"
+  ],
+  "other_stage0_gates_not_resolved": [
+    "Train/validation content reuse and reporting population decisions",
+    "Uncertain native GT physical-person ownership",
+    "Official evaluator compatibility/parity",
+    "Checkpoint/model feasibility and licensing"
+  ],
+  "scientific_conclusion": "Identical recorded ZIP and identical member bytes cannot repair the four images through another extraction/download of the same bytes",
+  "recommended_next_action": "Seek independently verified different source copies with provenance; otherwise ask approval for explicitly named readable-subset policy and shared denominators; bounded train-only feasibility is a separate approval",
+  "safety": {
+    "full_archive_extracted": false,
+    "original_RGB_or_GT_modified": false,
+    "official_splits_modified": false,
+    "canonical_state_or_dataset_manifest_modified": false,
+    "PPSS_accessed_or_modified": false,
+    "YOLO_artifacts_modified": false,
+    "parser_models_run": false,
+    "validation_inference_run": false,
+    "stage1_or_full_benchmark_started": false
+  },
+  "existing_YOLO_git_validation": {
+    "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": {
+      "head_branch_status_remotes_unchanged": true
+    },
+    "YOLO_Large_Seg_MOTS20_Benchmark": {
+      "head_branch_status_remotes_unchanged": true
+    },
+    "YOLO_Medium_Seg_MOTS20_Benchmark": {
+      "head_branch_status_remotes_unchanged": true
+    },
+    "YOLO_Nano_Seg_MOTS20_Benchmark": {
+      "head_branch_status_remotes_unchanged": true
+    },
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark": {
+      "head_branch_status_remotes_unchanged": true
+    },
+    "YOLO_Small_Seg_MOTS20_Benchmark": {
+      "head_branch_status_remotes_unchanged": true
+    }
+  },
+  "verification_script_sha256": "137847a9a1d182afdb8514a9ee694688fbc14f8bbdab7510775a6cef980f9eb0"
+}

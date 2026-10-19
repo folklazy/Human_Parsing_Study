@@ -1,0 +1,25 @@
+status: SOURCE_VERIFIED_CHECKPOINT_VALIDATION_SEPARATE
+labels:
+  0: Background
+  1: Hat
+  2: Hair
+  3: Glove
+  4: Sunglasses
+  5: Upper-clothes
+  6: Dress
+  7: Coat
+  8: Socks
+  9: Pants
+  10: Jumpsuits
+  11: Scarf
+  12: Skirt
+  13: Face
+  14: Left-arm
+  15: Right-arm
+  16: Left-leg
+  17: Right-leg
+  18: Left-shoe
+  19: Right-shoe
+source_workspace_relative: third_party/human_parsing/SCHP/simple_extractor.py
+source_sha256: e007d368cd58878fd3581c90c1ae24b01c1693d507ca039b04704af458b42504
+auxiliary_human_id: null

@@ -1,0 +1,172 @@
+{
+  "model_id": "YOLO26X_FROZEN",
+  "status": "PASS",
+  "start_utc": "2026-10-16T08:48:03.070888+00:00",
+  "plan_sha256": "71f0e6ee01115ff9b3078ea28ea93f15abf035d6c6a2f214eab4e36cc87c28d1",
+  "worker_sha256": "f5a9b3e79a6d5b572ec80d6990a99c311effcf1baf22fd844b4d4c16151e0380",
+  "precision": "FP32",
+  "full_benchmark": false,
+  "images": [
+    {
+      "image_id": "0021834",
+      "wh": [
+        500,
+        321
+      ],
+      "input_sha256": "06cdd11b89e8ac5aacf76e8e4a1c7ca8aca3ba050edc01a7fdf69a12c17d8016",
+      "rgb_source_sha256": "76a9f521d9171ebcfc3212c34b68677af062d1ff7648935d8e488c82f88cce27",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0021834.npz",
+      "artifact_sha256": "29978a1623fd213cd7566681d115a70ce8d0d33b3da9d34e62c7ea759499e929",
+      "native_to_original": "NATIVE_API_ORIGINAL_GRID_NO_ADDITIONAL_RESIZE",
+      "opportunities": [
+        {
+          "id": "0021834:YOLO:0",
+          "bbox": [
+            24.899173736572266,
+            8.211708068847656,
+            329.8865051269531,
+            319.2259216308594
+          ],
+          "score": 0.9319053292274475
+        },
+        {
+          "id": "0021834:YOLO:1",
+          "bbox": [
+            0.016224384307861328,
+            111.02743530273438,
+            106.0887680053711,
+            318.4573669433594
+          ],
+          "score": 0.930048406124115
+        },
+        {
+          "id": "0021834:YOLO:2",
+          "bbox": [
+            248.67190551757812,
+            100.50269317626953,
+            426.1182861328125,
+            318.5106201171875
+          ],
+          "score": 0.9201679229736328
+        },
+        {
+          "id": "0021834:YOLO:3",
+          "bbox": [
+            464.1573791503906,
+            170.73440551757812,
+            499.8282470703125,
+            320.2507629394531
+          ],
+          "score": 0.7679917216300964
+        },
+        {
+          "id": "0021834:YOLO:4",
+          "bbox": [
+            437.054931640625,
+            160.97470092773438,
+            494.3704528808594,
+            319.3240966796875
+          ],
+          "score": 0.7184015512466431
+        },
+        {
+          "id": "0021834:YOLO:5",
+          "bbox": [
+            389.2317199707031,
+            137.78143310546875,
+            445.3701477050781,
+            317.4312744140625
+          ],
+          "score": 0.5634095072746277
+        }
+      ]
+    },
+    {
+      "image_id": "0000930",
+      "wh": [
+        500,
+        346
+      ],
+      "input_sha256": "b9f344faa7f756b80e630753d42d98385d09bcf900dc1ce6739ed3f04263c7ad",
+      "rgb_source_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0000930.npz",
+      "artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b",
+      "native_to_original": "NATIVE_API_ORIGINAL_GRID_NO_ADDITIONAL_RESIZE",
+      "opportunities": [
+        {
+          "id": "0000930:YOLO:0",
+          "bbox": [
+            216.45481872558594,
+            8.307385444641113,
+            362.7947082519531,
+            343.2044982910156
+          ],
+          "score": 0.9230802655220032
+        },
+        {
+          "id": "0000930:YOLO:1",
+          "bbox": [
+            17.58049774169922,
+            34.624576568603516,
+            154.50234985351562,
+            336.1106872558594
+          ],
+          "score": 0.9203540086746216
+        }
+      ]
+    },
+    {
+      "image_id": "0001368",
+      "wh": [
+        500,
+        375
+      ],
+      "input_sha256": "0c9e3664e18f5dee0c0ea97b561b03dbda54d79419540004040a1403b9358fc9",
+      "rgb_source_sha256": "718b2b2af5a42e7f91d237a214a28a3dfc03f03183624b5796769c348a1a09ff",
+      "artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0001368.npz",
+      "artifact_sha256": "b78f10990a2ec1001dd6e3d082ec014e15618e7c886d75e5f1273dd04463eca8",
+      "native_to_original": "NATIVE_API_ORIGINAL_GRID_NO_ADDITIONAL_RESIZE",
+      "opportunities": [
+        {
+          "id": "0001368:YOLO:0",
+          "bbox": [
+            130.61643981933594,
+            32.05909729003906,
+            416.4374694824219,
+            375.0
+          ],
+          "score": 0.928556501865387
+        },
+        {
+          "id": "0001368:YOLO:1",
+          "bbox": [
+            386.3230285644531,
+            162.5190887451172,
+            499.8472595214844,
+            335.1993408203125
+          ],
+          "score": 0.8811381459236145
+        }
+      ]
+    }
+  ],
+  "checkpoint_loaded": true,
+  "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "torch": "2.14.0+cu130",
+  "cuda_runtime": "13.0",
+  "GPU": "Tesla T4",
+  "autocast": false,
+  "TF32": false,
+  "device_visibility": null,
+  "ultralytics": "8.4.160",
+  "settings": {
+    "checkpoint": "models/yolo26x-seg.pt",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 200,
+    "retina_masks": true
+  },
+  "end_utc": "2026-10-16T08:48:09.954817+00:00"
+}

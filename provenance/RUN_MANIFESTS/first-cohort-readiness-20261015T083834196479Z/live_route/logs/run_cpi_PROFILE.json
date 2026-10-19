@@ -1,0 +1,53 @@
+{
+  "script": "run_cpi.py",
+  "args": [],
+  "seed": 20261015,
+  "torch": "1.10.2+cu113",
+  "cuda_runtime": "11.3",
+  "gpu": "Tesla T4",
+  "driver": "580.178.04",
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "warmups": 0,
+  "rounds": 1,
+  "benchmark": false,
+  "worker_timeout_seconds": 900,
+  "retries": 0,
+  "batch": 1,
+  "concurrency": 1,
+  "process_device_peak": "N/A_NOT_SAMPLED",
+  "canonical_adapter": "NOT_TESTED_NATIVE_ONLY",
+  "internal_op_dtype": "NOT_EXHAUSTIVELY_OBSERVED",
+  "module_output_dtypes": [
+    "torch.float32"
+  ],
+  "model_loads": [
+    {
+      "module": "CausalParser",
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "strict_argument": true,
+      "seconds": 0.24071957101114094
+    },
+    {
+      "module": "CausalParser",
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "strict_argument": true,
+      "seconds": 0.21269351593218744
+    }
+  ],
+  "native_worker_sha256": "ebe169af0ff80f0fc13bbe867e99d916f24eee9cb3cbe7f0d52d8fb4c3677720",
+  "environment_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "worker_exit": "COMPLETED_CHECK_PER_MODEL_RUN",
+  "grad_enabled_observed": [
+    false
+  ],
+  "autocast_observed": [
+    false
+  ],
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "cudnn_benchmark": false,
+  "deterministic_algorithms": false,
+  "total_worker_seconds": 26.502869129180908
+}

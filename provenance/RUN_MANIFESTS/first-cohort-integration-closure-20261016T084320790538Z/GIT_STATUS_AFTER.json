@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".",
+    "is_repository": false,
+    "status": "",
+    "error": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  {
+    "path": "Human_Parsing_MHPv2_Study",
+    "is_repository": false,
+    "status": "",
+    "error": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  {
+    "path": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+    "is_repository": true,
+    "status": "?? YOLO_PARSING_SELECTION_PLAN_TH.md\n",
+    "error": ""
+  },
+  {
+    "path": "YOLO_Large_Seg_MOTS20_Benchmark",
+    "is_repository": true,
+    "status": "?? manifests/benchmark-20260929T0520Z_preflight.json\n?? metrics/benchmark-20260929T0520Z/candidate_counts.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.json\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-aggregates.csv\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.png\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.png\n?? outputs/plots/benchmark-20260929T0520Z/ap50_ap75.pdf\n?? outputs/plots/benchmark-20260929T0520Z/fps.pdf\n?? outputs/plots/benchmark-20260929T0520Z/inference_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/mask_map.pdf\n?? outputs/plots/benchmark-20260929T0520Z/matched_mask_quality.pdf\n?? outputs/plots/benchmark-20260929T0520Z/peak_vram.pdf\n?? outputs/plots/benchmark-20260929T0520Z/pipeline_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/provenance.json\n?? reports/benchmark-20260929T0520Z/SUMMARY.md\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_full_freeze.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_preflight.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/requirements.txt\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/frozen_pilot/visualize.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/report.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/validate.py\n?? reports/benchmark-20260929T0520Z/terminal_summary.txt\n?? requirements.txt\n?? src/benchmark.py\n?? src/benchmark_adapter.py\n?? src/frozen_pilot/\n?? src/refine_scatter_plots.py\n?? src/report.py\n?? src/report_clean_timing.py\n?? src/validate.py\n?? timing/benchmark-20260929T0520Z/clean_repetition/runs.json\n?? timing/benchmark-20260929T0520Z/round1-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/runs.json\n?? timing/benchmark-20260929T0520Z/summary.csv\n",
+    "error": ""
+  },
+  {
+    "path": "YOLO_Medium_Seg_MOTS20_Benchmark",
+    "is_repository": true,
+    "status": "",
+    "error": ""
+  },
+  {
+    "path": "YOLO_Nano_Seg_MOTS20_Benchmark",
+    "is_repository": true,
+    "status": "",
+    "error": ""
+  },
+  {
+    "path": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+    "is_repository": true,
+    "status": "",
+    "error": ""
+  },
+  {
+    "path": "YOLO_Small_Seg_MOTS20_Benchmark",
+    "is_repository": true,
+    "status": "",
+    "error": ""
+  }
+]

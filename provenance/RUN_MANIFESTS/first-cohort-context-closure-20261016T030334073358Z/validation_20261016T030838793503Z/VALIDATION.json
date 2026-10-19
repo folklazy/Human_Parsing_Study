@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-16T03:08:43.930910+00:00",
+  "suite_results": [
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_application_v2*.py"
+      ],
+      "exit_code": 0,
+      "tests": 107,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_application_v2ALL.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_mhpv2_stage0.py"
+      ],
+      "exit_code": 0,
+      "tests": 25,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_mhpv2_stage0.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_official_mhp_compat.py"
+      ],
+      "exit_code": 0,
+      "tests": 19,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_official_mhp_compat.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_dataset_reassessment.py"
+      ],
+      "exit_code": 0,
+      "tests": 7,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_dataset_reassessment.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_gt.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_ccihp_gt.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_quality.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/test_ccihp_quality.py.log"
+    }
+  ],
+  "tests": 174,
+  "protected_hashes_checked": 126,
+  "protected_changed": [],
+  "original_archive_stat_changes": [],
+  "frozen_YOLO_unchanged": true,
+  "benchmark_guard": "PASS_REJECTED",
+  "real_scoring_context_accepted": false,
+  "new_GPU_inference": false,
+  "cached_scoring": "NOT_IMPLEMENTED_DISABLED",
+  "source_snapshot": "provenance/RUN_MANIFESTS/first-cohort-context-closure-20261016T030334073358Z/validation_20261016T030838793503Z/source_snapshot",
+  "source_revision_sha256": "5f0117ebc1e0cf1008dd5df4f46c302d978fe916e4b4c38096b8f0440dd2c80a",
+  "original_canonical_packet_fingerprints_unchanged": [
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_R50_CIHP",
+    "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/canonical_v5/CPI_ConvNeXtB_CIHP"
+  ],
+  "full_benchmark_started": false,
+  "scientific_freeze": false,
+  "fixtures": "TWO_SYSTEMS_TWO_IMAGES_SYNTHETIC_TEMP_ACCEPTANCE_ONLY"
+}

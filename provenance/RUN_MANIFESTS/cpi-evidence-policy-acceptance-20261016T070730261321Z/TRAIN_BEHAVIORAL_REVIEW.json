@@ -1,0 +1,55 @@
+{
+  "status": "COMPLETED",
+  "reviewer": "ASSISTANT_VISUAL_INSPECTION_NOT_INDEPENDENT_HUMAN_ANNOTATION_QUALITY_REVIEW",
+  "timestamp_utc": "2026-10-16T07:11:38.508654+00:00",
+  "manifest": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/MANIFEST.json",
+  "manifest_sha256": "fe12ab4d80f27746f56a58bb5fe16b8881adca55d460f940ae56e1ca9cfd7000",
+  "selection": "Three existing predeclared TRAIN IDs; no search for high accuracy",
+  "blocking_mapping_contradiction_found": false,
+  "all_classes_correct_required": false,
+  "classes_seen_are_not_a_mapping_acceptance_threshold": true,
+  "conclusion": "Observed behavior is consistent with the proposed standard CIHP interpretation in these views; no historical per-channel proof or all-class certification",
+  "unobserved_target_groups": [
+    "Exposed_legs",
+    "Footwear"
+  ],
+  "limitations": [
+    "Three TRAIN examples are diagnostic, not representative",
+    "Unobserved channels remain supported by source/release evidence, not visual certification",
+    "Native 20-class performance and full CCIHP quality are not scored",
+    "Display-only compositing can hide overlapping native planes; lossless planes remain unchanged"
+  ],
+  "images": [
+    {
+      "image_id": "0021834",
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0021834_saved_channels.png",
+      "visualization_sha256": "4c4a416463ec817de36813bd150dc4f69b262c635b937f5437fac42b5dd9357f",
+      "observations": [
+        "Both models place ID13 on the foreground faces, ID10 on exposed neck/chest regions, ID2 on hair, ID7 on the suit and ID5 on the shirt.",
+        "Boundary differences are visible; this is not pixel-equivalence or accuracy certification."
+      ]
+    },
+    {
+      "image_id": "0000930",
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0000930_saved_channels.png",
+      "visualization_sha256": "8761283413821f7d052813bb0022fb6e0e8281ea3115bce1877bf10ff1462ddf",
+      "observations": [
+        "Both models use ID6 over long dresses, ID13 on masked face regions, ID1 on hats and ID3 on gloves.",
+        "CCIHP GT6 marks face masks while CIHP prediction6 marks dresses, illustrating the intended cross-taxonomy distinction, not an ID permutation.",
+        "Some accessory/garment pixels are imprecise; ordinary prediction errors do not fail a channel-mapping sanity check."
+      ]
+    },
+    {
+      "image_id": "0001368",
+      "visualization": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_train_review_v2/0001368_saved_channels.png",
+      "visualization_sha256": "616390e7864ae1d4b02f1083979726bc535e67ee920a799aa24608b66d8a29f9",
+      "observations": [
+        "Both models place ID10 on the exposed abdomen and ID13 on faces; IDs14/15 appear over exposed forearm/hand regions while ID5 covers the upper garment.",
+        "Background-person garment boundaries/classes differ from GT and across predictions; no coarse systematic channel/geometry contradiction is apparent."
+      ]
+    }
+  ],
+  "new_inference": false,
+  "metrics_computed": false,
+  "GT_reconstructed_again": false
+}

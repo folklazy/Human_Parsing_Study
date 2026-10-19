@@ -1,0 +1,56 @@
+schema_version: '1.0'
+status: DRAFT_REQUIRES_REVIEW
+primary_dataset_promoted: false
+native_cihp_equivalence: false
+native_ccihp:
+  source_definition: included_CCIHP_README_release
+  background_id: 0
+  documented_foreground_ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+  observed_undocumented_ids: [22]
+  ignore_id: NOT_VERIFIED
+  unknown_to_background: PROHIBITED
+  human_category_zero_policy: PENDING_TRAIN_REVIEW
+  human_ids_are_image_local: true
+  instance_ids_are_attribute_instances: true
+cohorts:
+  native_known_ccihp:
+    purpose: Dataset_specific_compatible_prediction_diagnostics
+    eligible_checkpoints: NOT_ESTABLISHED
+    full_native_score_ready: false
+    unknown_policy: DRAFT_SHARED_EXPLICIT_VOID_WITH_SUPPORT_DISCLOSURE
+  common_body_clothing:
+    purpose: Comparable_person_level_body_clothing_quality
+    candidate_concepts:
+      - exposed_face
+      - hair
+      - exposed_torso_skin
+      - exposed_arms
+      - exposed_legs
+      - coarse_garments_if_semantically_representable
+      - footwear
+    numeric_mapping_frozen: false
+    candidate_concepts_are_not_universal_approved_classes: true
+    left_right_detail: Only_in_comparable_checkpoint_subsets
+    whole_dress_to_upper_lower_using_GT_geometry: PROHIBITED
+    unsupported_GT_to_background: PROHIBITED
+    shared_GT_projection_and_pixel_denominator: REQUIRED
+    retained_pixel_and_person_support: REQUIRED_BEFORE_EVALUATION
+  extended_accessories:
+    purpose: Richer_eligible_subset_diagnostics
+    universal_leaderboard: false
+    candidate_concepts: [hat, glove, eyewear, scarf, face_mask, bag]
+    heterogeneous_others_class: NOT_UNIVERSALLY_EQUIVALENT
+tracks:
+  oracle_crop: Compatible_native_crop_models_only
+  yolo_conditioned_crop: Frozen_YOLO26x_geometry_with_explicit_target_ownership
+  native_full_frame: Preserve_internal_detection_and_instance_predictions
+  yolo_plus_native_full_frame_association: FUTURE_SEPARATE_SYSTEM_CONFIGURATION
+evaluation:
+  fixed_thresholds: NOT_FROZEN
+  matching: DRAFT_DETERMINISTIC_ONE_TO_ONE_MASK_IOU
+  class_zero_union: UNDEFINED_NOT_PERFECT
+  zero_known_foreground_person_policy: PENDING_REVIEW
+  conditional_and_coverage_aware_scores: SEPARATE
+  unmatched_prediction_penalties: REPORTED_SEPARATELY
+  source_and_overlap_controlled_populations: SEPARATE
+  label_support_is_not_annotation_correctness: true

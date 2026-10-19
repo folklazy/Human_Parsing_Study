@@ -1,0 +1,369 @@
+FILE configs/_base_/datasets/cihp.py SHA256 e02295542847166b59455335bb6cad4712bb23a5d63ba675000439631668fdf5
+45: 
+46: data = dict(
+47:     samples_per_gpu=2,
+48:     workers_per_gpu=2,
+49:     train=dict(
+50:         type=dataset_type,
+51:         ann_file=data_root + 'annotations/CIHP_train.json',
+52:         img_prefix=data_root + 'train_img/',
+53:         seg_prefix=data_root + 'train_seg/',
+54:         parsing_prefix=data_root + 'train_parsing/',
+55:         pipeline=train_pipeline,
+56:         ),
+57:     val=dict(
+58:         type=dataset_type,
+59:         ann_file=data_root + 'annotations/CIHP_val.json',
+60:         img_prefix=data_root + 'val_img/',
+61:         seg_prefix=data_root + 'val_seg/',
+62:         parsing_prefix=data_root + 'val_parsing/',
+63:         pipeline=test_pipeline,
+64:         ),
+65:     test=dict(
+66:         type=dataset_type,
+67:         ann_file=data_root + 'annotations/CIHP_val.json',
+68:         img_prefix=data_root + 'val_img/',
+69:         seg_prefix=data_root + 'val_seg/',
+70:         parsing_prefix=data_root + 'val_parsing/',
+71:         pipeline=test_pipeline,
+
+FILE mmdet/datasets/cihp.py SHA256 5cd76a1b9d0567a51368bf771a529eb31f9e8a16ddc2e4c6ab91733fda5970ee
+19: 
+20:         # add parsing prefix
+21:         self.parsing_prefix = parsing_prefix
+22:         if self.data_root is not None:
+23:             if not (self.parsing_prefix is None or osp.isabs(self.parsing_prefix)):
+24:                 self.parsing_prefix = osp.join(self.data_root, self.parsing_prefix)
+25:         
+26:         # add num_parsing class
+27:         self.parsing_classes = self.coco.cats[1]['parsing']
+28:     
+29:     def pre_pipeline(self, results):
+30:         """Prepare results dict for pipeline."""
+31:         results['img_prefix'] = self.img_prefix
+32:         results['seg_prefix'] = self.seg_prefix
+33:         results['parsing_prefix'] = self.parsing_prefix
+34:         results['proposal_file'] = self.proposal_file
+35:         results['parsing_classes'] = self.parsing_classes
+36:         results['bbox_fields'] = []
+
+FILE mmdet/datasets/pipelines/loading.py SHA256 c5931d3327bc58736a9513310f393c251ae07c6bb6c060cb83c717cbe3dace4b
+619:     def _load_parsing(self, results):
+620:         if self.file_client is None:
+621:             self.file_client = mmcv.FileClient(**self.file_client_args)
+622: 
+623:         parsing_maps = []
+624:         for suffix in results['ann_info']['parsing_suffixs']:
+625:             filename = osp.join(results['parsing_prefix'], suffix)
+626:             img_bytes = self.file_client.get(filename)
+627:             parsing_maps.append(
+628:                 mmcv.imfrombytes(img_bytes, flag='unchanged').squeeze())
+629: 
+630:         results['gt_parsings'] = np.array(parsing_maps, dtype=np.uint8)
+631:         results['parse_fields'].append('gt_parsings')
+632:         return results
+
+FILE mmdet/datasets/pipelines/loading.py SHA256 c5931d3327bc58736a9513310f393c251ae07c6bb6c060cb83c717cbe3dace4b
+905: class LoadParseAnnotations:
+906:     def __init__(self, num_parse_classes=20) -> None:
+907:         self.num_parse_classes = num_parse_classes
+908: 
+909:     def __call__(self, results):
+910:         gt_parsings = results['gt_parsings']
+911:         num_instances = gt_parsings.shape[0]
+912:         part_labels = np.zeros((num_instances, self.num_parse_classes), dtype=np.int64)
+913:         part_points = np.zeros((num_instances, self.num_parse_classes, 2), dtype=np.float32)
+914: 
+915:         for i, parsing in enumerate(gt_parsings):
+916:             for j in range(1, self.num_parse_classes):
+917:                 num_gt_parsing_labels = (parsing.reshape(-1) == j).sum(0)
+918:                 part_labels[i, j] = (num_gt_parsing_labels > 0).astype(np.int64)
+919: 
+920:                 if num_gt_parsing_labels > 0:
+921:                     part_map = (parsing == j)[None]
+922:                     x_any = part_map.any(axis=1)
+923:                     y_any = part_map.any(axis=2)
+924:                     x = np.where(x_any[0, :])[0]
+925:                     y = np.where(y_any[0, :])[0]
+926:                     if len(x) > 0 and len(y) > 0:
+927:                         part_points[i, j, :] = np.array([(x[0] + x[-1]+1) / 2, (y[0] + y[-1]+1) / 2],
+928:                                                 dtype=np.float32)
+929: 
+930:         results['gt_parse_labels'] = part_labels[:, 1:]
+931:         results['gt_parse_points'] = part_points[:, 1:, :]
+932:         return results
+
+FILE mmdet/models/dense_heads/causal_parser_head.py SHA256 85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573
+449:                             parsing_targets_list,
+450:                             mask_parts,
+451:                             img_metas):        
+452:         # parsing targets
+453:         start = int(self.parse_logit_stride // 2)
+454:         stride = self.parse_logit_stride
+455:         img_h, img_w = img_metas[0]['batch_input_shape']
+456:         parsing_targets = []
+457:         for i, parsing in enumerate(parsing_targets_list):
+458:             h, w = parsing.size()[1:]
+459:             parsing = F.pad(parsing, (0, img_w - w, 0, img_h - h), "constant", 0)
+460:             parsing = parsing[:, start::stride, start::stride]
+461:             parsing_targets.append(parsing.to(cnt_pred.device))
+462:         parsing_targets = torch.cat(parsing_targets, dim=0).long()
+463: 
+464:         parsing_cnt_masks = []
+465:         for parsing in parsing_targets:
+466:             parsing_mask = []
+467:             for class_id in range(self.num_parse_classes):
+468:                 parsing_mask.append(parsing == class_id)
+469:             parsing_mask = torch.stack(parsing_mask, dim=0)
+470:             parsing_cnt_masks.append(parsing_mask)
+471:         parsing_cnt_masks = torch.stack(parsing_cnt_masks, dim=0)
+472: 
+473:         parsing_cxt_masks = []
+474:         for parsing_target in parsing_cnt_masks:
+475:             inst_mask = ~parsing_target[0]
+476:             parsing_cxt_mask = []
+477:             for class_id in range(1, self.num_parse_classes):
+478:                 parsing_cxt_mask.append(
+479:                     (inst_mask.float() - parsing_target[class_id].float()).bool())
+480:             parsing_cxt_mask = torch.stack(parsing_cxt_mask, dim=0)
+481:             parsing_cxt_masks.append(parsing_cxt_mask)
+
+FILE mmdet/models/dense_heads/causal_parser_head.py SHA256 85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573
+427: 
+428:         inst_part_feats = inst_feats[:, None, ...].repeat(1, C, 1, 1, 1)
+429:         inst_part_feats = inst_part_feats.reshape(1, -1, H, W)
+430:         cnt_feats = dynamic_forward(
+431:             inst_part_feats, cnt_weights, cnt_bias, total_pos_num * C, extra_relu=True)
+432:         cxt_feats = dynamic_forward(
+433:             inst_part_feats, cxt_weights, cxt_bias, total_pos_num * C, extra_relu=True)
+434:         cnt_feats = cnt_feats.view(N, C, D, H, W)
+435:         cxt_feats = cxt_feats.view(N, C, D, H, W)
+436: 
+437:         cnt_preds = self.cnt_part_parser(cnt_feats.view(N, -1, H, W))
+438:         cxt_preds = self.cxt_part_parser(cxt_feats.view(N, -1, H, W))
+439:         cnt_preds = torch.cat([inst_preds, cnt_preds], dim=1)
+440:         cxt_preds = torch.cat([inst_preds, cxt_preds], dim=1)
+441: 
+442:         return cnt_preds, cxt_preds, cnt_feats, cxt_feats
+443: 
+444:     def loss_causal_forward(self,
+445:                             cnt_pred,
+
+FILE mmdet/models/dense_heads/causal_parser_head.py SHA256 85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573
+628:             # parsing forward
+629:             part_labels = det_part_scores > 0.4
+630:             cnt_preds, cxt_preds, _, _ = self.casual_head_forward([det_params], parse_feat, part_labels, det_center)
+631:             cnt_preds = cnt_preds.sigmoid()
+632:             cxt_preds = cxt_preds.sigmoid()
+633:             parsing_logits = cnt_preds * 0.5 + cxt_preds * 0.5
+634:             
+635:             bg_scores = det_part_scores.new_ones((det_part_scores.shape[0], 1))
+636:             det_part_scores = torch.cat((bg_scores, det_part_scores), dim=-1)
+637:             parsing_logits = torch.einsum("qc,qchw->qchw", det_part_scores, parsing_logits)
+638: 
+639:             if rescale:
+640:                 parsing_logits = aligned_bilinear(parsing_logits, self.parse_logit_stride)
+641:                 parsing_logits = parsing_logits[:, :, :img_shape[0], :img_shape[1]]
+642:                 if ori_shape[0] > 2500 or ori_shape[1] > 2500:
+643:                     parsing_logits = parsing_logits.cpu()
+644:                 parsing_logits = F.interpolate(
+645:                     parsing_logits,
+646:                     size=(ori_shape[0], ori_shape[1]),
+647:                     mode='bilinear',
+648:                     align_corners=True)
+649:             parsing_maps = parsing_logits.argmax(dim=1)
+650:             parsing_maps = parsing_maps.cpu().numpy()
+651: 
+652:             # save results
+653:             filename = img_meta['ori_filename']
+654:             for i in range(det_bboxes.shape[0]):
+655:                 parsing_name = filename.split('.jpg')[0] + '-' + str(i) + '.png'
+656:                 cv2.imwrite(os.path.join(save_parse_path, parsing_name), parsing_maps[i])
+
+FILE utils/eval.py SHA256 3353749b11cb03468439bfa9725deec0e884c3fc1c256e03d8bf58df1e72e4b3
+223: def get_parsing(ann_fn):
+224:     with open(ann_fn, 'r') as f:
+225:         _json = json.load(f)
+226:     parsing_name = _json['categories'][0]['parsing']
+227: 
+228:     return parsing_name
+229: 
+230: 
+231: def evaluate_parsing(all_parsings, all_scores, eval_ap, score_thresh, num_parsing, im_dir, ann_fn, output_folder):
+232:     print('Evaluating parsing')
+233:     _iou, _miou, mean_acc, pixel_acc = parsing_iou(output_folder, im_dir, num_parsing)
+234: 
+235:     parsing_result = {'mIoU': _miou, 'pixel_acc': pixel_acc, 'mean_acc': mean_acc}
+236: 
+237:     parsing_name = get_parsing(ann_fn)
+238:     print('IoU for each category:')
+239:     assert len(parsing_name) == len(_iou), '{} VS {}'.format(str(len(parsing_name)), str(len(_iou)))
+240: 
+241:     for i, iou in enumerate(_iou):
+242:         print(' {:<30}:  {:.2f}'.format(parsing_name[i], 100 * iou))
+
+FILE configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py SHA256 62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575
+1: _base_ = [
+2:     '../_base_/datasets/cihp.py',
+3:     '../_base_/models/deformable_detr_parser_r50.py',
+4:     '../_base_/schedules/schedule_cihp_3x.py',
+5:     '../_base_/default_runtime.py'
+6: ]
+7: 
+8: img_norm_cfg = dict(
+9:     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+10: flip_map = ([14, 15], [16, 17], [18, 19])
+11: train_pipeline = [
+12:     dict(type='LoadFourierImageFromFile',
+13:          aug_type=['sketch', 'anime']),
+14:     dict(type='LoadAnnotations',
+15:          with_bbox=True,
+16:          with_parse=True,
+17:          with_seg=True),
+18:     dict(type='Resize',
+19:          img_scale=[(1400, 512), (1400, 640), (1400, 704),
+20:                     (1400, 768), (1400, 800), (1400, 864)],
+21:          multiscale_mode='value',
+22:          keep_ratio=True),
+23:     dict(type='RandomFlip', flip_ratio=0.5, flip_map=flip_map),
+24:     dict(type='LoadParseAnnotations', num_parse_classes=20),
+25:     dict(type='Normalize', **img_norm_cfg),
+26:     dict(type='Pad', size_divisor=32),
+27:     dict(type='DefaultFormatBundle'),
+28:     dict(type='Collect', keys=['img',
+29:                                'aug_img',
+30:                                'gt_bboxes',
+31:                                'gt_labels',
+32:                                'gt_parsings',
+33:                                'gt_parse_labels',
+34:                                'gt_semantic_seg']),
+35: ]
+36: 
+37: data = dict(
+38:     samples_per_gpu=1,
+39:     workers_per_gpu=1,
+40:     train=dict(pipeline=train_pipeline))
+41: 
+42: model=dict(
+43:     type='CausalParser',
+44:     backbone=dict(
+45:         out_indices=(1, 2, 3)),
+46:     neck=dict(
+47:         type='ChannelMapper',
+48:         in_channels=[512, 1024, 2048],
+49:         kernel_size=1,
+50:         out_channels=256,
+51:         act_cfg=None,
+52:         norm_cfg=dict(type='GN', num_groups=32),
+53:         num_outs=4),
+54:     bbox_head=dict(
+55:         type='CausalParserHead',
+56:         use_aug=True,
+57:         parse_logit_stride=8,
+58:         parse_feat_stride=8,
+59:         sem_feat_levels=[0, 1, 2],
+60:         parse_start_level=0
+61:     ),
+62:     test_cfg=dict(
+63:         score_thr=0.01,
+64:         save_root='work_dirs/causal_parser_r50_inter_8_135k_cihp'
+65:     ))
+66: 
+67: evaluation = dict(interval=100, metric='bbox')
+
+FILE configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py SHA256 3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117
+1: _base_ = [
+2:     '../_base_/datasets/cihp.py',
+3:     '../_base_/models/deformable_detr_parser_r50.py',
+4:     '../_base_/schedules/schedule_cihp_3x.py',
+5:     '../_base_/default_runtime.py'
+6: ]
+7: 
+8: img_norm_cfg = dict(
+9:     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+10: flip_map = ([14, 15], [16, 17], [18, 19])
+11: train_pipeline = [
+12:     dict(type='LoadFourierImageFromFile',
+13:          aug_type=['sketch', 'anime']),
+14:     dict(type='LoadAnnotations',
+15:          with_bbox=True,
+16:          with_parse=True,
+17:          with_seg=True),
+18:     dict(type='Resize',
+19:          img_scale=[(1333, 512), (1333, 640), (1333, 704), (1333, 768)],
+20:          multiscale_mode='value',
+21:          keep_ratio=True),
+22:     dict(type='RandomFlip', flip_ratio=0.5, flip_map=flip_map),
+23:     dict(type='LoadParseAnnotations', num_parse_classes=20),
+24:     dict(type='Normalize', **img_norm_cfg),
+25:     dict(type='Pad', size_divisor=32),
+26:     dict(type='DefaultFormatBundle'),
+27:     dict(type='Collect', keys=['img',
+28:                                'aug_img',
+29:                                'gt_bboxes',
+30:                                'gt_labels',
+31:                                'gt_parsings',
+32:                                'gt_parse_labels',
+33:                                'gt_semantic_seg']),
+34: ]
+35: 
+36: data = dict(
+37:     samples_per_gpu=1,
+38:     workers_per_gpu=1,
+39:     train=dict(pipeline=train_pipeline))
+40: 
+41: custom_imports = dict(imports=['mmcls.models'], allow_failed_imports=False)
+42: checkpoint_file = 'https://download.openmmlab.com/mmclassification/v0/convnext/convnext-base_3rdparty_in21k_20220124-13b83eec.pth'  # noqa
+43: model=dict(
+44:     type='CausalParser',
+45:     backbone=dict(
+46:         _delete_=True,
+47:         type='mmcls.ConvNeXt',
+48:         arch='base',
+49:         out_indices=[1, 2, 3],
+50:         drop_path_rate=0.6,
+51:         layer_scale_init_value=1.0,
+52:         gap_before_final_norm=False,
+53:         init_cfg=dict(
+54:             type='Pretrained', checkpoint=checkpoint_file,
+55:             prefix='backbone.')),
+56:     neck=dict(
+57:         type='ChannelMapper',
+58:         in_channels=[256, 512, 1024],
+59:         kernel_size=1,
+60:         out_channels=256,
+61:         act_cfg=None,
+62:         norm_cfg=dict(type='GN', num_groups=32),
+63:         num_outs=4),
+64:     bbox_head=dict(
+65:         type='CausalParserHead',
+66:         use_aug=True,
+67:         parse_logit_stride=8,
+68:         parse_feat_stride=8,
+69:         sem_feat_levels=[0, 1, 2],
+70:         parse_start_level=0,
+71:         parse_head_channels=24
+72:     ),
+73:     test_cfg=dict(
+74:         score_thr=0.05,
+75:         save_root='work_dirs/causal_parser_convnext_b_inter_8_135k_cihp'
+76:     ))
+77: 
+78: evaluation = dict(interval=100, metric='bbox')
+79: 
+80: # optimizer
+81: optimizer = dict(
+82:     _delete_=True,
+83:     constructor='LearningRateDecayOptimizerConstructor',
+84:     type='AdamW',
+85:     lr=2e-4,
+86:     weight_decay=0.0001,
+87:     paramwise_cfg=dict(
+88:         custom_keys={
+89:             'backbone': dict(lr_mult=0.1),
+90:             'sampling_offsets': dict(lr_mult=0.1),
+91:             'reference_points': dict(lr_mult=0.1),
+92:         },
+93:         decay_rate=0.8,
+94:         decay_type='layer_wise',
+95:         num_layers=12))

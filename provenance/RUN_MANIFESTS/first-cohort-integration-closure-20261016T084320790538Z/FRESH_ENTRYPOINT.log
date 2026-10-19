@@ -1,0 +1,4 @@
+[YOLO26X_FROZEN] fresh TRAIN: PASS
+[CPI_R50_CIHP] fresh TRAIN: PASS
+[CPI_ConvNeXtB_CIHP] fresh TRAIN: PASS
+{"status": "PASS", "TRAIN_jobs": 6, "new_inference": true, "scoring_integration": true, "full_benchmark": false}

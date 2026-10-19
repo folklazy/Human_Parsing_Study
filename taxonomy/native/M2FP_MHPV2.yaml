@@ -1,0 +1,65 @@
+status: SOURCE_VERIFIED_CHECKPOINT_VALIDATION_SEPARATE
+labels:
+  0: Background
+  1: Cap/Hat
+  2: Helmet
+  3: Face
+  4: Hair
+  5: Left-arm
+  6: Right-arm
+  7: Left-hand
+  8: Right-hand
+  9: Protector
+  10: Bikini/bra
+  11: Jacket/Windbreaker/Hoodie
+  12: T-shirt
+  13: Polo-shirt
+  14: Sweater
+  15: Singlet
+  16: Torso-skin
+  17: Pants
+  18: Shorts/Swim-shorts
+  19: Skirt
+  20: Stockings
+  21: Socks
+  22: Left-boot
+  23: Right-boot
+  24: Left-shoe
+  25: Right-shoe
+  26: Left-highheel
+  27: Right-highheel
+  28: Left-sandal
+  29: Right-sandal
+  30: Left-leg
+  31: Right-leg
+  32: Left-foot
+  33: Right-foot
+  34: Coat
+  35: Dress
+  36: Robe
+  37: Jumpsuits
+  38: Other-full-body-clothes
+  39: Headwear
+  40: Backpack
+  41: Ball
+  42: Bats
+  43: Belt
+  44: Bottle
+  45: Carrybag
+  46: Cases
+  47: Sunglasses
+  48: Eyewear
+  49: Gloves
+  50: Scarf
+  51: Umbrella
+  52: Wallet/Purse
+  53: Watch
+  54: Wristband
+  55: Tie
+  56: Other-accessaries
+  57: Other-upper-body-clothes
+  58: Other-lower-body-clothes
+  59: Human
+source_workspace_relative: third_party/human_parsing/M2FP/m2fp/data/datasets/register_mhpv2_parsing.py
+source_sha256: bd8c1474531707ea31a43e50e650cf51b7a0175cf95869983f4dbe5d9314e27a
+auxiliary_human_id: 59

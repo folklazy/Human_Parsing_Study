@@ -1,0 +1,13 @@
+test_empty_human_map (test_ccihp_gt.CCIHPGTTests) ... ok
+test_human_without_semantic_is_preserved (test_ccihp_gt.CCIHPGTTests) ... ok
+test_invalid_dimensions (test_ccihp_gt.CCIHPGTTests) ... ok
+test_invalid_float_or_negative_ids (test_ccihp_gt.CCIHPGTTests) ... ok
+test_overlapping_planes_not_flattened (test_ccihp_gt.CCIHPGTTests) ... ok
+test_two_people_and_unknown_semantics (test_ccihp_gt.CCIHPGTTests) ... ok
+test_unassigned_foreground_is_preserved (test_ccihp_gt.CCIHPGTTests) ... ok
+test_unknown_255_not_silently_ignored (test_ccihp_gt.CCIHPGTTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.042s
+
+OK

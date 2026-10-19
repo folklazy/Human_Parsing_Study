@@ -1,0 +1,529 @@
+{
+  "status": "DRAFT_NOT_AN_EXCLUSION_POLICY",
+  "scoring_eligibility_frozen": false,
+  "native_known_foreground_support": {
+    "Training": {
+      "raw_Human_IDs": 93292,
+      "no_known_foreground_IDs": 33,
+      "has_known_foreground_IDs": 93259
+    },
+    "Validation": {
+      "raw_Human_IDs": 17548,
+      "no_known_foreground_IDs": 9,
+      "has_known_foreground_IDs": 17539
+    }
+  },
+  "flagged_persons": [
+    {
+      "split": "Training",
+      "image_id": "0000287",
+      "person_id": 3,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0001541",
+      "person_id": 10,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002016",
+      "person_id": 5,
+      "area": 6,
+      "category_support": {
+        "22": 6
+      },
+      "background_pixels": 0,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 6
+    },
+    {
+      "split": "Training",
+      "image_id": "0002304",
+      "person_id": 5,
+      "area": 3,
+      "category_support": {
+        "0": 3
+      },
+      "background_pixels": 3,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002633",
+      "person_id": 3,
+      "area": 4,
+      "category_support": {
+        "0": 2,
+        "22": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 2
+    },
+    {
+      "split": "Training",
+      "image_id": "0002767",
+      "person_id": 3,
+      "area": 4,
+      "category_support": {
+        "0": 4
+      },
+      "background_pixels": 4,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0002806",
+      "person_id": 6,
+      "area": 4,
+      "category_support": {
+        "0": 2,
+        "22": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 2
+    },
+    {
+      "split": "Training",
+      "image_id": "0005419",
+      "person_id": 3,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0005843",
+      "person_id": 11,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0006580",
+      "person_id": 6,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007574",
+      "person_id": 4,
+      "area": 4,
+      "category_support": {
+        "0": 4
+      },
+      "background_pixels": 4,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007662",
+      "person_id": 6,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0007990",
+      "person_id": 12,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0009257",
+      "person_id": 3,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0009387",
+      "person_id": 4,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0010194",
+      "person_id": 9,
+      "area": 3,
+      "category_support": {
+        "0": 3
+      },
+      "background_pixels": 3,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0010286",
+      "person_id": 6,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0011022",
+      "person_id": 6,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0011069",
+      "person_id": 4,
+      "area": 5,
+      "category_support": {
+        "0": 5
+      },
+      "background_pixels": 5,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013481",
+      "person_id": 4,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013790",
+      "person_id": 9,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0013928",
+      "person_id": 5,
+      "area": 3,
+      "category_support": {
+        "0": 3
+      },
+      "background_pixels": 3,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0014200",
+      "person_id": 4,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0014422",
+      "person_id": 1,
+      "area": 91332,
+      "category_support": {
+        "0": 91332
+      },
+      "background_pixels": 91332,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0016732",
+      "person_id": 3,
+      "area": 3,
+      "category_support": {
+        "0": 1,
+        "22": 2
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 2
+    },
+    {
+      "split": "Training",
+      "image_id": "0016979",
+      "person_id": 6,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0017411",
+      "person_id": 12,
+      "area": 5,
+      "category_support": {
+        "0": 5
+      },
+      "background_pixels": 5,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0017960",
+      "person_id": 5,
+      "area": 3,
+      "category_support": {
+        "22": 3
+      },
+      "background_pixels": 0,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 3
+    },
+    {
+      "split": "Training",
+      "image_id": "0019867",
+      "person_id": 3,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0020518",
+      "person_id": 4,
+      "area": 4,
+      "category_support": {
+        "0": 2,
+        "22": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 2
+    },
+    {
+      "split": "Training",
+      "image_id": "0029554",
+      "person_id": 6,
+      "area": 5,
+      "category_support": {
+        "0": 5
+      },
+      "background_pixels": 5,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0031661",
+      "person_id": 6,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Training",
+      "image_id": "0033189",
+      "person_id": 11,
+      "area": 3,
+      "category_support": {
+        "0": 3
+      },
+      "background_pixels": 3,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0001104",
+      "person_id": 8,
+      "area": 8,
+      "category_support": {
+        "0": 8
+      },
+      "background_pixels": 8,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0004396",
+      "person_id": 9,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0007120",
+      "person_id": 4,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0007669",
+      "person_id": 8,
+      "area": 4,
+      "category_support": {
+        "0": 2,
+        "22": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 2
+    },
+    {
+      "split": "Validation",
+      "image_id": "0013028",
+      "person_id": 11,
+      "area": 2,
+      "category_support": {
+        "0": 2
+      },
+      "background_pixels": 2,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0018591",
+      "person_id": 6,
+      "area": 5,
+      "category_support": {
+        "0": 5
+      },
+      "background_pixels": 5,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0019768",
+      "person_id": 3,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0020795",
+      "person_id": 5,
+      "area": 1,
+      "category_support": {
+        "0": 1
+      },
+      "background_pixels": 1,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    },
+    {
+      "split": "Validation",
+      "image_id": "0038428",
+      "person_id": 6,
+      "area": 3,
+      "category_support": {
+        "0": 3
+      },
+      "background_pixels": 3,
+      "known_foreground_pixels": 0,
+      "unknown_pixels": 0
+    }
+  ],
+  "unsupported_COMMON_HP_classes_not_yet_projected": true,
+  "source_IDs_removed": false
+}

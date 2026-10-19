@@ -1,0 +1,101 @@
+{
+  "run_id": "stage0e-ccihp-native-20261012T045912Z",
+  "timestamp_utc": "2026-10-12T05:20:16.547852+00:00",
+  "record_validation": "PASS",
+  "checks": {
+    "actual_CCIHP_present": true,
+    "archive_SHA_identity_recorded": true,
+    "full_crc_and_member_inventory_recorded": true,
+    "all_209688_regular_member_crc_pass": true,
+    "archive_paths_safe_and_original_stat_unchanged": true,
+    "split_component_counts_pairing": true,
+    "both_splits_match_datasetninja": true,
+    "bounded_sample_30_not_full_quality": true,
+    "ninety_source_pngs_strict_decoded": true,
+    "source_person_total_96_sample_only": true,
+    "840_part_instances_one_owner_one_category": true,
+    "cross_source_object_counts_independently_summed": true,
+    "semantic_numeric_deltas_verified": true,
+    "unknown22_retained_not_repaired": true,
+    "human_category_gap_not_hidden": true,
+    "native_demo_scope_five_semantic_only": true,
+    "all_30_native_CCIHP_source_roundtrips": true,
+    "lossless_three_GT_exports_hashes": true,
+    "eight_GT_unit_tests_executed": true,
+    "three_GTs_visual_artifacts_present": true,
+    "native_vs_custom_evaluation_separated": true,
+    "no_fake_independent_CCIHP_RGB_check": true,
+    "native_class_inventory_and_unknown22_covered": true,
+    "taxonomy_not_frozen_or_falsely_equivalent": true,
+    "source_LICENSE_inspected_scope_separate": true,
+    "prior_scientific_records_unchanged": true,
+    "old_reports_archived_with_before_after_hashes": true,
+    "state_original_scientific_and_paused_nodes_preserved": true,
+    "no_benchmark_primary_promotion_or_scope_overreach": true,
+    "six_YOLO_repo_git_states_preserved": true,
+    "active_document_visual_links_resolve": true,
+    "initial_failures_preserved": true
+  },
+  "checks_passed": 32,
+  "checks_total": 32,
+  "missing_links": [],
+  "native_CIHP_equivalence": "BLOCKED",
+  "custom_CCIHP_benchmark": "CONDITIONAL_NOT_STARTED",
+  "full_quality_audit": "NOT_STARTED",
+  "git_after": {
+    "YOLO_Instance_Segmentation_MOTS20_Scaling_Study": {
+      "head": "5551593459646fe42494958192e5410805ab4b48",
+      "status": "?? YOLO_PARSING_SELECTION_PLAN_TH.md",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study.git (push)"
+    },
+    "YOLO_Large_Seg_MOTS20_Benchmark": {
+      "head": "172e21b9f2996bae74fb591cfdd1740e6e92dd46",
+      "status": "?? manifests/benchmark-20260929T0520Z_preflight.json\n?? metrics/benchmark-20260929T0520Z/candidate_counts.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.csv\n?? metrics/benchmark-20260929T0520Z/protocol_consistency.json\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo11x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolo26x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov8x-seg.pt-aggregates.csv\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-ALL-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-02-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-05-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-09-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-MOTS20-11-ap.txt\n?? metrics/benchmark-20260929T0520Z/yolov9e-seg.pt-aggregates.csv\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_latency.png\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/accuracy_vs_parameters.png\n?? outputs/plots/benchmark-20260929T0520Z/ap50_ap75.pdf\n?? outputs/plots/benchmark-20260929T0520Z/fps.pdf\n?? outputs/plots/benchmark-20260929T0520Z/inference_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/mask_map.pdf\n?? outputs/plots/benchmark-20260929T0520Z/matched_mask_quality.pdf\n?? outputs/plots/benchmark-20260929T0520Z/peak_vram.pdf\n?? outputs/plots/benchmark-20260929T0520Z/pipeline_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_parameters.pdf\n?? outputs/plots/benchmark-20260929T0520Z/readable/provenance.json\n?? reports/benchmark-20260929T0520Z/SUMMARY.md\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_full_freeze.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/manifests/benchmark-20260929T0520Z_preflight.json\n?? reports/benchmark-20260929T0520Z/frozen_inputs/requirements.txt\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/frozen_pilot/visualize.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/report.py\n?? reports/benchmark-20260929T0520Z/frozen_inputs/src/validate.py\n?? reports/benchmark-20260929T0520Z/terminal_summary.txt\n?? requirements.txt\n?? src/benchmark.py\n?? src/benchmark_adapter.py\n?? src/frozen_pilot/\n?? src/refine_scatter_plots.py\n?? src/report.py\n?? src/report_clean_timing.py\n?? src/validate.py\n?? timing/benchmark-20260929T0520Z/clean_repetition/runs.json\n?? timing/benchmark-20260929T0520Z/round1-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round1-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round2-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo11x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolo26x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov8x-seg.pt.json\n?? timing/benchmark-20260929T0520Z/round3-yolov9e-seg.pt.json\n?? timing/benchmark-20260929T0520Z/runs.json\n?? timing/benchmark-20260929T0520Z/summary.csv",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Medium_Seg_MOTS20_Benchmark": {
+      "head": "40df395545754be0847f6aa144ffb59f63389af6",
+      "status": "",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Nano_Seg_MOTS20_Benchmark": {
+      "head": "c4ceca0aaba1982d10cfa3fe9d4209baab0dba96",
+      "status": "",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark": {
+      "head": "3c0bd7845166d23df1eb52d312e24fad930f9298",
+      "status": "",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark.git (push)"
+    },
+    "YOLO_Small_Seg_MOTS20_Benchmark": {
+      "head": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "status": "",
+      "branch": "main",
+      "remotes": "origin\thttps://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark.git (fetch)\norigin\thttps://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark.git (push)"
+    }
+  },
+  "protected_hashes": {
+    "provenance/CIHP_ARCHIVE_PREFLIGHT_V1.json": "cb15b455d872352034efbf367bb9ccf9902c408db491e56fb73662087fd320e9",
+    "provenance/CCIHP_STAGE0E_VALIDATION.json": "874700654b333ed0ba31a85adc8c6e45085dd2e9ea09946474c3755c80de4278",
+    "provenance/LICENSE_MATRIX_DECISION5A_V1.csv": "a1efd22214dfe2c52f038c368b892f25bc34c3d5419e9009aea35b2bdbdc37f5",
+    "provenance/CHECKPOINT_MANIFEST.json": "af2439e6ef1df3d4c1089305e67072fea6d96c4977efc89fc4c537c03cb838af",
+    "provenance/DATASET_INTEGRITY.json": "9c55f75d26fa4253a5bb5e0b8cb9e63d4dc5a50f240c6f57af8b1b96b7eed523",
+    "manifests/DATASET_MANIFEST.json": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22"
+  },
+  "physical_person_correctness_datasetwide": "NOT_VERIFIED",
+  "limitations": [
+    "No original native CIHP Human_ids reference",
+    "Source annotation22 unresolved",
+    "Only30semantic/person frames audited",
+    "ZIPCRC is not semantic accuracy",
+    "No independent CCIHP RGB copy",
+    "No full decoded/near duplicate re-audit"
+  ],
+  "next_action": "WAIT_FOR_USER_APPROVAL"
+}

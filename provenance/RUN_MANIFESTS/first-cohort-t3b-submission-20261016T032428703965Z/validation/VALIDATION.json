@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-16T03:28:35.380502+00:00",
+  "suite_results": [
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_application_v2*.py"
+      ],
+      "exit_code": 0,
+      "tests": 109,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_application_v2ALL.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_mhpv2_stage0.py"
+      ],
+      "exit_code": 0,
+      "tests": 25,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_mhpv2_stage0.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_official_mhp_compat.py"
+      ],
+      "exit_code": 0,
+      "tests": 19,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_official_mhp_compat.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_dataset_reassessment.py"
+      ],
+      "exit_code": 0,
+      "tests": 7,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_dataset_reassessment.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_gt.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_ccihp_gt.py.log"
+    },
+    {
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/tests",
+        "-p",
+        "test_ccihp_quality.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "log": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/test_ccihp_quality.py.log"
+    }
+  ],
+  "tests": 176,
+  "protected_hashes_checked": 126,
+  "protected_changed": [],
+  "original_archive_stat_changes": [],
+  "frozen_YOLO_unchanged": true,
+  "mapping_rows": 63,
+  "metadata_sources_only": true,
+  "population_recounted": false,
+  "GT_redecoded": false,
+  "new_inference": false,
+  "full_benchmark_guard": "PASS_REJECTED",
+  "real_scoring_context_accepted": false,
+  "source_changes": "provenance/RUN_MANIFESTS/first-cohort-t3b-submission-20261016T032428703965Z/validation/SOURCE_CHANGES.json"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "status": "DRAFT_AWAITING_TRACK_AND_FULL_QUALITY_APPROVAL",
+  "candidate_track": "CUSTOM_CCIHP_PERSON_BODY_CLOTHING_NOT_OFFICIAL_CIHP",
+  "dataset_zip": "datasets/CCIHP_icip.zip",
+  "rgb_source": "datasets/cihp-DatasetNinja.tar",
+  "target_human_review_images": 200,
+  "review_split": "Training",
+  "seed": 20261012,
+  "sample_IDs_frozen": false,
+  "validation_used_for_policy_tuning": false,
+  "selection_requires_verified_global_train_statistics": true,
+  "strata": [
+    "GT Human_ids person counts",
+    "image resolution",
+    "human area/occupancy",
+    "person scale variation",
+    "rare semantic concepts",
+    "adjacent people/crowding based on observable geometry"
+  ],
+  "independent_random_core_required": true,
+  "anomaly_selected_examples_separate_from_prevalence_estimation": true,
+  "review_categories": [
+    "Pixel/RGB alignment",
+    "one physical person per ID",
+    "person coverage policy",
+    "class semantic consistency",
+    "accessory support",
+    "unknown labels/void",
+    "confidence of reviewer interpretation"
+  ],
+  "review_outcomes": [
+    "CONFIRMED_CONSISTENT",
+    "CONFIRMED_ERROR",
+    "SUSPECTED_ANOMALY",
+    "UNCERTAIN_POLICY",
+    "NOT_REVIEWABLE"
+  ],
+  "full_quality_audit_authorized": false,
+  "source_relabel_or_exclusion_authorized": false,
+  "primary_promotion_authorized": false
+}

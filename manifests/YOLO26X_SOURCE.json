@@ -1,0 +1,10 @@
+{
+  "checkpoint_workspace_relative": "models/yolo26x-seg.pt",
+  "sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+  "weights_modified": false,
+  "previous_benchmark_complete": true,
+  "MHP_inference_executed": false,
+  "license": "Ultralytics AGPL-3.0 or separately obtained enterprise terms; no private deployment assurance",
+  "pretraining_exposure_to_MHP_content": "UNKNOWN",
+  "frozen_MHP_preprocessing": "DRAFT_TO_REVIEW; do not assume MOTS20 settings automatically transfer as scientific defaults"
+}

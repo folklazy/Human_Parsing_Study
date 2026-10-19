@@ -1,0 +1,14 @@
+{
+  "humans_path_reads": [],
+  "humans_path_assignments": [
+    206
+  ],
+  "suspicious_dataset_path_literal": [
+    {
+      "line": 79,
+      "value": "CCIHP_icip\\instance-level_human_parsing\\instance-level_human_parsing"
+    }
+  ],
+  "sampled_category_class_assignment": true,
+  "special_case": "0035374; category sample at row158,col314:0\u219210 in converter"
+}

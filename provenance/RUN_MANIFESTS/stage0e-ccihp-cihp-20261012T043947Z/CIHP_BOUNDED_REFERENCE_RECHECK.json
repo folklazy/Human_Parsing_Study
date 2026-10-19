@@ -1,0 +1,245 @@
+{
+  "actual_cases": [
+    {
+      "image_id": "0002190",
+      "split": "training",
+      "source_RGB_sha256": "6fdd3d736c865f098279cf3c5f09138835f3d40eb59ebf13c1959eb4e43dcae7",
+      "wh": [
+        300,
+        200
+      ],
+      "strict_full_RGB_load": "PASS",
+      "bitmap_decode": "PASS",
+      "native_demo_RGB_bytes_match": true,
+      "native_demo_RGB_pixels_match": true,
+      "semantic_pixel_differences": 0,
+      "foreground_boundary_pixel_differences": 0,
+      "part_objects": 10,
+      "person_count": null,
+      "human_GT": "NOT_AVAILABLE",
+      "CCIHP_comparison": "NOT_TESTED_MISSING_CCIHP_ARCHIVE",
+      "diagnostics": {
+        "overlap_pixels": 0,
+        "cross_class_overwrite_events": 0,
+        "person_identity": "NOT_AVAILABLE",
+        "uncovered_pixels": "implicit converted background; original void fidelity unverified"
+      },
+      "reference_scope": "Official PGN repository semantic demo only; no native Human_ids reference",
+      "diagnostic_image": "outputs/visualizations/stage0e-ccihp-cihp-20261012T043947Z/cihp_0002190_semantic_reference.png",
+      "diagnostic_sha256": "67e8e088ef5cc2437995dc9e02baaab163458a5c242fe2f65fe506fabf54abef",
+      "display_resampling": "LANCZOS on completed RGB visualization only; original categorical arrays unresized for all checks"
+    },
+    {
+      "image_id": "0005008",
+      "split": "training",
+      "source_RGB_sha256": "1e39e929cac2874d653a17c9cfc56f6df062637d790042a424a32253c5aa4f84",
+      "wh": [
+        576,
+        313
+      ],
+      "strict_full_RGB_load": "PASS",
+      "bitmap_decode": "PASS",
+      "native_demo_RGB_bytes_match": true,
+      "native_demo_RGB_pixels_match": true,
+      "semantic_pixel_differences": 0,
+      "foreground_boundary_pixel_differences": 0,
+      "part_objects": 53,
+      "person_count": null,
+      "human_GT": "NOT_AVAILABLE",
+      "CCIHP_comparison": "NOT_TESTED_MISSING_CCIHP_ARCHIVE",
+      "diagnostics": {
+        "overlap_pixels": 0,
+        "cross_class_overwrite_events": 0,
+        "person_identity": "NOT_AVAILABLE",
+        "uncovered_pixels": "implicit converted background; original void fidelity unverified"
+      },
+      "reference_scope": "Official PGN repository semantic demo only; no native Human_ids reference",
+      "diagnostic_image": "outputs/visualizations/stage0e-ccihp-cihp-20261012T043947Z/cihp_0005008_semantic_reference.png",
+      "diagnostic_sha256": "ea47bf47165c4f905e3fb58f720e9e04adabea0cb9836511ced539c3ffbb2790",
+      "display_resampling": "LANCZOS on completed RGB visualization only; original categorical arrays unresized for all checks"
+    },
+    {
+      "image_id": "0012008",
+      "split": "training",
+      "source_RGB_sha256": "32fb2ff9a9c6ca10f5f054e906614dbf50a1084e9d79b19c387ec9e276c00d65",
+      "wh": [
+        500,
+        458
+      ],
+      "strict_full_RGB_load": "PASS",
+      "bitmap_decode": "PASS",
+      "native_demo_RGB_bytes_match": true,
+      "native_demo_RGB_pixels_match": true,
+      "semantic_pixel_differences": 0,
+      "foreground_boundary_pixel_differences": 0,
+      "part_objects": 30,
+      "person_count": null,
+      "human_GT": "NOT_AVAILABLE",
+      "CCIHP_comparison": "NOT_TESTED_MISSING_CCIHP_ARCHIVE",
+      "diagnostics": {
+        "overlap_pixels": 0,
+        "cross_class_overwrite_events": 0,
+        "person_identity": "NOT_AVAILABLE",
+        "uncovered_pixels": "implicit converted background; original void fidelity unverified"
+      },
+      "reference_scope": "Official PGN repository semantic demo only; no native Human_ids reference",
+      "diagnostic_image": "outputs/visualizations/stage0e-ccihp-cihp-20261012T043947Z/cihp_0012008_semantic_reference.png",
+      "diagnostic_sha256": "1e958b80740402d06590dd31e1c91584efdbc9fefcf8a548620a1951f9442763",
+      "display_resampling": "LANCZOS on completed RGB visualization only; original categorical arrays unresized for all checks"
+    },
+    {
+      "image_id": "0026375",
+      "split": "training",
+      "source_RGB_sha256": "69f7db06fb9635cd5357b17741806bb2021c80b2084c189e622b316e48b29531",
+      "wh": [
+        500,
+        498
+      ],
+      "strict_full_RGB_load": "PASS",
+      "bitmap_decode": "PASS",
+      "native_demo_RGB_bytes_match": true,
+      "native_demo_RGB_pixels_match": true,
+      "semantic_pixel_differences": 0,
+      "foreground_boundary_pixel_differences": 0,
+      "part_objects": 13,
+      "person_count": null,
+      "human_GT": "NOT_AVAILABLE",
+      "CCIHP_comparison": "NOT_TESTED_MISSING_CCIHP_ARCHIVE",
+      "diagnostics": {
+        "overlap_pixels": 0,
+        "cross_class_overwrite_events": 0,
+        "person_identity": "NOT_AVAILABLE",
+        "uncovered_pixels": "implicit converted background; original void fidelity unverified"
+      },
+      "reference_scope": "Official PGN repository semantic demo only; no native Human_ids reference"
+    },
+    {
+      "image_id": "0032190",
+      "split": "training",
+      "source_RGB_sha256": "f0667f6888376c5b272a7b8d8a5c2b578c7c465b8f0b202c0515ab441dbf47f5",
+      "wh": [
+        500,
+        752
+      ],
+      "strict_full_RGB_load": "PASS",
+      "bitmap_decode": "PASS",
+      "native_demo_RGB_bytes_match": true,
+      "native_demo_RGB_pixels_match": true,
+      "semantic_pixel_differences": 0,
+      "foreground_boundary_pixel_differences": 0,
+      "part_objects": 14,
+      "person_count": null,
+      "human_GT": "NOT_AVAILABLE",
+      "CCIHP_comparison": "NOT_TESTED_MISSING_CCIHP_ARCHIVE",
+      "diagnostics": {
+        "overlap_pixels": 0,
+        "cross_class_overwrite_events": 0,
+        "person_identity": "NOT_AVAILABLE",
+        "uncovered_pixels": "implicit converted background; original void fidelity unverified"
+      },
+      "reference_scope": "Official PGN repository semantic demo only; no native Human_ids reference"
+    }
+  ],
+  "member_reads": [
+    {
+      "member": "README.md",
+      "bytes": 139,
+      "sha256": "7c3f67bbb1ff1272138820a90eb6bdac35ecaba9e4189631cd2fdd4eeb1331bd",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "LICENSE.md",
+      "bytes": 100,
+      "sha256": "2b565c9e09697a4f2cf2e345649c1102b71e4564eb528225b7e860ec1ecae55c",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "meta.json",
+      "bytes": 3924,
+      "sha256": "a19d185651aa08c9777ef105523d485746b3ccc352c61d9bdd0bf7f2e6dfec22",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/img/0002190.jpg",
+      "bytes": 10040,
+      "sha256": "6fdd3d736c865f098279cf3c5f09138835f3d40eb59ebf13c1959eb4e43dcae7",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/ann/0002190.jpg.json",
+      "bytes": 8714,
+      "sha256": "f5529376c60373e96765f25d2544c84bbc705481c5f8cbcf497a513fa5a8ba58",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/img/0005008.jpg",
+      "bytes": 34077,
+      "sha256": "1e39e929cac2874d653a17c9cfc56f6df062637d790042a424a32253c5aa4f84",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/ann/0005008.jpg.json",
+      "bytes": 44186,
+      "sha256": "50409e911e1ae911c42962384bbb60b90d36db2df9b98bbf603a6680ef7c4440",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/img/0012008.jpg",
+      "bytes": 52872,
+      "sha256": "32fb2ff9a9c6ca10f5f054e906614dbf50a1084e9d79b19c387ec9e276c00d65",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/ann/0012008.jpg.json",
+      "bytes": 25345,
+      "sha256": "a58412756870f59a285af56003ba3e2663f0f1e1e931d1aa63e607081d733a43",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/img/0026375.jpg",
+      "bytes": 39425,
+      "sha256": "69f7db06fb9635cd5357b17741806bb2021c80b2084c189e622b316e48b29531",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/ann/0026375.jpg.json",
+      "bytes": 12469,
+      "sha256": "49f3503bce4f7ceae3ce87e7f31a390a23f4518fe9b6423d8e0cebd4757cc83f",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/img/0032190.jpg",
+      "bytes": 75421,
+      "sha256": "f0667f6888376c5b272a7b8d8a5c2b578c7c465b8f0b202c0515ab441dbf47f5",
+      "matches_prior_member_hash": true
+    },
+    {
+      "member": "training/ann/0032190.jpg.json",
+      "bytes": 15589,
+      "sha256": "04e5acfe558eb49b45ce7a40ff1125c01543238d75e381aa25daa8a307e6a4ef",
+      "matches_prior_member_hash": true
+    }
+  ],
+  "member_bytes_read": 322301,
+  "annotation_fields": [
+    "description",
+    "objects",
+    "size",
+    "tags"
+  ],
+  "object_fields": [
+    "bitmap",
+    "classId",
+    "classTitle",
+    "createdAt",
+    "description",
+    "geometryType",
+    "id",
+    "labelerLogin",
+    "tags",
+    "updatedAt"
+  ],
+  "full_dataset_rerun": false,
+  "CCIHP_checks_run": false,
+  "GT_ownership_reconstruction": "NOT_ATTEMPTED_NO_NATIVE_HUMAN_INFORMATION"
+}

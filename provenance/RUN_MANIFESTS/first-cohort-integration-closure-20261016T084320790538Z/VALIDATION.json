@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-16T08:51:34.985464+00:00",
+  "CPU_application_tests": 138,
+  "CPU_test_log": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/CPU_APPLICATION_TESTS.log",
+  "reused_foundation_tests": 67,
+  "foundation_tests_rerun": false,
+  "old_126_checked": 126,
+  "old_126_changed": [],
+  "recent_37_rechecked_excluding_PPSS": 35,
+  "recent_37_changed": [],
+  "validation_packages": {
+    "status": "PASS_BOUND_NOT_AUTHORIZED",
+    "populations": {
+      "main": {
+        "images": 4961,
+        "contexts": 9922,
+        "G_loc": 17434,
+        "G_sem": 17390
+      },
+      "reference": {
+        "images": 5000,
+        "contexts": 10000,
+        "G_loc": 17548,
+        "G_sem": 17504
+      }
+    },
+    "package_manifest_sha256": "5785ab8b84fe060ce062851087c0ccafb5c9eb1dceef675ac3929a4ad6ffbc4b",
+    "config_sha256": "16cae51480f20deaf4470e25e6c735b9220d3db0415d66fb41692c5d38c4fc0d",
+    "GT_regenerated": false,
+    "validation_inference": false
+  },
+  "fresh_TRAIN_route": "PASS",
+  "scorer_reporter": "PASS_PRIMARY_AND_SECONDARY",
+  "accepted_TRAIN_contexts": 6,
+  "TRAIN_frames_per_system": 3,
+  "G_loc_per_system": 7,
+  "G_sem_per_system": 7,
+  "protected_original_archive_stats_unchanged": true,
+  "current_source_snapshot": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/source_snapshot",
+  "source_changes": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/SOURCE_REVISIONS.json",
+  "frozen_YOLO_checkpoint_verified_by_fresh_worker": true,
+  "canonical_YOLO_results_changed": false,
+  "validation_inference": false,
+  "full_benchmark_started": false,
+  "scientific_freeze": false,
+  "benchmark_guard": "PASS_REJECTED",
+  "ranking_generated": false,
+  "PPSS_activity": false,
+  "downloads": false,
+  "readiness": "BOUNDED_INTEGRATION_CLOSED_READY_FOR_SEPARATE_BENCHMARK_APPROVAL_REVIEW",
+  "limitations": [
+    "Only three TRAIN frames per system; no claim of full-validation completion or capacity",
+    "Current entry point authorizes TRAIN only; validation launch remains disabled",
+    "Mapping accepted with indirect evidence; no new direct-header claim",
+    "Quality-only; no clean repeated latency/VRAM ranking"
+  ]
+}

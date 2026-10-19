@@ -1,0 +1,14 @@
+{
+  "CPI_R50_CIHP": {
+    "manifest": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_R50_CIHP/RUN.json",
+    "manifest_sha256": "c7fb48985738fe33b8d14dcfcd14bef4050260d9a525e9809d1692930b3547fe",
+    "ledger": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution/CPI_R50_CIHP/FRAMES.jsonl",
+    "ledger_sha256": "17f5f1e96eb88ddb17a79b465dc906a01fbb510168deb25ad4471f2e274974a2"
+  },
+  "CPI_ConvNeXtB_CIHP": {
+    "manifest": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP_COMBINED/RUN.json",
+    "manifest_sha256": "cac4c4654c9931a903069b141cd28a7bcdd5817f5986c867bc0dac0adad7dbac",
+    "ledger": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/continuation_20261019/CPI_ConvNeXtB_CIHP_COMBINED/FRAMES.jsonl",
+    "ledger_sha256": "b4e5d95a4ce335a1d2de43b5698015889c0c1cd76134ad5a0435066fdd17dddb"
+  }
+}

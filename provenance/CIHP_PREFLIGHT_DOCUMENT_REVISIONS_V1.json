@@ -1,0 +1,79 @@
+{
+  "run_id": "cihp-archive-preflight-20261008T102552Z",
+  "revisions": [
+    {
+      "original_path": "reports/DATASET_REASSESSMENT.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/DATASET_REASSESSMENT.md",
+      "before_sha256": "ab04e3e2b441679ec9c3f3cd01964848f31f8dcfe1b4b1f663899ae6a35dd911",
+      "after_sha256": "0092d32d73e133ac03ac3a8f4e27f4257e144ffe46ea4a64100f9a7bde25ccf7",
+      "reason": "Local archive availability supersedes earlier discovery; native Human GT and byte-leakage findings",
+      "utc": "2026-10-08T10:45:35.007636+00:00"
+    },
+    {
+      "original_path": "reports/CIHP_QUALITY_AUDIT.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/CIHP_QUALITY_AUDIT.md",
+      "before_sha256": "cfd1edc00e0c506ab826d538f727256314f9179c898ba0812d70b97e057b5f32",
+      "after_sha256": "6713bd070f879f65f085e0f5f12e28cab6d21a372661c77cc3ee890f2b551ded",
+      "reason": "Replace absent-dataset claim with scoped measured archive findings; defer full quality",
+      "utc": "2026-10-08T10:45:35.008892+00:00"
+    },
+    {
+      "original_path": "reports/STAGE0_NEXT_ACTIONS.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "before_sha256": "4dd2222b948df4a8885c8bf94399da29a6bc8ca2daf723c0da7485d6e4c9267a",
+      "after_sha256": "2af2bfce6c1aecb0f6f06befe5e1f083b3a70d80d6901d4ef007b1ea4aff1cdc",
+      "reason": "Replace acquisition-of-absent-CIHP gate with missing-native-person-GT gate; no new execution permission",
+      "utc": "2026-10-08T10:45:35.010166+00:00"
+    },
+    {
+      "original_path": "reports/PRIMARY_DATASET_DECISION.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/reports/PRIMARY_DATASET_DECISION.md",
+      "before_sha256": "9f4c203d157b33204f8965add18c9505de873255c274b8551fb4c812ec8e980f",
+      "after_sha256": "75abc92c486dee2925938407c5cb28d9835c76fef68656ea816a44617f61c0e9",
+      "reason": "Decision matrix reflects observed conversion/duplicate risks without promoting CIHP",
+      "utc": "2026-10-08T10:45:35.011430+00:00"
+    },
+    {
+      "original_path": "README.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/README.md",
+      "before_sha256": "18e1f88cdc1da1bfda21dd3c986b0888db058f7e02844edf4e2d885dee562ca8",
+      "after_sha256": "4709a956347395ddcbd88eb91fee3df8ef764263ad4bf1d15960718ea278ee00",
+      "reason": "Landing page reflects present converted archive and missing native-human GT",
+      "utc": "2026-10-08T10:45:35.012707+00:00"
+    },
+    {
+      "original_path": "EXPERIMENT_PROTOCOL_DRAFT.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "before_sha256": "55d7a205fa193e58351aafe99c609315fda8ae87a071f1731387d79e5208a697",
+      "after_sha256": "253626003aee5544234a794f25f776d5125968b227e471f5e4fea8acf8683898",
+      "reason": "Input-contract blocker for DatasetNinja human GT; no protocol freeze",
+      "utc": "2026-10-08T10:45:35.013950+00:00"
+    },
+    {
+      "original_path": "DATA_SCHEMA.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/DATA_SCHEMA.md",
+      "before_sha256": "c25d20cbb123eec6fa64569425ac48ddd19cbe3fd9ad930488d1fb351af063bb",
+      "after_sha256": "0577698e8881b8b8bd57cf344b2314faf78cdb9d7131064ab92083720257cb81",
+      "reason": "Document actual converted-archive representation and missing ownership",
+      "utc": "2026-10-08T10:45:35.014729+00:00"
+    },
+    {
+      "original_path": "STUDY_STATE.json",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/STUDY_STATE.json",
+      "before_sha256": "eb8a8caa7de1e2416bf60f4bf9b70a03b6b9884584c896da2078989d861a229e",
+      "after_sha256": "88469c02e04475570e5815ccf328f3e1a6a983ab6886ea08aa067e0bdef7cc1b",
+      "reason": "Current archive state; historical/paused nodes preserved",
+      "utc": "2026-10-08T10:45:35.016033+00:00"
+    },
+    {
+      "original_path": "../README.md",
+      "archive": "reports/archive/cihp-archive-preflight-20261008T102552Z/WORKSPACE_README.md",
+      "before_sha256": "25915aee0c068cfcfc394c55b37dbf05ceb8467f9f85be779be375bf9488ddbc",
+      "after_sha256": "506617252f50e9b9c26edccb1789c67dd4def704d0e04dc0f0adbbd5379d3ea3",
+      "reason": "Workspace navigation reflects new archive evidence; prior historical sections retained",
+      "utc": "2026-10-08T10:45:35.017162+00:00"
+    }
+  ],
+  "original_datasets_modified": false,
+  "native_Human_GT_repair_performed": false
+}

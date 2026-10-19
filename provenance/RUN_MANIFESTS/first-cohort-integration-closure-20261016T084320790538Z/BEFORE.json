@@ -1,0 +1,137 @@
+[
+  {
+    "path": "src/application_v2/cohorts.py",
+    "before_sha256": "e6fa28ef15040252b6710c10bbc7eca5a664c139b0f54b33275d5f45bd08cef7",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/cohorts.py"
+  },
+  {
+    "path": "src/application_v2/acquisition.py",
+    "before_sha256": "d7e6ad302b47c524c32adc41303d902a89492e23a7fc79238a8ae040ba0332f1",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/acquisition.py"
+  },
+  {
+    "path": "src/application_v2/artifacts.py",
+    "before_sha256": "5b5e7e6768cfa7878eb3010550db4f712a651290fcd942897ff1ee4aa6774478",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/artifacts.py"
+  },
+  {
+    "path": "src/application_v2/__init__.py",
+    "before_sha256": "0375e209e4f6e5d613a62df6d3124ab92c51ec266f75c49c7fa4a40e5a51d07b",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/__init__.py"
+  },
+  {
+    "path": "src/application_v2/taxonomy.py",
+    "before_sha256": "74b546d7f88f206b13015833e2e5d7ada267a490ae2aaf8aaa4df90a7bdf31ac",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/taxonomy.py"
+  },
+  {
+    "path": "src/application_v2/contexts.py",
+    "before_sha256": "b550db7afba1a8dd9088b83aaec3bb2a7f34e47a35e9e0de786c9a307864efe2",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/contexts.py"
+  },
+  {
+    "path": "src/application_v2/comparison.py",
+    "before_sha256": "94c515a195c8086c612f46e2e279bcad6b5692a41c43759e4f92aaf13f17b19d",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/comparison.py"
+  },
+  {
+    "path": "src/application_v2/first_cohort_replay.py",
+    "before_sha256": "bb4a8deaeb0e892e9dc0ef788551ea3f2371116e86bf3fbb63f7426144551631",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/first_cohort_replay.py"
+  },
+  {
+    "path": "src/application_v2/policy.py",
+    "before_sha256": "512cd770de23370db7f9afb389eed72d4852fbb90696f8ba4951a25b89640eda",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/policy.py"
+  },
+  {
+    "path": "src/application_v2/runner.py",
+    "before_sha256": "5bd16d403953cf36376349baca09256e53f299e0d7cf1410f1feab87486fab98",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/runner.py"
+  },
+  {
+    "path": "src/application_v2/contracts.py",
+    "before_sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/contracts.py"
+  },
+  {
+    "path": "src/application_v2/plan.py",
+    "before_sha256": "12a038d29fda34d283197cc9d8e059620d76ef552d35349a4b1f600b80cd5fdc",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/plan.py"
+  },
+  {
+    "path": "src/application_v2/scoring.py",
+    "before_sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/scoring.py"
+  },
+  {
+    "path": "src/application_v2/evaluation.py",
+    "before_sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/src/application_v2/evaluation.py"
+  },
+  {
+    "path": "tests/test_application_v2_contexts.py",
+    "before_sha256": "e9ec08335017edc70a39604ece27ff1681e36cc77221e7cf470a428d966ad88a",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_contexts.py"
+  },
+  {
+    "path": "tests/test_application_v2_handoff.py",
+    "before_sha256": "3f7de09e205ad8c65c392cf16bacc083041ea3d8f4c962cc4b76e88681cf327b",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_handoff.py"
+  },
+  {
+    "path": "tests/test_application_v2_cpi_evidence_acceptance.py",
+    "before_sha256": "d0cadb67a5eed77d15426096a808d472ae0e3450d8b6b3eb29f6a9d089243ed3",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_cpi_evidence_acceptance.py"
+  },
+  {
+    "path": "tests/test_application_v2_acquisition.py",
+    "before_sha256": "7cdb82b6ccae7b569b3f5ac4cb44a2e4f15b74d2b7e20bdd05d8a8cd759e0572",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_acquisition.py"
+  },
+  {
+    "path": "tests/test_application_v2_first_cohort_policy.py",
+    "before_sha256": "ce9852b669ce188c609ad6e271963e9bdf22ade5d82649cba71b81bd07bff9cb",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_first_cohort_policy.py"
+  },
+  {
+    "path": "tests/test_application_v2_comparison.py",
+    "before_sha256": "5ec5e66d7df7f0543ab508888c72f7158e4edf76c56facf0606a09cdc182f0bf",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2_comparison.py"
+  },
+  {
+    "path": "tests/test_application_v2.py",
+    "before_sha256": "b5057541817aa395cc651c112e0314f57344675364b218e522ad4ed678cecc6b",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/tests/test_application_v2.py"
+  },
+  {
+    "path": "scripts/first_cohort_entrypoint.py",
+    "before_sha256": "21efcb3713de0780afa70c728e5bd01d10072ec20c246c1aa1f57e501aab25c8",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/scripts/first_cohort_entrypoint.py"
+  },
+  {
+    "path": "README.md",
+    "before_sha256": "4e9cfcd037b2d0bb923ba62ff7dca9112cf5ea6f10bce54f88464ef7320ba81d",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/README.md"
+  },
+  {
+    "path": "DATA_SCHEMA.md",
+    "before_sha256": "57550056fca3efa11950f5b4fc787023594c7ec0f76aea1e17214a66238fd7a1",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/DATA_SCHEMA.md"
+  },
+  {
+    "path": "STUDY_STATE.json",
+    "before_sha256": "42000e20e027118d519238426bf4df234440aca714a62e7733174f504a0f6139",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/STUDY_STATE.json"
+  },
+  {
+    "path": "reports/STAGE0_NEXT_ACTIONS.md",
+    "before_sha256": "43853ea36ac6bcff29a507faf31d88c423c07e2bccafd67ec29384172d5d9cb8",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/reports/STAGE0_NEXT_ACTIONS.md"
+  },
+  {
+    "path": "provenance/CURRENT_STUDY_ARTIFACTS.json",
+    "before_sha256": "9c19359509ed84f7ccca484197bce1880d591684023fa3b207211d6a02d23a7f",
+    "archive": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/before/provenance/CURRENT_STUDY_ARTIFACTS.json"
+  }
+]

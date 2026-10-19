@@ -1,0 +1,6 @@
+{
+  "original_record": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/bounded_train_20261014T094329862740Z/T3A_0021834/record.json",
+  "config_snapshot_digest_matches": true,
+  "source_snapshot_SHA256_matches": true,
+  "historical_helper_source_bytes": "NOT_ALL_RECOVERED; native FASHN adapter unchanged; source revisions retained; packaging fingerprint logic subsequently extended"
+}

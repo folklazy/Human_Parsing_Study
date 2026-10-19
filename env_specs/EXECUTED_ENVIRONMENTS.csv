@@ -1,0 +1,6 @@
+model_id,python,torch,cuda_runtime,GPU,precision,autocast,TF32
+CPI_R50_CIHP,"3.9.25 (main, Oct 31 2025, 23:00:23) 
+[Clang 21.1.4 ]",1.10.2+cu113,11.3,Tesla T4,FP32,False,False
+CPI_ConvNeXtB_CIHP,"3.9.25 (main, Oct 31 2025, 23:00:23) 
+[Clang 21.1.4 ]",1.10.2+cu113,11.3,Tesla T4,FP32,False,False
+YOLO26X_FROZEN,"3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",2.14.0+cu130,13.0,Tesla T4,FP32,False,False

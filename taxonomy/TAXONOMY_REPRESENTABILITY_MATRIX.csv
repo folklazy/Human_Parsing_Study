@@ -1,0 +1,473 @@
+mhpv2_id,mhpv2_concept,model,native_id,representability,evidence_level,mapping_frozen,reason
+0,Background,M2FP_MHPV2,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,CPI_R50_MHPV2,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,CPI_CONVNEXT_MHPV2,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,FASHN,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,SCHP_LIP,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,D2FP_LIP,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,D2FP_CIHP,0,EXACT,SOURCE_TAXONOMY_ONLY,False,Native background ID source-verified; target ownership/evaluation domain still require review
+0,Background,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+1,Cap/hat,M2FP_MHPV2,1,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+1,Cap/hat,CPI_R50_MHPV2,1,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+1,Cap/hat,CPI_CONVNEXT_MHPV2,1,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+1,Cap/hat,FASHN,9,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+1,Cap/hat,SCHP_LIP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+1,Cap/hat,D2FP_LIP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+1,Cap/hat,D2FP_CIHP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+1,Cap/hat,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+2,Helmet,M2FP_MHPV2,2,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+2,Helmet,CPI_R50_MHPV2,2,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+2,Helmet,CPI_CONVNEXT_MHPV2,2,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+2,Helmet,FASHN,9,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+2,Helmet,SCHP_LIP,1,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+2,Helmet,D2FP_LIP,1,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+2,Helmet,D2FP_CIHP,1,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+2,Helmet,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+3,Face,M2FP_MHPV2,3,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+3,Face,CPI_R50_MHPV2,3,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+3,Face,CPI_CONVNEXT_MHPV2,3,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+3,Face,FASHN,1,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+3,Face,SCHP_LIP,13,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+3,Face,D2FP_LIP,13,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+3,Face,D2FP_CIHP,13,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+3,Face,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+4,Hair,M2FP_MHPV2,4,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+4,Hair,CPI_R50_MHPV2,4,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+4,Hair,CPI_CONVNEXT_MHPV2,4,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+4,Hair,FASHN,2,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+4,Hair,SCHP_LIP,2,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+4,Hair,D2FP_LIP,2,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+4,Hair,D2FP_CIHP,2,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+4,Hair,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+5,Left-arm,M2FP_MHPV2,5,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+5,Left-arm,CPI_R50_MHPV2,5,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+5,Left-arm,CPI_CONVNEXT_MHPV2,5,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+5,Left-arm,FASHN,12,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+5,Left-arm,SCHP_LIP,14,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+5,Left-arm,D2FP_LIP,14,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+5,Left-arm,D2FP_CIHP,14,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+5,Left-arm,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+6,Right-arm,M2FP_MHPV2,6,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+6,Right-arm,CPI_R50_MHPV2,6,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+6,Right-arm,CPI_CONVNEXT_MHPV2,6,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+6,Right-arm,FASHN,12,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+6,Right-arm,SCHP_LIP,15,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+6,Right-arm,D2FP_LIP,15,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+6,Right-arm,D2FP_CIHP,15,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+6,Right-arm,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+7,Left-hand,M2FP_MHPV2,7,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+7,Left-hand,CPI_R50_MHPV2,7,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+7,Left-hand,CPI_CONVNEXT_MHPV2,7,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+7,Left-hand,FASHN,13,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+7,Left-hand,SCHP_LIP,14,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+7,Left-hand,D2FP_LIP,14,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+7,Left-hand,D2FP_CIHP,14,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+7,Left-hand,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+8,Right-hand,M2FP_MHPV2,8,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+8,Right-hand,CPI_R50_MHPV2,8,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+8,Right-hand,CPI_CONVNEXT_MHPV2,8,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+8,Right-hand,FASHN,13,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+8,Right-hand,SCHP_LIP,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+8,Right-hand,D2FP_LIP,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+8,Right-hand,D2FP_CIHP,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+8,Right-hand,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+9,Protector,M2FP_MHPV2,9,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+9,Protector,CPI_R50_MHPV2,9,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+9,Protector,CPI_CONVNEXT_MHPV2,9,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+9,Protector,FASHN,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+9,Protector,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+9,Protector,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+9,Protector,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+9,Protector,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+10,Bikini/bra,M2FP_MHPV2,10,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+10,Bikini/bra,CPI_R50_MHPV2,10,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+10,Bikini/bra,CPI_CONVNEXT_MHPV2,10,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+10,Bikini/bra,FASHN,3,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+10,Bikini/bra,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+10,Bikini/bra,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+10,Bikini/bra,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+10,Bikini/bra,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+11,Jacket/windbreaker/hoodie,M2FP_MHPV2,11,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+11,Jacket/windbreaker/hoodie,CPI_R50_MHPV2,11,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+11,Jacket/windbreaker/hoodie,CPI_CONVNEXT_MHPV2,11,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+11,Jacket/windbreaker/hoodie,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+11,Jacket/windbreaker/hoodie,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+11,Jacket/windbreaker/hoodie,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+11,Jacket/windbreaker/hoodie,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+11,Jacket/windbreaker/hoodie,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+12,Tee-shirt,M2FP_MHPV2,12,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+12,Tee-shirt,CPI_R50_MHPV2,12,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+12,Tee-shirt,CPI_CONVNEXT_MHPV2,12,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+12,Tee-shirt,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+12,Tee-shirt,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+12,Tee-shirt,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+12,Tee-shirt,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+12,Tee-shirt,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+13,Polo-shirt,M2FP_MHPV2,13,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+13,Polo-shirt,CPI_R50_MHPV2,13,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+13,Polo-shirt,CPI_CONVNEXT_MHPV2,13,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+13,Polo-shirt,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+13,Polo-shirt,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+13,Polo-shirt,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+13,Polo-shirt,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+13,Polo-shirt,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+14,Sweater,M2FP_MHPV2,14,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+14,Sweater,CPI_R50_MHPV2,14,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+14,Sweater,CPI_CONVNEXT_MHPV2,14,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+14,Sweater,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+14,Sweater,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+14,Sweater,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+14,Sweater,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+14,Sweater,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+15,Singlet,M2FP_MHPV2,15,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+15,Singlet,CPI_R50_MHPV2,15,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+15,Singlet,CPI_CONVNEXT_MHPV2,15,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+15,Singlet,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+15,Singlet,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+15,Singlet,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+15,Singlet,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+15,Singlet,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+16,Torso-skin,M2FP_MHPV2,16,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+16,Torso-skin,CPI_R50_MHPV2,16,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+16,Torso-skin,CPI_CONVNEXT_MHPV2,16,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+16,Torso-skin,FASHN,16,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+16,Torso-skin,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+16,Torso-skin,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+16,Torso-skin,D2FP_CIHP,10,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+16,Torso-skin,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+17,Pants,M2FP_MHPV2,17,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+17,Pants,CPI_R50_MHPV2,17,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+17,Pants,CPI_CONVNEXT_MHPV2,17,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+17,Pants,FASHN,6,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+17,Pants,SCHP_LIP,9,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+17,Pants,D2FP_LIP,9,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+17,Pants,D2FP_CIHP,9,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+17,Pants,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+18,Shorts/swim-shorts,M2FP_MHPV2,18,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+18,Shorts/swim-shorts,CPI_R50_MHPV2,18,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+18,Shorts/swim-shorts,CPI_CONVNEXT_MHPV2,18,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+18,Shorts/swim-shorts,FASHN,6,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+18,Shorts/swim-shorts,SCHP_LIP,9,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+18,Shorts/swim-shorts,D2FP_LIP,9,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+18,Shorts/swim-shorts,D2FP_CIHP,9,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+18,Shorts/swim-shorts,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+19,Skirt,M2FP_MHPV2,19,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+19,Skirt,CPI_R50_MHPV2,19,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+19,Skirt,CPI_CONVNEXT_MHPV2,19,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+19,Skirt,FASHN,5,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+19,Skirt,SCHP_LIP,12,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+19,Skirt,D2FP_LIP,12,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+19,Skirt,D2FP_CIHP,12,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+19,Skirt,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+20,Stockings,M2FP_MHPV2,20,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+20,Stockings,CPI_R50_MHPV2,20,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+20,Stockings,CPI_CONVNEXT_MHPV2,20,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+20,Stockings,FASHN,14,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+20,Stockings,SCHP_LIP,8,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+20,Stockings,D2FP_LIP,8,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+20,Stockings,D2FP_CIHP,8,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+20,Stockings,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+21,Socks,M2FP_MHPV2,21,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+21,Socks,CPI_R50_MHPV2,21,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+21,Socks,CPI_CONVNEXT_MHPV2,21,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+21,Socks,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+21,Socks,SCHP_LIP,8,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+21,Socks,D2FP_LIP,8,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+21,Socks,D2FP_CIHP,8,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+21,Socks,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+22,Left-boot,M2FP_MHPV2,22,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+22,Left-boot,CPI_R50_MHPV2,22,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+22,Left-boot,CPI_CONVNEXT_MHPV2,22,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+22,Left-boot,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+22,Left-boot,SCHP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+22,Left-boot,D2FP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+22,Left-boot,D2FP_CIHP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+22,Left-boot,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+23,Right-boot,M2FP_MHPV2,23,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+23,Right-boot,CPI_R50_MHPV2,23,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+23,Right-boot,CPI_CONVNEXT_MHPV2,23,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+23,Right-boot,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+23,Right-boot,SCHP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+23,Right-boot,D2FP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+23,Right-boot,D2FP_CIHP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+23,Right-boot,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+24,Left-shoe,M2FP_MHPV2,24,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+24,Left-shoe,CPI_R50_MHPV2,24,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+24,Left-shoe,CPI_CONVNEXT_MHPV2,24,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+24,Left-shoe,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+24,Left-shoe,SCHP_LIP,18,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+24,Left-shoe,D2FP_LIP,18,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+24,Left-shoe,D2FP_CIHP,18,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+24,Left-shoe,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+25,Right-shoe,M2FP_MHPV2,25,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+25,Right-shoe,CPI_R50_MHPV2,25,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+25,Right-shoe,CPI_CONVNEXT_MHPV2,25,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+25,Right-shoe,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+25,Right-shoe,SCHP_LIP,19,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+25,Right-shoe,D2FP_LIP,19,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+25,Right-shoe,D2FP_CIHP,19,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+25,Right-shoe,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+26,Left-highheel,M2FP_MHPV2,26,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+26,Left-highheel,CPI_R50_MHPV2,26,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+26,Left-highheel,CPI_CONVNEXT_MHPV2,26,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+26,Left-highheel,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+26,Left-highheel,SCHP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+26,Left-highheel,D2FP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+26,Left-highheel,D2FP_CIHP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+26,Left-highheel,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+27,Right-highheel,M2FP_MHPV2,27,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+27,Right-highheel,CPI_R50_MHPV2,27,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+27,Right-highheel,CPI_CONVNEXT_MHPV2,27,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+27,Right-highheel,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+27,Right-highheel,SCHP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+27,Right-highheel,D2FP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+27,Right-highheel,D2FP_CIHP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+27,Right-highheel,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+28,Left-sandal,M2FP_MHPV2,28,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+28,Left-sandal,CPI_R50_MHPV2,28,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+28,Left-sandal,CPI_CONVNEXT_MHPV2,28,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+28,Left-sandal,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+28,Left-sandal,SCHP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+28,Left-sandal,D2FP_LIP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+28,Left-sandal,D2FP_CIHP,18,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+28,Left-sandal,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+29,Right-sandal,M2FP_MHPV2,29,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+29,Right-sandal,CPI_R50_MHPV2,29,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+29,Right-sandal,CPI_CONVNEXT_MHPV2,29,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+29,Right-sandal,FASHN,15,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+29,Right-sandal,SCHP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+29,Right-sandal,D2FP_LIP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+29,Right-sandal,D2FP_CIHP,19,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+29,Right-sandal,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+30,Left-leg,M2FP_MHPV2,30,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+30,Left-leg,CPI_R50_MHPV2,30,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+30,Left-leg,CPI_CONVNEXT_MHPV2,30,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+30,Left-leg,FASHN,14,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+30,Left-leg,SCHP_LIP,16,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+30,Left-leg,D2FP_LIP,16,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+30,Left-leg,D2FP_CIHP,16,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+30,Left-leg,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+31,Right-leg,M2FP_MHPV2,31,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+31,Right-leg,CPI_R50_MHPV2,31,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+31,Right-leg,CPI_CONVNEXT_MHPV2,31,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+31,Right-leg,FASHN,14,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+31,Right-leg,SCHP_LIP,17,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+31,Right-leg,D2FP_LIP,17,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+31,Right-leg,D2FP_CIHP,17,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+31,Right-leg,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+32,Left-foot,M2FP_MHPV2,32,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+32,Left-foot,CPI_R50_MHPV2,32,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+32,Left-foot,CPI_CONVNEXT_MHPV2,32,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+32,Left-foot,FASHN,15,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+32,Left-foot,SCHP_LIP,18,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+32,Left-foot,D2FP_LIP,18,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+32,Left-foot,D2FP_CIHP,18,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+32,Left-foot,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+33,Right-foot,M2FP_MHPV2,33,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+33,Right-foot,CPI_R50_MHPV2,33,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+33,Right-foot,CPI_CONVNEXT_MHPV2,33,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+33,Right-foot,FASHN,15,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+33,Right-foot,SCHP_LIP,19,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+33,Right-foot,D2FP_LIP,19,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+33,Right-foot,D2FP_CIHP,19,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+33,Right-foot,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+34,Coat,M2FP_MHPV2,34,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+34,Coat,CPI_R50_MHPV2,34,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+34,Coat,CPI_CONVNEXT_MHPV2,34,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+34,Coat,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+34,Coat,SCHP_LIP,7,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+34,Coat,D2FP_LIP,7,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+34,Coat,D2FP_CIHP,7,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+34,Coat,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+35,Dress,M2FP_MHPV2,35,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+35,Dress,CPI_R50_MHPV2,35,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+35,Dress,CPI_CONVNEXT_MHPV2,35,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+35,Dress,FASHN,4,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+35,Dress,SCHP_LIP,6,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+35,Dress,D2FP_LIP,6,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+35,Dress,D2FP_CIHP,6,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+35,Dress,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+36,Robe,M2FP_MHPV2,36,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+36,Robe,CPI_R50_MHPV2,36,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+36,Robe,CPI_CONVNEXT_MHPV2,36,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+36,Robe,FASHN,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+36,Robe,SCHP_LIP,6,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+36,Robe,D2FP_LIP,6,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+36,Robe,D2FP_CIHP,6,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+36,Robe,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+37,Jumpsuit,M2FP_MHPV2,37,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+37,Jumpsuit,CPI_R50_MHPV2,37,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+37,Jumpsuit,CPI_CONVNEXT_MHPV2,37,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+37,Jumpsuit,FASHN,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+37,Jumpsuit,SCHP_LIP,10,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+37,Jumpsuit,D2FP_LIP,10,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+37,Jumpsuit,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+37,Jumpsuit,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+38,Other-full-body-clothes,M2FP_MHPV2,38,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+38,Other-full-body-clothes,CPI_R50_MHPV2,38,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+38,Other-full-body-clothes,CPI_CONVNEXT_MHPV2,38,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+38,Other-full-body-clothes,FASHN,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+38,Other-full-body-clothes,SCHP_LIP,10,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+38,Other-full-body-clothes,D2FP_LIP,10,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+38,Other-full-body-clothes,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+38,Other-full-body-clothes,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+39,Headwear,M2FP_MHPV2,39,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+39,Headwear,CPI_R50_MHPV2,39,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+39,Headwear,CPI_CONVNEXT_MHPV2,39,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+39,Headwear,FASHN,9,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+39,Headwear,SCHP_LIP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+39,Headwear,D2FP_LIP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+39,Headwear,D2FP_CIHP,1,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+39,Headwear,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+40,Backpack,M2FP_MHPV2,40,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+40,Backpack,CPI_R50_MHPV2,40,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+40,Backpack,CPI_CONVNEXT_MHPV2,40,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+40,Backpack,FASHN,8,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+40,Backpack,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+40,Backpack,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+40,Backpack,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+40,Backpack,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+41,Ball,M2FP_MHPV2,41,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+41,Ball,CPI_R50_MHPV2,41,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+41,Ball,CPI_CONVNEXT_MHPV2,41,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+41,Ball,FASHN,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+41,Ball,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+41,Ball,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+41,Ball,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+41,Ball,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+42,Bats,M2FP_MHPV2,42,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+42,Bats,CPI_R50_MHPV2,42,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+42,Bats,CPI_CONVNEXT_MHPV2,42,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+42,Bats,FASHN,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+42,Bats,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+42,Bats,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+42,Bats,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+42,Bats,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+43,Belt,M2FP_MHPV2,43,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+43,Belt,CPI_R50_MHPV2,43,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+43,Belt,CPI_CONVNEXT_MHPV2,43,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+43,Belt,FASHN,7,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+43,Belt,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+43,Belt,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+43,Belt,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+43,Belt,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+44,Bottle,M2FP_MHPV2,44,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+44,Bottle,CPI_R50_MHPV2,44,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+44,Bottle,CPI_CONVNEXT_MHPV2,44,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+44,Bottle,FASHN,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+44,Bottle,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+44,Bottle,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+44,Bottle,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+44,Bottle,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+45,Carrybag,M2FP_MHPV2,45,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+45,Carrybag,CPI_R50_MHPV2,45,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+45,Carrybag,CPI_CONVNEXT_MHPV2,45,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+45,Carrybag,FASHN,8,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+45,Carrybag,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+45,Carrybag,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+45,Carrybag,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+45,Carrybag,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+46,Cases,M2FP_MHPV2,46,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+46,Cases,CPI_R50_MHPV2,46,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+46,Cases,CPI_CONVNEXT_MHPV2,46,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+46,Cases,FASHN,8,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+46,Cases,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+46,Cases,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+46,Cases,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+46,Cases,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+47,Sunglasses,M2FP_MHPV2,47,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+47,Sunglasses,CPI_R50_MHPV2,47,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+47,Sunglasses,CPI_CONVNEXT_MHPV2,47,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+47,Sunglasses,FASHN,11,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+47,Sunglasses,SCHP_LIP,4,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+47,Sunglasses,D2FP_LIP,4,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+47,Sunglasses,D2FP_CIHP,4,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+47,Sunglasses,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+48,Eyewear,M2FP_MHPV2,48,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+48,Eyewear,CPI_R50_MHPV2,48,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+48,Eyewear,CPI_CONVNEXT_MHPV2,48,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+48,Eyewear,FASHN,11,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+48,Eyewear,SCHP_LIP,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+48,Eyewear,D2FP_LIP,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+48,Eyewear,D2FP_CIHP,4,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+48,Eyewear,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+49,Glove,M2FP_MHPV2,49,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+49,Glove,CPI_R50_MHPV2,49,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+49,Glove,CPI_CONVNEXT_MHPV2,49,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+49,Glove,FASHN,13,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+49,Glove,SCHP_LIP,3,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+49,Glove,D2FP_LIP,3,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+49,Glove,D2FP_CIHP,3,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+49,Glove,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+50,Scarf,M2FP_MHPV2,50,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+50,Scarf,CPI_R50_MHPV2,50,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+50,Scarf,CPI_CONVNEXT_MHPV2,50,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+50,Scarf,FASHN,10,EXACT,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+50,Scarf,SCHP_LIP,11,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+50,Scarf,D2FP_LIP,11,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+50,Scarf,D2FP_CIHP,11,EXACT,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+50,Scarf,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+51,Umbrella,M2FP_MHPV2,51,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+51,Umbrella,CPI_R50_MHPV2,51,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+51,Umbrella,CPI_CONVNEXT_MHPV2,51,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+51,Umbrella,FASHN,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+51,Umbrella,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+51,Umbrella,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+51,Umbrella,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+51,Umbrella,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+52,Wallet/purse,M2FP_MHPV2,52,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+52,Wallet/purse,CPI_R50_MHPV2,52,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+52,Wallet/purse,CPI_CONVNEXT_MHPV2,52,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+52,Wallet/purse,FASHN,8,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+52,Wallet/purse,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+52,Wallet/purse,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+52,Wallet/purse,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+52,Wallet/purse,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+53,Watch,M2FP_MHPV2,53,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+53,Watch,CPI_R50_MHPV2,53,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+53,Watch,CPI_CONVNEXT_MHPV2,53,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+53,Watch,FASHN,17,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+53,Watch,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+53,Watch,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+53,Watch,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+53,Watch,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+54,Wristband,M2FP_MHPV2,54,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+54,Wristband,CPI_R50_MHPV2,54,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+54,Wristband,CPI_CONVNEXT_MHPV2,54,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+54,Wristband,FASHN,17,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+54,Wristband,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+54,Wristband,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+54,Wristband,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+54,Wristband,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+55,Tie,M2FP_MHPV2,55,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+55,Tie,CPI_R50_MHPV2,55,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+55,Tie,CPI_CONVNEXT_MHPV2,55,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+55,Tie,FASHN,3,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+55,Tie,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+55,Tie,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+55,Tie,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+55,Tie,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+56,Other-accessary,M2FP_MHPV2,56,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+56,Other-accessary,CPI_R50_MHPV2,56,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+56,Other-accessary,CPI_CONVNEXT_MHPV2,56,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+56,Other-accessary,FASHN,17,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+56,Other-accessary,SCHP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+56,Other-accessary,D2FP_LIP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+56,Other-accessary,D2FP_CIHP,,UNSUPPORTED,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+56,Other-accessary,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+57,Other-upper-body-clothes,M2FP_MHPV2,57,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+57,Other-upper-body-clothes,CPI_R50_MHPV2,57,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+57,Other-upper-body-clothes,CPI_CONVNEXT_MHPV2,57,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+57,Other-upper-body-clothes,FASHN,3,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+57,Other-upper-body-clothes,SCHP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+57,Other-upper-body-clothes,D2FP_LIP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+57,Other-upper-body-clothes,D2FP_CIHP,5,COARSE_ONLY,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+57,Other-upper-body-clothes,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"
+58,Other-lower-body-clothes,M2FP_MHPV2,58,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+58,Other-lower-body-clothes,CPI_R50_MHPV2,58,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+58,Other-lower-body-clothes,CPI_CONVNEXT_MHPV2,58,EXACT,SOURCE_TAXONOMY_ONLY,False,Source taxonomy is MHP-v2; exact loaded checkpoint compatibility still requires smoke evidence
+58,Other-lower-body-clothes,FASHN,6,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"Fine class/side distinctions may require shared projection; feet, torso, jewelry and full-body semantics remain ambiguous"
+58,Other-lower-body-clothes,SCHP_LIP,9,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+58,Other-lower-body-clothes,D2FP_LIP,9,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+58,Other-lower-body-clothes,D2FP_CIHP,9,AMBIGUOUS,SOURCE_TAXONOMY_ONLY,False,"LIP or CIHP variant must be distinguished; hands, bare feet, whole garments and clothing scope require review"
+58,Other-lower-body-clothes,SAPIENS2_0_4B,,UNKNOWN,SOURCE_TAXONOMY_ONLY,False,"LICENSE_BLOCKED_PENDING_CLARIFICATION; outside executable/comparable cohort, no checkpoint/native outputs inspected"

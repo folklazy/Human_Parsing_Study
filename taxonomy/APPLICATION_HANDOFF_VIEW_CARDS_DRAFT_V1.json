@@ -1,0 +1,39 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "source": "../HUMAN_PARSING_CODEX_IMPLEMENTATION_HANDOFF_TH_20261015.md",
+  "views": [
+    {
+      "id": "V0_visible_person",
+      "status": "BLOCKED_DEFINITION_AND_ANNOTATION_EVIDENCE",
+      "reason": "Body/clothing candidate mapping voids hair and hat; it is not a full visible-person silhouette.",
+      "positive": "All supported visible-person regions, still to be justified against native annotation semantics",
+      "known_negative": "Requires annotation completeness evidence; not every native background pixel by assumption",
+      "unknown": "Unsupported or ambiguous labels and incomplete annotation regions"
+    },
+    {
+      "id": "V2_body_clothing_candidate",
+      "status": "DRAFT_IMPLEMENTED_PROJECTION_NOT_ACCEPTED_SCORE",
+      "mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V2.json",
+      "mapping_mode": "NATIVE_HARD_LABEL_PROJECTION",
+      "target_classes": ["Background", "Exposed_face", "Exposed_torso", "Exposed_arms", "Exposed_legs", "Garments_coarse", "Footwear"],
+      "positive": "CCIHP GT with explicit MAP disposition",
+      "known_negative": "Native background only after annotation-completeness acceptance; neighboring known target persons are person-domain negatives",
+      "unknown": "Explicit shared GT VOID labels; category=0 within human; owner-unknown target pixels are void in person domain but retained globally",
+      "annotation_completeness": "PENDING_EVIDENCE_REVIEW",
+      "physical_identity_completeness": "NOT_ESTABLISHED_BY_STRUCTURAL_TESTS",
+      "population": "configs/application_v2_handoff_v3.yaml:populations; role not accepted",
+      "G_loc": "Native GT localization eligibility from shared sidecar; physical ownership remains caveated",
+      "G_sem": "Subset of G_loc with target semantic support; unmatched person contributes zero",
+      "K": "Fixed GT-supported target classes; never derived from successful model outputs",
+      "tracks": ["T1_NATIVE_REFERENCE", "T2_ORACLE", "T3A_YOLO_CROP", "T3B_NATIVE_YOLO_ASSOCIATION"],
+      "ranking_between_tracks": "NOT_AUTHORIZED",
+      "matching": "bbox cardinality-first then summed IoU; threshold and evaluation box source require acceptance",
+      "aggregation": "global confusion accumulation and G_sem person mean are separate metrics",
+      "failure_policy": "STRICT_COMPLETE or OPERATIONAL_EMPTY_FALLBACK mechanism tested; decision pending",
+      "LIP_support": "Target Exposed_torso unsupported; reject common-capability comparison requiring it",
+      "required_gates": ["accepted_context", "checkpoint_taxonomy_binding", "accepted_mapping_hash", "trusted_original_geometry", "all_predictions_valid", "accepted_GT_domain", "artifact_integrity", "inference_dependencies", "population_and_failure_acceptance"]
+    }
+  ],
+  "population_rule": "No semantic GT => semantic undefined, but unmatched G_loc remains localization FN. Unmatched G_sem => zero quality and retained denominator.",
+  "prohibited": ["prediction-created GT void", "per-model favorable denominator", "implicit unsupported-to-background", "calling draft numerical mapping semantic equivalence"]
+}

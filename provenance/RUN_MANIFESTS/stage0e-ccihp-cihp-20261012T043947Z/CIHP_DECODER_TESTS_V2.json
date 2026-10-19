@@ -1,0 +1,24 @@
+{
+  "run_id": "stage0e-ccihp-cihp-20261012T043947Z",
+  "timestamp_utc": "2026-10-12T04:49:42.187298+00:00",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/mhpv2-stage0/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_cihp_archive_preflight.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "log": "provenance/RUN_MANIFESTS/stage0e-ccihp-cihp-20261012T043947Z/CIHP_DECODER_TESTS_V2.log",
+  "log_sha256": "0ed75070e35a59f16fbf5e771f2b0dea377d9354d1d2002b25348cb7d892b7eb",
+  "model_inference": false,
+  "ccihp_pixel_tests_run": false,
+  "scope": "Existing converted-part decoder synthetic tests only",
+  "prior_failed_launch": "CIHP_DECODER_TESTS.json",
+  "prior_launch_cause": "Resolved venv interpreter symlink to base Python; omitted isolated site-packages. Corrected path invocation only; no dependency installation"
+}

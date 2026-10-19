@@ -1,0 +1,83 @@
+{
+  "recorded_at_utc": "2026-10-14T08:47:38.125186+00:00",
+  "scope": "READ_ONLY_HANDOFF_REVIEW_AND_ISOLATED_CPU_REFERENCE_SCRIPT_EXECUTION",
+  "handoff": "BENCHMARK_PROTOCOL_V2_IMPLEMENTATION_HANDOFF_TH_20261014.md",
+  "handoff_sha256_before": "aa30e92c652a3f86589a704633137cc1e70bc2bed97952cbb327a1c947260ebd",
+  "handoff_sha256_after": "aa30e92c652a3f86589a704633137cc1e70bc2bed97952cbb327a1c947260ebd",
+  "handoff_unchanged": true,
+  "source_reference_hash_validation": [
+    {
+      "file": "benchmark_spec_checks_20261014.py",
+      "sha256": "9b5888275e1eb92828c4601f23eb14ebbc3b0213d293522f7ab5c55ff632482c",
+      "declared_sha256_matches": true
+    },
+    {
+      "file": "benchmark_spec_checks_20261014_results.json",
+      "sha256": "928aa49429f98399aa38a6182d6d00e5b829eebc9b0f41d68bab5a46e5eda94e",
+      "declared_sha256_matches": true
+    },
+    {
+      "file": "operational_cases_spec_20261014.py",
+      "sha256": "419ac05239e7a5bdb8948f2160d71d7dcd2bb9fc25ff1df8986e61b07c330dd6",
+      "declared_sha256_matches": true
+    },
+    {
+      "file": "operational_cases_spec_20261014_results.json",
+      "sha256": "93090ae6ec1923a00785817c6a9e9840037cb013960bdcfd1808a63ccf9cc696",
+      "declared_sha256_matches": true
+    },
+    {
+      "file": "BENCHMARK_PROTOCOL_20_VARIANTS_V2_DECISIONS_APPENDIX_TH_20261014.md",
+      "sha256": "0fa45ba933255a474b2ce7b27c7dbe3423063cf63033dd018fcfad7ed9ccc80a",
+      "declared_sha256_matches": true
+    },
+    {
+      "file": "BENCHMARK_PROTOCOL_DECISIONS_APPENDIX_REVIEW_TH_20261014.md",
+      "sha256": "2b8b214bf24cb29ed1fc78362b6865edd707dc3c6a5cbc92b64eddfb99ab0f27",
+      "declared_sha256_matches": true
+    }
+  ],
+  "executions": [
+    {
+      "script": "benchmark_spec_checks_20261014.py",
+      "exit_code": 0,
+      "named_checks": 15,
+      "all_pass": true,
+      "reference_facts_match": true,
+      "original_environment": {
+        "numpy_version": "2.3.5",
+        "scipy_version": "1.17.0"
+      },
+      "current_environment": {
+        "numpy_version": "2.2.6",
+        "scipy_version": "1.15.3"
+      },
+      "output": "provenance/RUN_MANIFESTS/implementation-handoff-review-20261014T084737558371Z/execution/benchmark_spec_checks_20261014_results.json",
+      "output_sha256": "92fe97861945ef9fae7be1d44dd0f080d59b1dafeb211fe5b55b53ca3945b9b8"
+    },
+    {
+      "script": "operational_cases_spec_20261014.py",
+      "exit_code": 0,
+      "named_checks": 19,
+      "all_pass": true,
+      "reference_facts_match": true,
+      "original_environment": {},
+      "current_environment": {},
+      "output": "provenance/RUN_MANIFESTS/implementation-handoff-review-20261014T084737558371Z/execution/operational_cases_spec_20261014_results.json",
+      "output_sha256": "93090ae6ec1923a00785817c6a9e9840037cb013960bdcfd1808a63ccf9cc696"
+    }
+  ],
+  "assignment_graphs_in_first_script": 300,
+  "production_evaluator_or_runner_validated": false,
+  "scope_limit": "Scripts are standalone reference fixtures; no model, dataset or production implementation imports. Fact comparison excludes original vs current NumPy/SciPy version metadata.",
+  "safety": {
+    "model_inference": false,
+    "dataset_or_GT_modifications": false,
+    "PPSS_activity": false,
+    "scientific_source_modifications": false,
+    "checkpoint_download_or_package_install": false,
+    "study_state_changed": false,
+    "protocol_frozen": false,
+    "full_benchmark_started": false
+  }
+}

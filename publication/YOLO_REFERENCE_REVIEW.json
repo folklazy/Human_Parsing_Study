@@ -1,0 +1,144 @@
+{
+  "files_actually_inspected": [
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "README.md",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "69cef5acc6b4d44592ab035f5d2bdcc5784379c9085498abbbc621b62eb877d8",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/README.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "STUDY_STANDARD.md",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "56fc83d2a95a141b8b41baa2202ec16d20c00fb0558da6357112f182b751e460",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/STUDY_STANDARD.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "STUDY_STATE.json",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "9c950fa6b1d53ea6446b334ff0315d8c910052b8baf62ea7632eba2b5d342e04",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/STUDY_STATE.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "MASTER_RESULTS.md",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "22e8cd5490832a818ac06c790694346886896453c18801560ef75a4d2e4d4b24",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/MASTER_RESULTS.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "METHODOLOGY_REFERENCE.md",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "ab5056ed987d0e97d6b8c57346910d8753e3c5fa05785857a445203ee1c23216",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/METHODOLOGY_REFERENCE.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "DATA_SCHEMA.md",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "1e27f9d7ca0ef653a6edc1aaf76b3d8defda54d065c16ab25790887ec4e5ad1c",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/DATA_SCHEMA.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "provenance/SOURCE_MANIFEST.json",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "2d82cf21e1fb082ad8c7535638b1bd20f79bb536706a67807017484ab9a4263e",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/provenance/SOURCE_MANIFEST.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "provenance/MASTER_VALIDATION.json",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "4d217758fb66326f7c2a952e513b5a63883f8f95343f9378245bc04040a941de",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/provenance/MASTER_VALIDATION.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "local_file": "provenance/DATASET_VALIDATION.json",
+      "source_commit": "5551593459646fe42494958192e5410805ab4b48",
+      "sha256": "f60754f0e6ac42be05959db29ee513cb9d6665d541d248ff5ef0bad216e20e7a",
+      "source_url": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/5551593459646fe42494958192e5410805ab4b48/provenance/DATASET_VALIDATION.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "README.md",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "c336743f8d4a6b9a955176421d8d98d45ca0d91ee4be666771f53e420277bf0b",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/README.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "REPORT.md",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "547aa5ad0f91b4eaf95cc6324291846e632268e995091a29139cd5a9df83e8bd",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/REPORT.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "RESULTS_SUMMARY_TH.md",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "61ccf9ffc0d2b2f185fb32b4e8f19eab24ebe9e40bdf4d0d6c4f2495fb9c1a23",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/RESULTS_SUMMARY_TH.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "PRESENTATION_SUMMARY_TH.md",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "b9e527452f329b1e745f47f917b38a755951ea3a850e4d206b011aa5bd8f6dd0",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/PRESENTATION_SUMMARY_TH.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "EXPERIMENT_PROTOCOL.md",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "92c50d02bd4209afc6923197f674cbc1149f5a10b6da521fe16224652a0dc5c0",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/EXPERIMENT_PROTOCOL.md",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "manifests/STANDARDIZATION.json",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "7f7ad80d11887adbb92eaafc61ac3fc6d69b27227dd0cb05c57270b3267f5bc3",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/manifests/STANDARDIZATION.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "manifests/dataset_manifest.json",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "d490a0bb880d01806a546419305c61ab668e44361f36987226f98880a34127a7",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/manifests/dataset_manifest.json",
+      "inspection": "READ_ONLY"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "local_file": "metrics/TIER_RESULTS.csv",
+      "source_commit": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "sha256": "36ea47db9225ffd91aa77c45313ccb858a7bdb8ad5f442fa62d97afe3ca0d4b5",
+      "source_url": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark/blob/56adbc9f8dfcbbfe37c9a254cb04007650427617/metrics/TIER_RESULTS.csv",
+      "inspection": "READ_ONLY"
+    }
+  ],
+  "tier_DATA_SCHEMA_md": "ABSENT; canonical schema inspected in Master",
+  "tier_DATASET_DETAILS_md": "ABSENT; dataset evidence inspected in tier manifest and Master methodology",
+  "handoff_files": "No dedicated handoff files found in the two inspected repositories; Human Parsing handoff is newly authored",
+  "YOLO_modified": false
+}

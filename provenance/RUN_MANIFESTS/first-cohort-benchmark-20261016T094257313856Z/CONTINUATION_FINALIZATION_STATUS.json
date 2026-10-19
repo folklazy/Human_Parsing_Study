@@ -1,0 +1,10 @@
+{
+  "stage_index": 3,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/../.venvs/mhpv2-stage0/bin/python",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/publish_first_cohort_benchmark_results.py"
+  ],
+  "status": "COMPLETE",
+  "utc": "2026-10-19T03:56:45.861131+00:00",
+  "exit_code": 0
+}

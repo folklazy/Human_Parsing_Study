@@ -1,0 +1,25 @@
+[
+  {
+    "stage": "yolo",
+    "command": [
+      "/home/skyaidev/folk/Human-Body-Extraction/.venv/bin/python",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_live_route.py",
+      "--phase",
+      "yolo",
+      "--route",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route"
+    ],
+    "exit_code": 0,
+    "cold_process_wall_seconds_not_benchmark": 8.309997870121151
+  },
+  {
+    "stage": "cpi",
+    "command": [
+      "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+      "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/live_route/scripts/worker_wrapper.py",
+      "run_cpi.py"
+    ],
+    "exit_code": 0,
+    "cold_process_wall_seconds_not_benchmark": 29.063898894004524
+  }
+]

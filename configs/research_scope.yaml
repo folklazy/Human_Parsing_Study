@@ -1,0 +1,28 @@
+schema_version: '1.0'
+decision_id: 5A
+decision_source: Explicit user clarification; continuation authorizes documentation
+  only
+recorded_utc: '2026-10-12T04:27:17.486415+00:00'
+intended_use: NONCOMMERCIAL_ACADEMIC_RESEARCH_EVALUATION
+independent_student_research: true
+company_rd: false
+commercial_product_development: false
+objective: Compare pretrained human parsing for body/clothing/supported accessories
+company_cctv:
+  role: LATER_FINALIST_RESEARCH_EVALUATION_DATA_ONLY
+  provision_implies_sponsorship: false
+  owner_permission: NOT_VERIFIED_IN_THIS_REVIEW
+  privacy_safeguards: REQUIRED_BEFORE_LATER_FIELD_TEST
+  inference_authorized_now: false
+commercial_deployment: OUT_OF_SCOPE_SEPARATE_FUTURE_LICENSE_REVIEW
+academic_status_overrides_explicit_restrictions: false
+sapiens2: LICENSE_BLOCKED_PENDING_APPLICABLE_SURVEILLANCE_RESEARCH_PERMISSION
+ppss: PAUSED_DO_NOT_ACCESS
+common_taxonomy: DRAFT_NOT_FROZEN
+fashn_checkpoint_download_authorized: false
+fashn_checkpoint_inference_authorized: false
+heavyweight_dependency_install_authorized: false
+full_benchmark_authorized: false
+stage1_authorized: false
+training_authorized: false
+hybrid_authorized: false

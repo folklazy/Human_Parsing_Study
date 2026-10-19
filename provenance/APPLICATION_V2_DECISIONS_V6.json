@@ -1,0 +1,355 @@
+{
+  "schema_version": "2.0",
+  "record_id": "FIRST_COHORT_POLICIES_ACCEPTED_EVIDENCE_SEPARATE_20261016_V6",
+  "accepted_scope": "User requested implementation sequence including bounded TRAIN integration; no full benchmark or freeze.",
+  "source": "Explicit user acceptance of all five first-cohort policies, native thresholds and three bounded corrections; no freeze/full benchmark",
+  "decisions": [
+    {
+      "id": "IDENTITY_PROVENANCE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Native capability and externally conditioned final identity are distinct; T3b retains both origins.",
+      "bindings": {
+        "identity.external_identity_establishes_native_capability": false,
+        "identity.retain_both_origins": true,
+        "identity.unsupported_native_count": null,
+        "identity.supported_empty_native_count": 0
+      }
+    },
+    {
+      "id": "STAGE_RATES",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Stage/unit/numerator/denominator required; routing skips differ from completion/failure.",
+      "bindings": {
+        "rates.require_stage_and_counts": true,
+        "rates.zero_denominator": null,
+        "rates.skip_status": "SKIPPED_BY_ROUTING",
+        "rates.eligibility_source": "FROZEN_POLICY"
+      }
+    },
+    {
+      "id": "CONFIG_AUTHORITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Executable config is the sole runtime authority; accepted decision conflicts must fail.",
+      "bindings": {
+        "governance.runner_source": "EXECUTABLE_CONFIG",
+        "governance.reject_decision_conflicts": true,
+        "governance.drafts_allowed_for_development": true,
+        "authorization.full_benchmark": false
+      }
+    },
+    {
+      "id": "PRIMARY_POPULATION",
+      "status": "PROPOSED",
+      "reason": "Controlled4961/source5000 requires role acceptance and actual cohort sidecars.",
+      "bindings": {}
+    },
+    {
+      "id": "COMMON_TAXONOMY",
+      "status": "PROPOSED",
+      "reason": "Numeric candidate mappings do not imply semantic equivalence or a frozen universal leaderboard.",
+      "bindings": {}
+    },
+    {
+      "id": "APPLICATION_MATCHING",
+      "status": "PROPOSED",
+      "reason": "BBox0.50/0.75 and cardinality-first are development defaults pending complete readiness.",
+      "bindings": {}
+    },
+    {
+      "id": "FULL_BENCHMARK_EXECUTION",
+      "status": "PROPOSED",
+      "reason": "Explicit execution scope is not authorized by design review.",
+      "bindings": {}
+    },
+    {
+      "id": "BOUNDED_TRAIN_INTEGRATION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User explicitly requested step4 bounded TRAIN integration for missing track checks; existing YOLO26x/FASHN checkpoints and prior approved parser workflow reused.",
+      "bindings": {
+        "authorization.bounded_train_inference": true,
+        "authorization.allowed_modes": [
+          "CPU_FIXTURES",
+          "SAVED_TRAIN_REPLAY",
+          "BOUNDED_TRAIN"
+        ],
+        "bounded_train.input_ids": [
+          "0021834",
+          "0000930",
+          "0001368"
+        ],
+        "bounded_train.maximum_frames": 3,
+        "bounded_train.maximum_person_jobs": 10,
+        "bounded_train.models": [
+          "YOLO26X_FROZEN",
+          "FASHN_B4"
+        ],
+        "authorization.new_inference": true
+      }
+    },
+    {
+      "id": "OFFICIAL_ACQUISITION_AND_NATIVE_FEASIBILITY",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Handoff1.1 appendix: all public official parser variants; licensed TRAIN1-3 FP32 only, no full benchmark",
+      "bindings": {
+        "acquisition.public_official_only": true,
+        "acquisition.individual_approval_required": false,
+        "acquisition.preserve_existing": true,
+        "native_feasibility.maximum_frames_per_variant": 3,
+        "native_feasibility.split": "Training",
+        "native_feasibility.precision": "FP32",
+        "native_feasibility.license_gate_required": true
+      }
+    },
+    {
+      "id": "PRIMARY_SCORE_COMPLETENESS",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepts STRICT_COMPLETE as main score; preserve INCOMPLETE rows and operational diagnostics; valid empty is successful execution",
+      "acceptance_scope": "Policy definition only. Actual mapping/domain/population/matching/route/runtime and full benchmark remain unaccepted.",
+      "bindings": {
+        "primary_reporting_policy": {
+          "main_score": "STRICT_COMPLETE",
+          "incomplete_systems_retained": true,
+          "incomplete_main_score": null,
+          "success_only_is_main_score": false,
+          "operational_diagnostics_required": true,
+          "valid_empty_is_execution_success": true,
+          "posthoc_population_exclusion": false,
+          "posthoc_model_retries": false,
+          "reference_unit": "FROZEN_POPULATION_FRAME",
+          "eligibility_source": "PREDECLARED_POPULATION",
+          "stage_rates_separate": true
+        }
+      }
+    },
+    {
+      "id": "CHECKPOINT_SPECIFIC_COHORTS",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepts grouping by verified checkpoint-specific target support/mapping, not dataset names; no selective voiding or cross-domain rankings",
+      "acceptance_scope": "Policy definition only. Actual mapping/domain/population/matching/route/runtime and full benchmark remain unaccepted.",
+      "bindings": {
+        "cohort_policy": {
+          "membership_basis": "CHECKPOINT_SPECIFIC_VERIFIED_SUPPORT_AND_MAPPING_EVIDENCE",
+          "dataset_name_implies_eligibility": false,
+          "per_model_target_voiding": false,
+          "cross_domain_rankings": false,
+          "shared_view_requires_comparison_revision": true,
+          "first_ready_group_need_not_wait_for_shared_view": true,
+          "support_binding_required": true
+        }
+      }
+    },
+    {
+      "id": "PATCH_PROVENANCE_SCOPE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "Missing remote ZIP is provenance limitation, not a gate if current source behavior is independently tested",
+      "bindings": {
+        "governance.missing_patch_zip_is_freeze_gate": false
+      }
+    },
+    {
+      "id": "FIRST_COHORT_MAPPING",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.mapping": {
+          "mapping": "taxonomy/APPLICATION_BODY_CLOTHING_CANDIDATE_V2.json",
+          "mapping_file_sha256": "0848a6f8ab6439a92a57f23acd8e09b0943d8c8918cdd2c01336b2b55365fa50",
+          "target_catalog": {
+            "0": "Background",
+            "1": "Exposed_face",
+            "2": "Exposed_torso",
+            "3": "Exposed_arms",
+            "4": "Exposed_legs",
+            "5": "Garments_coarse",
+            "6": "Footwear"
+          },
+          "target_catalog_sha256": "5922ca6f40781dd59ed3f698606c85d45e50c48b4c99e76bc0a2be4a1a4d3a97",
+          "GT_projection_sha256": "029cc191397416bbb177c8ec4a864d2157d648f51d551f4671ad002e6085f522",
+          "per_checkpoint_native_projections": {
+            "CPI_R50_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358",
+            "CPI_ConvNeXtB_CIHP": "356acb09ce15c6e9d08e086c4e01977cc284b272f8b4b98dfcf4e8aa68323358"
+          },
+          "evidence_table": "taxonomy/FIRST_COHORT_CPI_SOURCE_TO_TARGET_V1.csv",
+          "evidence_table_sha256": "b0cc2f8324d0b37a3b805e96d932b9bc7ec5c9a524766afe8dd2bebd25f02eb1",
+          "groups": {
+            "body": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "clothing": [
+              5
+            ],
+            "footwear": [
+              6
+            ]
+          },
+          "excluded_GT_ids": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            20,
+            21,
+            22
+          ],
+          "policy": "FIXED_COMMON_TARGET_WITH_CHECKPOINT_SPECIFIC_NATIVE_PROJECTIONS",
+          "fine_clothing_or_accessory_quality_claim": false,
+          "native_CIHP_equivalence_claim": false,
+          "definitions": {
+            "1": "Source-declared Face region; not a claim of an independent skin detector",
+            "2": "Torso-skin",
+            "3": "Union of left/right naked arm regions; hands only if included by source labels",
+            "4": "Union of left/right naked leg regions",
+            "5": "Selected garments: GT5,7,8,9,11,12; CIHP5,6,7,8,9,11,12. Socks/scarf included; headwear/gloves excluded",
+            "6": "Union of left/right shoe labels; no independent bare-foot target"
+          },
+          "display_names": {
+            "1": "Face region"
+          }
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_GT_DOMAIN",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.domain": {
+          "policy_id": "CCIHP_RELEASED_ANNOTATION_RELATIVE_CORE_R1",
+          "reference": "RELEASED_CCIHP_CATEGORY_AND_HUMAN_IDS_NOT_EXHAUSTIVE_PHYSICAL_TRUTH",
+          "category0_human0": "KNOWN_NEGATIVE_RELATIVE_TO_RELEASED_ANNOTATION",
+          "category0_human_positive": "VOID_UNKNOWN",
+          "unknown22": "VOID_SHARED_RAW_PRESERVED",
+          "known_outside_target": "VOID_SHARED",
+          "other_known_person_pixels": "NEGATIVE_FOR_TARGET_PERSON_WHERE_SHARED_VALID",
+          "association_uses_GT": false,
+          "categorical_resampling": "NONE_GT_ORIGINAL_GRID",
+          "FP_wording": "UNMATCHED_PREDICTION_RELATIVE_TO_RELEASED_ANNOTATION_UNDER_THIS_POLICY",
+          "person_mask": "NATIVE_HUMAN_ID_FOREGROUND_ALL_SOURCE_SEMANTICS",
+          "G_loc": "EVERY_POSITIVE_NATIVE_HUMAN_ID_WITH_NONEMPTY_RELEASED_MASK",
+          "G_sem": "G_LOC_SUBSET_WITH_AT_LEAST_ONE_VALID_TARGET_1_TO_6_PIXEL",
+          "person_semantic_truth": "TARGET_LABEL_INSIDE_THIS_HUMAN_ID_ELSE_BG_ON_SHARED_VALID_DOMAIN",
+          "per_image_GT_domain_binding": "SOURCE_MAP_HASHES_PLUS_GT_PROJECTION_DOMAIN_POLICY_AND_G_LOC_G_SEM",
+          "recipe_hash_is_decoded_mask_hash": false,
+          "category_positive_human0_global": "KEEP_KNOWN_TARGET_ON_SHARED_GLOBAL_SEMANTIC_DOMAIN",
+          "category_positive_human0_per_person": "VOID_OWNER_UNKNOWN",
+          "owner_unknown_scope_clarification_is_policy_change": false,
+          "policy_sha256": "c62d9f07a684b9d5be213c1c463624e84134f99d6081c37d28414c75ff41bcc0"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_POPULATION",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.population": {
+          "main": "overlap_controlled_source_target",
+          "reference": "original_source_target",
+          "main_images": 4961,
+          "main_G_loc": 17434,
+          "main_G_sem": 17390,
+          "reference_images": 5000,
+          "reference_G_loc": 17548,
+          "reference_G_sem": 17504,
+          "main_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/overlap_controlled_source_target_expected_frames.jsonl",
+          "main_manifest_sha256": "33ad0cd5630efe1f979a9c0b31dfcee8941e633cc5b07c9b2de8855dc8b83b11",
+          "reference_manifest": "provenance/RUN_MANIFESTS/first-cohort-readiness-20261015T083834196479Z/original_source_target_expected_frames.jsonl",
+          "reference_manifest_sha256": "a79a4674464169b2d59798681c186e9dfc16eac970efcf2316414edfc42cd2cd",
+          "main_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/overlap_controlled_source_target_persons.jsonl",
+          "main_person_sidecar_sha256": "d315bf67afbacbf4677a34e2cfd96d34ba62b16aa99b96baddf2431b86692900",
+          "reference_person_sidecar": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+          "reference_person_sidecar_sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+          "exclusions": "39_VALIDATION_IDS_WITH_EXACT_DECODED_TRAIN_RGB_REUSE_ONLY",
+          "within_validation_duplicates": "RETAIN_SOURCE_MEMBERSHIP_2_IDS_1_GROUP_DISCLOSED",
+          "near_duplicates": "114_PAIRS_RISK_SCREEN_ONLY_NO_NEW_EXCLUSIONS",
+          "exposure_claim": "NOT_TRAINING_EXPOSURE_FREE_OR_ARCHITECTURE_CONTROLLED"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_MATCHING",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.matching": {
+          "association": {
+            "threshold": 0.5,
+            "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+            "left_bbox_source": "FROZEN_YOLO26X_BOX",
+            "right_bbox_source": "NATIVE_PARSER_BOX",
+            "uses_GT": false,
+            "accepted_for_benchmark": false
+          },
+          "final_prediction_to_GT": {
+            "threshold": 0.5,
+            "secondary_threshold": 0.75,
+            "geometry": "BBOX_XYXY_HALF_OPEN",
+            "objective": "ELIGIBLE_CARDINALITY_THEN_IOU",
+            "tie_policy": "SORT_IMMUTABLE_IDS_THEN_PINNED_SCIPY_1_15_3",
+            "evaluation_bbox_source": "NATIVE_PARSER_BOX",
+            "GT_bbox_source": "ORIGINAL_HUMAN_ID_HALF_OPEN_BBOX",
+            "conditioning_bbox_source": "FROZEN_YOLO26X_BOX",
+            "class_guided_rematching": false
+          },
+          "native_unassociated": "NOT_FINAL_T3B_OUTPUT_REPORT_NATIVE_ASSOCIATION_DIAGNOSTIC",
+          "unmatched_YOLO": "NO_FINAL_PERSON_RETAIN_OPPORTUNITY_DIAGNOSTIC",
+          "final_unmatched_GT": "LOC_FN_AND_ZERO_QUALITY_IF_G_SEM",
+          "final_unmatched_prediction": "ANNOTATION_RELATIVE_FP",
+          "semantic_undefined_GT": "RETAIN_G_LOC_NEVER_FORCE_SEMANTIC_ZERO_UNION_SCORE",
+          "zero_YOLO": "RUN_NATIVE_AS_CONFIGURED_FINAL_EMPTY_EXECUTION_COMPLETE_IF_NO_FAILURE",
+          "confidence_policy": "KEEP_OFFICIAL_CHECKPOINT_SPECIFIC_NATIVE_DEFAULTS_NO_QUALITY_TUNING",
+          "native_score_thresholds": {
+            "CPI_R50_CIHP": 0.01,
+            "CPI_ConvNeXtB_CIHP": 0.05
+          },
+          "visualization_threshold_is_metric_filter": false
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_RUNTIME_CLAIM",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User accepted the five policies after document/config review; owner-unknown scope and display name clarified",
+      "bindings": {
+        "first_cohort.protocol.runtime": {
+          "claim_scope": "QUALITY_ONLY_FIRST_COMPARISON",
+          "primary_precision": "FP32",
+          "compare_latency": false,
+          "compare_FPS": false,
+          "compare_VRAM": false,
+          "cost_Pareto": false,
+          "smoke_profiles": "FEASIBILITY_ONLY_NOT_REPEATED_COST_MEASUREMENTS",
+          "cost_extension": "SEPARATE_ACCEPTED_WORKLOAD_RESIDENCY_WARMUPS_SYNCHRONIZATION_CLEAN_REPEATS_REQUIRED"
+        }
+      },
+      "acceptance_scope": "POLICY_ONLY_NOT_INDEPENDENT_SOURCE_TEST_OR_SEMANTIC_BINDING_CERTIFICATION"
+    },
+    {
+      "id": "FIRST_COHORT_CHANNEL_GATE",
+      "status": "ACCEPTED_BY_USER",
+      "reason": "User explicitly requires direct official header/order evidence before VERIFIED semantic binding",
+      "bindings": {
+        "first_cohort.channel_order_evidence.required": true,
+        "first_cohort.channel_order_evidence.policy_acceptance_satisfies_gate": false,
+        "first_cohort.entrypoint.model_loading": false,
+        "first_cohort.entrypoint.legacy_engineering_is_active_roster": false,
+        "first_cohort.models": [
+          "CPI_R50_CIHP",
+          "CPI_ConvNeXtB_CIHP"
+        ],
+        "first_cohort.track": "T3B",
+        "first_cohort.entrypoint.mode": "DRY_RUN_ONLY",
+        "first_cohort.execution_spec.actual_inference_enabled": false
+      }
+    }
+  ],
+  "supersedes": "APPLICATION_V2_DECISIONS_V5"
+}

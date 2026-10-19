@@ -1,0 +1,311 @@
+{
+  "schema_version": "2.1",
+  "status": "DRAFT",
+  "purpose": "DRAFT taxonomy-specific projection; LIP lacks exposed torso; not a common-capability cohort approval",
+  "semantics_accepted": false,
+  "benchmark_eligible": false,
+  "source_evidence": [
+    "reports/CCIHP_FULL_QUALITY_AUDIT_STAGE0F.md",
+    "../Human_Parsing_CCIHP_10_Image_Pilot/taxonomy/NATIVE_CLASS_INVENTORY.json"
+  ],
+  "candidate_native_taxonomies": [
+    "CIHP",
+    "LIP"
+  ],
+  "target_catalog": {
+    "0": "Background",
+    "1": "Exposed_face",
+    "2": "Exposed_torso",
+    "3": "Exposed_arms",
+    "4": "Exposed_legs",
+    "5": "Garments_coarse",
+    "6": "Footwear"
+  },
+  "analysis_groups": {
+    "body": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "clothing": [
+      5
+    ],
+    "footwear": [
+      6
+    ]
+  },
+  "gt_mapping": {
+    "0": {
+      "disposition": "MAP",
+      "target_id": 0
+    },
+    "1": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "2": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "3": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "4": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "5": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "6": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "7": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "8": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "9": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "10": {
+      "disposition": "MAP",
+      "target_id": 2
+    },
+    "11": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "12": {
+      "disposition": "MAP",
+      "target_id": 5
+    },
+    "13": {
+      "disposition": "MAP",
+      "target_id": 1
+    },
+    "14": {
+      "disposition": "MAP",
+      "target_id": 3
+    },
+    "15": {
+      "disposition": "MAP",
+      "target_id": 3
+    },
+    "16": {
+      "disposition": "MAP",
+      "target_id": 4
+    },
+    "17": {
+      "disposition": "MAP",
+      "target_id": 4
+    },
+    "18": {
+      "disposition": "MAP",
+      "target_id": 6
+    },
+    "19": {
+      "disposition": "MAP",
+      "target_id": 6
+    },
+    "20": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "21": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    },
+    "22": {
+      "disposition": "VOID",
+      "reason": "Outside this candidate cohort or unresolved source label"
+    }
+  },
+  "review_required": [
+    "Face/torso/limb boundary conventions",
+    "Socks/scarf inclusion in coarse garments",
+    "Coarse garments do not measure fine clothing category quality",
+    "Eligible checkpoint operating modes and training exposure"
+  ],
+  "prediction_mappings": {
+    "CIHP": {
+      "0": {
+        "disposition": "MAP",
+        "target_id": 0
+      },
+      "1": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "2": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "3": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "4": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "5": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "6": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "7": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "8": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "9": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "10": {
+        "disposition": "MAP",
+        "target_id": 2
+      },
+      "11": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "12": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "13": {
+        "disposition": "MAP",
+        "target_id": 1
+      },
+      "14": {
+        "disposition": "MAP",
+        "target_id": 3
+      },
+      "15": {
+        "disposition": "MAP",
+        "target_id": 3
+      },
+      "16": {
+        "disposition": "MAP",
+        "target_id": 4
+      },
+      "17": {
+        "disposition": "MAP",
+        "target_id": 4
+      },
+      "18": {
+        "disposition": "MAP",
+        "target_id": 6
+      },
+      "19": {
+        "disposition": "MAP",
+        "target_id": 6
+      }
+    },
+    "LIP": {
+      "0": {
+        "disposition": "MAP",
+        "target_id": 0
+      },
+      "1": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "2": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "3": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "4": {
+        "disposition": "OUTSIDE_TARGET",
+        "reason": "Named native concept outside this draft task"
+      },
+      "5": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "6": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "7": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "8": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "9": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "10": {
+        "disposition": "MAP",
+        "target_id": 5,
+        "reason": "LIP Jumpsuits; CIHP ID10 is Torso-skin"
+      },
+      "11": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "12": {
+        "disposition": "MAP",
+        "target_id": 5
+      },
+      "13": {
+        "disposition": "MAP",
+        "target_id": 1
+      },
+      "14": {
+        "disposition": "MAP",
+        "target_id": 3
+      },
+      "15": {
+        "disposition": "MAP",
+        "target_id": 3
+      },
+      "16": {
+        "disposition": "MAP",
+        "target_id": 4
+      },
+      "17": {
+        "disposition": "MAP",
+        "target_id": 4
+      },
+      "18": {
+        "disposition": "MAP",
+        "target_id": 6
+      },
+      "19": {
+        "disposition": "MAP",
+        "target_id": 6
+      }
+    }
+  },
+  "unsupported_targets": {
+    "CIHP": [],
+    "LIP": [
+      2
+    ]
+  }
+}

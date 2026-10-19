@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-10-19T08:09:40.392474+00:00",
+  "files": [
+    {
+      "source_path": "provenance/MODEL_SOURCE_AUDIT.json",
+      "public_path": "provenance/MODEL_SOURCE_AUDIT.json",
+      "bytes": 626653,
+      "sha256": "b771111a2f44a8ed5c39cfc461f53df4f794e00bd9fb0c2543c54af2048fc0a7",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    }
+  ],
+  "reason": "Raw HTTP/cookie capture is not necessary for portable tests or scientific result publication; original remains unchanged; no cookie values exposed"
+}

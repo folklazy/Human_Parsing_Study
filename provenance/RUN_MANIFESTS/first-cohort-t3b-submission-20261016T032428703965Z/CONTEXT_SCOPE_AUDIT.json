@@ -1,0 +1,21 @@
+{
+  "status": "TARGETED_SOURCE_REVIEW",
+  "mapping_hash": "COMMON_BUNDLE_HASH_NOT_EQUAL_NATIVE_PROJECTION_HASH",
+  "CIHP_ID10": {
+    "disposition": "MAP",
+    "target_id": 2
+  },
+  "LIP_ID10": {
+    "disposition": "MAP",
+    "target_id": 5,
+    "reason": "LIP Jumpsuits; CIHP ID10 is Torso-skin"
+  },
+  "distinct_native_rules_in_shared_bundle": true,
+  "arbitrary_per_checkpoint_mapping_files": "NOT_IMPLEMENTED_NOT_NEEDED_FOR_THIS_CIHP_PAIR",
+  "domain_policy_common": true,
+  "domain_mask_equality_across_images_required": false,
+  "same_image_GT_domain_binding_now_checked": true,
+  "counts_per_image_may_differ": true,
+  "code_sha256": "b550db7afba1a8dd9088b83aaec3bb2a7f34e47a35e9e0de786c9a307864efe2",
+  "scope": "NO_ROSTER_EXPANSION"
+}

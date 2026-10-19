@@ -1,0 +1,46 @@
+{
+  "status": "DRAFT_WAITING_NATIVE_HUMAN_GT_FULL_AUDIT_APPROVAL",
+  "target_images": 200,
+  "split": "TRAIN_ONLY",
+  "seed": 20261008,
+  "selection_before_visual_review": true,
+  "purpose": "Independent annotation quality and dataset-suitability review, not protocol optimization on validation",
+  "strata_draft": {
+    "native_person_count": [
+      "2",
+      "3",
+      "4_or_more"
+    ],
+    "minimum_person_occupancy": [
+      "empirical train tertile 1",
+      "tertile 2",
+      "tertile 3"
+    ],
+    "image_pixel_area": [
+      "below train median",
+      "at_or_above train median"
+    ]
+  },
+  "allocation": "18 joint cells; proportional to eligible train cell size; largest-remainder allocation; seeded SRS without replacement within each cell; collapse empty cells; record actual inclusion probabilities; no fabricated cell sizes",
+  "eligibility": "Strictly readable paired original RGB/category/human/part IDs; retain all failures in separate integrity evidence; do not silently repair or delete",
+  "review": "All native person instances; original RGB, Human_ids and Category_ids plus per-human planes; record confirmed/suspected/uncertain separately; 2 independent reviewers where feasible",
+  "severity": [
+    "critical ownership/identity failure",
+    "major missing-region/class failure",
+    "minor boundary disagreement",
+    "uncertain",
+    "no_issue_observed"
+  ],
+  "rare_label_diagnostics": "Additional separately named purposive train examples, outside prevalence sample unless probability-weighted",
+  "population_estimator": "Only after all sampled review outcomes are resolved; report strata weights, image-level and person-level denominators separately; uncertainty and reviewer disagreement; no prevalence estimate now",
+  "validation_policy": "Read-only integrity and duplication audit permitted; no model inference or tuning; preserve official list; any sensitivity view additional only",
+  "dataset_downloaded": false,
+  "sample_image_ids": [],
+  "schema_version": "1.1",
+  "supersedes": "manifests/CIHP_QUALITY_REVIEW_PLAN_V1.json",
+  "archive_available": true,
+  "native_person_GT_available": false,
+  "downloaded_by_this_execution": false,
+  "critical_prerequisite": "Fidelity-verified native Human_ids + semantic/part maps; part-object count is not person count",
+  "semantic_only_alternative": "Separate review design after explicit scope approval; cannot silently substitute person-count strata"
+}

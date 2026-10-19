@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+  "semantic_binding_eligible": true,
+  "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+  "original_training_header_verified": false,
+  "creator_confirmation_received": false,
+  "all_classes_correct_required": false,
+  "models": {
+    "CPI_R50_CIHP": {
+      "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "expected_native_class_order": [
+        "Background",
+        "Hat",
+        "Hair",
+        "Gloves",
+        "Sunglasses",
+        "UpperClothes",
+        "Dress",
+        "Coat",
+        "Socks",
+        "Pants",
+        "Torso-skin",
+        "Scarf",
+        "Skirt",
+        "Face",
+        "Left-arm",
+        "Right-arm",
+        "Left-leg",
+        "Right-leg",
+        "Left-shoe",
+        "Right-shoe"
+      ],
+      "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+      "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+      "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+      "original_training_header_verified": false,
+      "components": {
+        "PUBLISHED_PAPER_REPOSITORY_LINK": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+          "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+        },
+        "OFFICIAL_RELEASE_TABLE": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+          "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+        },
+        "CHECKPOINT_EMBEDDED_CONFIG": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+          "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+        },
+        "NUMERIC_PROCESSING_SOURCE_TRACE": {
+          "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+          "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+        },
+        "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+          "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+          "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+        }
+      },
+      "limitations": [
+        "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+        "Visual sanity is not all-class accuracy certification"
+      ]
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "status": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "expected_native_class_order": [
+        "Background",
+        "Hat",
+        "Hair",
+        "Gloves",
+        "Sunglasses",
+        "UpperClothes",
+        "Dress",
+        "Coat",
+        "Socks",
+        "Pants",
+        "Torso-skin",
+        "Scarf",
+        "Skirt",
+        "Face",
+        "Left-arm",
+        "Right-arm",
+        "Left-leg",
+        "Right-leg",
+        "Left-shoe",
+        "Right-shoe"
+      ],
+      "proof_kind": "CONVERGING_PAPER_RELEASE_CONFIG_SOURCE_AND_TRAIN_REVIEW",
+      "provenance_review": "ACCEPTED_WITH_INDIRECT_EVIDENCE",
+      "policy_decision_id": "CPI_STANDARD_CIHP_CONVERGING_EVIDENCE_20261016_V1",
+      "original_training_header_verified": false,
+      "components": {
+        "PUBLISHED_PAPER_REPOSITORY_LINK": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PUBLISHED_ABSTRACT_LINK.json",
+          "sha256": "54821d7976a943af82dc8b8ce2e69a59db38f3bda4e084371a9193b0f22dec5d"
+        },
+        "OFFICIAL_RELEASE_TABLE": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/PAPER_README_COMPARISON.json",
+          "sha256": "87ea7b3335d825d5c5328807ed1ae6d0e7b0bdbcd060209e78c616237e41937d"
+        },
+        "CHECKPOINT_EMBEDDED_CONFIG": {
+          "path": "provenance/RUN_MANIFESTS/cpi-paper-taxonomy-reassessment-20261016T065136837053Z/EMBEDDED_CONFIG_EVIDENCE.json",
+          "sha256": "20f8a4156d03552ea785579b22756f87911d2e4d714332f82563695572040d53"
+        },
+        "NUMERIC_PROCESSING_SOURCE_TRACE": {
+          "path": "provenance/RUN_MANIFESTS/cpi-channel-order-source-investigation-20261016T043120768600Z/SOURCE_TRACE.json",
+          "sha256": "78c434fabb39235225f93360edc4ab3848954aac1506f64c0856dc8e86c75a11"
+        },
+        "SAVED_TRAIN_BEHAVIORAL_REVIEW": {
+          "path": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/TRAIN_BEHAVIORAL_REVIEW.json",
+          "sha256": "dac9a40c54c46a90f4d7375db0a8b28e9f46c607df19daad10509a35bd754f38"
+        }
+      },
+      "limitations": [
+        "Standard CIHP order inferred from converging release evidence, not direct annotation header",
+        "Visual sanity is not all-class accuracy certification"
+      ]
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "scope": "Standalone reference specification only; not project bbox/matching/runner or GPU validation",
+  "new_named_cases": 19,
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "neighbor_contamination_hidden_by_composition",
+      "status": "PASS",
+      "q_person_sem_gt": 1,
+      "global_miou": 1,
+      "person_A_precision": 0.5,
+      "person_A_fg_iou": 0.5,
+      "person_A_fp": 2,
+      "person_fg_macro": 0.75,
+      "paired_pixel_micro_precision": 0.6666666666666666
+    },
+    {
+      "name": "foreground_must_use_cohort_catalog_not_person_gt_support",
+      "status": "PASS",
+      "erroneous_K_A_only_precision": 1,
+      "common_catalog_precision": 0.5
+    },
+    {
+      "name": "unmapped_counts_on_valid_negative_domain",
+      "status": "PASS",
+      "fp": 1,
+      "precision": 0.6666666666666666
+    },
+    {
+      "name": "gt_void_and_valid_background_have_different_dispositions",
+      "status": "PASS",
+      "ignored_void_pixels": 1,
+      "valid_background_fp": 1
+    },
+    {
+      "name": "no_output_precision_undefined_quality_zero",
+      "status": "PASS",
+      "precision": null,
+      "recall": 0,
+      "fg_iou": 0
+    },
+    {
+      "name": "half_open_boxes_touching_edges_are_not_overlap",
+      "status": "PASS",
+      "adjacent_iou": 0,
+      "identical_iou": 1
+    },
+    {
+      "name": "bbox_exact_threshold",
+      "status": "PASS",
+      "iou": 0.5,
+      "passes_point50": true,
+      "passes_point75": false
+    },
+    {
+      "name": "floating_box_coordinate_reference",
+      "status": "PASS",
+      "iou": 0.5
+    },
+    {
+      "name": "zero_area_and_nonfinite_boxes_invalid",
+      "status": "PASS",
+      "geometry_eligible": false,
+      "note": "Invalid geometry remains ineligible even at threshold0."
+    },
+    {
+      "name": "bbox_uniform_scale_invariance",
+      "status": "PASS",
+      "iou": 0.3333333333333333
+    },
+    {
+      "name": "bbox_original_grid_clipping",
+      "status": "PASS",
+      "clipped": [
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "perfect_emitted_identity_bbox_sparse_parsing_mask",
+      "status": "PASS",
+      "bbox_iou": 1,
+      "mask_iou": 0.01,
+      "note": "Emitted box is independently supplied; it is not derived from sparse mask."
+    },
+    {
+      "name": "prediction_box_source_changes_localization",
+      "status": "PASS",
+      "detector_identity_iou": 1,
+      "sparse_mask_derived_iou": 0.01
+    },
+    {
+      "name": "execution_emission_target_availability_are_distinct",
+      "status": "PASS",
+      "outside_target": [
+        true,
+        true,
+        false
+      ],
+      "all_background": [
+        true,
+        false,
+        false
+      ],
+      "target": [
+        true,
+        true,
+        true
+      ],
+      "invalid_contract": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "availability_does_not_use_gt_void",
+      "status": "PASS",
+      "target_available": true,
+      "evaluable_gt": false
+    },
+    {
+      "name": "person_route_partial_retention",
+      "status": "PASS",
+      "finalized_emissions": 2,
+      "missing_persons": 1,
+      "semantic_quality": 0.6666666666666666
+    },
+    {
+      "name": "frame_all_or_nothing_failure",
+      "status": "PASS",
+      "finalized_emissions": 0,
+      "missing_persons": 3,
+      "semantic_quality": 0
+    },
+    {
+      "name": "atomic_artifact_commit_can_retain_partial_outputs",
+      "status": "PASS",
+      "retained": 2,
+      "note": "Checks packet semantics/JSON roundtrip, not actual filesystem atomicity."
+    },
+    {
+      "name": "no_detector_opportunities_does_not_remove_gt_denominator",
+      "status": "PASS",
+      "opportunities": 0,
+      "execution_rate": null,
+      "gt_person_target_availability": 0,
+      "semantic_quality": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "script_sha256": "7a452bfa344a63d4cfa578ed2620e358605312a5bcc4389fdc39f351866f5024",
+  "source_report_schema": "Unmodified external canonical report",
+  "public_schema": "COMPACT_DERIVED_VIEW_1.0",
+  "reports": [
+    {
+      "source_path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_PRIMARY_REPORT.json",
+      "source_sha256": "13757995b7ace820550e3977bfc7a2f46d8cc56c6417ffa3fa59f2b8ae6e6170",
+      "public_path": "cohorts/first_cpi_t3b/reports/MAIN_PRIMARY_REPORT.json",
+      "public_sha256": "5e16e39b0067cb56a337d1da7c9360031679d28f39ab1f2bb1c02e5b6ee7be21",
+      "retained_score_fields_equal": true
+    },
+    {
+      "source_path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/MAIN_SECONDARY_REPORT.json",
+      "source_sha256": "6a2657672791dfe4747e5c9b1904c50e13bb6c469f4345343a8a64306019d8f3",
+      "public_path": "cohorts/first_cpi_t3b/reports/MAIN_SECONDARY_REPORT.json",
+      "public_sha256": "e52115df91e06f51da7e3818eef5f954e936ef73d5f54f7aa69c810ffd80209b",
+      "retained_score_fields_equal": true
+    },
+    {
+      "source_path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_PRIMARY_REPORT.json",
+      "source_sha256": "0b492d461d2c6c1056aec7e01fd7f9ded66d003a3e5f7c0bf4023e5bc8c58be2",
+      "public_path": "cohorts/first_cpi_t3b/reports/REFERENCE_PRIMARY_REPORT.json",
+      "public_sha256": "2df3b7ec5ba9a659743489e37408cf8395555288250b3f070865b664d9a0a0e1",
+      "retained_score_fields_equal": true
+    },
+    {
+      "source_path": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/REFERENCE_SECONDARY_REPORT.json",
+      "source_sha256": "ada91bdae8f77f29e0a76cadeeacbfacba5d89364f47ddbf7886c99839b0d5ca",
+      "public_path": "cohorts/first_cpi_t3b/reports/REFERENCE_SECONDARY_REPORT.json",
+      "public_sha256": "c3e1905b8d493192469bae696d78abb7ee9cb3f6d33f2778ac05190bc10b6541",
+      "retained_score_fields_equal": true
+    }
+  ]
+}

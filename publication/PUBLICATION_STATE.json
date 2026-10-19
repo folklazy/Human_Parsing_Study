@@ -1,0 +1,14 @@
+{
+  "status": "READY_FOR_SINGLE_PUBLIC_APPROVAL",
+  "proposed_owner": "folklazy",
+  "proposed_repository": "Human_Parsing_Study",
+  "proposed_visibility": "public",
+  "remote_created": false,
+  "public_url": null,
+  "publish_approval_required": true,
+  "full_benchmark_authorized": false,
+  "remote_configured": false,
+  "push_attempted": false,
+  "public_anonymous_access_verified": false,
+  "scope": "ONE_NEW_PUBLIC_REPOSITORY_POST_RUN_SNAPSHOT_ONLY"
+}

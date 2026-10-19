@@ -1,0 +1,333 @@
+{
+  "status": "PASS",
+  "scope": "SAVED_TRAIN_LIFECYCLE_ASSOCIATION_AND_PACKET_PATH_ONLY_NOT_FRESH_MODEL_EXECUTION",
+  "frames": [
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0021834",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0021834",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.006733751157298684
+      },
+      "native_instances": 2,
+      "YOLO_opportunities": 6,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0021834:YOLO:0",
+            "native_instance_id": "native:1",
+            "iou": 0.9791817731587501
+          },
+          {
+            "source_opportunity_id": "0021834:YOLO:2",
+            "native_instance_id": "native:0",
+            "iou": 0.9776790166634153
+          }
+        ],
+        "unmatched_opportunities": [
+          "0021834:YOLO:1",
+          "0021834:YOLO:3",
+          "0021834:YOLO:4",
+          "0021834:YOLO:5"
+        ],
+        "unmatched_native_instances": []
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 6,
+        "denominator": 6,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_R50_CIHP/0021834",
+      "score_result": null
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0021834",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0021834",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.00636325404047966
+      },
+      "native_instances": 2,
+      "YOLO_opportunities": 6,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0021834:YOLO:0",
+            "native_instance_id": "native:0",
+            "iou": 0.9751760110121825
+          },
+          {
+            "source_opportunity_id": "0021834:YOLO:2",
+            "native_instance_id": "native:1",
+            "iou": 0.9761174994223318
+          }
+        ],
+        "unmatched_opportunities": [
+          "0021834:YOLO:1",
+          "0021834:YOLO:3",
+          "0021834:YOLO:4",
+          "0021834:YOLO:5"
+        ],
+        "unmatched_native_instances": []
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 6,
+        "denominator": 6,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_ConvNeXtB_CIHP/0021834",
+      "score_result": null
+    },
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0000930",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0000930",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.006411354057490826
+      },
+      "native_instances": 2,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0000930:YOLO:0",
+            "native_instance_id": "native:1",
+            "iou": 0.9786989048811795
+          },
+          {
+            "source_opportunity_id": "0000930:YOLO:1",
+            "native_instance_id": "native:0",
+            "iou": 0.9858399440323562
+          }
+        ],
+        "unmatched_opportunities": [],
+        "unmatched_native_instances": []
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_R50_CIHP/0000930",
+      "score_result": null
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0000930",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0000930",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.0064140078611671925
+      },
+      "native_instances": 2,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0000930:YOLO:0",
+            "native_instance_id": "native:1",
+            "iou": 0.9777982615022869
+          },
+          {
+            "source_opportunity_id": "0000930:YOLO:1",
+            "native_instance_id": "native:0",
+            "iou": 0.9880770265602263
+          }
+        ],
+        "unmatched_opportunities": [],
+        "unmatched_native_instances": []
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_ConvNeXtB_CIHP/0000930",
+      "score_result": null
+    },
+    {
+      "system_id": "CPI_R50_CIHP",
+      "image_id": "0001368",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0001368",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.03215740295127034
+      },
+      "native_instances": 8,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0001368:YOLO:0",
+            "native_instance_id": "native:1",
+            "iou": 0.9629855941345906
+          },
+          {
+            "source_opportunity_id": "0001368:YOLO:1",
+            "native_instance_id": "native:0",
+            "iou": 0.9829045858787431
+          }
+        ],
+        "unmatched_opportunities": [],
+        "unmatched_native_instances": [
+          "native:2",
+          "native:3",
+          "native:4",
+          "native:5",
+          "native:6",
+          "native:7"
+        ]
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_R50_CIHP/0001368",
+      "score_result": null
+    },
+    {
+      "system_id": "CPI_ConvNeXtB_CIHP",
+      "image_id": "0001368",
+      "status": "COMPLETE",
+      "lifecycle": {
+        "frame_id": "0001368",
+        "trial_status": "VALID_OPERATIONAL_TRIAL",
+        "failure_events": [],
+        "native_frame_completion_rate": {
+          "stage": "native_parser",
+          "unit": "frame",
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "status": "DEFINED",
+          "skipped_by_routing": 0
+        },
+        "frame_cost_seconds": 0.010532645974308252
+      },
+      "native_instances": 3,
+      "YOLO_opportunities": 2,
+      "final_persons": 2,
+      "association": {
+        "associations": [
+          {
+            "source_opportunity_id": "0001368:YOLO:0",
+            "native_instance_id": "native:1",
+            "iou": 0.9656794159494686
+          },
+          {
+            "source_opportunity_id": "0001368:YOLO:1",
+            "native_instance_id": "native:0",
+            "iou": 0.9574934403345525
+          }
+        ],
+        "unmatched_opportunities": [],
+        "unmatched_native_instances": [
+          "native:2"
+        ]
+      },
+      "association_completion_rate": {
+        "stage": "T3B_association",
+        "unit": "YOLO_opportunity",
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "status": "DEFINED",
+        "skipped_by_routing": 0
+      },
+      "packet": "provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/saved_replay_final/CPI_ConvNeXtB_CIHP/0001368",
+      "score_result": null
+    }
+  ],
+  "config_path": "configs/application_v2_first_cohort_v8.yaml",
+  "config_sha256": "778bbdf9d7d4034a3f54ccb6f963cbab85af74485a7319a29338a72bf1965e4b",
+  "new_inference": false,
+  "semantic_scores_computed": false,
+  "full_benchmark": false,
+  "full_validation_contexts_ready": false,
+  "fresh_joint_execute_path": "NOT_TESTED",
+  "heavyweight_frameworks_imported": []
+}

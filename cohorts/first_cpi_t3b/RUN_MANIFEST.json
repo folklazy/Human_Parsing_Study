@@ -1,0 +1,23 @@
+{
+  "run_id": "first-cohort-benchmark-20261016T094257313856Z",
+  "status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "config": "configs/application_v2_first_cohort_v12.yaml",
+  "decision": "provenance/APPLICATION_V2_DECISIONS_V11.json",
+  "original_launch_freeze": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FREEZE.json",
+  "restored_profile_freeze": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/RESTORED_PROFILE_FREEZE.json",
+  "final_validation": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/FINAL_BENCHMARK_VALIDATION.json",
+  "post_export_verification": "provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/POST_EXPORT_VERIFICATION.json",
+  "metrics_directory": "metrics/first-cohort-benchmark-20261016T094257313856Z",
+  "systems": [
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "dependency": "YOLO26X_FROZEN",
+  "track": "T3B",
+  "precision": "FP32",
+  "source_commit_at_launch": null,
+  "source_commit_at_launch_reason": "STUDY_NOT_GIT_INITIALIZED_AT_LAUNCH",
+  "public_git_snapshot_role": "POST_RUN_NOT_LAUNCH_REVISION",
+  "full_reproduction_from_clone": false,
+  "new_execution_authorized": false
+}

@@ -1,0 +1,64 @@
+{
+  "status": "ANNOTATION_FIDELITY_PASS_RGB_GATE_STILL_BLOCKED",
+  "additional_person_planes": 16,
+  "cases": [
+    {
+      "split": "train",
+      "image_id": "1396",
+      "annotations_independently_decoded": 6,
+      "all_gt_dimensions_native_ids_and_roundtrips_pass": true,
+      "rgb_error_preserved": [
+        "OSError: image file is truncated (21 bytes not processed)"
+      ]
+    },
+    {
+      "split": "train",
+      "image_id": "18613",
+      "annotations_independently_decoded": 5,
+      "all_gt_dimensions_native_ids_and_roundtrips_pass": true,
+      "rgb_error_preserved": [
+        "OSError: image file is truncated (0 bytes not processed)"
+      ]
+    },
+    {
+      "split": "train",
+      "image_id": "24328",
+      "annotations_independently_decoded": 2,
+      "all_gt_dimensions_native_ids_and_roundtrips_pass": true,
+      "rgb_error_preserved": [
+        "OSError: image file is truncated (19 bytes not processed)"
+      ]
+    },
+    {
+      "split": "val",
+      "image_id": "17844",
+      "annotations_independently_decoded": 3,
+      "all_gt_dimensions_native_ids_and_roundtrips_pass": true,
+      "rgb_error_preserved": [
+        "OSError: image file is truncated (26 bytes not processed)"
+      ]
+    }
+  ],
+  "overlap": [
+    {
+      "split": "train",
+      "image_id": "1396",
+      "overlap_pixels": 1343
+    },
+    {
+      "split": "train",
+      "image_id": "18613",
+      "overlap_pixels": 1636
+    },
+    {
+      "split": "train",
+      "image_id": "24328",
+      "overlap_pixels": 0
+    },
+    {
+      "split": "val",
+      "image_id": "17844",
+      "overlap_pixels": 6
+    }
+  ]
+}

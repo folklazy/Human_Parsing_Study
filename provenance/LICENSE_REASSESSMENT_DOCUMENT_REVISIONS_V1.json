@@ -1,0 +1,116 @@
+{
+  "run_id": "decision5a-license-finalization-20261012T042717Z",
+  "documents": [
+    {
+      "original_relative": "configs/research_scope.yaml",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/configs/research_scope.yaml",
+      "sha256_before": "2b1934c9c07621446eb5ec23cfbf83a3c2b03c1bb8a31036c4ef4defcddc9c1d",
+      "sha256_after": "1c7894943865a8ff504ed353ad78b671a368bb56434d8468da53d339610bdde5",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "provenance/LICENSE_MATRIX_DECISION5A_V1.csv",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/provenance/LICENSE_MATRIX_DECISION5A_V1.csv",
+      "sha256_before": "3ddf692ac268f4df7ec6cda464a381c28e5cb936fbde216cd6d05e5eee4c7e3a",
+      "sha256_after": "a1efd22214dfe2c52f038c368b892f25bc34c3d5419e9009aea35b2bdbdc37f5",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "README.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/README.md",
+      "sha256_before": "4709a956347395ddcbd88eb91fee3df8ef764263ad4bf1d15960718ea278ee00",
+      "sha256_after": "cdeea226f2bff5dafeecaf598955dbbd6c62cede7311ac18d245d5634eada080",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "STUDY_STANDARD.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/STUDY_STANDARD.md",
+      "sha256_before": "9b7b2af1cce71fe25c1f935287ee8bd00b3e851e60c9b9f07efd969aceced697",
+      "sha256_after": "dedf8dddc5e83d99679620da54071c887af0ebd89100d22b3e4ecb3b0dd6c170",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "EXPERIMENT_PROTOCOL_DRAFT.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/EXPERIMENT_PROTOCOL_DRAFT.md",
+      "sha256_before": "253626003aee5544234a794f25f776d5125968b227e471f5e4fea8acf8683898",
+      "sha256_after": "1440f5af5619cc3cb838d3cc1e7121d249a02160337df84c2a59805e501aa8fa",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "reports/STAGE0_NEXT_ACTIONS.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/STAGE0_NEXT_ACTIONS.md",
+      "sha256_before": "2af2bfce6c1aecb0f6f06befe5e1f083b3a70d80d6901d4ef007b1ea4aff1cdc",
+      "sha256_after": "7ff0f4b28e5419574afb12e6c323b04e2c93dd1e750b3b84bfa85e1960d4e799",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "reports/MODEL_COMPATIBILITY_REPORT.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/MODEL_COMPATIBILITY_REPORT.md",
+      "sha256_before": "83079e4e28dc045948e25272653b8cf39e945ee7e642d2ce9a9ef7a3f9d991bb",
+      "sha256_after": "63c84f1e85b38803d41814c5bfb3a9bfa5d17eaf2466ab4ff85e611f3ae835af",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "reports/PROTOCOL_REVIEW.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/PROTOCOL_REVIEW.md",
+      "sha256_before": "3d999180d95ea1ee90f61da82a9f5568217557dcf13eedc4a6484e00c1c05848",
+      "sha256_after": "da2bac002bd8945fec16eeaea746c4a71a6a84a50b7aefea4a45319eaedd3863",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "reports/DATASET_REASSESSMENT.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/reports/DATASET_REASSESSMENT.md",
+      "sha256_before": "0092d32d73e133ac03ac3a8f4e27f4257e144ffe46ea4a64100f9a7bde25ccf7",
+      "sha256_after": "cf83a230cb5211edf4bee549cc91725fa773ed4ad726ec7ab744fafd271e064c",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "configs/study.yaml",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/configs/study.yaml",
+      "sha256_before": "6a796cebb6a2ef81922c7fd4a3b311d1538debe089ee8058b2b953a12f15a1db",
+      "sha256_after": "a093ce8a950f8c20e09eeab44692c1e82fd7e3b1b0c4cc21b7de37f808ae7c48",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "STUDY_STATE.json",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/STUDY_STATE.json",
+      "sha256_before": "88469c02e04475570e5815ccf328f3e1a6a983ab6886ea08aa067e0bdef7cc1b",
+      "sha256_after": "41f8faec875c1458d06ffb610372ed9ecc876c209d89c4ad57cf5dbc5d608b1c",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_relative": "provenance/LICENSE_REASSESSMENT_ACTIVE_RUN.json",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/provenance/LICENSE_REASSESSMENT_ACTIVE_RUN.json",
+      "sha256_before": "ec0b832b7051475dccd90be829e1064f44656fca7b15a2dbc90bd9e31f75e572",
+      "sha256_after": "3f425315a855d7b62af45490a440894095cb30aae150031c851f76633b4e110d",
+      "reason": "Record clarified academic scope and current license assessment",
+      "timestamp_utc": "2026-10-12T04:27:17.486415+00:00"
+    },
+    {
+      "original_workspace_relative": "README.md",
+      "archived_relative": "reports/archive/decision5a-license-finalization-20261012T042717Z/workspace/README.md",
+      "sha256_before": "506617252f50e9b9c26edccb1789c67dd4def704d0e04dc0f0adbbd5379d3ea3",
+      "sha256_after": "4672986dbfe1e55846326280a6846b0c70429bf9c2d95fc0d3b0c0c7afb9a6ca",
+      "reason": "Update workspace navigation with clarified academic research scope",
+      "timestamp_utc": "2026-10-12T04:27:52.153392+00:00"
+    }
+  ],
+  "created": [
+    "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/RESUME.json",
+    "provenance/RUN_MANIFESTS/decision5a-license-finalization-20261012T042717Z/LOCAL_SOURCE_MANIFEST.json",
+    "manifests/FASHN_SMOKE_PROPOSAL_V2.json",
+    "reports/LICENSE_ELIGIBILITY_REASSESSMENT.md",
+    "provenance/LICENSE_REASSESSMENT_DECISION5A_V1.json"
+  ]
+}

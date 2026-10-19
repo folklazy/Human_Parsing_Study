@@ -1,0 +1,8 @@
+{
+  "run_id": "decision5a-license-finalization-20261012T042717Z",
+  "resumed_utc": "2026-10-12T04:27:17.486415+00:00",
+  "prior_review_run": "provenance/RUN_MANIFESTS/decision5a-license-review-20261008T105228Z",
+  "prior_documents_unchanged_since_interruption": true,
+  "execution_authorized": false,
+  "purpose": "Decision 5A license/scope documentation and read-only smoke-input preparation only"
+}

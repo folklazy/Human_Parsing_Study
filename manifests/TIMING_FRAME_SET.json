@@ -1,0 +1,410 @@
+{
+  "status": "DRAFT_FIXED_BEFORE_TIMING_NO_EXECUTION",
+  "split": "train",
+  "seed": 20261008,
+  "samples": [
+    {
+      "image_id": "17223",
+      "person_count": 8,
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "12154",
+      "person_count": 5,
+      "original_wh": [
+        1024,
+        805
+      ]
+    },
+    {
+      "image_id": "4678",
+      "person_count": 2,
+      "original_wh": [
+        501,
+        334
+      ]
+    },
+    {
+      "image_id": "7858",
+      "person_count": 2,
+      "original_wh": [
+        508,
+        339
+      ]
+    },
+    {
+      "image_id": "1863",
+      "person_count": 2,
+      "original_wh": [
+        509,
+        337
+      ]
+    },
+    {
+      "image_id": "21047",
+      "person_count": 4,
+      "original_wh": [
+        970,
+        600
+      ]
+    },
+    {
+      "image_id": "16772",
+      "person_count": 4,
+      "original_wh": [
+        768,
+        1024
+      ]
+    },
+    {
+      "image_id": "18398",
+      "person_count": 3,
+      "original_wh": [
+        905,
+        669
+      ]
+    },
+    {
+      "image_id": "5778",
+      "person_count": 2,
+      "original_wh": [
+        334,
+        501
+      ]
+    },
+    {
+      "image_id": "6005",
+      "person_count": 2,
+      "original_wh": [
+        513,
+        385
+      ]
+    },
+    {
+      "image_id": "17345",
+      "person_count": 2,
+      "original_wh": [
+        1024,
+        683
+      ]
+    },
+    {
+      "image_id": "11611",
+      "person_count": 2,
+      "original_wh": [
+        768,
+        1024
+      ]
+    },
+    {
+      "image_id": "20642",
+      "person_count": 3,
+      "original_wh": [
+        1000,
+        667
+      ]
+    },
+    {
+      "image_id": "11208",
+      "person_count": 4,
+      "original_wh": [
+        2287,
+        1612
+      ]
+    },
+    {
+      "image_id": "6208",
+      "person_count": 2,
+      "original_wh": [
+        508,
+        339
+      ]
+    },
+    {
+      "image_id": "6120",
+      "person_count": 2,
+      "original_wh": [
+        551,
+        288
+      ]
+    },
+    {
+      "image_id": "12657",
+      "person_count": 2,
+      "original_wh": [
+        1024,
+        808
+      ]
+    },
+    {
+      "image_id": "20847",
+      "person_count": 2,
+      "original_wh": [
+        600,
+        431
+      ]
+    },
+    {
+      "image_id": "15637",
+      "person_count": 3,
+      "original_wh": [
+        685,
+        1024
+      ]
+    },
+    {
+      "image_id": "21947",
+      "person_count": 5,
+      "original_wh": [
+        580,
+        559
+      ]
+    },
+    {
+      "image_id": "729",
+      "person_count": 2,
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "745",
+      "person_count": 3,
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "7039",
+      "person_count": 2,
+      "original_wh": [
+        267,
+        401
+      ]
+    },
+    {
+      "image_id": "11500",
+      "person_count": 2,
+      "original_wh": [
+        584,
+        800
+      ]
+    },
+    {
+      "image_id": "13000",
+      "person_count": 2,
+      "original_wh": [
+        678,
+        1024
+      ]
+    },
+    {
+      "image_id": "2224",
+      "person_count": 2,
+      "original_wh": [
+        501,
+        334
+      ]
+    },
+    {
+      "image_id": "6103",
+      "person_count": 2,
+      "original_wh": [
+        501,
+        334
+      ]
+    },
+    {
+      "image_id": "9624",
+      "person_count": 2,
+      "original_wh": [
+        300,
+        400
+      ]
+    },
+    {
+      "image_id": "2249",
+      "person_count": 2,
+      "original_wh": [
+        1001,
+        751
+      ]
+    },
+    {
+      "image_id": "22059",
+      "person_count": 2,
+      "original_wh": [
+        2000,
+        1333
+      ]
+    },
+    {
+      "image_id": "6079",
+      "person_count": 2,
+      "original_wh": [
+        339,
+        507
+      ]
+    },
+    {
+      "image_id": "603",
+      "person_count": 2,
+      "original_wh": [
+        720,
+        480
+      ]
+    },
+    {
+      "image_id": "25086",
+      "person_count": 3,
+      "original_wh": [
+        800,
+        584
+      ]
+    },
+    {
+      "image_id": "21643",
+      "person_count": 2,
+      "original_wh": [
+        400,
+        599
+      ]
+    },
+    {
+      "image_id": "21617",
+      "person_count": 2,
+      "original_wh": [
+        1056,
+        1584
+      ]
+    },
+    {
+      "image_id": "4196",
+      "person_count": 3,
+      "original_wh": [
+        501,
+        334
+      ]
+    },
+    {
+      "image_id": "5350",
+      "person_count": 2,
+      "original_wh": [
+        337,
+        507
+      ]
+    },
+    {
+      "image_id": "4930",
+      "person_count": 2,
+      "original_wh": [
+        358,
+        477
+      ]
+    },
+    {
+      "image_id": "6918",
+      "person_count": 2,
+      "original_wh": [
+        359,
+        478
+      ]
+    },
+    {
+      "image_id": "9855",
+      "person_count": 2,
+      "original_wh": [
+        628,
+        778
+      ]
+    },
+    {
+      "image_id": "11633",
+      "person_count": 2,
+      "original_wh": [
+        1024,
+        681
+      ]
+    },
+    {
+      "image_id": "5445",
+      "person_count": 2,
+      "original_wh": [
+        509,
+        338
+      ]
+    },
+    {
+      "image_id": "16581",
+      "person_count": 2,
+      "original_wh": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": "6267",
+      "person_count": 2,
+      "original_wh": [
+        267,
+        401
+      ]
+    },
+    {
+      "image_id": "24967",
+      "person_count": 5,
+      "original_wh": [
+        584,
+        433
+      ]
+    },
+    {
+      "image_id": "15030",
+      "person_count": 4,
+      "original_wh": [
+        1024,
+        680
+      ]
+    },
+    {
+      "image_id": "25418",
+      "person_count": 2,
+      "original_wh": [
+        500,
+        500
+      ]
+    },
+    {
+      "image_id": "18805",
+      "person_count": 2,
+      "original_wh": [
+        460,
+        690
+      ]
+    },
+    {
+      "image_id": "19170",
+      "person_count": 2,
+      "original_wh": [
+        420,
+        600
+      ]
+    },
+    {
+      "image_id": "23140",
+      "person_count": 2,
+      "original_wh": [
+        1024,
+        580
+      ]
+    }
+  ],
+  "precision": "FP32",
+  "benchmark_authorized": false,
+  "dataset_manifest_sha256": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22"
+}

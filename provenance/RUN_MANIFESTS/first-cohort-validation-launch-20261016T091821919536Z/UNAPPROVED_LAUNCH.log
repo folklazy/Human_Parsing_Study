@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_entrypoint.py", line 75, in <module>
+    main()
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/scripts/first_cohort_entrypoint.py", line 40, in main
+    result = execute_validation(args.config, args.output)
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/first_cohort_validation.py", line 19, in execute_validation
+    cfg=load_config(config_path,benchmark=True)
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/policy.py", line 104, in load_config
+    validate_config(config, decisions, benchmark=benchmark)
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/src/application_v2/policy.py", line 84, in validate_config
+    raise ValueError('Benchmark is not authorized/frozen')
+ValueError: Benchmark is not authorized/frozen

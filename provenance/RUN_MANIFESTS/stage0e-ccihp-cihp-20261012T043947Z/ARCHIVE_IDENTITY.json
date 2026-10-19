@@ -1,0 +1,39 @@
+{
+  "archive": "datasets/cihp-DatasetNinja.tar",
+  "publisher_metadata_identity": "CIHP_CROWD_INSTANCE_LEVEL_HUMAN_PARSING",
+  "container": "PLAIN_TAR_DATASETNINJA_SUPERVISELY_CONVERSION",
+  "is_verified_ccihp_release": false,
+  "readme": "# CIHP: Crowd Instance-level Human Parsing\n\nCIHP is a dataset for instance segmentation, semantic segmentation, and object detection tasks.",
+  "provider_license_text": "CIHP: Crowd Instance-level Human Parsing is under [MIT](https://spdx.org/licenses/MIT.html) license.",
+  "foreground_class_count": 19,
+  "class_titles": [
+    "coat",
+    "dress",
+    "face",
+    "glove",
+    "hair",
+    "hat",
+    "left_arm",
+    "left_leg",
+    "left_shoe",
+    "pants",
+    "right_arm",
+    "right_leg",
+    "right_shoe",
+    "scarf",
+    "skirt",
+    "socks",
+    "sunglasses",
+    "torso_skin",
+    "upperclothes"
+  ],
+  "meta_person_tags": [],
+  "ccihp_expected_component_members": {
+    "Category_ids": [],
+    "Human_ids": [],
+    "Instance_ids": [],
+    "Color_ids": [],
+    "Pattern_ids": [],
+    "Size_ids": []
+  }
+}

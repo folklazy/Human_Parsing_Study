@@ -1,0 +1,925 @@
+{
+  "status": "PREPARATION_PASS_WITH_WARNINGS",
+  "populations": [
+    {
+      "population": "TRAIN_READABLE",
+      "manifest": "manifests/mhpv2_readable_v1/TRAIN_READABLE.json",
+      "sha256": "7abeed70563a24e755558a77bf2bc6f1049f623b440f38dc96d76d94680445d1",
+      "images": 15400,
+      "persons": 41043,
+      "ordered_ids_sha256": "e9087071df9421d8c8c0d360abf466a77dce62c38379eeeeae77345fa5b30397"
+    },
+    {
+      "population": "VALIDATION_OFFICIAL_TARGET",
+      "manifest": "manifests/mhpv2_readable_v1/VALIDATION_OFFICIAL_TARGET.json",
+      "sha256": "2bf0ce70749bef1fa3ad91ea4629a951d0838b7f1a06e63956e234107abf4b43",
+      "images": 5000,
+      "persons": 13260,
+      "ordered_ids_sha256": "e35396496719a8d425da4abb599f74a0841e7ba570fa294e8774905af3bc45e9"
+    },
+    {
+      "population": "VALIDATION_READABLE",
+      "manifest": "manifests/mhpv2_readable_v1/VALIDATION_READABLE.json",
+      "sha256": "a71c77dc08269595b179ee0249644fa35ee941040501199df403c58dc664346c",
+      "images": 4999,
+      "persons": 13257,
+      "ordered_ids_sha256": "3b093d537cecfa916677fa4aefb8c50302667b7c5741c278e47d43d0c1d54615"
+    },
+    {
+      "population": "VALIDATION_OVERLAP_CONTROLLED_TARGET",
+      "manifest": "manifests/mhpv2_readable_v1/VALIDATION_OVERLAP_CONTROLLED_TARGET.json",
+      "sha256": "9c236a08449bd26cc96628b59d1dec6e35254e6ec51a4233b7a2fdf953d39eb1",
+      "images": 4348,
+      "persons": 11411,
+      "ordered_ids_sha256": "a99e6d455a656a79fad0d4fdd136c405c81547155193a87c6327d4e3ff6f6bb2"
+    },
+    {
+      "population": "VALIDATION_OVERLAP_CONTROLLED_READABLE",
+      "manifest": "manifests/mhpv2_readable_v1/VALIDATION_OVERLAP_CONTROLLED_READABLE.json",
+      "sha256": "54d015f622dd364c1b9a17d31df80bdfd5452cbb9fc411e714a4550892a6af39",
+      "images": 4347,
+      "persons": 11408,
+      "ordered_ids_sha256": "051c71d0642ba86a02c968f7f2516d9e5448808877ad6bea0443cbb58e66f800"
+    }
+  ],
+  "sources": {
+    "manifests/DATASET_MANIFEST.json": "c1055dadd53558f03d338064b43cd0c4463ab98d8f0a7fc7297e41b31be3fb22",
+    "provenance/RUN_MANIFESTS/stage0-20261008T063349Z/CANONICAL_GT_INDEX_V2.jsonl": "81358626da696ae2ec552f195fcc318df0d5c22011fe120d97cc038095cf2f54",
+    "manifests/LEAKAGE_AUDIT.json": "6021164f5ffe2c70d02559cb4c38673db1a201399b94c27579bc27503eef6bbf",
+    "provenance/MHPV2_NEW_ZIP_RGB_VERIFICATION.json": "38f9998d7767fe63ed1ddee50da04fadc64c7e326fd9d6bd1eff4a927a2ef22a"
+  },
+  "approved_by": "Explicit user instruction: versioned non-destructive readable-subset policy",
+  "exclusions_are_views_only": true,
+  "dataset_modified": false,
+  "source_files_rehashed_exhaustively": false,
+  "prior_exhaustive_hash_inventory_reused": true,
+  "random_sample_manifest": "manifests/MHPV2_RANDOM_QUALITY_REVIEW_V1.json",
+  "random_sample": [
+    {
+      "image_id": "7922",
+      "image_path": "train/images/7922.jpg",
+      "image_sha256": "16c628011440eaa9a91824b9e7e9c6c775861c35a3d32ded825d924fb693c9a7",
+      "original_wh": [
+        332,
+        501
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/7922_02_01.png",
+          "sha256": "455c1ebf2fe09a42dcfd376df6c0fd5022d746d15f6c14591b5e9704f71a22ce"
+        },
+        {
+          "annotation_path": "train/parsing_annos/7922_02_02.png",
+          "sha256": "64c27279844fd6f41411fc7dc7db401ed53215a3ed5f62ab08b3703f0b8719df"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/01_train_7922.png",
+      "diagnostic_sha256": "f7fa04debe2126fd7f5853fb6628a54aefa703ebf7c54cb96453a77221842d3e",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "1205",
+      "image_path": "train/images/1205.jpg",
+      "image_sha256": "6efb0dfd39f8f03b35dcb29f9eabf2a0b693f7a376f90247bc34c34f2f071ed4",
+      "original_wh": [
+        360,
+        240
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/1205_02_01.png",
+          "sha256": "75d5e2c9b65cbc23a387b336ebbc9b486359cc0ff2b1c3f47030f79c5c165592"
+        },
+        {
+          "annotation_path": "train/parsing_annos/1205_02_02.png",
+          "sha256": "6f6244ed1fe8e9a0113ab61f5b3bbf4c84b60162c073a237f52da0eafb1c2f7a"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/02_train_1205.png",
+      "diagnostic_sha256": "175cee580343e29e6e8351454b8e7ad9a69ff9dabd4935ce15b9282e8336c096",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "11999",
+      "image_path": "train/images/11999.jpg",
+      "image_sha256": "16c161e40b4fc1dccd27d8b27983644fcf20c0966a08d4329208bff116bf1224",
+      "original_wh": [
+        1024,
+        732
+      ],
+      "native_gt_person_count": 4,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/11999_04_01.png",
+          "sha256": "ad5f84baa6327d3952c3997bcaa635784feaa976c0af1c21256b5cc4ff9aef2f"
+        },
+        {
+          "annotation_path": "train/parsing_annos/11999_04_02.png",
+          "sha256": "eb0c065644b2eb4b4b6672ee025940b45f9f659f2ffd69d614693d06e574865a"
+        },
+        {
+          "annotation_path": "train/parsing_annos/11999_04_03.png",
+          "sha256": "2e29d0226faf67f1d492d60950f1fd97af45589030d2f3e24d40533703ecfc3a"
+        },
+        {
+          "annotation_path": "train/parsing_annos/11999_04_04.png",
+          "sha256": "0edf6926164ead9447f162f0354f70323d235d4f442defc3e74c9115466779c1"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/03_train_11999.png",
+      "diagnostic_sha256": "722a96fbe55a8f3a7b6c9006229b19db6a4ebbc35d8fbdc52e9b89dba0e58bc7",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "6544",
+      "image_path": "train/images/6544.jpg",
+      "image_sha256": "96ea1d843689ee4c5c154badb8b4e7760369df64d81cd6a8bdf1686ded0e99a1",
+      "original_wh": [
+        415,
+        415
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/6544_02_01.png",
+          "sha256": "5929783166f8f1211e99a4ab3b63d39670becd4dbfe79e73bbc993603f4c24db"
+        },
+        {
+          "annotation_path": "train/parsing_annos/6544_02_02.png",
+          "sha256": "cf6fcdb7eec384c418a22d605b6171a9687c129eba5a40e1833f14d3cc96c430"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/04_train_6544.png",
+      "diagnostic_sha256": "c3c683f03f07940c62098537ef4bf890b0a1baca79b43b03a90518ed3b9019c6",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "4124",
+      "image_path": "train/images/4124.jpg",
+      "image_sha256": "b55cee8767dd0f43c5cdba7e0066dcbcd14df4cf26f9ecd72b65b212abb4cf62",
+      "original_wh": [
+        507,
+        338
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/4124_02_01.png",
+          "sha256": "742839317d09f9848e09bd8938041b4c64d117658db3a0d2d589b4a3374a25a6"
+        },
+        {
+          "annotation_path": "train/parsing_annos/4124_02_02.png",
+          "sha256": "1e68df85c995f1ab465b0b836b535cd70e1c2bd7972dfd68ba5d6831d67cf49d"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/05_train_4124.png",
+      "diagnostic_sha256": "53d862d98b78c16120c3a7890dcab36375539a1ebb933de20fe72eda36c3d3b8",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "7581",
+      "image_path": "train/images/7581.jpg",
+      "image_sha256": "940b4515fbe98d5d9ebbbb5e11362e3ad918ded210a2db3bcda15749bd5c1bb4",
+      "original_wh": [
+        204,
+        295
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/7581_02_01.png",
+          "sha256": "5479c637fe63ed2b1c6dfef6a0307ce072a0ef28587c23705601bb2c19581b0b"
+        },
+        {
+          "annotation_path": "train/parsing_annos/7581_02_02.png",
+          "sha256": "56cee3525ddee8aa8e4dffbb799ad87293a97a10c66ec687406d716aafd932e2"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/06_train_7581.png",
+      "diagnostic_sha256": "536e928ef86c6f2336c40781494417139d057a99c03bd755c3584671cfd61f18",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "2301",
+      "image_path": "train/images/2301.jpg",
+      "image_sha256": "b6e3f23cdffd0872ecd5fdd2792ad978c1ac498ac878a2a15c5f3356eb8b4fc2",
+      "original_wh": [
+        338,
+        508
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/2301_02_01.png",
+          "sha256": "d0941e9fdd76bb86b9f59b904dd276b28d4845629502dd38669a6c75d5a803c5"
+        },
+        {
+          "annotation_path": "train/parsing_annos/2301_02_02.png",
+          "sha256": "4deae2e6b1ccf8729e778ca3314c4800b92bf2585484fd94f6329a7684b3cb42"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/07_train_2301.png",
+      "diagnostic_sha256": "79c450c1a9b63bb542c737db4abc6e5a600d4b5ef47ccbe03ec55dddbd5e2599",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "19408",
+      "image_path": "train/images/19408.jpg",
+      "image_sha256": "e0028bc254bae5d63672f9b51e99e8bebf4a2bcf9094b1e6b61e087929ceb905",
+      "original_wh": [
+        899,
+        591
+      ],
+      "native_gt_person_count": 9,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/19408_09_01.png",
+          "sha256": "cdae5777678081412a377a7a7baa0643c0469b6444eb47fa58ac6b715a0c29d1"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_02.png",
+          "sha256": "eed89c8090a718be411a231c749cdda698adc9d90a09827ed841d9bf73c44aba"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_03.png",
+          "sha256": "2fb425b0a81b317594ce845032d2369df0436908fd67a9069154d49ccc16cd54"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_04.png",
+          "sha256": "044a56348fdd6637f602e1b800602cf064867f0bb79e628d7edcad2fa45a2a49"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_05.png",
+          "sha256": "528b8f6f67f60048de93b1feca32b02764df0335245f3509c18961bfb035ac68"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_06.png",
+          "sha256": "53c0a11a99795acf2467246c5d3ae3407835ebe78cd34370eeed68e562a47707"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_07.png",
+          "sha256": "ceee5d963d65ce2cabfe0cb7d8e242b4bf469a96a8e386669065a1631d0ed55c"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_08.png",
+          "sha256": "dcc8fefbba0b549cfcac3af8a89bb6c9698448f79579dd66356509a5488e87f3"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19408_09_09.png",
+          "sha256": "840c4f3aa89fa8b34d49b277cb1f8d663fb30c09d3103e3f7ac13874a0d5fe87"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/08_train_19408.png",
+      "diagnostic_sha256": "4a5c9f3881505edf18d4ae9b4c50866e74229e6b487b844b520a7430d8852fcc",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "5853",
+      "image_path": "train/images/5853.jpg",
+      "image_sha256": "d87570b4d7eb8f5577d7ad7f85e92f0356e6101ee0168c179a076a3037ab3003",
+      "original_wh": [
+        334,
+        501
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/5853_02_01.png",
+          "sha256": "368a057432ddd3d64472f24e15e00314bd08a2a64e8119ecec2bbc62f490a1cc"
+        },
+        {
+          "annotation_path": "train/parsing_annos/5853_02_02.png",
+          "sha256": "e59b055db4bccf60efd8aafcb7d1784e6c0b422fdae871a1e503220e63dd9970"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/09_train_5853.png",
+      "diagnostic_sha256": "bdc882c5520f10af5f7880bbeb04fed8a424b5016bc89c0eba16da1fb36a5466",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "8391",
+      "image_path": "train/images/8391.jpg",
+      "image_sha256": "a3d183de5eec5df4a345bd4ee5e309711e7c0170d768c9e8e0b7d940dc5f721b",
+      "original_wh": [
+        888,
+        1215
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/8391_02_01.png",
+          "sha256": "875cf356b66eaea921ff37ef2f3aee8c0ee933732ac2a39089f00eff5871be60"
+        },
+        {
+          "annotation_path": "train/parsing_annos/8391_02_02.png",
+          "sha256": "6022f98634723007c9b637732d89c715117b37fe9aba0ebc523b7d4f8592a199"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/10_train_8391.png",
+      "diagnostic_sha256": "c818cc8111c9b9788579a9912ec5ea2168d80c8d5ed6faee5aabc3de49ccc3b6",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "21289",
+      "image_path": "train/images/21289.jpg",
+      "image_sha256": "2528cbce287ba665e8b4fc37ced997196c63812ca20bf9301bf9f54937a1c1c1",
+      "original_wh": [
+        2000,
+        1250
+      ],
+      "native_gt_person_count": 3,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/21289_03_01.png",
+          "sha256": "7674042995b21a5e4ff8b59641e39bb3e7dd4ca2b6d3b997c90186203b7a7136"
+        },
+        {
+          "annotation_path": "train/parsing_annos/21289_03_02.png",
+          "sha256": "bdd00fb3a5fe856ab29c7db7bade283c4f4845580339bfdb12a3b2046995e877"
+        },
+        {
+          "annotation_path": "train/parsing_annos/21289_03_03.png",
+          "sha256": "9ebb25e676501db3b06c2d290e3dc33ee6b6b29156c36025ba8583067c6a0f30"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/11_train_21289.png",
+      "diagnostic_sha256": "ed599afc2f8727a7cf7b371aaea971fafc839f584bb201d310f59e3f7c5d0a13",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "18351",
+      "image_path": "train/images/18351.jpg",
+      "image_sha256": "e975ab7527a8427aa2abfed4d110fab231ed5fb6eb412e4a9b5b5c78f3f9cb7c",
+      "original_wh": [
+        500,
+        752
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/18351_02_01.png",
+          "sha256": "fc8d0a9ba55e8863b9d27163097b940959f073b17c8595d30d9173fc54bd0e96"
+        },
+        {
+          "annotation_path": "train/parsing_annos/18351_02_02.png",
+          "sha256": "1deba3fa409acf08859abb535e7194ddf28ee2083af03e5f3479577e8655bfc1"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/12_train_18351.png",
+      "diagnostic_sha256": "eba29b6d9573295c7a692a84ca4990bfa097ef4dc7c776493821b50fbb7bfeae",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "19254",
+      "image_path": "train/images/19254.jpg",
+      "image_sha256": "312170322648a0f365353a46857e9e50af4419f34ae1293ff30e81e10ef22ff8",
+      "original_wh": [
+        690,
+        500
+      ],
+      "native_gt_person_count": 7,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/19254_07_01.png",
+          "sha256": "5850ca28351201a59c017ca0b4715409779b813e4ee289c9a2cffc6ceefcf10f"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_02.png",
+          "sha256": "8ac2bc8de0afc8983668c4ca561b23a2cc3f78b3b4cda5e7bee31cb0fac23c14"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_03.png",
+          "sha256": "aa36faf99c5277786f8b71baa44fab191dc4d755949021e66bc1bfe34ed66e82"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_04.png",
+          "sha256": "a7e76c06dfdf4df15f3336ad90f4dc1909737103cb13d153abd6718f49f2035e"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_05.png",
+          "sha256": "a5c6f45389d6b4c0f39f7d060b581745bab0307b88bf31cda395a27b163426d5"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_06.png",
+          "sha256": "d7ca6956dbdef06de397337c0297db2b0fa6431a39a6c74f7a176f83c085dda1"
+        },
+        {
+          "annotation_path": "train/parsing_annos/19254_07_07.png",
+          "sha256": "f35f67b9129a29b6004326e6aaae9e545b5129b08abd7206ff82900f2ffe8287"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/13_train_19254.png",
+      "diagnostic_sha256": "7902f0ef1591c780b636b206cfe55a866bc872ed5924f1acb36def151769b2c9",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "5965",
+      "image_path": "train/images/5965.jpg",
+      "image_sha256": "b2719d5345d4efa96d385c228070d9159c116bef6cefc10c430f373434797ced",
+      "original_wh": [
+        507,
+        338
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/5965_02_01.png",
+          "sha256": "2cb6c681cf95c01b51e52d654e4c2164b3e6ae413c87da71e4689418e30e1023"
+        },
+        {
+          "annotation_path": "train/parsing_annos/5965_02_02.png",
+          "sha256": "850dbe87731a4fa40c458ef54dc959ea9f685261d1b710e27c89a09852faa2b2"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/14_train_5965.png",
+      "diagnostic_sha256": "0dcb04cc25af7f2ea635deb6333ebfc834889e2c456973c4bc14c1cfaffa0f67",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "11210",
+      "image_path": "train/images/11210.jpg",
+      "image_sha256": "ee8561d506b3f55a4ea785baf480ad7e25cfe5c6dbae5a5da446524e46c0e3d6",
+      "original_wh": [
+        634,
+        619
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/11210_02_01.png",
+          "sha256": "621456b80701b17e04fe94a80f04b2fb53a7e504c18ff0ff5312b6898ea7c1fa"
+        },
+        {
+          "annotation_path": "train/parsing_annos/11210_02_02.png",
+          "sha256": "a1b0355c19ab8f6d38f7d86bb99455c22a0ec7d1ecf550dda2eff6f3ece416ae"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/15_train_11210.png",
+      "diagnostic_sha256": "bba252af1e57e64dfd738e551bd41989df3d9ef218ec242bb9653b96d77a9f2c",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "3278",
+      "image_path": "train/images/3278.jpg",
+      "image_sha256": "e91831df3ef2c9a75b9fe67bff5f66305f213ce5611a7048367961b4f825051f",
+      "original_wh": [
+        360,
+        475
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/3278_02_01.png",
+          "sha256": "d68e20335937ad7b1b6fe0361d75de489a9f3c06552681176f3e57d809aaa3ee"
+        },
+        {
+          "annotation_path": "train/parsing_annos/3278_02_02.png",
+          "sha256": "6b59d2099ccb68bbc91075c3b7924531fa676f072cf69ac9dfac2d6613b5f31b"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/16_train_3278.png",
+      "diagnostic_sha256": "00432946c9b14401c0f20c9c1ab9c15190b756fa864378bb092578dd15441454",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "15445",
+      "image_path": "train/images/15445.jpg",
+      "image_sha256": "34140a310f39afd2f07a68cce7dcb1cd2704acb817852c70402a2973647e893b",
+      "original_wh": [
+        1024,
+        683
+      ],
+      "native_gt_person_count": 4,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/15445_04_01.png",
+          "sha256": "6b78a26809021ccf25efadb9eb55bee185fae63da9b1e072c1895ad6d4487aff"
+        },
+        {
+          "annotation_path": "train/parsing_annos/15445_04_02.png",
+          "sha256": "1140a300502c2f8537d3e05c477926406ea9dc6701f86e154707b16c8c518d7b"
+        },
+        {
+          "annotation_path": "train/parsing_annos/15445_04_03.png",
+          "sha256": "d2187a873ba6600b5da53ad60bca6822576ae9a728b86788775f1dae17133b0c"
+        },
+        {
+          "annotation_path": "train/parsing_annos/15445_04_04.png",
+          "sha256": "ed3b696d86ebc35da3090af712afff89a8f88a5f39b15ac5cf18908c9eef6df6"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/17_train_15445.png",
+      "diagnostic_sha256": "aa3f10aed5c736fdcbc93908b686d3dea3093e03f24f6256f0961197a4351d90",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "20297",
+      "image_path": "train/images/20297.jpg",
+      "image_sha256": "2e150495118251c03a758061109aca461fe7cbd19de0be8643a4c75039e94480",
+      "original_wh": [
+        1024,
+        682
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/20297_02_01.png",
+          "sha256": "e620d4df1d90053decda5cf57a70a67cb137de7652111cdf7acd7c9b89d8e2cd"
+        },
+        {
+          "annotation_path": "train/parsing_annos/20297_02_02.png",
+          "sha256": "72f9c4679bc7c1287555375b59f5783abb771c14deac0b29429f8ee053d2a585"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/18_train_20297.png",
+      "diagnostic_sha256": "ac648ada7c2cfb2c3f2a9c7342bbad33856acdae59fdfd56a3d9953f37a35a0b",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "12762",
+      "image_path": "train/images/12762.jpg",
+      "image_sha256": "58268fba2d0cf9b472376ef5bd0af055804ecf5d39dc804f63a0654b3208c2d9",
+      "original_wh": [
+        500,
+        334
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/12762_02_01.png",
+          "sha256": "2011e080ff528d4216272be9dcbb11c8eef079657228e5540c275816a0a59f60"
+        },
+        {
+          "annotation_path": "train/parsing_annos/12762_02_02.png",
+          "sha256": "02c2e85b77124012e2d6229ddc89c2542029a742a5ca84e946094c292fa63fd5"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/19_train_12762.png",
+      "diagnostic_sha256": "057abddccd4295f084f773adb57d10bde87018acccf98f02f4834d63450be72e",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "711",
+      "image_path": "train/images/711.jpg",
+      "image_sha256": "7cb94c17ef5b3db33f0cd1b68246d45f550b589a6ff3254236615b093eed1771",
+      "original_wh": [
+        720,
+        480
+      ],
+      "native_gt_person_count": 4,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/711_04_01.png",
+          "sha256": "2074d8fdd4a9a62e932bd968147e617579f2aacbfbaafa71071e65948b8e73e8"
+        },
+        {
+          "annotation_path": "train/parsing_annos/711_04_02.png",
+          "sha256": "858ddd5a8f5568b903bc87328763c04574e51637ba548a022ef2da8e10ce8f44"
+        },
+        {
+          "annotation_path": "train/parsing_annos/711_04_03.png",
+          "sha256": "5ffc9de7a5b15f371df1ef8f20883028309f2958c41324265e0c18f5db63cf41"
+        },
+        {
+          "annotation_path": "train/parsing_annos/711_04_04.png",
+          "sha256": "e956f3e64fce7d7b2f2345af6854b4be1381dc272d1703483f8ca67545c98950"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/20_train_711.png",
+      "diagnostic_sha256": "769782878ac0d80e7318ea768fcde60e2bafb45665a62f431f6622a82b3175a1",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "10927",
+      "image_path": "train/images/10927.jpg",
+      "image_sha256": "940540e35f23faa39ee3e56e4b1171b59c765bb59d9791086ea775e2040429fe",
+      "original_wh": [
+        333,
+        500
+      ],
+      "native_gt_person_count": 5,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/10927_05_01.png",
+          "sha256": "5da7435c4239993c0c68ba5a1ee86258bc0c9e1a4ad0cf97f7e8bdb19590b8cd"
+        },
+        {
+          "annotation_path": "train/parsing_annos/10927_05_02.png",
+          "sha256": "19f6be71e2be8a416aa7c42415ae21cb6aeb55066db6828dc6615fd6d6b411b2"
+        },
+        {
+          "annotation_path": "train/parsing_annos/10927_05_03.png",
+          "sha256": "41f053574ac91d26195696ab3553a94ddc705a56a8e0f776eb472246dbd0ebcb"
+        },
+        {
+          "annotation_path": "train/parsing_annos/10927_05_04.png",
+          "sha256": "5de3ead20bbd6436ad743dcdcb129776c9804b1988db4b86447fba591a7097e7"
+        },
+        {
+          "annotation_path": "train/parsing_annos/10927_05_05.png",
+          "sha256": "263e95c8eb0bab1abfbadbbac7548a99f9b3d99f18f3cfd994517361a2194286"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/21_train_10927.png",
+      "diagnostic_sha256": "f5d7e1af6f83f6224000a54f1675aca7da98af1d1289be7c67875f430e55bc19",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "9925",
+      "image_path": "train/images/9925.jpg",
+      "image_sha256": "cbd27d0bba0931bcde5865a41ef08258f20f5e9f44cb74c952c5cec4f9b69898",
+      "original_wh": [
+        550,
+        367
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/9925_02_01.png",
+          "sha256": "bfe8140d250dcd3365bf48058e4b8245df4316d07f9de45dfa61692a9bc47272"
+        },
+        {
+          "annotation_path": "train/parsing_annos/9925_02_02.png",
+          "sha256": "bd0fb5f1d5571b8e3a6124f45bbefc690186429bf00ad126540d8e53f19c188d"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/22_train_9925.png",
+      "diagnostic_sha256": "dff37da3d2d6781ea9eb8a29ccaa1d1665bfa8c9923a8a708ac98b8b05a689a8",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "6121",
+      "image_path": "train/images/6121.jpg",
+      "image_sha256": "c5528322095103a05232f6218740c929c58c34c216d40f7a8baa5fea586cb33c",
+      "original_wh": [
+        485,
+        354
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/6121_02_01.png",
+          "sha256": "152ba24370a3696d84ef9a1e02adcc77915e1ba0f4b636afc66bf0fcaecb816a"
+        },
+        {
+          "annotation_path": "train/parsing_annos/6121_02_02.png",
+          "sha256": "0f66ca45c2627f3fc34bd0dd1cfd0dad6d20051c0a470bc7164e0aa74aa67628"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/23_train_6121.png",
+      "diagnostic_sha256": "760080f5de631fe62ac92d872b9a34060cda730867048106323f0e60828e055d",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "6473",
+      "image_path": "train/images/6473.jpg",
+      "image_sha256": "00cb3d5ab2fd02c4280212f724ca9fc30e395d4747fc7e32edd1ad5648c4f10a",
+      "original_wh": [
+        507,
+        338
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/6473_02_01.png",
+          "sha256": "ac27f2812e712f58d2f31176ccdd5bb6edcecdb8160f3033f74735cb06ddeee9"
+        },
+        {
+          "annotation_path": "train/parsing_annos/6473_02_02.png",
+          "sha256": "f5f1d856ffd09ec1dc6651b76d07d8adb42a750035311e5479c4c171c2da7e1c"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/24_train_6473.png",
+      "diagnostic_sha256": "f9d1db7cf4f64f0cca4890273a493b42a53fbed5821de86fba6253067afb8344",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "7760",
+      "image_path": "train/images/7760.jpg",
+      "image_sha256": "a2769d738ed20577985259dff8dfd8046acd51b372747469da176ad020a15d91",
+      "original_wh": [
+        501,
+        334
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/7760_02_01.png",
+          "sha256": "b18b37878584d71e0cafc9b1faf33e89a298a9e7b2aae8b7d08273e6071b9bb4"
+        },
+        {
+          "annotation_path": "train/parsing_annos/7760_02_02.png",
+          "sha256": "b3ceb384125bd2d0012811271ef939d1a8fd91a88056597a509b611e6f8eb68c"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/25_train_7760.png",
+      "diagnostic_sha256": "dbeaefb92e75388404cbc0f0346fcaff668343bdae604faa71f206d9f6a7f2c0",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "12312",
+      "image_path": "train/images/12312.jpg",
+      "image_sha256": "754126e4d8c3d634a85dde533aeae4c615a5222a58ea9d5d705d6a5f299b791d",
+      "original_wh": [
+        1000,
+        667
+      ],
+      "native_gt_person_count": 1,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/12312_01_01.png",
+          "sha256": "bebf4f6476954e2428d0794bf82418ac0d3e2d145b2862c89d57fcc54bb2117f"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/26_train_12312.png",
+      "diagnostic_sha256": "d5c60949b5609f9f4f79a77099f7d63483504744091793cb125806938078ae31",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "1584",
+      "image_path": "train/images/1584.jpg",
+      "image_sha256": "0ff94651028dea01c63d4cf02999a37cff8d4e3d31a8bd94ea2e61950d153915",
+      "original_wh": [
+        338,
+        507
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/1584_02_01.png",
+          "sha256": "ba244ff9a5bcfbba4cf18ad94d4a240b85a7dd1ba890c152fc0575925a0379d7"
+        },
+        {
+          "annotation_path": "train/parsing_annos/1584_02_02.png",
+          "sha256": "ce147818f1e6c4db3d4a869051f06c146848880118de3d6f226860db9e4f3f59"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/27_train_1584.png",
+      "diagnostic_sha256": "6c5b97094a3a41879bb1fc5e384607cb76eefc82ad89358ee948878a4bbec5f3",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "5260",
+      "image_path": "train/images/5260.jpg",
+      "image_sha256": "b728a05c467780dc3f526990f637fa1a0258a5ac600f1cb44687e4b1b4af9071",
+      "original_wh": [
+        334,
+        501
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/5260_02_01.png",
+          "sha256": "96a95bb3050482429f3319270cd6e61bc8b68e040f17ddd92822a98ab8f55cf2"
+        },
+        {
+          "annotation_path": "train/parsing_annos/5260_02_02.png",
+          "sha256": "fe4b1fa6811e47e91208eeb54d8074f5511dccbe33af25733a8d2d9e4a86160c"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/28_train_5260.png",
+      "diagnostic_sha256": "9c0dd5f48d652d180d4e3a23dfc383bd306746ce4659d7f969d664f76ef7ca90",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "2486",
+      "image_path": "train/images/2486.jpg",
+      "image_sha256": "7f68281b0158285d180c41a233d46d24ef6c56473ca9cb18edd1225ca100694d",
+      "original_wh": [
+        339,
+        507
+      ],
+      "native_gt_person_count": 2,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/2486_02_01.png",
+          "sha256": "79f033fd3133bcff4654f47d90f2fdb90a2e1edfce32e6a9f30c9a945654b4b8"
+        },
+        {
+          "annotation_path": "train/parsing_annos/2486_02_02.png",
+          "sha256": "d65c00180290f9a1f3f5acbc60e2e6d5256ca32bcff7d57fee568b8ab02e615b"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/29_train_2486.png",
+      "diagnostic_sha256": "06ae406c78d53d10c3224ef5df59eb2f28be856970ef3043748008fab6d91045",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    },
+    {
+      "image_id": "15052",
+      "image_path": "train/images/15052.jpg",
+      "image_sha256": "22ae5198057cf3f6a138e9202b6882867e36ffdeaa7847dabd9083b4d764abb8",
+      "original_wh": [
+        1024,
+        682
+      ],
+      "native_gt_person_count": 3,
+      "source_annotations": [
+        {
+          "annotation_path": "train/parsing_annos/15052_03_01.png",
+          "sha256": "93dedad807b9564c420731e175b51d0f489ed868feb99fb752f1ecf7608ccdce"
+        },
+        {
+          "annotation_path": "train/parsing_annos/15052_03_02.png",
+          "sha256": "82876755bd641797bf20de382449a694f6a9d4daba682a657ba948a061e057da"
+        },
+        {
+          "annotation_path": "train/parsing_annos/15052_03_03.png",
+          "sha256": "5fd6b4d37e2cd90d38ce09d822fa6dc3000fd876e94d7e02f9b40c1a4916a9e7"
+        }
+      ],
+      "diagnostic": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/30_train_15052.png",
+      "diagnostic_sha256": "079f156f88570492943f7ab2534ddc9d1a3de512c0f9f4802f731f5a02e89a62",
+      "alignment_grid_validation": "PASS",
+      "native_array_fidelity": "PASS",
+      "semantic_ownership_review": "PENDING"
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_01.png",
+      "sha256": "d990b01bd8a7851768ab74154cd27a51a3bda49b9c80d1dd62de84cafe564d39"
+    },
+    {
+      "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_02.png",
+      "sha256": "215b35c657e5b2296be20f9aa907ab23fcdf4175aab5e8732ddf00c78366e40a"
+    },
+    {
+      "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_03.png",
+      "sha256": "5a45b88484fe2a57143194f68aa55f957404f1f6fb831c46ce6df0d7354e3062"
+    },
+    {
+      "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_04.png",
+      "sha256": "f57d3bc22478fe258125e28793b376bb0d8f0138824631de244948ce728525a3"
+    },
+    {
+      "path": "outputs/visualizations/dataset-reassessment-20261008T095241Z/mhpv2_random_quality/contact_05.png",
+      "sha256": "77117d320116a9f7f965f23f398d6854fe1d56c2dcdc6a91ff5fd26be697159e"
+    }
+  ],
+  "class_palette_source_sha256": "80f261e47ee6f6c6dd95c9dd321caa5d3ddbe1d7ab6c7f9ffc82bba75502650f",
+  "human_review": "PENDING",
+  "population_error_prevalence": "NOT_ESTIMATED",
+  "numerical_alignment_is_not_physical_ownership_validation": true,
+  "tool_sha256": "8b8da84f347c747d0b7bbfd7465d9f7c4559588b3b4473275046724ea922de6c",
+  "model_inference": false
+}
