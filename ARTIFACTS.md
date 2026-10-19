@@ -2,6 +2,8 @@
 
 Git contains first-party code/tests, exact frozen configs/decisions/mappings, reports, machine-readable summary results, small factual manifests and publication-generated plots. It contains no dataset RGB/GT pixels, weights, environment binaries, bulk predictions/logits or company CCTV. Source dataset photos/overlays are withheld because public redistribution rights have not been established for the selected images. No broad image/CSV/JSON ignore pattern hides essential summaries.
 
+The small archived CCIHP evaluation/generation code snapshots are an explicit third-party exception, distributed with their original MIT notices; [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [redistribution review](publication/REDISTRIBUTION_REVIEW.json) identify the actual files. Native parser source trees remain external.
+
 | External artifact | Recorded bytes | SHA256 / access |
 |---|---:|---|
 | datasets/CCIHP_icip.zip | 842,868,844 | 373f3183bf58c3e5637ba3564c9b8abef923dc434b78f469b3722282d1514829; user-transferred, no public mirror created |

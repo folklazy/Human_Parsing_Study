@@ -7,6 +7,68 @@
   "CPI_configuration_excerpts": "Apache-2.0 attribution and license retained",
   "CPI_license_sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
   "first_party_license": "NO_NEW_LICENSE_GRANT_SELECTED",
-  "publication_approval": "PENDING",
-  "new_downloads": false
+  "publication_approval": "EXPLICIT_USER_APPROVAL_PUBLIC_FOLKLAZY_HUMAN_PARSING_STUDY",
+  "new_downloads": false,
+  "review_revision": 2,
+  "reviewed_utc": "2026-10-19T08:45:38.613578+00:00",
+  "base_post_run_snapshot": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
+  "actual_third_party_archive_documents": [
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/README.md",
+      "bytes": 4939,
+      "sha256": "4b73782345d94752e3a4a015ca0f8c9aa6bffe38d9568af7018071160f00bc5f",
+      "source_unchanged": true,
+      "redistribution_status": "INCLUDED_NOTICES_RETAINED",
+      "license": "MIT_ASSOCIATED_CODE_DOCUMENTATION",
+      "evidence": "README accompanying MIT code explicitly separates code MIT from annotation CC BY-NC 4.0; no image or pixel annotation supplied"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/eval_test_characteristic_inst_part_ap_ccihp.py",
+      "bytes": 13604,
+      "sha256": "3101b2a65384561e8f8b7ba3576c9e2ffd760090bf8d1f8345bcdf973101b253",
+      "source_unchanged": true,
+      "redistribution_status": "INCLUDED_NOTICES_RETAINED",
+      "license": "MIT",
+      "evidence": "Complete embedded permission/warranty/copyright notices retained byte-identically",
+      "notice_lines": [
+        3,
+        5,
+        26,
+        28,
+        48
+      ]
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/generate_characteristic_instance_part_ccihp.py",
+      "bytes": 7305,
+      "sha256": "3d3d529af87bdda20ef0ebdebec702d245bed4d6af9f581cb2df56357768b42a",
+      "source_unchanged": true,
+      "redistribution_status": "INCLUDED_NOTICES_RETAINED",
+      "license": "MIT",
+      "evidence": "Complete embedded permission/warranty/copyright notices retained byte-identically",
+      "notice_lines": [
+        3,
+        5,
+        25
+      ]
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/metric_ccihp_miou_evaluation.py",
+      "bytes": 4171,
+      "sha256": "84bb21dc2ed50f3780de5bbc17fd6fc0375d66889b861b6e325fca12a128059c",
+      "source_unchanged": true,
+      "redistribution_status": "INCLUDED_NOTICES_RETAINED",
+      "license": "MIT",
+      "evidence": "Complete embedded permission/warranty/copyright notices retained byte-identically",
+      "notice_lines": [
+        1,
+        3,
+        24
+      ]
+    }
+  ],
+  "native_parser_source_trees_included": false,
+  "historical_CCIHP_evaluation_source_snapshots_included": true,
+  "additional_files_withheld_this_review": [],
+  "review_scope_note": "Targeted included-file review only; no renewed whole-model license audit or new first-party license selected"
 }

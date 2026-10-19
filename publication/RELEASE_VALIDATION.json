@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "PUBLIC_METADATA_AND_SYNTHETIC_BOUNDARIES_NOT_FULL_ARTIFACT_REPRODUCTION",
+  "original_copied_files": 754,
+  "quality_rows": 8,
+  "failure_rows": 566,
+  "inventory_records": 29,
+  "strict_null_metrics": true,
+  "active_document_links": "PASS",
+  "secrets_pattern_scan": "PASS_NOT_A_GUARANTEE",
+  "no_datasets_weights_or_bulk_predictions": true,
+  "symlinks": 0,
+  "benchmark_inference": false,
+  "deferred_links": [],
+  "timestamp_utc": "2026-10-19T08:46:22.002864+00:00",
+  "approved_base_commit": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
+  "scope_note": "Publication-only changes; previous 133 portable CPU tests retained with all 85 test-input hashes unchanged",
+  "CPU_tests_rerun": false,
+  "third_party_archive_scripts_redistribution": "PASS_MIT_NOTICES_RETAINED",
+  "additional_withheld_files": []
+}

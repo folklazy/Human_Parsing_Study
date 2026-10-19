@@ -1,14 +1,20 @@
 {
-  "status": "READY_FOR_SINGLE_PUBLIC_APPROVAL",
+  "status": "APPROVED_READY_TO_PUBLISH",
   "proposed_owner": "folklazy",
   "proposed_repository": "Human_Parsing_Study",
   "proposed_visibility": "public",
   "remote_created": false,
   "public_url": null,
-  "publish_approval_required": true,
+  "publish_approval_required": false,
   "full_benchmark_authorized": false,
   "remote_configured": false,
   "push_attempted": false,
   "public_anonymous_access_verified": false,
-  "scope": "ONE_NEW_PUBLIC_REPOSITORY_POST_RUN_SNAPSHOT_ONLY"
+  "scope": "ONE_NEW_PUBLIC_REPOSITORY_POST_RUN_SNAPSHOT_ONLY",
+  "approval_record": "publication/PUBLICATION_APPROVAL.json",
+  "approved_base_commit": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
+  "snapshot_role": "POST_RUN_NOT_LAUNCH_COMMIT",
+  "updated_utc": "2026-10-19T08:45:38.613578+00:00",
+  "authenticated_owner_verified": "folklazy",
+  "additional_files_withheld": []
 }

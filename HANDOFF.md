@@ -19,7 +19,7 @@ Current executed config [configs/application_v2_first_cohort_v12.yaml](configs/a
 
 The experiments did not establish a quality winner. OOM correction and interrupted-image handling in any future run need a new, reviewable execution revision, with TRAIN-only engineering and frozen population/scoring rules before any new VAL pass. Do not retroactively retry or fill the present main scores. No need to reopen the accepted five policies or the closed channel-header search absent concrete new contradictions.
 
-Clean cloning does not provide native CUDA builds, all annotation bindings or semantic visual case assets. Public image redistribution is not cleared. Licensing remains component-specific; deployment is outside research scope. Repository publication is pending the single public-approval gate; an agent outside the account has not been tested.
+Clean cloning does not provide native CUDA builds, all annotation bindings or semantic visual case assets. Public image redistribution is not cleared. Licensing remains component-specific; deployment is outside research scope. The user approved publication as `folklazy/Human_Parsing_Study` (PUBLIC); actual remote/anonymous verification is recorded in [current publication state](publication/PUBLICATION_STATE.json). An agent outside the account has not been tested.
 
 ## Working-copy synchronization
 

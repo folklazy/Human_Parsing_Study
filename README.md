@@ -40,4 +40,8 @@ The 565 native failures are CUDA OOM; one ConvNeXt-B image is an unresolved inte
 
 Clone alone permits the documented portable CPU/synthetic checks and verification of released result summaries. It does **not** provide datasets, checkpoints, native CUDA environments, pixel GT, saved masks/logits or all GT context bindings. See [external artifacts](ARTIFACTS.md). Frozen config flags document the historical approval for this one run; they do not authorize a new run.
 
-No company CCTV, source dataset photos, native model source trees, weights or bulk predictions are included. No new benchmark, download or GPU smoke is performed to prepare this repository. Public GitHub publication is pending a separate user decision; no public URL exists yet.
+No company CCTV, source dataset photos, native model source trees, weights or bulk predictions are included. The small archived CCIHP evaluation-code snapshots retain their MIT notices; see [third-party notices](THIRD_PARTY_NOTICES.md). No new benchmark, download or GPU smoke is performed to prepare this repository.
+
+## Publication
+
+The user approved a new **PUBLIC** repository, `folklazy/Human_Parsing_Study`, based on post-run snapshot `2d78f85b8785e87a568fd6ac8f9e1006a40972b0`. Publication is approved and being prepared; public availability is not yet claimed. [Current publication state](publication/PUBLICATION_STATE.json) is separate from the unchanged scientific run status. Subsequent publication commits are also post-run records, not launch revisions.

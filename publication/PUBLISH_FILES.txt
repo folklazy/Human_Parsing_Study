@@ -523,12 +523,15 @@ publication/EXTERNAL_ARTIFACTS.json
 publication/FIGURE_PROVENANCE.json
 publication/HISTORICAL_EXTERNAL_LINKS.json
 publication/HISTORY_INDEX.json
+publication/PUBLICATION_APPROVAL.json
 publication/PUBLICATION_REVIEW_TH.md
 publication/PUBLICATION_STATE.json
 publication/PUBLIC_FILE_MANIFEST.json
 publication/PUBLIC_REPORT_VIEWS.json
 publication/PUBLISH_FILES.txt
 publication/REDISTRIBUTION_REVIEW.json
+publication/RELEASE_PRECHECK.json
+publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_VALIDATION.json
 publication/SOURCE_COPY_MANIFEST.json
 publication/VALIDATION_SCOPE.md

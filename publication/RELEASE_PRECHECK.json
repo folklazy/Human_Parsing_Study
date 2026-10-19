@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "timestamp_utc": "2026-10-19T08:45:38.613578+00:00",
+  "approved_base_commit": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
+  "redistribution_review": "publication/REDISTRIBUTION_REVIEW.json",
+  "unchanged_source_copies": 754,
+  "previously_tested_CPU_input_hashes_unchanged": 85,
+  "portable_CPU_tests_repeated": false,
+  "reason_not_repeated": "Only publication docs/metadata changed; all tested inputs byte-identical to prior 133-test evidence",
+  "benchmark_results_configs_decisions_changed": false,
+  "scientific_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "primary_policy": "STRICT_COMPLETE",
+  "main_scores": "NULL",
+  "new_inference": false,
+  "new_model_downloads": false,
+  "new_license_selection": false,
+  "additional_files_withheld": [],
+  "historical_reports_rewritten": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "recorded_utc": "2026-10-19T08:45:38.613578+00:00",
+  "authorization_source": "Explicit user instruction in current publication task",
+  "owner": "folklazy",
+  "repository": "Human_Parsing_Study",
+  "visibility": "public",
+  "approved_base_commit": "2d78f85b8785e87a568fd6ac8f9e1006a40972b0",
+  "snapshot_role": "POST_RUN_NOT_LAUNCH_COMMIT",
+  "allowed_actions": [
+    "Create named new public repository",
+    "Push reviewed publication files and post-run publication commits",
+    "Verify public anonymous reads"
+  ],
+  "scientific_results_changes_authorized": false,
+  "new_experiment_authorized": false,
+  "first_party_license_selection_authorized": false,
+  "history_rewrite_authorized": false
+}

@@ -27,7 +27,7 @@
   "matching_secondary": 0.75,
   "quality_only": true,
   "new_experiment_authorized": false,
-  "publication_status": "PENDING_PUBLIC_APPROVAL",
+  "publication_status": "APPROVED_READY_TO_PUBLISH",
   "public_url": null,
   "historical_stage0_full_roster_status": "BLOCKED_NOT_THE_CURRENT_COHORT_STATUS",
   "authoritative_result_csv": "metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
