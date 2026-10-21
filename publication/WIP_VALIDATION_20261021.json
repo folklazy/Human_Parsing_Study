@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-10-21T03:04:56.824790+00:00",
+  "status": "PASS",
+  "scope": "DOCUMENTATION_AND_STATUS_PRESERVATION_ONLY_NOT_MODEL_OR_DATASET_RECERTIFICATION",
+  "checks": {
+    "roadmap_original_hash_matches": true,
+    "roadmap_body_preserved_verbatim": true,
+    "only_existing_canonical_roadmap_changed": true,
+    "reused_prior_evidence_unchanged": true,
+    "only_allowed_public_existing_docs_changed": true,
+    "explicit_sync_hashes_match": true,
+    "WIP_active_links_resolve": true,
+    "new_experiment_not_authorized": true
+  },
+  "public_metadata_validator": "PASS",
+  "full_test_suite_rerun": false,
+  "GPU_inference": false,
+  "source_config_or_metric_edits": false,
+  "local_authoring_inventory_checked": 379,
+  "old_source_copy_comparison_unchanged": 752,
+  "prior_CPU_test_evidence": "17 new + 42 retained legacy reported by previous preparation validation, not rerun here",
+  "canonical_changed_existing_files": [
+    "reports/PROJECT_ROADMAP_TH_20261020.md"
+  ],
+  "public_changed_existing_files": [
+    "HANDOFF.md",
+    "README.md",
+    "reports/HISTORY_INDEX.md"
+  ],
+  "broken_active_links": [],
+  "canonical_root_not_git": true,
+  "public_base_commit": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+  "staged_review": {
+    "files": [
+      "HANDOFF.md",
+      "README.md",
+      "STATUS.json",
+      "WORK_LOG.md",
+      "provenance/PROJECT_ROADMAP_STATUS_V1.json",
+      "provenance/WORK_PRESERVATION_20261021.json",
+      "publication/PUBLIC_FILE_MANIFEST.json",
+      "publication/PUBLISH_FILES.txt",
+      "publication/WIP_SYNC_20261021.json",
+      "publication/WIP_VALIDATION_20261021.json",
+      "reports/HISTORY_INDEX.md",
+      "reports/PROJECT_ROADMAP_TH_20261020.md"
+    ],
+    "only_selected_docs_and_metadata": true,
+    "new_third_party_source": false,
+    "symlinks": 0,
+    "file_size_limit_bytes": 5000000,
+    "note": "Default git whitespace check flags four Markdown two-space line breaks, including preserved original prose. Blank-at-EOL warnings are disabled only for the separate whitespace check; original prose remains unchanged."
+  }
+}

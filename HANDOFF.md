@@ -24,3 +24,7 @@ Clean cloning does not provide native CUDA builds, all annotation bindings or se
 ## Working-copy synchronization
 
 Canonical editable research remains the sibling `Human_Parsing_MHPv2_Study` (not Git-initialized at snapshot). The public staging copy is `Human_Parsing_Study_Public`, branch `main`, remote `https://github.com/folklazy/Human_Parsing_Study.git`. Source copies preserve bytes and original hashes in publication/SOURCE_COPY_MANIFEST.json. No original files were moved/deleted. Changes do not automatically synchronize in either direction: select explicit paths, review diffs and before/after hashes, update publication manifests, run affected checks, and create a new commit before pushing. Do not wholesale-copy or replay historical run scripts as synchronization.
+
+## Next review transition — 21 October 2026
+
+Read [STATUS](STATUS.json) and [WORK_LOG](WORK_LOG.md) before continuing. The [roadmap WIP](reports/PROJECT_ROADMAP_TH_20261020.md) retains the previous proposal as historical starting evidence. Prompt A/parser list are not yet supplied. Review those when supplied; do not automatically relaunch the old roster/proposal. Newer local source/configs remain outside this selected documentation sync; see [sync manifest](publication/WIP_SYNC_20261021.json).

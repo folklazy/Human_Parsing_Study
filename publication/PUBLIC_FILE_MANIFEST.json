@@ -35,8 +35,8 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 3537,
-      "sha256": "60c804af841dacdc7246b1ec582c228ea2840ea8c66513a7d54342347c7b3419"
+      "bytes": 4039,
+      "sha256": "0dcfa186cc6845e30b32ee022565fe31f274221fcd69d2702e1b98da7737faad"
     },
     {
       "path": "LICENSE.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4856,
-      "sha256": "fd8c7926821012f1b8eb2c6a670f348b209d8ff440dfcd4d74dfe4da5b2cac31"
+      "bytes": 5439,
+      "sha256": "bfc508f7d88188de9eea33673007e1093d2204ccbbb0e23ea7585069f6a4f548"
     },
     {
       "path": "REFERENCES.md",
@@ -84,6 +84,11 @@
       "sha256": "395f431d3007ae41bc1eb6a2164328bd314bc9ad8fbb31da4193858977fb693a"
     },
     {
+      "path": "STATUS.json",
+      "bytes": 2600,
+      "sha256": "08367cca4d185b28e0513a4f2d9583b9b50950f871aa4e62c5763907872251fa"
+    },
+    {
       "path": "STUDY_STANDARD.md",
       "bytes": 3123,
       "sha256": "425043644e78b9194a74f8b93ca7048a76d812e8a2e56d80ae64bc8c98277724"
@@ -97,6 +102,11 @@
       "path": "THIRD_PARTY_NOTICES.md",
       "bytes": 3028,
       "sha256": "bf68fe708d45bb9b15bf83c18387eaf32ded382e7491e1c6d62fccf6fd2db0f7"
+    },
+    {
+      "path": "WORK_LOG.md",
+      "bytes": 5669,
+      "sha256": "2a581152737fe599590d6e107abb18ff1fe22064b1a3f50f07adb68bfdf86095"
     },
     {
       "path": "cohorts/first_cpi_t3b/POPULATIONS.json",
@@ -722,6 +732,11 @@
       "path": "provenance/OFFICIAL_METRIC_FIXTURES.json",
       "bytes": 1180,
       "sha256": "93611d75c19da99620631f45d9dba38837a7a79f04658aea1d2d16a60131619b"
+    },
+    {
+      "path": "provenance/PROJECT_ROADMAP_STATUS_V1.json",
+      "bytes": 928,
+      "sha256": "e2120e405a5b79abc4e37bff2de6fab9d47f2c03f3e6c2ccd9e7dc44348e3b3d"
     },
     {
       "path": "provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/BEFORE.json",
@@ -2599,6 +2614,11 @@
       "sha256": "7a8e2ca333def0f70086d237b2670fe5afb532440e8aca999e453f43f337baa4"
     },
     {
+      "path": "provenance/WORK_PRESERVATION_20261021.json",
+      "bytes": 5320,
+      "sha256": "ce2d1308d654403c36b8365b66097cc0c8f9315e8814a60bb47bda22b5f6b2b1"
+    },
+    {
       "path": "publication/ARCHIVED_REPORT_INDEX.json",
       "bytes": 24141,
       "sha256": "9ac1c55e57364c4a9e13ec22cb05a865e797eb00fd71ad5169c842a310cd6df7"
@@ -2687,6 +2707,16 @@
       "path": "publication/VALIDATION_SCOPE.md",
       "bytes": 2574,
       "sha256": "c8828fbf1310c85cdbc7119d461c9fe6d14a26d082df2d8fb9b4b9ca8e0fd071"
+    },
+    {
+      "path": "publication/WIP_SYNC_20261021.json",
+      "bytes": 4025,
+      "sha256": "4a55b122faa649570be1a6627e3cc380e90eab179755ed862dd99ff83610a463"
+    },
+    {
+      "path": "publication/WIP_VALIDATION_20261021.json",
+      "bytes": 2094,
+      "sha256": "ecb71d3f6766cf551b60d97e0423bdba20cc9ba46d9303e0ff2d786916f05514"
     },
     {
       "path": "publication/WITHHELD_SOURCE_FILES.json",
@@ -2900,8 +2930,8 @@
     },
     {
       "path": "reports/HISTORY_INDEX.md",
-      "bytes": 7848,
-      "sha256": "4be6bfd04186a51ba3343ae88cd6bb53218f5cb7eec1d2ab9f8c5b5a8aaa3a6c"
+      "bytes": 8274,
+      "sha256": "1398ea7650bd9dd9dc15f8086e15abeed102ebcebe9e63980171abe1fc7efb4a"
     },
     {
       "path": "reports/LICENSE_ELIGIBILITY_REASSESSMENT.md",
@@ -2937,6 +2967,11 @@
       "path": "reports/PRIMARY_DATASET_DECISION.md",
       "bytes": 11150,
       "sha256": "a242c73b1356a5f0592ec2c8649cdf5326ab609b87e2774221225fe34a536154"
+    },
+    {
+      "path": "reports/PROJECT_ROADMAP_TH_20261020.md",
+      "bytes": 33818,
+      "sha256": "d660f53d62f17f7c99898317891021120f712191c3193d9e34a42297fa97c502"
     },
     {
       "path": "reports/PROTOCOL_REVIEW.md",
@@ -4073,5 +4108,7 @@
       "bytes": 8026,
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
-  ]
+  ],
+  "updated_utc": "2026-10-21T03:04:56.824790+00:00",
+  "revision_reason": "Selected WIP preservation and next-review handoff; prior source/config snapshot remains unchanged"
 }

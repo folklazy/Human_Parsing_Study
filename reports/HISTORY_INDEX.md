@@ -57,3 +57,7 @@ Current GitHub publication authority: [publication state](../publication/PUBLICA
 | [TAXONOMY_AUDIT.md](TAXONOMY_AUDIT.md) | HISTORICAL_CONTEXT_NOT_CURRENT_AUTHORIZATION |
 
 [Archived report index](../publication/ARCHIVED_REPORT_INDEX.json) records original paths/hashes and whether each older archived Markdown version is in this publication. Unselected archival copies remain with the original custodian and are not claimed publicly available.
+
+## Planning evidence preserved on 21 October 2026
+
+[Roadmap of 20 October](PROJECT_ROADMAP_TH_20261020.md): **WIP_PRESERVED_NOT_ACCEPTED_NEW_PLAN**. Original bytes/hash are retained in the canonical working copy; public copy explicitly marks unavailable local references. [Transition status](../STATUS.json) and [work log](../WORK_LOG.md) describe the next review scope separately from historical roster/benchmark decisions.

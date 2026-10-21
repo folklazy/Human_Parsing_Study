@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-21T03:03:58.165446+00:00",
+  "status": "WIP_PRESERVED_NOT_ACCEPTED_NEW_PLAN",
+  "roadmap_path": "reports/PROJECT_ROADMAP_TH_20261020.md",
+  "original_sha256": "d00210dbe6ee95224d0416875e0f6ecc714e30b5ec214d6e84723ef1953e1bda",
+  "archived_original_path": "reports/archive/planning-transition-20261021T030358165446Z/PROJECT_ROADMAP_TH_20261020.md",
+  "current_sha256": "ddc8544672825d80db2e6bb9243eb4d803614bdfc772b5a3433cdbcd4f1328e9",
+  "change": "WIP banner only; original body retained verbatim",
+  "limitations": [
+    "unfinished previous plan; not an accepted selection procedure",
+    "old roster19 and two-QANet proposal not automatic scope for new Prompt A",
+    "old local evidence reused, no broad re-audit",
+    "Prompt A and new parser list to be supplied after this preservation task"
+  ],
+  "new_inference": false,
+  "new_full_benchmark_authorized": false
+}

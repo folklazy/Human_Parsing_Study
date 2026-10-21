@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-21T03:03:58.165446+00:00",
+  "transition_id": "planning-transition-20261021T030358165446Z",
+  "roadmap": {
+    "schema_version": "1.0",
+    "created_utc": "2026-10-21T03:03:58.165446+00:00",
+    "status": "WIP_PRESERVED_NOT_ACCEPTED_NEW_PLAN",
+    "roadmap_path": "reports/PROJECT_ROADMAP_TH_20261020.md",
+    "original_sha256": "d00210dbe6ee95224d0416875e0f6ecc714e30b5ec214d6e84723ef1953e1bda",
+    "archived_original_path": "reports/archive/planning-transition-20261021T030358165446Z/PROJECT_ROADMAP_TH_20261020.md",
+    "current_sha256": "ddc8544672825d80db2e6bb9243eb4d803614bdfc772b5a3433cdbcd4f1328e9",
+    "change": "WIP banner only; original body retained verbatim",
+    "limitations": [
+      "unfinished previous plan; not an accepted selection procedure",
+      "old roster19 and two-QANet proposal not automatic scope for new Prompt A",
+      "old local evidence reused, no broad re-audit",
+      "Prompt A and new parser list to be supplied after this preservation task"
+    ],
+    "new_inference": false,
+    "new_full_benchmark_authorized": false
+  },
+  "prior_evidence": [
+    {
+      "path": "provenance/MODEL_ROSTER_SCOPE_ACTIVE.json",
+      "sha256": "c02538f77e04fe2b8518776626721bb0827531ac9e0516814643d269f5527aae",
+      "recorded_status": "ACCEPTED_ROSTER_ONLY_NOT_EXECUTABLE",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    },
+    {
+      "path": "provenance/EXPERIMENT_PREPARATION_ACTIVE.json",
+      "sha256": "75ce00e9faf544a032e5f089cd276be1fe7ddf1c9b601bd9ce3abffa50d5ab8f",
+      "recorded_status": "READY_FOR_COMBINED_QANET_REVIEW_NOT_AUTHORIZED",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    },
+    {
+      "path": "configs/experiment_qanet_cihp_candidate_v1.json",
+      "sha256": "4879b6b58cbb23ab2248d4616427e2101ee7f7556dd1468c1dc42fee0014bf37",
+      "recorded_status": "PROPOSED_NOT_FROZEN",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    },
+    {
+      "path": "provenance/MODEL_ROSTER_ACCEPTANCE_VALIDATION_V2.json",
+      "sha256": "50404db4092d0038e033b140e529dc9d16eb8d793193fd1bb3cc5c0ba4ea6442",
+      "recorded_status": "PASS",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/experiment-preparation-20261020T064124828436Z/PREPARATION_SUMMARY.json",
+      "sha256": "99acdc7dd08550820a2f44c3373b96c2339445a0dce6c06c1c22b6f172ad3607",
+      "recorded_status": "A_TO_D_COMPLETE_READY_FOR_COMBINED_REVIEW",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    },
+    {
+      "path": "provenance/RUN_MANIFESTS/experiment-preparation-20261020T064124828436Z/FINAL_PREPARATION_VALIDATION.json",
+      "sha256": "9a7deb6a3d13432c826b792b4a8e86e5570048849223b5adf811b8b1c8723e97",
+      "recorded_status": "PASS",
+      "verification_this_round": "READ_EXISTING_RECORD_NO_REEXECUTION"
+    }
+  ],
+  "source_copy_comparison": {
+    "unchanged": 752,
+    "different": [
+      "README.md",
+      "STUDY_STATE.json"
+    ],
+    "missing": [],
+    "interpretation": "comparison to original source-copy fingerprints, not a Git diff of canonical work; original public README/state were subsequently derived publication views"
+  },
+  "local_authoring_inventory": {
+    "files": 379,
+    "not_present_at_same_public_path": 76,
+    "local_record_workspace_relative": "Human_Parsing_MHPv2_Study/outputs/status_preservation/planning-transition-20261021T030358165446Z/LOCAL_AUTHORING_INVENTORY.json",
+    "warning": "absence in public snapshot does not establish when a file was authored; working copy has no Git baseline"
+  },
+  "git_baseline": {
+    "public_branch": "main",
+    "public_HEAD_before": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+    "remote_HEAD_before": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+    "public_working_tree_before": "CLEAN",
+    "workspace_root_is_git_repository": false,
+    "canonical_study_is_git_repository": false
+  },
+  "process_snapshot": {
+    "observed_utc": "2026-10-21T03:03:58.165446+00:00",
+    "workspace_python_scripts": [
+      {
+        "pid": 1490036,
+        "script": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/serve_review_web.py",
+        "role": "SAVED_OUTPUT_REVIEW_WEB",
+        "port": 8765
+      }
+    ],
+    "gpu": "Tesla T4, 15360 MiB, 0 MiB, 0 %",
+    "compute_applications_present": false,
+    "inference_worker_observed": false,
+    "scope": "snapshot of workspace Python script paths and NVIDIA compute processes, not proof about all remote or dormant schedulers",
+    "jobs_started": false,
+    "jobs_resumed": false,
+    "jobs_killed": false,
+    "job_configs_changed": false
+  },
+  "checks_not_repeated": [
+    "GPU inference",
+    "dataset integrity audit",
+    "checkpoint hashing/download",
+    "full test suite",
+    "semantic/roster audit"
+  ],
+  "scope_invariants": {
+    "benchmark_resumed": false,
+    "original_datasets_modified": false,
+    "YOLO_modified": false,
+    "PPSS_modified": false,
+    "old_configs_modified": false,
+    "execution_code_modified": false
+  },
+  "public_sync": {
+    "mode": "explicit selected documentation/status copy",
+    "unpublished_source_configs_retained_locally": true,
+    "publication_manifest": "publication/WIP_SYNC_20261021.json"
+  }
+}

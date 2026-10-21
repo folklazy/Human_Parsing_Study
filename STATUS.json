@@ -1,0 +1,62 @@
+{
+  "schema_version": "planning-status-1.0",
+  "updated_utc": "2026-10-21T03:03:58.165446+00:00",
+  "status": "WIP_PRESERVED_WAITING_FOR_PROMPT_A_CONTENT",
+  "transition_id": "planning-transition-20261021T030358165446Z",
+  "scope": "documentation preservation and handoff only",
+  "canonical_working_copy_workspace_relative": "Human_Parsing_MHPv2_Study",
+  "public_staging_copy_workspace_relative": "Human_Parsing_Study_Public",
+  "automatic_sync": false,
+  "benchmark_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS",
+  "primary_reporting_policy": "STRICT_COMPLETE",
+  "main_quality_scores": "NULL_IN_EXISTING_RUN",
+  "prior_work": {
+    "preparation": "A_TO_D_COMPLETE_READY_FOR_COMBINED_REVIEW_RECORDED_NOT_RERUN",
+    "roster": "HISTORICAL_ACCEPTED_ROSTER_ONLY_NOT_NEW_LAUNCH_SCOPE",
+    "QANet_proposal": "PROPOSED_NOT_FROZEN_NOT_NEW_LAUNCH_SCOPE",
+    "roadmap": "WIP_ARCHIVED_ORIGINAL_AND_PRESERVED_BODY"
+  },
+  "current_review": {
+    "Prompt_A_received": false,
+    "current_parser_list_received": false,
+    "user_response": "Will provide after preservation is finished",
+    "status": "WAITING_FOR_INPUT_NOT_STARTED",
+    "old_roster_automatically_adopted": false,
+    "old_QANet_proposal_automatically_adopted": false
+  },
+  "authorization": {
+    "new_benchmark": false,
+    "inference": false,
+    "execution_pipeline_implementation": false
+  },
+  "process_snapshot": {
+    "observed_utc": "2026-10-21T03:03:58.165446+00:00",
+    "workspace_python_scripts": [
+      {
+        "pid": 1490036,
+        "script": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/serve_review_web.py",
+        "role": "SAVED_OUTPUT_REVIEW_WEB",
+        "port": 8765
+      }
+    ],
+    "gpu": "Tesla T4, 15360 MiB, 0 MiB, 0 %",
+    "compute_applications_present": false,
+    "inference_worker_observed": false,
+    "scope": "snapshot of workspace Python script paths and NVIDIA compute processes, not proof about all remote or dormant schedulers",
+    "jobs_started": false,
+    "jobs_resumed": false,
+    "jobs_killed": false,
+    "job_configs_changed": false
+  },
+  "git_baseline": {
+    "public_branch": "main",
+    "public_HEAD_before": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+    "remote_HEAD_before": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+    "public_working_tree_before": "CLEAN",
+    "workspace_root_is_git_repository": false,
+    "canonical_study_is_git_repository": false
+  },
+  "evidence": "provenance/WORK_PRESERVATION_20261021.json",
+  "roadmap": "reports/PROJECT_ROADMAP_TH_20261020.md",
+  "publication_scope": "SELECTED_FIRST_PARTY_WIP_DOCS_AND_STATUS_ONLY; no wholesale source/config sync"
+}

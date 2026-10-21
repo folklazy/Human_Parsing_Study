@@ -47,3 +47,7 @@ No company CCTV, source dataset photos, native model source trees, weights or bu
 Published **PUBLIC** repository: [folklazy/Human_Parsing_Study](https://github.com/folklazy/Human_Parsing_Study). The approved base `2d78f85b8785e87a568fd6ac8f9e1006a40972b0` and subsequent publication commits are **post-run snapshots**, not launch revisions.
 
 Anonymous README/result/config reads and remote HEAD were verified at the [initial public commit](publication/INITIAL_PUBLICATION_VERIFICATION.json). [Current publication state](publication/PUBLICATION_STATE.json) is separate from the unchanged scientific run status. The canonical research working copy remains `Human_Parsing_MHPv2_Study`; this repository is its reviewed public snapshot, with explicit synchronization instructions in [HANDOFF.md](HANDOFF.md).
+
+## Planning transition — 21 October 2026
+
+The [previous roadmap](reports/PROJECT_ROADMAP_TH_20261020.md) is preserved as **WIP**, not an accepted new experiment. [STATUS](STATUS.json) and [WORK_LOG](WORK_LOG.md) separate historical decisions from the next Prompt A review. The user will supply Prompt A and the current parser list after this preservation step; neither the old 19-candidate roster nor the QANet proposal is automatically the new launch scope. No experiment was resumed. This selected documentation sync does not publish the newer local implementation/config tree.

@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-21T03:03:58.165446+00:00",
+  "base_commit": "5f1db38c9f63be7256c2f40533ebf5e5fc375f31",
+  "scope": "selected first-party WIP documentation/status; original local work preserved",
+  "redistribution": "first-party text and hashes only; no additional third-party source or images",
+  "files": [
+    {
+      "source_path": "reports/PROJECT_ROADMAP_TH_20261020.md",
+      "source_sha256": "ddc8544672825d80db2e6bb9243eb4d803614bdfc772b5a3433cdbcd4f1328e9",
+      "public_path": "reports/PROJECT_ROADMAP_TH_20261020.md",
+      "public_sha256": "d660f53d62f17f7c99898317891021120f712191c3193d9e34a42297fa97c502",
+      "transformation": "LOCAL_ONLY_LINKS_CONVERTED_TO_EXPLICIT_EXTERNAL_REFERENCES"
+    },
+    {
+      "source_path": "STATUS.json",
+      "source_sha256": "08367cca4d185b28e0513a4f2d9583b9b50950f871aa4e62c5763907872251fa",
+      "public_path": "STATUS.json",
+      "public_sha256": "08367cca4d185b28e0513a4f2d9583b9b50950f871aa4e62c5763907872251fa",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_path": "WORK_LOG.md",
+      "source_sha256": "2a581152737fe599590d6e107abb18ff1fe22064b1a3f50f07adb68bfdf86095",
+      "public_path": "WORK_LOG.md",
+      "public_sha256": "2a581152737fe599590d6e107abb18ff1fe22064b1a3f50f07adb68bfdf86095",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_path": "provenance/PROJECT_ROADMAP_STATUS_V1.json",
+      "source_sha256": "e2120e405a5b79abc4e37bff2de6fab9d47f2c03f3e6c2ccd9e7dc44348e3b3d",
+      "public_path": "provenance/PROJECT_ROADMAP_STATUS_V1.json",
+      "public_sha256": "e2120e405a5b79abc4e37bff2de6fab9d47f2c03f3e6c2ccd9e7dc44348e3b3d",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_path": "provenance/WORK_PRESERVATION_20261021.json",
+      "source_sha256": "ce2d1308d654403c36b8365b66097cc0c8f9315e8814a60bb47bda22b5f6b2b1",
+      "public_path": "provenance/WORK_PRESERVATION_20261021.json",
+      "public_sha256": "ce2d1308d654403c36b8365b66097cc0c8f9315e8814a60bb47bda22b5f6b2b1",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    }
+  ],
+  "unpublished_references_in_roadmap": [
+    {
+      "label": "แผนเทคนิคหลัก",
+      "canonical_reference": "../../HUMAN_PARSING_EXPERIMENT_DESIGN_TH.md",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "19 รุ่นปัจจุบัน",
+      "canonical_reference": "EXACT_ROSTER_ACTIVE_19_TH_20261020.md",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "roster scope V4",
+      "canonical_reference": "../configs/experiment_roster_scope_v4.json",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "preparation pointer",
+      "canonical_reference": "../provenance/EXPERIMENT_PREPARATION_ACTIVE.json",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "route matrix",
+      "canonical_reference": "../provenance/RUN_MANIFESTS/experiment-preparation-20261020T064124828436Z/ROSTER_ELIGIBILITY_V1.csv",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "CCTV ที่เปิดดูจริง",
+      "canonical_reference": "../../cctv_dataset/reports/CCTV_BOUNDED_VISUAL_SCOPE_REVIEW_TH_20261020.md",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "Candidate config",
+      "canonical_reference": "../configs/experiment_qanet_cihp_candidate_v1.json",
+      "reason": "outside public repository or unpublished asset"
+    },
+    {
+      "label": "Approval package",
+      "canonical_reference": "../provenance/RUN_MANIFESTS/experiment-preparation-20261020T064124828436Z/QANET_APPROVAL_PACKAGE.json",
+      "reason": "outside public repository or unpublished asset"
+    }
+  ],
+  "public_commit_role": "POST_WORK_WIP_SNAPSHOT_NOT_LAUNCH_REVISION",
+  "automatic_source_or_config_sync": false
+}
