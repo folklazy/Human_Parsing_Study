@@ -65,3 +65,7 @@ Current GitHub publication authority: [publication state](../publication/PUBLICA
 ## Current planning workspace — 21 October 2026
 
 [Human_Parsing_Benchmark](../Human_Parsing_Benchmark/README.md) is the current A–D planning entry point, with [status](../Human_Parsing_Benchmark/STATUS.md), [plan](../Human_Parsing_Benchmark/PLAN.md) and [decisions](../Human_Parsing_Benchmark/docs/DECISIONS.md). The preserved roadmap above remains WIP historical starting evidence. The new candidate table is user-specified review input; no readiness or execution acceptance is implied.
+
+## Prompt A reviewed proposal — 21 October 2026
+
+Current [authoritative PLAN](../Human_Parsing_Benchmark/PLAN.md) and [protocol review](../Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md) propose seven checkpoints/ten configurations with explicit task/route/mapping/resource limits. The user now permits CCIHP VAL checkpoint selection for the new study, while prohibiting VAL mapping/settings tuning. Historical CPI policy/results are unchanged. State: REVIEWED_PROPOSAL, not DESIGN_READY/LAUNCH_READY; pending design decisions do not authorize execution.

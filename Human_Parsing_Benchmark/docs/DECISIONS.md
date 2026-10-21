@@ -15,9 +15,22 @@
 | EXECUTION | SETUP อนุญาตเอกสาร/metadata/Git sync เท่านั้น | ACCEPTED_SCOPE_BOUNDARY | ห้าม inference/smoke/benchmark/training/download/pipeline refactor |
 | LEGACY | Roster 19 / two-QANet proposal / roadmap WIP ไม่เป็น launch scope ใหม่อัตโนมัติ | HISTORICAL_NOT_CURRENT_LAUNCH_AUTHORITY | คำสั่งเก็บ WIP และ candidate list ปัจจุบัน |
 | CPI | CPI closed run คง INCOMPLETE/null/STRICT_COMPLETE และ ACCEPTED_WITH_INDIRECT_EVIDENCE | PRESERVED_HISTORICAL_ACCEPTANCE | ไม่ retry/ซ่อมผลเดิมหรือ promote evidence confidence |
-| SELECTION | Exact split policy/selection rules และความสัมพันธ์กับ historical no-VAL-selection | A_REVIEW_REQUIRED | ยังไม่เปลี่ยน prohibition เดิม ต้องกำหนดก่อนดูผล; คำว่า selection benchmark ไม่ยกเลิกเอง |
+| SELECTION | SETUP-era question about VAL selection | SUPERSEDED_FOR_CURRENT_PLAN_BY_PROMPT_A | User Prompt A now explicitly permits CCIHP VAL checkpoint selection; historical CPI policy remains historical. Mapping/threshold/preprocess/retry tuning remains prohibited. |
 | DESIGN | Exact roster/targets/mappings/metrics/config/jobs ของรอบใหม่ | NOT_DECIDED | รอ Prompt A; ไม่เติมจาก filename ล่าสุดหรือ old accepted context |
 
 ไม่มี decision ใดในชุดนี้ให้ Sapiens2 หรือ candidate อื่นมี new inference authorization หรือเป็น license clearance ใหม่ ใช้บันทึกสิทธิ/technical feasibility เดิมตามบริบท ไม่เปิด license audit ทั้งชุดเพื่อจัดโฟลเดอร์
 
 ข้อเสนอใหม่บันทึก PROPOSED พร้อมหลักฐาน/ข้อจำกัดก่อนเปลี่ยน ACCEPTED ตามอำนาจที่ใช้ได้ หาก supersede ให้เก็บแถว/เอกสารเดิมและชี้ตัวแทน ไม่เขียนประวัติให้ดูเหมือนรู้ก่อนทดลอง
+
+## Prompt A — 21 October 2026
+
+| ID | Decision | Status | Source / consequence |
+|---|---|---|---|
+| A-VAL | CCIHP Validation may select pretrained checkpoints/configurations | ACCEPTED_EXPLICIT_USER_POLICY | Current Prompt A §4.3 supersedes previous no-VAL-selection for this new study only; no independent final confirmation claim and no VAL-based config/mapping/threshold/retry tuning |
+| A-SAPIENS | 0.4B/0.8B/1B remain active candidates, 5B excluded | ACCEPTED_EXPLICIT_USER_ROSTER_DIRECTION | Current Prompt A §2; stale RESTRICTED metadata does not block candidate review; not new inference approval or model-license assurance |
+| A-ROSTER | Proposed seven checkpoints / ten configurations | REVIEWED_PROPOSAL_USER_ACCEPTANCE_PENDING | Earlier seven-input table reused as proposal; no current accepted launch roster |
+| A-VIEWS | C3 shared garment + C7 compatible CIHP cohort + separate Sapiens body diagnostics | REVIEWED_PROPOSAL_USER_ACCEPTANCE_PENDING | Semantic support matrix, no upper/lower collapse or invented class split |
+| A-SELECT | Relative quality/coverage and Pareto, no arbitrary application-quality floor | REVIEWED_PROPOSAL_USER_ACCEPTANCE_PENDING | Near-tie0.005 and cluster bootstrap proposed before scores; multiple suitable configurations permitted |
+| A-SCOPE | Review/design/metadata/Git only | ACCEPTED_EXPLICIT_USER_BOUNDARY | No active execution code/config change, GPU smoke, inference, downloads or benchmark in this work unit |
+
+The authoritative current design remains PLAN.md; draft protocol values in protocol/REVIEWED_SPECIFICATION.json are not executable acceptance. No historical frozen run/config/result is modified by these decisions.

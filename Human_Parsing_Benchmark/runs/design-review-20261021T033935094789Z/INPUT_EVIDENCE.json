@@ -1,0 +1,232 @@
+{
+  "run_id": "design-review-20261021T033935094789Z",
+  "activity": "READ_ONLY_REVIEW_AND_DRAFT_DESIGN",
+  "public_base_commit": "8b1b813baf2a010f3140cd7ed12ea3554f04e33d",
+  "source_payloads_reverified": false,
+  "references": [
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "bytes": 2157
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_0.4b-20261012T103333Z/RUN.json",
+      "sha256": "f5efbd532e5545d45d72c1c844a56517294306b690e8a2e84d7d51e0a0de7d98",
+      "bytes": 25583
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_0.8b-20261012T103543Z/RUN.json",
+      "sha256": "48a283b44a27f7116f7b4097e68a5314a343677143212d25e5593b5784bb323d",
+      "bytes": 25629
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_1b_completed-20261014T025343Z/RUN.json",
+      "sha256": "84009710dd7ebd2390d734bf2d337408f6df96afc0069591d436d84aa6e7dfb6",
+      "bytes": 27793
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/provenance/SAPIENS2_CHECKPOINT_MANIFEST_V1.json",
+      "sha256": "392c5d20ea05a7ab167dea073b5f3022f9ec401120a1626410d0428882a0eee8",
+      "bytes": 13509
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/run_mask_transformer.py",
+      "sha256": "bf36b5271a12f5edd4ed7447aa5714ca4abeb11607883dd71aaceb04780154ec",
+      "bytes": 5975
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/run_rpr.py",
+      "sha256": "ada86ac55b54071f8e19d86fdb99a781c69535867f96bbbf9ce0bc6a73b9df9a",
+      "bytes": 5408
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/run_sapiens2.py",
+      "sha256": "959be30934fbd4367e2a2d22ea0978413cbc3ee9891ffdf22c34418f815680f3",
+      "bytes": 4634
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/run_sapiens2_large.py",
+      "sha256": "b436e329514ac55c76a65cefcef81614aa03fd15055dbc7e1bb96ef39c1171c4",
+      "bytes": 8609
+    },
+    {
+      "workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/taxonomy/NATIVE_CLASS_INVENTORY.json",
+      "sha256": "bda42dca827490381853ae75b2b8f452a3342982146614843cdd68208d57dc0a",
+      "bytes": 6255
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/configs/application_v2_first_cohort_v12.yaml",
+      "sha256": "9717ab8d30a693948a9a86cd6a94f79b224080e275b464def3da4a949e2df8ce",
+      "bytes": 53892
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/configs/experiment_qanet_cihp_candidate_v1.json",
+      "sha256": "4879b6b58cbb23ab2248d4616427e2101ee7f7556dd1468c1dc42fee0014bf37",
+      "bytes": 18680
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/metrics/first-cohort-benchmark-20261016T094257313856Z/FAILURES.csv",
+      "sha256": "03e2bffd5b753a1430bc340fdae7406626372ebd87dd1c617f78c42ee0482132",
+      "bytes": 288020
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+      "sha256": "142965e738d4f99c2af26bc75f42de0e50a8cd701bbac025015982a4edb457eb",
+      "bytes": 954
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/MODEL_ROSTER_SCOPE_ACTIVE.json",
+      "sha256": "c02538f77e04fe2b8518776626721bb0827531ac9e0516814643d269f5527aae",
+      "bytes": 856
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/MODEL_ROSTER_SCOPE_V4.csv",
+      "sha256": "6e45b8d05aeebd838cda4d0e0d03edf9367f1e2237e930d796deca33e9f9d73e",
+      "bytes": 12386
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/MODEL_VARIANT_REGISTRY_HANDOFF_V7.csv",
+      "sha256": "069dc5b8f816dd3d870404ac31ddb897f269bfa05d7096e44eb5b803b5834be4",
+      "bytes": 39545
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/validation_contexts_v1/IMAGE_BINDINGS.jsonl",
+      "sha256": "ae882a1dffc7bced721713202e9e2188d7883b2670d612521f0ee8c6a4697d47",
+      "bytes": 7675085
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+      "sha256": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+      "bytes": 5433512
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-validation-launch-20261016T091821919536Z/VALIDATION_INPUTS.jsonl",
+      "sha256": "4be1f402a9b28ed31ef7046fc7f4ee3453b8b08e8ba9d3873e47999b116e5d23",
+      "bytes": 1769895
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "bytes": 1021
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_cihp-20261015T064526Z/RUN.json",
+      "sha256": "254aaee571f2b9086e6ea7aeb63e20ca90dbc89674f207f5605188d4dfead7e5",
+      "bytes": 14355
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_cihp-20261015T064449Z/RUN.json",
+      "sha256": "7cc45119b11559df4bc132efc49176d9a82457e42ba0a53eb8e682fb18b625ad",
+      "bytes": 14325
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp_hrnetw48_512x384-20261015T065534Z/RUN.json",
+      "sha256": "93a1c56f063acb2ae8909bef5ac175da98f26756f90e8df7f1ad36147947c7ca",
+      "bytes": 11692
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_cihp-20261015T064615Z/RUN.json",
+      "sha256": "cf7dfec7ede5f57a04a55f6c7c64dc84f8f2d29bc61a231652762ead40683db8",
+      "bytes": 20859
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/ANNOTATION_WARNINGS.json",
+      "sha256": "64b18acb486caad9c5329ac03e2cc90236f5e9c919554836e2c15086ff668b22",
+      "bytes": 5013
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/CLASS_DISTRIBUTIONS.csv",
+      "sha256": "b102446a2d9a711a774fc656fd04245708e05683644c63ab351d7f65d3ae732a",
+      "bytes": 3848
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/EXACT_DUPLICATES.json",
+      "sha256": "ce691319f193dd00900ffda8c66de36d6755f453ba79ce86d11831ec0df781e4",
+      "bytes": 99731
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/FULL_STRUCTURAL_AUDIT.json",
+      "sha256": "57d96c33b5007414390a31915b9f4b7868beedc8ecf158d3939a939a76cb0e0a",
+      "bytes": 4718
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/NEAR_DUPLICATE_SCREEN.json",
+      "sha256": "1adddca82a04ef3fc771952e4abf75b05f98143b7bc1bcc8a04b2331d99c0067",
+      "bytes": 31698
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py",
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+      "bytes": 12463
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/src/application_v2/scoring.py",
+      "sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7",
+      "bytes": 5832
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/src/experiment_preparation_v1.py",
+      "sha256": "6e2758750bd697bf28ab7f162ad9a1f346de6763b89f4ee06e42faf460f31871",
+      "bytes": 3692
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "bytes": 1983
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/D2FP/d2fp/d2fp_model.py",
+      "sha256": "d9da4b57c847f3f2e9b4fdf2196a7a963a6011b5eec72310ffeb5d5554a7c44e",
+      "bytes": 17598
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "bytes": 1963
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/M2FP/m2fp/evaluation/parsing_evaluation.py",
+      "sha256": "ad20f33abc8930c08a0db34c63cf61b58992b7f5d30cfee6a0159760c56070ff",
+      "bytes": 11800
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/M2FP/m2fp/m2fp_model.py",
+      "sha256": "4358a075ed40c89b3079a082514f2e2fe02e4c66999484f05b5f156a6123ce68",
+      "bytes": 17598
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/QANet/lib/data/structures/instance_box.py",
+      "sha256": "0ea4420c0401714f282c9b725cd9f25a92059f73a0e736eecfbe567128f0afb0",
+      "bytes": 3134
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/sapiens2/docs/SEG.md",
+      "sha256": "51d6401484256b5c18d1d0a2eea6bd570b509c8848e8cf6048ee40b7b3a0dfc5",
+      "bytes": 2176
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "bytes": 9996
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "bytes": 10166
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "bytes": 10056
+    }
+  ],
+  "processes_or_GPU_tests_started": false,
+  "expected_immutable_inputs": "All listed sources, active configs, old results and old evidence must remain unchanged during design work",
+  "baseline_location_local": "Human_Parsing_MHPv2_Study/outputs/design_review/design-review-20261021T033935094789Z",
+  "derived_count_metadata_reference": {
+    "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+    "sha256": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+    "bytes": 24736194,
+    "purpose": "Specific new target-denominator derivation from metadata, no GT pixel data"
+  }
+}

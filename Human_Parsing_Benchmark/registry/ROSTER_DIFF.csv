@@ -1,0 +1,30 @@
+model_id,historical_category,historically_in_19,proposed_disposition,reason,weights_and_results_retained,user_acceptance_pending
+CPI_ConvNeXtB_CIHP,CPI_CLOSED_RUN,false,HISTORICAL_CLOSED_NOT_NEW_BENCHMARK,INCOMPLETE does not establish lower accuracy; no automatic rerun,True,True
+CPI_ConvNeXtB_MHPV2,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+CPI_R50_CIHP,CPI_CLOSED_RUN,false,HISTORICAL_CLOSED_NOT_NEW_BENCHMARK,INCOMPLETE does not establish lower accuracy; no automatic rerun,True,True
+CPI_R50_MHPV2,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+D2FP_R101_CIHP,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,CIHP-capable checkpoint with native evidence matching current body/clothing scope,True,True
+D2FP_R101_LIP,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+FASHN_B4,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+M2FP_R101_CIHP,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,CIHP-capable checkpoint with native evidence matching current body/clothing scope,True,True
+M2FP_R101_LIP,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+M2FP_R101_MHPV2,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+QANet_CIHP,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+QANet_CIHP_HRNetW48_512x384,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,CIHP-capable checkpoint with native evidence matching current body/clothing scope,True,True
+QANet_LIP,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+QANet_LIP_HRNetW48_544x416,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+RPR_CIHP,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,CIHP-capable checkpoint with native evidence matching current body/clothing scope,True,True
+RPR_MHPV2,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+SCHP_CIHP_GLOBAL_COMPONENT,COMPONENT_ONLY,false,HOLD_RETAIN_PREVIOUS_REASON,"Component of a system, not a standalone candidate",True,True
+SCHP_CIHP_LOCAL_COMPONENT,COMPONENT_ONLY,false,HOLD_RETAIN_PREVIOUS_REASON,"Component of a system, not a standalone candidate",True,True
+SCHP_R101_ATR,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+SCHP_R101_LIP,ACTIVE_CANDIDATE,true,HOLD_OUTSIDE_PROPOSED_ROSTER,Not in available seven-input review set; no comparative quality inferiority claimed. LIP/ATR/MHP variants and QANet R50 remain archived/inventory pending user roster acceptance,True,True
+SCHP_R101_PASCAL_PERSON_PART,EXCLUDED,false,EXCLUDED_FROM_PROPOSED_SCOPE,Body-only taxonomy cannot output upper/lower garments; prior exclusion/defer not reversed,True,True
+Sapiens2_0.4b,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,Matches earlier user review table; Sapiens all three explicitly required by current Prompt A,True,True
+Sapiens2_0.8b,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,Matches earlier user review table; Sapiens all three explicitly required by current Prompt A,True,True
+Sapiens2_1b,ACTIVE_CANDIDATE,true,PROPOSED_RETAIN,Matches earlier user review table; Sapiens all three explicitly required by current Prompt A,True,True
+Sapiens2_5b,EXCLUDED,false,EXCLUDED_RETAINED,User-retired resource footprint/offload cost; preserve old weights and outputs,True,True
+M2FP_PASCAL,DEFERRED,false,EXCLUDED_FROM_PROPOSED_SCOPE,Body-only taxonomy cannot output upper/lower garments; prior exclusion/defer not reversed,True,True
+CDGNet_LIP,DEFERRED,false,HOLD_RETAIN_PREVIOUS_REASON,Parser checkpoint downloaded; actual inference PASS and code-use eligibility unresolved,True,True
+QANet_MHPV2,DEFERRED,false,HOLD_RETAIN_PREVIOUS_REASON,No verified executable checkpoint binding or readiness unresolved,True,True
+QANet_CIHP_ResNet101,DEFERRED,false,HOLD_RETAIN_PREVIOUS_REASON,No verified executable checkpoint binding or readiness unresolved,True,True

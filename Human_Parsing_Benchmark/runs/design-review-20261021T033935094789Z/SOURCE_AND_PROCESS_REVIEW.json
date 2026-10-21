@@ -1,0 +1,43 @@
+{
+  "source_revisions": [
+    {
+      "family": "M2FP",
+      "head": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "working_tree_clean": true
+    },
+    {
+      "family": "D2FP",
+      "head": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "working_tree_clean": true
+    },
+    {
+      "family": "QANet",
+      "head": "61615c4491979569771020bc4beff86d63974829",
+      "working_tree_clean": true
+    },
+    {
+      "family": "RP-R-CNN",
+      "head": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "working_tree_clean": true
+    },
+    {
+      "family": "sapiens2",
+      "head": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "working_tree_clean": true
+    }
+  ],
+  "process_snapshot": {
+    "observed_utc": "2026-10-21T03:57:05.978530+00:00",
+    "gpu": "Tesla T4, 15360 MiB, 0 MiB, 0 %",
+    "compute_processes_present": false,
+    "workspace_script_processes": [
+      {
+        "pid": 1490036,
+        "workspace_script": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/serve_review_web.py",
+        "role": "SAVED_REVIEW_WEB"
+      }
+    ],
+    "jobs_started_resumed_killed_or_reconfigured": false
+  },
+  "scope": "read-only source/Git/runtime presence inspection, not model execution"
+}

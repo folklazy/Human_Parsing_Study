@@ -1,35 +1,31 @@
-# Current status — Human Parsing Benchmark
+# Human Parsing Benchmark — current status
 
-อัปเดต: 2026-10-21T03:23:15.998981+00:00
+Updated: 2026-10-21T03:53:29.548553+00:00 (UTC)
 
-- **SETUP_COMPLETE** — ตั้ง authoritative planning workspace, references, candidate input และ artifact/Git policy แล้ว
-- **A_REVIEW_PENDING** — ยังไม่ได้รับเนื้อหา Prompt A; รายชื่อผู้สมัครได้รับแล้ว
-- **ไม่ใช่ DESIGN_READY หรือ LAUNCH_READY** และยังไม่มี benchmark/inference ใหม่ที่อนุมัติจากงานนี้
+**A_REVIEW_COMPLETE · REVIEWED_PROPOSAL · DESIGN_DECISIONS_PENDING**  
+SETUP_COMPLETE remains recorded. Not DESIGN_READY, not LAUNCH_READY; Stage B implementation/new GPU checks and Stage C benchmark are not authorized.
 
-## Completed
+## Completed in Prompt A
 
-ตรวจ filesystem, Git roots/remotes/branch/diff จริง; source/legacy study ไม่ใช่ Git repository และ publication checkout แยกอยู่ Public base ก่อน SETUP คือ `0cf406f300f92ec8bd8502bae4a750a73632709a` บน `main` ตรง remote และ working tree สะอาด Workflow เดิมใช้ reviewed direct commits บน main ไม่พบ PR/branch policy เพิ่มใน checkout จึงไม่สร้าง repo/branch workflow ใหม่
+- Inspected current Git/workspace, exact source/config/metadata and actual prior smoke manifests; public baseline `8b1b813baf2a010f3140cd7ed12ea3554f04e33d`, main, correct existing remote, clean before this work unit.
+- Reused native feasibility, checkpoint fingerprints, CCIHP audits/support sidecars, immutable CPI results and frozen YOLO ledger. No model/dataset payload rehash, no full tests or audits repeated.
+- Proposed seven checkpoints / ten configurations with exact identities, prior-roster diff, route/ownership contracts and data/task fairness review.
+- Derived new C3/C7 denominators from existing native support metadata; main G_sem17,085/17,390, reference17,199/17,504. No GT/source annotations changed or new accepted pixel contexts claimed.
+- Created explicit mapping72 rows, requirements13 rows and risk table17 issues; selected deterministic64-frame timing draft with350opportunities before parser scores. Jobs/resources are proposals, not execution authorization.
+- Recorded user policy allowing CCIHP VAL checkpoint selection for the new plan, while forbidding mapping/threshold/preprocessing/retry tuning and independent-confirmation claims.
 
-อ่านรูปแบบงาน YOLO Master และ Largest tier จริง นำ navigation, protocol/results separation, manifests/provenance, immutable historical evidence มาใช้ ปรับ targets/cohorts/ownership/runtime สำหรับ parsing ไม่ยก MOTS20 per-sequence/AP/timing settings มาเป็นค่าปัจจุบัน
+## Current evidence limits / MUST_FIX
 
-สร้างแผนกรอบ A–D, decision log, user candidate registry และ logical asset locations ไม่ย้าย source/assets/environment และไม่คัดลอก shared source อีกชุด
+New mask-matching/rejection-aware scorer and GT contexts are not implemented. Legacy scorer uses bbox matching; empty-semantic helpers drop persons; hidden OOM retry/fallback must be controlled. Sapiens native full-frame pilot passed but YOLO ROI route/new ownership integration and joint-residency profile are not verified. Native part/human assembly parity and resource/storage bounds require targeted readiness, not all-model smoke reruns.
 
-## Historical evidence retained
+Sapiens all three remain active in this proposal; no stale RESTRICTED flag used as roster gate. Body semantics Face_Neck/Torso remain approximate, so C3 shared primary and C7 cohort eligibility are separate. No claim of an all-task winner from garment score alone.
 
-CPI เดิม `FINISHED_WITH_INCOMPLETE_SYSTEMS` / STRICT_COMPLETE / primary scores null ยังเป็น historical result ไม่ใช่ผลของ protocol ใหม่ Roadmap วันที่ 20 ตุลาคมคง WIP พร้อมต้นฉบับและ hash บันทึก preparation/roster เดิมอยู่ครบ แต่ไม่เป็น launch scope อัตโนมัติ ดู [legacy references](docs/LEGACY_REFERENCES.md)
+## Preserved historical state
 
-## Jobs observed at setup
-
-ขณะตรวจพบ saved-output review web `serve_review_web.py`, PID 1490036, port 8765 ยังทำงาน ไม่ใช่ parser inference GPU snapshot: `Tesla T4, 15360 MiB, 0 MiB, 0 %`; NVIDIA compute process list ว่าง ไม่พบ workspace Python inference script จากการสำรวจนี้ ไม่ได้สรุปว่า usage limit หยุดทุก external job ไม่มีการ kill/restart/resume/config change
-
-## Pending / limitations
-
-- รับ Prompt A แล้วตรวจ candidate-specific routes, taxonomy/GT, populations, selection versus held-out reporting และ speed/VRAM workload
-- เจ็ด candidate inputs ไม่เท่ากับเจ็ด ready systems; ยังไม่ยืนยัน bindings/readiness ใหม่
-- การอ่าน manifests ครั้งนี้ไม่ใช่การตรวจ dataset/checkpoint payload ซ้ำ และไม่ใช่ annotation-quality certification
-- Local implementation/outputs ที่ยังไม่อยู่ GitHub คงอยู่เดิม การ sync รอบนี้เฉพาะ docs/metadata/pointers
-- GitHub commit/sync ตรวจด้วย `git rev-parse HEAD` และ remote; [setup manifest](runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json) ระบุ base ก่อน commit ไม่ self-embed commit ที่กำลังบรรจุไฟล์นี้
+Old CPI: FINISHED_WITH_INCOMPLETE_SYSTEMS / STRICT_COMPLETE / primary null. Old roster19 and two-QANet proposal remain historical scope, not launch scope. Roadmap20Oct remains WIP. YOLO/source GT/checkpoints/environments unchanged; PPSS/CCTV/color/hybrid untouched. Existing saved-output review web is not stopped/resumed by this review.
 
 ## Next action
 
-**อ่าน README → STATUS → PLAN → relevant decisions แล้วดำเนิน Prompt A ใน workspace นี้เมื่อได้รับ** ไม่ต้องขออนุมัติเริ่ม review ซ้ำ และยังไม่ implement execution pipeline/รัน inference หรือ benchmark
+Read [PLAN](PLAN.md) and [protocol review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md), then decide once on proposed roster/configurations, target/cohort/accessory scope, and relative selection/Pareto constraints. These are design decisions only. After acceptance obtain Stage B scope authorization; run no inference or benchmark automatically.
+
+Work unit: `design-review-20261021T033935094789Z`. Inputs: [evidence](runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json). Draft values: [specification](protocol/REVIEWED_SPECIFICATION.json). Publication uses explicit selected path/hash sync; containing commit and remote status are resolved from Git and local post-push receipt, not self-embedded in this file.

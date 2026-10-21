@@ -1,6 +1,6 @@
 # Human Parsing Study
 
-**Current Phase 2–3 planning workspace:** [Human_Parsing_Benchmark](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md). **SETUP_COMPLETE / A_REVIEW_PENDING**; user candidates received, no new execution authorized. CCIHP is the user-directed primary public selection benchmark; the exact evaluation/selection protocol awaits Prompt A.
+**Current Phase 2–3 planning workspace:** [Human_Parsing_Benchmark](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md). **A_REVIEW_COMPLETE / REVIEWED_PROPOSAL**; proposed scope/tasks/selection await user decisions, no implementation or new execution authorized. CCIHP VAL checkpoint selection is permitted by current Prompt A, with no VAL tuning or independent-confirmation claim.
 
 The closed first-cohort results and earlier preparation notes below remain historical evidence. The workspace-root Human_Parsing_Benchmark is the canonical editable planning directory; this subdirectory is its reviewed public copy.
 

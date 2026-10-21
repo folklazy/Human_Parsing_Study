@@ -1,0 +1,95 @@
+{
+  "schema_version": "design-workload-1.0",
+  "status": "REVIEWED_PROPOSAL_NOT_EXECUTABLE",
+  "checkpoints": 7,
+  "application_configurations": 7,
+  "native_reference_configurations": 3,
+  "total_configurations": 10,
+  "inference_routes": {
+    "YOLO_person_ROI": 4,
+    "full_frame_native_with_YOLO_association_and_native_reference": 3
+  },
+  "quality": {
+    "inference_reference_frames": 5000,
+    "main_scoring_images": 4961,
+    "parser_frame_system_jobs": 35000,
+    "native_parser_frame_jobs": 15000,
+    "ROI_parser_frame_dispatch_jobs": 20000,
+    "ROI_tasks": 96248,
+    "ROI_tasks_per_checkpoint": 24062,
+    "new_YOLO_quality_inference_jobs": 0,
+    "reference_and_main_share_inference": true,
+    "neural_forward_calls": null,
+    "neural_forward_calls_reason": "ROI tasks and frame dispatches are not forward counts; native flip/TTA/subnetworks retained"
+  },
+  "timing": {
+    "frames": 64,
+    "opportunities_per_round": 350,
+    "rounds": 3,
+    "warmup_frames_per_configuration": 5,
+    "timed_route_frame_jobs": 1344,
+    "timed_native_reference_frame_jobs": 576,
+    "new_YOLO_frame_jobs_in_full_routes": 1344,
+    "timed_ROI_tasks": 4200,
+    "warmup_additional_frame_jobs": 150,
+    "warmup_ROI_tasks": 120,
+    "reason": "Each of ten configuration profiles reloads each of three rounds; five fixed warmup frames excluded from timed stats",
+    "warmup_frames_per_configuration_per_round": 5,
+    "warmup_additional_YOLO_frame_jobs": 105,
+    "warmup_image_ids": [
+      "0019801",
+      "0021973",
+      "0025792",
+      "0021310",
+      "0029713"
+    ],
+    "warmup_opportunities_per_round": 10,
+    "timed_parser_component_ROI_jobs": "Nested timings within full route, not additional GPU passes"
+  },
+  "storage": {
+    "image_pixels": 876659024,
+    "opportunity_weighted_image_pixels": 4217500127,
+    "four_ROI_models_two_uint8_full_grid_copies_bytes": 33740001016,
+    "native_person_counts_for_new_outputs": null,
+    "native_hard_mask_bytes_formula": "sum_model,sum_frame(N_native*H*W), plus native human bitmaps/scores and final packet copies; no claim compression factor",
+    "proposed_reservation_gib": 200,
+    "proposed_minimum_free_gib": 50,
+    "proposed_per_system_cap_gib": 80,
+    "available_disk_bytes_observed": 564214476800,
+    "max_hours_per_checkpoint_proposed": 24,
+    "ETA": null,
+    "ETA_reason": "Clean comparable runtime profiles absent; caps are not estimates"
+  },
+  "readiness_proposed": {
+    "existing_route_replay_CPU_checks": 4,
+    "new_Sapiens_ROI_training_frame_jobs_upper_bound": 9,
+    "explanation": "At most three fixed existing TRAIN images per Sapiens checkpoint if no matching ROI evidence exists; initial one-image stage then remaining two after pass. All require separate Stage B permission.",
+    "current_authorization": false
+  },
+  "scoring_counts": {
+    "instance_matching_views": [
+      0.5,
+      0.75
+    ],
+    "populations": 2,
+    "quality_views": "C3 garment all 10 configs; C7 CIHP core 7 eligible configs; C7 Sapiens diagnostic not ranked",
+    "planned_ranked_summary_rows": 68,
+    "formula": "(10 C3 configurations + 7 C7 CIHP configurations)*2 populations*2 thresholds; exclude diagnostic/per-class rows",
+    "new_G_sem_by_view": {
+      "main": {
+        "C3_GARMENT": 17085,
+        "C7_BODY_CLOTHING": 17390
+      },
+      "reference": {
+        "C3_GARMENT": 17199,
+        "C7_BODY_CLOTHING": 17504
+      }
+    },
+    "reason": "New counts derived from existing native_category_support metadata; new pixel contexts still require readiness materialization"
+  },
+  "authorization": {
+    "new_inference": false,
+    "new_smoke": false,
+    "full_benchmark": false
+  }
+}

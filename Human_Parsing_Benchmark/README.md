@@ -2,7 +2,7 @@
 
 พื้นที่ทำงานหลักของ **แผนปัจจุบัน** สำหรับเปรียบเทียบและคัดเลือก pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระแบบ noncommercial academic research
 
-**SETUP_COMPLETE · A_REVIEW_PENDING** — ตั้งพื้นที่และเชื่อมหลักฐานแล้ว ยังไม่ DESIGN_READY / LAUNCH_READY และไม่อนุมัติ inference หรือ benchmark ใหม่
+**A_REVIEW_COMPLETE · REVIEWED_PROPOSAL** — มีข้อเสนอจาก code/metadata/หลักฐานจริงแล้ว รอ user decisions สำคัญก่อน DESIGN_READY; ยังไม่ LAUNCH_READY และไม่อนุมัติ implementation/inference/benchmark
 
 ## เริ่มอ่านตรงนี้
 
@@ -11,7 +11,11 @@
 | เรื่อง | จุดอ้างอิงหลัก |
 |---|---|
 | สถานะ งานเสร็จ งานค้าง และ next action | [STATUS.md](STATUS.md) |
-| กรอบงาน SETUP → A → B → C → D | [PLAN.md](PLAN.md) |
+| Authoritative experiment design และ A–D lifecycle | [PLAN.md](PLAN.md) |
+| Protocol review: findings, fairness, gaps และเหตุผล | [reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md) |
+| Exact checkpoints/routes/roster diff | [checkpoint matrix](registry/CHECKPOINT_ROUTE_REVIEW.csv), [routes](registry/ROUTES_PROPOSED.csv), [diff](registry/ROSTER_DIFF.csv) |
+| Mapping/requirements/risk review | [mapping](protocol/NATIVE_LABEL_MAPPING_DRAFT.csv), [requirements](registry/REQUIREMENTS_TARGETS.csv), [risks](registry/FAIRNESS_RISKS.csv) |
+| Draft specification และ exact workload proposal | [specification](protocol/REVIEWED_SPECIFICATION.json), [workload](manifests/WORKLOAD_PROPOSAL.json), [new denominators](manifests/POPULATION_DOMAIN_PROPOSAL.json) |
 | User decisions / proposals / historical boundaries | [docs/DECISIONS.md](docs/DECISIONS.md) |
 | รายชื่อที่ผู้ใช้ส่งให้ตรวจ ไม่ใช่ executable roster | [registry/CANDIDATES.csv](registry/CANDIDATES.csv) |
 | โค้ด dataset/checkpoint manifests และผลเดิม | [docs/LEGACY_REFERENCES.md](docs/LEGACY_REFERENCES.md) |
@@ -43,12 +47,12 @@ Reusable implementation/หลักฐานเดิมอยู่ `Human_Par
 
 Clone จาก GitHub อ่านแผนและตรวจ metadata ได้ แต่ไม่มี datasets/weights/bulk artifacts หรือ implementation ล่าสุดทั้งหมด จึงยัง reproduce benchmark ใหม่ไม่ได้
 
-## โครงสร้างและสิ่งที่จะเพิ่มเมื่อจำเป็น
+## Current proposal and authority
 
-ตอนนี้มีเฉพาะเอกสาร, candidate input, artifact/evidence specifications และ setup provenance ที่ใช้จริง ยังไม่สร้าง protocol/config/script/test เปล่าหรือรายงานผลที่ยังไม่มี
+ใช้ PLAN.md ต่อเป็น authoritative design ไม่สร้างแผนชื่อ HUMAN_PARSING_EXPERIMENT_DESIGN_TH.md อีกชุด เปลี่ยนบทบาท CCIHP VAL เป็น checkpoint selection ตามคำสั่ง Prompt A อย่างเปิดเผย แต่ห้าม tune mappings/settings จากผล VAL และไม่อ้าง independent final confirmation
 
-ขั้น A จะเพิ่ม `docs/PROTOCOL_REVIEW.md`, target/mapping/metric proposals ใน `protocol/` และตาราง route/risk ใน `registry/` เมื่อได้ข้อสรุปจริง ขั้น B จึงเพิ่ม `configs/`, `scripts/`, `tests/` ที่ใช้ shared implementation ส่วน `reports/` เกิดเมื่อมี review/readiness/completion/analysis ให้รายงาน
+เสนอ7 checkpoints / 10 configurations (7 application +3 native reference reused); C3 upper/lower/shoes shared task, C7 body/clothing compatible cohort และ Sapiens body diagnostics แยกกัน ทุกอย่างยัง REVIEWED_PROPOSAL ไม่ใช่การรับรอง roster หรือ execution
 
-`runs/<run_id>/` เก็บ provenance และ summaries ขนาดเหมาะสมกับ Git; raw predictions, detailed logs, traces, caches และ temporary files ต้องอยู่นอก Git ตาม artifact specification ไม่ ignore `runs/` ทั้งหมด
+Current reports/tables/specificationsมีเนื้อหาจริงแล้ว ไม่มี production configs/scripts/tests ใหม่ เก็บ input evidence และ review verification ใน runs/<review_id> ข้อมูลใหญ่ยังอยู่นอก Gitตามartifact specification
 
-**Next action:** อ่าน README/STATUS/PLAN แล้วดำเนิน Prompt A เมื่อผู้ใช้ส่งข้อความนั้นมา ไม่มีการ resume benchmark เก่าจากการเปิดโฟลเดอร์นี้
+**Next action:** อ่าน review/PLAN และตอบสาม design decisions ที่รวบรวมไว้ จากนั้นจึงอนุมัติ Stage B เฉพาะช่องว่าง implementation/readiness; Stage C full benchmark ต้องอนุมัติแยก ไม่มี automatic resume

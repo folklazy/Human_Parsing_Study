@@ -1,0 +1,866 @@
+{
+  "schema_version": "timing-design-1.0",
+  "status": "REVIEWED_PROPOSAL_NOT_FROZEN",
+  "sample_role": "FIXED_STRATIFIED_DIAGNOSTIC_RUNTIME_WORKLOAD_NOT_RANDOM_UNWEIGHTED_POPULATION_ESTIMATOR",
+  "seed": "20261021",
+  "method": "8 deterministic smallest SHA256(seed:image_id) IDs per opportunity-count x image-area stratum from existing main population; no parser quality/runtime used",
+  "image_count": 64,
+  "total_person_opportunities": 350,
+  "total_pixels": 14145468,
+  "source_bindings": [
+    {
+      "kind": "inputs",
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-validation-launch-20261016T091821919536Z/VALIDATION_INPUTS.jsonl",
+      "sha256": "4be1f402a9b28ed31ef7046fc7f4ee3453b8b08e8ba9d3873e47999b116e5d23"
+    },
+    {
+      "kind": "detector_ledger",
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+      "sha256": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72"
+    },
+    {
+      "kind": "old_bindings",
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/validation_contexts_v1/IMAGE_BINDINGS.jsonl",
+      "sha256": "ae882a1dffc7bced721713202e9e2188d7883b2670d612521f0ee8c6a4697d47"
+    }
+  ],
+  "cases": [
+    {
+      "image_id": "0019801",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        667
+      ],
+      "RGB_sha256": "f9ef1d6c8fa842872a38294f57cb4cd4ca7d32f06eeda80a3dd81a52844a757b"
+    },
+    {
+      "image_id": "0021973",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        755
+      ],
+      "RGB_sha256": "e6076f6630b6002059b03cd80f802048e5efb2bac2da1d860383abee85716ec3"
+    },
+    {
+      "image_id": "0025792",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        666
+      ],
+      "RGB_sha256": "4e067b1afb20b40836f125bb2392ce31b447e7d83d35b2e071a4dcd26baa6498"
+    },
+    {
+      "image_id": "0021310",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        657
+      ],
+      "RGB_sha256": "21b120b7226e72521bb30ec49706d8ea44b91c1e00466e79937de1007c87df7f"
+    },
+    {
+      "image_id": "0029713",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        723
+      ],
+      "RGB_sha256": "fec0fd8431321f7bff3ea7a5eaa686ea96247fbe1a32f0e663da49e450b666f9"
+    },
+    {
+      "image_id": "0037675",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        450,
+        450
+      ],
+      "RGB_sha256": "02255278417834a19654ebe7ae35006479645fea9430fc953134bef22ff95699"
+    },
+    {
+      "image_id": "0037557",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        377
+      ],
+      "RGB_sha256": "f0b2dd1587326ac04040fefb08b21b1a0fd5b023bab615d85d001635ba00bc5b"
+    },
+    {
+      "image_id": "0025381",
+      "stratum": "0-2|area_gt_187500",
+      "stratum_population": 342,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.023391812865497075,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        501
+      ],
+      "RGB_sha256": "175016a000e9ae645435d71f5c1d14516a87b0404400df20ddb5a94a580557cb"
+    },
+    {
+      "image_id": "0037596",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        310
+      ],
+      "RGB_sha256": "d426c4de22cbabaadbe93febfc27d32a06165745a0c700dbe131c67761297c5b"
+    },
+    {
+      "image_id": "0005017",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        375,
+        500
+      ],
+      "RGB_sha256": "8b382e0e289bcb46fdbe8cc28314d0fbfb7af43bf81f4c894c4d6b28cd5e90d0"
+    },
+    {
+      "image_id": "0007575",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "d62b4cb56960e1fa75e62a2c9d6fbfde9d94f71aa1e5228775e4397d487d2654"
+    },
+    {
+      "image_id": "0022733",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        361,
+        261
+      ],
+      "RGB_sha256": "87b4bff3f39795be83288768f8253cf4500afee8c681443fe6af765aed6e64ba"
+    },
+    {
+      "image_id": "0020537",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        508,
+        300
+      ],
+      "RGB_sha256": "6eef06038ffd8254d027f10c50805f51d68e688e37ed9b669a23070d1a7a7ff4"
+    },
+    {
+      "image_id": "0037867",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        490,
+        367
+      ],
+      "RGB_sha256": "0e1bd1be916a122cce13cfbf0a324e7cd2548a628cb6060351a393e5939b7600"
+    },
+    {
+      "image_id": "0024152",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        500,
+        329
+      ],
+      "RGB_sha256": "633b4c1016d7914586476fd57af8033d277b8ba308059b0869fc9c16076417d5"
+    },
+    {
+      "image_id": "0025189",
+      "stratum": "0-2|area_le_187500",
+      "stratum_population": 1183,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006762468300929839,
+      "opportunities": 2,
+      "original_wh": [
+        489,
+        300
+      ],
+      "RGB_sha256": "86c471f5a1500f1d6e4e73cad54cdae4cc867e3e75caa7ae2dc5e3c98a78f4e9"
+    },
+    {
+      "image_id": "0032638",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 4,
+      "original_wh": [
+        500,
+        706
+      ],
+      "RGB_sha256": "2f6573019a0a9d7952615515984dc9b4689489cbd9c37c68181b919432a688af"
+    },
+    {
+      "image_id": "0001503",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        476,
+        500
+      ],
+      "RGB_sha256": "f4fb9f1517836e723097d031d4e8ef8456e832378a8a73529f91faf6ba8f3829"
+    },
+    {
+      "image_id": "0009443",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        600,
+        402
+      ],
+      "RGB_sha256": "a0d72da1310748a4d44678a4aedf95e1792c8acf1425d99787dc03cddda915db"
+    },
+    {
+      "image_id": "0027906",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        500,
+        750
+      ],
+      "RGB_sha256": "80372fd9dc2dc1cd121c5d3b8a4ea0139584d1e17df2b275f785c6179b7ce05f"
+    },
+    {
+      "image_id": "0028363",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        500,
+        500
+      ],
+      "RGB_sha256": "1c581543e022cf3b70fc40d2ce0e01f4a5dc727984673879ebc6ad0846ce21fc"
+    },
+    {
+      "image_id": "0034184",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 4,
+      "original_wh": [
+        450,
+        600
+      ],
+      "RGB_sha256": "2c9de6fe19e8871e151f1d9dc21a4d79e4587d05114c5c4bf0d36702211c8d71"
+    },
+    {
+      "image_id": "0011226",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        640,
+        445
+      ],
+      "RGB_sha256": "a4329a37a143f4b03eba7abf6868ced7e03e1e1cef5f137d973f21a98227a6e6"
+    },
+    {
+      "image_id": "0018686",
+      "stratum": "3-4|area_gt_187500",
+      "stratum_population": 263,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.030418250950570342,
+      "opportunities": 3,
+      "original_wh": [
+        550,
+        412
+      ],
+      "RGB_sha256": "36de91a1cfe24a3a141c1c322b38d479aecc6f16bbe75d6fb95bb5d9ba068c65"
+    },
+    {
+      "image_id": "0037174",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 4,
+      "original_wh": [
+        500,
+        334
+      ],
+      "RGB_sha256": "e4c8ba187ff907d025ac34b3c6bf351ac35f3788aa2a89e244e5d971eeb43a24"
+    },
+    {
+      "image_id": "0005842",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 3,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "6c0fcbed85e8892ebb8848ec8b32beed22f7f1a8e7f6f44a3693b2d59256a8f9"
+    },
+    {
+      "image_id": "0006076",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 3,
+      "original_wh": [
+        298,
+        298
+      ],
+      "RGB_sha256": "2398bfe36232ac7381d03add2118e77a1bd71ec96c7a72c30c3c66527fe325df"
+    },
+    {
+      "image_id": "0036252",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 4,
+      "original_wh": [
+        445,
+        300
+      ],
+      "RGB_sha256": "a5c49fbb736b95bed46797940e3a7a6c8964417ee4de7e949aacd0d1c2285c0f"
+    },
+    {
+      "image_id": "0035054",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 4,
+      "original_wh": [
+        169,
+        127
+      ],
+      "RGB_sha256": "1465fb61c6aeccc0ef81d206741968261a90db7dd5a0591b8afd20c98849132a"
+    },
+    {
+      "image_id": "0036526",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 3,
+      "original_wh": [
+        500,
+        356
+      ],
+      "RGB_sha256": "d0a116d7e763460b9eac9907593b9065afb5f730938d16d0fd4c6894d4bbb391"
+    },
+    {
+      "image_id": "0020011",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 3,
+      "original_wh": [
+        454,
+        300
+      ],
+      "RGB_sha256": "8f6b9fe94423c116de11217b9e2a683ac5af41c04d6cebf5265c2260adbb8670"
+    },
+    {
+      "image_id": "0038316",
+      "stratum": "3-4|area_le_187500",
+      "stratum_population": 1152,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.006944444444444444,
+      "opportunities": 3,
+      "original_wh": [
+        429,
+        300
+      ],
+      "RGB_sha256": "ec91b733724efef1834b7448de06129b54fc5c96093fc58969148fbe8bfc794c"
+    },
+    {
+      "image_id": "0017556",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 7,
+      "original_wh": [
+        500,
+        401
+      ],
+      "RGB_sha256": "74eddc75d4952d141d0009d375acec574ed6ceaa655bed96e10f59eb3e08758c"
+    },
+    {
+      "image_id": "0021622",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 5,
+      "original_wh": [
+        480,
+        480
+      ],
+      "RGB_sha256": "80bde185d51a553ab62e0ba38681d7d1d5210564f94ee51a586aff11cdcffff9"
+    },
+    {
+      "image_id": "0038151",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 6,
+      "original_wh": [
+        500,
+        507
+      ],
+      "RGB_sha256": "5a93aff791784ef441ea5e618a886ee512ed9b74bc3c4449ac5c473baa26d0ad"
+    },
+    {
+      "image_id": "0019596",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 5,
+      "original_wh": [
+        500,
+        400
+      ],
+      "RGB_sha256": "2c9d13233ed4870001340b4a596027d322bd37f8dd64e72991844ac5ed3d3c98"
+    },
+    {
+      "image_id": "0034660",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 5,
+      "original_wh": [
+        480,
+        640
+      ],
+      "RGB_sha256": "7e73c8f4c2eda4efc249463b55e0b06122f51facde6e1f7103784346068e810e"
+    },
+    {
+      "image_id": "0030723",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 6,
+      "original_wh": [
+        480,
+        480
+      ],
+      "RGB_sha256": "3a52048e103f4bde7bb445cdfaf65cea72fe4fa2178f81e2b9aa03133fe915d9"
+    },
+    {
+      "image_id": "0007366",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 7,
+      "original_wh": [
+        934,
+        768
+      ],
+      "RGB_sha256": "f60953b3395b4393c013a69a47ce90d3fea9887424178f0899e4236071e38d04"
+    },
+    {
+      "image_id": "0018491",
+      "stratum": "5-7|area_gt_187500",
+      "stratum_population": 160,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.05,
+      "opportunities": 6,
+      "original_wh": [
+        580,
+        436
+      ],
+      "RGB_sha256": "9bbe47172a6242417e260d8b185f8c3c98a5d05e4ba12dfab77bb90633586a11"
+    },
+    {
+      "image_id": "0008878",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 7,
+      "original_wh": [
+        500,
+        295
+      ],
+      "RGB_sha256": "4e06d33edabb67cc38af925c3388e7759708444c3b26ca10bba5edffef786fa2"
+    },
+    {
+      "image_id": "0006957",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 6,
+      "original_wh": [
+        500,
+        348
+      ],
+      "RGB_sha256": "025f99b1237525cacc533a81d440023cac6b9f139bc903e0275c56edabce8ca8"
+    },
+    {
+      "image_id": "0036583",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 6,
+      "original_wh": [
+        500,
+        333
+      ],
+      "RGB_sha256": "a9bdfa7619e2d5c03c801808691593018088e46602ad35d6d83f6caf1417815e"
+    },
+    {
+      "image_id": "0037204",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 6,
+      "original_wh": [
+        449,
+        300
+      ],
+      "RGB_sha256": "7c8e59c105e1c4c837d304c32fbe205e1769cd6b91317ff20750056911b0fe4b"
+    },
+    {
+      "image_id": "0009306",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 6,
+      "original_wh": [
+        500,
+        332
+      ],
+      "RGB_sha256": "07e7d23c6f07063b7fe1a590313d799e38fb36f1e40c9e3f70169d07a03bd49c"
+    },
+    {
+      "image_id": "0000624",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 6,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "d3354e199b704098649c3f0b3a00facc8a19ae146a1756c32e406ff52d3196f8"
+    },
+    {
+      "image_id": "0035940",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 7,
+      "original_wh": [
+        500,
+        333
+      ],
+      "RGB_sha256": "409d8ba925bae0899ea657b61e53f63ae4240458ef0830a09ed2d4878128139b"
+    },
+    {
+      "image_id": "0037528",
+      "stratum": "5-7|area_le_187500",
+      "stratum_population": 883,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009060022650056626,
+      "opportunities": 7,
+      "original_wh": [
+        304,
+        547
+      ],
+      "RGB_sha256": "28f1009606b74982eddb7fec0c876cd58922cfd1b1bc40b3d4dfd71f583357b7"
+    },
+    {
+      "image_id": "0004235",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 10,
+      "original_wh": [
+        525,
+        700
+      ],
+      "RGB_sha256": "136ab779cb9343b8b991fedf5b3911bc192385f5959382d041efd2804e800e7b"
+    },
+    {
+      "image_id": "0012093",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 8,
+      "original_wh": [
+        500,
+        427
+      ],
+      "RGB_sha256": "2130d47da029d78b32b04ff8a3ae330c4a485c1e8679d21a66682fc1261ff773"
+    },
+    {
+      "image_id": "0017098",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 10,
+      "original_wh": [
+        500,
+        419
+      ],
+      "RGB_sha256": "af1602c95df8ec6515b1514370a7f5c9b4f8ed4232d540815deb328810a376ae"
+    },
+    {
+      "image_id": "0005056",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 11,
+      "original_wh": [
+        500,
+        384
+      ],
+      "RGB_sha256": "9f03048a867971e765667a085820ebf2a7b26f023ab4216e08e104e0564a4ec8"
+    },
+    {
+      "image_id": "0010653",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 13,
+      "original_wh": [
+        500,
+        418
+      ],
+      "RGB_sha256": "92be7d0fc485a37b58af50722e507efd1962097338b966ff4e24eb7e0f442d2b"
+    },
+    {
+      "image_id": "0013072",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 14,
+      "original_wh": [
+        890,
+        668
+      ],
+      "RGB_sha256": "07eaf0d1b66b2da022be4d04954bd5923cdf4395d7a8e91192f9124d01026f17"
+    },
+    {
+      "image_id": "0021572",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 8,
+      "original_wh": [
+        500,
+        424
+      ],
+      "RGB_sha256": "cdb83c5cb7e8018dd5da9e8a143fc6288bff0942c209ae30df9d3f02d4578acf"
+    },
+    {
+      "image_id": "0035361",
+      "stratum": "8plus|area_gt_187500",
+      "stratum_population": 130,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.06153846153846154,
+      "opportunities": 12,
+      "original_wh": [
+        500,
+        387
+      ],
+      "RGB_sha256": "58071d6a55a6818001dc0e8851ebbfbc135db52b0d44cf8c66e50dd24ee9bd1e"
+    },
+    {
+      "image_id": "0008467",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 14,
+      "original_wh": [
+        500,
+        279
+      ],
+      "RGB_sha256": "61007ae18f53133812328efa25cef7338c85faacff133e29cdc7afa18f256255"
+    },
+    {
+      "image_id": "0025200",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 10,
+      "original_wh": [
+        405,
+        270
+      ],
+      "RGB_sha256": "f7c28e42451656777e8a0f2d640c5eaa8df25df4cb08b68ff0fd5072fcf79ed6"
+    },
+    {
+      "image_id": "0037916",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 12,
+      "original_wh": [
+        500,
+        370
+      ],
+      "RGB_sha256": "639ce475a1bd00712f0d38fa5731c0b75791b7aa0cdac1f63b153a08a41e4cf4"
+    },
+    {
+      "image_id": "0036101",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 9,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "ec19f3110b6a98f8b4006933723165b1f19ef0a80adccf8ed1fced90ee83580f"
+    },
+    {
+      "image_id": "0019559",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 8,
+      "original_wh": [
+        500,
+        334
+      ],
+      "RGB_sha256": "8c264736c415ec1d9dd1076719407b16a03b3f5c6837bf82c532c43036e458fa"
+    },
+    {
+      "image_id": "0005938",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 9,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "da98e1190490c88df449a94283f0fb417906924c90527d1f2c7d27174dbe75c9"
+    },
+    {
+      "image_id": "0006818",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 11,
+      "original_wh": [
+        500,
+        333
+      ],
+      "RGB_sha256": "f740994279f57391f3cf828694a44f8ec8ae53272a2c688c51ba32af0c814fdd"
+    },
+    {
+      "image_id": "0000651",
+      "stratum": "8plus|area_le_187500",
+      "stratum_population": 848,
+      "sampled_from_stratum": 8,
+      "inclusion_probability": 0.009433962264150943,
+      "opportunities": 8,
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "71f4cf3111c67af25c929f7d0d69486c2259979448cfcb754e964e9747bbf2dd"
+    }
+  ],
+  "reporting": "Per-stratum unweighted timings plus population-weighted mean; p50/p95 describe this fixed balanced workload, not full-population quantiles",
+  "authorization": {
+    "inference": false,
+    "benchmark": false
+  }
+}

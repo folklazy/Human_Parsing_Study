@@ -1,0 +1,186 @@
+{
+  "schema_version": "design-specification-1.0",
+  "revision": 1,
+  "status": "REVIEWED_PROPOSAL",
+  "activity": "DRAFT_SPECIFICATION_NOT_ACTIVE_EXECUTION_CONFIG",
+  "review_id": "design-review-20261021T033935094789Z",
+  "authorization": {
+    "implementation": false,
+    "inference": false,
+    "smoke": false,
+    "benchmark": false
+  },
+  "authority": {
+    "plan": "PLAN.md",
+    "review": "reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
+    "user_scope": "Prompt A 2026-10-21",
+    "VAL_selection": "ALLOWED_CHECKPOINT_SELECTION_ONLY_BY_CURRENT_USER_INSTRUCTION",
+    "VAL_tuning": false
+  },
+  "roster": "registry/CHECKPOINT_ROUTE_REVIEW.csv",
+  "routes": "registry/ROUTES_PROPOSED.csv",
+  "mapping": "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+  "targets": {
+    "C3_GARMENT": [
+      "UPPER_GARMENT",
+      "LOWER_GARMENT",
+      "FOOTWEAR"
+    ],
+    "C7_BODY_CLOTHING": [
+      "FACE_REGION",
+      "EXPOSED_TORSO",
+      "EXPOSED_ARMS",
+      "EXPOSED_LEGS",
+      "UPPER_GARMENT",
+      "LOWER_GARMENT",
+      "FOOTWEAR"
+    ],
+    "C7_ranked_taxonomy": "CIHP four checkpoints only; no Sapiens body rank while semantic ambiguity persists",
+    "supplementary": [
+      "per-native-class and accessory support",
+      "Sapiens C7 approximate diagnostic",
+      "boundary quality conditional on valid match"
+    ],
+    "C3_scope": "Fixed same-GT garment task with explicit partial native expressivity (Dress/Apparel unresolved errors), not a claim of identical native taxonomy"
+  },
+  "prediction_projection": {
+    "primary": "native hard-label output then deterministic lookup",
+    "unresolved_known_native_labels": "explicit rejection/error column, never GT ignore",
+    "unknown_out_of_catalog_labels": "CONTRACT_INVALID",
+    "probability_aggregation_primary": false
+  },
+  "domain": {
+    "C0_H0": "BACKGROUND_VALID",
+    "C0_Hpositive": "SEMANTIC_VOID_PERSON_LOCATION_RETAINED",
+    "C22": "SEMANTIC_VOID_ALL_MODELS",
+    "Cpositive_H0": "GLOBAL_SEMANTIC_VALID_PER_PERSON_OWNER_UNKNOWN_VOID",
+    "known_nontarget_GT": "CONTEXT_OTHER_VALID_ALL_MODELS",
+    "source_GT_modified": false,
+    "instance_mask_source": "native Human_ids; original per-image IDs, no physical-identity certification"
+  },
+  "population_manifest": "manifests/POPULATION_DOMAIN_PROPOSAL.json",
+  "conditioning": {
+    "detector": "YOLO26x-Seg frozen",
+    "imgsz": 640,
+    "conf": 0.25,
+    "NMS_IoU": 0.7,
+    "max_det": 200,
+    "retina_masks": true,
+    "cached_outputs_for_quality": true,
+    "fresh_frozen_detector_for_route_timing": true,
+    "GT_in_prediction": false
+  },
+  "native_YOLO_association": {
+    "space": "original-image predicted XYXY boxes",
+    "minimum_IoU": 0.5,
+    "algorithm": "maximize valid pair cardinality, then total IoU, then stable immutable IDs",
+    "GT_used": false,
+    "YOLO_pixel_clipping": false
+  },
+  "ROI_policy": {
+    "common_proposed_geometry": "QANet native aspect adjustment W/H=3/4, expansion1.25 around YOLO bbox center; Sapiens use equivalent continuous ROI geometry",
+    "QANet_native_hw": [
+      512,
+      384
+    ],
+    "Sapiens_native_hw": [
+      1024,
+      768
+    ],
+    "RGB_input_hard_mask": false,
+    "post_parse_ownership": "intersect with corresponding frozen YOLO instance mask, restore original coordinates",
+    "outside_image_padding": "QANet native ROIAlign zero normalized sampling; Sapiens ImageNet-mean RGB constant proposed; record as route difference and test geometry parity",
+    "native_augmentation": "retain pinned native setting, do not force equal augmentation"
+  },
+  "evaluation_matching": {
+    "metric": "person_mask_IoU_NOT_bbox_IoU_NOT_official_AP",
+    "GT_mask": "Human_ids==person_id",
+    "prediction_mask": "M2FP/D2FP: native human ownership extent before semantic labels; RP-R-CNN: union of native non-BG person parsing, no filled-bbox substitute; ROI systems: frozen YOLO instance extent, independent of semantic nonempty",
+    "thresholds": [
+      0.5,
+      0.75
+    ],
+    "primary_threshold": 0.5,
+    "assignment": "eligible maximum cardinality then maximum total mask IoU, deterministic ID tie-break",
+    "empty_union": "IoU=0; invalid empty native person entries must be diagnosed; no GT-person deletion"
+  },
+  "metrics": {
+    "primary": "Q_person_sem_GT for each fixed view and population",
+    "secondary": [
+      "globally_accumulated_per_class_IoU_and_macro_mIoU",
+      "matched_person_mIoU_conditional",
+      "mask_precision_recall_F1_and_TP_FP_FN",
+      "owner_contamination_and_collision",
+      "per-class_support",
+      "sampled_device_memory_and_route_latency"
+    ],
+    "G_sem": "GT persons with at least one valid target pixel, independent of predictions/execution success",
+    "person_macro_classes": "union of target classes present in GT person or its matched prediction; nonempty because G_sem requires target GT",
+    "missed_GT_person_semantic_contribution": 0,
+    "zero_union_global_classes": "N/A with support counts; primary view requires all target classes supported at population level",
+    "valid_empty_prediction": "execution success; scored as missed persons, not failure",
+    "absent_prediction_unresolved_label": "error column on fixed valid GT; never ignored",
+    "known_empty_semantics": "Keep available person location/identity. Do not reuse legacy helper filtering np.any(semantic_mask) without a new declared contract."
+  },
+  "failure_policy": {
+    "main": "STRICT_COMPLETE",
+    "failed_images": "retain INCOMPLETE rows, main metrics null; success-only diagnostics explicitly non-ranking",
+    "automatic_retry": 0,
+    "automatic_cpu_fallback": false,
+    "approved_resume_scope": "only never-attempted jobs after exact input/config/checkpoint/source/recipe fingerprints and explicit continuation decision; cannot retry prior failed images or change membership",
+    "shared_contract_error": "STOP_DEPENDENT_JOBS",
+    "runtime_failure": "runtime profile INCOMPLETE, retain quality evidence separately; no cost Pareto eligibility"
+  },
+  "runtime": {
+    "hardware": "Tesla T4 on assigned visible GPU",
+    "learned_parameter_precision": "FP32",
+    "native_internal_operator_dtypes": "retain and record; Sapiens native RoPE may use BF16, not strict-all-ops-FP32",
+    "autocast": false,
+    "TF32": false,
+    "batch": "one frame / one sequential ROI; native TTA internal batching recorded",
+    "workload": "manifests/TIMING_WORKLOAD_DRAFT.json",
+    "rounds": 3,
+    "warmup_frames_each_configuration_each_round": 5,
+    "native_configs_preserved": true,
+    "primary_route_residency": "YOLO plus parser co-resident, possibly separate worker processes/frameworks; no simultaneous GPU compute",
+    "parser_component_timing": "nested synchronized substage measurements within actual route, not separate extra passes",
+    "native_reference_residency": "parser only, no YOLO model or other GPU process",
+    "included": "input RGB in RAM -> preprocessing, transfers, forward, postprocess, IPC, association/map-back/composition",
+    "excluded": "file read/JPEG decode, model initialization, visualization, metric scoring, prediction serialization/disk writes",
+    "summaries": [
+      "mean",
+      "median/P50",
+      "std",
+      "P95",
+      "per-person component and per-frame route units"
+    ],
+    "memory": [
+      "per-process peak allocated MiB",
+      "per-process peak reserved MiB",
+      "device-wide sampled peak used MiB at50ms; absolute and idle-baseline delta"
+    ],
+    "do_not_sum_process_peaks_as_simultaneous_route_peak": true,
+    "resource_rank_scope": "route device-sampled peak and actual route latency; native-reference ranks separate",
+    "population_weighted_mean": "sum_h (N_h/N)*mean_frame_latency_h; parser ms/person estimated as weighted total parser component time divided by weighted total opportunities, not average of per-frame ratios"
+  },
+  "selection": {
+    "eligible": "accepted fixed task/support bindings + strict-complete quality; report runtime eligibility independently",
+    "absolute_accuracy_floor": null,
+    "absolute_floor_reason": "No application-validated threshold supplied; relative public checkpoint selection, not deployment acceptance",
+    "practical_near_tie_gap": 0.005,
+    "near_tie_units": "absolute0-1 metric difference =0.5 percentage points; proposed descriptive margin, not equivalence",
+    "uncertainty": "1000 paired cluster bootstrap resamples by known exact decoded-RGB duplicate groups; fixed seed20261021; descriptive95percent interval, no independence claim for unobserved near duplicates",
+    "rule": "Within each task/route select best Q, report instance F1/FP, flag near ties, retain non-dominated Q/instance-F1/route-latency/device-sampled-memory configurations; no weighted score or forced universal winner",
+    "training_or_threshold_tuning_from_VAL": false,
+    "heldout_confirmation_claim": false
+  },
+  "resource_caps_proposed": {
+    "disk_reserve_gib": 200,
+    "minimum_free_gib": 50,
+    "max_per_system_artifacts_gib": 80,
+    "max_hours_per_checkpoint": 24,
+    "OOM": "record failure; do not change precision/resolution/TTA to finish same run"
+  },
+  "launch_ready": false,
+  "target_support_policy": "FIXED_TASK_EXPLICIT_UNSUPPORTED"
+}

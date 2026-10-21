@@ -1,0 +1,107 @@
+{
+  "schema_version": "domain-design-1.0",
+  "status": "REVIEWED_PROPOSAL_METADATA_DERIVED_NOT_PIXEL_CONTEXT_ACCEPTANCE",
+  "source_sidecar_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/application-v2-implementation-20261014T091346536200Z/gt_sidecars/original_source_target_persons.jsonl",
+  "source_sidecar_sha256_as_recorded": "11387e7ca9dc0472c43738b08b75caf11f63dd2e0b135b999a09dbe7bb687676",
+  "source_identity_scope": "Existing hash evidence reused; sidecar metadata streamed, no archive/GT payload rehash",
+  "main_membership_source": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/validation_contexts_v1/IMAGE_BINDINGS.jsonl",
+  "GT_source_modified": false,
+  "proposed_domains": {
+    "C3_GARMENT": [
+      5,
+      7,
+      9,
+      12,
+      18,
+      19
+    ],
+    "C7_BODY_CLOTHING": [
+      5,
+      7,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "populations": {
+    "main": {
+      "images": 4961,
+      "G_loc_native_humans": 17434,
+      "G_sem_by_target_view": {
+        "C3_GARMENT": 17085,
+        "C7_BODY_CLOTHING": 17390
+      },
+      "native_class_pixels_per_person_support": {
+        "0": 635,
+        "1": 6658070,
+        "2": 41501600,
+        "3": 530649,
+        "4": 1012146,
+        "5": 72766501,
+        "6": 221824,
+        "7": 79646387,
+        "8": 703578,
+        "9": 36105198,
+        "10": 12164626,
+        "11": 2538042,
+        "12": 14239421,
+        "13": 36850096,
+        "14": 13226560,
+        "15": 14604849,
+        "16": 3218963,
+        "17": 3177439,
+        "18": 1961328,
+        "19": 1978144,
+        "20": 1244187,
+        "21": 4699518,
+        "22": 310
+      }
+    },
+    "reference": {
+      "images": 5000,
+      "G_loc_native_humans": 17548,
+      "G_sem_by_target_view": {
+        "C3_GARMENT": 17199,
+        "C7_BODY_CLOTHING": 17504
+      },
+      "native_class_pixels_per_person_support": {
+        "0": 638,
+        "1": 6664890,
+        "2": 41646197,
+        "3": 530649,
+        "4": 1014020,
+        "5": 73318502,
+        "6": 221824,
+        "7": 80047537,
+        "8": 705831,
+        "9": 36386960,
+        "10": 12203295,
+        "11": 2540029,
+        "12": 14339785,
+        "13": 36960110,
+        "14": 13299315,
+        "15": 14692011,
+        "16": 3254914,
+        "17": 3219889,
+        "18": 1975101,
+        "19": 1995647,
+        "20": 1245507,
+        "21": 4729498,
+        "22": 310
+      }
+    }
+  },
+  "old_CPI_six_target_counts_not_assumed": true,
+  "C7_note": "Independent metadata derivation happens to reproduce old G_sem union; split garment labels change scores but not this person-eligibility count",
+  "pixel_context_materialization_status": "NOT_IMPLEMENTED_NOT_VERIFIED_FOR_NEW_RECIPE",
+  "source_splits_preserved": true,
+  "native_support_metadata_sha256_matches_existing_manifest": true,
+  "verification_note": "Single native-support JSONL identity checked for new denominator derivation; no image/archive/mask/checkpoint payload hash scan"
+}

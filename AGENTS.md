@@ -1,6 +1,6 @@
 # Current planning entry point
 
-Start current work with Human_Parsing_Benchmark/README.md → STATUS.md → PLAN.md → relevant docs/DECISIONS.md in that subdirectory. SETUP_COMPLETE / A_REVIEW_PENDING does not authorize inference. The latest seven user candidates are review input; old roster19 and two-QANet proposal are not automatically current launch scope. Workspace-root Human_Parsing_Benchmark is authoritative editable planning; this checkout holds its reviewed public copy. Human_Parsing_MHPv2_Study retains reusable code and historical results. Do not wholesale-sync or relocate either.
+Start current work with Human_Parsing_Benchmark/README.md → STATUS.md → PLAN.md → relevant docs/DECISIONS.md in that subdirectory. Current Prompt A review is REVIEWED_PROPOSAL / DESIGN_DECISIONS_PENDING; no implementation/inference authorization. Proposed seven checkpoints/ten configurations are not an accepted launch scope. CCIHP VAL checkpoint selection is now explicitly allowed for this new plan; tuning mappings/settings/retry policy from VAL remains forbidden. Old roster19 and two-QANet proposal are historical. Workspace-root Human_Parsing_Benchmark is authoritative editable planning; this checkout holds its reviewed public copy. Human_Parsing_MHPv2_Study retains reusable code and historical results. Do not wholesale-sync or relocate either.
 
 The prior closed-cohort contract below remains applicable to its preserved results and external assets, not a substitute for the current planning entry point.
 
