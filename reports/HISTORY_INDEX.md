@@ -61,3 +61,7 @@ Current GitHub publication authority: [publication state](../publication/PUBLICA
 ## Planning evidence preserved on 21 October 2026
 
 [Roadmap of 20 October](PROJECT_ROADMAP_TH_20261020.md): **WIP_PRESERVED_NOT_ACCEPTED_NEW_PLAN**. Original bytes/hash are retained in the canonical working copy; public copy explicitly marks unavailable local references. [Transition status](../STATUS.json) and [work log](../WORK_LOG.md) describe the next review scope separately from historical roster/benchmark decisions.
+
+## Current planning workspace — 21 October 2026
+
+[Human_Parsing_Benchmark](../Human_Parsing_Benchmark/README.md) is the current A–D planning entry point, with [status](../Human_Parsing_Benchmark/STATUS.md), [plan](../Human_Parsing_Benchmark/PLAN.md) and [decisions](../Human_Parsing_Benchmark/docs/DECISIONS.md). The preserved roadmap above remains WIP historical starting evidence. The new candidate table is user-specified review input; no readiness or execution acceptance is implied.

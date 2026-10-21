@@ -1,0 +1,130 @@
+{
+  "schema_version": "workspace-setup-validation-1.0",
+  "run_id": "workspace-setup-20261021T032315998981Z",
+  "recorded_utc": "2026-10-21T03:24:22.604797+00:00",
+  "status": "PASS",
+  "scope": "SETUP_DOCUMENTS_PATHS_GIT_BOUNDARIES_ONLY_NOT_BENCHMARK_READINESS",
+  "checks": {
+    "new_workspace_document_links_resolve": true,
+    "no_new_or_nested_git": true,
+    "new_workspace_exact_public_copy": true,
+    "referenced_small_evidence_unchanged": true,
+    "original_roadmap_WIP_unchanged": true,
+    "no_empty_files": true,
+    "no_empty_placeholder_directories": true,
+    "no_execution_configs_or_implementation_created": true,
+    "user_candidates_not_launch_roster": true,
+    "YOLO_Git_states_unchanged": true,
+    "legacy_navigation_original_bodies_retained": true,
+    "public_existing_changes_only_navigation_or_publication_metadata": true,
+    "scoped_ignore_rules_preserve_provenance_and_tables": true
+  },
+  "broken_links": [],
+  "ignore_cases": [
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/SETUP_MANIFEST.json",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/COMPLETION.json",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/metrics.csv",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/artifact_manifest.json",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/analysis.md",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
+      "ignored": false,
+      "expected": false
+    },
+    {
+      "path": "Human_Parsing_Benchmark/local/paths.json",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/.env",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/predictions/one.npz",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/logs/worker.log",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/masks/one.png",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/traces/profile.json",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/cache/item",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/example/tmp/item",
+      "ignored": true,
+      "expected": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/checkpoint.pth",
+      "ignored": true,
+      "expected": true
+    }
+  ],
+  "YOLO_Git_state_checks": [
+    {
+      "workspace_relative": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "HEAD_unchanged": true,
+      "working_tree_unchanged_including_untracked": true
+    },
+    {
+      "workspace_relative": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "HEAD_unchanged": true,
+      "working_tree_unchanged_including_untracked": true
+    }
+  ],
+  "new_file_count_before_completion_record": 14,
+  "referenced_small_files_checked": 24,
+  "dataset_payloads_or_checkpoints_checked": false,
+  "GPU_or_cpu_model_tests": false,
+  "full_test_suite_rerun": false,
+  "prior_run_metrics_source_configs_changed": false,
+  "Prompt_A_review_performed": false,
+  "setup_state": "SETUP_COMPLETE",
+  "next_state": "A_REVIEW_PENDING",
+  "publication_metadata_validator_status": "PASS",
+  "staged_scope_review": {
+    "files": 22,
+    "shared_code_or_execution_configs_added": false,
+    "only_selected_new_docs_metadata_and_navigation": true,
+    "secrets_pattern_scan": "PASS_NOT_A_GUARANTEE",
+    "symlinks": 0,
+    "large_assets_added": false
+  }
+}

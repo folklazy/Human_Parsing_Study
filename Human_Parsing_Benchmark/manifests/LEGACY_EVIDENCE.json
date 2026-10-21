@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "recorded_utc": "2026-10-21T03:23:15.998981+00:00",
+  "scope": "small evidence file inventory only, not payload reverification",
+  "original_working_root": "Human-Body-Extraction workspace",
+  "public_baseline_commit": "0cf406f300f92ec8bd8502bae4a750a73632709a",
+  "files": [
+    {
+      "id": "YOLO_MASTER",
+      "workspace_relative_path": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study/README.md",
+      "bytes": 9115,
+      "sha256": "69cef5acc6b4d44592ab035f5d2bdcc5784379c9085498abbbc621b62eb877d8",
+      "role": "FROZEN_BASELINE_DOCUMENTATION",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "YOLO_STANDARD",
+      "workspace_relative_path": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study/STUDY_STANDARD.md",
+      "bytes": 22642,
+      "sha256": "56fc83d2a95a141b8b41baa2202ec16d20c00fb0558da6357112f182b751e460",
+      "role": "REFERENCE_CONVENTIONS",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "YOLO_LARGEST",
+      "workspace_relative_path": "YOLO_Large_Seg_MOTS20_Benchmark/README.md",
+      "bytes": 1900,
+      "sha256": "02bf41ff529c8321cc593923d842ae9e5236afc9631cfa3ff024accf76fd68fb",
+      "role": "FROZEN_BASELINE_DOCUMENTATION",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "YOLO_PROTOCOL",
+      "workspace_relative_path": "YOLO_Large_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md",
+      "bytes": 8679,
+      "sha256": "465a6e60b371b29f250eeb8bb5ac4c218be20f114e9e42f7979e5d45aca19366",
+      "role": "HISTORICAL_PROTOCOL_NOT_PARSING_DEFAULTS",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "YOLO_CHECKPOINT_ID",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/manifests/YOLO26X_SOURCE.json",
+      "bytes": 534,
+      "sha256": "a4fd5aeaa51e16c42e705d672d2e74c590aea633750063d358d5fc06c8752d62",
+      "role": "FROZEN_CHECKPOINT_MANIFEST",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CCIHP_AUDIT_POINTER",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/CCIHP_STAGE0F_ACTIVE_RUN.json",
+      "bytes": 138,
+      "sha256": "2b8af942bc1a2a5eceb3fac6e489553fc35ae04d223275b14b9643338eea3ed3",
+      "role": "REUSABLE_DATASET_EVIDENCE",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CCIHP_AUDIT",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/FULL_STRUCTURAL_AUDIT.json",
+      "bytes": 4718,
+      "sha256": "57d96c33b5007414390a31915b9f4b7868beedc8ecf158d3939a939a76cb0e0a",
+      "role": "REUSABLE_STRUCTURAL_AUDIT_NOT_PHYSICAL_OWNERSHIP_PROOF",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CCIHP_ARCHIVE_IDS",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/EXECUTION_MANIFEST.json",
+      "bytes": 1225,
+      "sha256": "56ed6e427aed9ab25ac7bc17de8ed5c44052f0054c1a713dc4ad10aff8e595b0",
+      "role": "RECORDED_DATASET_DIGESTS_NOT_REHASHED",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CCIHP_REVIEW",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0f-ccihp-quality-20261012T062825Z/TRAIN_REVIEW_SAMPLE.json",
+      "bytes": 63982,
+      "sha256": "1fbdca8934c72b83a057bc539d9fb2b4c80b5c2dc119afca8fa573cf429a4792",
+      "role": "EXISTING_REVIEW_DESIGN_NOT_NEW_HUMAN_REVIEW",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "VARIANT_REGISTRY",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/MODEL_VARIANT_REGISTRY_HANDOFF_V7.csv",
+      "bytes": 39545,
+      "sha256": "069dc5b8f816dd3d870404ac31ddb897f269bfa05d7096e44eb5b803b5834be4",
+      "role": "HISTORICAL_VARIANT_INVENTORY_NOT_NEW_ROSTER",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CHECKPOINT_VERIFICATION",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/experiment-preparation-20261020T064124828436Z/CHECKPOINT_VERIFICATION.json",
+      "bytes": 11360,
+      "sha256": "17638f3bd75b51741934c414e2fc40ad2f5d44d17dff9160a563da8abfba60f7",
+      "role": "EXISTING_CHECKPOINT_FINGERPRINTS_NOT_REVERIFIED_WEIGHTS",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "LEGACY_ROSTER",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/MODEL_ROSTER_SCOPE_ACTIVE.json",
+      "bytes": 856,
+      "sha256": "c02538f77e04fe2b8518776626721bb0827531ac9e0516814643d269f5527aae",
+      "role": "HISTORICAL_CANDIDATE_POOL_NOT_CURRENT_SCOPE",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "PREPARATION",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/EXPERIMENT_PREPARATION_ACTIVE.json",
+      "bytes": 541,
+      "sha256": "75ce00e9faf544a032e5f089cd276be1fe7ddf1c9b601bd9ce3abffa50d5ab8f",
+      "role": "HISTORICAL_TWO_QANET_PROPOSAL_NOT_CURRENT_SCOPE",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "ROADMAP_WIP",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/reports/PROJECT_ROADMAP_TH_20261020.md",
+      "bytes": 33242,
+      "sha256": "ddc8544672825d80db2e6bb9243eb4d803614bdfc772b5a3433cdbcd4f1328e9",
+      "role": "PRESERVED_DRAFT_NOT_ACCEPTED_NEW_PLAN",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "ROADMAP_PRESERVATION",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/PROJECT_ROADMAP_STATUS_V1.json",
+      "bytes": 928,
+      "sha256": "e2120e405a5b79abc4e37bff2de6fab9d47f2c03f3e6c2ccd9e7dc44348e3b3d",
+      "role": "WIP_HASH_AND_ARCHIVE",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "PREVIOUS_PUBLICATION",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/WORK_PRESERVATION_PUBLICATION_20261021.json",
+      "bytes": 2809,
+      "sha256": "40b352434d27a4968462d484159b330d23b3c1507c4bfe2435ac3bee8a329f27",
+      "role": "PREVIOUS_WIP_SYNC_RECEIPT",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CPI_RESULTS",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
+      "bytes": 954,
+      "sha256": "142965e738d4f99c2af26bc75f42de0e50a8cd701bbac025015982a4edb457eb",
+      "role": "CLOSED_HISTORICAL_RESULT_NULL_PRIMARY",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CPI_FAILURES",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/metrics/first-cohort-benchmark-20261016T094257313856Z/FAILURES.csv",
+      "bytes": 288020,
+      "sha256": "03e2bffd5b753a1430bc340fdae7406626372ebd87dd1c617f78c42ee0482132",
+      "role": "CLOSED_HISTORICAL_FAILURES",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "CPI_MAPPING",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/taxonomy/APPLICATION_BODY_CLOTHING_CPI_ACCEPTED_V3.json",
+      "bytes": 7078,
+      "sha256": "f58ab47f4149ecb90d32081985866c1baf6cc36af4129631c1935f58518b1a5e",
+      "role": "HISTORICAL_COHORT_MAPPING_NOT_NEW_TARGET_APPROVAL",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "SCORING",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/src/application_v2/scoring.py",
+      "bytes": 5832,
+      "sha256": "b17ab25dc5bbf46b4418e3269d60f1fcfb2ceb3b15523084bbb6d8c485f193f7",
+      "role": "REUSABLE_IMPLEMENTATION_REQUIRES_SCOPE_REVIEW",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "PREDICTION_CONTRACT",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/src/application_v2/contracts.py",
+      "bytes": 9383,
+      "sha256": "fb2d1183eff816b7738c1422785aa0689bc7b52c9e735c362479c253d70f76f4",
+      "role": "REUSABLE_IMPLEMENTATION_REQUIRES_SCOPE_REVIEW",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "SYNTHETIC_FIXTURES",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/tests/test_application_v2.py",
+      "bytes": 19482,
+      "sha256": "b5057541817aa395cc651c112e0314f57344675364b218e522ad4ed678cecc6b",
+      "role": "REUSABLE_TESTS_NOT_RERUN",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "QANET_RUNNER",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/src/experiment_qanet_batch_v1.py",
+      "bytes": 5616,
+      "sha256": "c41a49eeec0e03559e5c17fbd196cdf1dedbcec79ff3d6b92a1130647492740f",
+      "role": "OLD_TWO_MODEL_GATE_NOT_GENERAL_RUNNER",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    },
+    {
+      "id": "QANET_WORKER",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/scripts/experiment_qanet_validation_worker_v1.py",
+      "bytes": 7534,
+      "sha256": "989ee6738a1ae663eab5c8466b34ab1ef6b3e125d4a37aaa9f488383952b7371",
+      "role": "PATH_BOUND_LEGACY_WORKER_DO_NOT_MOVE_OR_EXECUTE",
+      "verification": "SMALL_EVIDENCE_FILE_EXISTS_AND_FINGERPRINTED_ONLY; referent assets not revalidated"
+    }
+  ]
+}

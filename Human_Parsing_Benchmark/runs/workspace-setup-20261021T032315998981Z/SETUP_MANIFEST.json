@@ -1,0 +1,73 @@
+{
+  "schema_version": "workspace-setup-1.0",
+  "run_id": "workspace-setup-20261021T032315998981Z",
+  "activity_type": "WORKSPACE_SETUP_NOT_MODEL_RUN",
+  "created_utc": "2026-10-21T03:23:15.998981+00:00",
+  "status": "SETUP_COMPLETE",
+  "next_stage": "A_REVIEW_PENDING",
+  "Prompt_A_received": false,
+  "user_candidates_received": true,
+  "candidate_status": "USER_SPECIFIED_FOR_REVIEW",
+  "canonical_workspace_relative": "Human_Parsing_Benchmark",
+  "legacy_implementation_workspace_relative": "Human_Parsing_MHPv2_Study",
+  "public_checkout_workspace_relative": "Human_Parsing_Study_Public",
+  "public_subdirectory": "Human_Parsing_Benchmark",
+  "public_base_commit": "0cf406f300f92ec8bd8502bae4a750a73632709a",
+  "remote": "https://github.com/folklazy/Human_Parsing_Study.git",
+  "branch": "main",
+  "new_git_repository_created": false,
+  "historical_results_changed": false,
+  "assets_moved": false,
+  "pipeline_implemented": false,
+  "inference_started": false,
+  "full_benchmark_started": false,
+  "dataset_or_weights_rehashed": false,
+  "process_snapshot": {
+    "observed_utc": "2026-10-21T03:23:15.998981+00:00",
+    "workspace_script_processes": [
+      {
+        "pid": 1490036,
+        "workspace_relative_script": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/serve_review_web.py",
+        "role": "SAVED_OUTPUT_REVIEW_WEB"
+      }
+    ],
+    "gpu": "Tesla T4, 15360 MiB, 0 MiB, 0 %",
+    "NVIDIA_compute_processes_present": false,
+    "scope": "local snapshot only; no scheduler/remote job guarantee",
+    "jobs_killed_restarted_or_resumed": false
+  },
+  "read_YOLO_reference_ids": [
+    "YOLO_MASTER",
+    "YOLO_STANDARD",
+    "YOLO_LARGEST",
+    "YOLO_PROTOCOL"
+  ],
+  "reused_evidence_manifest": "manifests/LEGACY_EVIDENCE.json",
+  "artifact_specification": "manifests/ARTIFACT_LOCATIONS.json",
+  "navigation_backup_local_workspace_relative": "Human_Parsing_MHPv2_Study/outputs/workspace_setup/workspace-setup-20261021T032315998981Z",
+  "git_baseline_repositories": [
+    {
+      "workspace_relative": "Human_Parsing_Study_Public",
+      "branch": "main",
+      "head": "0cf406f300f92ec8bd8502bae4a750a73632709a",
+      "untracked_line_count": 0,
+      "working_tree_clean": true
+    },
+    {
+      "workspace_relative": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "branch": "main",
+      "head": "5551593459646fe42494958192e5410805ab4b48",
+      "untracked_line_count": 1,
+      "working_tree_clean": false
+    },
+    {
+      "workspace_relative": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "branch": "main",
+      "head": "172e21b9f2996bae74fb591cfdd1740e6e92dd46",
+      "untracked_line_count": 74,
+      "working_tree_clean": false
+    }
+  ],
+  "source_dependency_note": "Legacy workers resolve paths from __file__; old QANet checker hard-codes two-model cohort. No execution files relocated or generalized.",
+  "versioning": "setup source hashes in file manifests; containing commit resolved from Git after commit, not a launch revision"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "status": "LOCATION_SPECIFICATION_NOT_EXECUTABLE_CONFIG",
+  "recorded_utc": "2026-10-21T03:23:15.998981+00:00",
+  "bindings": {
+    "workspace_root": {
+      "environment_variable": "HPB_WORKSPACE_ROOT",
+      "resolution": "explicit local CLI/env binding or documented workspace layout; never assume a public clone parent contains assets"
+    },
+    "artifact_root": {
+      "environment_variable": "HPB_ARTIFACT_ROOT",
+      "default_workspace_relative": "Human_Parsing_MHPv2_Study/outputs/human_parsing_benchmark",
+      "exists_at_setup": false,
+      "created_in_setup": false,
+      "external_to_public_git": true,
+      "execution_binding_implemented": false
+    }
+  },
+  "existing_resources": [
+    {
+      "logical_id": "legacy_study",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "shared_datasets",
+      "workspace_relative_path": "datasets",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "dataset_CCIHP_archive",
+      "workspace_relative_path": "datasets/CCIHP_icip.zip",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "dataset_CIHP_conversion",
+      "workspace_relative_path": "datasets/cihp-DatasetNinja.tar",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "shared_checkpoints",
+      "workspace_relative_path": "models/human_parsing",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "YOLO26x_checkpoint",
+      "workspace_relative_path": "models/yolo26x-seg.pt",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "third_party",
+      "workspace_relative_path": "third_party/human_parsing",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "environments",
+      "workspace_relative_path": ".venvs",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "historical_outputs",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/outputs",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    },
+    {
+      "logical_id": "historical_run_provenance",
+      "workspace_relative_path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS",
+      "exists_at_setup": true,
+      "asset_payload_verified_in_setup": false
+    }
+  ],
+  "future_external_run_subdirectories": {
+    "predictions": "<run_id>/predictions",
+    "detailed_logs": "<run_id>/logs",
+    "runtime_traces": "<run_id>/traces",
+    "caches": "<run_id>/cache",
+    "temporary": "<run_id>/tmp"
+  },
+  "git_track": [
+    "plans",
+    "decisions",
+    "protocols",
+    "configs",
+    "code",
+    "tests",
+    "small metric tables",
+    "input/job/artifact manifests",
+    "run provenance",
+    "completion/failure summaries",
+    "reports"
+  ],
+  "git_exclude": [
+    "datasets",
+    "weights",
+    "bulk masks/logits/predictions",
+    "detailed logs/traces",
+    "environment binaries",
+    "credentials",
+    "private local overrides",
+    "CCTV assets"
+  ],
+  "existing_output_paths_rewritten": false
+}

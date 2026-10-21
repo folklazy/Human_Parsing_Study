@@ -1,3 +1,9 @@
+# Current planning entry point
+
+Start current work with Human_Parsing_Benchmark/README.md → STATUS.md → PLAN.md → relevant docs/DECISIONS.md in that subdirectory. SETUP_COMPLETE / A_REVIEW_PENDING does not authorize inference. The latest seven user candidates are review input; old roster19 and two-QANet proposal are not automatically current launch scope. Workspace-root Human_Parsing_Benchmark is authoritative editable planning; this checkout holds its reviewed public copy. Human_Parsing_MHPv2_Study retains reusable code and historical results. Do not wholesale-sync or relocate either.
+
+The prior closed-cohort contract below remains applicable to its preserved results and external assets, not a substitute for the current planning entry point.
+
 # Agent continuation contract
 
 Read README.md, STUDY_STATE.json, HANDOFF.md, EXPERIMENT_PROTOCOL.md and publication/PUBLICATION_STATE.json first. This directory is a **public staging snapshot** of the separate canonical working copy `Human_Parsing_MHPv2_Study`; do not confuse them or auto-sync in either direction.

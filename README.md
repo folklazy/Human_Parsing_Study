@@ -1,5 +1,11 @@
 # Human Parsing Study
 
+**Current Phase 2–3 planning workspace:** [Human_Parsing_Benchmark](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md). **SETUP_COMPLETE / A_REVIEW_PENDING**; user candidates received, no new execution authorized. CCIHP is the user-directed primary public selection benchmark; the exact evaluation/selection protocol awaits Prompt A.
+
+The closed first-cohort results and earlier preparation notes below remain historical evidence. The workspace-root Human_Parsing_Benchmark is the canonical editable planning directory; this subdirectory is its reviewed public copy.
+
+## Closed first CPI cohort — historical results
+
 Independent noncommercial student academic research on pretrained body/clothing parsing and supported accessories. Frozen YOLO26x-Seg supplies person opportunities for the first **T3b** cohort; native parsers also infer their own instances. This is a post-run publication snapshot, not the Git revision used at launch.
 
 **Latest run: `first-cohort-benchmark-20261016T094257313856Z` — FINISHED_WITH_INCOMPLETE_SYSTEMS.** No main accuracy winner is available under STRICT_COMPLETE. The two systems remain in every result table; missing main scores are null, never zero.

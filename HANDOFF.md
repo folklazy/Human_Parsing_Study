@@ -1,3 +1,5 @@
+> **For current work start with [Human_Parsing_Benchmark README](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md) → [decisions](Human_Parsing_Benchmark/docs/DECISIONS.md).** The closed-cohort handoff below is historical evidence, not the new launch plan. New planning authority and legacy implementation locations are distinct.
+
 # Handoff — Closed First CPI Cohort
 
 ## Current result

@@ -1,0 +1,22 @@
+# Machine-specific bindings and scratch data; retain compact evidence in runs/.
+/local/
+/.env
+/.env.*
+/.cache/
+/tmp/
+__pycache__/
+*.py[cod]
+# Fail-safe bulk locations only. No blanket runs/, CSV, JSON or image exclusion.
+/runs/**/predictions/
+/runs/**/raw_predictions/
+/runs/**/masks/
+/runs/**/logits/
+/runs/**/logs/
+/runs/**/detailed_logs/
+/runs/**/traces/
+/runs/**/runtime_traces/
+/runs/**/cache/
+/runs/**/tmp/
+*.pt
+*.pth
+*.safetensors

@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-21T03:24:22.604797+00:00",
+  "scope": "NEW_PLANNING_WORKSPACE_AND_NAVIGATION_ONLY",
+  "base_commit": "0cf406f300f92ec8bd8502bae4a750a73632709a",
+  "authoritative_workspace_relative": "Human_Parsing_Benchmark",
+  "public_copy_relative": "Human_Parsing_Benchmark",
+  "legacy_source_implementation_sync": false,
+  "copied_shared_source": false,
+  "moved_datasets_weights_environments_or_outputs": false,
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/.gitignore",
+      "public_path": "Human_Parsing_Benchmark/.gitignore",
+      "bytes": 438,
+      "sha256": "ea476a72dcba1e3305d874488e98c6bfc04d6575951c47bfe0b52fee65638168",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "public_path": "Human_Parsing_Benchmark/AGENTS.md",
+      "bytes": 2205,
+      "sha256": "24a602d840e889407716f57a79951cacebb5d75b0bf587e5478d6d9accc12613",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "bytes": 7552,
+      "sha256": "6f39fd25d0c1b2af341eeb6acb9f97ec6b9ba6bdfe2ec6cef5e92f25f1b28b29",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 7421,
+      "sha256": "9b6a905abd56fd40846f5fe82e47782b3efbe5975e3f8eeb8322e22209b76d0a",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 4200,
+      "sha256": "81a8876d58af9dfd5b68d0b074952cbd5d9d73a742ef60c505d843fd992ba81c",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 2725,
+      "sha256": "c0fb378a9db0af7fe3dcaede01935227061164ee380fba96113bdd252431e26a",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
+      "public_path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
+      "bytes": 4069,
+      "sha256": "f424445cae64286a8f51b11af73e399f744e63b5351c5c13bbce2ab532b35cfd",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "public_path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "bytes": 4740,
+      "sha256": "ea967bb7254f06b22cd9f32f6d656ea4458ae8e4a10b6030330319fc22f9dba8",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md",
+      "public_path": "Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md",
+      "bytes": 7170,
+      "sha256": "473b2e70b12afd0740b3b49952d1403668bc08cdc34dcdee43c2fdd1f2d52b52",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md",
+      "public_path": "Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md",
+      "bytes": 4564,
+      "sha256": "d722d8de22bbce678e744141c7ea1f435c3c0e55e8370c1354ce9297bdcf74f7",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json",
+      "bytes": 3410,
+      "sha256": "217c2420000ffc17bd0aa3a8699198023139ba2b2bdeeeca3f977f3b338592a5",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json",
+      "bytes": 10443,
+      "sha256": "6ca5b9fbb371825e7562c07dcfa13e3cd23a3b94329479c6346e99bcea17c9c6",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
+      "public_path": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
+      "bytes": 1636,
+      "sha256": "5af7f5101c4a3f6fd354a49ce50aa737935a0e50fabdcdd1e6212512141f8cc8",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json",
+      "bytes": 3915,
+      "sha256": "43d2a71b685445932b95e062cc04f9bd38abb90bc36f1ad06033498ce65199e3",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json",
+      "public_path": "Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json",
+      "bytes": 2970,
+      "sha256": "50324c9ff00611508a1ca6ca7fcc1477ec26883767e4a71a59c088e31e1205f2",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    }
+  ],
+  "navigation": [
+    {
+      "public_path": "README.md",
+      "before_sha256": "bfc508f7d88188de9eea33673007e1093d2204ccbbb0e23ea7585069f6a4f548",
+      "after_sha256": "cce945d4dbbe4c08a68dbf8fa87b756bec7791229b989eedd9b83c5283a3569e",
+      "change": "CURRENT_WORKSPACE_POINTER_ADDED_HISTORICAL_BODY_PRESERVED"
+    },
+    {
+      "public_path": "HANDOFF.md",
+      "before_sha256": "0dcfa186cc6845e30b32ee022565fe31f274221fcd69d2702e1b98da7737faad",
+      "after_sha256": "95d82459e381794955965cab2a698d9a6b6b101bdb37a6da14c377af898da9f0",
+      "change": "CURRENT_WORKSPACE_POINTER_ADDED_HISTORICAL_BODY_PRESERVED"
+    },
+    {
+      "public_path": "AGENTS.md",
+      "before_sha256": "e601bbae54af15e918558507d06aefa8d487d3d708fa20653423a0c29d81672a",
+      "after_sha256": "ab310e3ea70125f3519410e53457c26a5276541a81570462c7712b7a3575d788",
+      "change": "CURRENT_WORKSPACE_POINTER_ADDED_HISTORICAL_BODY_PRESERVED"
+    },
+    {
+      "public_path": "reports/HISTORY_INDEX.md",
+      "before_sha256": "1398ea7650bd9dd9dc15f8086e15abeed102ebcebe9e63980171abe1fc7efb4a",
+      "after_sha256": "15a294afcec6720736d98bda2dabd8a12d82e4320545e1a90d5b000b62e6eb8b",
+      "change": "CURRENT_WORKSPACE_POINTER_ADDED_HISTORICAL_BODY_PRESERVED"
+    }
+  ],
+  "post_run_not_launch_commit": true,
+  "source_and_public_separate": true,
+  "automatic_sync": false,
+  "verification": "SETUP_COMPLETION_PASS_AND_PUBLIC_METADATA_VALIDATOR_PASS"
+}
