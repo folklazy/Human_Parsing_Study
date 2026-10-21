@@ -81,7 +81,35 @@
     "existing_route_replay_CPU_checks": 4,
     "new_Sapiens_ROI_training_frame_jobs_upper_bound": 9,
     "explanation": "At most three fixed existing TRAIN images per Sapiens checkpoint if no matching ROI evidence exists; initial one-image stage then remaining two after pass. All require separate Stage B permission.",
-    "current_authorization": false
+    "current_authorization": false,
+    "conditional_CIHP_application_TRAIN_frame_jobs_cap": 4,
+    "conditional_native_reference_TRAIN_profile_frame_jobs_cap": 3,
+    "total_GPU_parser_frame_system_jobs_cap": 16,
+    "cap_reason": "<=9 new Sapiens ROI checks retained; additional<=4 application+<=3 native-only single-frame calls only for unclosed integration/residency evidence. Joint-residency/storage/map-back checks reuse these calls, no additional loops; not mandated smoke reruns or caused by reporting regrouping.",
+    "approval": "Separate B authorization required; current authorization=false; no current inference",
+    "fixed_TRAIN_inputs": {
+      "initial_image_id": "0000930",
+      "additional_Sapiens_image_ids": [
+        "0021834",
+        "0001368"
+      ],
+      "source": "Human_Parsing_MHPv2_Study/configs/application_v2_first_cohort_v12.yaml#bounded_train plus selected existing native/pilot RUN input_ids",
+      "source_role": "Existing TRAIN image identity evidence only; old config is historical and not new execution authorization",
+      "sample_mutation": "No VAL images or quality-selected replacements; if required readable input/geometry absent stop affected check and document missing dependency"
+    },
+    "ROI_task_count": 32,
+    "ROI_count_reason": "At most3 Sapiens*(2+6+2)=30 ROI tasks plus QANet initial0000930 2 tasks; native3 do not consume external ROI tasks. Native TTA/internal subnetworks may add forwards, so32 ROI tasks is not32 neural calls. Reuse current evidence first.",
+    "fresh_YOLO_TRAIN_frame_calls_cap": 7,
+    "TRAIN_detector_evidence": {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/RUN.json",
+      "sha256": "ca7f1e87576eac2956d733d14cef6f3233f535568733d712ac31bdc4cee20c97",
+      "opportunities_by_image": {
+        "0021834": 6,
+        "0000930": 2,
+        "0001368": 2
+      },
+      "payloads_read_or_inferred_now": false
+    }
   },
   "scoring_counts": {
     "instance_matching_views": [
@@ -89,9 +117,8 @@
       0.75
     ],
     "populations": 2,
-    "quality_views": "C3 garment all 10 configs; C7 CIHP core 7 eligible configs; C7 Sapiens diagnostic not ranked",
-    "planned_ranked_summary_rows": 68,
-    "formula": "(10 C3 configurations + 7 C7 CIHP configurations)*2 populations*2 thresholds; exclude diagnostic/per-class rows",
+    "quality_views": "APPLICATION_C3:7;APPLICATION_C7:4; native reference C3:3 and C7:3 separately; Sapiens C7 diagnostic not ranked",
+    "formula": "(7 application C3+4 application C7+3 native reference C3+3 native reference C7)*2 populations*2 thresholds=68 rows; application44, native reference24; no pooled17-config leaderboard",
     "new_G_sem_by_view": {
       "main": {
         "C3_GARMENT": 17085,
@@ -102,21 +129,54 @@
         "C7_BODY_CLOTHING": 17504
       }
     },
-    "reason": "New counts derived from existing native_category_support metadata; new pixel contexts still require readiness materialization"
+    "reason": "New counts derived from existing native_category_support metadata; new pixel contexts still require readiness materialization",
+    "application_rows": 44,
+    "native_reference_rows": 24,
+    "planned_summary_rows": 68,
+    "legacy_field_note": "planned_ranked_summary_rows renamed planned_summary_rows in draft revision3:68 rows include44 application and24 native reference summaries, not one joint leaderboard"
   },
   "authorization": {
     "new_inference": false,
     "new_smoke": false,
     "full_benchmark": false
   },
-  "revision": 2,
-  "clarification_work_unit": "proposal-clarification-20261021T063557842659Z",
+  "revision": 3,
+  "clarification_work_unit": "specification-handoff-20261021T092521331823Z",
   "operations_clarification": {
     "automatic_model_retries": 0,
-    "external_recovery_status": "PROPOSED_REQUIRES_EXPLICIT_APPROVAL; not additional jobs authorized",
+    "external_recovery_status": "PROPOSED:1 extra atomic-work attempt,1 recovery epoch/batch; not accepted or authorized",
     "nominal_job_counts_exclude_recovery_attempts": true,
     "attempt_recovery_spec": "protocol/REVIEWED_SPECIFICATION.json#/failure_policy/external_interruption_recovery_proposal",
     "recognized_unsupported_prediction": "Valid execution; no extra inference or rerun requested",
-    "total_storage_or_ETA_verified": false
+    "total_storage_or_ETA_verified": false,
+    "recovery_attempts_in_nominal_workload": false,
+    "grouping_adds_quality_or_timing_inference": false
+  },
+  "comparison_groups": {
+    "APPLICATION_C3": {
+      "view": "C3_GARMENT",
+      "configurations": 7,
+      "ranked_application": true
+    },
+    "APPLICATION_C7": {
+      "view": "C7_BODY_CLOTHING",
+      "configurations": 4,
+      "ranked_application": true
+    },
+    "NATIVE_REFERENCE_C3": {
+      "view": "C3_GARMENT",
+      "configurations": 3,
+      "ranked_application": false
+    },
+    "NATIVE_REFERENCE_C7": {
+      "view": "C7_BODY_CLOTHING",
+      "configurations": 3,
+      "ranked_application": false
+    },
+    "SAPIENS_C7_DIAGNOSTIC": {
+      "view": "C7_BODY_CLOTHING_APPROXIMATE_DIAGNOSTIC",
+      "configurations": 3,
+      "ranked_application": false
+    }
   }
 }

@@ -1,0 +1,178 @@
+{
+  "schema_version": "qualitative-sample-design-1.0",
+  "revision": 3,
+  "status": "REVIEWED_PROPOSAL_NOT_EXECUTION_AUTHORIZATION",
+  "selection_work_unit": "specification-handoff-20261021T092521331823Z",
+  "source": "manifests/TIMING_WORKLOAD_DRAFT.json",
+  "source_cases_sha256": "12af7225968ec5cba457be7625ba41b36b726ed5e5ce351fae3fb1458ad620db",
+  "seed": "20261021",
+  "selection_rule": "Within each existing timing stratum use first2 smallest SHA256(seed:image_id) cases;16 common main images, chosen before parser scores; same IDs for all seven applications and three paired native references",
+  "cases": [
+    {
+      "image_id": "0019801",
+      "stratum": "0-2|area_gt_187500",
+      "original_wh": [
+        500,
+        667
+      ],
+      "RGB_sha256": "f9ef1d6c8fa842872a38294f57cb4cd4ca7d32f06eeda80a3dd81a52844a757b",
+      "opportunities": 2
+    },
+    {
+      "image_id": "0021973",
+      "stratum": "0-2|area_gt_187500",
+      "original_wh": [
+        500,
+        755
+      ],
+      "RGB_sha256": "e6076f6630b6002059b03cd80f802048e5efb2bac2da1d860383abee85716ec3",
+      "opportunities": 2
+    },
+    {
+      "image_id": "0037596",
+      "stratum": "0-2|area_le_187500",
+      "original_wh": [
+        500,
+        310
+      ],
+      "RGB_sha256": "d426c4de22cbabaadbe93febfc27d32a06165745a0c700dbe131c67761297c5b",
+      "opportunities": 2
+    },
+    {
+      "image_id": "0005017",
+      "stratum": "0-2|area_le_187500",
+      "original_wh": [
+        375,
+        500
+      ],
+      "RGB_sha256": "8b382e0e289bcb46fdbe8cc28314d0fbfb7af43bf81f4c894c4d6b28cd5e90d0",
+      "opportunities": 2
+    },
+    {
+      "image_id": "0032638",
+      "stratum": "3-4|area_gt_187500",
+      "original_wh": [
+        500,
+        706
+      ],
+      "RGB_sha256": "2f6573019a0a9d7952615515984dc9b4689489cbd9c37c68181b919432a688af",
+      "opportunities": 4
+    },
+    {
+      "image_id": "0001503",
+      "stratum": "3-4|area_gt_187500",
+      "original_wh": [
+        476,
+        500
+      ],
+      "RGB_sha256": "f4fb9f1517836e723097d031d4e8ef8456e832378a8a73529f91faf6ba8f3829",
+      "opportunities": 3
+    },
+    {
+      "image_id": "0037174",
+      "stratum": "3-4|area_le_187500",
+      "original_wh": [
+        500,
+        334
+      ],
+      "RGB_sha256": "e4c8ba187ff907d025ac34b3c6bf351ac35f3788aa2a89e244e5d971eeb43a24",
+      "opportunities": 4
+    },
+    {
+      "image_id": "0005842",
+      "stratum": "3-4|area_le_187500",
+      "original_wh": [
+        500,
+        375
+      ],
+      "RGB_sha256": "6c0fcbed85e8892ebb8848ec8b32beed22f7f1a8e7f6f44a3693b2d59256a8f9",
+      "opportunities": 3
+    },
+    {
+      "image_id": "0017556",
+      "stratum": "5-7|area_gt_187500",
+      "original_wh": [
+        500,
+        401
+      ],
+      "RGB_sha256": "74eddc75d4952d141d0009d375acec574ed6ceaa655bed96e10f59eb3e08758c",
+      "opportunities": 7
+    },
+    {
+      "image_id": "0021622",
+      "stratum": "5-7|area_gt_187500",
+      "original_wh": [
+        480,
+        480
+      ],
+      "RGB_sha256": "80bde185d51a553ab62e0ba38681d7d1d5210564f94ee51a586aff11cdcffff9",
+      "opportunities": 5
+    },
+    {
+      "image_id": "0008878",
+      "stratum": "5-7|area_le_187500",
+      "original_wh": [
+        500,
+        295
+      ],
+      "RGB_sha256": "4e06d33edabb67cc38af925c3388e7759708444c3b26ca10bba5edffef786fa2",
+      "opportunities": 7
+    },
+    {
+      "image_id": "0006957",
+      "stratum": "5-7|area_le_187500",
+      "original_wh": [
+        500,
+        348
+      ],
+      "RGB_sha256": "025f99b1237525cacc533a81d440023cac6b9f139bc903e0275c56edabce8ca8",
+      "opportunities": 6
+    },
+    {
+      "image_id": "0004235",
+      "stratum": "8plus|area_gt_187500",
+      "original_wh": [
+        525,
+        700
+      ],
+      "RGB_sha256": "136ab779cb9343b8b991fedf5b3911bc192385f5959382d041efd2804e800e7b",
+      "opportunities": 10
+    },
+    {
+      "image_id": "0012093",
+      "stratum": "8plus|area_gt_187500",
+      "original_wh": [
+        500,
+        427
+      ],
+      "RGB_sha256": "2130d47da029d78b32b04ff8a3ae330c4a485c1e8679d21a66682fc1261ff773",
+      "opportunities": 8
+    },
+    {
+      "image_id": "0008467",
+      "stratum": "8plus|area_le_187500",
+      "original_wh": [
+        500,
+        279
+      ],
+      "RGB_sha256": "61007ae18f53133812328efa25cef7338c85faacff133e29cdc7afa18f256255",
+      "opportunities": 14
+    },
+    {
+      "image_id": "0025200",
+      "stratum": "8plus|area_le_187500",
+      "original_wh": [
+        405,
+        270
+      ],
+      "RGB_sha256": "f7c28e42451656777e8a0f2d640c5eaa8df25df4cb08b68ff0fd5072fcf79ed6",
+      "opportunities": 10
+    }
+  ],
+  "image_count": 16,
+  "no_extra_inference": true,
+  "display": "RGB, released GT by view/person, native and projected final predictions, extent-source identity, rejection/void overlay, failures as missing with reason; do not replace failed selected cases with flattering images",
+  "interpretation": "Illustrative stratified panel, not independent error-prevalence estimate or subjective winner selection; no mapping/settings changes from panel",
+  "failure_gallery": "Optional separate diagnostics, at most8 IDs per configuration selected by smallest SHA256(seed:configuration:image_id) among terminal failure ledger IDs, independent of accuracy/latency scores; no replacement in common16",
+  "image_distribution": "No image copies published in this work; future visualization reuse subject to existing data terms"
+}

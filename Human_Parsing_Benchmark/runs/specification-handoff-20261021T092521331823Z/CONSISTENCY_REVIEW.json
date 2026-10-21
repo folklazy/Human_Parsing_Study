@@ -1,0 +1,508 @@
+{
+  "schema_version": "document-consistency-1.0",
+  "work_unit": "specification-handoff-20261021T092521331823Z",
+  "created_utc": "2026-10-21T09:34:16.343087+00:00",
+  "public_base_commit": "df1c4a7a546cd5ad3122916228adaaa7fad3585b",
+  "status": "DOCUMENT_CONSISTENCY_PASS",
+  "verification_scope": "BOUNDED_DOCUMENT_SCHEMA_MANIFEST_INSPECTION_NOT_EXECUTION_ACCEPTANCE",
+  "checks": [
+    {
+      "check": "selected_exact_IDs_match_user_and_registry",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "checkpoint_bindings_unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "CCIHP_GT_native_ID_inventory",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "CIHP_PRED_native_ID_inventory",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "SAPIENS2_PRED_native_ID_inventory",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "global_prediction_disposition_removed",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "view_dispositions_follow_roles",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "all_rows_have_separate_evidence_status",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "Sapiens_C7_not_ranked_even_TARGET",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "CIHP_body_is_C3_context_C7_target",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "unsupported_valid_labels_view_scoped",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "EXACT_definition_not_evidence_upgrade",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "route_counts_7app_3native",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "application_groups_and_native_references",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "route_table_matches_groups",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "no_native_ref_application_eligibility",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "quality_workload_arithmetic",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "nominal_quality_timing_unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "summary_groups_44application_24reference",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "timing_source_cases_weights_unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "timing_64_350_and_warmup_arithmetic",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "qualitative16_immutable_same_source_cases",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "qualitative2_per_stratum",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "B_readiness_caps_and_ROIs",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "empty_semantics_separate_no_person",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "recovery_only_proposed_bounded",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "near_tie_margin_unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "same_pending_decision_set",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "PLAN_decision_IDs_match_spec",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "no_new_authorizations_or_DESIGN_READY",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "resource_meanings_and_no_invented_total",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "selected_metadata_source_bindings_match",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "selected_config_priorRUN_and_weight_stats_match",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "selected_markdown_links_and_anchors",
+      "satisfied": true,
+      "detail": []
+    }
+  ],
+  "checkpoint_binding_inspection": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "checkpoint_workspace_relative": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256_as_recorded": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes_as_recorded": "277950114",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "config_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "actual_smoke_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/qanet_cihp_hrnetw48_512x384-20261015T065534Z/RUN.json",
+      "actual_smoke_sha256": "93a1c56f063acb2ae8909bef5ac175da98f26756f90e8df7f1ad36147947c7ca",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "93a1c56f063acb2ae8909bef5ac175da98f26756f90e8df7f1ad36147947c7ca",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 277950114,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "checkpoint_workspace_relative": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256_as_recorded": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "checkpoint_bytes_as_recorded": "757764792",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "config_workspace_relative": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "actual_smoke_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/m2fp_r101_cihp-20261015T064449Z/RUN.json",
+      "actual_smoke_sha256": "7cc45119b11559df4bc132efc49176d9a82457e42ba0a53eb8e682fb18b625ad",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "7cc45119b11559df4bc132efc49176d9a82457e42ba0a53eb8e682fb18b625ad",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 757764792,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "checkpoint_workspace_relative": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256_as_recorded": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "checkpoint_bytes_as_recorded": "958247405",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "config_workspace_relative": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "actual_smoke_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/d2fp_r101_cihp-20261015T064526Z/RUN.json",
+      "actual_smoke_sha256": "254aaee571f2b9086e6ea7aeb63e20ca90dbc89674f207f5605188d4dfead7e5",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "254aaee571f2b9086e6ea7aeb63e20ca90dbc89674f207f5605188d4dfead7e5",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 958247405,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "checkpoint_workspace_relative": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "checkpoint_sha256_as_recorded": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "checkpoint_bytes_as_recorded": "234931960",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "config_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "actual_smoke_workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/outputs/rpr_cihp-20261015T064615Z/RUN.json",
+      "actual_smoke_sha256": "cf7dfec7ede5f57a04a55f6c7c64dc84f8f2d29bc61a231652762ead40683db8",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "cf7dfec7ede5f57a04a55f6c7c64dc84f8f2d29bc61a231652762ead40683db8",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 234931960,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "checkpoint_workspace_relative": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "checkpoint_sha256_as_recorded": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "checkpoint_bytes_as_recorded": "1626451404",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "config_workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "actual_smoke_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_0.4b-20261012T103333Z/RUN.json",
+      "actual_smoke_sha256": "f5efbd532e5545d45d72c1c844a56517294306b690e8a2e84d7d51e0a0de7d98",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "f5efbd532e5545d45d72c1c844a56517294306b690e8a2e84d7d51e0a0de7d98",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 1626451404,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "checkpoint_workspace_relative": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "checkpoint_sha256_as_recorded": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "checkpoint_bytes_as_recorded": "3310187452",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "config_workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "actual_smoke_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_0.8b-20261012T103543Z/RUN.json",
+      "actual_smoke_sha256": "48a283b44a27f7116f7b4097e68a5314a343677143212d25e5593b5784bb323d",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "48a283b44a27f7116f7b4097e68a5314a343677143212d25e5593b5784bb323d",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 3310187452,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "checkpoint_workspace_relative": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256_as_recorded": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "checkpoint_bytes_as_recorded": "5883353380",
+      "hash_evidence": "Existing verification manifest only; not payload rehash or publisher authentication",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "config_workspace_relative": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "actual_smoke_workspace_relative": "Human_Parsing_CCIHP_10_Image_Pilot/outputs/sapiens2_1b_completed-20261014T025343Z/RUN.json",
+      "actual_smoke_sha256": "84009710dd7ebd2390d734bf2d337408f6df96afc0069591d436d84aa6e7dfb6",
+      "files_inspected": {
+        "config": {
+          "exists": true,
+          "sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+          "matches_record": true
+        },
+        "prior_run": {
+          "exists": true,
+          "sha256": "84009710dd7ebd2390d734bf2d337408f6df96afc0069591d436d84aa6e7dfb6",
+          "matches_record": true
+        },
+        "weights": {
+          "exists": true,
+          "bytes_observed": 5883353380,
+          "size_matches_record": true,
+          "payload_rehashed": false,
+          "authenticity_reverified": false
+        }
+      }
+    }
+  ],
+  "selected_metadata_bindings": [
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-validation-launch-20261016T091821919536Z/VALIDATION_INPUTS.jsonl",
+      "bytes": 1769895,
+      "sha256_as_recorded": "4be1f402a9b28ed31ef7046fc7f4ee3453b8b08e8ba9d3873e47999b116e5d23",
+      "sha256_observed": "4be1f402a9b28ed31ef7046fc7f4ee3453b8b08e8ba9d3873e47999b116e5d23",
+      "matches_record": true
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+      "bytes": 5433512,
+      "sha256_as_recorded": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+      "sha256_observed": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+      "matches_record": true
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/cpi-evidence-policy-acceptance-20261016T070730261321Z/validation_contexts_v1/IMAGE_BINDINGS.jsonl",
+      "bytes": 7675085,
+      "sha256_as_recorded": "ae882a1dffc7bced721713202e9e2188d7883b2670d612521f0ee8c6a4697d47",
+      "sha256_observed": "ae882a1dffc7bced721713202e9e2188d7883b2670d612521f0ee8c6a4697d47",
+      "matches_record": true
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/RUN.json",
+      "bytes": 5262,
+      "sha256_as_recorded": "ca7f1e87576eac2956d733d14cef6f3233f535568733d712ac31bdc4cee20c97",
+      "sha256_observed": "ca7f1e87576eac2956d733d14cef6f3233f535568733d712ac31bdc4cee20c97",
+      "matches_record": true
+    }
+  ],
+  "prior_evidence": "runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
+  "before_files": {
+    "PLAN.md": {
+      "sha256": "75a82a7445dce2b1ccffd0db0945aaa613439ad5d02f89fd1c34a1cde16cd97f",
+      "bytes": 53593,
+      "matched_public_baseline": true
+    },
+    "STATUS.md": {
+      "sha256": "0d004cafbfa7967818980862181b61fdb72dcf632cf4e6cfcdba6193ebfb60d5",
+      "bytes": 4704,
+      "matched_public_baseline": true
+    },
+    "WORK_LOG.md": {
+      "sha256": "02368614e08135d50d53d457655b59470dbd23f07e96c5ca5f90d80a85dc0f92",
+      "bytes": 7664,
+      "matched_public_baseline": true
+    },
+    "README.md": {
+      "sha256": "1b920cb1152a7d68ed7fececb466352b86596ffde6da79de77b5b3e4b5b84d5d",
+      "bytes": 8791,
+      "matched_public_baseline": true
+    },
+    "docs/DECISIONS.md": {
+      "sha256": "28fd2a50210bc14caa2af1cabf7e22cd8b76653e0ca36881af59c24fa7fb80fd",
+      "bytes": 7955,
+      "matched_public_baseline": true
+    },
+    "reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md": {
+      "sha256": "34a3108843ce599792e1bc574e4bc5ebe4cc866e7b926270dc6b2bad3fe652b7",
+      "bytes": 33377,
+      "matched_public_baseline": true
+    },
+    "protocol/REVIEWED_SPECIFICATION.json": {
+      "sha256": "b609541e986b6a9c25386a3e3badf84cd7be8d3eb66052e6155026d67f233604",
+      "bytes": 25804,
+      "matched_public_baseline": true
+    },
+    "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv": {
+      "sha256": "2926d0022350b36fcabecb0e3ed2204a430edd847b6511d0675fe6b3eaa764fe",
+      "bytes": 38853,
+      "matched_public_baseline": true
+    },
+    "registry/REQUIREMENTS_TARGETS.csv": {
+      "sha256": "a7d6deb4b3e85c85baf66c3e1bb5c42c6955785ed19361b40f355c18f8f02bef",
+      "bytes": 4928,
+      "matched_public_baseline": true
+    },
+    "registry/ROUTES_PROPOSED.csv": {
+      "sha256": "21d20f6185138d8ba013530f66c20ab1af0a7b94670b0ad33f476e09ef02cdae",
+      "bytes": 7165,
+      "matched_public_baseline": true
+    },
+    "registry/FAIRNESS_RISKS.csv": {
+      "sha256": "707981db19a79470a0ba162a1e744896bdb788cbb71f36392704806fe21ae6d6",
+      "bytes": 7352,
+      "matched_public_baseline": true
+    },
+    "manifests/WORKLOAD_PROPOSAL.json": {
+      "sha256": "405bc4eeb54556d15751c9bff03506ee972477f26e2f94844e6f1b951b7f6225",
+      "bytes": 6440,
+      "matched_public_baseline": true
+    },
+    "manifests/TIMING_WORKLOAD_DRAFT.json": {
+      "sha256": "5cc61b735b6c264a0eaaa279d1f67bd3ce293bffe47f9ed74007ade158846f19",
+      "bytes": 26330,
+      "matched_public_baseline": true
+    },
+    "registry/CHECKPOINT_ROUTE_REVIEW.csv": {
+      "sha256": "cc6e0a29e1a4e9c0a160b9316e9789d57fe44c62dd317f57be4e88ea7c4ee93f",
+      "bytes": 9972,
+      "matched_public_baseline": true
+    }
+  },
+  "expected_case_catalog_status": "14 declarative expected cases; not executed, not production evaluator acceptance",
+  "no_inference": true,
+  "no_B_implementation": true,
+  "no_production_tests": true,
+  "no_active_execution_code_config_changes_by_this_unit": true,
+  "no_bulk_dataset_or_checkpoint_rehash": true
+}

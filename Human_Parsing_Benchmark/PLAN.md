@@ -1,6 +1,6 @@
 # Human Parsing Benchmark — แผนทดลอง authoritative
 
-**REVIEWED_PROPOSAL — Revision 2 — 21 ตุลาคม 2026 UTC**
+**REVIEWED_PROPOSAL — Revision 3 — 21 ตุลาคม 2026 UTC**
 นี่คือผลตรวจ/ข้อเสนอของ Prompt A ไม่ใช่ accepted executable configuration, DESIGN_READY หรือ LAUNCH_READY และยังไม่อนุมัติ implementation/inference/smoke/full benchmark
 
 แผนปัจจุบันมีที่เดียวที่ไฟล์นี้ ใช้ชื่อ `PLAN.md` ต่อจาก SETUP ตามข้อกำหนด reuse จึงไม่สร้าง `HUMAN_PARSING_EXPERIMENT_DESIGN_TH.md` อีกชุด root file ชื่อเดิมเป็น historical proposal เท่านั้น [ผลตรวจและเหตุผล](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md) · [สถานะ](STATUS.md) · [decisions](docs/DECISIONS.md) · [draft specification](protocol/REVIEWED_SPECIFICATION.json)
@@ -17,7 +17,7 @@ Phase 4 จะใช้ original RGB และ regions เพื่อทำส�
 
 ## 2. Candidate scope และการนับ
 
-Prompt A ระบุว่า roster ล่าสุดยังไม่ authoritative แต่มีตารางเจ็ดรายการจาก user message ก่อน SETUP อยู่จริง ใช้เป็น **ฐานเสนอ** ไม่ให้ inventory19/29 หรือ QANet proposal สองตัวเก่าขยาย workload อัตโนมัติ Sapiens2 สามขนาดยังเป็น active candidates ตามคำสั่งปัจจุบัน ไม่ใช้ RESTRICTED ที่ค้างใน CSV เก่าบล็อก roster; ไม่ได้ให้ new inference/license clearance จากการอ่านแผน
+Prompt A ระบุว่า roster ล่าสุดยังไม่ authoritative แต่มีตารางเจ็ดรายการจาก user message ก่อน SETUP อยู่จริง ใช้เป็น **selected proposal ที่ผู้ใช้ให้คงไว้ในรอบนี้** ไม่ให้ inventory19/29 หรือ QANet proposal สองตัวเก่าขยาย workload อัตโนมัติ Sapiens2 สามขนาดยังเป็น active candidates ตามคำสั่งปัจจุบัน ไม่ใช้ RESTRICTED ที่ค้างใน CSV เก่าบล็อก roster; ไม่ได้ให้ new inference/license clearance จากการอ่านแผน
 
 | Checkpoint ที่เสนอ | Application route | Native reference | บทบาทหลัก/ช่องว่าง |
 |---|---|---|---|
@@ -29,11 +29,11 @@ Prompt A ระบุว่า roster ล่าสุดยังไม่ autho
 | Sapiens2 0.8B segmentation | เช่นเดียวกับ 0.4B | เช่นเดียวกับ 0.4B | Active; crop/integration route ยัง NOT_TESTED |
 | Sapiens2 1B segmentation | เช่นเดียวกับ 0.4B | เช่นเดียวกับ 0.4B | Native GPU-resident pilot ผ่าน; joint residency ยังไม่พิสูจน์ |
 
-**7 checkpoints / 10 proposed configurations = 7 application + 3 native-reference configurations** มี quality parser inference streams 7 ชุด Native reference สามตัวใช้ native artifacts เดียวกับ application association จึงไม่มี full native inference ซ้ำ Sapiens full-frame semantic ไม่ใช่ native instance parser และ QANet oracle pilot ไม่ใช่ native full-frame detector performance
+**7 checkpoints / 10 selected-proposal configurations = 7 application + 3 native-reference configurations** มี quality parser inference streams 7 ชุด Native reference สามตัวใช้ native artifacts เดียวกับ application association จึงไม่มี full native inference ซ้ำ Sapiens full-frame semantic ไม่ใช่ native instance parser และ QANet oracle pilot ไม่ใช่ native full-frame detector performance
 
 Exact source/config/weights SHA256, sizes, pinned commits, load/smoke evidence และข้อจำกัดอยู่ใน [checkpoint matrix](registry/CHECKPOINT_ROUTE_REVIEW.csv) / [route matrix](registry/ROUTES_PROPOSED.csv) Hash ของ weights อ้าง existing verification ไม่ได้ rehash และ local fingerprint ไม่พิสูจน์ authenticity จากผู้สร้างเอง
 
-[Diff ครบทุก historical inventory entry](registry/ROSTER_DIFF.csv): 7 proposed retained; 12 ตัวนอก proposed set เปลี่ยนเป็น HOLD เฉพาะแผนนี้ ไม่สรุปว่าแม่นน้อยกว่าและไม่ลบ assets CPI CIHP สองตัวเป็น closed historical INCOMPLETE ไม่ retry/เรียงคะแนนใหม่ Pascal body-only ไม่ตอบ upper/lower clothing; 5B ยังคง excluded ตาม user resource decision Optional checkpoint ที่ยังหาไม่ได้/ไม่มี inference evidence คงเหตุผลเดิม ไม่คืนเข้ารอบเงียบ ๆ ต้องรับ roster ที่เสนอไว้ก่อนยืนยัน scope ใหม่
+[Diff ครบทุก historical inventory entry](registry/ROSTER_DIFF.csv): 7 proposed retained; 12 ตัวนอก proposed set เปลี่ยนเป็น HOLD เฉพาะแผนนี้ ไม่สรุปว่าแม่นน้อยกว่าและไม่ลบ assets CPI CIHP สองตัวเป็น closed historical INCOMPLETE ไม่ retry/เรียงคะแนนใหม่ Pascal body-only ไม่ตอบ upper/lower clothing; 5B ยังคง excluded ตาม user resource decision Optional checkpoint ที่ยังหาไม่ได้/ไม่มี inference evidence คงเหตุผลเดิม ไม่คืนเข้ารอบเงียบ ๆ ผู้ใช้ยืนยันให้รักษา selected proposal เจ็ด checkpoints/สิบ configurations ในคำสั่งรอบนี้แล้ว; ไม่ถาม roster ซ้ำและไม่แปลว่า launch-ready
 
 ## 3. Dataset, selection population และ exposure
 
@@ -70,14 +70,18 @@ C7 บังเอิญมี eligible-person union เท่า six-target เ
 
 | View | Targets | ใครเข้าตารางหลัก | ความหมาย |
 |---|---|---|---|
-| C3_GARMENT | Upper garment; Lower garment; Footwear | ทั้ง 7 checkpoints ทุก approved route ของ view เดียวกัน | ตอบหน้ากากเสื้อผ้าที่ส่ง Phase4 โดยยังเห็น upper/lower ต่างกัน |
-| C7_BODY_CLOTHING | Face region; Exposed torso; Exposed arms; Exposed legs; Upper garment; Lower garment; Footwear | CIHP checkpoints4 ตัว: application4 + native reference3 แยก route tables | เพิ่ม exposed body detail ที่ catalog/GT รองรับ |
-| Body semantic diagnostic | GT C7 เดียวกัน แต่ระบุ approximate mappings ของ Sapiens | Sapiens3 รายงานแยก ไม่มี C7 winner ร่วมกับ exact cohort | Face_Neck/Torso ไม่ตรง partition ของ CCIHP face/torso ที่พิสูจน์แล้ว |
+| C3_GARMENT | Upper garment; Lower garment; Footwear | ทั้ง 7 checkpoints application7 (native references3 แยกรายงาน) | ตอบหน้ากากเสื้อผ้าที่ส่ง Phase4 โดยยังเห็น upper/lower ต่างกัน |
+| C7_BODY_CLOTHING | Face region; Exposed torso; Exposed arms; Exposed legs; Upper garment; Lower garment; Footwear | applicationCIHP4 ในกลุ่มเดียวกัน; native reference3 แยกกลุ่ม | เพิ่ม exposed body detail ที่ catalog/GT รองรับ |
+| Body semantic diagnostic | GT C7 เดียวกัน แต่ระบุ approximate mappings ของ Sapiens | Sapiens3 รายงานแยก ไม่มี C7 winner ร่วมกับ compatible-projection cohort | Face_Neck/Torso ไม่ตรง partition ของ CCIHP face/torso ที่พิสูจน์แล้ว |
 | Accessories/native support | Hair/headwear/gloves/eyewear/socks/scarf และ unsupported FaceMask/Bag | Per-class diagnostics/capability ไม่ universal accessory leaderboard | ไม่ตีความว่าครบ accessories ที่ downstream อาจต้องการ |
 
 Full [mapping72 rows](protocol/NATIVE_LABEL_MAPPING_DRAFT.csv) ระบุทุก native class: GT23 values รวม unknown 22, CIHP20 semantic labels, Sapiens29 semantic labels มาตรฐาน mapping types EXACT / MERGE / APPROXIMATE / UNSUPPORTED ส่วน auxiliary Human query ID20 ของ M2FP/D2FP ไม่ใช่ semantic class หรือ CCIHP Bag20; num_classes21 ใน head ไม่ได้หมายถึง 21 semantic targets
 
 CCIHP5+7 → upper, 9+12 → lower,18+19 → footwear CIHP Dress6 ไม่สามารถ split เป็น dress-top/bottom โดยไม่มีข้อมูล จึงเป็น **RECOGNIZED_UNSUPPORTED** บน valid GT นับเป็นข้อผิดพลาด ไม่ ignore และไม่ส่งไป Background เพื่อซ่อนปัญหา Sapiens Apparel1 ใช้กติกาเดียวกัน Sapiens bare feet5/14 ไม่ใช่ shoes9/18; hands ต้อง merge กับ arms เมื่อ semantics รองรับ ไม่แปลงถุงมือเป็นมือหรือเอา Face_Neck ทั้งหมดไปถือ exact Face
+
+**Mapping schema revision3:** แยก native→concept (`proposed_concept`/`mapping_type`), view role (`C3_role`/`C7_role`), dispositionตามview (`C3_prediction_disposition`/`C7_prediction_disposition`), rankedcohorteligibility และ `semantic_equivalence_status` ไม่มี globalprediction_disposition ที่ consumerอาจตีความผิด `EXACT` หมายถึง one-to-one conceptprojection เท่านั้น **ไม่ใช่ certified pixel/annotationequivalence** ใช้มาตรฐานนี้กับทุกtaxonomy รวม CIHP/CCIHP/Sapiens; labelnameอย่างเดียวไม่เลื่อนevidence และไม่เพิ่ม originaltrainingheadergate
+
+CIHP10/13–17 เป็น contextในC3แต่targetในC7; Sapiens6Handเป็น contextในC3และtargetในC7diagnosticcohortได้ แต่ไม่ทำให้checkpointเข้าAPPLICATION_C7; Face_Neck/Torso/facialsubpartsเป็น approximate diagnosticตามตาราง การเก็บ semantic-evidenceแยกจากoperationไม่เปลี่ยนtarget/domainเพื่อช่วยโมเดลใด
 
 Primary projection ใช้ **native hard labels หลัง native postprocess → deterministic lookup** เหตุผลคือ QANet/RP-R-CNN ไม่ได้เก็บ calibrated full-frame probabilities แบบเดียวกับทุกตัว การ aggregate probabilities ก่อน argmax เปลี่ยน inference decision และไม่ใช่สิ่งเดียวกับ remap labels จึงไม่เลือกวิธีตาม VAL score ถ้าภายหลังทดลอง probability aggregation ต้องเป็น config/revision แยก ไม่อ้างว่าหาได้จาก hard-label artifacts เดิม
 
@@ -132,7 +136,7 @@ G_loc = จำนวน eligible native GT persons; TP = matched pairs; FN = G_l
 
 Unmatched GT มี q_i=0 Valid GT pixels ของคนอื่นเป็น background/context เมื่อประเมิน target คน i จึงลงโทษ neighbor contamination Shared void recipe เหมือนกันทุกระบบ ไม่ใช้ GT เพื่อ clip prediction Recognized unsupported native class บน GTtarget ลด intersection/เกิด FN ตามจริง คง rejection/error column ใน confusion ไม่ถูก ignore
 
-Matched-only person mIoU รายงานแยกเป็น conditional metric พร้อม matched/G_sem ไม่แทน primary ที่รวม missedpersons Primary quality ไม่ลงโทษ unmatchedFP ด้วยตัวหารใหม่ที่แต่งทีหลัง จึงต้องแสดง mask precision/recall/F1 และ FP พร้อมกันและใช้ใน selection/Pareto เฉพาะ task/route เดียวกัน
+Matched-only person mIoU รายงานแยกเป็น conditional metric พร้อม matched/G_sem ไม่แทน primary ที่รวม missedpersons Primary quality ไม่ลงโทษ unmatchedFP ด้วยตัวหารใหม่ที่แต่งทีหลัง จึงต้องแสดง mask precision/recall/F1 และ FP พร้อมกันและใช้ใน selection/Pareto เฉพาะ comparison_group/population/matching_thresholdเดียวกัน
 
 ### 6.3 Secondary และ support
 
@@ -142,11 +146,22 @@ Global per-class IoU สะสม TP_c/FP_c/FN_c ทั้ง population ก่�
 
 Boundary IoU เป็น supplementary tight-mask diagnostic เมื่อจับคู่ได้: inner boundary `B_d(M)=M−erode(M,d)`, `d=max(1,round(.02*sqrt(H²+W²)))`; boundary intersection/union บน original-image grid ตัด fixed GTvoid-neighborhood ออกเหมือนกันทั้งระบบเพื่อไม่สร้างขอบปลอม ต้องเรียกว่า **study void-aware adaptation**, ไม่ official CIHP/COCO Boundary AP และ matched-only ต้องแสดง coverage ไม่มี AP^p/AP^p_vol/PCP headline ในแผนนี้ เพราะ GT/taxonomy/confidence/metric ไม่ใช่ officialnativeCIHP หากเพิ่มภายหลังต้องพิสูจน์ definition และ parity แยก
 
+### 6.3a Empty outcomes และ normalization ที่ต้องไม่ปะปน
+
+- **NO_PERSON_OUTPUT:** validpacketไม่มีlocatableperson จึงmatchingเป็นmissedGTตามจริง ไม่ใช่executionfailure
+- **SEMANTIC_EMPTY_PERSON:** มีvalidnonemptyextentแต่ไม่มีmappedtarget เก็บpersonและmatchตามextent; q_i=0เมื่อGTมีtargetแต่ไม่มีtargetprediction ExtentF1อาจยัง1ได้
+- **RECOGNIZED_UNSUPPORTED:** knownDress/Apparelเป็นvalidprediction/rejection ไม่ใช่unknownexecution; targetFNตามfixeddomain ไม่ทำINCOMPLETEเอง
+- **RP-R-CNN:** extentมาจากnative nonBG union ถ้าnativeDress/body/contextยังมีforeground แม้mappedtargetsว่างก็เก็บextent ถ้าwell-formednativeplaneเป็นBGทั้งหมดให้บันทึกrawentryเป็นEMPTY_NATIVE_EXTENT, final locatablepersons0 ไม่สร้างsilhouette/bbox ไม่เรียกmalformedoutputเพื่อหลบคะแนน Missing/corruptplane/invalidIDยังcontractfailure เก็บraw/nativecountกับnormalizedpersoncountแยกกัน
+
+Executionstate,frameoutputdisposition,personsemanticsdisposition,labelprojectiondispositionและcontractvalidationเป็นคนละfieldlevel เช่นCOMPLETE_VALID+PERSON_RECORDS_PRESENT+SEMANTIC_EMPTY_PERSON+RECOGNIZED_UNSUPPORTEDอยู่ร่วมกันได้ ไม่รวมเป็นenumเดียว Native-instancecountของQANet/Sapiensเป็นN/A(unsupported)ไม่ใช่0;nativeparserไม่พบเป็น0ตามจริง
+
+BoundaryIoUเดิมเป็นsupplementarydiagnosticของmaskdetailบนmatchedcasesพร้อมcoverage denominators ไม่ใช่newselectioncriterion/officialAP หรือคะแนนแทนmissedpersons ภาพqualitativeคง16mainIDsแบบ2ต่อexistingtimingstratumใน [sample manifest](manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json) เลือกก่อนผลและใช้ภาพเดียวกันทุกระบบ ไม่แทนภาพfailedด้วยภาพที่สวยกว่า ไม่มีnewinference;ดูรายละเอียดในspec
+
 ### 6.4 Completeness
 
-STRICT_COMPLETE ต่อ configuration×population×view: ถ้า eligible input ใด FAILED/INVALID/INTERRUPTED/NOT_ATTEMPTED ให้ primarymetrics null และแถว INCOMPLETE อยู่ครบ ไม่ average เฉพาะ successfulimages เป็น main score หากล้มเหลวนอก main อย่างเดียว main อาจครบแต่ reference ยัง INCOMPLETE membership ไม่เปลี่ยนตามผล
+STRICT_COMPLETE ต่อ configuration×population×view: ถ้า required input ใด FAILED/INVALID/INTERRUPTED/NOT_ATTEMPTED ให้ primarymetrics null และแถว INCOMPLETE อยู่ครบ ไม่ average เฉพาะ successfulimages เป็น main score หากล้มเหลวนอก main อย่างเดียว main อาจครบแต่ reference ยัง INCOMPLETE membership ไม่เปลี่ยนตามผล
 
-Frame COMPLETE เมื่อทุก requiredROI ของ frame มี validpacket Valid empty output คือ success; load/OOM/invalidgeometry เป็น failure Shared data/contract errors หยุด dependentjobs Individualfailure คง diagnostics และทำงานอิสระต่อภายใต้ stopcaps Retry0 ไม่มี CPU/FP16 fallback เงียบ ๆ การ continuation ของ never-attemptedjobs ยังต้อง explicitdecision+frozenfingerprints ไม่มี permission ใหม่ในรอบนี้ ส่วน external-interruption recovery เป็นข้อเสนอแยกใน §12.5 ไม่รวม genuine OOM/model failure และไม่ overwrite partial/failed evidence
+Frame COMPLETE เมื่อทุก requiredROI ของ frame มี validpacket Valid empty output คือ success; load/OOM/invalidgeometry เป็น failure Shared data/contract errors หยุด dependentjobs Individualfailure คง diagnostics และทำงานอิสระต่อภายใต้ stopcaps Retry0 ไม่มี CPU/FP16 fallback เงียบ ๆ การ continuation ของ never-attemptedjobs ยังต้อง explicitdecision+frozenfingerprints ไม่มี permission ใหม่ในรอบนี้ ส่วน external-interruption recovery เป็นข้อเสนอแยกใน §12.5 ไม่รวม genuine OOM/model failure และไม่ overwrite partial/failed evidence;ข้อเสนอboundedpolicyในspecรอรับรองหนึ่งครั้งก่อนbatch
 
 ## 7. Runtime/VRAM proposal
 
@@ -172,13 +187,26 @@ Memory รายงาน per-process peakallocated/peakreservedMiB หลัง
 
 Eligibility: acceptedtask/support/configbindings, readableinput/domainexact, STRICT_COMPLETEquality, nativeprecisionprofile ที่ประกาศ ทุก candidate/failure คงในตาราง Runtimeprofile ต้อง complete จึงเข้าตาราง cost/Pareto; qualitycomplete แต่ timingfail ให้แสดง quality ได้พร้อม resource-unavailable ไม่ลบคนละระบบเพื่อให้ครบ
 
-ต่อ task และ route เดียวกัน เลือก bestobserved Q_person_sem_GT พร้อม per-class IoUs และ maskprecision/recall/F1 แยก C3allcandidates จาก C7compatiblecohort ไม่เลือก universalbody/clothingwinner ด้วย C3 เพียงอย่างเดียว รักษาระบบที่ non-dominated ใน **quality / instanceF1 / routelatency / routeVRAM** โดยไม่มี weightedscore หากขัดกันให้เก็บ suitableconfigurations หลายตัวตาม objectives ไม่ใช้ modelsize หรือ version ตัดสินแทนผล
+หน่วยเลือกคือ **pretrained checkpoint พร้อม application configuration** ไม่แยก causal effectของarchitecture/training/adapter กลุ่มที่เสนอชัดเจน:
+
+| Comparison group | Configurations | ใช้เลือกอะไร |
+|---|---:|---|
+| APPLICATION_C3 | application7:YOLO_ROI4+YOLO_ASSOCIATED_NATIVE_FRAME3 | Upper/lower/footwearภายใต้fixedtarget/domain/metricsเดียวกัน |
+| APPLICATION_C7 | applicationCIHP4 (QANet/M2FP/D2FP/RPR) | Body+clothingตามsupportedprojection |
+| NATIVE_REFERENCE_C3 / C7 | native3ต่อview | อ้างอิง/pairedกับapplicationcheckpointเดียวกัน;ไม่เป็นapplicationwinner |
+| SAPIENS_C7_DIAGNOSTIC | Sapiens3applicationoutputs | Approximatebodydiagnostics;ไม่จัดอันดับC7ร่วม |
+
+Routefamilyเป็นคุณสมบัติ/ข้อจำกัดconfiguration ไม่แบ่งapplicationleaderboardอัตโนมัติ CommoncontractคือfullRGB→original-gridpersons/extents/targetsemanticsที่เชื่อมfrozenYOLOopportunities, GTdomain/maskmatching/completenessเดียวกัน วิธีสร้างextentต่างกันได้และต้องแสดงผลเป็นsystemeffect Nativeassociationอาจส่งfinalpersonไม่ครบYOLOopportunities ต่างจากROIที่เก็บextentแม้semanticsว่าง แต่ยังถูกวัดด้วยGTcoverage/FP/semanticmetricเดียวกัน หากBพบcontract/domainต่างจริงต้องหยุด affectedcomparisonและรายงาน ไม่บังคับรวมคนละงาน
+
+**Semantic quality leader** = complete/eligibleconfigurationที่Q_person_sem_GTสูงสุดในgroup/population/matchingthresholdนั้น ต้องแสดงFP/F1ร่วม ไม่เรียกoverallwinnerเพราะQไม่ลงโทษunmatchedFPโดยตรง **Pareto alternatives** = non-dominatedconfigurationตามacceptedsemantic/instance/resourceobjectives **Selected configuration for next phase** = ผ่านacceptedmandatorycapabilitiesและselectionruleก่อนผล พร้อมcompletequality/runtimeevidence;ไม่ใช่คำแทนqualityleader
+
+ข้อเสนอtrade-off: maximizeQและextentF1, minimizeFP/route latency/routeVRAM (FPมีอยู่แล้ว ไม่สร้างmetricใหม่) เลือกmandatory-capable non-dominatedconfiguration(s)ไปphaseถัดไปได้หลายตัว ผู้ใช้ยังต้องรับprioritiesนี้ ถ้าต้องบังคับเลือกหนึ่งตัวให้กำหนดpriorityก่อนผล ไม่weightedscore/post-hocfloor Main4961/.50เป็นselectionstratum; reference5000/.75เป็นsensitivity ไม่เลือกpopulation/thresholdที่ให้ผลสวย ไม่รวมC3/C7 ไม่รับnative-referenceเป็นapplicationwinner
 
 Practical near-tie ใช้ **|point-estimate ΔQ|≤0.005** เท่านั้น (.5 percentage points บนสเกล0–1); paired95% interval ที่คร่อม0เป็น **uncertain direction** อีก flag หนึ่ง ไม่ทำให้เป็น practical tie อัตโนมัติ ตัวอย่าง ΔQ=.020, interval[-.010,.050] ยังไม่ near-tie แม้ทิศทางไม่แน่นอน; ΔQ=.004, interval[.001,.007] เป็น practical near-tie ได้แม้ interval ไม่คร่อม0 ทั้งหมดเป็นตัวอย่างเชิงนิยาม ไม่ใช่ผลรัน
 
 คง paired cluster bootstrap1,000resamples/seed20261021 ตาม knownexactdecodedRGBgroups เป็น uncertainty description ไม่ claim equivalence และไม่รับรอง independence ของ unknownnear-duplicates **ยกเลิก automatic criterion “no important per-class regression”** เพราะยังไม่มี class importance/floor/tolerance ที่รับรอง รายงานทุก per-class delta/support และ trade-off แทน ไม่สร้าง veto หลังเห็นผล หากต้องมี mandatory-class minima ต้องกำหนดก่อนดูคะแนนและ version rule โดยผู้ใช้
 
-Near-tie เทียบคู่ที่ระบุชัดหรือเทียบ bestobservedQ ใน task/route/populationเดียวกัน ไม่ใช่ transitiveequivalencegroup Near-tie เป็น flag ไม่สั่งเลือกตัวเร็วที่สุดแทน qualityleader อัตโนมัติ ใช้ Pareto ภายใน task/route เดียวกันและเก็บหลาย suitable configurations เมื่อ trade-offs ขัดกัน C3 ให้ garment shortlist; C7 ให้ body+clothing shortlist เฉพาะ compatible cohort ไม่รวมคะแนนข้าม view Sapiens body proxy ไม่ใช่ C7 eligibility การตัดสิน final suitability ต้องมี accepted mandatory body/accessory profile ก่อน ถ้ายังไม่มีให้สรุป conditional shortlists ไม่แต่ง universal winner/เกณฑ์ CCTV พร้อมใช้งาน
+Near-tie เทียบคู่ที่ระบุชัดหรือเทียบ bestobservedQ ใน comparison_group/population/matching_thresholdเดียวกัน ไม่ใช่ transitiveequivalencegroup Near-tie เป็น flag ไม่สั่งเลือกตัวเร็วที่สุดแทน qualityleader อัตโนมัติ ใช้ Pareto ภายใน comparison_group/population/matching_thresholdเดียวกันและเก็บหลาย suitable configurations เมื่อ trade-offs ขัดกัน C3 ให้ garment shortlist; C7 ให้ body+clothing shortlist เฉพาะ compatible cohort ไม่รวมคะแนนข้าม view Sapiens body proxy ไม่ใช่ C7 eligibility การตัดสิน final suitability ต้องมี accepted mandatory body/accessory profile ก่อน ถ้ายังไม่มีให้สรุป conditional shortlists ไม่แต่ง universal winner/เกณฑ์ CCTV พร้อมใช้งาน
 
 ## 9. Exact workload, resources และสิ่งที่ยังวัดไม่ได้
 
@@ -196,9 +224,9 @@ Near-tie เทียบคู่ที่ระบุชัดหรือเ�
 | Timed native-reference frame jobs | 576 =3×64×3 |
 | Timed ROI tasks | 4,200 =4×350×3; nestedcomponenttiming ไม่เพิ่ม passes |
 | Warmup | 150configuration-framejobs; freshYOLO105jobs; ROI120tasks; excludedfromtimedstats |
-| Ranked summary rows | 68 =(10C3+7C7configs)×2populations×2matchingthresholds; ไม่รวม diagnostic/per-classrows |
+| Summary rows | 68 =44 application+24 native-reference; (7appC3+4appC7+3nativeC3+3nativeC7)×2populations×2thresholds; ไม่รวม diagnostic/per-classrows |
 
-Readiness ใหม่จำเป็นเฉพาะ gaps: replayexistingTRAINpackets/scorercontexts ของ CIHP4 โดย CPU; ตรวจ actualSapiens ROIpath สูงสุด 3fixedTRAINimages ต่อ checkpoint (initial1 แล้ว 2 ถ้าผ่าน) =≤9frame-systemchecks และจำนวน ROIs ตาม frozenTRAINdetectoroutputs; ต้องอนุมัติ StageB แยก ห้ามรันเพื่อเติม report ใน A Jointresidency/device/fallbackchecks ต้องเป็น boundedTRAIN ก่อน VAL timing ไม่ต้อง smoke ทั้ง inventory ซ้ำ
+Bใช้หลักฐานเดิมก่อนและเพิ่มเฉพาะgapsตามตาราง§13 ข้อเสนอGPUceilingรวม **≤16 TRAIN parser-frame calls**: SapiensROI≤9เหมือนเดิม; conditionalCIHP4application≤4และnative-onlyprofiles≤3เฉพาะที่reuseproofปิดไม่ได้ เพดานเพิ่มเติม≤7มีเหตุผลเพื่อตรวจactualapplication/jointresidency/native-onlyprofile ไม่ใช่จัดกลุ่มleaderboardแล้วเพิ่มinference ทุกcallใช้ตรวจmap-back/storage/deviceด้วยกัน ไม่มีwarmup/repeatedtiming/full64-frameworkloadในB ต้องอนุมัติB/budgetแยกก่อนรัน ไม่ใช่สั่งให้ครบ16และไม่smokeinventoryซ้ำ
 
 Disk จาก existingmetadata: sumH×W=876,659,024; opportunity-weightedsumH×W=4,217,500,127 การเก็บ nativeunowned+finalowneduint8fullgrid ของ ROI 4 ระบบมี payload33,740,001,016bytes ก่อน headers/compression ไม่ใช่ totalstudyestimate Nativepredictedpersoncount/logit/caches ต่างกันยังไม่ทราบ ต้อง sampleartifactbytes ใน B แล้วคำนวณ bound ใหม่ ไม่สร้าง compressionfactor หรือ ETA เอง
 
@@ -210,23 +238,30 @@ Keepnativehardmasks/ownership/sourceIDs/scores/transforms และ finalpackets
 
 ## 10. Gates, readiness และ terminal states
 
-MUST_FIX ก่อน launch: acceptproposedroster/task/selectionrules; new GT/viewmaskcontexts; checkpoint-specificsupport; maskmatching และ rejection-awareconfusion จริง; native assemblyparity; ownership/map-back; Sapiens ROIintegration; nohiddenfallback; full route joint-residency/runtime boundaries; immutableledger/manifestreconciliation
+MUST_FIX ก่อน launch: bind selectedproposal/task/selectionrules; new GT/viewmaskcontexts; checkpoint-specificsupport; maskmatching และ rejection-awareconfusion จริง; native assemblyparity; ownership/map-back; Sapiens ROIintegration; nohiddenfallback; full route joint-residency/runtime boundaries; immutableledger/manifestreconciliation
 
-StageBtargetedfixtures: perfect/wrongclass, absent/zerounion, validempty/missing/duplicate, arbitraryIDswap versuswrongphysicalownership, overlappingpersons, C22/C0H+/C+H0, unexpectednativeID, Dress/Apparelrejection, crop/padding/rounding/fliprestore, bboxassociationversusmaskmatching, stage-rateundefined/skipped, OOM/internalretry/devicefallback, partialpacket/explicit-approved-recovery-reconciliation Sharedfixtures ต้อง exerciseactualimplementation ไม่ใช่ referencepseudo-code เท่านั้น
+StageBtargetedfixtures (expectedoutcomesในspec/E01–E14): perfect/wrongclass, absent/zerounion, validempty/missing/duplicate, arbitraryIDswap versuswrongphysicalownership, overlappingpersons, C22/C0H+/C+H0, unexpectednativeID, Dress/Apparelrejection, crop/padding/rounding/fliprestore, bboxassociationversusmaskmatching, stage-rateundefined/skipped, OOM/internalretry/devicefallback, partialpacket/explicit-approved-recovery-reconciliation Sharedfixtures ต้อง exerciseactualimplementation ไม่ใช่ referencepseudo-code เท่านั้น
 
 States ของงาน: PROPOSED → ACCEPTED_DESIGN → IMPLEMENTATION_READY → LAUNCH_READY → USER_APPROVED_EXECUTION → RUNNING → FINISHED_COMPLETE / FINISHED_WITH_INCOMPLETE_SYSTEMS / STOPPED_RESOURCE / INVALID_SHARED_DATA พร้อม per-configuration COMPLETE/FAILED/INVALID/NOT_ATTEMPTED ไม่ใช้ oneREADYflag แทนโหลดโมเดล/route/scoring/runtime ทั้งหมด
 
 A จบที่ REVIEWED_PROPOSAL จน userdecisions สำคัญปิด B จบที่ readiness+exactlaunchpackage; C เริ่มเฉพาะ explicitapprovedbatch; D วิเคราะห์ตาม frozenrules และ selection setdesignation ไม่กลับไป tune หรือเปิด CCTV/attributes เอง
 
-## 11. การตัดสินใจที่ต้องการจากผู้ใช้ — รวบรวมครั้งเดียว
+## 11. คำตัดสินคงเหลือ — ชุดเดียวก่อน B/freeze
 
-1. **Scope:** รับ 7checkpoints/10configurations ที่เสนอจากตารางเดิมหรือแก้รายชื่อ? แนะนำรับชุดนี้ ไม่มี inventoryvariants เพิ่มเติมและไม่ rerunCPI; เปลี่ยนรายการมีผลต่อ bindings/jobs ไม่ใช่ผลความแม่นที่วัดแล้ว
-2. **Tasks:** รับ C3 upper/lower/shoes ร่วมกัน และ C7 body/clothing เฉพาะ compatibleCIHPcohort พร้อม Sapiens bodydiagnostic แยกหรือไม่? แนะนำแบบนี้เพื่อไม่ทำ Face_Neck/Torso เป็น exact โดยไม่มีหลักฐาน Accessories ยัง supplementary; ถ้ามี namedmandatoryaccessory ให้ระบุตอนนี้เพราะเปลี่ยน eligibility จริง
-3. **Selection:** รับ relativequality+instancecoverage และ Pareto โดยไม่มี arbitraryabsolutefloor พร้อม near-tie0.005 และหลาย suitableconfigurations หรือมี minimumquality/FPS/VRAM ที่ต้องกำหนดก่อนผล? แนะนำ relativecomparison ก่อนเพราะยังไม่มี fieldvalidatedpasscriteria; ไม่เรียกว่า CCTVready
+Selectedproposal7checkpoints/7application/3native-referenceได้รับคำสั่งให้รักษาแล้ว IDsตรงregistryไม่สร้างalias;ไม่ถามscopeเดิมซ้ำ Valuesด้านล่าง **ยังเป็นข้อเสนอ** ไม่ใช่การรับรองแทนผู้ใช้ รายการmachine-readableอยู่ `pending_user_decisions` ในspec
 
-ตัวเลือกเหล่านี้เป็น designacceptance เท่านั้น ไม่อนุมัติ StageBnewGPUchecks หรือ StageCbenchmark ค่า engineering/timingdefaults ใน spec เป็นข้อเสนอที่ตรวจต่อใน B การอนุมัติ launch ต้องแยกจาก DESIGN_READY
+| ID / คำตัดสิน | ตัวเลือกแนะนำ | ทางเลือก / เหตุผล | ผลต่อeligibility/selection / สิ่งที่ยังไม่ทราบ |
+|---|---|---|---|
+| CAP-GARMENT | Upper clothing / Lower clothing / Footwear mandatory | หากลดขอบเขตต้องระบุชัด;ตรงhandoffที่ต้องการและไม่รวมupper/lower | application7คงC3fixedtaskพร้อมunsupportedpenalty;ไม่มีabsoluteIoUfloorที่รับรอง |
+| CAP-BODY | Face region / Exposed torso / Exposed arms / Exposed legs mandatoryสำหรับjointnext-phaseconfiguration | เลือกnamedsubsetmandatoryและที่เหลือsupplementaryได้;ไม่ตัดbodyทิ้งเพื่อให้ทุกmodelร่วมอันดับ | jointselectionใช้APPLICATION_C7 CIHP4; Sapiensbodymappingยังไม่ยืนยันpartitionจึงdiagnostic ไม่ใช่พิสูจน์ไม่มีbodycapability |
+| CAP-ACCESSORY | Headwear/gloves/eyewear/scarf/socks/hair supplementary; Bag/FaceMask/Othersเป็นsupport/rejectiondiagnostics ไม่เพิ่มhardrequirement | ถ้าต้องใช้accessoryใดจริงให้ระบุชื่อก่อนผล | namedmandatorysetอาจจำกัดcohortหรือไม่มีตัวที่supported;ไม่มีautomaticvetoจากคำว่าaccessoriesกว้างๆ |
+| SELECT-PREFERENCE | เลือกmandatory-capable non-dominatedapplicationconfiguration(s),แสดงqualityleader+FP/F1/resources;ยอมหลายตัว | ถ้าต้องตัวเดียวให้เลือกquality-first/resourcepriorityก่อนผล ไม่มีweightedscore | Qสูงสุดไม่ใช่overallwinner;C3/C7ไม่รวมกัน;ไม่เก็บdominatedmodelเพียงเดาว่าCCTVดีกว่า |
+| RECOVERY | verifiedexternal-only ≤1extraattempt/item (total2),≤1recoveryepoch/batch;model/OOMretry0 | เลือกไม่rerunexternalได้และreusecommittedonly | หลังรับpolicyและอนุมัติbatchจึงใช้ครั้งเดียวตลอดbatch ไม่ถามรายภาพ;unknown/conflict/capexhaustionหยุด ไม่มีpermissionรอบนี้ |
+| RESOURCES-B | คง200planning/80perstream/free50/24h;Bbudget≤16conditionalTRAINparsercalls/≤32ROItasks/≤7freshfrozenYOLOTRAINcallsและCPUrequirementsuite | เลือกCPU-onlyBก่อนหรือลดGPUbudgetได้;ใช้existingevidenceก่อน | ต้องวัดaggregate retained+shared+temporary+headroomจริง;เกินกรอบกลับมาขอresourcechangeก่อนlaunch ไม่มีtotal/ETAที่ยืนยัน |
 
-## 12. ปิดข้อชี้แจง Prompt A — Revision 2 (ยัง REVIEWED_PROPOSAL)
+คำตัดสินเหล่านี้ไม่อนุมัติbenchmark StageBต้องได้รับscopeauthorizationแยก และยังไม่DESIGN_READYตราบsemantic/task/selection decisionsที่เปลี่ยนความหมายคะแนนไม่ปิด ไม่ต้องรอCCTVannotationเพื่อเลือกจากCCIHP เมื่อevaluationพร้อมแล้วต้องใช้ผลคัดจริง ไม่tuneเพื่อช่วยตัวที่ต่ำ
+
+## 12. ปิดข้อชี้แจง Prompt A — Revision 3 (ยัง REVIEWED_PROPOSAL)
 
 รอบนี้แก้เฉพาะนิยาม/ข้อเสนอ ไม่ได้เริ่ม B, inference, smoke หรือ tests ใหม่และไม่แก้ active code/config ดูรายละเอียดพร้อม evidence/decision tables และตัวอย่างเชิงนิยามที่ [protocol review §H](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2) และ [draft specification](protocol/REVIEWED_SPECIFICATION.json) ซึ่งยังไม่ใช่ executable config
 
@@ -246,11 +281,11 @@ ExtentF1จึงวัด final-system extent detection/separation เทีย
 
 ### 12.3 Selection และ mandatory capabilities
 
-ใช้ §8 ที่แก้แล้ว Practicalmarginกับ uncertaintyintervalเป็นอิสระ ยกเลิก undefined automaticper-classregressionveto C3shortlistไม่รับรอง body/accessorycapability C7เลือก jointbody/clothingใน exact-compatiblecohort ส่วน bodyproxyไม่เข้าสรุป C7winnerร่วมกัน สิ่งที่ยังต้องตัดสินคือ namedmandatorybodyset (Face/Exposedtorso/Arms/Legs ทั้งหมดหรือบางส่วน), namedmandatoryaccessories (เช่น Bag/FaceMask) และถ้ามี quality/resourcefloor ให้กำหนดก่อนดูผล ไม่ปรับ requirementให้โมเดลที่ชอบผ่าน
+ใช้ §8 ที่แก้แล้ว Practicalmarginกับ uncertaintyintervalเป็นอิสระ ยกเลิก undefined automaticper-classregressionveto C3shortlistไม่รับรอง body/accessorycapability C7เลือก jointbody/clothingใน supported CIHP cohort ส่วน bodyproxyไม่เข้าสรุป C7winnerร่วมกัน สิ่งที่ยังต้องตัดสินคือ namedmandatorybodyset (Face/Exposedtorso/Arms/Legs ทั้งหมดหรือบางส่วน), namedmandatoryaccessories (เช่น Bag/FaceMask) และถ้ามี quality/resourcefloor ให้กำหนดก่อนดูผล ไม่ปรับ requirementให้โมเดลที่ชอบผ่าน
 
 ### 12.4 Execution × prediction disposition
 
-ใช้ decisiontable ใน spec/report: `COMPLETE_VALID + RECOGNIZED_UNSUPPORTED` นับrequiredexecutionสำเร็จและมีคะแนน rejection; `COMPLETE_VALID + VALID_EMPTY`สำเร็จแต่รับsemanticFN; out-of-catalog/invalidgeometryเป็น `INVALID_CONTRACT` และ runINCOMPLETE Genuinefailure/unfinishedworkทำให้STRICT_COMPLETEไม่ผ่าน ไม่ใช่ unknownmappingของ knownDress/Apparel
+ใช้ decisiontable ใน spec/report: `COMPLETE_VALID + RECOGNIZED_UNSUPPORTED` นับrequiredexecutionสำเร็จและมีคะแนน rejection; `COMPLETE_VALID + NO_PERSON_OUTPUT`กับ`SEMANTIC_EMPTY_PERSON`เป็นคนละกรณีตาม§6.3a;ทั้งคู่validแต่matching/semanticผลต่างกัน; out-of-catalog/invalidgeometryเป็น `INVALID_CONTRACT` และ runINCOMPLETE Genuinefailure/unfinishedworkทำให้STRICT_COMPLETEไม่ผ่าน ไม่ใช่ unknownmappingของ knownDress/Apparel
 
 `SKIPPED_BY_ROUTING` ไม่มี parsercallเมื่อYOLOopportunities0ตาม frozenpolicy: log skips/invocationdenominatorแยก, finalemptyroutepacketอาจเป็น pipelinecomplete และยังรับGTcoverageFN ไม่เรียกว่า parsercompleted/failure และไม่ลบGTจากdenominator
 
@@ -258,10 +293,37 @@ ExtentF1จึงวัด final-system extent detection/separation เทีย
 
 GenuineOOM/model exceptionเก็บ failedattemptและ retry0ตามเดิม Externalpreemption/reboot/signalต้องมีหลักฐานอิสระ สายเชื่อมต่อหลุดไม่พิสูจน์ว่า workerหยุด; unknowncauseห้ามเลื่อนเป็น externalเพื่อให้retryได้ SIGKILLอย่างเดียวไม่พอ โดยเฉพาะ kernelOOM/resource-limit terminationต้องลงสาเหตุจริงหรือUNKNOWN_CAUSE
 
-เสนอ attempt-localtemporary→flush/fsync→atomicrenameimmutablepacket→durableledgerreceipt ตรวจ fingerprintครบ input/weights/source/environment/recipe/config/GTdomain/population จึง reusecommittedoutputได้; completeorphanpacketตรวจ/reconcileโดยไม่ inferenceใหม่ Partialpacketเก็บแยกไม่ใช้เป็นprediction การ rerun interruptedin-flightที่ไม่มี committedpacketเป็น **extraattempt ต้อง explicitrecoveryapproval** ต่างจาก never-attemptedcontinuation เก็บ attemptID/parent/reason/timestamps/hashes/proof/decisionทุกครั้ง ไม่ลบ failureหรือเลือกoutputจากคะแนน
+เสนอ attempt-localtemporary→flush/fsync→atomicrenameimmutablepacket→durableledgerreceipt ตรวจ fingerprintครบ input/weights/source/environment/recipe/config/GTdomain/population จึง reusecommittedoutputได้; completeorphanpacketตรวจ/reconcileโดยไม่ inferenceใหม่ Partialpacketเก็บแยกไม่ใช้เป็นprediction การ rerun interruptedin-flightที่ไม่มี committedpacketเป็น **extraattempt ต้องยอมรับboundedrecoverypolicyและอนุมัติbatchก่อน** ต่างจาก never-attemptedcontinuation เก็บ attemptID/parent/reason/timestamps/hashes/proof/decisionทุกครั้ง ไม่ลบ failureหรือเลือกoutputจากคะแนน
 
 ถ้าภายหลังรับ externalrecoverypolicyแล้ว งานที่ทุก requiredinputมี validcommittedoutputอาจครบตามpopulationเดิมได้ พร้อมเผยattempt history แต่ genuine modelfailureยังINCOMPLETEตามzero-model-retry ไม่เปลี่ยนผลCPIเก่าหรืออนุญาตretryตอนนี้
 
 ### 12.6 Resource accounting
 
 ใช้ §9 และ WORKLOADstorageเป็นข้อเสนอเดียวกัน200planning/80perstream/free50guard ยังไม่มีglobalhardcap/totalestimate/ETA ขั้น B วัด bytes/frame/ROI/nativeperson, artifactreuseจริง, compressionจริง, logs/attempt/cachegrowth, peaktemporaryและatomicwriteheadroom รวมsharedallocation พร้อมjointresidency/cleanruntime ไม่เพิ่ม passes/jobs เพียงเพื่อให้ตัวเลข estimateดูครบ
+
+## 13. Stage B handoff — ระบุงานได้แล้ว แต่ยังไม่เริ่ม
+
+ใช้actualpacket→configuredscorer→serializedreporter ตรวจindependentexpectedoutcomesจากspec E01–E14 ไม่รับรองevaluatorด้วยtestcountหรือhelperlogicที่เขียนซ้ำเพียงอย่างเดียว Expectedcasesเป็นsetcounts/fractionsที่ระบุไว้ก่อนimplementation รอบนี้ยังไม่มีtestexecution/productionacceptance
+
+| ช่องว่างจริง | งานimplementation | วิธีตรวจรับ | ข้อมูล/ทรัพยากร | เพดาน / หยุดเมื่อ | หลักฐานส่งมอบ |
+|---|---|---|---|---|---|
+| B1 View mapping and fixed GT domains | Version view-specific mapping consumer/validator and GT projections; separate operation/evidence/cohort; no per-model void | All72 native values unique/roles-consistent; E10-12 via actual packet/scorer/reporter; accepted pixel-level domain bindings per image/view reconstruct source and G_sem | Existing native TRAIN packets, source GT read-only and metadata manifests; CPU | One targeted CPU requirement suite; reuse unchanged evidence; no full source audit; STOP: Unknown ID, changed source binding, inconsistent GT domain/support | Versioned mapping/context manifests; independent expected/observed report with paths/hashes |
+| B2 Mask matching and empty cases | Mask-IoU assignment0.50/0.75; distinguish no-person, semantic-empty, RPR empty union; fixed G_loc/G_sem | E01-08/E13 correct counts/denominators/null reasons at both thresholds; no empty-target-based person filter | Small declarative masks and saved TRAIN packets; CPU | Listed requirement cases, not old full suite; STOP: BBox used as evaluation mask, unknown geometry or source silhouette fabricated | Actual packet/scorer/reporter comparison and recipe hash |
+| B3 Missed/duplicate/ownership diagnostics | Preserve FP/FN, native/conditioning identity, pre/post-clip mapped contamination and collision; correct zero denominators | E04-09; ID rename invariant, wrong-owner semantics penalized, Q leader never reported alone as overall winner | Synthetic overlap/collision and saved TRAIN outputs; CPU | Existing fixtures reused when actual-code dependencies match; STOP: GT-guided repair, per-system ignore or wrong identity count | Reporter supports/counts and native/unowned/final packet provenance |
+| B4 Selected application/native route integration | Reuse shared native implementations via isolated adapters; bind exact checkpoint/config/coordinates; co-resident application and native-only profile; Sapiens ROI path | Load/infer/restore/normalize/export matches pinned native behavior; unsupported/empty distinction; accepted TRAIN packet -> scorer -> reporter; old native smoke alone insufficient | Existing readable TRAIN evidence sample only; frozen YOLO/pinned parser envs; TeslaT4 sequential | Sapiens<=3 TRAIN frames each=9; CIHP4 application<=1 each=4 only if reused evidence cannot close gap; native3 profile<=1 each=3 only if needed. Total parser frame-system calls<=16; reuse first-frame checks for storage/map-back/residency; no extra warmup/timing loops in B; STOP: OOM/model error, hidden fallback, binding drift or initial-frame failure; retain partial and stop affected dependent work, no new model retry | Per-route run manifests/output hashes, source settings/device traces and reporter output; no leaderboard on TRAIN |
+| B5 Hidden OOM retry and CPU fallback | Isolated compatibility controls/instrumentation around native retry wrappers; preserve source attribution and exact exception lifecycle | Fault-injected OOM/exception yields single failed attempt/no silent CPU/precision fallback; normal native postprocess parity | CPU mocks first; device assertions piggyback B4 TRAIN call | No fresh additional GPU frame calls beyond B4 ceiling; STOP: Any hidden second forward/fallback/device change | Attempt/device log and compatibility diff; upstream tree unchanged unless documented isolated patch accepted |
+| B6 Cross-system/image/view context isolation | Namespaced packet/config/view/population/scoring bindings; allow distinct native mappings per model, domain masks per image | E12/E13 with2 systems x2 images x2 views; order permutations unchanged, deliberate misbinding rejected | Synthetic/saved packets; CPU | One minimal integration grid, no full population parser execution; STOP: Global shared mask, mapping hash forced identical across taxonomies, wrong population denominator | Expected/observed scalar and artifact-binding matrix |
+| B7 Interruption/resume and atomic lifecycle | Attempt ledger, atomic packet commits, orphan/partial reconciliation and bounded recovery counters | E14 with fault injection only; provenance/counters immutable; no score-based output choice; process disconnect alone not retry proof | Temporary tiny packet files and simulated scheduler signals; CPU, no real model failure retries | Single targeted lifecycle suite; no GPU jobs; STOP: Conflicting cause/output, mismatched fingerprint, exhausted counter/resource cap | Attempt history/reconciliation decision log and expected outcome checks |
+| B8 Timing/memory/storage resource proof | Synchronize route/component clocks, device/process memory accounting and unique-byte ledger; artifact serialization/temporary peak measurement | TRAIN single-call trace demonstrates boundaries and joint residency; ledger-derived retained+shared+temporary+headroom estimate with limits, no sum of process peaks as route peak | Reuse B4 outputs/loads and existing64-frame workload metadata only; no64-frame timing run in B | No extra parser calls beyond16overall;freshfrozenYOLO≤7TRAINcalls;no64-frame/repeated-roundtiming;loadcostsseparate; STOP: Inadequate measured headroom, source fallback, unsupported residency or budget forecast beyond proposed envelope | Resource profile and aggregate storage calculation with observed ranges/unknowns; ETA stays null until adequate evidence |
+
+FixedTRAINreadinessinputs:เริ่ม`0000930`;Sapiensเพิ่มได้เฉพาะ`0021834`,`0001368`หลังinitialผ่าน เป็นIDsที่มีevidenceเดิม ไม่ใช้oldconfigเป็นpermissionใหม่ ExistingfrozenTRAINRUNระบุopportunities0000930=2,0021834=6,0001368=2;BbudgetROI≤32(3Sapiens×10+QANet2) และfreshfrozenYOLO≤7calls(0000930หนึ่งครั้งต่อapplicationprofileเฉพาะproofgap)เพื่อjoint-routeclock/memoryไม่ใช้cache-readแทนdetectorinference frame/ROIcountsไม่ใช่จำนวนnativeTTA/neuralforwardcalls ถ้าsourceinput/geometryไม่พร้อมให้หยุดdependentcheck ไม่เลือกVALแทน
+
+**แยกdependency:** หลังอนุมัติB งานCPUmechanics B2/B3/B5/B6 และdraftschema B1/atomicstructure B7เดินได้โดยไม่รอmandatoryprofile แต่ finalacceptedprojections/selectionreporter/enabledexternalrecoveryต้องรอdecisionที่เกี่ยวข้อง GPUทุกcallรอBauthorizationและacceptedroute/scoringpolicy ไม่ใช้nativepilotแทนapplicationproof
+
+**เกณฑ์จบ B:** ข้อกำหนดที่เกี่ยวข้องทุกข้อมีactual-codeartifactเทียบindependentexpectedผลตรง; map/domain/identity/reporterbindingsตรงrevision; evidenceเก่าที่reuseมีdependencyตรง;conditionalTRAINroutesที่ใช้ผ่านตามbudgetและnohiddenfallback; timingclocks/residency+aggregatecapacityreportมีจริง; decisions/config/population/jobs/hashesreconciledแล้ว จึงเสนอlaunchpackageเฉพาะระบบพร้อม ยังไม่เริ่มVAL/fulltiming/fullbenchmarkโดยอัตโนมัติ
+
+## 14. Freeze / batch / analysis governance
+
+ก่อนfreezeแก้ตามrequirements/evidence/TRAINreadinessได้โดยบันทึกเหตุผลและversion หลังfreezeห้ามปรับprotocolจากpartialVALscores ถ้าพบbugที่กระทบความถูกต้องให้หยุดaffecteddependencies เก็บattempt/outputหลักฐาน ระบุทุกระบบที่กระทบและเสนอconsistentrevision/re-evaluation ไม่ซ่อมเฉพาะภาพ/ระบบที่ทำให้คะแนนดี
+
+เมื่อbatchได้รับอนุมัติ ให้เดินจนterminalตามstop/recoverypolicy ระหว่างรันดูhealth/correctness/completenessเท่านั้น ไม่วนตีอันดับเพื่อเปลี่ยนการทดลอง วิเคราะห์selectionรวมหลังbatchปิด ชื่อsemanticqualityleader/Paretoalternatives/selectednextphaseมีความหมายแยกกันตาม§8 “ดีที่สุดในผู้สมัคร”ไม่เท่ากับ“แม่นพอCCTVจริง” แต่domain-transferข้อจำกัดก็ไม่ใช่เหตุเลื่อนpublicselectionไปเรื่อยๆหรือเก็บโมเดลด้อยกว่าจากการคาดเดา

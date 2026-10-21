@@ -47,3 +47,23 @@ The authoritative current design remains PLAN.md; draft protocol values in proto
 | A-DISK | 200GiB planning envelope, not global cap/total estimate;80GiB per checkpoint stream;50GiB free guard | REVIEWED_PROPOSAL; B aggregate peak measurement/capacity allocation required before launch |
 
 These entries revise only current proposal semantics, not historical CPI policies/results. This user instruction authorizes documentation/Git synchronization only, with no new tests, Prompt B, inference or active execution code/config changes.
+
+## Current specification closure — Revision 3
+
+Earlier SETUP/Prompt A rows above retain historical state; the current table here supersedes their stale roster-question/wait-for-Prompt-A interpretation only.
+
+| ID | Current status | Source / effect |
+|---|---|---|
+| A-SELECTED-SCOPE | USER_CONFIRMED_SELECTED_PROPOSAL_SCOPE | Current user §1 explicitly preserves exact7checkpoints/7application/3references. AllIDs match registry; no renewed scope question, no launch/execution acceptance |
+| A-SELECTION-GOAL | ACCEPTED_EXPLICIT_USER_DIRECTION | Current clarification: CCIHP must drive real checkpoint/config selection; no wait for CCTV GT or speculative exception preserving dominated candidates |
+| A-GROUP-CONTRACT | SPECIFIED_FOR_DESIGN_REVIEW | ApplicationC3 all7 and C7 supportedCIHP4 compare full configurations across routefamilies under same task/domain/metrics; native3 references separate |
+| A-PROJECTION-EVIDENCE | SPECIFIED_FOR_DESIGN_REVIEW | View-specific disposition; mapping_typeEXACT means one-to-oneconceptoperation, separate evidencelevel for everytaxonomy; no global disposition or header gate |
+| CAP-GARMENT / CAP-BODY / CAP-ACCESSORY | USER_DECISION_PENDING | Recommendations and alternatives in PLAN§11/spec.pending_user_decisions; none is automatically mandatory from this doc |
+| SELECT-PREFERENCE | USER_DECISION_PENDING | Semanticqualityleader distinct from Pareto and selectednextphase; proposed capability-eligible Pareto multi-selection, no arbitrary absolute floors |
+| RECOVERY | PROPOSED_NOT_ACCEPTED |1extraexternalattempt/item,1epoch/batch; model/OOMretry0; no currentexecutionpermission |
+| RESOURCES-B | USER_DECISION_PENDING |200planning/80stream/free50/24h;separateBbudget≤16conditionalTRAINcalls;aggregateestimate required |
+| A-CURRENT-BOUNDARY | ACCEPTED_EXPLICIT_USER_BOUNDARY | Documentation/schema consistency only; no StageB implementation, inference, scorer/execution code/config change or benchmark |
+
+Decisionacceptance is not source evidence or executionreadiness. Pendingdecision authority is one consolidated table in PLAN§11 and its machine-readable spec counterpart, not multiple new questionnaires.
+
+Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,≤32external ROI tasks and≤7freshfrozenYOLO TRAIN calls (one initial0000930 per co-resident application profile, only if exact proof missing). ExistingfrozenTRAINopportunity metadata gives2/6/2 for0000930/0021834/0001368;read-only counts, no new model execution. No nominalquality/timingjob increase.

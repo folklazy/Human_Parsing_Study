@@ -60,3 +60,7 @@ Current reports/tables/specificationsมีเนื้อหาจริงแ�
 ### Targeted Prompt A clarification (21 October 2026)
 
 Current [PLAN revision2](PLAN.md) and [review §H](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2) resolve Dress/Apparel scoring versus execution, route-specific extent claims, selection margin versus uncertainty, interruption recovery proposal and storage accounting. Still REVIEWED_PROPOSAL; no new tests, B execution, inference or benchmark authorization. Draft JSON/CSV values are not active execution configurations.
+
+### Current revision3 — specification closure / B handoff
+
+[PLAN§11](PLAN.md#11-คำตัดสินคงเหลือ--ชุดเดียวก่อน-bfreeze) is the single remaining decision table; [PLAN§13](PLAN.md#13-stage-b-handoff--ระบุงานได้แล้ว-แต่ยังไม่เริ่ม) is the bounded implementation/acceptance handoff. Selectedseven/ten scope is confirmed as proposal, not launchauthorization. ApplicationC3 includes allseven across routefamilies, C7 includes supportedCIHPfour; native references separate. Mapping/evidence/view/eligibility and emptyoutcomes are explicit. Still REVIEWED_PROPOSAL, no Bimplementation/inference. [Revision3review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#i-specification-closure-และ-stage-b-handoff--revision-3) · [qualitative sample](manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json).

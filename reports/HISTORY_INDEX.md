@@ -73,3 +73,7 @@ Current [authoritative PLAN](../Human_Parsing_Benchmark/PLAN.md) and [protocol r
 ## 2026-10-21 — proposal-clarification-20261021T063557842659Z
 
 Current proposal revision2: [PLAN](../Human_Parsing_Benchmark/PLAN.md) and [review §H](../Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2). Six targeted documentation clarifications only; REVIEWED_PROPOSAL, no B/tests/inference authorization. Prior revision1 remains available in Git history and immutable prior work-unit records. Closed CPI results and active execution configs are unchanged.
+
+## 2026-10-21 — specification-handoff-20261021T092521331823Z
+
+[PLANrevision3](../Human_Parsing_Benchmark/PLAN.md), [review§I](../Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#i-specification-closure-และ-stage-b-handoff--revision-3): four scoped specification closures, consolidated pending decisions and bounded StageB handoff. Selected7/10 preserved;34 bounded document consistency checks are not production execution acceptance. No new inference/scorer implementation or historical results changed.

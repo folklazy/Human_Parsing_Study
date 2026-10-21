@@ -1,41 +1,36 @@
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-21T06:35:57.842659+00:00 (UTC)
+Updated: 2026-10-21T09:25:21.331823+00:00 (UTC)
 
-**A_REVIEW_COMPLETE · REVIEWED_PROPOSAL · DESIGN_DECISIONS_PENDING**  
-SETUP_COMPLETE remains recorded. Not DESIGN_READY, not LAUNCH_READY; Stage B implementation/new GPU checks and Stage C benchmark are not authorized.
+**SPECIFICATION_CLARIFIED · REVIEWED_PROPOSAL · USER_DECISIONS_PENDING**
 
-## Completed in Prompt A
+Documentation closure is complete for this scoped work unit. Not DESIGN_READY / IMPLEMENTATION_READY / LAUNCH_READY. Stage B has not started and is not authorized by this review.
 
-- Inspected current Git/workspace, exact source/config/metadata and actual prior smoke manifests; public baseline `8b1b813baf2a010f3140cd7ed12ea3554f04e33d`, main, correct existing remote, clean before this work unit.
-- Reused native feasibility, checkpoint fingerprints, CCIHP audits/support sidecars, immutable CPI results and frozen YOLO ledger. No model/dataset payload rehash, no full tests or audits repeated.
-- Proposed seven checkpoints / ten configurations with exact identities, prior-roster diff, route/ownership contracts and data/task fairness review.
-- Derived new C3/C7 denominators from existing native support metadata; main G_sem17,085/17,390, reference17,199/17,504. No GT/source annotations changed or new accepted pixel contexts claimed.
-- Created explicit mapping72 rows, requirements13 rows and risk table17 issues; selected deterministic64-frame timing draft with350opportunities before parser scores. Jobs/resources are proposals, not execution authorization.
-- Recorded user policy allowing CCIHP VAL checkpoint selection for the new plan, while forbidding mapping/threshold/preprocessing/retry tuning and independent-confirmation claims.
+## Current baseline and selected scope
 
-## Current evidence limits / MUST_FIX
+Public base `df1c4a7a546cd5ad3122916228adaaa7fad3585b`, main, clean before work; canonical planning and public copy inspected separately. User explicitly preserves selectedproposal7checkpoints/7application/3native-referenceconfigurations; exactIDs match registry and no alias/newcheckpoint introduced. Selectedscope is not executionacceptance.
 
-New mask-matching/rejection-aware scorer and GT contexts are not implemented. Legacy scorer uses bbox matching; empty-semantic helpers drop persons; hidden OOM retry/fallback must be controlled. Sapiens native full-frame pilot passed but YOLO ROI route/new ownership integration and joint-residency profile are not verified. Native part/human assembly parity and resource/storage bounds require targeted readiness, not all-model smoke reruns.
+## Closed in revision3
 
-Sapiens all three remain active in this proposal; no stale RESTRICTED flag used as roster gate. Body semantics Face_Neck/Torso remain approximate, so C3 shared primary and C7 cohort eligibility are separate. No claim of an all-task winner from garment score alone.
+- Explicit C3/C7 mapping dispositions, cohorteligibility and semantic evidence separated; EXACT is conceptprojection operation, not certified pixel equivalence.
+- No-person versus semantic-empty extent versus recognizedunsupported versus invalid separated; RPRnativeemptyunion has explicit rawdiagnostic/no-locatable-person policy with no fabricated mask.
+- ApplicationC3 all7 / ApplicationC7 CIHP4 compare full configurations across routefamilies; native3 references remain separate. Semanticleader, Pareto alternatives and selectednextphase have distinct rules.
+- Consolidated six-decision table and bounded externalrecovery proposal; model/OOMretries0. Resource200/80/free50/24h meanings preserved without totalfit/ETA claim.
+- StageB eight-task implementation/acceptance/dependency/cap handoff and14 independent expectedcase specifications; no tests executed. ProposedGPUceiling≤16TRAINcalls with evidence-reuse prerequisite; requires separate approval.
+- Fixed16-image qualitativepanel from existingtimingcases; no predictions inspected to select images, no newinference workloads.
 
-## Preserved historical state
+## Verified here, limited scope
 
-Old CPI: FINISHED_WITH_INCOMPLETE_SYSTEMS / STRICT_COMPLETE / primary null. Old roster19 and two-QANet proposal remain historical scope, not launch scope. Roadmap20Oct remains WIP. YOLO/source GT/checkpoints/environments unchanged; PPSS/CCTV/color/hybrid untouched. Existing saved-output review web is not stopped/resumed by this review.
+Selected config/priorRUN metadata fingerprints checked against registry and all7 match; weights exist and sizes match recorded inventory, no payload rehash/authenticity claim. Bounded schema/role/group/workload/timing/source-binding checks are documentationconsistency only; see current work-unit consistencyrecord. PriorGPUsmokes are not claimed as currentapplication/scorer/runtime acceptance.
 
-## Next action
+## Remaining decisions and MUST_FIX
 
-Read [PLAN](PLAN.md) and [protocol review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md), then decide once on proposed roster/configurations, target/cohort/accessory scope, and relative selection/Pareto constraints. These are design decisions only. After acceptance obtain Stage B scope authorization; run no inference or benchmark automatically.
+Read only one table: [PLAN§11](PLAN.md#11-คำตัดสินคงเหลือ--ชุดเดียวก่อน-bfreeze), mirrored in spec.pending_user_decisions: garment/body/accessory mandatoryprofile, trade-off selectionpreference, boundedexternalrecovery, resources/Bbudget. Do not ask roster/CPI policies again. After decisions and separateBauthorization, implement/verify actual-code domain/maskscorer/empty/ownership/nativeparity/fallback/route/residency/lifecycle gaps in PLAN§13. Until these close no DESIGN_READY/launchclaim.
 
-Work unit: `design-review-20261021T033935094789Z`. Inputs: [evidence](runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json). Draft values: [specification](protocol/REVIEWED_SPECIFICATION.json). Publication uses explicit selected path/hash sync; containing commit and remote status are resolved from Git and local post-push receipt, not self-embedded in this file.
+## Preserved
 
-## Targeted A clarification — Revision 2
+FrozenYOLO and historicalCPI FINISHED_WITH_INCOMPLETE_SYSTEMS/STRICT_COMPLETE/nullscores unchanged. SourceGT, officialsplits, main4961/reference5000, checkpoints/environments and priorworkunit evidence preserved. No newmodel/datasetdownloads, inference, benchmark, training, CCTV, PPSS, attributes or hybrid work.
 
-Closed six proposal ambiguities: known Dress/Apparel unsupported disposition vs execution failure; per-route extent provenance and semantic/ownership claim limits; independent practical-margin/uncertainty flags and removal of undefined per-class veto; execution/disposition decision table; proposed external-interruption recovery with no new retry authority; planning200GiB versus per-stream80GiB/free50GiB accounting.
+Next: user answers consolidateddecision table; then separately authorizes bounded B. Current work unit `specification-handoff-20261021T092521331823Z`; current draft [spec](protocol/REVIEWED_SPECIFICATION.json), [review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md). Git identity/sync recorded by publication manifest and post-push receipt, not self-embedded.
 
-No new tests, inference, smoke, active execution source/config changes, new dataset scans or downloads. Analytical scoring examples are definitions, not executed fixtures. Same seven proposed checkpoints / ten configurations and workload/sample memberships. Existing prior test/evidence records retain their original scope.
-
-Still REVIEWED_PROPOSAL / DESIGN_DECISIONS_PENDING: named mandatory body/accessory profile and scoped design/recovery proposals need acceptance; no automatic universal winner. Stage B remains unauthorized. Next: review PLAN §8/§12 and report §H, settle remaining design choices, then separately authorize targeted B if desired.
-
-Current work unit: `proposal-clarification-20261021T063557842659Z`. Canonical/public copies remain separate; sync by selected path/hash manifest. Git commit identity belongs to Git/publication receipt, not this file.
+Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,≤32external ROI tasks and≤7freshfrozenYOLO TRAIN calls (one initial0000930 per co-resident application profile, only if exact proof missing). ExistingfrozenTRAINopportunity metadata gives2/6/2 for0000930/0021834/0001368;read-only counts, no new model execution. No nominalquality/timingjob increase.

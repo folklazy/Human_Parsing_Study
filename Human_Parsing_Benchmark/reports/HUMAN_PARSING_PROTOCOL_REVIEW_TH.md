@@ -1,6 +1,6 @@
 # Human Parsing — Prompt A: evidence and protocol review
 
-**REVIEWED_PROPOSAL · Revision 2 · 21 ตุลาคม 2026 UTC** ไม่ใช่ DESIGN_READY/LAUNCH_READY และไม่ implement execution pipeline แผน authoritative คือ [PLAN.md](../PLAN.md) ใช้ชื่อเดิมจาก SETUP ต่อ ไม่สร้าง design report ซ้ำอีกชื่อ
+**REVIEWED_PROPOSAL · Revision 3 · 21 ตุลาคม 2026 UTC** ไม่ใช่ DESIGN_READY/LAUNCH_READY และไม่ implement execution pipeline แผน authoritative คือ [PLAN.md](../PLAN.md) ใช้ชื่อเดิมจาก SETUP ต่อ ไม่สร้าง design report ซ้ำอีกชื่อ
 
 ## A. สถานะจริงที่ตรวจแล้ว
 
@@ -53,7 +53,7 @@ Current Prompt A **explicitly supersedes no-VAL-selection สำหรับ che
 
 Metadata reference 5,000frames มี 24,062YOLOopportunities; main 4,961 มี 23,877 รักษา sameinference reusemain/reference Qualityproposed35,000parserframe-systemjobs, native15,000, ROI96,248tasks โดย ROI 4checkpoint ไม่ใช่จำนวน forwardcalls เพราะ TTA/ROIenginesubcalls
 
-Timingdraft เลือก 64mainimages แบบ 8strata×8 ด้วย SHA256seed20261021 ไม่มี parserperformance เกี่ยวข้อง มี 350opportunities Proposed3rounds: application1,344framejobs พร้อม freshYOLO1,344; native-reference 576framejobs; ROI 4,200tasks; warmup 150framejobs/YOLO105/ROI120 แยกออก Rankedsummaryrows68 เฉพาะ C3 และ compatibleC7 ไม่ใช่จำนวนโมเดล ดู [workload](../manifests/WORKLOAD_PROPOSAL.json)
+Timingdraft เลือก 64mainimages แบบ 8strata×8 ด้วย SHA256seed20261021 ไม่มี parserperformance เกี่ยวข้อง มี 350opportunities Proposed3rounds: application1,344framejobs พร้อม freshYOLO1,344; native-reference 576framejobs; ROI 4,200tasks; warmup 150framejobs/YOLO105/ROI120 แยกออก Summaryrows68 (application44/native-reference24) เฉพาะ C3 และ compatibleC7 ไม่ใช่จำนวนโมเดล ดู [workload](../manifests/WORKLOAD_PROPOSAL.json)
 
 ROIunowned+owneduint8fullgrid4models payload33,740,001,016bytes ยังไม่รวม nativeoutputcounts/metadata/logs/compression Nativepredictedpersoncounts และ actualforward/runtime/peakmemory ยังไม่มี evidence สำหรับ workload นี้ ไม่ออก ETA Reserve200GiB เป็น planning capacity envelope ไม่ใช่ totalestimate/globalcap; free50GiB/per-stream80GiB/24hcheckpoint เป็น proposedguards/caps ขณะ initialreview free~564.2GBdecimalเป็น historicalsnapshot ดู §H.6 สำหรับการนับและ readiness gap
 
@@ -69,7 +69,7 @@ ROIunowned+owneduint8fullgrid4models payload33,740,001,016bytes ยังไม�
 
 ## G. Decisions / next action
 
-ยังไม่ DESIGN_READY เพราะข้อเสนอ scope/view/selection ต้องให้ผู้ใช้รับรอง มีคำถาม 3 ชุดใน PLAN: (1) รับ 7checkpoints/10configs? (2) รับ C3shared+C7compatible/Sapiens bodydiagnostic และ accessoryscope? (3) รับ relativequality/coverage/Pareto+near-tie หรือมี absoluteconstraints? ไม่ขอห้านโยบาย CPI เดิมซ้ำและไม่ขอ header ที่ปิดไปแล้ว
+Currentrevision3: selectedscope7/10ได้รับคำสั่งให้คงไว้แล้ว ไม่ถามrosterซ้ำ;ยังไม่DESIGN_READYเพราะmandatorycapability/selection/recovery/resource decisionsค้าง ใช้คำตัดสินชุดเดียวในPLAN§11/spec.pending_user_decisions ไม่ขอห้านโยบายCPIหรือheaderที่ปิดไปแล้วอีก
 
 เมื่อรับ design แล้วจึงจัด StageB implementation/readiness เฉพาะ gaps ตาม scope ที่อนุมัติ และเสนอ exactlaunchpackage ให้อนุมัติ benchmark แยก ไม่มี newinference/smoke/download/activeexecutioncodeorconfigchange ใน A
 
@@ -135,7 +135,7 @@ Practicalnear-tie: **abs(pointΔQ)≤.005** แยกจากintervaldirectionf
 | .020 | YES | NO | ผลต่างobservedใหญ่แต่directionยังไม่ชัด ไม่ให้costชนะอัตโนมัติในชื่อtie |
 | .020 | NO | NO | ผลต่างobservedใหญ่และintervalไม่คร่อม0 |
 
-ยกเลิก **automatic “no important per-class regression” criterion** ที่ยังไม่กำหนดimportance/threshold รายงานperclassdelta/supportครบ ไม่มีpost-hocveto ถ้าต้องมีmandatoryclassfloor/toleranceต้องรับก่อนดูVALและversionselectionrule Near-tieระบุคู่หรือเทียบbestobservedQภายในtask/route/populationเดียวกัน ไม่ถือเป็นtransitiveequivalencegroup Near-tieไม่บังคับเลือกตัวถูกสุด; qualityleaderและnon-dominatedalternativesยังรายงาน ไม่weightedscore
+ยกเลิก **automatic “no important per-class regression” criterion** ที่ยังไม่กำหนดimportance/threshold รายงานperclassdelta/supportครบ ไม่มีpost-hocveto ถ้าต้องมีmandatoryclassfloor/toleranceต้องรับก่อนดูVALและversionselectionrule Near-tieระบุคู่หรือเทียบbestobservedQภายในcomparison_group/population/matching_thresholdเดียวกัน ไม่ถือเป็นtransitiveequivalencegroup Near-tieไม่บังคับเลือกตัวถูกสุด; qualityleaderและnon-dominatedalternativesยังรายงาน ไม่weightedscore
 
 C3ให้garmentshortlistทุกproposedcheckpointแต่ไม่รับรองbody/accessory C7ให้jointbody/clothingselectionเฉพาะcompatiblecohort ไม่poolคะแนนสองview Sapiensbodyproxyเป็นdiagnostic ถ้า **ทุกexposedbodytargetเป็นmandatory** Sapiensยังไม่eligibleสำหรับexactjointtaskจากbodyproxyเพียงอย่างเดียว ไม่เท่ากับnativebodymodelไม่ดี
 
@@ -147,7 +147,7 @@ C3ให้garmentshortlistทุกproposedcheckpointแต่ไม่รั�
 |---|---|---|---|
 | COMPLETE_VALID | MAPPED_TARGET/CONTEXT | YES | Normalfixed-domainmetrics |
 | COMPLETE_VALID | RECOGNIZED_UNSUPPORTED (Dress/Apparel) | YES | Rejectioncolumn/targetFN; **ไม่ทำrunINCOMPLETEเพียงเพราะmapไม่ได้** |
-| COMPLETE_VALID | VALID_EMPTY | YES | Scoreaccordingretainedextents/semanticFN ไม่เรียกfailureเพื่อหลบคะแนน |
+| COMPLETE_VALID | NO_PERSON_OUTPUT / SEMANTIC_EMPTY_PERSON (แยกกัน) | YES | Zero personsรับmissedGT;nonemptyextentคงmatchingแต่q=0เมื่อไม่มีtarget;ไม่เรียกfailureเพื่อหลบคะแนน |
 | SKIPPED_BY_ROUTING | ValidfinalemptypacketตามfrozenzeroYOLOpolicy | PipelineYES;parserinvocationN/A | Logskipsแยก ไม่creditparsercompleted; GTยังอยู่coverage |
 | INVALID_CONTRACT | Out-of-catalogID/invalidgeometry/missingrequiredfields | NO | Primarynull/INCOMPLETE; ไม่downgradeเป็นknownunsupported |
 | FAILED_MODEL_OOM/EXCEPTION | Absent/uncommittedpartial | NO | Primarynull/INCOMPLETEและretainedfailure |
@@ -183,3 +183,38 @@ Fingerprintsคง input/IDs, checkpoint/source/adapter/scorerrecipe, environmen
 Bต้องวัดnativepersoncounts/serializedbytesต่อframe/ROI/person, native/finalactualreuse, observedcompression, metadata/log/attempt/cachegrowth, temporary+atomicwritepeak/sharedallocation และjointmemory/cleanroutetime จึงคำนวณaggregateestimateพร้อมข้อจำกัดและcapacitydecision ไม่สร้างtotal/ETAตอนนี้ Timinglatencyไม่รวมdiskwriteไม่ได้แปลว่าdiskwriteไม่อยู่storagebudget Cases64/350opportunities/seed/weights/jobsยังเดิมทุกตัว ไม่มีnewtimingjobs/recoveryjobsอนุมัติในA
 
 **สถานะหลังรอบนี้:** นิยามหกประเด็นถูกเขียนลงPLAN/spec/tablesแล้ว ยังมีuserdesignacceptance/mandatorycapabilities/externalrecoverypolicyและBimplementationevidenceที่รออยู่ สถานะ **REVIEWED_PROPOSAL** ไม่รับรองproductionevaluatorหรือrunreadinessจากเอกสาร
+
+## I. Specification closure และ Stage B handoff — Revision 3
+
+Baselineคือpubliccommit `df1c4a7a546cd5ad3122916228adaaa7fad3585b`, branchmain/clean;canonical/publicplanningcopiesตรงกันก่อนแก้เฉพาะไฟล์ที่เลือก ไม่resetหรือแก้activeexecutioncode/config ไม่อ่านผลaccuracyเก่าเพื่อเลือกmodel ไม่ค้นdataset/modelใหม่ รายการcheckpointตรงuserIDsทั้ง7 ไม่มีaliasหรือเปลี่ยนweights RegistryRPR_CIHPเป็นResNet50ตามเดิม
+
+| ข้อสังเกต | HEADเดิม / สิ่งที่แก้ | หลักฐานปัจจุบัน / ยังไม่ใช่อะไร |
+|---|---|---|
+| View-specificdisposition | ยังมีglobalMAPPED_CONTEXTแม้C7roleTARGETจริง;ลบglobalfield แยกC3/C7disposition/cohort/evidence | Mapping72rows+spec.mapping_schema; CIHP10/13–17เป็นcontextC3/targetC7, SapiensTARGETในdiagnosticไม่ทำC7rank |
+| Emptyoutput | spec.metrics.valid_empty_predictionยังเหมารวมว่าmissedpersonจริง;แทนด้วย4แยกกรณีและRPRraw-emptynormalization | spec.metrics.empty_output_cases/E04/E07/E08;มีextentไม่mappedtargetยังmatchได้ ไม่สร้างbboxsilhouette |
+| Comparisongroups | same-task/route wordingยังอาจแบ่งapplicationอัตโนมัติ;แก้เป็นAPPLICATION_C3(7)/APPLICATION_C7(4),native3×2viewsแยก | spec.comparison_groups+routes columns;35,000quality/96,248ROIและtiming/warmupไม่เพิ่ม Nativeviewreuseเดิม |
+| EXACT/evidence | operationกับevidenceยังไม่แยกจริง;EXACTนิยามone-to-oneconceptเท่านั้น เพิ่มsemantic_equivalence_statusทุกtaxonomy | Sourcecategorymetadata/registryRUNbindingsเดิม;ไม่claimpixelpartitionequivalenceของSapiensหรือCIHPจากชื่อ ไม่เพิ่มoriginalheadergate |
+
+Selectedscopeผู้ใช้ยืนยันแล้วจึงไม่ถามrosterเดิมซ้ำ Usergoalclarificationรับรองให้CCIHPเป็นselectionจริง ไม่ต้องรอCCTVและไม่เก็บdominatedmodelsด้วยเหตุเดาว่าfieldดีกว่า แต่ไม่ยกเว้นtaxonomy/conditioning/executionerrorsออกจากคะแนน วิเคราะห์สาเหตุเฉพาะที่มีevidenceไม่เดาจากQอย่างเดียว
+
+**Selectionterms:** semanticqualityleaderคือQสูงสุดในeligiblecompletegroup;Qไม่penalizeunmatchedFPโดยตรงจึงต้องแสดงFP/F1 ไม่เรียกoverallwinner Paretoและselectednextphaseใช้mandatorycapability/priorityที่รับก่อนผล Group/population/thresholdระบุชัด main4961/.50เป็นหลัก reference/.75sensitivityไม่เลือกเงื่อนไขตามคะแนน ไม่มีC3+C7poolingหรือnative-referenceapplicationwinner Margin.005เดิมและCIflagเป็นอิสระ
+
+**Detail/qualitative:** pertargetIoU+support,coverage/FN/FP,pre/postclipcontamination,rejectionและmatched-onlyBoundaryIoUเดิมครอบคลุมมิติที่เสนอ;boundaryไม่เป็นnewhardcriterionและต้องแสดงmatched/G_sem/G_loccoverage Commonqualitative16IDsจาก8timingstrataเลือกก่อนผลใช้ภาพเดียวกันทุกระบบ [manifest](../manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json) ไม่มีinferenceเพิ่มและไม่เปลี่ยนผู้ชนะตามภาพรู้สึกดี
+
+**คำตัดสินคงเหลือชุดเดียว:** PLAN§11/spec.pending_user_decisions มีCAP-GARMENT,CAP-BODY,CAP-ACCESSORY,SELECT-PREFERENCE,RECOVERY,RESOURCES-B พร้อมrecommended/alternative/effect/unknown ไม่มีabsolutepassfloorใหม่ Bodymandatoryทั้ง4เป็นข้อเสนอ ไม่ใช่acceptanceแทนผู้ใช้;bodymappingยังไม่พอพิสูจน์ไม่เท่ากับโมเดลไม่มีbodycapability Accessoriesไม่เพิ่มhardrequirementเอง
+
+FixedTRAINreadinessIDsเสนอเริ่ม0000930แล้วSapiensเพิ่ม0021834/0001368เท่านั้นตามevidenceเดิม;Bต้องbindROIcountsก่อนdispatch ไม่ใช่unlimitedforwardbudget และไม่รันในรอบนี้
+
+**Boundedrecoveryproposal:** model/OOMretry0;verifiedexternalเพิ่มได้สูงสุด1attempt/item(total2),batchrecoveryepoch1 ภายหลังรับpolicyและอนุมัติbatch;rawsignal/SSHdisconnectไม่พอ unknown/conflictหยุด Reuseatomiccommittedoutput/reconcilecompleteorphanโดยไม่compute เก็บpartial/attempts ไม่เลือกผลดีสุด รวมเวลา/พื้นที่ทุกattemptไม่resetbudget Timinginterruptedroundinvalidและreplacementจำกัดไม่ใช้แก้roundช้า ข้อเสนอนี้ยังไม่อนุมัติretryตอนนี้
+
+**Bที่ส่งต่อได้:** PLAN§13มี8งานจริงพร้อมimplementation/acceptance/data/cap/stop/evidence/dependencies;specมี14expectedcasesแบบdeclarative (E01–E14) ต้องผ่านactualpacket→scorer→reporter ไม่ใช่แค่helpertests/testcount ยังไม่รันtestsในรอบนี้ ProposedTRAINceiling≤16calls (Sapiens9เดิม+CIHPapplication4/native-only3เฉพาะproofgap);แยกจากnominalbenchmarkjobsและต้องอนุมัติB/resourcebudgetแยก ใช้forwardเดียวปิดroute/map-back/residency/storage ไม่มี64frametiming/repeatedwarmupในB ใช้existingproofก่อนและไม่ต้องรันครบcap
+
+**Resource:**200planning/80stream/free50/24hเดิม ไม่รับรองtotalfit ต้องledgerretained+shared+temporary+headroomจากBจริง เกินกรอบกลับไปresourceapproval ไม่เพิ่มprecisionfallback/resolutionchangesเพื่อให้ผ่าน ไม่มีtotalstorage/ETAแต่งขึ้น
+
+**Riskeffects:** riskmatrixเดิม17issuesปรับeffectต่อeligibility/selectionให้ตรงMUST_FIXก่อนlaunch,CONTROL_AND_REPORTและRESIDUAL_LIMITATION ExposureUNKNOWNไม่ใช่NOและไม่claimarchitecturecausality ห้ามsemanticincompatibilityทำคนละtaskแล้วหลบด้วยfootnote Bต้องพิสูจน์commoncontract;otherwiseหยุดaffectedcomparison
+
+**Governance:**ก่อนfreezeแก้ตามrequirement/evidence/TRAINพร้อมversion หลังfreezeห้ามpartialVALtuning ถ้าbugหยุดaffectedscopeพร้อมหลักฐานและconsistentcorrectionproposal ทุกbatchอนุมัติรันจนterminalแล้ววิเคราะห์qualityรวมครั้งเดียว ดูhealth/completenessระหว่างรันเท่านั้น
+
+สถานะ: **DOCUMENTATION_CLARIFIED / REVIEWED_PROPOSAL / DECISIONS_PENDING**;ไม่DESIGN_READYเพราะmandatory/selection/recovery/resourceacceptanceและBverificationยังค้าง หลักฐานconsistencyเป็นdocumentationacceptanceเท่านั้น ไม่executionreadiness ผลตรวจอยู่ `runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json`
+
+Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,≤32external ROI tasks and≤7freshfrozenYOLO TRAIN calls (one initial0000930 per co-resident application profile, only if exact proof missing). ExistingfrozenTRAINopportunity metadata gives2/6/2 for0000930/0021834/0001368;read-only counts, no new model execution. No nominalquality/timingjob increase.

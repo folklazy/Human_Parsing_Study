@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-21T09:35:08.604784+00:00",
+  "work_unit": "specification-handoff-20261021T092521331823Z",
+  "base_commit": "df1c4a7a546cd5ad3122916228adaaa7fad3585b",
+  "canonical_workspace": "Human_Parsing_Benchmark",
+  "public_copy": "Human_Parsing_Benchmark",
+  "scope": "SPECIFICATION_CLARIFICATION_AND_STAGE_B_HANDOFF_DOCUMENTATION_ONLY",
+  "state": "REVIEWED_PROPOSAL",
+  "document_closure": "DOCUMENTATION_CLARIFIED_DECISIONS_PENDING",
+  "source_implementation_or_active_execution_configs_changed": false,
+  "historical_results_changed": false,
+  "inference_started": false,
+  "new_production_tests_executed": false,
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "bytes": 72663,
+      "source_sha256": "cc7bf4f49f59ecedb164ec3319bba6380c9d0b18ea63134e75528779877516d1",
+      "public_sha256": "cc7bf4f49f59ecedb164ec3319bba6380c9d0b18ea63134e75528779877516d1",
+      "before_public_sha256": "75a82a7445dce2b1ccffd0db0945aaa613439ad5d02f89fd1c34a1cde16cd97f",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 3942,
+      "source_sha256": "ac3e5d01ade33bf0ca4a0cf0b87eb43e2d9be85b57d2a35eef07fb48d04e11b0",
+      "public_sha256": "ac3e5d01ade33bf0ca4a0cf0b87eb43e2d9be85b57d2a35eef07fb48d04e11b0",
+      "before_public_sha256": "0d004cafbfa7967818980862181b61fdb72dcf632cf4e6cfcdba6193ebfb60d5",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 10098,
+      "source_sha256": "f94143f11fe1812a51f766bac55073996abea9fe010ecb99aa07d485804554f7",
+      "public_sha256": "f94143f11fe1812a51f766bac55073996abea9fe010ecb99aa07d485804554f7",
+      "before_public_sha256": "02368614e08135d50d53d457655b59470dbd23f07e96c5ca5f90d80a85dc0f92",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 9691,
+      "source_sha256": "24f85341b605418a6c9f755f82744982ddf7ee2f4775650c3140c53d66c242ac",
+      "public_sha256": "24f85341b605418a6c9f755f82744982ddf7ee2f4775650c3140c53d66c242ac",
+      "before_public_sha256": "1b920cb1152a7d68ed7fececb466352b86596ffde6da79de77b5b3e4b5b84d5d",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "public_path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "bytes": 10504,
+      "source_sha256": "89e10bf3a3847b6ad2de1c2629989dcffdb89477ea87ce31fa5546b77fd1d4e7",
+      "public_sha256": "89e10bf3a3847b6ad2de1c2629989dcffdb89477ea87ce31fa5546b77fd1d4e7",
+      "before_public_sha256": "28fd2a50210bc14caa2af1cabf7e22cd8b76653e0ca36881af59c24fa7fb80fd",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
+      "bytes": 42118,
+      "source_sha256": "6f1be22808b999824c3865edbf0a2e54c93b3c6c06c9708d204e8a51b3067dc1",
+      "public_sha256": "6f1be22808b999824c3865edbf0a2e54c93b3c6c06c9708d204e8a51b3067dc1",
+      "before_public_sha256": "34a3108843ce599792e1bc574e4bc5ebe4cc866e7b926270dc6b2bad3fe652b7",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json",
+      "public_path": "Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json",
+      "bytes": 65585,
+      "source_sha256": "09266ce77c7840d2bbfed543dc3699c35f71e4c00bdeff27c382b304fdf151d2",
+      "public_sha256": "09266ce77c7840d2bbfed543dc3699c35f71e4c00bdeff27c382b304fdf151d2",
+      "before_public_sha256": "b609541e986b6a9c25386a3e3badf84cd7be8d3eb66052e6155026d67f233604",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+      "public_path": "Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+      "bytes": 59597,
+      "source_sha256": "8d72c9e8ac78e62d3e08e6b64b2b74d14858e9b34070a3c5f38e403ce6b894c0",
+      "public_sha256": "8d72c9e8ac78e62d3e08e6b64b2b74d14858e9b34070a3c5f38e403ce6b894c0",
+      "before_public_sha256": "2926d0022350b36fcabecb0e3ed2204a430edd847b6511d0675fe6b3eaa764fe",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/registry/REQUIREMENTS_TARGETS.csv",
+      "public_path": "Human_Parsing_Benchmark/registry/REQUIREMENTS_TARGETS.csv",
+      "bytes": 5576,
+      "source_sha256": "728c18e7dceaab3286a0a3334a56a6c8a4903cedeec58f5948529de426e04ede",
+      "public_sha256": "728c18e7dceaab3286a0a3334a56a6c8a4903cedeec58f5948529de426e04ede",
+      "before_public_sha256": "a7d6deb4b3e85c85baf66c3e1bb5c42c6955785ed19361b40f355c18f8f02bef",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/registry/ROUTES_PROPOSED.csv",
+      "public_path": "Human_Parsing_Benchmark/registry/ROUTES_PROPOSED.csv",
+      "bytes": 8582,
+      "source_sha256": "0322ae5d5560ca2506829880d82b5806b9472c653ceb44a558689acefa2b6b0d",
+      "public_sha256": "0322ae5d5560ca2506829880d82b5806b9472c653ceb44a558689acefa2b6b0d",
+      "before_public_sha256": "21d20f6185138d8ba013530f66c20ab1af0a7b94670b0ad33f476e09ef02cdae",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv",
+      "public_path": "Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv",
+      "bytes": 8068,
+      "source_sha256": "b8ddc2b984384f4cb7d7b61484cea9073ffdf7ca50cd53fa7266ccd9b61d4e55",
+      "public_sha256": "b8ddc2b984384f4cb7d7b61484cea9073ffdf7ca50cd53fa7266ccd9b61d4e55",
+      "before_public_sha256": "707981db19a79470a0ba162a1e744896bdb788cbb71f36392704806fe21ae6d6",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json",
+      "bytes": 9576,
+      "source_sha256": "c022bdafc55ab26958546859dabc0512b2bb292924986b5946764d0cf87d8a73",
+      "public_sha256": "c022bdafc55ab26958546859dabc0512b2bb292924986b5946764d0cf87d8a73",
+      "before_public_sha256": "405bc4eeb54556d15751c9bff03506ee972477f26e2f94844e6f1b951b7f6225",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json",
+      "bytes": 26748,
+      "source_sha256": "de28324db7555dcbad7179f9f9f22da5cdb3bbad386358c8ace92fa544d4122a",
+      "public_sha256": "de28324db7555dcbad7179f9f9f22da5cdb3bbad386358c8ace92fa544d4122a",
+      "before_public_sha256": "5cc61b735b6c264a0eaaa279d1f67bd3ce293bffe47f9ed74007ade158846f19",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json",
+      "bytes": 5466,
+      "source_sha256": "80333352c598860a213b07c296966658d2ad0eb5a5acc4c720a4b2d9ec3733a6",
+      "public_sha256": "80333352c598860a213b07c296966658d2ad0eb5a5acc4c720a4b2d9ec3733a6",
+      "before_public_sha256": null,
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/registry/CHECKPOINT_ROUTE_REVIEW.csv",
+      "public_path": "Human_Parsing_Benchmark/registry/CHECKPOINT_ROUTE_REVIEW.csv",
+      "bytes": 10084,
+      "source_sha256": "4a705afc7fd7c1a49c8fd41d251e6f26f5a8eec33d60191e7e0108c9dfe75030",
+      "public_sha256": "4a705afc7fd7c1a49c8fd41d251e6f26f5a8eec33d60191e7e0108c9dfe75030",
+      "before_public_sha256": "cc6e0a29e1a4e9c0a160b9316e9789d57fe44c62dd317f57be4e88ea7c4ee93f",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json",
+      "public_path": "Human_Parsing_Benchmark/runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json",
+      "bytes": 20187,
+      "source_sha256": "dd0b20b8790758f2c5f8ce5d92688a9554441a0422e6e8ba5b41c645e5c00d0c",
+      "public_sha256": "dd0b20b8790758f2c5f8ce5d92688a9554441a0422e6e8ba5b41c645e5c00d0c",
+      "before_public_sha256": null,
+      "transformation": "BYTE_IDENTICAL_COPY"
+    }
+  ],
+  "navigation": [
+    {
+      "public_path": "README.md",
+      "before_sha256": "09b67fe6c1860380ddde076faf2e9e9d5d6550e9f9849b5dce7b4ecbcb5fde82",
+      "after_sha256": "1e643f7acf66b3787c194e325ca04840f892b69ef98e57978a76470264292bf9",
+      "change": "Current navigation/proposal status only; historical results untouched"
+    },
+    {
+      "public_path": "reports/HISTORY_INDEX.md",
+      "before_sha256": "2ef0238a4c22c10273ec4990cfd63922e0e5e838e68ee14bfe44c7541768d840",
+      "after_sha256": "a72f04bd9e82cb70d940b5d56d6cd9c0a328e2de52979b8cc70a85d30a9291e2",
+      "change": "Append current work unit; preserve historical index"
+    }
+  ],
+  "automatic_sync": false,
+  "post_work_not_launch_commit": true,
+  "verification_scope": "Bounded document/schema/manifest identities, unchanged inference workloads and selected-path publication inspection only; not production evaluator/model readiness"
+}

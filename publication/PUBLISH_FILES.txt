@@ -19,6 +19,7 @@ Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md
 Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json
 Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json
 Human_Parsing_Benchmark/manifests/POPULATION_DOMAIN_PROPOSAL.json
+Human_Parsing_Benchmark/manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json
 Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json
 Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json
 Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv
@@ -34,6 +35,7 @@ Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
 Human_Parsing_Benchmark/runs/proposal-clarification-20261021T063557842659Z/EDITORIAL_RECORD.json
+Human_Parsing_Benchmark/runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json
 LICENSE.md
@@ -573,6 +575,7 @@ publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_CREATION.json
 publication/REPOSITORY_VALIDATION.json
 publication/SOURCE_COPY_MANIFEST.json
+publication/SPECIFICATION_HANDOFF_20261021T092521331823Z.json
 publication/VALIDATION_SCOPE.md
 publication/WIP_SYNC_20261021.json
 publication/WIP_VALIDATION_20261021.json
