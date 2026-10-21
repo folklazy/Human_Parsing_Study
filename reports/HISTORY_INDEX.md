@@ -69,3 +69,7 @@ Current GitHub publication authority: [publication state](../publication/PUBLICA
 ## Prompt A reviewed proposal — 21 October 2026
 
 Current [authoritative PLAN](../Human_Parsing_Benchmark/PLAN.md) and [protocol review](../Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md) propose seven checkpoints/ten configurations with explicit task/route/mapping/resource limits. The user now permits CCIHP VAL checkpoint selection for the new study, while prohibiting VAL mapping/settings tuning. Historical CPI policy/results are unchanged. State: REVIEWED_PROPOSAL, not DESIGN_READY/LAUNCH_READY; pending design decisions do not authorize execution.
+
+## 2026-10-21 — proposal-clarification-20261021T063557842659Z
+
+Current proposal revision2: [PLAN](../Human_Parsing_Benchmark/PLAN.md) and [review §H](../Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2). Six targeted documentation clarifications only; REVIEWED_PROPOSAL, no B/tests/inference authorization. Prior revision1 remains available in Git history and immutable prior work-unit records. Closed CPI results and active execution configs are unchanged.

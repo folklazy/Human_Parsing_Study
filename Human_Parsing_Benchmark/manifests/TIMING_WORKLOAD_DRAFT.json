@@ -862,5 +862,14 @@
   "authorization": {
     "inference": false,
     "benchmark": false
+  },
+  "revision": 2,
+  "clarification_work_unit": "proposal-clarification-20261021T063557842659Z",
+  "resource_accounting_clarification": {
+    "reservation_and_caps": "WORKLOAD_PROPOSAL.json#/storage;200 GiB planning envelope, not measured total/global cap;80 GiB per checkpoint stream and free50 GiB guard proposed",
+    "included_timed_stages": "RAM RGB to route output: preprocessing/transfers/parser/internal detector/YOLO where applicable/IPC/association/map-back",
+    "excluded_from_latency_but_counted_in_disk": "prediction serialization, retained outputs, detailed logs, runtime traces, attempt evidence and atomic temporary files; I/O outside latency is not outside storage accounting",
+    "B_to_measure": "Actual joint residency, clock boundaries, bytes per output/ROI/native person and peak temporary disk; no new measurements in this review",
+    "recovery": "No timing retry permission; invalid/interrupted round evidence retained. Any replacement round needs predeclared acceptance and explicit execution/recovery authority, not performance-selected reruns."
   }
 }

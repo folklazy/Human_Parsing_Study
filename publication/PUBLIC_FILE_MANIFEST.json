@@ -50,33 +50,33 @@
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 42397,
-      "sha256": "d6eaa80f536c3f2f49697a83a41a0b645f21c914ad1e594a989a1a36350beb65"
+      "bytes": 53593,
+      "sha256": "75a82a7445dce2b1ccffd0db0945aaa613439ad5d02f89fd1c34a1cde16cd97f"
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 8232,
-      "sha256": "f47c06e6085f632d5f88f20c5917c98347d0ee15a5287477bb2b9256d667fc91"
+      "bytes": 8791,
+      "sha256": "1b920cb1152a7d68ed7fececb466352b86596ffde6da79de77b5b3e4b5b84d5d"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 3365,
-      "sha256": "c6215983f566eed681d9d333ad55ccbbae8acbc7c0783496f177aeb2c3396d85"
+      "bytes": 4704,
+      "sha256": "0d004cafbfa7967818980862181b61fdb72dcf632cf4e6cfcdba6193ebfb60d5"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 5586,
-      "sha256": "af3fc58120e639baea5a70d69609608692111afdbd0768e7ca3f69a17ced6da5"
+      "bytes": 7664,
+      "sha256": "02368614e08135d50d53d457655b59470dbd23f07e96c5ca5f90d80a85dc0f92"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
-      "bytes": 4069,
-      "sha256": "f424445cae64286a8f51b11af73e399f744e63b5351c5c13bbce2ab532b35cfd"
+      "bytes": 5124,
+      "sha256": "52c7aa433c2166e6f5008e9251511e566f1ffaab532eb188bd2eb9c27aa652b5"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
-      "bytes": 6350,
-      "sha256": "3226e2479f2cc6a1e85882923085f55d5e95bb33ebc0fe38c6b3b25272424a4e"
+      "bytes": 7955,
+      "sha256": "28fd2a50210bc14caa2af1cabf7e22cd8b76653e0ca36881af59c24fa7fb80fd"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md",
@@ -110,23 +110,23 @@
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json",
-      "bytes": 25253,
-      "sha256": "d8e467efdc59f4a1c2c6eeee0b1afef53c6362eac8fef10b679ae088405df7f5"
+      "bytes": 26330,
+      "sha256": "5cc61b735b6c264a0eaaa279d1f67bd3ce293bffe47f9ed74007ade158846f19"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json",
-      "bytes": 3669,
-      "sha256": "292f42105e98d043b61cb97d39e19ea2f8ebcb0c3774f0aa2c9e93959fa1c347"
+      "bytes": 6440,
+      "sha256": "405bc4eeb54556d15751c9bff03506ee972477f26e2f94844e6f1b951b7f6225"
     },
     {
       "path": "Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
-      "bytes": 20781,
-      "sha256": "1d16735b5a65e875a96bab3f7cd600f038fd357dd7130d3c009494e66ea917c2"
+      "bytes": 38853,
+      "sha256": "2926d0022350b36fcabecb0e3ed2204a430edd847b6511d0675fe6b3eaa764fe"
     },
     {
       "path": "Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json",
-      "bytes": 9188,
-      "sha256": "1d31756367a2cc0fe48d45cb514e782d647c5c034c456f86bcd3b43855ae4c07"
+      "bytes": 25804,
+      "sha256": "b609541e986b6a9c25386a3e3badf84cd7be8d3eb66052e6155026d67f233604"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
@@ -140,13 +140,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv",
-      "bytes": 7085,
-      "sha256": "a53a68b51b3b9f5d5f3b510afc61bb7f45ea44c90160166d3449b6248d8626b3"
+      "bytes": 7352,
+      "sha256": "707981db19a79470a0ba162a1e744896bdb788cbb71f36392704806fe21ae6d6"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/REQUIREMENTS_TARGETS.csv",
-      "bytes": 2981,
-      "sha256": "5788d1f07f25e39d049b9ed9eb00415e0ce160716d8622ef41c1732c95b87e11"
+      "bytes": 4928,
+      "sha256": "a7d6deb4b3e85c85baf66c3e1bb5c42c6955785ed19361b40f355c18f8f02bef"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/ROSTER_DIFF.csv",
@@ -155,13 +155,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/registry/ROUTES_PROPOSED.csv",
-      "bytes": 3815,
-      "sha256": "4e6897c6ff091d9ef1402195ed797366279fddc6569cbd602d0028bc72507d09"
+      "bytes": 7165,
+      "sha256": "21d20f6185138d8ba013530f66c20ab1af0a7b94670b0ad33f476e09ef02cdae"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
-      "bytes": 14968,
-      "sha256": "36a7010612a6a697ac6cc1a9ab030ee6bfe23e0c65c5c65413e42f342e43edb9"
+      "bytes": 33377,
+      "sha256": "34a3108843ce599792e1bc574e4bc5ebe4cc866e7b926270dc6b2bad3fe652b7"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
@@ -177,6 +177,11 @@
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json",
       "bytes": 1204,
       "sha256": "010c01949c0d82458a14946e38a56c45b8d4fab0641df0e78d66de7d730e57ce"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/proposal-clarification-20261021T063557842659Z/EDITORIAL_RECORD.json",
+      "bytes": 5521,
+      "sha256": "a34134f0a89e3c439b1f905c515f40498ed273d04289da1ba1cfb7d5fc5fd2b5"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json",
@@ -200,8 +205,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6184,
-      "sha256": "33c8f5faa8c0ae288e9b66b2a168ed6ee490e890e3975905224ac92563b9bedc"
+      "bytes": 6602,
+      "sha256": "09b67fe6c1860380ddde076faf2e9e9d5d6550e9f9849b5dce7b4ecbcb5fde82"
     },
     {
       "path": "REFERENCES.md",
@@ -2809,6 +2814,11 @@
       "sha256": "77e13d90475dab6131568232c974b7b592d6b9a413bec04f5dfa28985efb2f1e"
     },
     {
+      "path": "publication/PROPOSAL_CLARIFICATION_20261021T063557842659Z.json",
+      "bytes": 9346,
+      "sha256": "6981a74927017f543bcfe017b8d11059520ed0fa69d1b7634bbc8b6f11bb8001"
+    },
+    {
       "path": "publication/PUBLICATION_APPROVAL.json",
       "bytes": 732,
       "sha256": "83210ea57eef36cc3bccae3abf93813fd43fd647d74b98da4ab7bfa912e2a35a"
@@ -3090,8 +3100,8 @@
     },
     {
       "path": "reports/HISTORY_INDEX.md",
-      "bytes": 9346,
-      "sha256": "c732a6872a4275b965eadb8f0e0f7bf8039cdf64483a1c1ba79baef2a651809e"
+      "bytes": 9911,
+      "sha256": "2ef0238a4c22c10273ec4990cfd63922e0e5e838e68ee14bfe44c7541768d840"
     },
     {
       "path": "reports/LICENSE_ELIGIBILITY_REASSESSMENT.md",
@@ -4269,6 +4279,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-21T03:59:56.963629+00:00",
-  "revision_reason": "Prompt A reviewed design proposal; no implementation/inference/old results changes"
+  "updated_utc": "2026-10-21T07:50:24.779253+00:00",
+  "revision_reason": "Six targeted Prompt A proposal clarifications; no new tests/inference or active execution changes"
 }

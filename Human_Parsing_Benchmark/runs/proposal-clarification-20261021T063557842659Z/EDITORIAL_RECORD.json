@@ -1,0 +1,154 @@
+{
+  "schema_version": "editorial-record-1.0",
+  "work_unit": "proposal-clarification-20261021T063557842659Z",
+  "created_utc": "2026-10-21T06:35:57.842659+00:00",
+  "status": "REVIEWED_PROPOSAL",
+  "public_base_commit": "d85c69d4469df525370a120e6718e24217b57ced",
+  "scope": "SIX_TARGETED_DOCUMENTATION_CLARIFICATIONS_ONLY",
+  "prior_evidence": "runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
+  "before_files": {
+    "PLAN.md": {
+      "sha256": "d6eaa80f536c3f2f49697a83a41a0b645f21c914ad1e594a989a1a36350beb65",
+      "bytes": 42397
+    },
+    "STATUS.md": {
+      "sha256": "c6215983f566eed681d9d333ad55ccbbae8acbc7c0783496f177aeb2c3396d85",
+      "bytes": 3365
+    },
+    "WORK_LOG.md": {
+      "sha256": "af3fc58120e639baea5a70d69609608692111afdbd0768e7ca3f69a17ced6da5",
+      "bytes": 5586
+    },
+    "README.md": {
+      "sha256": "f47c06e6085f632d5f88f20c5917c98347d0ee15a5287477bb2b9256d667fc91",
+      "bytes": 8232
+    },
+    "docs/DECISIONS.md": {
+      "sha256": "3226e2479f2cc6a1e85882923085f55d5e95bb33ebc0fe38c6b3b25272424a4e",
+      "bytes": 6350
+    },
+    "docs/ARTIFACT_STORAGE.md": {
+      "sha256": "f424445cae64286a8f51b11af73e399f744e63b5351c5c13bbce2ab532b35cfd",
+      "bytes": 4069
+    },
+    "reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md": {
+      "sha256": "36a7010612a6a697ac6cc1a9ab030ee6bfe23e0c65c5c65413e42f342e43edb9",
+      "bytes": 14968
+    },
+    "protocol/REVIEWED_SPECIFICATION.json": {
+      "sha256": "1d31756367a2cc0fe48d45cb514e782d647c5c034c456f86bcd3b43855ae4c07",
+      "bytes": 9188
+    },
+    "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv": {
+      "sha256": "1d16735b5a65e875a96bab3f7cd600f038fd357dd7130d3c009494e66ea917c2",
+      "bytes": 20781
+    },
+    "registry/REQUIREMENTS_TARGETS.csv": {
+      "sha256": "5788d1f07f25e39d049b9ed9eb00415e0ce160716d8622ef41c1732c95b87e11",
+      "bytes": 2981
+    },
+    "registry/ROUTES_PROPOSED.csv": {
+      "sha256": "4e6897c6ff091d9ef1402195ed797366279fddc6569cbd602d0028bc72507d09",
+      "bytes": 3815
+    },
+    "registry/FAIRNESS_RISKS.csv": {
+      "sha256": "a53a68b51b3b9f5d5f3b510afc61bb7f45ea44c90160166d3449b6248d8626b3",
+      "bytes": 7085
+    },
+    "manifests/WORKLOAD_PROPOSAL.json": {
+      "sha256": "292f42105e98d043b61cb97d39e19ea2f8ebcb0c3774f0aa2c9e93959fa1c347",
+      "bytes": 3669
+    },
+    "manifests/TIMING_WORKLOAD_DRAFT.json": {
+      "sha256": "d8e467efdc59f4a1c2c6eeee0b1afef53c6362eac8fef10b679ae088405df7f5",
+      "bytes": 25253
+    }
+  },
+  "sources_read": [
+    {
+      "workspace_relative": "third_party/human_parsing/M2FP/m2fp/data/datasets/register_cihp_parsing.py",
+      "bytes": 3105,
+      "sha256": "6e1fd778a3cda04994f0742c9a248c84c62cbd9c5a9e7e6a42a8cf01835c8496"
+    },
+    {
+      "workspace_relative": "third_party/human_parsing/sapiens2/docs/SEG.md",
+      "bytes": 2176,
+      "sha256": "51d6401484256b5c18d1d0a2eea6bd570b509c8848e8cf6048ee40b7b3a0dfc5"
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/stage0e-ccihp-native-20261012T045912Z/archive_documents/README.md",
+      "bytes": 4939,
+      "sha256": "4b73782345d94752e3a4a015ca0f8c9aa6bffe38d9568af7018071160f00bc5f"
+    }
+  ],
+  "new_tests_executed": false,
+  "inference_executed": false,
+  "active_execution_code_or_configs_changed": false,
+  "analytical_examples_are_executed_tests": false,
+  "scientific_payload_hashes_recomputed": false,
+  "production_correctness_verified_by_this_unit": false,
+  "authorization_changed": false,
+  "outputs": [
+    "PLAN.md",
+    "STATUS.md",
+    "WORK_LOG.md",
+    "README.md",
+    "docs/DECISIONS.md",
+    "docs/ARTIFACT_STORAGE.md",
+    "reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
+    "protocol/REVIEWED_SPECIFICATION.json",
+    "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+    "registry/REQUIREMENTS_TARGETS.csv",
+    "registry/ROUTES_PROPOSED.csv",
+    "registry/FAIRNESS_RISKS.csv",
+    "manifests/WORKLOAD_PROPOSAL.json",
+    "manifests/TIMING_WORKLOAD_DRAFT.json"
+  ],
+  "editorial_review": "COMPLETED_SCOPED_DIFF_FORMAT_LINK_AND_UNCHANGED_INPUT_INSPECTION_NOT_TEST_EXECUTION",
+  "editorial_inspection": {
+    "reviewed_utc": "2026-10-21T07:50:24.779253+00:00",
+    "parseable_draft_files": [
+      "protocol/REVIEWED_SPECIFICATION.json",
+      "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+      "registry/REQUIREMENTS_TARGETS.csv",
+      "registry/ROUTES_PROPOSED.csv",
+      "registry/FAIRNESS_RISKS.csv",
+      "manifests/WORKLOAD_PROPOSAL.json",
+      "manifests/TIMING_WORKLOAD_DRAFT.json"
+    ],
+    "broken_links": [],
+    "timing_original_fields_unchanged": [
+      "schema_version",
+      "status",
+      "sample_role",
+      "seed",
+      "method",
+      "image_count",
+      "total_person_opportunities",
+      "total_pixels",
+      "source_bindings",
+      "cases",
+      "reporting",
+      "authorization"
+    ],
+    "workload_fields_unchanged": [
+      "checkpoints",
+      "application_configurations",
+      "native_reference_configurations",
+      "total_configurations",
+      "inference_routes",
+      "quality",
+      "timing",
+      "readiness_proposed",
+      "scoring_counts",
+      "authorization"
+    ],
+    "original_route_fields_unchanged": true,
+    "csv_row_counts": {
+      "protocol/NATIVE_LABEL_MAPPING_DRAFT.csv": 72,
+      "registry/REQUIREMENTS_TARGETS.csv": 13,
+      "registry/ROUTES_PROPOSED.csv": 10
+    },
+    "scope_note": "No test suite, evaluator fixtures, model invocation or readiness test executed; analytical scoring cases were reviewed from definitions only."
+  }
+}

@@ -26,3 +26,9 @@ Local bindings ที่มี paths เฉพาะเครื่องเก�
 `.gitignore` ที่เพิ่มจำกัดเฉพาะ local overrides, cache/tmp และ bulk fallback directories/extensions ไม่ ignore CSV/JSON หรือทุกภาพ/runs แบบเหมารวม GT diagnostic images หรือ outputs ที่อนุญาตเผยแพร่ต้องตรวจสิทธิและข้อมูลส่วนบุคคลก่อน ไม่คัดมาเพียงเพราะไฟล์เล็ก
 
 Historical outputs ยังคง paths เดิมใน evidence records ห้าม rewrite ให้ชี้ artifact root ใหม่ที่ยังไม่ได้ใช้จริง
+
+## Draft resource and interruption accounting (Prompt A revision2)
+
+Resource authority: PLAN §9/§12.6 and protocol/REVIEWED_SPECIFICATION.json resource_caps_proposed.200GiB is a planning capacity envelope, not measured total or global hard cap;80GiB applies to unique physical artifacts per checkpoint stream across shared application/native views, with shared artifacts charged once. Free50GiB guard includes temporary/atomic-write headroom and other filesystem users. Aggregate peak is NOT_ESTIMATED;7×80GiB is not guaranteed to fit200GiB. B must measure and allocate capacity before launch.
+
+Attempt-local partial artifacts and failed-attempt logs are evidence, not deletable scratch for making caps pass. Proposed atomic packet+ledger reconciliation may reuse completed hash-bound outputs without inference. Re-execution of an externally interrupted uncommitted attempt needs explicit recovery approval; no new retry authority is granted. Full proposed cause/fingerprint/history rules are in the spec and PLAN, not a second execution policy here.

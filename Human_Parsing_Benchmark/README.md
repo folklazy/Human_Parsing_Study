@@ -56,3 +56,7 @@ Clone จาก GitHub อ่านแผนและตรวจ metadata ไ�
 Current reports/tables/specificationsมีเนื้อหาจริงแล้ว ไม่มี production configs/scripts/tests ใหม่ เก็บ input evidence และ review verification ใน runs/<review_id> ข้อมูลใหญ่ยังอยู่นอก Gitตามartifact specification
 
 **Next action:** อ่าน review/PLAN และตอบสาม design decisions ที่รวบรวมไว้ จากนั้นจึงอนุมัติ Stage B เฉพาะช่องว่าง implementation/readiness; Stage C full benchmark ต้องอนุมัติแยก ไม่มี automatic resume
+
+### Targeted Prompt A clarification (21 October 2026)
+
+Current [PLAN revision2](PLAN.md) and [review §H](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2) resolve Dress/Apparel scoring versus execution, route-specific extent claims, selection margin versus uncertainty, interruption recovery proposal and storage accounting. Still REVIEWED_PROPOSAL; no new tests, B execution, inference or benchmark authorization. Draft JSON/CSV values are not active execution configurations.

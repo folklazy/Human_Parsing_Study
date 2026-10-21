@@ -1,6 +1,6 @@
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-21T03:53:29.548553+00:00 (UTC)
+Updated: 2026-10-21T06:35:57.842659+00:00 (UTC)
 
 **A_REVIEW_COMPLETE · REVIEWED_PROPOSAL · DESIGN_DECISIONS_PENDING**  
 SETUP_COMPLETE remains recorded. Not DESIGN_READY, not LAUNCH_READY; Stage B implementation/new GPU checks and Stage C benchmark are not authorized.
@@ -29,3 +29,13 @@ Old CPI: FINISHED_WITH_INCOMPLETE_SYSTEMS / STRICT_COMPLETE / primary null. Old 
 Read [PLAN](PLAN.md) and [protocol review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md), then decide once on proposed roster/configurations, target/cohort/accessory scope, and relative selection/Pareto constraints. These are design decisions only. After acceptance obtain Stage B scope authorization; run no inference or benchmark automatically.
 
 Work unit: `design-review-20261021T033935094789Z`. Inputs: [evidence](runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json). Draft values: [specification](protocol/REVIEWED_SPECIFICATION.json). Publication uses explicit selected path/hash sync; containing commit and remote status are resolved from Git and local post-push receipt, not self-embedded in this file.
+
+## Targeted A clarification — Revision 2
+
+Closed six proposal ambiguities: known Dress/Apparel unsupported disposition vs execution failure; per-route extent provenance and semantic/ownership claim limits; independent practical-margin/uncertainty flags and removal of undefined per-class veto; execution/disposition decision table; proposed external-interruption recovery with no new retry authority; planning200GiB versus per-stream80GiB/free50GiB accounting.
+
+No new tests, inference, smoke, active execution source/config changes, new dataset scans or downloads. Analytical scoring examples are definitions, not executed fixtures. Same seven proposed checkpoints / ten configurations and workload/sample memberships. Existing prior test/evidence records retain their original scope.
+
+Still REVIEWED_PROPOSAL / DESIGN_DECISIONS_PENDING: named mandatory body/accessory profile and scoped design/recovery proposals need acceptance; no automatic universal winner. Stage B remains unauthorized. Next: review PLAN §8/§12 and report §H, settle remaining design choices, then separately authorize targeted B if desired.
+
+Current work unit: `proposal-clarification-20261021T063557842659Z`. Canonical/public copies remain separate; sync by selected path/hash manifest. Git commit identity belongs to Git/publication receipt, not this file.

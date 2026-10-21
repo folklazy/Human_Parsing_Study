@@ -33,6 +33,7 @@ Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
+Human_Parsing_Benchmark/runs/proposal-clarification-20261021T063557842659Z/EDITORIAL_RECORD.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json
 LICENSE.md
@@ -559,6 +560,7 @@ publication/FIGURE_PROVENANCE.json
 publication/HISTORICAL_EXTERNAL_LINKS.json
 publication/HISTORY_INDEX.json
 publication/INITIAL_PUBLICATION_VERIFICATION.json
+publication/PROPOSAL_CLARIFICATION_20261021T063557842659Z.json
 publication/PUBLICATION_APPROVAL.json
 publication/PUBLICATION_REVIEW_TH.md
 publication/PUBLICATION_STATE.json

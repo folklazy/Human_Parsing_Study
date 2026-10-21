@@ -34,3 +34,16 @@
 | A-SCOPE | Review/design/metadata/Git only | ACCEPTED_EXPLICIT_USER_BOUNDARY | No active execution code/config change, GPU smoke, inference, downloads or benchmark in this work unit |
 
 The authoritative current design remains PLAN.md; draft protocol values in protocol/REVIEWED_SPECIFICATION.json are not executable acceptance. No historical frozen run/config/result is modified by these decisions.
+
+## Prompt A targeted clarification — Revision 2
+
+| ID | Proposed clarification | Status / consequence |
+|---|---|---|
+| A-UNSUPPORTED | Known Dress/Apparel → RECOGNIZED_UNSUPPORTED; no execution failure/GTvoid/heuristic split | REVIEWED_PROPOSAL; not implemented; projected target delivery score is not native segmentation accuracy |
+| A-EXTENT | Per-route mask sources; YOLO-derived extent F1 is not parser semantic ownership accuracy | REVIEWED_PROPOSAL; extent+semantic/contamination+FP evidence required for claim |
+| A-TIE | Point gap≤.005 independent of interval crossing0; remove undefined important-per-class-regression auto veto | REVIEWED_PROPOSAL; user accepted class floors only if defined before scores |
+| A-CAPABILITY | C3 garment / C7 compatible joint task shortlists; named mandatory body/accessory profile pending | USER_DECISION_PENDING; no universal winner from C3 alone |
+| A-RECOVERY | Verified external interruption may be recoverable with frozen identities, atomic packets, immutable attempt history | PROPOSED_NOT_ACCEPTED; extra in-flight attempts require explicit recovery authorization; genuine model retry remains0 |
+| A-DISK | 200GiB planning envelope, not global cap/total estimate;80GiB per checkpoint stream;50GiB free guard | REVIEWED_PROPOSAL; B aggregate peak measurement/capacity allocation required before launch |
+
+These entries revise only current proposal semantics, not historical CPI policies/results. This user instruction authorizes documentation/Git synchronization only, with no new tests, Prompt B, inference or active execution code/config changes.

@@ -1,10 +1,10 @@
 # Human Parsing — Prompt A: evidence and protocol review
 
-**REVIEWED_PROPOSAL · 21 ตุลาคม 2026 UTC** ไม่ใช่ DESIGN_READY/LAUNCH_READY และไม่ implement execution pipeline แผน authoritative คือ [PLAN.md](../PLAN.md) ใช้ชื่อเดิมจาก SETUP ต่อ ไม่สร้าง design report ซ้ำอีกชื่อ
+**REVIEWED_PROPOSAL · Revision 2 · 21 ตุลาคม 2026 UTC** ไม่ใช่ DESIGN_READY/LAUNCH_READY และไม่ implement execution pipeline แผน authoritative คือ [PLAN.md](../PLAN.md) ใช้ชื่อเดิมจาก SETUP ต่อ ไม่สร้าง design report ซ้ำอีกชื่อ
 
 ## A. สถานะจริงที่ตรวจแล้ว
 
-Root workspace, current Human_Parsing_Benchmark และ legacy Human_Parsing_MHPv2_Study ไม่มี Git repository ของตน Public checkout แยกอยู่ที่ Human_Parsing_Study_Public, branch main, remote folklazy/Human_Parsing_Study, base commit `8b1b813baf2a010f3140cd7ed12ea3554f04e33d` working tree สะอาดก่อนงานนี้ ใช้ explicit path/hash publication workflow เดิม ไม่สร้าง nested Git หรือเปลี่ยน remotes
+ในการตรวจ Prompt A ครั้งแรก Root workspace, current Human_Parsing_Benchmark และ legacy Human_Parsing_MHPv2_Study ไม่มี Git repository ของตน Public checkout แยกอยู่ที่ Human_Parsing_Study_Public, branch main, remote folklazy/Human_Parsing_Study, initial-review base commit `8b1b813baf2a010f3140cd7ed12ea3554f04e33d` working tree สะอาดก่อนงานนี้ ใช้ explicit path/hash publication workflow เดิม ไม่สร้าง nested Git หรือเปลี่ยน remotes
 
 อ่าน README/STATUS/PLAN/decisions, registry V7/roster V4, actual checkpoint RUN manifests, upstream decoder/config snippets, old scoring/route assembly, dataset audits/population bindings, CPI CSV และ QANet candidate/worker จาก filesystem จริง ไม่มี inference, model load, tests ชุดเดิม, full dataset audit, checkpoint/dataset download หรือ bulk payload hash scan ในรอบนี้
 
@@ -55,7 +55,7 @@ Metadata reference 5,000frames มี 24,062YOLOopportunities; main 4,961 มี
 
 Timingdraft เลือก 64mainimages แบบ 8strata×8 ด้วย SHA256seed20261021 ไม่มี parserperformance เกี่ยวข้อง มี 350opportunities Proposed3rounds: application1,344framejobs พร้อม freshYOLO1,344; native-reference 576framejobs; ROI 4,200tasks; warmup 150framejobs/YOLO105/ROI120 แยกออก Rankedsummaryrows68 เฉพาะ C3 และ compatibleC7 ไม่ใช่จำนวนโมเดล ดู [workload](../manifests/WORKLOAD_PROPOSAL.json)
 
-ROIunowned+owneduint8fullgrid4models payload33,740,001,016bytes ยังไม่รวม nativeoutputcounts/metadata/logs/compression Nativepredictedpersoncounts และ actualforward/runtime/peakmemory ยังไม่มี evidence สำหรับ workload นี้ ไม่ออก ETA Reserve200GiB/free50GiB/per-system80GiB/24hcheckpoint เป็น proposedcaps ไม่ใช่คำพยากรณ์ ขณะตรวจ free~564.2GBdecimal
+ROIunowned+owneduint8fullgrid4models payload33,740,001,016bytes ยังไม่รวม nativeoutputcounts/metadata/logs/compression Nativepredictedpersoncounts และ actualforward/runtime/peakmemory ยังไม่มี evidence สำหรับ workload นี้ ไม่ออก ETA Reserve200GiB เป็น planning capacity envelope ไม่ใช่ totalestimate/globalcap; free50GiB/per-stream80GiB/24hcheckpoint เป็น proposedguards/caps ขณะ initialreview free~564.2GBdecimalเป็น historicalsnapshot ดู §H.6 สำหรับการนับและ readiness gap
 
 ## F. Fairness review และ readiness ที่จำเป็นเฉพาะจุด
 
@@ -74,3 +74,112 @@ ROIunowned+owneduint8fullgrid4models payload33,740,001,016bytes ยังไม�
 เมื่อรับ design แล้วจึงจัด StageB implementation/readiness เฉพาะ gaps ตาม scope ที่อนุมัติ และเสนอ exactlaunchpackage ให้อนุมัติ benchmark แยก ไม่มี newinference/smoke/download/activeexecutioncodeorconfigchange ใน A
 
 [Primary research sources and limitations](../docs/RESEARCH_REFERENCES.md) สนับสนุนแนวทาง explicitmapping/instanceownership/boundarydiagnostics ไม่รับรอง targets หรือ projectsemantics แทน evidence
+
+## H. การปิดหกประเด็นเฉพาะจุด — Revision 2
+
+**ขอบเขต:** อ่านเฉพาะ PLAN/draftspec/tablesและ pinned native catalog/CCIHPREADME ที่เกี่ยวข้อง ใช้ audit/manifestsเดิม ไม่ทดสอบซ้ำหรือเพิ่ม tests, inference, productioncode/config หกข้อด้านล่างเป็นการปิดความกำกวมในข้อเสนอ ไม่ใช่ acceptance/implementationproof ยังคง REVIEWED_PROPOSAL
+
+Work unit: `proposal-clarification-20261021T063557842659Z`; publication base `d85c69d4469df525370a120e6718e24217b57ced`. Initial-review baseline in §A remains historical; this revision changes documentation/draft specifications only.
+
+### H.1 Dress/Apparel และความหมายของ rejection
+
+| Native label / applicable checkpoints | นิยามที่มีหลักฐาน | Target projection / ข้อจำกัด |
+|---|---|---|
+| CIHP5 UpperClothes — CIHP4 | Pinned CIHP catalogระบุชื่อ UpperClothes; CCIHPREADME5ระบุรวม top of dress | →UPPERตาม proposedmerge; nativecategoryและ CCIHP annotationpolicyไม่เหมือนกันทุกขอบเขตโดยอัตโนมัติ |
+| CIHP6 Dress — QANet/M2FP/D2FP/RPR CIHP | Catalogแยก Dressจาก5/7/9/12; one native labelไม่มี upper/lower boundary | RECOGNIZED_UNSUPPORTED; ไม่ใช่ sourceunknownหรือ executionunresolved |
+| CIHP7 Coat — CIHP4 | Named Coat; CCIHP7รวม outermostcoat/jacket/vest/sweaterตามคำอธิบายผู้สร้าง | →UPPERเป็น garmentcategory ไม่ใช่ anatomicalwaistcrop; sourcepolicyต่างได้ |
+| CIHP9 Pants — CIHP4 | Native Pants; CCIHP9เสื้อผ้าสองขารวมshorts/tights/etc. | →LOWER; ไม่สร้าง dress-bottomจาก nativePants |
+| CIHP12 Skirt — CIHP4 | Native Skirt; CCIHP12รวมbottom of dress | →LOWERสำหรับ nativeSkirt; ไม่ได้ทำให้ nativeDressแบ่งได้ |
+| Sapiens1 Apparel — 0.4/0.8/1B | OfficialSEG.mdยืนยัน name/ID; **ไม่ได้อธิบาย exhaustive annotation scope** | RECOGNIZED_UNSUPPORTEDเพราะยังไม่มี supported upper/lower projection; ไม่อ้างว่า Apparelเท่ากับ Dressหรือ allclothes |
+| Sapiens13 Lower_Clothing — 3sizes | Official named label13 | →LOWERใน proposal; detailed boundary conventionยังไม่ independentverified |
+| Sapiens23 Upper_Clothing — 3sizes | Official named label23 | →UPPERใน proposal; detailed boundary conventionยังไม่ independentverified |
+
+**Primary evidence ที่อ่านจริง:** CCIHP release README §Datasetdescription; pinned M2FP register_cihp_parsing.py@17a89de… catalog; Sapiens docs/SEG.md@7e5bae8… catalog ตัวเลข/pathเต็มอยู่ mappingtableและ editorialrecord ไม่คัด third-party sourceเพิ่มเข้าGit นี่เป็น semantictraceจาก existingevidence ไม่ใช่ nativeaccuracymeasurementใหม่
+
+Native segmentation errorคือทำนายไม่ตรงกับ nativeclass/regionที่ถูกต้อง ต้องมี compatible nativeGTหรือการreviewที่ยืนยันได้ Target-taxonomy incompatibilityคือ regionอาจถูกแต่ไม่มี labelpartitionที่ targetต้องการ การต่ำของ projectedIoUแยกสองสาเหตุนี้เองไม่ได้
+
+**ตัวอย่างเชิงนิยาม ไม่ใช่ผลทดลอง:** มีคนเดียว visible dressเต็มชุด Nativeprediction6ตรง dressregionสมบูรณ์ CCIHPแบ่งregionเป็นGTupper5และlower12 แต่ไม่มีshoesในกรณีสมมติ Predictionทั้งหมดเป็น rejection จึงIoUupper=0, IoUlower=0 และpersonQ_C3=0 ทั้งที่nativeDressอาจถูกทั้งหมด ถ้า footwearที่มีGTทำนายถูก จะเพิ่มclassตามนิยามK_i ไม่เปลี่ยนdresspixelsเป็นvoid กรณี Apparelให้ตีความแบบ conditionalเท่านั้นเพราะnativeannotationdefinitionยังไม่ครบ คะแนนรองรับ “ใช้ส่งupper/lowerpartitionที่ต้องการได้เพียงใด” ไม่รองรับ “โมเดลsegment Dressผิด/แพ้nativeaccuracy”
+
+**Diagnostics ที่เสนอให้ B implement:** nativeclasspixel/image/personhistogramก่อน/หลังclip; rejectedvalidpixels/validdomainpixels; rejectedpixelsแยกแต่ละGTtarget/targetGTsupport; rejectedcontextและGTvoidcountsแยก; affectedperson/imagecountsพร้อมfixeddenominators เก็บ nativeIDs/masks ไม่ heuristic split ไม่ per-modelignore ไม่claimว่าdiagnosticsเหล่านี้คำนวณแล้วหรือเป็นอันดับใหม่
+
+### H.2 Extent source และ expected scoring
+
+| Route | Evaluation extent | Dependency/semantic-empty consequence |
+|---|---|---|
+| QANet/Sapiens YOLO_ROI | Frozen original-gridYOLOinstance mask | Detector-derived; semanticemptyยังคงextent/ID แม้Q=0 |
+| M2FP/D2FP native + associated | Native humanownershipmaskก่อน labelcomposition | Nativehumanqueries; associatedrouteยังมีYOLOgating Nonemptyhumanextentไม่หายเมื่อsemanticsว่าง |
+| RPR native + associated | Unionnative nonBGpersonparsinglabels | Extentพึ่งparserforegroundและinternaldetector; semanticemptyไม่มีindependentsilhouetteให้คง ห้ามfilledbboxreplacement |
+
+QANet/Sapiensที่ retainedYOLOopportunitiesเหมือนกันมี extentP/R/F1เหมือนกันได้ทั้งหมด จึงเรียก **person-extent detection/separation F1 ของระบบ** ไม่ใช่ standaloneparserownershipaccuracy ต้องแสดง matchedpersonsemanticQ, FP, cross-ownercontaminationและcollisionด้วย GTใช้เฉพาะscorerไม่ช่วยแก้ownership
+
+ตารางนี้เป็นผลที่อนุมานจากนิยามสำหรับ simplifiedcases **ไม่ใช่ executedtests**; หนึ่งGTมีvalidtargetsupportและไม่มีvoid เว้นแต่ระบุ:
+
+| Case | Expected extent scores | Expected semantic/ownership observation |
+|---|---|---|
+| Semanticempty + exactindependentextent | ROI/M2FP/D2FP:TP1,FP0,FN0,F1=1 | Q=0; contaminationN/Aเมื่อไม่มีmappedtargetpixels ไม่ใส่0เพื่ออ้างcleanownership |
+| SemanticemptyของRPR | No nonemptyextent:TP0,FP0,FN1; recall/F1=0,precisionN/A | Q=0; preserveemptyentrydiagnostic ไม่สร้างmaskใหม่ |
+| Wrong-personsemanticsแต่extentถูก | F1อาจยัง1 | Qลดถึง0ได้; cross-ownerpixelsเพิ่มcontaminationถ้ายังsurviveclip PureIDstringpermutationไม่ผิดและ identicalextentsอาจแยกphysicalownerไม่ได้ |
+| Duplicatecorrectprediction2ชุดต่อGT1 | TP1 FP1 FN0;precision=.5,recall1,F1=2/3 | Qอาจยัง1เพราะ matchedpredictionถูก ต้องอ่านFP/F1ร่วม; duplicateไม่ใช่executionfailure |
+| ExtentIoU=.60, soleGT/predtargetclassตรงกัน | Threshold.50:TP1/F1=1; threshold.75:TP0/FP1/FN1/F1=0 | Q=.60ที่.50และ0ที่.75ในกรณีนี้ ไม่ใช่generalformulaเมื่อextent≠targetsupport |
+
+Contaminationนิยามให้ชัดเป็น mappedtarget-labeledpixelsของpredictedpersonบนfixedvaliddomainที่ตกใน **otherGTHuman_ids** / mappedtarget-labeledvalidpixels denominator0ให้null/NO_MAPPED_TARGET_PIXELS พร้อมdefinedpersoncountและemptycount รายงาน pooledpixelratioแยกจาก per-personratio ไม่เอาundefinedมาเฉลี่ยเป็น0 Extentmatchingหรือcontaminationอย่างเดียวไม่วัดclasscorrectnessทั้งหมด แยกpre-clipunownedและpost-clipfinalcontaminationพร้อมstage/domaindenominators เพราะYOLOclipอาจกดcontaminationลงแต่ตัดtruepartsจนsemanticFNสูงได้ post-clipratioต่ำไม่พิสูจน์learnedownership
+
+### H.3 Selection closure
+
+Practicalnear-tie: **abs(pointΔQ)≤.005** แยกจากintervaldirectionflag; CIincludes0ไม่ได้เป็นtieอัตโนมัติ
+
+| abs(point gap) | CI contains0 | Practical near-tie | Interpretation |
+|---:|---|---|---|
+| .004 | NO | YES | ผลต่างเล็กตามmarginแต่intervalไม่คร่อม0 |
+| .004 | YES | YES | ผลต่างเล็กและdirectionuncertain |
+| .020 | YES | NO | ผลต่างobservedใหญ่แต่directionยังไม่ชัด ไม่ให้costชนะอัตโนมัติในชื่อtie |
+| .020 | NO | NO | ผลต่างobservedใหญ่และintervalไม่คร่อม0 |
+
+ยกเลิก **automatic “no important per-class regression” criterion** ที่ยังไม่กำหนดimportance/threshold รายงานperclassdelta/supportครบ ไม่มีpost-hocveto ถ้าต้องมีmandatoryclassfloor/toleranceต้องรับก่อนดูVALและversionselectionrule Near-tieระบุคู่หรือเทียบbestobservedQภายในtask/route/populationเดียวกัน ไม่ถือเป็นtransitiveequivalencegroup Near-tieไม่บังคับเลือกตัวถูกสุด; qualityleaderและnon-dominatedalternativesยังรายงาน ไม่weightedscore
+
+C3ให้garmentshortlistทุกproposedcheckpointแต่ไม่รับรองbody/accessory C7ให้jointbody/clothingselectionเฉพาะcompatiblecohort ไม่poolคะแนนสองview Sapiensbodyproxyเป็นdiagnostic ถ้า **ทุกexposedbodytargetเป็นmandatory** Sapiensยังไม่eligibleสำหรับexactjointtaskจากbodyproxyเพียงอย่างเดียว ไม่เท่ากับnativebodymodelไม่ดี
+
+สิ่งที่ผู้ใช้ต้องตัดสินก่อนfinalsuitability: (1) namedmandatorybodytargetsทั้งหมดFace/Exposedtorso/Arms/Legsหรือบางส่วน (2) namedaccessoriesเช่นBag/FaceMask/Headwear/etc. (3) absolutequality/resourcefloorsถ้ามี หากยังไม่มีprofile ให้conditionalC3/C7shortlistsหลายconfiguration ไม่ประกาศuniversalwinner/CCTVready ไม่เปลี่ยนrosterหรือขอรับรองห้านโยบายCPIซ้ำ
+
+### H.4 Execution completeness × prediction disposition
+
+| Execution stage state | Prediction disposition | Required pipeline work satisfied? | Scoring / STRICT_COMPLETE |
+|---|---|---|---|
+| COMPLETE_VALID | MAPPED_TARGET/CONTEXT | YES | Normalfixed-domainmetrics |
+| COMPLETE_VALID | RECOGNIZED_UNSUPPORTED (Dress/Apparel) | YES | Rejectioncolumn/targetFN; **ไม่ทำrunINCOMPLETEเพียงเพราะmapไม่ได้** |
+| COMPLETE_VALID | VALID_EMPTY | YES | Scoreaccordingretainedextents/semanticFN ไม่เรียกfailureเพื่อหลบคะแนน |
+| SKIPPED_BY_ROUTING | ValidfinalemptypacketตามfrozenzeroYOLOpolicy | PipelineYES;parserinvocationN/A | Logskipsแยก ไม่creditparsercompleted; GTยังอยู่coverage |
+| INVALID_CONTRACT | Out-of-catalogID/invalidgeometry/missingrequiredfields | NO | Primarynull/INCOMPLETE; ไม่downgradeเป็นknownunsupported |
+| FAILED_MODEL_OOM/EXCEPTION | Absent/uncommittedpartial | NO | Primarynull/INCOMPLETEและretainedfailure |
+| INTERRUPTED_EXTERNAL/UNKNOWN_CAUSE | No committedvalidpacket | NO whilepending | ไม่scorepartial; recoveryรอexplicitdecision |
+| NOT_ATTEMPTED/RUNNING | None | NO | ไม่มีmainคะแนนจากsuccesssubset |
+
+Executionunresolvedหมายถึงงานยังไม่มีvalidterminaloutcome ไม่ใช่recognizedunsupportedclass แก้ชื่อ `UNRESOLVED_PRED` ในcurrentdraftเป็น `RECOGNIZED_UNSUPPORTED`/`REJECT_TARGET_UNREPRESENTABLE`; ไม่เปลี่ยนhistoricalrecords Framecompleteต้องมีทุกrequiredROIpacketหรือauthorizedroutingbypassและvalidfinalpacket Eligibilityมาจากfrozenpolicyไม่ใช่ภาพที่รันผ่าน
+
+### H.5 Interruption — recovery proposal, no extra retry approved
+
+| Cause/output evidence | Proposed action | Authority/state |
+|---|---|---|
+| ModelOOM/exception | Preservefailedattempt; retry0/noCPUorFP16fallback | Genuinefailureไม่เรียกexternal; requiredfailedworkทำINCOMPLETE |
+| UI/SSHdisconnectแต่workerยังทำ | ตรวจledger/processแบบread-only; ไม่launchซ้ำ | Disconnectไม่พิสูจน์interruption |
+| Verifiedexternalpreemption/reboot/signal + committedvalidoutput | Reusehash-boundpacket/receiptเมื่อfingerprintsตรง | Artifactreconciliationไม่ใช่inference/retry; ถ้าคนละrecipeหยุด |
+| Completeimmutablepacketแต่ledgerยังไม่receipt | Validateidentity/hashและreattachreceiptโดยไม่compute | เสนอcrash-windowreconciliation; conflictingpacketsหยุดไม่เลือกตามscore |
+| Externalinterruption + partial/uncommittedattempt | Preserveattempt-localpartial; proposeextraattempt withparent/proof | **ต้องexplicitrecoveryapprovalก่อน** ไม่เท่ากับnever-attemptedcontinuation |
+| Unknowncause | KeepUNKNOWN_CAUSEandpending/incomplete | ห้ามเดาว่าexternalเพื่อretry;SIGKILLอย่างเดียวไม่พอและkernelOOM/resource-limitไม่ใช่verifiedexternal |
+
+Fingerprintsคง input/IDs, checkpoint/source/adapter/scorerrecipe, environment/precision/preprocess/thresholds, GTdomain/population/config/routing Atomicoutputเสนอ same-filesystemtemp→flush/fsync→renameimmutablepacket→ledgerreceipt เก็บattemptID/parent/timestamps/causeproof/hashes/status/decisionทุกattempt ไม่ลบfailure/partial ไม่overwritecompleted ไม่resetcaps Recoveryที่อนุมัติภายหลังอาจทำpopulationcompleteได้เฉพาะถ้าทุกrequiredworkreconcilevalidตามacceptedpolicy Genuinefailedattemptภายใต้zero-model-retryยังไม่recoverเอง ClosedCPIresultsคงเดิม
+
+### H.6 Resource accounting และสิ่งที่ B ต้องวัด
+
+| Quantity | Meaning / relation |
+|---|---|
+| 200GiB reserve | Proposedplanningcapacityenvelope; **ไม่ใช่ measuredtotal, filesystemguarantee หรือglobalhardcap** ยังไม่มีglobalcapnumeric |
+| 80GiB/system | Proposedcapต่อcheckpointinferencestream; นับphysicalnative/finaloutputs/logs/cache/tmp/attemptsรวมจริง ไม่คูณnative-referenceviewที่reuse;sharedartifactsลงledgerครั้งเดียว |
+| Free50GiB | Proposedfilesystemheadroomguard ตรวจnextwrite+atomictemporarypeak หยุดก่อนละเมิด ไม่ลบผลเพื่อผ่าน |
+| Admissionproposal | ถ้าคงenvelope200ต้องfree≥250GiBและBaggregateestimateรองรับ;ไม่ได้กันdiskจากคนอื่น การถึง200อย่างเดียวไม่ใช่runtimehardstop |
+| Aggregatefeasibility | 7×80=560GiB potentialceilings>reserve200 จึงยังรับรองว่าfitไม่ได้ ต้องallocatedesignจากBก่อนlaunch |
+| Existingpayloadestimate | 33,740,001,016bytesเป็นROIuint8payloadcomponentเท่านั้น ไม่ใช่total;historicalfreeไม่ใช่liveguarantee |
+
+Bต้องวัดnativepersoncounts/serializedbytesต่อframe/ROI/person, native/finalactualreuse, observedcompression, metadata/log/attempt/cachegrowth, temporary+atomicwritepeak/sharedallocation และjointmemory/cleanroutetime จึงคำนวณaggregateestimateพร้อมข้อจำกัดและcapacitydecision ไม่สร้างtotal/ETAตอนนี้ Timinglatencyไม่รวมdiskwriteไม่ได้แปลว่าdiskwriteไม่อยู่storagebudget Cases64/350opportunities/seed/weights/jobsยังเดิมทุกตัว ไม่มีnewtimingjobs/recoveryjobsอนุมัติในA
+
+**สถานะหลังรอบนี้:** นิยามหกประเด็นถูกเขียนลงPLAN/spec/tablesแล้ว ยังมีuserdesignacceptance/mandatorycapabilities/externalrecoverypolicyและBimplementationevidenceที่รออยู่ สถานะ **REVIEWED_PROPOSAL** ไม่รับรองproductionevaluatorหรือrunreadinessจากเอกสาร

@@ -58,7 +58,24 @@
     "available_disk_bytes_observed": 564214476800,
     "max_hours_per_checkpoint_proposed": 24,
     "ETA": null,
-    "ETA_reason": "Clean comparable runtime profiles absent; caps are not estimates"
+    "ETA_reason": "Clean comparable runtime profiles absent; caps are not estimates",
+    "reservation_kind": "PLANNING_CAPACITY_ENVELOPE_NOT_MEASURED_TOTAL_AND_NOT_GLOBAL_HARD_CAP",
+    "global_hard_cap_gib": null,
+    "aggregate_total_estimate_gib": null,
+    "aggregate_max_of_seven_stream_caps_gib": 560,
+    "per_system_means": "Checkpoint inference stream, unique physical artifacts counted once across application/native reference; not80 GiB for each of ten scoring configurations",
+    "accounting": "80 GiB proposed per-checkpoint stream includes its retained packets, attempt logs, temps/cache and attributable new artifacts. Shared new artifacts are charged once in a shared ledger and count toward aggregate capacity; no hidden double-counting or uncharged temporary disk.",
+    "admission_proposal": "If retaining the200 GiB planning envelope, require at least250 GiB free at launch (200 plus untouchable50) and a measured B aggregate peak compatible with available capacity. This does not reserve filesystem blocks against other users.",
+    "capacity_gap": "7*80=560 GiB potential independent per-stream ceilings exceed planning reserve200 GiB; 200 is not evidence full workload fits. B must estimate aggregate peak and allocate capacity before launch.",
+    "stop_policy": "Stop scheduling before estimated next atomic write/temporary peak would breach free50 GiB or owning stream80 GiB; if already below minimum stop immediately/safely preserve outputs. Reaching200 GiB alone is not a global hard stop. Re-estimate capacity and obtain resource decision if B cannot support planned envelope; never delete evidence to continue.",
+    "B_measurements_required": [
+      "serialized per-frame/ROI/native-person artifact bytes and native count distribution",
+      "native/final view reuse versus genuine copies and compression observed, not assumed",
+      "metadata/log/attempt/cache growth and shared artifact accounting",
+      "peak temporary plus atomic write scratch and retained-output accumulation",
+      "disk headroom under other users, co-resident T4 memory and clean route times; ETA only after suitable evidence"
+    ],
+    "observed_free_space_role": "Historical snapshot from initial Prompt A; not current launch headroom guarantee"
   },
   "readiness_proposed": {
     "existing_route_replay_CPU_checks": 4,
@@ -91,5 +108,15 @@
     "new_inference": false,
     "new_smoke": false,
     "full_benchmark": false
+  },
+  "revision": 2,
+  "clarification_work_unit": "proposal-clarification-20261021T063557842659Z",
+  "operations_clarification": {
+    "automatic_model_retries": 0,
+    "external_recovery_status": "PROPOSED_REQUIRES_EXPLICIT_APPROVAL; not additional jobs authorized",
+    "nominal_job_counts_exclude_recovery_attempts": true,
+    "attempt_recovery_spec": "protocol/REVIEWED_SPECIFICATION.json#/failure_policy/external_interruption_recovery_proposal",
+    "recognized_unsupported_prediction": "Valid execution; no extra inference or rerun requested",
+    "total_storage_or_ETA_verified": false
   }
 }

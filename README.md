@@ -2,6 +2,8 @@
 
 **Current Phase 2–3 planning workspace:** [Human_Parsing_Benchmark](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md). **A_REVIEW_COMPLETE / REVIEWED_PROPOSAL**; proposed scope/tasks/selection await user decisions, no implementation or new execution authorized. CCIHP VAL checkpoint selection is permitted by current Prompt A, with no VAL tuning or independent-confirmation claim.
 
+Current proposal: **revision2**, including the [six targeted clarifications](Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2). Known unsupported Dress/Apparel predictions are scoreable, not execution failures; practical near-tie and uncertainty are independent. No Prompt B or new tests/inference are authorized.
+
 The closed first-cohort results and earlier preparation notes below remain historical evidence. The workspace-root Human_Parsing_Benchmark is the canonical editable planning directory; this subdirectory is its reviewed public copy.
 
 ## Closed first CPI cohort — historical results

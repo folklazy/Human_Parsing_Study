@@ -1,6 +1,6 @@
 {
-  "schema_version": "design-specification-1.0",
-  "revision": 1,
+  "schema_version": "design-specification-1.1",
+  "revision": 2,
   "status": "REVIEWED_PROPOSAL",
   "activity": "DRAFT_SPECIFICATION_NOT_ACTIVE_EXECUTION_CONFIG",
   "review_id": "design-review-20261021T033935094789Z",
@@ -41,13 +41,40 @@
       "Sapiens C7 approximate diagnostic",
       "boundary quality conditional on valid match"
     ],
-    "C3_scope": "Fixed same-GT garment task with explicit partial native expressivity (Dress/Apparel unresolved errors), not a claim of identical native taxonomy"
+    "C3_scope": "Fixed garment-delivery task under CCIHP target semantics; native Dress/Apparel may be correctly segmented yet unrepresentable. Projected scores are not native segmentation accuracy."
   },
   "prediction_projection": {
     "primary": "native hard-label output then deterministic lookup",
-    "unresolved_known_native_labels": "explicit rejection/error column, never GT ignore",
     "unknown_out_of_catalog_labels": "CONTRACT_INVALID",
-    "probability_aggregation_primary": false
+    "probability_aggregation_primary": false,
+    "recognized_unrepresentable_native_labels": {
+      "disposition": "RECOGNIZED_UNSUPPORTED",
+      "evaluation_symbol": "REJECT_TARGET_UNREPRESENTABLE",
+      "native_labels": [
+        "CIHP_PRED:6 Dress",
+        "SAPIENS2_PRED:1 Apparel"
+      ],
+      "execution_effect": "NONE_IF_VALID_CONTRACT; not unresolved execution and not a reason for INCOMPLETE",
+      "target_GT_effect": "FN for each actual target pixel; retain explicit rejection confusion column",
+      "context_GT_effect": "Keep rejection counts on valid context; do not invent target FP where no target label was predicted",
+      "unknown_GT_effect": "Fixed shared GT void applies exactly as for other predictions",
+      "do_not": [
+        "model-specific ignore",
+        "heuristic upper/lower split",
+        "GT-guided prediction repair",
+        "convert rejection to background"
+      ]
+    },
+    "Apparel_semantic_evidence": "Official SEG.md verifies label1 Apparel, 13 Lower_Clothing, 23 Upper_Clothing. Exhaustive Apparel annotation scope/boundary is NOT_VERIFIED; do not define it as Dress or all clothing.",
+    "diagnostics_proposed": [
+      "native label pixel/image/person histograms before and after ownership clipping",
+      "RECOGNIZED_UNSUPPORTED valid pixel count / all valid evaluated pixels",
+      "target-covered rejection pixels by GT target / that target GT pixels",
+      "rejection on valid context and on shared GT void reported separately",
+      "rejection-bearing person/image count with GT-derived fixed denominators",
+      "native output and rejected-region coordinates retained for inspection; native accuracy NOT_ESTIMABLE without compatible native GT"
+    ],
+    "diagnostics_zero_denominator": "null with explicit reason; never convert absence of relevant GT support into zero error"
   },
   "domain": {
     "C0_H0": "BACKGROUND_VALID",
@@ -119,17 +146,40 @@
     "missed_GT_person_semantic_contribution": 0,
     "zero_union_global_classes": "N/A with support counts; primary view requires all target classes supported at population level",
     "valid_empty_prediction": "execution success; scored as missed persons, not failure",
-    "absent_prediction_unresolved_label": "error column on fixed valid GT; never ignored",
-    "known_empty_semantics": "Keep available person location/identity. Do not reuse legacy helper filtering np.any(semantic_mask) without a new declared contract."
+    "known_empty_semantics": "Keep available person location/identity. Do not reuse legacy helper filtering np.any(semantic_mask) without a new declared contract.",
+    "recognized_unsupported_native_label": "RECOGNIZED_UNSUPPORTED is valid execution; retain rejection column on fixed GT domain, GT targets incur FN, never ignored. Not an unresolved/invalid execution state."
   },
   "failure_policy": {
     "main": "STRICT_COMPLETE",
     "failed_images": "retain INCOMPLETE rows, main metrics null; success-only diagnostics explicitly non-ranking",
     "automatic_retry": 0,
     "automatic_cpu_fallback": false,
-    "approved_resume_scope": "only never-attempted jobs after exact input/config/checkpoint/source/recipe fingerprints and explicit continuation decision; cannot retry prior failed images or change membership",
+    "approved_resume_scope": "No new continuation/retry authority in this work unit. Existing zero automatic retry remains. Never-attempted continuation still needs explicit continuation decision and identical fingerprints.",
     "shared_contract_error": "STOP_DEPENDENT_JOBS",
-    "runtime_failure": "runtime profile INCOMPLETE, retain quality evidence separately; no cost Pareto eligibility"
+    "runtime_failure": "runtime profile INCOMPLETE, retain quality evidence separately; no cost Pareto eligibility",
+    "recognised_unsupported_is_execution_failure": false,
+    "external_interruption_recovery_proposal": {
+      "status": "PROPOSED_NOT_ACCEPTED_NOT_EXECUTION_AUTHORIZATION",
+      "model_failure": "OOM or model exception is a genuine failed attempt, even if later worker exits; no retry/fallback under current policy",
+      "external_evidence": "Scheduler/preemption/host-reboot/signal evidence independent of model performance; transport disconnection alone does not prove worker stopped. Unknown cause remains unknown, not relabeled external. SIGKILL alone is insufficient: host/kernel OOM or resource-limit termination is not verified external interruption; record the actual cause or UNKNOWN_CAUSE.",
+      "fingerprints": [
+        "input bytes/IDs",
+        "checkpoint",
+        "source and adapter/scorer recipe",
+        "environment",
+        "precision/preprocessing/thresholds",
+        "GT/domain/population",
+        "routing/configuration"
+      ],
+      "committed_outputs": "Reuse only hash-bound, schema-valid atomically committed packet plus ledger receipt. A completed output after disconnect is not recomputed. Content-complete orphan packet may be reattached only after read-only identity/checksum reconciliation; no model invocation.",
+      "partial_outputs": "Preserve attempt-local temporary/partial output and diagnostics; never expose it as committed prediction or overwrite it",
+      "extra_attempt": "Re-executing interrupted in-flight uncommitted work is an additional attempt requiring explicit recovery approval; it is not the same as continuing never-attempted work",
+      "commit_protocol_proposed": "Write attempt-unique temporary file on same filesystem, flush/fsync as appropriate, atomic rename to immutable content-addressed packet, then append durable ledger receipt; recover crash window by reconciliation, not inference",
+      "history": "Append attempt_id, parent_attempt_id, start/end, process status, interruption proof, hashes, disposition and recovery decision. Preserve all failed/external attempts. Conflicting valid outputs for same frozen work ID stop reconciliation; never select better score.",
+      "strict_complete_after_recovery": "Only if explicit policy/continuation acceptance permits external recovery and all fixed required work reconciles to one accepted valid packet. Genuine failed work remains INCOMPLETE under zero-model-retry policy. This proposal does not retroactively change closed CPI results.",
+      "caps": "Recovery does not reset per-system storage/resource caps or authorize unlimited attempts; extra cost remains reported",
+      "no_current_authorization": true
+    }
   },
   "runtime": {
     "hardware": "Tesla T4 on assigned visible GPU",
@@ -172,15 +222,178 @@
     "uncertainty": "1000 paired cluster bootstrap resamples by known exact decoded-RGB duplicate groups; fixed seed20261021; descriptive95percent interval, no independence claim for unobserved near duplicates",
     "rule": "Within each task/route select best Q, report instance F1/FP, flag near ties, retain non-dominated Q/instance-F1/route-latency/device-sampled-memory configurations; no weighted score or forced universal winner",
     "training_or_threshold_tuning_from_VAL": false,
-    "heldout_confirmation_claim": false
+    "heldout_confirmation_claim": false,
+    "practical_near_tie_definition": "abs(point_estimate_Q_A - point_estimate_Q_B) <= 0.005; independent of uncertainty interval",
+    "uncertainty_zero_crossing_definition": "paired difference interval includes0; labels direction inconclusive under this interval only; neither practical tie nor equivalence follows",
+    "practical_margin_uses_uncertainty_interval": false,
+    "per_class_regression_automatic_veto": false,
+    "per_class_regression_policy": "Remove undefined no-important-per-class-regression automatic rule. Publish all supported per-class deltas and support; no post-hoc veto/floor. Any mandatory class minima or regression tolerance needs explicit pre-score design acceptance and a versioned selection rule.",
+    "near_tie_action": "Report descriptive flag and resource trade-offs; do not automatically replace quality leader by fastest model. Retain non-dominated same-task/route configurations; if practical near-ties have conflicting class/resource trade-offs report multiple suitable configurations.",
+    "C3_selection_role": "Ranks garment projection quality for upper/lower/shoes among proposed configurations, not proof of body/accessory sufficiency or native-taxonomy superiority.",
+    "C7_selection_role": "Separate joint body/clothing selection among CIHP-compatible configurations; no cross-C3/C7 score pooling. Sapiens body proxy is diagnostic only and cannot satisfy mandatory body capability via C3 score.",
+    "mandatory_capability_status": "USER_DECISION_PENDING: named body regions and named accessories; body interest is confirmed but exact mandatory subset and quality floor are not accepted",
+    "final_selection_gate": "Without accepted mandatory capability profile, issue conditional C3/C7 shortlists and Pareto alternatives only; do not declare a universal downstream winner or infer CCTV readiness.",
+    "uncertainty_vs_margin_cases": [
+      {
+        "point_gap": 0.004,
+        "CI_includes_zero": false,
+        "practical_near_tie": true,
+        "interpretation": "small observed difference despite interval excluding0"
+      },
+      {
+        "point_gap": 0.004,
+        "CI_includes_zero": true,
+        "practical_near_tie": true,
+        "interpretation": "small observed difference and uncertain direction"
+      },
+      {
+        "point_gap": 0.02,
+        "CI_includes_zero": true,
+        "practical_near_tie": false,
+        "interpretation": "large observed gap with uncertain direction; not a practical tie"
+      },
+      {
+        "point_gap": 0.02,
+        "CI_includes_zero": false,
+        "practical_near_tie": false,
+        "interpretation": "large observed gap with interval excluding0"
+      }
+    ],
+    "near_tie_reference": "Pairwise point differences explicitly name both configurations; leader-relative near-tie set uses best observed eligible Q in same task/route/population. Near-tie is not a transitive equivalence relation."
   },
   "resource_caps_proposed": {
     "disk_reserve_gib": 200,
     "minimum_free_gib": 50,
     "max_per_system_artifacts_gib": 80,
     "max_hours_per_checkpoint": 24,
-    "OOM": "record failure; do not change precision/resolution/TTA to finish same run"
+    "OOM": "record failure; do not change precision/resolution/TTA to finish same run",
+    "disk_reserve_kind": "PLANNING_CAPACITY_ENVELOPE_NOT_MEASURED_TOTAL_AND_NOT_GLOBAL_HARD_CAP",
+    "global_artifact_hard_cap_gib": null,
+    "reservation_guaranteed_by_filesystem": false,
+    "per_system_accounting": "Each checkpoint inference stream owns unique physical artifacts once, including associated/native views; shared references do not duplicate bytes. Existing immutable artifacts are baseline occupied disk, not newly allocated output; free-space guard covers total filesystem use.",
+    "cap_coverage": "80 GiB proposed per-checkpoint stream includes its retained packets, attempt logs, temps/cache and attributable new artifacts. Shared new artifacts are charged once in a shared ledger and count toward aggregate capacity; no hidden double-counting or uncharged temporary disk.",
+    "aggregate_feasibility": "7*80=560 GiB potential independent per-stream ceilings exceed planning reserve200 GiB; 200 is not evidence full workload fits. B must estimate aggregate peak and allocate capacity before launch.",
+    "admission_proposal": "If retaining the200 GiB planning envelope, require at least250 GiB free at launch (200 plus untouchable50) and a measured B aggregate peak compatible with available capacity. This does not reserve filesystem blocks against other users.",
+    "stop_policy": "Stop scheduling before estimated next atomic write/temporary peak would breach free50 GiB or owning stream80 GiB; if already below minimum stop immediately/safely preserve outputs. Reaching200 GiB alone is not a global hard stop. Re-estimate capacity and obtain resource decision if B cannot support planned envelope; never delete evidence to continue.",
+    "B_measurements": [
+      "serialized per-frame/ROI/native-person artifact bytes and native count distribution",
+      "native/final view reuse versus genuine copies and compression observed, not assumed",
+      "metadata/log/attempt/cache growth and shared artifact accounting",
+      "peak temporary plus atomic write scratch and retained-output accumulation",
+      "disk headroom under other users, co-resident T4 memory and clean route times; ETA only after suitable evidence"
+    ],
+    "current_total_storage_estimate_gib": null,
+    "current_ETA": null
   },
   "launch_ready": false,
-  "target_support_policy": "FIXED_TASK_EXPLICIT_UNSUPPORTED"
+  "target_support_policy": "FIXED_TASK_EXPLICIT_UNSUPPORTED",
+  "clarification_work_unit": "proposal-clarification-20261021T063557842659Z",
+  "person_extent_and_ownership": {
+    "route_sources": {
+      "QANet/Sapiens_YOLO_ROI": "Frozen YOLO instance mask, retained even if parser semantic map is empty; final semantics post-clipped to this mask",
+      "M2FP/D2FP_native_and_associated": "Native human-query ownership extent before semantic composition; associated route gates persons by prediction-only association, no extra YOLO pixel clipping",
+      "RPR_native_and_associated": "Union of native per-person non-background semantic labels; no independent silhouette and no filled bbox substitution"
+    },
+    "extent_metric_name": "person_extent_mask_precision_recall_F1",
+    "claim_limit": "Measures final-system extent detection and separation relative to released Human_ids, not standalone parser semantic ownership accuracy. QANet/Sapiens values are inherited from YOLO for the same retained opportunities; RPR extent depends on parsing foreground.",
+    "semantic_ownership_evidence": "Matched per-person semantic IoU plus cross-owner contamination/collisions; matching geometry alone is insufficient; arbitrary ID string renaming is not an error",
+    "contamination_denominator": "Predicted mapped target-labeled pixels on fixed per-person valid scoring domain, summed by person; numerator intersects other eligible GT Human_ids. Also report pixel-weighted pooled ratio, defined-person count and empty-semantic count; do not average undefined persons as zero.",
+    "contamination_zero_denominator": "null/NO_MAPPED_TARGET_PIXELS; empty output still incurs target FN and missed-person effects",
+    "overlapping_or_indistinguishable_extent_limit": "Geometry matching cannot prove physical identity or distinguish indistinguishable extent assignments; GT is for scoring only",
+    "analytical_cases_are_tests": false,
+    "analytical_cases": [
+      {
+        "case": "semantic-empty, one GT with target support; identical predicted extent",
+        "QANet_Sapiens_M2FP_D2FP": "TP1 FP0 FN0 extent F1=1; semantic Q=0; contamination=null",
+        "RPR": "Empty semantic union gives no nonempty extent: TP0 FP0 FN1, recall/F1=0, precision=null; Q=0. Empty-entry policy must be made explicit in B, never fabricate silhouette."
+      },
+      {
+        "case": "wrong-person semantics with correctly matched extents",
+        "expected": "Extent F1 can remain1; semantic Q degrades, possibly0. Cross-owner target pixels increase contamination if they survive route clipping. Correct extent does not certify semantics. ID-only permutation changes no score."
+      },
+      {
+        "case": "one GT, two identical correct person predictions",
+        "expected": "TP1 FP1 FN0; precision0.5 recall1 F1=2/3; matched q and Q may remain1, so show FP/F1 beside primary Q; duplicate is not execution failure"
+      },
+      {
+        "case": "one GT/one prediction, sole target label correct on both extents, mask IoU0.60",
+        "expected": "At0.50 TP1 F1=1 Q=0.60; at0.75 TP0 FP1 FN1 F1=0 Q=0. Semantic Q uses actual target unions; extent F1 thresholding is not continuous boundary quality."
+      }
+    ],
+    "contamination_before_after_clipping": "Report unowned pre-clip and final post-clip mapped-target contamination separately with stage/domain denominators. YOLO clipping can suppress measured contamination while deleting true target pixels; show clipped target-labeled area and semantic FN. Low post-clip contamination alone does not prove learned ownership."
+  },
+  "execution_and_prediction_states": {
+    "implementation_status": "DRAFT_ONLY_NOT_IMPLEMENTED_OR_TESTED_IN_THIS_UNIT",
+    "execution_states": [
+      "NOT_ATTEMPTED",
+      "RUNNING",
+      "COMPLETE_VALID",
+      "SKIPPED_BY_ROUTING",
+      "FAILED_MODEL_OOM",
+      "FAILED_MODEL_EXCEPTION",
+      "INVALID_CONTRACT",
+      "INTERRUPTED_EXTERNAL",
+      "INTERRUPTED_UNKNOWN_CAUSE"
+    ],
+    "prediction_dispositions": [
+      "MAPPED_TARGET",
+      "MAPPED_CONTEXT",
+      "RECOGNIZED_UNSUPPORTED",
+      "VALID_EMPTY",
+      "OUT_OF_CATALOG_INVALID"
+    ],
+    "old_ambiguous_name": "UNRESOLVED_PRED is replaced in current design by RECOGNIZED_UNSUPPORTED; old historical evidence is not edited",
+    "completeness": "STRICT_COMPLETE uses all fixed required work for population/config/view; invalid, failed, unresolved execution or unattempted required work makes primary scores null. Recognized unsupported predictions are scoreable and do not break completeness.",
+    "decision_table": [
+      {
+        "execution": "COMPLETE_VALID",
+        "prediction": "MAPPED_TARGET / MAPPED_CONTEXT",
+        "required_work_satisfied": true,
+        "metric": "normal fixed-domain scoring"
+      },
+      {
+        "execution": "COMPLETE_VALID",
+        "prediction": "RECOGNIZED_UNSUPPORTED including Dress/Apparel",
+        "required_work_satisfied": true,
+        "metric": "rejection column; GT target FN; run remains eligible for COMPLETE if all other work valid"
+      },
+      {
+        "execution": "COMPLETE_VALID",
+        "prediction": "VALID_EMPTY",
+        "required_work_satisfied": true,
+        "metric": "retain available extent, score semantic FN and extent-specific FP/FN"
+      },
+      {
+        "execution": "SKIPPED_BY_ROUTING",
+        "prediction": "VALID_EMPTY final route packet under frozen zero-opportunity rule",
+        "required_work_satisfied": "pipeline=true after valid empty export; parser invocation=N/A",
+        "metric": "GT persons remain in coverage/semantic denominators; log skipped parser stage, no parser-success credit"
+      },
+      {
+        "execution": "INVALID_CONTRACT",
+        "prediction": "OUT_OF_CATALOG_INVALID / corrupt geometry / missing required packet fields",
+        "required_work_satisfied": false,
+        "metric": "INCOMPLETE/null primary; never reinterpret as recognized unsupported or empty"
+      },
+      {
+        "execution": "FAILED_MODEL_OOM / FAILED_MODEL_EXCEPTION",
+        "prediction": "none or uncommitted partial",
+        "required_work_satisfied": false,
+        "metric": "INCOMPLETE/null primary; failure evidence retained"
+      },
+      {
+        "execution": "INTERRUPTED_EXTERNAL / INTERRUPTED_UNKNOWN_CAUSE",
+        "prediction": "no committed valid packet",
+        "required_work_satisfied": false,
+        "metric": "not complete while pending; proposed recovery is not automatic authorization"
+      },
+      {
+        "execution": "NOT_ATTEMPTED / RUNNING",
+        "prediction": "none",
+        "required_work_satisfied": false,
+        "metric": "INCOMPLETE until terminal reconciliation; no success-only main scores"
+      }
+    ],
+    "frame_rule": "Every required ROI packet valid, or a frozen-policy routing skip plus valid final empty packet. Eligibility is fixed before outcomes. Parser invocation success, opportunity completion and final pipeline completeness have separate denominators."
+  }
 }
