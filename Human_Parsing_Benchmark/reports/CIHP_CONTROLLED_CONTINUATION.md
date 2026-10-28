@@ -116,7 +116,7 @@ Results, when obtained, are YOLO-associated application native-label metrics, no
 
 ## Current cohort overview
 
-Updated 2026-10-29T01:17:06.425367+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
+Updated 2026-10-29T01:18:51.468951+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
 
 | Model | Status | Complete/5000 | mIoU20 inclBG | FG19 | Segment/resource |
 |---|---|---:|---:|---:|---|
@@ -125,7 +125,7 @@ Updated 2026-10-29T01:17:06.425367+07:00. **4/6 complete**, fields copied from c
 |D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log|
 |RPR_CIHP|COMPLETE|5000|59.124%|57.408%|rpr-cihp-shared-20261028T155439603873Z; SHARED_GPU_QUALITY_ONLY|
 |CPI_R50_CIHP|INCOMPLETE|3|null / unavailable|null / unavailable|cpi-r50-manual-continuation-20261028T175036811629Z; SHARED_GPU_QUALITY_ONLY|
-|CPI_ConvNeXtB_CIHP|READY_FOR_REQUIRED_DIAGNOSTIC_NOT_VALIDATION|0|null / unavailable|null / unavailable|cpi-convnext-shared-20261028T181609262813Z; SHARED_GPU_QUALITY_ONLY|
+|CPI_ConvNeXtB_CIHP|BLOCKED_DIAGNOSTIC_FAILED|0|null / unavailable|null / unavailable|cpi-convnext-shared-20261028T181609262813Z; SHARED_GPU_QUALITY_ONLY|
 
 Not a single execution segment or uncontended timing cohort. Native-label YOLO application scores are not official native-parser reproduction; no clean speed/VRAM ranking. Historical source reports and closed-model outputs are preserved.
 
@@ -226,3 +226,37 @@ Environment `.venvs/parser-legacy-cu113` packagefreezematchreadiness3TRAINเด
 Diagnosticoutputsอยู่rawroot/diagnostic, canonicaloutputsอยู่rawroot/segments/CPI_ConvNeXtB_CIHP ไม่reuseกัน แม้diagnosticผ่าน0000018จะถูกรันcanonicalอีกครั้งตามลำดับปกติ เก็บnativeintegerplanes/extents/scores/metadataและrealnativepipelinegeometryก่อนforward พร้อมpeakallocated/reservedเมื่อทำได้ ไม่อ่านคะแนนdiagnosticเพื่อปรับsettings เวลา/bytesของdiagnosticรวมwarmup/modelsetupนับเป็นreadinesscostและหักจากresourcebudgetก่อนcanonical Controllerเป็นConvNeXt-only sourceที่แยกจากR50; scientificforward/scoringblocksไม่เปลี่ยน Geometryobserverdelegatepipelineโดยคืนobjectเดิม CPUchecks3new+4CPIregression+3progressผ่าน ไม่มีnewGPUinferenceก่อนlaunch
 
 รายงานหลักคือไฟล์นี้ Terminalจะเพิ่มdiagnosticผลจริง/tracebackและfullvalidationcompletionแยก; STRICT_COMPLETE mainnullถ้าไม่ครบ5000 RawartifactsภายนอกGit: `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/` ดูสถานะ `python3 Human_Parsing_Benchmark/scripts/cpi_convnext_progress.py --watch`. Timing/resourceเป็นsharedadapterdiagnostics รวมnativeCPIfileI/O ไม่ใช่cleanparser-only/end-to-end speedหรือmemoryranking
+
+## CPI-Parser ConvNeXt-B CIHP shared-GPU round — terminal 2026-10-29T01:18:51.463231+07:00
+
+**BLOCKED_DIAGNOSTIC_FAILED**, model `CPI_ConvNeXtB_CIHP` (CPI-Parser ConvNeXt-B CIHP). Parent `cihp-native-six-20261028T034103254470Z` / segment `cpi-convnext-shared-20261028T181609262813Z`. Launch commit `1b05ee49c13c57cb388511dc010ff047b61d770f`. Checkpoint `models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth`, SHA256 `25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5`; native config `third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py` / SHA256 `3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117`; source commit `d62cae523ba913fec4a7fda5816bc1d96bbf644d`; environment `.venvs/parser-legacy-cu113`. Frozen scientific config unchanged; effective resource policy is explicit **SHARED_GPU_QUALITY_ONLY** override.
+
+StartedUTC `2026-10-28T18:18:28.355692+00:00`, endedUTC `2026-10-28T18:18:51.449590+00:00`, checkedUTC `2026-10-28T18:18:51.463206+00:00` / Bangkok `2026-10-29T01:18:51.463231+07:00`. Completed/expected 0/5000; failed 0, invalid 0, not-attempted 5000, missing IDs 5000, duplicate IDs 0. Main native20mIoU inclBG **null / STRICT_COMPLETE not met**, FG19 **null / STRICT_COMPLETE not met**. No cross-model ranking.
+
+[Canonical completion](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/COMPLETION.json), [summary](../metrics/cpi-convnext-shared-20261028T181609262813Z/SUMMARY.csv), [per-class](../metrics/cpi-convnext-shared-20261028T181609262813Z/PER_CLASS.csv). Person metrics at0.50/0.75 and native-reference metrics are in canonical completion when complete. Historical EXTERNAL_GPU_BUSY setup attempts are preserved separately; this segment setup status `PASS` is distinct from VAL failures. Error `Traceback (most recent call last):
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py", line 121, in execute_diagnostic_then_validation
+    audit=validate_folder(diagnostic,cfg,pop,det,root/'diagnostic_audit',plan['config_sha256']);assert audit['verified_ids']==['0000018'];packet=diagnostic/'packets/0000018';meta=json.loads((packet/'packet.json').read_text());schema={}
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py", line 17, in validate_folder
+    mid=folder.name; spec=config['models'][mid]
+KeyError: 'diagnostic'
+`.
+
+Scientific policy: CIHP official5000IDs/native20, frozen YOLO cache, native preprocessing/TTA, FP32, association/ownership/scoring unchanged. Only GPU admission policy differs: coexistence allowed by current user direction; original frozen config is retained, not silently edited. This is a YOLO-associated application pipeline, not an official native-parser benchmark reproduction. Timing is shared-GPU adapter diagnostics, including CPI native JPEG decoding and PNG writes/re-reads inside the native API; GT scoring/global semantic composition and canonical packet export remain outside. Not clean parser-only/end-to-end speed ranking; no contention-free claim or quality transfer guarantee. Hard labels/stored ownership retained; full probabilities/native confidence outputs are not all recoverable.
+
+Checks: {'diagnostic': 'FAILED', 'canonical_validation': 'NOT_STARTED', 'no_other_models': True}. Original model/OOM retry0, no CPU/FP16 fallback. Raw logs/packets/ledgers/audit under `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z`; use ROUND_STATUS.json for terminal state. Queue contains only CPI ConvNeXt-B and has stopped; no R50/matrix/Sapiens/color/training. Next inspect failures if incomplete or review this model's canonical report if complete; no automatic retry or next-model launch.
+
+## CPI ConvNeXt-B — diagnostic และสถานะรอบนี้
+
+ใช้ checkpoint/config ของ `CPI_ConvNeXtB_CIHP` เท่านั้น ไม่ใช่ R50; R50พักไว้และเก็บ3successful IDs/สองfailure attempts/คะแนนหลักnullเหมือนเดิม รอบ `cpi-convnext-shared-20261028T181609262813Z` ใช้ SHARED_GPU_QUALITY_ONLY ที่ผู้ใช้อนุมัติโดยตรง ไม่เปลี่ยนFP32/resolution/TTA/threshold0.05/batch/YOLOcache/ownership/GT/scorer และไม่แตะGPUprocessอื่น
+
+Diagnostic0000018 **FAILED** หลังTRAINwarmupตามprotocol; เวลาไทยเริ่ม `2026-10-29T01:18:28.355692+07:00` / จบ `2026-10-29T01:18:51.446616+07:00`. Geometry `[{'source': '0000930.jpg', 'native_pipeline_geometry': [{'ori_shape': [346, 500, 3], 'img_shape': [800, 1156, 3], 'pad_shape': [800, 1184, 3], 'scale_factor': [2.312000036239624, 2.312138795852661, 2.312000036239624, 2.312138795852661], 'flip': False}]}, {'source': '0000018.jpg', 'native_pipeline_geometry': [{'ori_shape': [375, 500, 3], 'img_shape': [800, 1067, 3], 'pad_shape': [800, 1088, 3], 'scale_factor': [2.134000062942505, 2.133333444595337, 2.134000062942505, 2.133333444595337], 'flip': False}]}]`; peak `{'peak_allocated_MiB': 4618.3837890625, 'peak_reserved_MiB': 8484.0, 'scope': 'Last native forward after worker reset; on setup failure may include model load/warmup; shared diagnostics only'}` เป็นshared diagnostics ผลnative mask/NPZ/metadata contract `FAIL_PRESERVE_OUTPUT_NO_VALIDATION`; error `Traceback (most recent call last):
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py", line 121, in execute_diagnostic_then_validation
+    audit=validate_folder(diagnostic,cfg,pop,det,root/'diagnostic_audit',plan['config_sha256']);assert audit['verified_ids']==['0000018'];packet=diagnostic/'packets/0000018';meta=json.loads((packet/'packet.json').read_text());schema={}
+  File "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py", line 17, in validate_folder
+    mid=folder.name; spec=config['models'][mid]
+KeyError: 'diagnostic'
+`. [รายละเอียดdiagnostic](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/DIAGNOSTIC_RESULT.json) ระบุinput/transformedgeometryและtracebackที่ตรวจได้ ไม่ใช้คะแนนdiagnosticปรับsettingsหรือรวมcanonicalmetrics
+
+Full validation status **BLOCKED_DIAGNOSTIC_FAILED**, complete0/5000,failedVAL0,invalid0,notattempted5000,missing5000,duplicate0. DiagnosticfailureแยกจากVALfailure; ถ้าdiagnosticไม่ผ่านไม่มีcanonicalVALinference ถ้าผ่านcanonical0000018ยังต้องรันตามลำดับpopulationปกติ ไม่reusepacketdiagnostic การผ่านหนึ่งภาพไม่รับรองทุกภาพ ค่าdiagnosticwallclock23.091s/bytes463932ถูกคิดแยกและนำเข้าบัญชีresource24h/80GiB; คงfree-spaceguard50GiBและautomaticretry0
+
+ผลเป็นYOLO-associated application pipelineบนnativeCIHPlabels ไม่ใช่officialnative-parser reproduction STRICT_COMPLETEคะแนนหลักnullหากไม่ครบ TimingรวมCPI internalJPEGdecode/nativePNGwrites/re-reads เป็นadapter diagnostics ไม่ใช่parser-only/end-to-end latency/FPS/VRAMranking No R50/matrix/Sapiens/color/training. Rawlogs/packets/geometry/peakอยู่ `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z` และREPORT/STATUSนี้เป็นจุดเริ่มอ่าน ไม่รันแก้OOMยาวหรือเปลี่ยนวิธีคำนวณในรอบนี้

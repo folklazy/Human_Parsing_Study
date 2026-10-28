@@ -1,0 +1,84 @@
+{
+  "status": "FAILED",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "image_id": "0000018",
+  "canonical_eligible": false,
+  "start_utc": "2026-10-28T18:18:28.355692+00:00",
+  "start_Bangkok": "2026-10-29T01:18:28.355692+07:00",
+  "end_Bangkok": "2026-10-29T01:18:51.446616+07:00",
+  "wallclock_seconds": 23.09089693799615,
+  "worker_exit_code": 0,
+  "warmup_images": [
+    "0000930"
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py\", line 121, in execute_diagnostic_then_validation\n    audit=validate_folder(diagnostic,cfg,pop,det,root/'diagnostic_audit',plan['config_sha256']);assert audit['verified_ids']==['0000018'];packet=diagnostic/'packets/0000018';meta=json.loads((packet/'packet.json').read_text());schema={}\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py\", line 17, in validate_folder\n    mid=folder.name; spec=config['models'][mid]\nKeyError: 'diagnostic'\n",
+  "traceback": null,
+  "contract_check": "FAIL_PRESERVE_OUTPUT_NO_VALIDATION",
+  "native_score_threshold": 0.05,
+  "geometry": [
+    {
+      "source": "0000930.jpg",
+      "native_pipeline_geometry": [
+        {
+          "ori_shape": [
+            346,
+            500,
+            3
+          ],
+          "img_shape": [
+            800,
+            1156,
+            3
+          ],
+          "pad_shape": [
+            800,
+            1184,
+            3
+          ],
+          "scale_factor": [
+            2.312000036239624,
+            2.312138795852661,
+            2.312000036239624,
+            2.312138795852661
+          ],
+          "flip": false
+        }
+      ]
+    },
+    {
+      "source": "0000018.jpg",
+      "native_pipeline_geometry": [
+        {
+          "ori_shape": [
+            375,
+            500,
+            3
+          ],
+          "img_shape": [
+            800,
+            1067,
+            3
+          ],
+          "pad_shape": [
+            800,
+            1088,
+            3
+          ],
+          "scale_factor": [
+            2.134000062942505,
+            2.133333444595337,
+            2.134000062942505,
+            2.133333444595337
+          ],
+          "flip": false
+        }
+      ]
+    }
+  ],
+  "peak_memory": {
+    "peak_allocated_MiB": 4618.3837890625,
+    "peak_reserved_MiB": 8484.0,
+    "scope": "Last native forward after worker reset; on setup failure may include model load/warmup; shared diagnostics only"
+  },
+  "retained_bytes": 463932
+}

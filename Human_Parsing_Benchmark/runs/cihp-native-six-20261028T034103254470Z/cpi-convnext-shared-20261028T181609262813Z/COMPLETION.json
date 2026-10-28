@@ -1,0 +1,132 @@
+{
+  "status": "BLOCKED_DIAGNOSTIC_FAILED",
+  "round_id": "cpi-convnext-shared-20261028T181609262813Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "expected": 5000,
+  "complete": 0,
+  "controller_PID": 179488,
+  "start_utc": "2026-10-28T18:18:28.355692+00:00",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "queue": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "worker_PID": 179492,
+  "failed": 0,
+  "invalid": 0,
+  "not_attempted": 5000,
+  "missing_IDs": 5000,
+  "duplicate_IDs": 0,
+  "queue_stopped": true,
+  "setup_status": "PASS",
+  "diagnostic_failed": 1,
+  "error_reason": "Traceback (most recent call last):\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py\", line 121, in execute_diagnostic_then_validation\n    audit=validate_folder(diagnostic,cfg,pop,det,root/'diagnostic_audit',plan['config_sha256']);assert audit['verified_ids']==['0000018'];packet=diagnostic/'packets/0000018';meta=json.loads((packet/'packet.json').read_text());schema={}\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py\", line 17, in validate_folder\n    mid=folder.name; spec=config['models'][mid]\nKeyError: 'diagnostic'\n",
+  "end_utc": "2026-10-28T18:18:51.449590+00:00",
+  "launch_commit": "1b05ee49c13c57cb388511dc010ff047b61d770f",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+  "environment": ".venvs/parser-legacy-cu113",
+  "closure_utc": "2026-10-28T18:18:51.463206+00:00",
+  "closure_Bangkok": "2026-10-29T01:18:51.463231+07:00",
+  "checks": {
+    "diagnostic": "FAILED",
+    "canonical_validation": "NOT_STARTED",
+    "no_other_models": true
+  },
+  "metrics": {
+    "primary": null
+  },
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z",
+  "limitations": [
+    "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+    "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+    "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+    "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export.",
+    "Shared GPU quality-only execution; latency/free VRAM/other workloads can vary. No timing ranking."
+  ],
+  "new_other_model_jobs": 0,
+  "diagnostic": {
+    "status": "FAILED",
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "image_id": "0000018",
+    "canonical_eligible": false,
+    "start_utc": "2026-10-28T18:18:28.355692+00:00",
+    "start_Bangkok": "2026-10-29T01:18:28.355692+07:00",
+    "end_Bangkok": "2026-10-29T01:18:51.446616+07:00",
+    "wallclock_seconds": 23.09089693799615,
+    "worker_exit_code": 0,
+    "warmup_images": [
+      "0000930"
+    ],
+    "error": "Traceback (most recent call last):\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py\", line 121, in execute_diagnostic_then_validation\n    audit=validate_folder(diagnostic,cfg,pop,det,root/'diagnostic_audit',plan['config_sha256']);assert audit['verified_ids']==['0000018'];packet=diagnostic/'packets/0000018';meta=json.loads((packet/'packet.json').read_text());schema={}\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py\", line 17, in validate_folder\n    mid=folder.name; spec=config['models'][mid]\nKeyError: 'diagnostic'\n",
+    "traceback": null,
+    "contract_check": "FAIL_PRESERVE_OUTPUT_NO_VALIDATION",
+    "native_score_threshold": 0.05,
+    "geometry": [
+      {
+        "source": "0000930.jpg",
+        "native_pipeline_geometry": [
+          {
+            "ori_shape": [
+              346,
+              500,
+              3
+            ],
+            "img_shape": [
+              800,
+              1156,
+              3
+            ],
+            "pad_shape": [
+              800,
+              1184,
+              3
+            ],
+            "scale_factor": [
+              2.312000036239624,
+              2.312138795852661,
+              2.312000036239624,
+              2.312138795852661
+            ],
+            "flip": false
+          }
+        ]
+      },
+      {
+        "source": "0000018.jpg",
+        "native_pipeline_geometry": [
+          {
+            "ori_shape": [
+              375,
+              500,
+              3
+            ],
+            "img_shape": [
+              800,
+              1067,
+              3
+            ],
+            "pad_shape": [
+              800,
+              1088,
+              3
+            ],
+            "scale_factor": [
+              2.134000062942505,
+              2.133333444595337,
+              2.134000062942505,
+              2.133333444595337
+            ],
+            "flip": false
+          }
+        ]
+      }
+    ],
+    "peak_memory": {
+      "peak_allocated_MiB": 4618.3837890625,
+      "peak_reserved_MiB": 8484.0,
+      "scope": "Last native forward after worker reset; on setup failure may include model load/warmup; shared diagnostics only"
+    },
+    "retained_bytes": 463932
+  }
+}

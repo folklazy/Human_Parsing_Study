@@ -167,3 +167,7 @@ Launchcommitdd02e228ebd215c034a785d41ea459f7db336bfd, controller166181/worker166
 ## 2026-10-29T01:17:06.416805+07:00 — cpi-convnext-shared-20261028T181609262813Z: ConvNeXt-only diagnostic-gated readiness
 
 CurrentuserpausesR50andexplicitlyauthorizesConvNeXtsharedqualitydiagnostic0000018thenfull5000onlyifPASS. Process/GPU/currentnativeinventorychecked:0ConvNeXtVAL,externalPID126277/free13173MiB,notgatedbyPID. Checkpoint1.301GBfullSHA/nativeconfig/source/frozensources/packagefreezeverified,prior3TRAINreadinessreused.3newCPUcases(scope/frozenblocks,observeridentity,failed-diagnosticnoVAL)+4CPIregression+3progressPASS. Noinferenceyet. Separateobserver/diagnosticmanifestandbyte/timeaccounting,nooutputreuseorparameterchanges;onecheckpointqueue. Updatecanonicaloverviewfromreadinessonly,retain4closed/R50null/history. Nextcommit/pushthenoneboundeddiagnosticandconditionaldetachedVALlaunch.
+
+## 2026-10-29T01:18:51.463231+07:00 — cpi-convnext-shared-20261028T181609262813Z: CPI ConvNeXt-B-only terminal
+
+StatusBLOCKED_DIAGNOSTIC_FAILED, complete0/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no ConvNeXt/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.

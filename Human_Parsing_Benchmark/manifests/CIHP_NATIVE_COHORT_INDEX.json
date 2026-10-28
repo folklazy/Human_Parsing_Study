@@ -1,18 +1,18 @@
 {
   "kind": "DERIVED_NAVIGATION_OVERVIEW_NOT_NEW_EXPERIMENT",
-  "updated_Bangkok": "2026-10-29T01:17:06.425367+07:00",
+  "updated_Bangkok": "2026-10-29T01:18:51.468951+07:00",
   "parent_run_id": "cihp-native-six-20261028T034103254470Z",
   "complete_models": 4,
   "cohort_model_count": 6,
   "current_authorized_model": "CPI_ConvNeXtB_CIHP",
-  "current_round_status": "READY_FOR_REQUIRED_DIAGNOSTIC_NOT_VALIDATION",
+  "current_round_status": "BLOCKED_DIAGNOSTIC_FAILED",
   "metric_copy_only_no_rescoring": true,
   "sorted_by": "frozen roster order, not scores",
   "population": "Native CIHP officialVAL5000 per model",
   "frozen_scientific_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
   "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
   "CSV": "metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
-  "CSV_sha256": "57fe5f9dbb19001a45af28ce53ba34c4c1adb3f283643b6449bbd3786b8c2c3c",
+  "CSV_sha256": "ffa33fe0763e06d6ece55ad4d1e9c5c130e4a05e68b39070d3aabe941a3e84a9",
   "models": [
     {
       "model_id": "QANet_CIHP_HRNetW48_512x384",
@@ -96,7 +96,7 @@
     },
     {
       "model_id": "CPI_ConvNeXtB_CIHP",
-      "status": "READY_FOR_REQUIRED_DIAGNOSTIC_NOT_VALIDATION",
+      "status": "BLOCKED_DIAGNOSTIC_FAILED",
       "expected_IDs": 5000,
       "complete": 0,
       "failed_VAL": 0,
@@ -106,8 +106,8 @@
       "mIoU_19_foreground": null,
       "resource_policy": "SHARED_GPU_QUALITY_ONLY",
       "execution_segment_or_record": "cpi-convnext-shared-20261028T181609262813Z",
-      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/READINESS.json",
-      "canonical_source_sha256": "6efea6a7c967218624319c5ad2e079e8e52dc97682f6f638093ff3b07cf54f95",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/COMPLETION.json",
+      "canonical_source_sha256": "bcc8762e4628244143ae076964a0cb775f2a38b9bca6df8792566c7e965f2c4c",
       "timing_rank_eligible": false
     }
   ],

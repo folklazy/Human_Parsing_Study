@@ -1,0 +1,2 @@
+status,expected,complete,failed,invalid,not_attempted,duplicate_IDs,missing_IDs,model_id,mIoU_20,mIoU_FG19,timing_rank_eligible
+BLOCKED_DIAGNOSTIC_FAILED,5000,0,0,0,5000,0,5000,CPI_ConvNeXtB_CIHP,,,False
