@@ -1,4 +1,4 @@
-> **Current operational round: D2FP COMPLETE, queue STOPPED.** D2FP has5,000 verified validation IDs and0 remaining. No new inference or other-model round is authorized by the historical six-model plan. See [STATUS](STATUS.md) and [D2FP closure](runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json).
+> **Current operational round: RP-R-CNN CIHP — resource BLOCKED.** No worker/controller launched; existing VAL0, remaining5,000. See [STATUS](STATUS.md) and the RP-R-CNN section of the [continuation report](reports/CIHP_CONTROLLED_CONTINUATION.md). RPR-only execution is authorized when readiness/resource policy passes; CPI/matrix/Sapiens/color remain excluded. D2FP stays complete.
 
 # Human Parsing Benchmark
 

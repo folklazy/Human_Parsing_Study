@@ -1,3 +1,7 @@
+# Current operational scope — RP-R-CNN only, resource BLOCKED
+
+Latest user authorizes RPR_CIHP readiness and native-CIHP5000 execution when frozen resource policy passes, then stop before CPI. Read Human_Parsing_Benchmark/STATUS.md and its RP-R-CNN report section. Current round is BLOCKED by external GPU compute occupancy; no worker/controller/wait loop was launched. Do not weaken resource policy, stop other jobs, auto-retry, or use the historical six-model queue. Later continuation can proceed within RPR-only authorization after actual readiness passes; no CPI/matrix/Sapiens/color/training. D2FP remains complete. This supersedes the older D2FP-only operational scope below, not its preserved results.
+
 # Latest operational scope — D2FP-only round CLOSED
 
 Read Human_Parsing_Benchmark/STATUS.md and runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json (under Human_Parsing_Benchmark). D2FP has5,000 verified IDs; no IDs remain and the old controller/monitor have exited. Do not relaunch historical controllers, retry RPR/CPI, or start matrix/Sapiens/color from old config flags. Await a new explicit scoped instruction. Historical attempts/results and frozen scientific config/source remain unchanged. This current scope supersedes broader execution permissions documented below.

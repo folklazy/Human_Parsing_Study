@@ -64,6 +64,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/M2FP_R101_CIHP.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/QANet_CIHP_HRNetW48_512x384.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/RPR_CIHP.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -632,6 +633,7 @@ publication/RELEASE_PRECHECK.json
 publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_CREATION.json
 publication/REPOSITORY_VALIDATION.json
+publication/RPR_CIHP_PREFLIGHT_BLOCKED_20261028.json
 publication/SOURCE_COPY_MANIFEST.json
 publication/SPECIFICATION_HANDOFF_20261021T092521331823Z.json
 publication/VALIDATION_SCOPE.md

@@ -18,3 +18,7 @@ Start with currentPLAN and adopted proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_
 ## Latest operational authorization — D2FP only, complete
 
 Read current STATUS and D2FP_ROUND_CLOSURE.json. D2FP has5000 verified IDs and no IDs remaining. No new inference is needed/authorized. Previous controller and monitor have exited. Do not relaunch historical six-model controllers or retry RPR/CPI from old flags; matrix/Sapiens/color are not authorized. Frozen scientific config/source and old results remain unchanged. Only a new explicit scoped instruction may authorize another model round.
+
+## Latest scope — RP-R-CNN only, current round resource-BLOCKED
+
+The user now authorizes RPR_CIHP readiness/run when the frozen no-contention resource gate passes; stop before CPI. This supersedes D2FP-only execution scope but preserves D2FP closure/results. Current STATUS records external GPU occupancy and no launch. End blocked without polling or touching other jobs. On later continuation recheck real GPU/process/artifacts; never launch the broad historical controller or auto-retry other models. No CPI/matrix/Sapiens/color/training.
