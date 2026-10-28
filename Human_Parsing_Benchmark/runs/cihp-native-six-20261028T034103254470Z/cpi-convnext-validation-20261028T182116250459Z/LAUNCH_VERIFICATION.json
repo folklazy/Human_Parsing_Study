@@ -1,0 +1,136 @@
+{
+  "status": "RUNNING",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "expected": 5000,
+  "complete": 50,
+  "failed": 0,
+  "invalid": 0,
+  "not_attempted": 4950,
+  "round_id": "cpi-convnext-validation-20261028T182116250459Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "checked_Bangkok": "2026-10-29T01:24:02.820843+07:00",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+  "launch_commit": "c4f8e7611ac5783e151436538aef4b8706e90f46",
+  "controller_PID": 181956,
+  "worker_PID": 181963,
+  "detached_controller_PPID": 1,
+  "detached_session_ID": 181956,
+  "diagnostic": "PASS_ONE_GPU_INFERENCE_ONLY_SAVED_PACKET_RECONCILED",
+  "diagnostic_contract_integration_bug_preserved_in_prior_round": true,
+  "canonical_diagnostic_reuse": false,
+  "diagnostic_ID_canonical_attempt": {
+    "image_id": "0000018",
+    "attempt_id": "cpi-convnext-validation-20261028T182116250459Z:0000018:1",
+    "status": "COMPLETE",
+    "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP/packets/0000018"
+  },
+  "first_packet": {
+    "image_id": "0000001",
+    "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP/packets/0000001",
+    "packet_sha256": "162020d14ec55ecbca8462a03bf6ada1750c577d81386ad0cb2c5a0f1126d7ac",
+    "original_wh": [
+      500,
+      375
+    ],
+    "schema": {
+      "person_semantic_masks": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "uint8"
+      },
+      "person_extents": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "person_scores": {
+        "shape": [
+          4
+        ],
+        "dtype": "float32"
+      },
+      "bboxes_xyxy": {
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "native_person_semantic_masks": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "uint8"
+      },
+      "native_person_extents": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "native_person_scores": {
+        "shape": [
+          4
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_person_semantic_masks": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "uint8"
+      },
+      "raw_native_person_extents": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "raw_native_person_scores": {
+        "shape": [
+          4
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_bboxes_xyxy": {
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32"
+      }
+    },
+    "native_labels_integer_0_to_19": "PASS",
+    "NPZ_all_members_decoded_CRC": "PASS",
+    "model_checkpoint_config_geometry_resource_metadata": "PASS",
+    "scores_present": [
+      "score_0.5.json",
+      "score_0.75.json",
+      "native_reference_score.json"
+    ]
+  },
+  "all_frozen_scientific_source_bindings_unchanged": true,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "timing_ranking_allowed": false,
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z",
+  "queue": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "automatic_restarts": 0,
+  "primary_metrics": null
+}

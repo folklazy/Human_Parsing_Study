@@ -116,7 +116,7 @@ Results, when obtained, are YOLO-associated application native-label metrics, no
 
 ## Current cohort overview
 
-Updated 2026-10-29T01:22:01.056356+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
+Updated 2026-10-29T01:24:46.791315+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
 
 | Model | Status | Complete/5000 | mIoU20 inclBG | FG19 | Segment/resource |
 |---|---|---:|---:|---:|---|
@@ -125,7 +125,7 @@ Updated 2026-10-29T01:22:01.056356+07:00. **4/6 complete**, fields copied from c
 |D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log|
 |RPR_CIHP|COMPLETE|5000|59.124%|57.408%|rpr-cihp-shared-20261028T155439603873Z; SHARED_GPU_QUALITY_ONLY|
 |CPI_R50_CIHP|INCOMPLETE|3|null / unavailable|null / unavailable|cpi-r50-manual-continuation-20261028T175036811629Z; SHARED_GPU_QUALITY_ONLY|
-|CPI_ConvNeXtB_CIHP|DIAGNOSTIC_PASS_READY_FOR_CANONICAL_VALIDATION|0|null / unavailable|null / unavailable|cpi-convnext-validation-20261028T182116250459Z; SHARED_GPU_QUALITY_ONLY|
+|CPI_ConvNeXtB_CIHP|RUNNING|50|null / unavailable|null / unavailable|cpi-convnext-validation-20261028T182116250459Z; SHARED_GPU_QUALITY_ONLY|
 
 Not a single execution segment or uncontended timing cohort. Native-label YOLO application scores are not official native-parser reproduction; no clean speed/VRAM ranking. Historical source reports and closed-model outputs are preserved.
 
@@ -268,3 +268,13 @@ Full validation status **BLOCKED_DIAGNOSTIC_FAILED**, complete0/5000,failedVAL0,
 แก้เฉพาะorchestration directorybinding (futurediagnosticอยู่diagnostic/modelID) และเพิ่มhash-bound validation-only gateเพื่อใช้diagnosticที่ตรวจแล้ว ไม่rerun diagnostic ไม่เปลี่ยนcheckpoint/scientificconfig/FP32/nativepipeline/threshold.05 ตรวจexistingpacketผ่านNPZCRC/hash/model/checkpoint/input/GT/config/YOLO/evaluationbindingsและsavedmaskrescore0.50/0.75/native-reference จาก model-named read-only filesystemview Nativeintegerplanes0–19/originalgeometry500×375 ผ่าน, native26entries/final12people (เป็นoutputcountไม่ใช่accuracyclaim); transformed800×1067/padded800×1088; peakallocated4618.384MiB/reserved8484MiBภายใต้sharedGPU
 
 Freshcanonicalsegment `cpi-convnext-validation-20261028T182116250459Z` เชื่อมdiagnosticเดิมใน [verified diagnostic evidence](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/DIAGNOSTIC_RESULT.json), [readiness](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/READINESS.json), [plan](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/SEGMENT_PLAN.json), [policy](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/RESOURCE_POLICY.json) Canonical pending5000/reuse0 รวม0000018ตามลำดับปกติ ไม่รวมdiagnosticpacketเป็นคะแนน นับต้นทุนdiagnostic23.091sและCPUverification/retainedartifactsในresourcebudgetเดิม Launcherยังตรวจhashgateก่อนเปิดGPU Source/config/scoringเดิมไม่แก้; targeted4CPUcasesรวมno-canonical-afterfailure,transparentobserverและsaveddiagnosticidentity/eligibilityผ่าน NoR50/matrix/Sapiens/color/training
+
+## CPI ConvNeXt-B — canonical validation เปิดแล้ว (2026-10-29T01:24:46.786838+07:00)
+
+Diagnostic0000018 **PASS** จากinferenceครั้งเดียวและsavedpacketverificationที่แก้checkerbindingแล้ว Fullvalidationofficial5000เปิดใน `cpi-convnext-validation-20261028T182116250459Z` เมื่อ29ต.ค.2026 **01:22:56 เวลาไทย**; launchcommit `c4f8e7611ac5783e151436538aef4b8706e90f46`. DetachedcontrollerPID/SID **181956**, PPID1; workerPID **181963** ตรวจcmdline/modelscopeจริงและยืนยันอยู่ต่อหลังlaunchshellจบ
+
+ณ `2026-10-29T01:24:02.820843+07:00` พบcanonicalcomplete **50/5000**, failed0/invalid0 ไม่ใช่ผลครบประชากร คะแนนหลักยังnullจนSTRICT_COMPLETEผ่าน ตรวจfirstpacket0000001NPZallmembers/CRC/hash/nativeinteger0–19/originalgeometry/model/checkpoint/config/resource/GTnotusedinprediction/scorefiles0.50และ0.75/native-referenceผ่าน และcanonical0000018มีattemptใหม่ของsegmentนี้ **COMPLETE** แล้ว ไม่reuse diagnosticpacket ไม่อ่านคะแนนจัดอันดับหรือตั้งค่าใหม่
+
+[Launch verification](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/LAUNCH_VERIFICATION.json) / [verifieddiagnostic](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/DIAGNOSTIC_RESULT.json) / [plan](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/SEGMENT_PLAN.json). Rawroot `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/` มีROUND_STATUS.json, WORKER.log, CONTROLLER.log, GPU_HEALTH.jsonl, segments/CPI_ConvNeXtB_CIHP/FRAMES.jsonl และpackets Terminalcontrollerจะตรวจexpected/completed/missing/duplicate/failed/invalid,NPZ/hash/GT/saved-maskrescore,สร้างcompletion/summaryและเพิ่มรายงานนี้อัตโนมัติ หากerrorหยุดตามpolicyไม่autoretry/fallback/โมเดลอื่น; sharedCPIinternalI/Otimingเป็นdiagnosticsเท่านั้น
+
+ดูprogress `python3 Human_Parsing_Benchmark/scripts/cpi_convnext_progress.py --watch` แยกINFERENCEกับVALIDATING_ARTIFACTS;100%inferenceไม่ใช่ปิดรอบ ต้องรอterminalCOMPLETEและqueue_stopped R50ยังพักที่3success/twoOOMattempts/mainnull NoR50/matrix/Sapiens/color/training เอกสารส่วนนี้เป็นlaunchsnapshotไม่รับรองว่าประชากรเต็มจะผ่าน
