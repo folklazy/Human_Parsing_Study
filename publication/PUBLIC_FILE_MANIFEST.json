@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 3351,
-      "sha256": "6209b741b7de95de920d148892bcb594eacbb11bbf7a57d8e106fb60a0c131bc"
+      "bytes": 3858,
+      "sha256": "a609848c7b2442ee1a585d7d88dffb2a08bf690ac6cc260ea0aff797d93efbd5"
     },
     {
       "path": "ARTIFACTS.md",
@@ -45,28 +45,33 @@
     },
     {
       "path": "Human_Parsing_Benchmark/AGENTS.md",
-      "bytes": 2324,
-      "sha256": "4084754fbd2e480d0bcc4ebe13dc3ffaf87fbc40125fbb479bba2f3a470190e0"
+      "bytes": 2886,
+      "sha256": "f6ed2afd5f5330282165c71d1ee30bd098f89e552d05e1591862a51ea4f421f5"
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 72663,
-      "sha256": "cc7bf4f49f59ecedb164ec3319bba6380c9d0b18ea63134e75528779877516d1"
+      "bytes": 6208,
+      "sha256": "000f169a733f2a08f0e88836a4ae98b2ab810b576f96f1f9e8d55f15577e0e35"
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 10102,
-      "sha256": "dd7554c0eefe01df4d044de16fbe0467c3d77a3e37c85b211018911a0bccfffe"
+      "bytes": 10876,
+      "sha256": "dfd18ced9a1ef041cd95ec1f0cf6e987ad6070215492f189f131baf01de3b644"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 4365,
-      "sha256": "32a867c2f10dae364a0b8bbf5b5385c33f3541cb4dcd650aac40c64fcad39d21"
+      "bytes": 1566,
+      "sha256": "a1d5a422f68e16ff176f5f12003156ab6ce416e3c0be8310d88c90e2340bbfbb"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 10939,
-      "sha256": "5c04db5b7e98d15d37317584446e53979f2e7610c3e484836fbf7b5bd200cfc4"
+      "bytes": 12194,
+      "sha256": "87f40ec6b8fecb1caf729547ee1f8c4c8632ac7882815ed14860a48b7beaad30"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
+      "bytes": 14530,
+      "sha256": "8c51783ab2a4633ab4a5a833a5c4b8132719fa48558b02e8b984d2efb2bb243e"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
@@ -75,8 +80,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
-      "bytes": 10504,
-      "sha256": "89e10bf3a3847b6ad2de1c2629989dcffdb89477ea87ce31fa5546b77fd1d4e7"
+      "bytes": 11195,
+      "sha256": "f053088f67aa4ce51d72d0734e233d9e754122376fdf6588c1b1114b475b314b"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md",
@@ -99,9 +104,19 @@
       "sha256": "217c2420000ffc17bd0aa3a8699198023139ba2b2bdeeeca3f977f3b338592a5"
     },
     {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json",
+      "bytes": 402,
+      "sha256": "01823952c18bfa5a0bc3e550f2bf79bd539d17943afd98145ab96504e75a78bf"
+    },
+    {
       "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json",
       "bytes": 4138,
       "sha256": "6a6c61dedd263ec3a08e0d8e496e7adcf7976701076e00878cab0ac71e0b1d64"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json",
+      "bytes": 1895656,
+      "sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json",
@@ -120,13 +135,18 @@
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json",
-      "bytes": 26748,
-      "sha256": "de28324db7555dcbad7179f9f9f22da5cdb3bbad386358c8ace92fa544d4122a"
+      "bytes": 26998,
+      "sha256": "561b61ff8a347284178bf5a1e7e53ffc99bd445dec5211c4476549468161d9dd"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json",
-      "bytes": 9576,
-      "sha256": "c022bdafc55ab26958546859dabc0512b2bb292924986b5946764d0cf87d8a73"
+      "bytes": 9822,
+      "sha256": "25f5a47fe9360e08e8146c21cfaebfca358ee082aa38484f918998e2fae09efd"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
+      "bytes": 36724,
+      "sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b"
     },
     {
       "path": "Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
@@ -135,8 +155,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json",
-      "bytes": 65585,
-      "sha256": "09266ce77c7840d2bbfed543dc3699c35f71e4c00bdeff27c382b304fdf151d2"
+      "bytes": 65846,
+      "sha256": "0bcdabcf5947f7d79903b47c65f883ca33d60ce55fc8404cf880332c61f939d7"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
@@ -147,6 +167,11 @@
       "path": "Human_Parsing_Benchmark/registry/CHECKPOINT_ROUTE_REVIEW.csv",
       "bytes": 10084,
       "sha256": "4a705afc7fd7c1a49c8fd41d251e6f26f5a8eec33d60191e7e0108c9dfe75030"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/registry/CIHP_NATIVE_ROSTER.csv",
+      "bytes": 4025,
+      "sha256": "dfe25ca544a4135bb90bc619a664cef27b05150cdf75b59f8c484e29c237f701"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv",
@@ -174,9 +199,19 @@
       "sha256": "c99dfd8b5b67a45a71756a4ae1335dde90882638e91192a3c6e982421658554e"
     },
     {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md",
+      "bytes": 6516,
+      "sha256": "08c98a6b673f22a9e36e1a7ef73f19f2d2bd6683fe080caf235df88f156fcf86"
+    },
+    {
       "path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
       "bytes": 42118,
       "sha256": "6f1be22808b999824c3865edbf0a2e54c93b3c6c06c9708d204e8a51b3067dc1"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json",
+      "bytes": 9061,
+      "sha256": "d1a606b2bd06b33fb49b968f9f2c66a9a62cda84b9e3bfe7c1c906f65b44aa35"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
@@ -214,6 +249,46 @@
       "sha256": "50324c9ff00611508a1ca6ca7fcc1477ec26883767e4a71a59c088e31e1205f2"
     },
     {
+      "path": "Human_Parsing_Benchmark/scripts/audit_cihp_native.py",
+      "bytes": 6944,
+      "sha256": "6bbeb7c3af68eb255b3bb4e3368b902e36026a98d255a34fc37683e004a138a3"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cihp_system.py",
+      "bytes": 13452,
+      "sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py",
+      "bytes": 2028,
+      "sha256": "fc6033dc41e674dc3779e7b107df1de23112c3bc75c3323a3ca5bfa262e863ba"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py",
+      "bytes": 87,
+      "sha256": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py",
+      "bytes": 11600,
+      "sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/data.py",
+      "bytes": 1729,
+      "sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py",
+      "bytes": 3838,
+      "sha256": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cihp_native.py",
+      "bytes": 2909,
+      "sha256": "b25d43a3ebc907b7f3367206e9067486c2769c544d4eb415a2a4d1ec1501f6e9"
+    },
+    {
       "path": "LICENSE.md",
       "bytes": 1001,
       "sha256": "e762d3dcae92f46394150dd3ace0f686375c08279af48536be0416d7ea234bd6"
@@ -225,8 +300,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7076,
-      "sha256": "f22a0b8de27c78f6a71004ad8b2615b36e373f93132504de38a80bf2044ffa21"
+      "bytes": 7519,
+      "sha256": "7f597fb183f00408d2767f8bf2e4cec456868aa1b32d29add14d7866fc5eb89d"
     },
     {
       "path": "REFERENCES.md",
@@ -2804,6 +2879,11 @@
       "sha256": "9c2d0ba6c63782e0025dfec9d1886b4116da7e135fbe4e1dcf33ed787f9d076c"
     },
     {
+      "path": "publication/CIHP_SIX_READINESS_20261028T034103254470Z.json",
+      "bytes": 12507,
+      "sha256": "a2d05591ebb24108e95c2ca773622e3a0039dd4cc8ab7abfa0b202a5eaa3f178"
+    },
+    {
       "path": "publication/CLEAN_CHECKOUT_VALIDATION.json",
       "bytes": 14378,
       "sha256": "e538cce37d44e55ced21ee0eeb5d3d658ae45b90870bfc3ff9b6d92750d88b2a"
@@ -4309,6 +4389,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T03:07:13.213756+00:00",
-  "revision_reason": "User-authorized native CIHP extraction receipt only; no new experiment or dataset-role decision"
+  "updated_utc": "2026-10-28T04:11:17.616924+00:00",
+  "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

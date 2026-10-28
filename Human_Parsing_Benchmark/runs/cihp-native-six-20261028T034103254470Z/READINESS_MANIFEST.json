@@ -1,0 +1,209 @@
+{
+  "run_id": "cihp-native-six-20261028T034103254470Z",
+  "state": "READY_FROZEN_PRE_VALIDATION",
+  "utc": "2026-10-28T04:08:54.410169+00:00",
+  "authority": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
+  "authority_sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
+  "config": "configs/cihp_native_six.json",
+  "config_sha256": "8c51783ab2a4633ab4a5a833a5c4b8132719fa48558b02e8b984d2efb2bb243e",
+  "population": "manifests/CIHP_NATIVE_VALIDATION.json",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "validation_count": 5000,
+  "native_GT_persons": 17520,
+  "execution_models": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "later_models": [
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "Ninja": "DEFERRED",
+  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z",
+  "source_bindings": {
+    "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+    "Human_Parsing_Benchmark/scripts/run_cihp_system.py": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+    "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+    "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e"
+  },
+  "readiness_files": [
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/DATA_READINESS.json",
+      "sha256": "e0f2a39aebaee727b7d978f900c165033b9fd3ffeafbd84caed75eb3769132a7",
+      "bytes": 12108
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/READINESS_REPLAY.json",
+      "sha256": "b420a4fe6e7a84e9c02e3f4d819792de182fcc844a9344333281e6e678ee30e9",
+      "bytes": 3702
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/RESOURCE_READINESS.json",
+      "sha256": "b93673cc27e0991d56edaca5953121fdff24a29cf6f37cc8c172c5c25cab6a50",
+      "bytes": 6232
+    },
+    {
+      "workspace_relative": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/GT_VISUAL_REVIEW.json",
+      "sha256": "ae402576c52cdc21dc6b882195c2f320fa64adcc718b852fd6530034c6080b38",
+      "bytes": 937
+    }
+  ],
+  "readiness_models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/QANet_CIHP_HRNetW48_512x384/RUN.json",
+      "readiness_run_sha256": "0d39c6ce9fff831b0d5eb42bda4f2a78f9950f4610b8a69c4779a445572b3e83",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 394.32958984375,
+      "peak_parser_reserved_MiB": 544.0,
+      "TRAIN_seconds_min_max": [
+        0.2548349770004279,
+        0.7521414430011646
+      ],
+      "packet_bytes_min_max": [
+        32961,
+        60268
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        164805000,
+        301340000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        1274.1748850021395,
+        3760.707215005823
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    },
+    "M2FP_R101_CIHP": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/M2FP_R101_CIHP/RUN.json",
+      "readiness_run_sha256": "df06cb2d1219516f66b6b4be4ba10794055654b93394ce8dd6654e47c8058790",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 977.779296875,
+      "peak_parser_reserved_MiB": 1680.0,
+      "TRAIN_seconds_min_max": [
+        0.44095698499586433,
+        0.6849790239939466
+      ],
+      "packet_bytes_min_max": [
+        38546,
+        45738
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        192730000,
+        228690000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        2204.7849249793217,
+        3424.895119969733
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    },
+    "D2FP_R101_CIHP": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/D2FP_R101_CIHP/RUN.json",
+      "readiness_run_sha256": "ce4e12646397eef4364551b19cfe691fbd0e77b8f04850a387918a509fc6a96d",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 1413.048828125,
+      "peak_parser_reserved_MiB": 2584.0,
+      "TRAIN_seconds_min_max": [
+        1.1015896419994533,
+        1.3228249699968728
+      ],
+      "packet_bytes_min_max": [
+        40101,
+        46343
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        200505000,
+        231715000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        5507.9482099972665,
+        6614.124849984364
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    },
+    "RPR_CIHP": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/RPR_CIHP_adapterfix/RUN.json",
+      "readiness_run_sha256": "4e21fdd8856ed60ccf68d00430ddfa6cec30a1a799960191728758ee03df590a",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 665.107421875,
+      "peak_parser_reserved_MiB": 1070.0,
+      "TRAIN_seconds_min_max": [
+        0.25890947099833284,
+        0.4324518619978335
+      ],
+      "packet_bytes_min_max": [
+        34695,
+        43446
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        173475000,
+        217230000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        1294.5473549916642,
+        2162.2593099891674
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    },
+    "CPI_R50_CIHP": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/CPI_R50_CIHP/RUN.json",
+      "readiness_run_sha256": "58cfbf6b697ffde81d9b14d9a040c5fa30967a157659b65781f83d4d3edfcae1",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 1564.005859375,
+      "peak_parser_reserved_MiB": 3760.0,
+      "TRAIN_seconds_min_max": [
+        0.24285297700407682,
+        0.42116495800291887
+      ],
+      "packet_bytes_min_max": [
+        33370,
+        45612
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        166850000,
+        228060000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        1214.264885020384,
+        2105.8247900145943
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "readiness_run": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/readiness/CPI_ConvNeXtB_CIHP/RUN.json",
+      "readiness_run_sha256": "3add6c87bef6fe42192fcd320943843bde0d6a066154b39a0b9edf9db8edc62c",
+      "TRAIN_frames": 3,
+      "peak_parser_allocated_MiB": 928.7099609375,
+      "peak_parser_reserved_MiB": 1888.0,
+      "TRAIN_seconds_min_max": [
+        0.520953550003469,
+        0.6767276590035181
+      ],
+      "packet_bytes_min_max": [
+        32815,
+        39100
+      ],
+      "5000_packet_scaling_bytes_observed_range": [
+        164075000,
+        195500000
+      ],
+      "5000_parser_seconds_linear_TRAIN_scaling_NOT_ETA": [
+        2604.767750017345,
+        3383.6382950175903
+      ],
+      "limits": "ThreeTRAINexamples are not guaranteed population bounds;CPInativePNGextras/warmup/logs/temp counted at runtime; no deployment speed rank."
+    }
+  },
+  "CPU_tests": "6 targeted hand-computed cases passed",
+  "inference_fingerprint_separate_from_evaluation": true,
+  "benchmark_started": false,
+  "notes": "Readinesspost-work snapshot will be committed beforeVAL;no historicalresults modified;datasetqualitylimitsdisclosed."
+}

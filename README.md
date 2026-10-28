@@ -1,3 +1,7 @@
+# Current active milestone — native CIHP first six
+
+[Current PLAN](Human_Parsing_Benchmark/PLAN.md) / [STATUS](Human_Parsing_Benchmark/STATUS.md) / [Readiness](Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md). User-adopted nativeCIHP Parsing9 plan supersedes conflicting earlierCCIHP7/10proposal. Firstsix authorizationwhenready;Ninjadeferred,Sapiensaftermatrix. Older closedCPI results below remain immutable historical evidence.
+
 # Human Parsing Study
 
 **Current Phase 2–3 planning workspace:** [Human_Parsing_Benchmark](Human_Parsing_Benchmark/README.md) → [STATUS](Human_Parsing_Benchmark/STATUS.md) → [PLAN](Human_Parsing_Benchmark/PLAN.md). **A_REVIEW_COMPLETE / REVIEWED_PROPOSAL**; proposed scope/tasks/selection await user decisions, no implementation or new execution authorized. CCIHP VAL checkpoint selection is permitted by current Prompt A, with no VAL tuning or independent-confirmation claim.

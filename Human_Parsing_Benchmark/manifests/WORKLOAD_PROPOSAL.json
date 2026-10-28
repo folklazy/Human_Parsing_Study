@@ -1,6 +1,6 @@
 {
   "schema_version": "design-workload-1.0",
-  "status": "REVIEWED_PROPOSAL_NOT_EXECUTABLE",
+  "status": "SUPERSEDED_FOR_CURRENT_CIHP_NATIVE_MILESTONE",
   "checkpoints": 7,
   "application_configurations": 7,
   "native_reference_configurations": 3,
@@ -178,5 +178,8 @@
       "configurations": 3,
       "ranked_application": false
     }
-  }
+  },
+  "superseded_by_user_plan": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
+  "current_executable_config": "configs/cihp_native_six.json",
+  "supersession_utc": "2026-10-28T04:08:54.410169+00:00"
 }

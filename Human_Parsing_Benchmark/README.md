@@ -1,3 +1,7 @@
+# Current active milestone — CIHP native first six
+
+[PLAN](PLAN.md) · [STATUS](STATUS.md) · [Adopted Parsing9 plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md) · [Readiness](reports/CIHP_NATIVE_READINESS.md). NativeCIHP5000, firstsixincludingCPI2;Ninjadeferred,Sapiens3aftermatrix. This explicit user plan supersedes conflicting earlierCCIHP7/10planningnotes below;historicalresultsunchanged.
+
 # Human Parsing Benchmark
 
 พื้นที่ทำงานหลักของ **แผนปัจจุบัน** สำหรับเปรียบเทียบและคัดเลือก pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระแบบ noncommercial academic research
@@ -68,3 +72,7 @@ Current [PLAN revision2](PLAN.md) and [review §H](reports/HUMAN_PARSING_PROTOCO
 ### Native CIHP asset import — 28 October 2026
 
 Newly supplied archive extracted to shared `datasets/CIHP/` without overwriting existing datasets. [Import receipt](reports/CIHP_NATIVE_ARCHIVE_INTAKE.md) / [identity manifest](manifests/CIHP_NATIVE_IMPORT.json). Archive integrity/extraction verified; annotation quality and dataset-role changes are not accepted by this import. No new inference or benchmark.
+
+## Current user-adopted CIHP native milestone — 28 October2026
+
+[PLAN](PLAN.md) now implements [Parsing9 nativeCIHP plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md):CIHPfirstsix→matrix→Sapiens3;Ninjadeferred. UsecurrentSTATUS/configs/cihp_native_six.json. EarlierCCIHP7/10proposal notes above are historical, notcurrentexecutionauthority.

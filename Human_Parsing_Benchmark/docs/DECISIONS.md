@@ -67,3 +67,7 @@ Earlier SETUP/Prompt A rows above retain historical state; the current table her
 Decisionacceptance is not source evidence or executionreadiness. Pendingdecision authority is one consolidated table in PLAN§11 and its machine-readable spec counterpart, not multiple new questionnaires.
 
 Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,≤32external ROI tasks and≤7freshfrozenYOLO TRAIN calls (one initial0000930 per co-resident application profile, only if exact proof missing). ExistingfrozenTRAINopportunity metadata gives2/6/2 for0000930/0021834/0001368;read-only counts, no new model execution. No nominalquality/timingjob increase.
+
+## 2026-10-28 — user-adopted CIHP native Parsing9 revision3
+
+The current user explicitly replaces conflicting previous plan with proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. CIHPnative active, Ninja deferred. Firstsix includesCPI_R50_CIHP/CPI_ConvNeXtB_CIHP again for a NEW native-GT run, not repair of historical results. SourceCIHP_PGN GoogleDrive provenance user-supplied. VAL5000, notCCIHP4961;native20-classsemantics. Preparation/implementation/CPUchecks and six-model testing authorized whenready, no per-model reapproval needed. Sapiens3followmatrix, no color/training/CCTV work now. Old7/10view/mappingdecisions retained as superseded history for prior CCIHP design.

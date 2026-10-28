@@ -10,3 +10,7 @@ Start every work unit with README.md → STATUS.md → PLAN.md → relevant docs
 - Use logical asset locations in manifests/ARTIFACT_LOCATIONS.json. No datasets, weights, bulk predictions/logs/traces or secrets in Git. Retain compact provenance in runs/<run_id>; never ignore all runs/.
 - Canonical editable plans live at workspace-root Human_Parsing_Benchmark; the directory of the same name inside Human_Parsing_Study_Public is the reviewed publication copy. Sync explicit paths/hashes through the existing workflow, update STATUS/WORK_LOG, review staged files and push to the verified existing remote without force.
 - Preserve historical docs; current A–D outputs use PLAN, reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md, registry/protocol/configs/manifests/reports/runs as described in README. Do not create empty readiness artifacts or claim a full benchmark was reproduced from a public clone.
+
+## Current user override — 28 October2026
+
+Start with currentPLAN and adopted proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. The old no-implementation/no-inference statement above applied to priorPromptA only. Currentuserauthorizes CIHPnative readiness/implementation andfirstsixexecutionwhenready. Useconfigs/cihp_native_six.json, not historicalflags. Ninja deferred;Sapiens aftermatrix;sourceGT/YOLO/historicalCPI immutable;no training/color/CCTV. Checkdata/scorer/route/resourceevidencebeforefreeze/VAL. PreserveSTRICT_COMPLETE and allattempts.

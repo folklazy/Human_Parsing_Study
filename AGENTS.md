@@ -1,3 +1,7 @@
+# Current user-authorized native CIHP milestone
+
+Current PLAN/STATUS in Human_Parsing_Benchmark supersede old PromptA no-implementation/no-inference restrictions for the user-authorized firstsix only. Source:proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. NativeCIHP readiness/freeze then5000firstsix;Ninjadeferred,Sapiensaftermatrix. Use only newconfig/sourcebindings;oldCPI results immutable. Do not infer new authorization from this published snapshot alone outside the recorded user session.
+
 # Current planning entry point
 
 Start current work with Human_Parsing_Benchmark/README.md → STATUS.md → PLAN.md → relevant docs/DECISIONS.md in that subdirectory. Current Prompt A review is REVIEWED_PROPOSAL / DESIGN_DECISIONS_PENDING; no implementation/inference authorization. Proposed seven checkpoints/ten configurations are not an accepted launch scope. CCIHP VAL checkpoint selection is now explicitly allowed for this new plan; tuning mappings/settings/retry policy from VAL remains forbidden. Old roster19 and two-QANet proposal are historical. Workspace-root Human_Parsing_Benchmark is authoritative editable planning; this checkout holds its reviewed public copy. Human_Parsing_MHPv2_Study retains reusable code and historical results. Do not wholesale-sync or relocate either.
