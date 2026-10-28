@@ -1,0 +1,25 @@
+{
+  "run_id": "cihp-native-six-20261028T034103254470Z",
+  "status": "RUNNING",
+  "launch_commit": "5e8f36ae2a249295c6a1b424b066b010449da048",
+  "config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "authority": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
+  "controller_PID": 34503,
+  "expected_models": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "expected_inputs_per_model": 5000,
+  "expected_parser_frame_system_jobs": 30000,
+  "new_YOLO_quality_jobs": 0,
+  "model_retries": 0,
+  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z",
+  "terminal_reporter": "scripts/report_cihp_batch.py",
+  "monitor": "scripts/monitor_cihp_batch.py",
+  "frozen_source_changed_after_launch": false,
+  "next": "Wait terminal; no partial-ranking tuning"
+}

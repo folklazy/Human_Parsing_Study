@@ -1,11 +1,11 @@
 # Human Parsing Benchmark — current status
 
-Updated:2026-10-28T04:08:54.410169+00:00 UTC
+Updated:2026-10-28T04:40:10.984117+00:00 UTC
 
-**CIHP_NATIVE_FIRST_SIX_READY_FROZEN** — explicituserauthorizationtoexecutesixwhenready;benchmarknotyetstarted. Source[PLAN](PLAN.md) / [adoptedplan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md). NewnativeCIHP,notoldCCIHPselectedproposal;Ninjadeferred,Sapiens3aftermatrix.
+**CIHP_NATIVE_FIRST_SIX_VALIDATION_RUNNING** — user-authorized full official nativeCIHP5000×6batch started. No subset substitution, noSapiens/Ninja/color/training/CCTV. [PLAN](PLAN.md),[authority](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md),[readiness](reports/CIHP_NATIVE_READINESS.md). HistoricalYOLO/CPIresultsunchanged.
 
-Data5000VAL+3TRAINstrictdecodePASS;5000officialpopulation/17520nativeGTpersons,unknownlabels0;39train-overlapgroups/onewithinVALdup retained/disclosed.16GTdiagnosticsAIoverview+2detail,notphysicalannotationcertification.6targetedCPUtests+18TRAINactualGPUroute/packet/scoringreplayspass. RPRfirstloaderfailurepreserved,isolatedpathfixpassed. [Readinessreport](reports/CIHP_NATIVE_READINESS.md).NoVALscoresusedtoconfiguremodels.
+RunID`cihp-native-six-20261028T034103254470Z`. Actual launch codecommit`5e8f36ae2a249295c6a1b424b066b010449da048`,configSHA`3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24`. Externalroot`Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z`. ControllerPID34503;permodelPIDs/commandsandcurrentstateinLAUNCH.json,permodelRUN.json/FRAMES.jsonl/logsundervalidation/. Currentmodelcountsarehealth/completenessonly,notpartialranking.Modelscopeorderfixedinconfig;oneGPUworkeratonce.
 
-Frozenconfig[cihp_native_six.json](configs/cihp_native_six.json),[population](manifests/CIHP_NATIVE_VALIDATION.json),[9-checkpointphases](registry/CIHP_NATIVE_ROSTER.csv). Newsourcebindingsandexternalenvironment/artifactrecordsready. Next:commit/pushreadinesssnapshotthenexecuteapproved5000×6batch;stopaffectedstreamonfailure,preserveSTRICT_COMPLETE/nullheadlines;continueindependents. HistoricalCPI/YOLO/sourceGTunchanged. NoNinja/Sapiens/color/training/CCTVexecution.
+Terminal-only reporter scripts/report_cihp_batch.py writesSUMMARY/PER_CLASS/PERSON_METRICS/FAILURES/NATIVE_REFERENCE andrun-specificcompletionreport. Monitor scripts/monitor_cihp_batch.py logsGPUhealthandinvokesreporteronlyafterbatchterminal;itcannotstart/retryinference. Terminalreportsareautocommitted/pushedonlyifpublicationcheckoutclean;otherwisePENDING_SYNC,preserveindependentwork. No GPUbenchmarkrerunfordocumentation.
 
-RunID`cihp-native-six-20261028T034103254470Z`;externalroot`Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z`. Mainnative20mIoUincludingBG/FG19/perclass+custompersonmaskF1/coverage;officialAPPCPN/A. Inlineparserlatencyonly,freshYOLOend-to-endFPSN/A.
+Next:allowapprovedbatchtofinishunderstop/resourcepolicy,thenreviewactualterminalreport. STRICT_COMPLETE keepsnullmainmetricsforincompletesystems. No live-score tuning/newmodelselection;nativeconfidenceexportandinlineparser-timingscope limitsaredisclosed. If processinterruptionoccurs,inspectactualPIDs/artifactsbeforeanycontrolledcontinuation;noautomaticfailedinputretry.

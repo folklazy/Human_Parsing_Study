@@ -47,3 +47,7 @@ ConfigfingerprintsourceboundbeforeVAL;sourceGitcommitwillbeenteredfromactualpubl
 - Semanticaggregationreference:pinnedM2FP m2fp/evaluation/parsing_eval/semseg_eval.py;all20epsilonzero-unionconvention, missing-inputskippingNOTcopied (STRICT_COMPLETEinstead).
 
 ExactsourceaudadapterRUN/config/environment/inputidentitylinksandhashesincompactrunmanifest;fullDECODED_INPUTS.jsonl,DATA_READINESS.json,READINESS_REPLAY.json,RESOURCE_READINESS.json,GT_VISUAL_REVIEW.jsonandlogsunderexternalrunroot.NoofficialAP/PCPparityclaimed:no fabricatedconfidence/instance-APscores.
+
+## Additional evidence after launch (not retroactive prelaunch claim)
+
+ActualGPUenvironmentPillow9.5/NumPy1.26.4 strictCPUdecoderparityall5000/3GT PASS, nativeRGB decodedhashesandsemanticpixelhistogramidenticaltoinitialCPUenvironmentPillow11.3/NumPy2.2.6. NativeGPUenvironment targetedCPUscorertests6alsoPASS. This closes decoder/backend version evidence gap; model/evaluator/config/sourcebindings unchanged during activebatch. Additionalquality-headconfidencearrays are not claimed exported; canonicalperson-scores/rawintegerplanes are retained,officialAPPCPN/A.

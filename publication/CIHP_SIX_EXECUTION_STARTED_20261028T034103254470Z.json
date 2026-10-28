@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-28T04:48:27.220527+00:00",
+  "run_id": "cihp-native-six-20261028T034103254470Z",
+  "phase": "VALIDATION_RUNNING",
+  "launch_commit": "5e8f36ae2a249295c6a1b424b066b010449da048",
+  "scope": "Post-launch health/reporting code and progress evidence only; modelworker/adapters/scorer/config untouched",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "source_sha256": "e5ed4af2c99e8f4cda0d1ec9912932f6d6f03885e7552fd5c4ebf6d192e1ae32",
+      "public_sha256": "e5ed4af2c99e8f4cda0d1ec9912932f6d6f03885e7552fd5c4ebf6d192e1ae32",
+      "before_sha256": "a1d5a422f68e16ff176f5f12003156ab6ce416e3c0be8310d88c90e2340bbfbb",
+      "bytes": 1758
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "source_sha256": "f322b47ded18baa84e9ca03587c01b29d2f2b5464035a44cd6a6413d3a178050",
+      "public_sha256": "f322b47ded18baa84e9ca03587c01b29d2f2b5464035a44cd6a6413d3a178050",
+      "before_sha256": "87f40ec6b8fecb1caf729547ee1f8c4c8632ac7882815ed14860a48b7beaad30",
+      "bytes": 13144
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/report_cihp_batch.py",
+      "public_path": "Human_Parsing_Benchmark/scripts/report_cihp_batch.py",
+      "source_sha256": "4e09d12fe4659e10e2e19adf5f5ac356867ea314b6195d415fdea141b1f5fb4e",
+      "public_sha256": "4e09d12fe4659e10e2e19adf5f5ac356867ea314b6195d415fdea141b1f5fb4e",
+      "before_sha256": null,
+      "bytes": 13149
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py",
+      "public_path": "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py",
+      "source_sha256": "e57ace36ba068ee1cf1f6e3d4b49536b55b7a66f25b25f777f325908174e054d",
+      "public_sha256": "e57ace36ba068ee1cf1f6e3d4b49536b55b7a66f25b25f777f325908174e054d",
+      "before_sha256": null,
+      "bytes": 6692
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md",
+      "source_sha256": "dbe003667fdc1cebbbc58b363ebff3c9a925d8631fe705b0c1a0b4a1e24cc023",
+      "public_sha256": "dbe003667fdc1cebbbc58b363ebff3c9a925d8631fe705b0c1a0b4a1e24cc023",
+      "before_sha256": "08c98a6b673f22a9e36e1a7ef73f19f2d2bd6683fe080caf235df88f156fcf86",
+      "bytes": 7081
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json",
+      "source_sha256": "baf805952b70bc624b8d0fb2830953458b7f7ba1df9f5ce72d13ffe2efac14cf",
+      "public_sha256": "baf805952b70bc624b8d0fb2830953458b7f7ba1df9f5ce72d13ffe2efac14cf",
+      "before_sha256": null,
+      "bytes": 545
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/LAUNCH_MANIFEST.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/LAUNCH_MANIFEST.json",
+      "source_sha256": "196ec1a3a978c5e09101d7da5dba2eaa8d9413d046b92f76ef892f8cd223faf7",
+      "public_sha256": "196ec1a3a978c5e09101d7da5dba2eaa8d9413d046b92f76ef892f8cd223faf7",
+      "before_sha256": null,
+      "bytes": 968
+    }
+  ],
+  "bulk_or_images_included": false
+}

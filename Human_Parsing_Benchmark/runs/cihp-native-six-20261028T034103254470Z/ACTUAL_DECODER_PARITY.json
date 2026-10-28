@@ -1,0 +1,14 @@
+{
+  "activity": "ACTUAL_GPU_ENV_DECODER_PARITY_CPU_ONLY",
+  "Pillow": "9.5.0",
+  "numpy": "1.26.4",
+  "checked": 5000,
+  "matched": 5000,
+  "failures": [],
+  "semantic_histogram_identical": true,
+  "status": "PASS",
+  "reason": "Readiness environmentPillow11.3, GPUworkerPillow9.5; same reader now strictfull-decodes all5000/3GT in actualGPUenvironment without torch/GPU calls",
+  "seconds": 33.449778857007914,
+  "utc": "2026-10-28T04:33:52.589437+00:00",
+  "script_sha256": "e0a2cf9a172329ff83fd59e09466eb84f84e03b656a03915e79b097cb2ef33c8"
+}
