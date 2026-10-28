@@ -48,6 +48,7 @@ Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/LAUNCH_MANIFEST.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/REPORTER_VERIFICATION.json
@@ -612,6 +613,7 @@ publication/CIHP_SIX_EXECUTION_STARTED_20261028T034103254470Z.json
 publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json
 publication/CIHP_SIX_READINESS_20261028T034103254470Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
+publication/D2FP_ONLY_ROUND_CLOSURE_20261028.json
 publication/DESIGN_REVIEW_20261021T033935094789Z.json
 publication/EXTERNAL_ARTIFACTS.json
 publication/FIGURE_PROVENANCE.json

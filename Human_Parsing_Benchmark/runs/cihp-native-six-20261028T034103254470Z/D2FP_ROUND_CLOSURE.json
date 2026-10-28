@@ -1,0 +1,79 @@
+{
+  "schema_version": "d2fp-round-closure1",
+  "status": "COMPLETE",
+  "round_scope": "D2FP_CIHP_ONLY_CLOSED",
+  "observed_utc": "2026-10-28T15:04:49.552812+00:00",
+  "observed_Bangkok": "2026-10-28T22:04:49.552812+07:00",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "segment_id": "continuation-20261028T073741308461Z",
+  "model_id": "D2FP_R101_CIHP",
+  "native_label_space": "CIHP_NATIVE_20",
+  "scope_claim": "YOLO-associated native-frame application on native CIHP GT; execution completeness, not model-quality acceptance",
+  "original_verified": 1810,
+  "continuation_verified": 3190,
+  "expected_IDs": 5000,
+  "unique_completed_IDs": 5000,
+  "duplicate_IDs": 0,
+  "missing_IDs": 0,
+  "failed": 0,
+  "invalid": 0,
+  "strict_complete": true,
+  "main_score_available": true,
+  "scores_analyzed_or_ranked_this_round": false,
+  "new_inference_jobs_this_round": 0,
+  "ids_remaining": 0,
+  "worker_end_utc": "2026-10-28T09:27:59.022013+00:00",
+  "worker_end_Bangkok": "2026-10-28T16:27:59.022013+07:00",
+  "controller_PID_historical": 70184,
+  "worker_PID_historical": 70200,
+  "monitor_PID_historical": 71022,
+  "processes_currently_alive": false,
+  "queue_status": "STOPPED_NO_PENDING_AUTHORIZED_JOBS",
+  "other_model_execution_now_authorized": false,
+  "historical_other_setup_attempts": {
+    "RPR_CIHP": {
+      "status": "BLOCKED",
+      "complete_VAL": 0,
+      "reason": "EXTERNAL_GPU_BUSY before model load/forward; historical setup attempt before current D2-only authorization"
+    },
+    "CPI_R50_CIHP": {
+      "status": "BLOCKED",
+      "complete_VAL": 0,
+      "reason": "EXTERNAL_GPU_BUSY before model load/forward; historical setup attempt before current D2-only authorization"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "status": "BLOCKED",
+      "complete_VAL": 0,
+      "reason": "EXTERNAL_GPU_BUSY before model load/forward; historical setup attempt before current D2-only authorization"
+    }
+  },
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "scientific_source_bindings_unchanged": true,
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "population_GT_persons": 17520,
+  "assembled_RUN": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/RUN.json",
+  "assembled_METRICS": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/METRICS.json",
+  "source_segment_ledger": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/FRAMES.jsonl",
+  "source_log": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP.log",
+  "evidence": [
+    {
+      "audit_state": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/reconciliation/D2FP_R101_CIHP/RECONCILED.json",
+      "audit_state_sha256": "faf1cd8b88f9fbf55f465d0b913407d79e215721fb42f650f1f8ab253783f2ac",
+      "verified_count": 1810,
+      "full_NPZ_CRC_hash_metadata_GT_rescore_audit_completed_utc": "2026-10-28T07:58:00.829274+00:00",
+      "source_ledger_sha256": "4c60aef77fd98252aabc0c6f0b1b27b4d851689728e7b92f6ed00eff8474d7db",
+      "verified_ledger_sha256": "3adfbdafb55f70672c56813730d5d1aec9dffa1563bdad3335d9eaa9743b8648"
+    },
+    {
+      "audit_state": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segment_reconciliation/D2FP_R101_CIHP/RECONCILED.json",
+      "audit_state_sha256": "133252704f06eb9a147cf02934e7005578f5e22633687b4d45aa10ee5f7417b8",
+      "verified_count": 3190,
+      "full_NPZ_CRC_hash_metadata_GT_rescore_audit_completed_utc": "2026-10-28T09:33:37.355491+00:00",
+      "source_ledger_sha256": "7f10a865ca7437f1354fc2c624ff56076a0dbdf8d58c1d796acbfacf78872b30",
+      "verified_ledger_sha256": "bdc6a5eba99fcdae3cb094aff8df8f6235627c00429071c2c0eb8fec83368da1"
+    }
+  ],
+  "closure_check_scope": "Reused completed full NPZ/CRC/hash/GT/rescore audits; rechecked audit/source ledger digests, exact ID union, required artifact existence and denominator consistency. No redundant full payload rehash or rescoring.",
+  "current_authorization": "Stop at D2FP. No new RPR/CPI/matrix/Sapiens/color/inference. Existing controller already terminal; no queue edit or new process needed.",
+  "historical_global_cohort_status": "FINISHED_WITH_INCOMPLETE_SYSTEMS"
+}

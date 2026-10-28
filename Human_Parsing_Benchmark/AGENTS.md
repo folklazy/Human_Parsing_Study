@@ -14,3 +14,7 @@ Start every work unit with README.md → STATUS.md → PLAN.md → relevant docs
 ## Current user override — 28 October2026
 
 Start with currentPLAN and adopted proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. The old no-implementation/no-inference statement above applied to priorPromptA only. Currentuserauthorizes CIHPnative readiness/implementation andfirstsixexecutionwhenready. Useconfigs/cihp_native_six.json, not historicalflags. Ninja deferred;Sapiens aftermatrix;sourceGT/YOLO/historicalCPI immutable;no training/color/CCTV. Checkdata/scorer/route/resourceevidencebeforefreeze/VAL. PreserveSTRICT_COMPLETE and allattempts.
+
+## Latest operational authorization — D2FP only, complete
+
+Read current STATUS and D2FP_ROUND_CLOSURE.json. D2FP has5000 verified IDs and no IDs remaining. No new inference is needed/authorized. Previous controller and monitor have exited. Do not relaunch historical six-model controllers or retry RPR/CPI from old flags; matrix/Sapiens/color are not authorized. Frozen scientific config/source and old results remain unchanged. Only a new explicit scoped instruction may authorize another model round.

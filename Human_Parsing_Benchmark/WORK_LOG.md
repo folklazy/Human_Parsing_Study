@@ -101,3 +101,9 @@ Monitor/reporting uses assembled view after terminal; final completion includes 
 ## 2026-10-28T09:33:52.036825+00:00 — cihp-native-six-20261028T034103254470Z:nativefirstsixterminal
 
 ActualstatusFINISHED_WITH_INCOMPLETE_SYSTEMS;complete_models3/6,official5000each.Mainmetricsnullforincompleterows;perclass/person/native-reference/failuretablesgeneratedfromterminalledgersonly.NoSapiens/Ninja/color/training/CCTV.Nonewinferencefromfinalizer.Launchcommit5e8f36ae2a249295c6a1b424b066b010449da048.Nextreviewreportandremainingfailures/matrix,notautomaticfailed-image retry.
+
+## 2026-10-28T22:04:49.552812+07:00 — D2FP-only round closure
+
+Latest user narrows scope to D2FP only and asks for bounded health check/automatic completion, no continuous polling. Actual inspection: previous controller/worker/monitor already terminal; D2 previously finished3190 continuation frames, plus1810 reused=5000. No worker launched, no image re-inferred, no queue edit necessary. Reused full hash/CRC/metadata/GT/rescore audits and verified their current ledger hashes, exact membership/disjoint union, required packet/score file presence, aggregate pixel/person denominators. Duplicate/missing/failed/invalid0, main-score strict completeness satisfied; no score analysis/ranking.
+
+Old controller had attempted3 other model setups before current narrowed instruction; all blockedEXTERNAL_GPU_BUSY before model load/inference,0 VAL frames. History preserved, not relabeled as never attempted. Current unrelated GPU process untouched. New closure JSON/current STATUS/PLAN/agent instructions stop all further parsing queue execution pending separate scoped authorization. Frozen config/source/resources/dataset/model policies unchanged; no new tests, rescoring, downloads, matrix/Sapiens/color. Next wait for scoped instruction.

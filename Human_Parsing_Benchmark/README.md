@@ -1,3 +1,5 @@
+> **Current operational round: D2FP COMPLETE, queue STOPPED.** D2FP has5,000 verified validation IDs and0 remaining. No new inference or other-model round is authorized by the historical six-model plan. See [STATUS](STATUS.md) and [D2FP closure](runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json).
+
 # Human Parsing Benchmark
 
 เปรียบเทียบ pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระ ผลเป็นการเปรียบเทียบ configuration ไม่ใช่การแยกผลของ architecture หรือข้อมูลฝึกโดยลำพัง

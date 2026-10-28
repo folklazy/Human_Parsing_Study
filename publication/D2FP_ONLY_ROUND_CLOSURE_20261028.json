@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-28T15:05:33.735623+00:00",
+  "base_commit": "bbd8de894e62f6960cb3db1220a4bda9ec8478d9",
+  "scope": "D2FP-only round found already complete; no new worker/inference/controller or scientific source/config changes; close queue prospectively and preserve historic setup attempts",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "05515a3e5ca4f39b63940da5828d352c19da68eebc547c50ea40e6937af31703",
+      "bytes": 4453
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "af725ea432ac46102de2330d7998957100d4c1c374a417264384d94711cb38a6",
+      "bytes": 8485,
+      "before_sha256": "58d0e91329c01978b5484c567767e623ed588203dd4cf9c0c846e8d2b464cf21"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "f57b20ef085120d6acfec6dd9bd11aa7778b4eaeb05cf13328f20a18159e033d",
+      "bytes": 3392,
+      "before_sha256": "f6ed2afd5f5330282165c71d1ee30bd098f89e552d05e1591862a51ea4f421f5"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "8ef9d7a08f7aaad8d3b4340c5349cfb38bdd8605908156f443bb7768cfe41894",
+      "bytes": 8300,
+      "before_sha256": "87736bc4987739c23118d5843a45e8a0125b6d449c7d10c8231fe741513b9ae7"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "538b6f003205f39dae558e6550248012c3c1447b997e0a06535be79aa3d8722a",
+      "bytes": 1773,
+      "before_sha256": "a32a95d85a56801d3aab2915665cc76b8f4152bb3d11e33060bc4cc84c27dae1"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "d5db8ed64a1a6beb8a01d314da9efa0983b2c05a0d6ed530553f5741671c88f5",
+      "bytes": 20311,
+      "before_sha256": "fb9eb5a65e44f8f06376adbf7b6c14521aabb6b135d6af55f19da708e3d07980"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "894137e8d51e44cbe166064b1c64a59918db2b0a662728646b1998c00f09bd65",
+      "bytes": 9215,
+      "before_sha256": "daf7dd19a33dc0b46c1adcde17634a34f2e79adca544c4ab2b58107f011a3f09"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json",
+      "sha256": "3ef05177349ba803b0094f653ec501ba7f876820863a8799015c28b5d91ff264",
+      "bytes": 4794,
+      "before_sha256": null
+    }
+  ]
+}

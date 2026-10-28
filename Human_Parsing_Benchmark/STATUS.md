@@ -1,11 +1,13 @@
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-28T09:33:52.036825+00:00 UTC
+Updated: 2026-10-28T22:04:49.552812+07:00 (Asia/Bangkok)
 
-**FINISHED_WITH_INCOMPLETE_SYSTEMS** — official native CIHP validation 5,000 images per system, 3/6 systems complete. Run `cihp-native-six-20261028T034103254470Z`. [Result report](reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md) / [completion](runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json) / [PLAN](PLAN.md).
+**D2FP_ROUND_COMPLETE_STOPPED** — current authorization is D2FP CIHP only. Verified union: original1810 + continuation3190 =5000 unique official validation IDs; duplicate/missing/failed/invalid IDs all0. No inference was launched in this closure round. Main metrics satisfy STRICT_COMPLETE; no quality ranking/selection was performed.
 
-STRICT_COMPLETE: main scores remain null for incomplete systems; their failure/pending rows are retained. Launch commit `5e8f36ae2a249295c6a1b424b066b010449da048` identifies execution code, not the later reporting/publication commit. Original controller and model attempts are preserved; no automatic failed-image retries or changed inference settings.
+D2 worker completed 2026-10-28T16:27:59.022013+07:00; segment reconciliation completed2026-10-28T09:33:37UTC. Historical controller70184/worker70200/monitor71022 have exited. No Human Parsing controller/worker remains; do not touch the unrelated GPU workload. Original stale parent LAUNCH/RUN and historical results remain unchanged.
 
-Fixed 16-image original-grid comparisons are external under the run artifact root, `QUALITATIVE/index.html`. See completion for hashes and location. Cached YOLO means end-to-end FPS was not measured; parser timing/VRAM scopes remain explicit.
+[Machine-readable D2 closure](runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json) / [continuation report](reports/CIHP_CONTROLLED_CONTINUATION.md) / [PLAN](PLAN.md). Segment `continuation-20261028T073741308461Z`. Parent `cihp-native-six-20261028T034103254470Z`. Exact status/log/ledger paths and audit hashes are in closure JSON.
 
-Next: review terminal results/failures and continuation evidence. Matrix/Sapiens/color execution is not started by this continuation. No Ninja, training or CCTV processing was started. Old YOLO/CPI results and source GT remain unchanged.
+The previous controller had already attempted RPR/CPI setup before this instruction; all3 blocked with EXTERNAL_GPU_BUSY,0 VAL inference. These are historical attempts, not current authorization. No retries or automatic continuation. The historical six-system cohort remains FINISHED_WITH_INCOMPLETE_SYSTEMS and is preserved.
+
+Next: wait for a separate scoped instruction. No RPR/CPI, matrix, Sapiens2, color, new inference, training or CCTV processing. Frozen config/scorer/adapter/checkpoint/population/ownership/precision/resource policies unchanged. Timing remains unequal adapter diagnostics, no clean parser-only or end-to-end speed ranking.

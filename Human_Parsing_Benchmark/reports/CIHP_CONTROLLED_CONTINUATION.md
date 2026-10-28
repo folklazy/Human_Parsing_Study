@@ -51,3 +51,9 @@ Status at this closure: **CONTINUATION_READY_PRELAUNCH**, not a completed batch.
 ## Actual launch — 2026-10-28T08:05:28.487293+00:00
 
 **CONTROLLED_CONTINUATION_RUNNING**. Actual continuation commit `e51464da35327811ee49453649394edbdd508872`, controller PID70184, D2 worker PID70200. First new VAL image0016688 committed with verified NPZ/metadata/fingerprint and no overlap with original1810 D2 IDs. No QANet/M2FP worker was launched. [Launch evidence](../runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/LAUNCH_VERIFICATION.json). The benchmark is still incomplete; no headline score/ranking from partial frames. Original frozen config and source identities verified unchanged again after first new output.
+
+## D2FP-only closure — 2026-10-28T22:04:49.552812+07:00
+
+Latest user requests one round restricted to D2FP and a short health check instead of persistent polling. Actual inspection found D2 already finished at2026-10-28T16:27:59.022013+07:00; controller/worker/monitor exited. Verified parent1810 + continuation3190 =5000 distinct official IDs; duplicate/missing/failed/invalid0. Strict-complete main score available, no quality ranking in this closure. [Machine-readable closure](../runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json). Reused existing full NPZ/CRC/metadata/GT/rescore audit evidence and revalidated ledger digests, membership, required artifacts and denominators; no new inference or redundant full audit.
+
+Before this instruction the old controller had already attempted RP-R-CNN/CPI setup, all blockedEXTERNAL_GPU_BUSY with0 VAL inference. Preserve those historical attempts; they are not an authorization to retry now. No active queue remains, so no controller edit/new process is needed. Current round is closed, remaining D2 IDs0. All further model rounds/matrix/Sapiens/color wait for a separate explicit instruction. Original frozen config and run records remain unchanged.

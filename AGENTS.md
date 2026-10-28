@@ -1,3 +1,7 @@
+# Latest operational scope — D2FP-only round CLOSED
+
+Read Human_Parsing_Benchmark/STATUS.md and runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json (under Human_Parsing_Benchmark). D2FP has5,000 verified IDs; no IDs remain and the old controller/monitor have exited. Do not relaunch historical controllers, retry RPR/CPI, or start matrix/Sapiens/color from old config flags. Await a new explicit scoped instruction. Historical attempts/results and frozen scientific config/source remain unchanged. This current scope supersedes broader execution permissions documented below.
+
 # Current user-authorized native CIHP milestone
 
 Current PLAN/STATUS in Human_Parsing_Benchmark supersede old PromptA no-implementation/no-inference restrictions for the user-authorized firstsix only. Source:proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. NativeCIHP readiness/freeze then5000firstsix;Ninjadeferred,Sapiensaftermatrix. Use only newconfig/sourcebindings;oldCPI results immutable. Do not infer new authorization from this published snapshot alone outside the recorded user session.
