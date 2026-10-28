@@ -101,3 +101,30 @@ StartedUTC `2026-10-28T16:00:03.273514+00:00`, endedUTC `2026-10-28T16:43:39.973
 Scientific policy: CIHP official5000IDs/native20, frozen YOLO cache, native preprocessing/TTA, FP32, association/ownership/scoring unchanged. Only GPU admission policy differs: coexistence allowed by current user direction; original frozen config is retained, not silently edited. This is a YOLO-associated application pipeline, not an official native-parser benchmark reproduction. Timing is shared-GPU adapter diagnostics, not clean parser-only/end-to-end speed ranking; no contention-free claim or quality transfer guarantee. Hard labels/stored ownership retained; full probabilities/native confidence outputs are not all recoverable.
 
 Checks: {'hashes_metadata_NPZ_CRC_GT_and_saved_mask_rescore': 'PASS', 'exact_expected_ID_union': True, 'no_duplicate_IDs': True, 'source_artifacts_preserved': True}. Original model/OOM retry0, no CPU/FP16 fallback. Raw logs/packets/ledgers/audit under `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z`; use ROUND_STATUS.json for terminal state. Queue contains only RP-R-CNN and has stopped; no CPI/matrix/Sapiens/color/training. Next inspect failures if incomplete or review this model's canonical report if complete; no automatic retry or next-model launch.
+
+## CPI R50 CIHP only — preflight BLOCKED (2026-10-29T00:07:17.768881+07:00)
+
+**BLOCKED / EXTERNAL_GPU_BUSY**, no execution segment/worker/controller launched. Current authorization permits only CPI_R50_CIHP on native CIHP5000 with the original GPU admission policy; RP-R-CNN SHARED_GPU_QUALITY_ONLY is explicitly **not** inherited. Stop before ConvNeXt-B. [Preflight evidence](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json).
+
+Model/checkpoint: CPI-Parser R50 CIHP, `models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth`,571901148bytes, expected SHA256 `e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35`. File exists/size matches; no redundant payload hash after failed resource gate, verify at actual worker startup. Native config `third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py` SHA256 `62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575` verified; source commit `d62cae523ba913fec4a7fda5816bc1d96bbf644d` verified. Environment `.venvs/parser-legacy-cu113` package-freeze matches prior3TRAIN FP32/Torch1.10.2+cu113/CUDA11.3 readiness. No new dependency/checkpoint/environment/model import or smoke. Historical TRAIN fingerprints are not cache identities.
+
+Parent `cihp-native-six-20261028T034103254470Z`, preflight `cpi-r50-preflight-20261028T170717768881Z`; historical native setup at `continuation-20261028T073741308461Z/segments/CPI_R50_CIHP` remains BLOCKED with0VAL/no ledger/no packets. Current native parent/continuation/round inventories have0 reusable CPI_R50 packets,5000 pending. Unrelated older CPI experiments under a different protocol are excluded. Failed_VAL0/invalid_VAL0/not_attempted5000; setup-preflight blocked is not a VAL inference failure. Main score null under STRICT_COMPLETE. No model start/end or launch PID exists; resource observation2026-10-29T00:03:52+07:00, blocked round closed2026-10-29T00:07:17.768881+07:00.
+
+GPU: TeslaT4 Default15360MiB total,13173MiB free, utilization0%, external compute PID126277 holding1736MiB. Original worker admission rejects any compute PID; sufficient free memory/utilization0 does not waive policy. Disk~508GiB above50GiB guard. Did not wait/poll, modify other processes, weaken policy or launch a broad queue. Frozen scientific source/config/weights unchanged; preserve FP32/native20/population/YOLOcache/ownership/association/preprocessing/TTA/thresholds/scoring/24h/80GiB/50GiB/retry0/no fallback.
+
+Results, when obtained, are YOLO-associated application native-label metrics, not an official native-parser reproduction. CPI adapter timing includes native JPEG/PNG I/O; not clean parser-only or end-to-end speed ranking. Raw preflight log/evidence stay at `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-preflight-20261028T170717768881Z`. Next later continuation rechecks resources once; only after original gate passes, finish startup hashes/scoped CPI_R50 controller/first-packet verification and autonomous closure. No ConvNeXt/matrix/Sapiens/color/training or automatic retry in this round.
+
+## Current cohort overview
+
+Updated 2026-10-29T00:07:17.768881+07:00. **4/6 systems complete**, copied directly from canonical completion records; no inference/rescoring or model ranking. Native labels and official5000 population are the common reporting basis, but execution segments/resource policies differ. [Canonical-source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json) / [current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv). Per-run completions remain authoritative; this is a navigation summary, not a merged run.
+
+| System | Status | Complete/5000 | mIoU20 inclBG | FG19mIoU | Segment/resource context |
+|---|---|---:|---:|---:|---|
+|QANet_CIHP_HRNetW48_512x384|COMPLETE|5000|64.866%|63.449%|original parent|
+|M2FP_R101_CIHP|COMPLETE|5000|68.155%|66.796%|original parent|
+|D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|parent1810 + continuation3190; original admission, contention observed|
+|RPR_CIHP|COMPLETE|5000|59.124%|57.408%|separate RPR shared-GPU round|
+|CPI_R50_CIHP|BLOCKED_PREFLIGHT|0|null / unavailable|null / unavailable|current preflight only, original admission|
+|CPI_ConvNeXtB_CIHP|HISTORICAL_SETUP_BLOCKED_OUTSIDE_CURRENT_SCOPE|0|null / unavailable|null / unavailable|historical setup only; not authorized now|
+
+Roster order only, not score order. No averages or winner are inferred. The earlier REPORT_TH.md and original per-run CSVs are preserved historical snapshots; RP-R-CNN0/5000 there is superseded for current navigation by its COMPLETE5000 shared-quality completion. Original admission is not evidence of exclusive runtime. CPI R50 remains blocked and ConvNeXt-B is outside this round.

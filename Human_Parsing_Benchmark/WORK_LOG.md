@@ -131,3 +131,9 @@ User asks for visible progress instead of repeated chat checks. Added stdlib-onl
 ## 2026-10-28T23:52:39.754400+07:00 — rpr-cihp-shared-20261028T155439603873Z: RPR-only terminal
 
 StatusCOMPLETE, complete5000/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no CPI/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.
+
+## 2026-10-29T00:07:17.768881+07:00 — cpi-r50-preflight-20261028T170717768881Z: CPI R50 original-policy preflight BLOCKED and current index correction
+
+Latest user scopes CPI_R50 only under original GPU admission, explicitly excludes RPR shared override. Actual GPU/process/inventory check finds external PID126277 holding1736MiB, no parsing worker, CPI_R50 native cohort0 packets/no ledger (prior setup BLOCKED distinct from VAL failure). Reuse0/pending5000; no inference/worker/controller/smoke/download/wait loop. Native config/source/scientific-source hashes, file size and current package-freeze vs prior3TRAIN readiness checked; payload rehash/model startup deferred once resource gate failed. Existing frozen source/config/resources and earlier results unchanged.
+
+Independent required documentation task: copied QANet/M2FP/D2FP canonical parent completion and separate RPR shared-quality completion into current CSV/source-hash index,4/6 complete in roster order. No score recomputation/ranking; segment/resource policies retained separately, exclusive runtime not assumed. Prepend historical label to earlier REPORT_TH.md with original body preserved byte-for-byte and links to latest overview. Appended CPI self-contained .md preflight section, updated STATUS/PLAN/agent scope; compact sanitized evidence tracked, raw logs external. Next stop blocked round; later scoped continuation only when original gate passes, no ConvNeXt/matrix/Sapiens/color.

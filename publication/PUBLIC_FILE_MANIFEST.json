@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 5793,
-      "sha256": "229959316740944d18eaca3dd41ef55f46347a00fac5d2cea6da098ff17641c6"
+      "bytes": 6540,
+      "sha256": "440e0570d6a48923cae3c9519417c860e31f9a3d6fbfb0c5beb685a528885f75"
     },
     {
       "path": "ARTIFACTS.md",
@@ -45,28 +45,28 @@
     },
     {
       "path": "Human_Parsing_Benchmark/AGENTS.md",
-      "bytes": 4408,
-      "sha256": "09dd2c991180d70ee9b7baf8fbeb4f46fe8798a2c601adfdb3c61042361ca8bc"
+      "bytes": 4945,
+      "sha256": "ff3203fde7f8d770b6b1324d12b43ea0620867fc96f0bc203ab366185064cf38"
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 9851,
-      "sha256": "88324fb2c10247f9077d2a6525002abc207999d1c48e70df5585999add5c745e"
+      "bytes": 10551,
+      "sha256": "2d1875ba341428c33ba2f1d5deae8c373aa99759a64d6de01dfa8074dceceb5a"
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 9710,
-      "sha256": "7aa9f77160784f838e312a784c8704db7b256d81cbfb7eefb081463c066b1ae5"
+      "bytes": 9829,
+      "sha256": "4b6d9c3fe54bd2a1bfe6cc207af277761373c863ff2a1fa432a0aadbe99fe983"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 511,
-      "sha256": "c7bdae7df2986b37e454e178022c000115e5252395af4196711933ebf878f351"
+      "bytes": 2128,
+      "sha256": "6dd4339ed7f04b512f12d0145befa0115985ab2286e73152febac25930cd0641"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 24709,
-      "sha256": "86f476f945c61a7f52809fbe96b856b61790ed232459d76bc4aaf2ac410c7a5e"
+      "bytes": 26172,
+      "sha256": "11b6ade066b2e9084352d03584dc7ad2ef7744805834c7e3e3c57ebca1485394"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -102,6 +102,11 @@
       "path": "Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json",
       "bytes": 3410,
       "sha256": "217c2420000ffc17bd0aa3a8699198023139ba2b2bdeeeca3f977f3b338592a5"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "bytes": 5713,
+      "sha256": "d3db5efa69888644e4c7fd41a9e0a029a82fd35234256b0bf9ed98ca478be5e4"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json",
@@ -142,6 +147,11 @@
       "path": "Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json",
       "bytes": 9822,
       "sha256": "25f5a47fe9360e08e8146c21cfaebfca358ee082aa38484f918998e2fae09efd"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "bytes": 2233,
+      "sha256": "1ab33dc0340e9b48e61e4078cad415ef471d60dbb5b637ff50c6e5ac03ac3030"
     },
     {
       "path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/FAILURES.csv",
@@ -230,8 +240,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
-      "bytes": 19801,
-      "sha256": "d31864d62db3c012fdec28285641f41ce7fca8cb7d2385eabd7f96be4d0ea43c"
+      "bytes": 24587,
+      "sha256": "504f8081f7972f0a0875f9d67daacdba1a51e9b074fd8a3f5356acb3392679cb"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
@@ -250,8 +260,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md",
-      "bytes": 7839,
-      "sha256": "71905950e322944470428c1b950dba6e4701c04135180c879326a361ba8b1ad3"
+      "bytes": 8449,
+      "sha256": "fadef0023e1a9555fed58b577ed57c12b65bf7a86c08e0afb71353ec24179ebc"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json",
@@ -342,6 +352,21 @@
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/RPR_CIHP.json",
       "bytes": 76085,
       "sha256": "28b9059af4a1ff18d10fa353f987ceed978d39afe1874b9c801ecf320a2969c4"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/HISTORICAL_LABEL_PROVENANCE.json",
+      "bytes": 399,
+      "sha256": "22d5c213d42ae70964c66981e8934a142266bff760971d24ec1a3939d5d94557"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/OVERVIEW_CONSISTENCY.json",
+      "bytes": 365,
+      "sha256": "b60b0bf31e256861b07600634bb43e59ca39970d3b2aa49e86f63ad630c275f2"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json",
+      "bytes": 4045,
+      "sha256": "bbde3fec36d3b981ca1d580c48d04dcc859940f19e5468649d4040fb4ebe348c"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json",
@@ -3159,6 +3184,11 @@
       "sha256": "e538cce37d44e55ced21ee0eeb5d3d658ae45b90870bfc3ff9b6d92750d88b2a"
     },
     {
+      "path": "publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json",
+      "bytes": 3697,
+      "sha256": "023b3d6e26f5c0f481d55d49812688de4d5401e1fe15ff56e47eb5b012ff764c"
+    },
+    {
       "path": "publication/D2FP_ONLY_ROUND_CLOSURE_20261028.json",
       "bytes": 2299,
       "sha256": "07aada0f6c1706e841b5bfdb0d26987c79d2dded8e44d610d31e178c038f94b9"
@@ -4684,6 +4714,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T16:52:39.808287+00:00",
+  "updated_utc": "2026-10-28T17:09:11.505853+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

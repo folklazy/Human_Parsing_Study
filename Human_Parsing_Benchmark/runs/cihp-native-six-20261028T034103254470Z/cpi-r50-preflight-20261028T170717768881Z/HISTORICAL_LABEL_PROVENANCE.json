@@ -1,0 +1,7 @@
+{
+  "path": "reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md",
+  "original_body_sha256": "71905950e322944470428c1b950dba6e4701c04135180c879326a361ba8b1ad3",
+  "labeled_file_sha256": "fadef0023e1a9555fed58b577ed57c12b65bf7a86c08e0afb71353ec24179ebc",
+  "original_body_preserved_byte_for_byte": true,
+  "change": "Prepend historical navigation label only; no metric/table/date rewrites"
+}

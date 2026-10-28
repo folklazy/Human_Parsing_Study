@@ -18,6 +18,7 @@ Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md
 Human_Parsing_Benchmark/docs/RESEARCH_REFERENCES.md
 Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md
 Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json
+Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json
@@ -26,6 +27,7 @@ Human_Parsing_Benchmark/manifests/POPULATION_DOMAIN_PROPOSAL.json
 Human_Parsing_Benchmark/manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json
 Human_Parsing_Benchmark/manifests/TIMING_WORKLOAD_DRAFT.json
 Human_Parsing_Benchmark/manifests/WORKLOAD_PROPOSAL.json
+Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/FAILURES.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/NATIVE_REFERENCE.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PERSON_METRICS.csv
@@ -66,6 +68,9 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/M2FP_R101_CIHP.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/QANet_CIHP_HRNetW48_512x384.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/RPR_CIHP.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/HISTORICAL_LABEL_PROVENANCE.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/OVERVIEW_CONSISTENCY.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch
@@ -629,6 +634,7 @@ publication/CIHP_SIX_EXECUTION_STARTED_20261028T034103254470Z.json
 publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json
 publication/CIHP_SIX_READINESS_20261028T034103254470Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
+publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json
 publication/D2FP_ONLY_ROUND_CLOSURE_20261028.json
 publication/DESIGN_REVIEW_20261021T033935094789Z.json
 publication/EXTERNAL_ARTIFACTS.json

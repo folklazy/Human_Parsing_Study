@@ -1,3 +1,5 @@
+> **HISTORICAL SNAPSHOT — closed 28 October2026 at09:33 UTC (16:33 Bangkok).** The table below describes that earlier closure (3/6 complete), including RP-R-CNN0/5000 at that time. It is not the current cohort summary. RP-R-CNN subsequently completed a separate shared-GPU round. See the [current cohort overview](../CIHP_CONTROLLED_CONTINUATION.md#current-cohort-overview), [current CSV](../../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) and [canonical-source index](../../manifests/CIHP_NATIVE_COHORT_INDEX.json). Original table/body/date/metrics below are preserved; no retrospective alteration of results.
+
 # ผลทดสอบ CIHP native — หก checkpoints แรก
 
 Status: **FINISHED_WITH_INCOMPLETE_SYSTEMS** · 2026-10-28T09:33:43.118939+00:00

@@ -26,3 +26,7 @@ The user now authorizes RPR_CIHP readiness/run when the frozen no-contention res
 ## Latest override — RPR shared-GPU quality-only
 
 Read STATUS/report and current RPR RESOURCE_POLICY.json. User requests proceeding despite GPU occupancy; the new operational wrapper explicitly allows coexistence for RPR only. Do not use or modify old frozen worker/config directly; do not claim exclusive/clean timing. Keep model/scorer/FP32/settings/limits, no OOM/model retries/fallback. Run only the scoped RPR controller, stop before CPI, no matrix/Sapiens/color.
+
+## Latest scope — CPI R50 only, original resource policy
+
+Read current STATUS and CPI R50 section of the report. User authorizes only CPI_R50_CIHP; do not inherit RPR shared admission or launch a broad queue. Current round blocked by external GPU PID; end without polling/other-process changes. Later continuation may proceed after original gate passes and scoped readiness closes. No ConvNeXt/matrix/Sapiens/color. Current overview4/6 is copied from canonical completions; old reports are labeled historical, not silently rewritten.

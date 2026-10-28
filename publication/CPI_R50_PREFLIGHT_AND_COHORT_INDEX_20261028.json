@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-28T17:09:11.500936+00:00",
+  "base_commit": "77db8995f450c6e6e57ed561a45a4773cb9d11c4",
+  "scope": "CPI_R50-only original-policy resource BLOCKED, no launch; current4/6 index copied from canonical completions; historical report navigation label only, original body preserved",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "440e0570d6a48923cae3c9519417c860e31f9a3d6fbfb0c5beb685a528885f75",
+      "bytes": 6540
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 9829,
+      "sha256": "4b6d9c3fe54bd2a1bfe6cc207af277761373c863ff2a1fa432a0aadbe99fe983",
+      "before_sha256": "7aa9f77160784f838e312a784c8704db7b256d81cbfb7eefb081463c066b1ae5"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "bytes": 4945,
+      "sha256": "ff3203fde7f8d770b6b1324d12b43ea0620867fc96f0bc203ab366185064cf38",
+      "before_sha256": "09dd2c991180d70ee9b7baf8fbeb4f46fe8798a2c601adfdb3c61042361ca8bc"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "bytes": 10551,
+      "sha256": "2d1875ba341428c33ba2f1d5deae8c373aa99759a64d6de01dfa8074dceceb5a",
+      "before_sha256": "88324fb2c10247f9077d2a6525002abc207999d1c48e70df5585999add5c745e"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 2128,
+      "sha256": "6dd4339ed7f04b512f12d0145befa0115985ab2286e73152febac25930cd0641",
+      "before_sha256": "c7bdae7df2986b37e454e178022c000115e5252395af4196711933ebf878f351"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 26172,
+      "sha256": "11b6ade066b2e9084352d03584dc7ad2ef7744805834c7e3e3c57ebca1485394",
+      "before_sha256": "86f476f945c61a7f52809fbe96b856b61790ed232459d76bc4aaf2ac410c7a5e"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "bytes": 24587,
+      "sha256": "504f8081f7972f0a0875f9d67daacdba1a51e9b074fd8a3f5356acb3392679cb",
+      "before_sha256": "d31864d62db3c012fdec28285641f41ce7fca8cb7d2385eabd7f96be4d0ea43c"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md",
+      "bytes": 8449,
+      "sha256": "fadef0023e1a9555fed58b577ed57c12b65bf7a86c08e0afb71353ec24179ebc",
+      "before_sha256": "71905950e322944470428c1b950dba6e4701c04135180c879326a361ba8b1ad3"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "bytes": 2233,
+      "sha256": "1ab33dc0340e9b48e61e4078cad415ef471d60dbb5b637ff50c6e5ac03ac3030",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "bytes": 5713,
+      "sha256": "d3db5efa69888644e4c7fd41a9e0a029a82fd35234256b0bf9ed98ca478be5e4",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json",
+      "bytes": 4045,
+      "sha256": "bbde3fec36d3b981ca1d580c48d04dcc859940f19e5468649d4040fb4ebe348c",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/HISTORICAL_LABEL_PROVENANCE.json",
+      "bytes": 399,
+      "sha256": "22d5c213d42ae70964c66981e8934a142266bff760971d24ec1a3939d5d94557",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/OVERVIEW_CONSISTENCY.json",
+      "bytes": 365,
+      "sha256": "b60b0bf31e256861b07600634bb43e59ca39970d3b2aa49e86f63ad630c275f2",
+      "before_sha256": null
+    }
+  ]
+}

@@ -1,3 +1,7 @@
+# Current operational scope — CPI R50 only, original admission, BLOCKED
+
+Latest user authorizes CPI_R50_CIHP readiness/run only when original GPU resource policy passes; stop before ConvNeXt-B. Do not inherit RP-R-CNN shared override, launch a broad queue, wait/poll, stop other jobs or weaken policy. Current STATUS records an external GPU PID and no launch. Current overview is4/6 COMPLETE from canonical results; old REPORT_TH is labeled historical. Read Human_Parsing_Benchmark/STATUS.md and the CPI R50/current-overview report sections. QANet/M2FP/D2FP/RPR are closed, no reinference. No ConvNeXt/matrix/Sapiens/color/training. This scope supersedes older operational instructions below; history/scientific config/source remain unchanged.
+
 # Current user direction — RPR shared-GPU quality only
 
 User asks to proceed despite the other GPU workload. Read current Human_Parsing_Benchmark/STATUS.md, report and RESOURCE_POLICY.json. New resource-aware wrapper explicitly permits shared GPU for RPR only; no exclusive/clean timing claim, no model/scorer/precision/population changes. Only run the dedicated RPR controller, never the broad historical queue. Model/OOM retries0, no other-process changes or fallback, stop before CPI/matrix/Sapiens/color. Current instruction supersedes earlier resource-BLOCKED/D2-only scope below without rewriting historical evidence.

@@ -1,0 +1,11 @@
+{
+  "CSV_JSON_rows": 6,
+  "unique_model_IDs": 6,
+  "complete_models": 4,
+  "source_file_hashes_match": true,
+  "CSV_scores_equal_canonical_copies": true,
+  "historical_table_original_body_preserved": "see HISTORICAL_LABEL_PROVENANCE.json",
+  "current_overview_anchor_exists": true,
+  "new_inference_or_rescoring": false,
+  "scientific_code_config_changes": false
+}

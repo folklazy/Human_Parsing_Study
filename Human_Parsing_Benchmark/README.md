@@ -1,4 +1,4 @@
-> **Current round: RP-R-CNN shared-GPU quality-only readiness.** Explicit resource override permits coexistence; model/scorer/FP32/scientific config remain unchanged. No clean timing/VRAM ranking. Read [STATUS](STATUS.md) and the [RP-R-CNN report](reports/CIHP_CONTROLLED_CONTINUATION.md). Exactly one RPR worker; no CPI/matrix/Sapiens/color.
+> **Current round: CPI R50 resource BLOCKED under original GPU admission.** Current canonical overview: **4/6 complete** (QANet/M2FP/D2FP/RP-R-CNN); no model ranking. Read [STATUS](STATUS.md), [current overview](reports/CIHP_CONTROLLED_CONTINUATION.md#current-cohort-overview) and [CSV](metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv). RP-R-CNN completed its separate shared-quality round; that override does not authorize shared CPI. No ConvNeXt/matrix/Sapiens/color.
 
 # Human Parsing Benchmark
 

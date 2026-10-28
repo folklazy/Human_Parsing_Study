@@ -51,3 +51,7 @@ Latest user authorizes RPR_CIHP readiness/execution on the unchanged nativeCIHP5
 ## Resource-policy amendment — RPR shared-GPU quality only
 
 Latest user requests RPR continuation despite another GPU user. Effective operational policy now permits GPU coexistence for this RPR quality round, recorded separately as RESOURCE_POLICY.json. Original frozen scientific config is retained as provenance; its exclusive admission/profile is explicitly overridden in the new resource-aware wrapper, not silently edited. Inference/preprocessing/ownership/scoring/FP32 and original24h/80GiB/50GiB/model-retry0 limits are retained. Timing and memory diagnostics are not comparable clean rankings. One-model controller stops after RPR, no CPI/matrix/Sapiens/color. No arbitrary automatic restart or other-process changes.
+
+## Current authorization — CPI R50 CIHP only, original GPU admission
+
+Latest user authorizes CPI_R50_CIHP readiness/run under original frozen scientific and resource policies; stop before CPI ConvNeXt-B. RPR shared-GPU override is model/round-specific and does not transfer. Current preflight resource-blocked by external compute process, so end without launch/poll/retry or policy change. QANet/M2FP/D2FP/RPR results are closed and preserved. Canonical-source current overview is a derived navigation table, not a new run/ranking. On later continuation verify actual resources/artifacts, then create only a scoped CPI_R50 segment when readiness passes. No ConvNeXt/matrix/Sapiens/color/training.
