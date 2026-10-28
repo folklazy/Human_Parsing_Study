@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-28T15:58:47.853956+00:00",
+  "base_commit": "8719238253250b19de990e892d805806f5235fab",
+  "scope": "Explicit RPR-only shared-GPU quality resource amendment; original scientific config/worker/adapter/scorer unchanged; no other-model queue",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 5793,
+      "sha256": "229959316740944d18eaca3dd41ef55f46347a00fac5d2cea6da098ff17641c6"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 8512,
+      "sha256": "0197dd29b24cfe07ee8d02ffa0981536ba9a04f35b3ec6ad6ef9eedcc45b2a58",
+      "before_sha256": "3d2114c190bf4fec65b7d89a2f5f3fb126e9e71e4d4e73d6b3b1a8f6a03dbc31"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "bytes": 4408,
+      "sha256": "09dd2c991180d70ee9b7baf8fbeb4f46fe8798a2c601adfdb3c61042361ca8bc",
+      "before_sha256": "5ba2d2e18b7478a9506f1794826c1705d23058acfda2087dec458d91ab871cd7"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "bytes": 9851,
+      "sha256": "88324fb2c10247f9077d2a6525002abc207999d1c48e70df5585999add5c745e",
+      "before_sha256": "efd60a8d15ca2e3182e69d847077a8d47ba054ed9d676c68d87c5524b3f2a877"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 1187,
+      "sha256": "8e5ce323feca8b22cc0769d5ff42a512d0cb184f973844917579cdcd53f9fd7d",
+      "before_sha256": "788f1720a9ad94b089619ca244b262589d99e5aebbcf52bc22607e58d9a929e2"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 22758,
+      "sha256": "9fca3ad6b22b273109fee76477e49094259ce3d9a038c5f6a83e0d174438b077",
+      "before_sha256": "29f8ae1ff550e2906547138af169ff7c857ca64c1a24706b1d795e874bfdb5ac"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "bytes": 15485,
+      "sha256": "da2bbdef8956dbffd5cdbba02dbe8c92963cd8964368ae953070169490934f62",
+      "before_sha256": "6514d337debbd15128f1fa26514e8cc28cefb2c4c5ca64280f47f6af52f8d277"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py",
+      "bytes": 16379,
+      "sha256": "2bec076b5bc0988c9549d66a01e427985c079d7592f8db37ee46f9d7b78e14ea",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_rpr_shared_segment.py",
+      "bytes": 3397,
+      "sha256": "3b9a77dde722b38cd7dbce810d16291a9d8fdb7909a34cd8531b8455f2765e3a",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py",
+      "bytes": 7880,
+      "sha256": "2ef45791b00db16156cf9d4665351affb8bf593f3a0b4ead873f37d58deaf083",
+      "before_sha256": "97443d511f4847dc43331a94bae15f10178649f1a99ed71cca73a3c1cd2b23e2"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_rpr_shared_round.py",
+      "bytes": 1480,
+      "sha256": "347b6f2117aeb17426edfe502577f23b3fc16f06c6f2f22b3e020da0b6700102",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json",
+      "bytes": 1139,
+      "sha256": "6b623887957e7b28addfeb3e4005847875067d90f035c03882ab499c037c3177",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/ENVIRONMENT_VERIFICATION.json",
+      "bytes": 301,
+      "sha256": "64f3da94546ffa5b87391bc4af5c15f9178ee725edc5c0258b0a8dd0a2aa9dab",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json",
+      "bytes": 76582,
+      "sha256": "6a9b956380ef0033c4ed9a42e9cd0c77286955c65754f838854e015b9fc8d3e2",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch",
+      "bytes": 8325,
+      "sha256": "56f5c7ec5810f2ac361ef6abfd9f4d0f9ef9e7eba65b6b643272d610128b12d8",
+      "before_sha256": null
+    }
+  ]
+}

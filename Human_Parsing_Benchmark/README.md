@@ -1,4 +1,4 @@
-> **Current operational round: RP-R-CNN CIHP — resource BLOCKED.** No worker/controller launched; existing VAL0, remaining5,000. See [STATUS](STATUS.md) and the RP-R-CNN section of the [continuation report](reports/CIHP_CONTROLLED_CONTINUATION.md). RPR-only execution is authorized when readiness/resource policy passes; CPI/matrix/Sapiens/color remain excluded. D2FP stays complete.
+> **Current round: RP-R-CNN shared-GPU quality-only readiness.** Explicit resource override permits coexistence; model/scorer/FP32/scientific config remain unchanged. No clean timing/VRAM ranking. Read [STATUS](STATUS.md) and the [RP-R-CNN report](reports/CIHP_CONTROLLED_CONTINUATION.md). Exactly one RPR worker; no CPI/matrix/Sapiens/color.
 
 # Human Parsing Benchmark
 

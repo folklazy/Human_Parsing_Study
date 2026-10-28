@@ -22,3 +22,7 @@ Read current STATUS and D2FP_ROUND_CLOSURE.json. D2FP has5000 verified IDs and n
 ## Latest scope — RP-R-CNN only, current round resource-BLOCKED
 
 The user now authorizes RPR_CIHP readiness/run when the frozen no-contention resource gate passes; stop before CPI. This supersedes D2FP-only execution scope but preserves D2FP closure/results. Current STATUS records external GPU occupancy and no launch. End blocked without polling or touching other jobs. On later continuation recheck real GPU/process/artifacts; never launch the broad historical controller or auto-retry other models. No CPI/matrix/Sapiens/color/training.
+
+## Latest override — RPR shared-GPU quality-only
+
+Read STATUS/report and current RPR RESOURCE_POLICY.json. User requests proceeding despite GPU occupancy; the new operational wrapper explicitly allows coexistence for RPR only. Do not use or modify old frozen worker/config directly; do not claim exclusive/clean timing. Keep model/scorer/FP32/settings/limits, no OOM/model retries/fallback. Run only the scoped RPR controller, stop before CPI, no matrix/Sapiens/color.

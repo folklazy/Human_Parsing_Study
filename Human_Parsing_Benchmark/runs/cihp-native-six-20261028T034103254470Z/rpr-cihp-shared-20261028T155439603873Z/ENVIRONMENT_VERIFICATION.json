@@ -1,0 +1,6 @@
+{
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "packages_freeze_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "historical_environment_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "matches_readiness": true
+}

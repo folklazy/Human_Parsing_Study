@@ -1,3 +1,7 @@
+# Current user direction — RPR shared-GPU quality only
+
+User asks to proceed despite the other GPU workload. Read current Human_Parsing_Benchmark/STATUS.md, report and RESOURCE_POLICY.json. New resource-aware wrapper explicitly permits shared GPU for RPR only; no exclusive/clean timing claim, no model/scorer/precision/population changes. Only run the dedicated RPR controller, never the broad historical queue. Model/OOM retries0, no other-process changes or fallback, stop before CPI/matrix/Sapiens/color. Current instruction supersedes earlier resource-BLOCKED/D2-only scope below without rewriting historical evidence.
+
 # Current operational scope — RP-R-CNN only, resource BLOCKED
 
 Latest user authorizes RPR_CIHP readiness and native-CIHP5000 execution when frozen resource policy passes, then stop before CPI. Read Human_Parsing_Benchmark/STATUS.md and its RP-R-CNN report section. Current round is BLOCKED by external GPU compute occupancy; no worker/controller/wait loop was launched. Do not weaken resource policy, stop other jobs, auto-retry, or use the historical six-model queue. Later continuation can proceed within RPR-only authorization after actual readiness passes; no CPI/matrix/Sapiens/color/training. D2FP remains complete. This supersedes the older D2FP-only operational scope below, not its preserved results.

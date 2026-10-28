@@ -1,11 +1,7 @@
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-28T22:32:24.395816+07:00 (Asia/Bangkok)
+Updated 2026-10-28T22:57:26.070519+07:00 Bangkok
 
-**RPR_CIHP_ROUND_BLOCKED — EXTERNAL_GPU_BUSY**. Latest user authorizes only RP-R-CNN CIHP on frozen nativeCIHP VAL5000; stop before CPI. Resource snapshot22:30:14+07:00 shows external compute PID126277 using1736MiB onTeslaT4. Native policy rejects any existing compute PID; utilization0%/free13173MiB is not sufficient. No Human Parsing worker/controller was active. No new worker/controller/session, GPU smoke, inference, retry, waiting/poll loop or other-process intervention was performed.
+**RPR_SHARED_QUALITY_READY_NOT_LAUNCHED**. User requests proceeding despite GPU contention. Explicit shared-GPU quality resource override, not a claim of no effect. Existing VAL results0, pending5000IDs, parent `cihp-native-six-20261028T034103254470Z`, segment `rpr-cihp-shared-20261028T155439603873Z`. Checkpoint/config/source hashes and package-freeze match verified readiness; two targeted CPU control cases pass. Frozen scientific config/worker/adapter/scorer unchanged.
 
-Existing/reused RPR VAL results0; remaining5000 IDs. Failed/invalid VAL0, not_attempted5000, main score null (STRICT_COMPLETE). Prior EXTERNAL_GPU_BUSY setup record preserved; it is not a VAL inference failure. D2FP/QANet/M2FP results untouched.
-
-[RP-R-CNN report section](reports/CIHP_CONTROLLED_CONTINUATION.md) / [preflight evidence](runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json) / [PLAN](PLAN.md). Round `rpr-cihp-preflight-20261028T153224395816Z`, parent `cihp-native-six-20261028T034103254470Z`; execution segment NOT_LAUNCHED. Frozen config/source/native-config/source-commit bindings checked; checkpoint size/existence checked, payload rehash and environment/model startup deferred because resource gate failed.
-
-Next: end this blocked round. On later continuation, recheck GPU once, proceed within RPR-only authorization if policy passes, otherwise report BLOCKED without polling. Do not launch broad historical controller or CPI, matrix, Sapiens2, color, training/CCTV. No precision/resource/protocol changes.
+[RP-R-CNN report](reports/CIHP_CONTROLLED_CONTINUATION.md) / [resource override](runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json) / [segment plan](runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json). Only RPR may launch; stop before CPI. Timing shared adapter diagnostics only, no clean speed/VRAM ranking. OOM/model retries0, no CPU/FP16 fallback. Next commit/push source+plans then launch one detached controller, verify first packet briefly and end turn. No matrix/Sapiens/color/training/other-model work.

@@ -5,7 +5,7 @@ import os,json,time,subprocess,sys,hashlib,argparse
 P=Path(__file__).resolve().parents[1];W=P.parent
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-def publish(out,unit,files):
+def publish(out,unit,files,scope='Terminal first-six nativeCIHP metrics/report/provenance only; no masks/images/weights',message='results: record terminal native CIHP first-six batch'):
  pub=W/'Human_Parsing_Study_Public'
  if subprocess.check_output(['git','-C',str(pub),'status','--porcelain'],text=True).strip():return {'status':'PENDING_SYNC','reason':'Public working tree has independent changes; not overwritten'}
  base=subprocess.check_output(['git','-C',str(pub),'rev-parse','HEAD'],text=True).strip();entries=[]
@@ -13,13 +13,13 @@ def publish(out,unit,files):
   src=P/rel;dst=pub/'Human_Parsing_Benchmark'/rel
   if src.is_symlink() or src.stat().st_size>5*1024**2 or src.suffix not in ['.md','.json','.csv']:raise ValueError('Unexpected public summary asset '+rel)
   dst.parent.mkdir(parents=True,exist_ok=True);before=sha(dst) if dst.exists() else None;dst.write_bytes(src.read_bytes());entries.append({'source_workspace_relative':'Human_Parsing_Benchmark/'+rel,'public_path':'Human_Parsing_Benchmark/'+rel,'sha256':sha(dst),'before_sha256':before,'bytes':dst.stat().st_size})
- mp='publication/CIHP_NATIVE_COMPLETION_'+unit.removeprefix('cihp-native-six-')+'.json';(pub/mp).write_text(json.dumps({'work_unit':unit,'base_commit':base,'scope':'Terminal first-six nativeCIHP metrics/report/provenance only; no masks/images/weights','files':entries,'launch_source_unchanged':True},indent=2)+'\n');paths=[x['public_path'] for x in entries]+[mp]
+ mp='publication/CIHP_NATIVE_COMPLETION_'+unit.removeprefix('cihp-native-six-')+'.json';(pub/mp).write_text(json.dumps({'work_unit':unit,'base_commit':base,'scope':scope,'files':entries,'launch_source_unchanged':True},indent=2)+'\n');paths=[x['public_path'] for x in entries]+[mp]
  idxp=pub/'publication/PUBLIC_FILE_MANIFEST.json';idx=json.loads(idxp.read_text());items={x['path']:x for x in idx['files']}
  for path in paths:items[path]={'path':path,'bytes':(pub/path).stat().st_size,'sha256':sha(pub/path)}
  idx['files']=[items[k] for k in sorted(items)];idx['updated_utc']=datetime.now(timezone.utc).isoformat();idxp.write_text(json.dumps(idx,ensure_ascii=False,indent=2)+'\n');fl=pub/'publication/PUBLISH_FILES.txt';fl.write_text('\n'.join(sorted(set(fl.read_text().splitlines())|set(paths)))+'\n');paths+=['publication/PUBLIC_FILE_MANIFEST.json','publication/PUBLISH_FILES.txt']
  subprocess.run(['git','-C',str(pub),'add','--',*paths],check=True);staged=subprocess.check_output(['git','-C',str(pub),'diff','--cached','--name-only'],text=True).splitlines()
  if set(staged)!=set(paths):return {'status':'PENDING_SYNC','reason':'Unexpected staged scope, preserved'}
- subprocess.run(['git','-C',str(pub),'commit','-m','results: record terminal native CIHP first-six batch'],check=True)
+ subprocess.run(['git','-C',str(pub),'commit','-m',message],check=True)
  if subprocess.check_output(['git','-C',str(pub),'remote','get-url','origin'],text=True).strip()!='https://github.com/folklazy/Human_Parsing_Study.git':return {'status':'PENDING_SYNC','reason':'Unexpected remote; local commit retained'}
  env=os.environ.copy();env['GIT_TERMINAL_PROMPT']='0'
  for proc in Path('/proc').iterdir():

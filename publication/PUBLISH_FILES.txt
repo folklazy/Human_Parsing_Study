@@ -65,6 +65,10 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/QANet_CIHP_HRNetW48_512x384.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/RPR_CIHP.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/ENVIRONMENT_VERIFICATION.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -80,6 +84,8 @@ Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py
 Human_Parsing_Benchmark/scripts/report_cihp_batch.py
 Human_Parsing_Benchmark/scripts/run_cihp_segment.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
+Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
+Human_Parsing_Benchmark/scripts/run_rpr_shared_segment.py
 Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
 Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py
 Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py
@@ -87,6 +93,7 @@ Human_Parsing_Benchmark/src/cihp_benchmark/data.py
 Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py
 Human_Parsing_Benchmark/tests/test_cihp_continuation.py
 Human_Parsing_Benchmark/tests/test_cihp_native.py
+Human_Parsing_Benchmark/tests/test_rpr_shared_round.py
 LICENSE.md
 PRESENTATION_SUMMARY_TH.md
 README.md
@@ -634,6 +641,7 @@ publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_CREATION.json
 publication/REPOSITORY_VALIDATION.json
 publication/RPR_CIHP_PREFLIGHT_BLOCKED_20261028.json
+publication/RPR_SHARED_QUALITY_READY_20261028.json
 publication/SOURCE_COPY_MANIFEST.json
 publication/SPECIFICATION_HANDOFF_20261021T092521331823Z.json
 publication/VALIDATION_SCOPE.md
