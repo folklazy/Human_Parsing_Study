@@ -64,3 +64,7 @@ Current [PLAN revision2](PLAN.md) and [review §H](reports/HUMAN_PARSING_PROTOCO
 ### Current revision3 — specification closure / B handoff
 
 [PLAN§11](PLAN.md#11-คำตัดสินคงเหลือ--ชุดเดียวก่อน-bfreeze) is the single remaining decision table; [PLAN§13](PLAN.md#13-stage-b-handoff--ระบุงานได้แล้ว-แต่ยังไม่เริ่ม) is the bounded implementation/acceptance handoff. Selectedseven/ten scope is confirmed as proposal, not launchauthorization. ApplicationC3 includes allseven across routefamilies, C7 includes supportedCIHPfour; native references separate. Mapping/evidence/view/eligibility and emptyoutcomes are explicit. Still REVIEWED_PROPOSAL, no Bimplementation/inference. [Revision3review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#i-specification-closure-และ-stage-b-handoff--revision-3) · [qualitative sample](manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json).
+
+### Native CIHP asset import — 28 October 2026
+
+Newly supplied archive extracted to shared `datasets/CIHP/` without overwriting existing datasets. [Import receipt](reports/CIHP_NATIVE_ARCHIVE_INTAKE.md) / [identity manifest](manifests/CIHP_NATIVE_IMPORT.json). Archive integrity/extraction verified; annotation quality and dataset-role changes are not accepted by this import. No new inference or benchmark.

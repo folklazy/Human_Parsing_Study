@@ -55,18 +55,18 @@
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 9691,
-      "sha256": "24f85341b605418a6c9f755f82744982ddf7ee2f4775650c3140c53d66c242ac"
+      "bytes": 10102,
+      "sha256": "dd7554c0eefe01df4d044de16fbe0467c3d77a3e37c85b211018911a0bccfffe"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 3942,
-      "sha256": "ac3e5d01ade33bf0ca4a0cf0b87eb43e2d9be85b57d2a35eef07fb48d04e11b0"
+      "bytes": 4365,
+      "sha256": "32a867c2f10dae364a0b8bbf5b5385c33f3541cb4dcd650aac40c64fcad39d21"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 10098,
-      "sha256": "f94143f11fe1812a51f766bac55073996abea9fe010ecb99aa07d485804554f7"
+      "bytes": 10939,
+      "sha256": "5c04db5b7e98d15d37317584446e53979f2e7610c3e484836fbf7b5bd200cfc4"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
@@ -97,6 +97,11 @@
       "path": "Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json",
       "bytes": 3410,
       "sha256": "217c2420000ffc17bd0aa3a8699198023139ba2b2bdeeeca3f977f3b338592a5"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json",
+      "bytes": 4138,
+      "sha256": "6a6c61dedd263ec3a08e0d8e496e7adcf7976701076e00878cab0ac71e0b1d64"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json",
@@ -164,6 +169,11 @@
       "sha256": "0322ae5d5560ca2506829880d82b5806b9472c653ceb44a558689acefa2b6b0d"
     },
     {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
+      "bytes": 3037,
+      "sha256": "c99dfd8b5b67a45a71756a4ae1335dde90882638e91192a3c6e982421658554e"
+    },
+    {
       "path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
       "bytes": 42118,
       "sha256": "6f1be22808b999824c3865edbf0a2e54c93b3c6c06c9708d204e8a51b3067dc1"
@@ -215,8 +225,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6861,
-      "sha256": "1e643f7acf66b3787c194e325ca04840f892b69ef98e57978a76470264292bf9"
+      "bytes": 7076,
+      "sha256": "f22a0b8de27c78f6a71004ad8b2615b36e373f93132504de38a80bf2044ffa21"
     },
     {
       "path": "REFERENCES.md",
@@ -2789,6 +2799,11 @@
       "sha256": "9ac1c55e57364c4a9e13ec22cb05a865e797eb00fd71ad5169c842a310cd6df7"
     },
     {
+      "path": "publication/CIHP_INTAKE_20261028T030159730335Z.json",
+      "bytes": 3146,
+      "sha256": "9c2d0ba6c63782e0025dfec9d1886b4116da7e135fbe4e1dcf33ed787f9d076c"
+    },
+    {
       "path": "publication/CLEAN_CHECKOUT_VALIDATION.json",
       "bytes": 14378,
       "sha256": "e538cce37d44e55ced21ee0eeb5d3d658ae45b90870bfc3ff9b6d92750d88b2a"
@@ -4294,6 +4309,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-21T09:35:08.604784+00:00",
-  "revision_reason": "Revision3 specification closure, single pending-decision set and bounded Stage B handoff; no active execution changes"
+  "updated_utc": "2026-10-28T03:07:13.213756+00:00",
+  "revision_reason": "User-authorized native CIHP extraction receipt only; no new experiment or dataset-role decision"
 }

@@ -17,6 +17,7 @@ Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md
 Human_Parsing_Benchmark/docs/RESEARCH_REFERENCES.md
 Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md
 Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json
+Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json
 Human_Parsing_Benchmark/manifests/LEGACY_EVIDENCE.json
 Human_Parsing_Benchmark/manifests/POPULATION_DOMAIN_PROPOSAL.json
 Human_Parsing_Benchmark/manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json
@@ -30,6 +31,7 @@ Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv
 Human_Parsing_Benchmark/registry/REQUIREMENTS_TARGETS.csv
 Human_Parsing_Benchmark/registry/ROSTER_DIFF.csv
 Human_Parsing_Benchmark/registry/ROUTES_PROPOSED.csv
+Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md
 Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
@@ -555,6 +557,7 @@ provenance/STAGE0_BLOCKER_REVIEW_20261008T082918Z.json
 provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
+publication/CIHP_INTAKE_20261028T030159730335Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
 publication/DESIGN_REVIEW_20261021T033935094789Z.json
 publication/EXTERNAL_ARTIFACTS.json

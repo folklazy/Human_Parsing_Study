@@ -1,0 +1,114 @@
+{
+  "work_unit": "cihp-native-intake-20261028T030159730335Z",
+  "status": "EXTRACTED_ARCHIVE_INTEGRITY_PASS_ANNOTATION_QUALITY_NOT_AUDITED",
+  "start_utc": "2026-10-28T03:03:35.808328+00:00",
+  "end_utc": "2026-10-28T03:05:44.535230+00:00",
+  "archive_workspace_relative": "datasets/instance-level_human_parsing.tar.gz",
+  "archive_sha256": "6dea91e6c7ffa48c023eb0bdaa3ee259fe0d4e9d89e108bd26b312fdf646d2bb",
+  "dataset_root_workspace_relative": "datasets/CIHP",
+  "path_transform": "Remove only the single archive wrapper instance-level_human_parsing/; preserve every child path and file bytes",
+  "files_extracted": 237965,
+  "bytes_extracted": 2078741021,
+  "file_inventory_workspace_relative": "Human_Parsing_MHPv2_Study/outputs/dataset_intake/cihp-native-intake-20261028T030159730335Z/EXTRACTED_FILES.jsonl",
+  "file_inventory_sha256": "e02098c3eb837560fc816ea4e5d6672bb3934fa67ab8d153f4bc547191d4c59a",
+  "archive_retained": true,
+  "original_datasets_modified": false,
+  "full_image_GT_decode_done": false,
+  "annotation_quality_verified": false,
+  "inference_or_benchmark_started": false,
+  "official_source_authenticity_verified": false,
+  "archive_bytes": 2033753964,
+  "member_inventory_sha256": "d3e9691e408daa85a7742ea4e8f8e6bd455cfbdef44294f57fef3ce22621d379",
+  "tar_and_gzip_integrity": "PASS",
+  "safe_paths": true,
+  "duplicate_paths": 0,
+  "split_directory_inventory": {
+    "Training": {
+      "images": 28280,
+      "annotation_sets": {
+        "Category_ids": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Human_ids": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Instance_ids": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Categories": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Human": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Instances": {
+          "count": 28280,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        }
+      }
+    },
+    "Validation": {
+      "images": 5000,
+      "annotation_sets": {
+        "Category_ids": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Human_ids": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Instance_ids": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Categories": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Human": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        },
+        "Instances": {
+          "count": 5000,
+          "missing_IDs": [],
+          "orphan_IDs": []
+        }
+      }
+    },
+    "Testing": {
+      "images": 5000,
+      "annotation_sets": {}
+    }
+  },
+  "provenance": "User supplied Windows download; exact source URL/publisher digest not supplied. Local SHA256 identifies received bytes, not publisher authenticity.",
+  "native_annotation_names_from_README": {
+    "Category_ids": "semantic part labels",
+    "Human_ids": "person segmentation labels",
+    "Instance_ids": "instance-level parsing labels",
+    "Categories_Human_Instances": "visualizations, not metric label maps"
+  },
+  "native_semantic_classes_README": "19 foreground labels, including nativeDress6; full pixel label/background/ignore audit NOT_PERFORMED",
+  "license_assessment_in_this_intake": "NOT_PERFORMED; archive README has no explicit license section; prior annotation-source rights do not automatically transfer",
+  "source_dataset_roles_changed": false,
+  "study_stage_advanced": false,
+  "new_plan_reviewed_in_this_unit": false,
+  "verification_limit": "Archive stream integrity + size/count-preserving extraction + filename-level pairing only; no full RGB/GT decoding, spatial/semantic/ownership or split-leakage audit; extraction-stream hashes not an independent second disk read."
+}

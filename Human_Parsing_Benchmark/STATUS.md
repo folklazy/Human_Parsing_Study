@@ -1,6 +1,6 @@
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-21T09:25:21.331823+00:00 (UTC)
+Updated: 2026-10-28T03:07:13.213756+00:00 (UTC)
 
 **SPECIFICATION_CLARIFIED · REVIEWED_PROPOSAL · USER_DECISIONS_PENDING**
 
@@ -34,3 +34,7 @@ FrozenYOLO and historicalCPI FINISHED_WITH_INCOMPLETE_SYSTEMS/STRICT_COMPLETE/nu
 Next: user answers consolidateddecision table; then separately authorizes bounded B. Current work unit `specification-handoff-20261021T092521331823Z`; current draft [spec](protocol/REVIEWED_SPECIFICATION.json), [review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md). Git identity/sync recorded by publication manifest and post-push receipt, not self-embedded.
 
 Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,≤32external ROI tasks and≤7freshfrozenYOLO TRAIN calls (one initial0000930 per co-resident application profile, only if exact proof missing). ExistingfrozenTRAINopportunity metadata gives2/6/2 for0000930/0021834/0001368;read-only counts, no new model execution. No nominalquality/timingjob increase.
+
+## 2026-10-28 — native CIHP archive imported
+
+`datasets/CIHP/` now exists from user-supplied archive, 237,965 files. TAR/gzip integrity and filename pairing pass; full image/GT quality audit not performed. [Import receipt](reports/CIHP_NATIVE_ARCHIVE_INTAKE.md). Current proposal/decisions and inference authorization unchanged; new plan not reviewed in this unit. Work unit `cihp-native-intake-20261028T030159730335Z`.

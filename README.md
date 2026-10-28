@@ -59,3 +59,5 @@ Anonymous README/result/config reads and remote HEAD were verified at the [initi
 ## Planning transition — 21 October 2026
 
 The [previous roadmap](reports/PROJECT_ROADMAP_TH_20261020.md) is preserved as **WIP**, not an accepted new experiment. [STATUS](STATUS.json) and [WORK_LOG](WORK_LOG.md) separate historical decisions from the next Prompt A review. The user will supply Prompt A and the current parser list after this preservation step; neither the old 19-candidate roster nor the QANet proposal is automatically the new launch scope. No experiment was resumed. This selected documentation sync does not publish the newer local implementation/config tree.
+
+Native CIHP asset intake (2026-10-28): shared archive extracted on server; [receipt](Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md). Dataset payloads remain external; no benchmark/protocol changes.

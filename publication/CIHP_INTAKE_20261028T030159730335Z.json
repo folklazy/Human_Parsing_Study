@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-28T03:07:13.213756+00:00",
+  "work_unit": "cihp-native-intake-20261028T030159730335Z",
+  "base_commit": "9c4d39d09bbcef36d45b8e83c1a75bad978b6c49",
+  "scope": "DATASET_IMPORT_RECEIPT_AND_NAVIGATION_ONLY",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
+      "bytes": 3037,
+      "source_sha256": "c99dfd8b5b67a45a71756a4ae1335dde90882638e91192a3c6e982421658554e",
+      "public_sha256": "c99dfd8b5b67a45a71756a4ae1335dde90882638e91192a3c6e982421658554e",
+      "before_public_sha256": null,
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json",
+      "bytes": 4138,
+      "source_sha256": "6a6c61dedd263ec3a08e0d8e496e7adcf7976701076e00878cab0ac71e0b1d64",
+      "public_sha256": "6a6c61dedd263ec3a08e0d8e496e7adcf7976701076e00878cab0ac71e0b1d64",
+      "before_public_sha256": null,
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 4365,
+      "source_sha256": "32a867c2f10dae364a0b8bbf5b5385c33f3541cb4dcd650aac40c64fcad39d21",
+      "public_sha256": "32a867c2f10dae364a0b8bbf5b5385c33f3541cb4dcd650aac40c64fcad39d21",
+      "before_public_sha256": "ac3e5d01ade33bf0ca4a0cf0b87eb43e2d9be85b57d2a35eef07fb48d04e11b0",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 10939,
+      "source_sha256": "5c04db5b7e98d15d37317584446e53979f2e7610c3e484836fbf7b5bd200cfc4",
+      "public_sha256": "5c04db5b7e98d15d37317584446e53979f2e7610c3e484836fbf7b5bd200cfc4",
+      "before_public_sha256": "f94143f11fe1812a51f766bac55073996abea9fe010ecb99aa07d485804554f7",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 10102,
+      "source_sha256": "dd7554c0eefe01df4d044de16fbe0467c3d77a3e37c85b211018911a0bccfffe",
+      "public_sha256": "dd7554c0eefe01df4d044de16fbe0467c3d77a3e37c85b211018911a0bccfffe",
+      "before_public_sha256": "24f85341b605418a6c9f755f82744982ddf7ee2f4775650c3140c53d66c242ac",
+      "transformation": "BYTE_IDENTICAL_COPY"
+    }
+  ],
+  "navigation": [
+    {
+      "public_path": "README.md",
+      "before_sha256": "1e643f7acf66b3787c194e325ca04840f892b69ef98e57978a76470264292bf9",
+      "after_sha256": "f22a0b8de27c78f6a71004ad8b2615b36e373f93132504de38a80bf2044ffa21"
+    }
+  ],
+  "source_root_README_updated_locally_not_copied_to_public": true,
+  "automatic_sync": false,
+  "active_code_config_or_results_changed": false,
+  "datasets_weights_published": false
+}
