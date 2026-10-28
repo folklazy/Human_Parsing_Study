@@ -35,6 +35,8 @@ Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PER_CLASS
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/cpi-convnext-shared-20261028T181609262813Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/cpi-convnext-shared-20261028T181609262813Z/SUMMARY.csv
+Human_Parsing_Benchmark/metrics/cpi-convnext-validation-20261028T182116250459Z/PER_CLASS.csv
+Human_Parsing_Benchmark/metrics/cpi-convnext-validation-20261028T182116250459Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/cpi-r50-manual-continuation-20261028T175036811629Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/cpi-r50-manual-continuation-20261028T175036811629Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/PER_CLASS.csv
@@ -80,6 +82,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/READINESS.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/DIAGNOSTIC_RESULT.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/LAUNCH_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/READINESS.json
@@ -668,6 +671,7 @@ publication/CIHP_INTAKE_20261028T030159730335Z.json
 publication/CIHP_NATIVE_COMPLETION_20261028T034103254470Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-shared-20261028T181609262813Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z-launch.json
+publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z-ready.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json

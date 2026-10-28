@@ -1,0 +1,2 @@
+status,expected,complete,failed,invalid,not_attempted,duplicate_IDs,missing_IDs,model_id,mIoU_20,mIoU_FG19,timing_rank_eligible
+INCOMPLETE,5000,113,1,0,4886,0,4887,CPI_ConvNeXtB_CIHP,,,False

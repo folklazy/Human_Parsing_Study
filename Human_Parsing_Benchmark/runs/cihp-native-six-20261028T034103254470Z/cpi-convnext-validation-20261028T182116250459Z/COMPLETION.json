@@ -1,0 +1,315 @@
+{
+  "status": "INCOMPLETE",
+  "round_id": "cpi-convnext-validation-20261028T182116250459Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "expected": 5000,
+  "controller_PID": 181956,
+  "start_utc": "2026-10-28T18:22:56.980473+00:00",
+  "launch_commit": "c4f8e7611ac5783e151436538aef4b8706e90f46",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "resource_policy_sha256": "a91e1b1c060099d93f3a173766ef30300fbf2e6586585489804504f9c15a3148",
+  "segment_plan_sha256": "eebf0830cbe01d3c2d556392f10ac399fe435c7870366c82a8741c11d4b5ede4",
+  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+  "environment": ".venvs/parser-legacy-cu113",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "queue": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "model_retries": 0,
+  "worker_PID": 181963,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-B",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_convnext_shared_segment.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_native_six.json",
+    "--model",
+    "CPI_ConvNeXtB_CIHP",
+    "--phase",
+    "validation",
+    "--output",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP",
+    "--segment-manifest",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/SEGMENT_PLAN.json"
+  ],
+  "worker_exit_code": 1,
+  "end_utc": "2026-10-28T18:24:54.467997+00:00",
+  "complete": 113,
+  "failed": 1,
+  "invalid": 0,
+  "not_attempted": 4886,
+  "assembled_from_verified_artifacts": true,
+  "no_reinference_of_reused_ids": true,
+  "audit_locations": [
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/reuse_audits/0",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/reuse_audits/1",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/final_audit/CPI_ConvNeXtB_CIHP"
+  ],
+  "duplicate_IDs": 0,
+  "missing_IDs": 4887,
+  "worker_terminal_status": "INCOMPLETE",
+  "setup_status": "PASS",
+  "error_reason": "RuntimeError('CUDA out of memory. Tried to allocate 3.00 GiB (GPU 0; 14.56 GiB total capacity; 4.62 GiB already allocated; 1.80 GiB free; 9.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+  "queue_stopped": true,
+  "closure_utc": "2026-10-28T18:25:07.305775+00:00",
+  "closure_Bangkok": "2026-10-29T01:25:07.305982+07:00",
+  "checks": {
+    "hashes_metadata_NPZ_CRC_GT_and_saved_mask_rescore": "PASS",
+    "exact_expected_ID_union": false,
+    "no_duplicate_IDs": true,
+    "source_artifacts_preserved": true
+  },
+  "metrics": {
+    "primary": null,
+    "native_reference_primary": null,
+    "person_metrics": {
+      "0.5": null,
+      "0.75": null
+    },
+    "parser_pipeline_ms_mean": null,
+    "parser_pipeline_ms_P50": null,
+    "parser_pipeline_ms_P95": null,
+    "timing_scope": "Adapter diagnostics, unequal native I/O; no speed ranking",
+    "limitations": [
+      "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+      "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+      "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+      "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export."
+    ]
+  },
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z",
+  "limitations": [
+    "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+    "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+    "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+    "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export.",
+    "Shared GPU quality-only execution; latency/free VRAM/other workloads can vary. No timing ranking."
+  ],
+  "new_other_model_jobs": 0,
+  "diagnostic": {
+    "status": "PASS",
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "image_id": "0000018",
+    "canonical_eligible": false,
+    "start_utc": "2026-10-28T18:18:28.355692+00:00",
+    "start_Bangkok": "2026-10-29T01:18:28.355692+07:00",
+    "end_Bangkok": "2026-10-29T01:18:51.446616+07:00",
+    "wallclock_seconds": 23.09089693799615,
+    "worker_exit_code": 0,
+    "warmup_images": [
+      "0000930"
+    ],
+    "error": null,
+    "traceback": null,
+    "contract_check": "PASS_NPZ_CRC_HASH_METADATA_GEOMETRY_NATIVE20_GT_SAVED_SCORE",
+    "native_score_threshold": 0.05,
+    "geometry": [
+      {
+        "source": "0000930.jpg",
+        "native_pipeline_geometry": [
+          {
+            "ori_shape": [
+              346,
+              500,
+              3
+            ],
+            "img_shape": [
+              800,
+              1156,
+              3
+            ],
+            "pad_shape": [
+              800,
+              1184,
+              3
+            ],
+            "scale_factor": [
+              2.312000036239624,
+              2.312138795852661,
+              2.312000036239624,
+              2.312138795852661
+            ],
+            "flip": false
+          }
+        ]
+      },
+      {
+        "source": "0000018.jpg",
+        "native_pipeline_geometry": [
+          {
+            "ori_shape": [
+              375,
+              500,
+              3
+            ],
+            "img_shape": [
+              800,
+              1067,
+              3
+            ],
+            "pad_shape": [
+              800,
+              1088,
+              3
+            ],
+            "scale_factor": [
+              2.134000062942505,
+              2.133333444595337,
+              2.134000062942505,
+              2.133333444595337
+            ],
+            "flip": false
+          }
+        ]
+      }
+    ],
+    "peak_memory": {
+      "peak_allocated_MiB": 4618.3837890625,
+      "peak_reserved_MiB": 8484.0,
+      "scope": "Last native forward after worker reset; on setup failure may include model load/warmup; shared diagnostics only"
+    },
+    "retained_bytes": 463932,
+    "array_schema": {
+      "person_semantic_masks": {
+        "shape": [
+          12,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "labels": [
+          0,
+          2,
+          5,
+          6,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "person_extents": {
+        "shape": [
+          12,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "person_scores": {
+        "shape": [
+          12
+        ],
+        "dtype": "float32"
+      },
+      "bboxes_xyxy": {
+        "shape": [
+          12,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "native_person_semantic_masks": {
+        "shape": [
+          26,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "labels": [
+          0,
+          2,
+          5,
+          6,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "native_person_extents": {
+        "shape": [
+          26,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "native_person_scores": {
+        "shape": [
+          26
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_person_semantic_masks": {
+        "shape": [
+          26,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "labels": [
+          0,
+          2,
+          5,
+          6,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "raw_native_person_extents": {
+        "shape": [
+          26,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "raw_native_person_scores": {
+        "shape": [
+          26
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_bboxes_xyxy": {
+        "shape": [
+          26,
+          4
+        ],
+        "dtype": "float32"
+      }
+    },
+    "packet_sha256": "150b87649de55f37cc864ee682032bb46a7cfad91b4ffd8ab3601caa204d251e",
+    "packet_metadata_sha256": "bb69a39164cdcca54a66b8a5b00ccc11606b62c7aad858bf4e6a8db7f31b6cf4",
+    "original_wh": [
+      500,
+      375
+    ],
+    "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+    "verified_packet_path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/diagnostic/packets/0000018",
+    "audit_state_path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/diagnostic_audit/RECONCILED.json",
+    "audit_state_sha256": "0b4213e55ecbbee2f397c9eaf023226101b12f067b4e2e1edc851250bf857f73",
+    "reconciliation_note": "Inference and export passed once. Original controller incorrectly passed folder diagnostic to a checker deriving model ID from folder.name. Corrected read-only model-named view; no model inference or diagnostic rerun. Original failed-controller result preserved.",
+    "original_diagnostic_round_id": "cpi-convnext-shared-20261028T181609262813Z",
+    "reconciled_utc": "2026-10-28T18:21:17.010464+00:00",
+    "additional_CPU_verification_seconds": 0.7598564220097614
+  }
+}

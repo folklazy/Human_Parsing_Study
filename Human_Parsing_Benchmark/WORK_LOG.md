@@ -179,3 +179,7 @@ Diagnosticmodelranonceandexported0000018successfully (native26/final12,peakalloc
 ## 2026-10-29T01:24:46.786838+07:00 — cpi-convnext-validation-20261028T182116250459Z: canonical ConvNeXt-only detached launch verified
 
 Launchcommitc4f8e7611ac5783e151436538aef4b8706e90f46, controller/SID181956PPID1/worker181963live. Verifiedfirstcanonicalpacket0000001NPZCRC/hash/native20/originalgeometry/checkpoint/config/resource/scoringfilecontract;canonical0000018freshattemptCOMPLETE (neverreusediagnostic). Snapshot2026-10-29T01:24:02.820843+07:00complete50/5000,failed0,invalid0. Allfrozenscientificbindingsunchanged. Mainstrictnulluntilfullcompletion,noqualityranking. DiagnosticinferenceoncePASS,checkerbugcorrectedfromsavedevidence;originalfailurehistoryretained. Updateoverviewfromcanonicalscopedlaunchrecordonly,oldmodelsunchanged. Nextautonomousonecheckpointhealth/failure/terminalaudit+report;endturn,noothermodelorCodexpolling.
+
+## 2026-10-29T01:25:07.305982+07:00 — cpi-convnext-validation-20261028T182116250459Z: CPI ConvNeXt-B-only terminal
+
+StatusINCOMPLETE, complete113/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no ConvNeXt/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.
