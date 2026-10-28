@@ -59,3 +59,7 @@ Latest user authorizes CPI_R50_CIHP readiness/run under original frozen scientif
 ## Explicit resource amendment — CPI R50 shared-GPU quality only
 
 Latest user explicitly authorizes GPU sharing for CPI_R50_CIHP quality/completeness, superseding its prior no-external-PID gate only. Bind a separate effective RESOURCE_POLICY.json and CPI-specific single-model controller/wrapper. Preserve all scientific config, weights, preprocessing/FP32/determinism/ownership/GT/scoring/population and existing guards/failure policy; required warmup, no solo/shared comparison or other-model rerun. Shared CPI native file-I/O timing is diagnostics, not speed ranking. Exact-ID/packet reconciliation and STRICT_COMPLETE close only CPI_R50; never start ConvNeXt/matrix/Sapiens/color. Read-only CPI progress command is documented in STATUS.
+
+### CPI R50 scoped round terminal — 2026-10-29T00:40:16.529470+07:00
+
+[Current report](reports/CIHP_CONTROLLED_CONTINUATION.md) and [completion](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json): explicit shared-GPU admission used, setup/warmup PASS, VAL CUDA OOM at0000018,3/5000 committed/verified and1failure; STRICT_COMPLETE main null, queue stopped. No scientific policy/config/source changes, no retries or next-model authorization. This is the outcome of the authorized attempt, not a change to metric/selection policy.

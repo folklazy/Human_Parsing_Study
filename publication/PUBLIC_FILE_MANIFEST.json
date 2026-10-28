@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 7314,
-      "sha256": "423a141c9d796ba0440abea4b0eca11b5be2e3582f6e5618b9932fd642135e15"
+      "bytes": 7885,
+      "sha256": "21e840767f30baed5ebd1aa90f2176722c9ebf5ee370280c8598356107189a2f"
     },
     {
       "path": "ARTIFACTS.md",
@@ -45,28 +45,28 @@
     },
     {
       "path": "Human_Parsing_Benchmark/AGENTS.md",
-      "bytes": 5494,
-      "sha256": "289515c26fa2091f5b15775f26cce4b7328acaec7b5f54aca6f357987f8224e4"
+      "bytes": 6061,
+      "sha256": "d23ea862c67b3246bff38d89160ef2c06e90b535b68318949166c0d5aac831ab"
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 11295,
-      "sha256": "a610d84923cd0c290c7fbc71341eb51ca95de947f8f28d5b4353e68513dd7bb5"
+      "bytes": 11874,
+      "sha256": "5f358218d38fc7fbc9b1523dbad6be6d9c317f8d78a50f8ec731349f82f15926"
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 10117,
-      "sha256": "3f066bf4a72e3ef0710f398e71bc3b91362269efceaa33e92a1da1e91bca78b6"
+      "bytes": 10082,
+      "sha256": "37f1c06cfe48207bc5c796634a338b551882ffcdc062acb180d6359135e10a80"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 524,
-      "sha256": "3abed23186bd1ecfd92a43be79978ea21290bcf9df27fc3bb99db56049fbbeb6"
+      "bytes": 2328,
+      "sha256": "769cdbb991068fdd584cfecb049c443ad81458933d0c0400944b7a85bf007a64"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 27901,
-      "sha256": "e705eda248600a3d340d897d49b4dfb86012b50bd2fa1743999e8f3a0294382e"
+      "bytes": 29056,
+      "sha256": "2514b97a4fbb56cabc8ec7bed2133b21447daa8b7605b5804a8beba6d71e66ff"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -250,8 +250,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
-      "bytes": 31493,
-      "sha256": "9ba323eeebfbbb8246e08dca30b7a11513909e7da8960e2f8b0d6a1451fdbb3b"
+      "bytes": 39796,
+      "sha256": "68509e21d67195a78995b0b854d6ec86a4645ea5c905698d34cf896ca0bda5af"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
@@ -397,6 +397,11 @@
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/ENVIRONMENT_VERIFICATION.json",
       "bytes": 441,
       "sha256": "ee07df3a874e5e7ee1d98b3ca66c99ec83ab450f29abd5f9f59cf8da7bd059f8"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/POSTFLIGHT_VERIFICATION.json",
+      "bytes": 9656,
+      "sha256": "23d4372b87b5f86387e260380aee44c2e674356afcb8e0701a014beb56402691"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/READINESS.json",
@@ -625,8 +630,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7519,
-      "sha256": "7f597fb183f00408d2767f8bf2e4cec456868aa1b32d29add14d7866fc5eb89d"
+      "bytes": 8037,
+      "sha256": "26bd4b08eb32550c82c1dba58a1ff7d2a253013d4592bf59511097f29925d219"
     },
     {
       "path": "REFERENCES.md",
@@ -3264,6 +3269,11 @@
       "sha256": "023b3d6e26f5c0f481d55d49812688de4d5401e1fe15ff56e47eb5b012ff764c"
     },
     {
+      "path": "publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json",
+      "bytes": 3826,
+      "sha256": "993473ca1b8673fd50ad296db5b2b42fed71657f7de693d7a1faef477e7f420b"
+    },
+    {
       "path": "publication/CPI_R50_SHARED_QUALITY_READY_20261028.json",
       "bytes": 5744,
       "sha256": "5a8d6746de040a4e8e27dec3b92b92441841773f83655fc2723326d0305c060e"
@@ -4794,6 +4804,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T17:37:25.893930+00:00",
+  "updated_utc": "2026-10-28T17:41:00.573579+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

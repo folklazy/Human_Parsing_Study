@@ -1,0 +1,86 @@
+{
+  "work_unit": "cpi-r50-shared-20261028T172951337299Z",
+  "updated_utc": "2026-10-28T17:41:00.570153+00:00",
+  "base_commit": "6e5df26155c7395556dbe562ce3b9e1ff4d5680c",
+  "scope": "CPI R50 terminal verification/Thai report/navigation only; no new model inference or rescore pass",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "37f1c06cfe48207bc5c796634a338b551882ffcdc062acb180d6359135e10a80",
+      "before_sha256": "3f066bf4a72e3ef0710f398e71bc3b91362269efceaa33e92a1da1e91bca78b6",
+      "bytes": 10082
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "5f358218d38fc7fbc9b1523dbad6be6d9c317f8d78a50f8ec731349f82f15926",
+      "before_sha256": "a610d84923cd0c290c7fbc71341eb51ca95de947f8f28d5b4353e68513dd7bb5",
+      "bytes": 11874
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "769cdbb991068fdd584cfecb049c443ad81458933d0c0400944b7a85bf007a64",
+      "before_sha256": "3abed23186bd1ecfd92a43be79978ea21290bcf9df27fc3bb99db56049fbbeb6",
+      "bytes": 2328
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "2514b97a4fbb56cabc8ec7bed2133b21447daa8b7605b5804a8beba6d71e66ff",
+      "before_sha256": "e705eda248600a3d340d897d49b4dfb86012b50bd2fa1743999e8f3a0294382e",
+      "bytes": 29056
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "public_path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "d23ea862c67b3246bff38d89160ef2c06e90b535b68318949166c0d5aac831ab",
+      "before_sha256": "289515c26fa2091f5b15775f26cce4b7328acaec7b5f54aca6f357987f8224e4",
+      "bytes": 6061
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "68509e21d67195a78995b0b854d6ec86a4645ea5c905698d34cf896ca0bda5af",
+      "before_sha256": "9ba323eeebfbbb8246e08dca30b7a11513909e7da8960e2f8b0d6a1451fdbb3b",
+      "bytes": 39796
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/POSTFLIGHT_VERIFICATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/POSTFLIGHT_VERIFICATION.json",
+      "sha256": "23d4372b87b5f86387e260380aee44c2e674356afcb8e0701a014beb56402691",
+      "before_sha256": null,
+      "bytes": 9656
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "README.md",
+      "sha256": "26bd4b08eb32550c82c1dba58a1ff7d2a253013d4592bf59511097f29925d219",
+      "bytes": 8037,
+      "note": "public navigation/terminal scope only"
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "AGENTS.md",
+      "sha256": "21e840767f30baed5ebd1aa90f2176722c9ebf5ee370280c8598356107189a2f",
+      "bytes": 7885,
+      "note": "public navigation/terminal scope only"
+    }
+  ],
+  "verification": {
+    "new_document_links": 15,
+    "canonical_completion_and_metrics_unchanged": true,
+    "first_packet_geometry_labels_NPZ": true,
+    "saved_mask_reconciliation": "reuse automatic final audit3 packets",
+    "both_processes_exited": true
+  },
+  "status": "INCOMPLETE",
+  "model_id": "CPI_R50_CIHP",
+  "complete": 3,
+  "failed": 1,
+  "invalid": 0,
+  "not_attempted": 4996,
+  "strict_complete_primary": null,
+  "raw_outputs_external": true
+}

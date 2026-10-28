@@ -34,3 +34,7 @@ Read current STATUS and CPI R50 section of the report. User authorizes only CPI_
 ## Latest user override — CPI R50 shared-GPU quality only
 
 User explicitly permits SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP, prioritizing quality/completeness; do not block solely on external PIDs or ask again. Read current STATUS/resource amendment; use CPI-specific controller and wrapper, never RPR model bindings or broad queues. Scientific settings/guards unchanged, no OOM retry/fallback/other-process modification. One standard TRAIN warmup and first VAL packet, then leave automatic processing; stop before ConvNeXt/matrix/Sapiens/color.
+
+## Latest terminal scope — 2026-10-29T00:40:16.529470+07:00
+
+CPI R50-only shared-quality round `cpi-r50-shared-20261028T172951337299Z` is INCOMPLETE after confirmed VAL CUDA OOM (3complete/1failed/4996notattempted), setup/warmup PASS. Controller/worker exited, queue stopped; main scoresnull. Read STATUS and Thai closure in reports/CIHP_CONTROLLED_CONTINUATION.md. Do not restart/retry/fallback or start ConvNeXt/matrix/Sapiens/color from old permissions. Preserve3committed packets, all attempt/error history and other model results; await new scoped direction.

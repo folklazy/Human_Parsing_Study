@@ -1,0 +1,278 @@
+{
+  "model_id": "CPI_R50_CIHP",
+  "round_id": "cpi-r50-shared-20261028T172951337299Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "checked_utc": "2026-10-28T17:38:59.403967+00:00",
+  "checked_Bangkok": "2026-10-29T00:38:59.404194+07:00",
+  "status": "INCOMPLETE",
+  "expected": 5000,
+  "complete": 3,
+  "failed": 1,
+  "invalid": 0,
+  "not_attempted": 4996,
+  "missing_IDs": 4997,
+  "duplicate_IDs": 0,
+  "orphan_packet_directories": 0,
+  "completed_IDs": [
+    "0000001",
+    "0000003",
+    "0000004"
+  ],
+  "failed_IDs": [
+    "0000018"
+  ],
+  "failure_stage": "MODEL_INFERENCE",
+  "failure_kind": "CUDA_OUT_OF_MEMORY",
+  "failure_message": "RuntimeError('CUDA out of memory. Tried to allocate 2.46 GiB (GPU 0; 14.56 GiB total capacity; 10.66 GiB already allocated; 46.75 MiB free; 11.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+  "setup_status": "PASS",
+  "warmup_images": [
+    "0000930"
+  ],
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "external_GPU_PIDs_at_admission": [
+    "126277"
+  ],
+  "failure_causation_limit": "OOM confirmed inside CPI native forward. Admission telemetry is not simultaneous peak telemetry; cannot isolate external contention vs model peak or fragmentation from this attempt. No solo-GPU comparison performed.",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "all_frozen_source_bindings_unchanged": true,
+  "checkpoint_rehashed_before_launch_only": true,
+  "first_packet": {
+    "image_id": "0000001",
+    "original_wh": [
+      500,
+      375
+    ],
+    "NPZ_sha256": "5fee748d5acf094da54dd78682b8a6c3dcc5a84e881e3e62c6b4fb1ae76fc039",
+    "array_schema": {
+      "person_semantic_masks": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "native_labels_present": [
+          0,
+          2,
+          5,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          17
+        ]
+      },
+      "person_extents": {
+        "shape": [
+          4,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "person_scores": {
+        "shape": [
+          4
+        ],
+        "dtype": "float32"
+      },
+      "bboxes_xyxy": {
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "native_person_semantic_masks": {
+        "shape": [
+          29,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "native_labels_present": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          17
+        ]
+      },
+      "native_person_extents": {
+        "shape": [
+          29,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "native_person_scores": {
+        "shape": [
+          29
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_person_semantic_masks": {
+        "shape": [
+          30,
+          375,
+          500
+        ],
+        "dtype": "uint8",
+        "native_labels_present": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          17
+        ]
+      },
+      "raw_native_person_extents": {
+        "shape": [
+          30,
+          375,
+          500
+        ],
+        "dtype": "bool"
+      },
+      "raw_native_person_scores": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "raw_native_bboxes_xyxy": {
+        "shape": [
+          30,
+          4
+        ],
+        "dtype": "float32"
+      }
+    },
+    "model_checkpoint_input_YOLO_config_evaluation_bindings_verified_by_final_audit": true,
+    "score_files_present": [
+      "score_0.5.json",
+      "score_0.75.json",
+      "native_reference_score.json"
+    ]
+  },
+  "saved_mask_rescore_reused_from": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP",
+  "all_successful_packets_hash_metadata_NPZ_GT_saved_score_verified": true,
+  "STRICT_COMPLETE_primary": null,
+  "controller_PID": 162019,
+  "worker_PID": 162023,
+  "detached_session_ID": 162019,
+  "detached_observed_before_failure": {
+    "time_utc": "2026-10-28T17:37:21+00:00",
+    "controller_PPID": 1,
+    "controller_SID": 162019,
+    "worker_PPID": 162019
+  },
+  "both_processes_exited": true,
+  "queue_stopped": true,
+  "model_retries": 0,
+  "other_models_started": [],
+  "launch_commit": "4c7248ff7166cfe81ec5fe1dfda8cfe77ffe776c",
+  "automatic_terminal_publication": {
+    "status": "SYNCED",
+    "commit": "6e5df26155c7395556dbe562ce3b9e1ff4d5680c",
+    "remote_commit": "6e5df26155c7395556dbe562ce3b9e1ff4d5680c",
+    "push_exit": 0,
+    "push_diagnostic": "To https://github.com/folklazy/Human_Parsing_Study.git\n   4c7248f..6e5df26  main -> main\n"
+  },
+  "raw_evidence_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z",
+  "external_artifacts": [
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/PROCESS.json",
+      "bytes": 1240,
+      "sha256": "08552183cde7d286fc42e1bc80b1c9c3b1678a1043798b44e3696f97047ba7f5"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/LAUNCH.json",
+      "bytes": 1737,
+      "sha256": "ae6bf5133ad4991145eeb6384f689eada0c5f409032094b862e89e123738516f"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/ROUND_STATUS.json",
+      "bytes": 2971,
+      "sha256": "41adb300e3e21ab60265ed5372b9a719dbf23c3e898e8af3a8864ab6cd2f2ede"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/PUBLICATION.json",
+      "bytes": 278,
+      "sha256": "8ce826d407805bc691bec25fd9f7b76f540fa2943bb1249873c7d1714b065c02"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/WORKER.log",
+      "bytes": 2945,
+      "sha256": "e8a1fd641efe1657f36b1a22564b1fa17004447b179931cf20f428b0d7f87359"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/CONTROLLER.log",
+      "bytes": 601,
+      "sha256": "2b7cf5b71deb9cba47aa2139fef2f4279df051133691b465b481fe718a702724"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/GPU_HEALTH.jsonl",
+      "bytes": 117,
+      "sha256": "2ee13b574cee6d89ee0000036f2da719a568a5af0e1c4b625425db175b2448c6"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/RESOURCE_POLICY.json",
+      "bytes": 1178,
+      "sha256": "ed813393385b5207877b438b374d37bf428cbd0819a7e7f3a15713ca6389d906"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/SEGMENT_PLAN.json",
+      "bytes": 76688,
+      "sha256": "081b602ac748008bf836f307d03aedd39fcd107d8f9dad8a77fd56a371314619"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP/RUN.json",
+      "bytes": 14016,
+      "sha256": "f532aeb0a7441fc38dbd1a01069bfe125f3fd0dc4e84b9055f8985a3c52ca8ca"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP/FRAMES.jsonl",
+      "bytes": 6673,
+      "sha256": "715bb610babac3415b5efe1a656411ae9ce8fcf5ee72775b4182680c5b086a27"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP/ENVIRONMENT.txt",
+      "bytes": 1907,
+      "sha256": "1219ee48b0b165f181e75a901798e94d42d37c84e931b6fecc0be297d034dd7c"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP/INVENTORY.json",
+      "bytes": 5000,
+      "sha256": "f05e311f2e889b28adaf6c82b0a5861a0809d9639ebeecdd025aaeb20b346fa2"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP/RECONCILED.json",
+      "bytes": 83997,
+      "sha256": "f2991d437cd26625afcbdfa9511c45a28116f501669a5d700032fc0da55d2679"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP/VERIFIED_FRAMES.jsonl",
+      "bytes": 3481,
+      "sha256": "b998b72273f2cd32717dc1d10189401dd0a357d0744f4b21d735ec221a4fad65"
+    }
+  ]
+}

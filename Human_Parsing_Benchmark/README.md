@@ -1,4 +1,4 @@
-> **Current round: CPI R50 shared-GPU quality-only readiness.** User explicitly authorizes coexistence for this CPI R50 round. Scientific config/FP32/GT/ownership/scoring unchanged; no latency/FPS/memory ranking. Read [STATUS](STATUS.md) and [main report](reports/CIHP_CONTROLLED_CONTINUATION.md). Only CPI R50, stop before ConvNeXt/matrix/Sapiens/color.
+> **Current CPI R50 round: INCOMPLETE / stopped.** Warmup passed; VAL `0000018` hit CUDA OOM. Complete3/5000,failed1,not-attempted4996; STRICT_COMPLETE main scores null. Shared-GPU authorization applied; no retry or ConvNeXt-B launch. Read [STATUS](STATUS.md) and [main report](reports/CIHP_CONTROLLED_CONTINUATION.md).
 
 # Human Parsing Benchmark
 

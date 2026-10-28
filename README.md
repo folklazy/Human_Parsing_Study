@@ -1,3 +1,5 @@
+> **Current scoped outcome (2026-10-29T00:40:16.529470+07:00): CPI R50 stopped INCOMPLETE after CUDA OOM.** Native CIHP complete3/5000,failed1,not-attempted4996; STRICT_COMPLETE main scores null. Setup/warmup passed; shared-GPU amendment was used. Earlier4 models remain closed. No ConvNeXt-B launch. [Current status](Human_Parsing_Benchmark/STATUS.md) · [Report for review](Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md). Older planning summaries below are historical; current PLAN/STATUS govern.
+
 # Current active milestone — native CIHP first six
 
 [Current PLAN](Human_Parsing_Benchmark/PLAN.md) / [STATUS](Human_Parsing_Benchmark/STATUS.md) / [Readiness](Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md). User-adopted nativeCIHP Parsing9 plan supersedes conflicting earlierCCIHP7/10proposal. Firstsix authorizationwhenready;Ninjadeferred,Sapiensaftermatrix. Older closedCPI results below remain immutable historical evidence.

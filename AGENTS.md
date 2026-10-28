@@ -1,3 +1,7 @@
+# Latest operational outcome — CPI R50 INCOMPLETE and stopped
+
+As of 2026-10-29T00:40:16.529470+07:00, explicit CPI R50 SHARED_GPU_QUALITY_ONLY admission was applied, model/warmup passed, then VAL0000018 hit CUDA OOM.3/5000complete,1failed,4996notattempted; STRICT_COMPLETE mainnull. Both controller/worker exited and queue stopped. Read Human_Parsing_Benchmark/STATUS.md and its main report. No auto-retry/fallback/ConvNeXt/matrix/Sapiens/color or other-model rerun. This terminal scope supersedes older launch permissions below; await a new scoped user instruction.
+
 # Latest explicit authorization — CPI R50 shared-GPU quality only
 
 User explicitly permits SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP in the current round, overriding its prior external-PID rejection. Prioritize quality/completeness, keep all scientific settings/guards/failure policy, no solo/shared experiment or old-model rerun. Use dedicated CPI R50 controller/wrapper/RESOURCE_POLICY.json, never RPR model bindings or historical broad queues. Check actual status/artifacts before launch; standard warmup and first packet then autonomous run. Stop before ConvNeXt/matrix/Sapiens/color/training. Read Human_Parsing_Benchmark/STATUS.md/report and use cpi_r50_progress.py. This supersedes the older blocked admission instructions below; historical records stay unchanged.
