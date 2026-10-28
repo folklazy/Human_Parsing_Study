@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 7885,
-      "sha256": "21e840767f30baed5ebd1aa90f2176722c9ebf5ee370280c8598356107189a2f"
+      "bytes": 8337,
+      "sha256": "b6abdddac80ba05cd980b276ec925a5cfdcf3ae1cf2af106abc3772158ed1957"
     },
     {
       "path": "ARTIFACTS.md",
@@ -45,8 +45,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/AGENTS.md",
-      "bytes": 6527,
-      "sha256": "74ef472002b282fad8933cc253ebb153a209c2eb74614f1d4d338bacb30b4947"
+      "bytes": 7013,
+      "sha256": "944a7d2b87d1026d13bf3592a089e8a8b7991db36b2cb45a26e12d92ff83d9cf"
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
@@ -60,13 +60,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 537,
-      "sha256": "3838b64ef7463aea395e17f01e3690a5fc12a04f9993d01eaff0a6784ff40ae2"
+      "bytes": 2258,
+      "sha256": "262c2b8c6342b1cf8bb28252929551ef64e0373b8afab6debbabf29348d83f0f"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 30217,
-      "sha256": "5343142df00b7d78b90d5f128049b820816f906504d8679d7f82c5337a66bbfb"
+      "bytes": 31001,
+      "sha256": "d16d40709b6333c945a7a2fbd65ffa724d5d6a0a8a1036f1632db85ec2383027"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -260,8 +260,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
-      "bytes": 46183,
-      "sha256": "a89432ea2886727abba5d90cfc075c215c7b58c9a9bf98cf23dbb140122a17e0"
+      "bytes": 50179,
+      "sha256": "0b01dca767876d37531289d64db2dfdcad185cf5a29692b67bc579f3cbf5cdae"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
@@ -382,6 +382,11 @@
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json",
       "bytes": 5399,
       "sha256": "59a67be335c1383985bdf57c00af3d950f0a537f061980ec3d9b440eca2a481e"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/MANUAL_CONTINUATION_OUTCOME.json",
+      "bytes": 4299,
+      "sha256": "93f3abab41907ecf6f008f45255ac9f1bebe5ed51846035d8771d14a6003bcb8"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/RESOURCE_POLICY.json",
@@ -565,8 +570,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/rpr_progress.py",
-      "bytes": 5826,
-      "sha256": "b1b80aba28df683c58a3d054d4f40d7f087a6a043aef8a995e20e7822b8a143e"
+      "bytes": 6258,
+      "sha256": "768f10564461316f269c258dd6e42a3e6134335a5df6b46e08c271b363fa8166"
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cihp_segment.py",
@@ -640,8 +645,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_rpr_progress.py",
-      "bytes": 1912,
-      "sha256": "32887a37f82ff120be53aaede5ef9964ae2be95a2cee6e8a656bee53d632ea2e"
+      "bytes": 2977,
+      "sha256": "0aecbc5fe29b018f16423f1c40a27b29f4e4cda7c74c01539619c13ecb6ec579"
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_rpr_shared_round.py",
@@ -3304,6 +3309,11 @@
       "sha256": "e538cce37d44e55ced21ee0eeb5d3d658ae45b90870bfc3ff9b6d92750d88b2a"
     },
     {
+      "path": "publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json",
+      "bytes": 2602,
+      "sha256": "d9ce9fa01ba04da74bd005b6f01f4b57e8c60538ddc460be2f539a4848715315"
+    },
+    {
       "path": "publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json",
       "bytes": 3697,
       "sha256": "023b3d6e26f5c0f481d55d49812688de4d5401e1fe15ff56e47eb5b012ff764c"
@@ -4844,6 +4854,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T17:52:07.649547+00:00",
+  "updated_utc": "2026-10-28T17:54:17.495864+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

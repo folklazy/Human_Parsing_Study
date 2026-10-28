@@ -1,3 +1,7 @@
+# Latest CPI R50 operator continuation — stopped after repeated OOM
+
+User ordered another CPI R50 run; it executed in cpi-r50-manual-continuation-20261028T175036811629Z. Reused3 outputs, newsuccess0, VAL0000018 CUDA OOM again, history retained. Both processes exited; main scoresnull. Read Human_Parsing_Benchmark/STATUS.md and latest Thai report section. No automatic restart loop or other-model launch. Older instructions below remain historical.
+
 # Latest operational outcome — CPI R50 INCOMPLETE and stopped
 
 As of 2026-10-29T00:40:16.529470+07:00, explicit CPI R50 SHARED_GPU_QUALITY_ONLY admission was applied, model/warmup passed, then VAL0000018 hit CUDA OOM.3/5000complete,1failed,4996notattempted; STRICT_COMPLETE mainnull. Both controller/worker exited and queue stopped. Read Human_Parsing_Benchmark/STATUS.md and its main report. No auto-retry/fallback/ConvNeXt/matrix/Sapiens/color or other-model rerun. This terminal scope supersedes older launch permissions below; await a new scoped user instruction.

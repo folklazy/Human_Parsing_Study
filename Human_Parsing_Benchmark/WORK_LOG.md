@@ -159,3 +159,7 @@ User orders run rather than another permission request. Original scientific hash
 ## 2026-10-29T00:52:07.602801+07:00 — cpi-r50-manual-continuation-20261028T175036811629Z: CPI R50-only terminal
 
 StatusINCOMPLETE, complete3/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no ConvNeXt/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.
+
+## 2026-10-29T00:53:49.685389+07:00 — cpi-r50-manual-continuation-20261028T175036811629Z: explicit manual retry executed, repeated OOM
+
+Launchcommitdd02e228ebd215c034a785d41ea459f7db336bfd, controller166181/worker166185 detached; samecheckpoint/FP32/scientificconfig. TRAINwarmupPASS, firstremainingVAL0000018OOM: allocated10.66GiB/reserved10.80GiB/request2.46GiB/free718.75MiB. Newsuccess0, reused3,failedunique1,unattempted4996; twohistorical/currentOOMattemptsretained. Bothprocessesexited, strictmainnull, noothermodel/retryloop. Auto finalizer+remote publication passed. Verifiedallfrozenbindingsunchanged; noadditionalinference. Correctedread-onlyprogress toinclude reusedsuccesses;3targetedCPUcasesPASS. Thai report/evidence updated; nextnoautomaticrestartorprotocolchange.

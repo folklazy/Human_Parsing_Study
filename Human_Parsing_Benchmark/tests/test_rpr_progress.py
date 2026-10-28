@@ -18,4 +18,17 @@ class ProgressTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'ROUND_STATUS.json').write_text(json.dumps({'status':'RUNNING','expected':5000,'controller_PID':1,'worker_PID':2}));s=snapshot(root,lambda *_:False);self.assertEqual(s['phase'],'INTERRUPTED');self.assertFalse(s['controller_alive'])
 
+    def test_continuation_counts_reused_outputs_in_running_and_terminal(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);folder=root/'segments/CPI_R50_CIHP';folder.mkdir(parents=True)
+            (root/'SEGMENT_PLAN.json').write_text(json.dumps({'reused_ids':['a','b','c']}))
+            (root/'ROUND_STATUS.json').write_text(json.dumps({'status':'RUNNING','expected':5000}))
+            (folder/'RUN.json').write_text(json.dumps({'complete':2}))
+            self.assertEqual(snapshot(root,lambda *_:True,model='CPI_R50_CIHP')['inference_complete'],5)
+            (root/'ROUND_STATUS.json').write_text(json.dumps({'status':'INCOMPLETE','expected':5000,'complete':3}))
+            (folder/'RUN.json').write_text(json.dumps({'complete':0,'failed':1}))
+            s=snapshot(root,lambda *_:False,model='CPI_R50_CIHP')
+            self.assertEqual(s['inference_complete'],3);self.assertEqual(s['reused_complete'],3)
+            self.assertEqual(s['segment_inference_complete'],0);self.assertEqual(s['artifact_packets_verified'],3)
+
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,83 @@
+{
+  "checked_Bangkok": "2026-10-29T00:53:49.685389+07:00",
+  "model_id": "CPI_R50_CIHP",
+  "round_id": "cpi-r50-manual-continuation-20261028T175036811629Z",
+  "status": "INCOMPLETE",
+  "expected_unique_IDs": 5000,
+  "complete_unique_IDs": 3,
+  "reused_successful_IDs": [
+    "0000001",
+    "0000003",
+    "0000004"
+  ],
+  "new_successful_IDs": 0,
+  "failed_unique_IDs": [
+    "0000018"
+  ],
+  "current_segment_failed_attempts": 1,
+  "historical_failed_attempts": 1,
+  "total_failed_attempts_across_two_segments": 2,
+  "total_VAL_attempts_across_two_segments": 5,
+  "not_attempted_unique_IDs": 4996,
+  "missing_successful_IDs": 4997,
+  "duplicate_successful_IDs": 0,
+  "primary_metrics": null,
+  "reason": "RuntimeError('CUDA out of memory. Tried to allocate 2.46 GiB (GPU 0; 14.56 GiB total capacity; 10.66 GiB already allocated; 718.75 MiB free; 10.80 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+  "automatic_retries": 0,
+  "explicit_user_authorized_new_segments_executed": 1,
+  "precision": "FP32",
+  "all_frozen_source_config_bindings_unchanged": true,
+  "other_models_started": [],
+  "controller_PID": 166181,
+  "worker_PID": 166185,
+  "both_processes_exited": true,
+  "launch_commit": "dd02e228ebd215c034a785d41ea459f7db336bfd",
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z",
+  "raw_evidence": [
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/PROCESS.json",
+      "sha256": "cc8e855c18517f1127f17b344c514668d427c7a0e5f7f817320a6f1b5fec1e39",
+      "bytes": 946
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/LAUNCH.json",
+      "sha256": "ca827825eb5569a406b05ec46f88f7529c45e1d31d4e903386a4105cc8a68237",
+      "bytes": 1776
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/ROUND_STATUS.json",
+      "sha256": "6097a67c1b4cd0063ea50f3d894def02c9e2c3cb3b4ac34874041a2bf2a68282",
+      "bytes": 2907
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/ATTEMPT_HISTORY.json",
+      "sha256": "9fdd15957317d5abbd7db03d5dce61d798f6095ffcc872dfa95076f488266f7b",
+      "bytes": 6088
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/segments/CPI_R50_CIHP/FRAMES.jsonl",
+      "sha256": "2dce37e01077ec74f7d28a251da180ede24860832d07ab6145dda93fbea254cb",
+      "bytes": 4649
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/segments/CPI_R50_CIHP/RUN.json",
+      "sha256": "d38b0afb48d1e6a56e5856f036b522f8c061e8209b3e95b75932141dfd081208",
+      "bytes": 14036
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/final_audit/CPI_R50_CIHP/INVENTORY.json",
+      "sha256": "650c6de36f9a35340104f8cbc6a83a808bf45d3b941589f5a89cd0171d12aef5",
+      "bytes": 5027
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/final_audit/CPI_R50_CIHP/RECONCILED.json",
+      "sha256": "c87081b11c85b78c0611bce83e7054bed518621ee01a55ae6a7e7f85941d6103",
+      "bytes": 83517
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/PUBLICATION.json",
+      "sha256": "46f369a9c2fc1ce5806da036c255d5cb3f0af703e1fd7d83da928e32453dac34",
+      "bytes": 278
+    }
+  ]
+}

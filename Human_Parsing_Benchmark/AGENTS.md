@@ -42,3 +42,7 @@ CPI R50-only shared-quality round `cpi-r50-shared-20261028T172951337299Z` is INC
 ## Latest explicit user direction — 2026-10-29T00:51:33.391140+07:00
 
 User orders CPI R50 continuation now. One manual segment `cpi-r50-manual-continuation-20261028T175036811629Z` with3reused/4997pending, including priorOOM0000018; preserves failed-attempt history, same scientific settings and shared-quality admission. This supersedes prior wait-only terminal scope for this one operator launch. No automatic restarts/retries or othermodels; stop on new error.
+
+## Manual continuation consumed — 2026-10-29T00:53:49.685389+07:00
+
+Explicit operator CPI R50 continuation `cpi-r50-manual-continuation-20261028T175036811629Z` ran and stopped after repeatedOOM0000018. No new success; reuse3 preserved. Current unique3/5000,failed1,notattempted4996; twofailureattempts retained. Both processes exited. User manual-run instruction has been executed; no automatic restart loop/othermodel/precisionchange. Read currentSTATUS/report before further work.
