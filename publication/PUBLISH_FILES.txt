@@ -67,6 +67,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/ENVIRONMENT_VERIFICATION.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/LAUNCH_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
@@ -641,6 +642,7 @@ publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_CREATION.json
 publication/REPOSITORY_VALIDATION.json
 publication/RPR_CIHP_PREFLIGHT_BLOCKED_20261028.json
+publication/RPR_SHARED_QUALITY_LAUNCH_20261028.json
 publication/RPR_SHARED_QUALITY_READY_20261028.json
 publication/SOURCE_COPY_MANIFEST.json
 publication/SPECIFICATION_HANDOFF_20261021T092521331823Z.json

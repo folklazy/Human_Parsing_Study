@@ -1,0 +1,25 @@
+{
+  "observed_utc": "2026-10-28T16:01:47.384086+00:00",
+  "observed_Bangkok": "2026-10-28T23:01:47.384252+07:00",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "round_id": "rpr-cihp-shared-20261028T155439603873Z",
+  "status": "RUNNING",
+  "controller_PID": 145516,
+  "worker_PID": 145530,
+  "launch_commit": "ec3731211baf6520ac4c8fc567ef7eed8825ed19",
+  "verified_first_ID": "0000001",
+  "first_packet_hash_geometry_label_score_artifacts": "PASS",
+  "new_complete_observed": 170,
+  "failed_observed": 0,
+  "invalid_observed": 0,
+  "reused": 0,
+  "expected": 5000,
+  "queue": [
+    "RPR_CIHP"
+  ],
+  "resource_policy_sha256": "6b623887957e7b28addfeb3e4005847875067d90f035c03882ab499c037c3177",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "original_scientific_sources_unchanged": true,
+  "process_session_check": "PID    PPID     SID STAT\n 145516       1  145516 Ss\n 145530  145516  145516 Rl",
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z"
+}

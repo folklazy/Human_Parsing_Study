@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-28T16:02:28.018404+00:00",
+  "base_commit": "ec3731211baf6520ac4c8fc567ef7eed8825ed19",
+  "scope": "Actual RPR-only shared quality launch/first committed packet; no other model or silent scientific config change",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 1994,
+      "sha256": "9953f27e72425841772cd023930fae2bef4eee4436ea65929acf209b28b34fa9",
+      "before_sha256": "8e5ce323feca8b22cc0769d5ff42a512d0cb184f973844917579cdcd53f9fd7d"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 23458,
+      "sha256": "32303a0e20de713f85e8f620107d9f28a4cff7692975883ed377bf3c68d30499",
+      "before_sha256": "9fca3ad6b22b273109fee76477e49094259ce3d9a038c5f6a83e0d174438b077"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "bytes": 16833,
+      "sha256": "604e9173a8bbbbade7058e95db16b86162e21bc9ae2bff596bf82043300382cf",
+      "before_sha256": "da2bbdef8956dbffd5cdbba02dbe8c92963cd8964368ae953070169490934f62"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/LAUNCH_VERIFICATION.json",
+      "bytes": 1113,
+      "sha256": "58784a850560f87968fa5d2e0ae9b0f5a06c5447045ee45c3aa1790e85dfffef",
+      "before_sha256": null
+    }
+  ]
+}
