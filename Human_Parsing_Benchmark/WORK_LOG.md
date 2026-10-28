@@ -97,3 +97,7 @@ Reporting corrections: YOLO-conditioned native-label pipelines, not all official
 Actual controller PID70184 detached session, D2 worker PID70200, launch codecommite51464da35327811ee49453649394edbdd508872 (pushed and remote verified before execution). QANet/M2FP assembled from validated originals without inference. First D2 new VAL0016688 committed; NPZ/meta/config/parent/continuation/fingerprint checks PASS; new IDs disjoint from1810 old completed IDs. Frozen scientific sources/config unchanged, no native policy changes. Current new completed55/3190, other3 systems queued; no partial ranking. Additional TRAIN0000930 process warmup excluded from VAL/timing aggregation.
 
 Monitor/reporting uses assembled view after terminal; final completion includes original and continuation commit links and correction limitations. Source GT/YOLO/closed CPI unchanged. Next continue pending jobs then reconcile/aggregate/report; no model/OOM retry, matrix/Sapiens/color.
+
+## 2026-10-28T09:33:52.036825+00:00 — cihp-native-six-20261028T034103254470Z:nativefirstsixterminal
+
+ActualstatusFINISHED_WITH_INCOMPLETE_SYSTEMS;complete_models3/6,official5000each.Mainmetricsnullforincompleterows;perclass/person/native-reference/failuretablesgeneratedfromterminalledgersonly.NoSapiens/Ninja/color/training/CCTV.Nonewinferencefromfinalizer.Launchcommit5e8f36ae2a249295c6a1b424b066b010449da048.Nextreviewreportandremainingfailures/matrix,notautomaticfailed-image retry.

@@ -1,0 +1,4 @@
+model_id,image_id,status,stage,error_last_line,external_log
+RPR_CIHP,,INCOMPLETE,MODEL_LOAD_OR_SETUP,"RuntimeError: EXTERNAL_GPU_BUSY: defer, do not interrupt other jobs",Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/RPR_CIHP/RUN.json
+CPI_R50_CIHP,,INCOMPLETE,MODEL_LOAD_OR_SETUP,"RuntimeError: EXTERNAL_GPU_BUSY: defer, do not interrupt other jobs",Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/CPI_R50_CIHP/RUN.json
+CPI_ConvNeXtB_CIHP,,INCOMPLETE,MODEL_LOAD_OR_SETUP,"RuntimeError: EXTERNAL_GPU_BUSY: defer, do not interrupt other jobs",Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/CPI_ConvNeXtB_CIHP/RUN.json

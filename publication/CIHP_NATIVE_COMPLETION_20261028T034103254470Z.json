@@ -1,0 +1,71 @@
+{
+  "work_unit": "cihp-native-six-20261028T034103254470Z",
+  "base_commit": "7b765871dcf8e33b1691f356e7b36c20b13db200",
+  "scope": "Terminal first-six nativeCIHP metrics/report/provenance only; no masks/images/weights",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc",
+      "before_sha256": null,
+      "bytes": 11133
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md",
+      "sha256": "71905950e322944470428c1b950dba6e4701c04135180c879326a361ba8b1ad3",
+      "before_sha256": null,
+      "bytes": 7839
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/FAILURES.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/FAILURES.csv",
+      "sha256": "e87eee4dc6463d1c93742d23db74cb8f768029b7a87c59a89adc39e23c66224c",
+      "before_sha256": null,
+      "bytes": 943
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/NATIVE_REFERENCE.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/NATIVE_REFERENCE.csv",
+      "sha256": "32786943e8cf1f66a871a31e2ba666272a2a10df5a0feb7588697d80f4eda390",
+      "before_sha256": null,
+      "bytes": 504
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PERSON_METRICS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PERSON_METRICS.csv",
+      "sha256": "002c4b4331da3fac8680248ff9c14b1381e79774ce72e6dcea51fc9f56cf686c",
+      "before_sha256": null,
+      "bytes": 1250
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PER_CLASS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PER_CLASS.csv",
+      "sha256": "213c5b331796c0938ce026fbaa2a6bba24282774c61f9a8b49db78f854dfddec",
+      "before_sha256": null,
+      "bytes": 7852
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/SUMMARY.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/SUMMARY.csv",
+      "sha256": "7b2f4cf911eebac6cd11c60a4b335c8b5eca77a642ce928054d31ad45a5aabaa",
+      "before_sha256": null,
+      "bytes": 2371
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "fb9eb5a65e44f8f06376adbf7b6c14521aabb6b135d6af55f19da708e3d07980",
+      "before_sha256": "6cf3781d2bb4cb900b08a53206c4ec3c355a2beeebb802da8fb62100c47afa5f",
+      "bytes": 19072
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "a32a95d85a56801d3aab2915665cc76b8f4152bb3d11e33060bc4cc84c27dae1",
+      "before_sha256": "8c311f2b8187ac84289100ddf3734c33ac2a6b60f8332277976f87c1a44c7982",
+      "bytes": 1268
+    }
+  ],
+  "launch_source_unchanged": true
+}
