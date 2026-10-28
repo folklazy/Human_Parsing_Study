@@ -38,3 +38,7 @@ User explicitly permits SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP, prioritizing q
 ## Latest terminal scope — 2026-10-29T00:40:16.529470+07:00
 
 CPI R50-only shared-quality round `cpi-r50-shared-20261028T172951337299Z` is INCOMPLETE after confirmed VAL CUDA OOM (3complete/1failed/4996notattempted), setup/warmup PASS. Controller/worker exited, queue stopped; main scoresnull. Read STATUS and Thai closure in reports/CIHP_CONTROLLED_CONTINUATION.md. Do not restart/retry/fallback or start ConvNeXt/matrix/Sapiens/color from old permissions. Preserve3committed packets, all attempt/error history and other model results; await new scoped direction.
+
+## Latest explicit user direction — 2026-10-29T00:51:33.391140+07:00
+
+User orders CPI R50 continuation now. One manual segment `cpi-r50-manual-continuation-20261028T175036811629Z` with3reused/4997pending, including priorOOM0000018; preserves failed-attempt history, same scientific settings and shared-quality admission. This supersedes prior wait-only terminal scope for this one operator launch. No automatic restarts/retries or othermodels; stop on new error.

@@ -1,0 +1,57 @@
+{
+  "work_unit": "cpi-r50-manual-continuation-20261028T175036811629Z-ready",
+  "base_commit": "0ea15a7a80ecb5cba76954bb94c49b8549017db4",
+  "scope": "Explicit CPI R50 manual continuation;3reused4997pending, previous failed attempt retained, no other models",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/SEGMENT_PLAN.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/SEGMENT_PLAN.json",
+      "sha256": "f593700625bc788c45fe2824936db65569ae22cb2e3736830b3ddd6e3c78deda",
+      "before_sha256": null,
+      "bytes": 76966
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/RESOURCE_POLICY.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/RESOURCE_POLICY.json",
+      "sha256": "a96ba1a30badeeb46622c75e874e8bfca7e3cc186c13983a4a91b1e5d14b7a93",
+      "before_sha256": null,
+      "bytes": 1446
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/ATTEMPT_HISTORY.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/ATTEMPT_HISTORY.json",
+      "sha256": "9fdd15957317d5abbd7db03d5dce61d798f6095ffcc872dfa95076f488266f7b",
+      "before_sha256": null,
+      "bytes": 6088
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "a004192025e6b4f6cd2d1b93ca7371acdde60a23427802378aa5aed1533c3fb3",
+      "before_sha256": "769cdbb991068fdd584cfecb049c443ad81458933d0c0400944b7a85bf007a64",
+      "bytes": 1005
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "530cf7b2383ce80d3e05c94292ae2a5e1e5fe5d4d7b1d462512e2a868513277d",
+      "before_sha256": "2514b97a4fbb56cabc8ec7bed2133b21447daa8b7605b5804a8beba6d71e66ff",
+      "bytes": 29798
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "public_path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "74ef472002b282fad8933cc253ebb153a209c2eb74614f1d4d338bacb30b4947",
+      "before_sha256": "d23ea862c67b3246bff38d89160ef2c06e90b535b68318949166c0d5aac831ab",
+      "bytes": 6527
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "bb2e00b93edf692928e16ea57e1413199503e9d7c06f4bd9ced03930ca1f718d",
+      "before_sha256": "68509e21d67195a78995b0b854d6ec86a4645ea5c905698d34cf896ca0bda5af",
+      "bytes": 42525
+    }
+  ],
+  "launch_source_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "mode": "SHARED_GPU_QUALITY_ONLY",
+  "authorized_models": [
+    "CPI_R50_CIHP"
+  ],
+  "quality_only": true,
+  "timing_ranking_allowed": false,
+  "authorization": "Latest user: จะขอทำไม ก็รันไปเลยมันใช้เยอะขนาดนั้นเลยหรอ — explicit operator continuation of CPI R50, retain previous successful outputs; one new segment, no automatic restart",
+  "changes": [
+    "Allow other compute PIDs at admission; resource policy override only, not model/scoring changes"
+  ],
+  "unchanged": [
+    "FP32",
+    "checkpoint",
+    "population",
+    "preprocessing/TTA",
+    "YOLO cache",
+    "ownership/association",
+    "scorer",
+    "24h cap",
+    "80GiB stream cap",
+    "50GiB disk guard",
+    "automatic model/OOM retries0; one explicitly user-authorized new segment",
+    "no CPU/FP16 fallback"
+  ],
+  "limitations": [
+    "Shared execution can affect latency/free VRAM and may cause OOM; no guarantee of identical numerical outcomes",
+    "No clean speed or joint-residency VRAM ranking",
+    "No process of another project is modified"
+  ],
+  "admission_snapshot": {
+    "utc": "2026-10-28T17:50:36.817982+00:00",
+    "GPU": "Tesla T4, 1739 MiB, 13173 MiB, 0 %"
+  },
+  "controller_wallclock_cap_hours": 24,
+  "manual_new_attempt_authorized": true,
+  "manual_new_segments_max": 1,
+  "automatic_model_OOM_retries": 0,
+  "historical_failed_attempts_preserved": true
+}

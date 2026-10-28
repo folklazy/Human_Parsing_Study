@@ -1,0 +1,36 @@
+{
+  "authority": "Latest user: จะขอทำไม ก็รันไปเลยมันใช้เยอะขนาดนั้นเลยหรอ — explicit operator continuation of CPI R50, retain previous successful outputs; one new segment, no automatic restart",
+  "current_round_id": "cpi-r50-manual-continuation-20261028T175036811629Z",
+  "parent_round_id": "cpi-r50-shared-20261028T172951337299Z",
+  "historical_attempted": 4,
+  "historical_completed": 3,
+  "historical_failed": 1,
+  "previous_failures": [
+    {
+      "image_id": "0000018",
+      "split": "Validation",
+      "attempt_id": "cpi-r50-shared-20261028T172951337299Z:0000018:1",
+      "status": "FAILED",
+      "start_utc": "2026-10-28T17:37:23.288427+00:00",
+      "failure_stage": "MODEL_INFERENCE",
+      "error": "Traceback (most recent call last):\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py\", line 68, in main\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py\", line 92, in infer\n    try:os.chdir(Path(source_jpeg).parent);raw=inference_detector(self.model,Path(source_jpeg).name)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/apis/inference.py\", line 151, in inference_detector\n    results = model(return_loss=False, rescale=True, **data)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/mmcv/runner/fp16_utils.py\", line 119, in new_func\n    return old_func(*args, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/base.py\", line 174, in forward\n    return self.forward_test(img, img_metas, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/base.py\", line 147, in forward_test\n    return self.simple_test(imgs[0], img_metas[0], **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/single_stage.py\", line 102, in simple_test\n    results_list = self.bbox_head.simple_test(\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/base_dense_head.py\", line 360, in simple_test\n    return self.simple_test_bboxes(feats, img_metas, rescale=rescale)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/detr_head.py\", line 704, in simple_test_bboxes\n    results_list = self.get_bboxes(*outs, img_metas, rescale=rescale)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/mmcv/runner/fp16_utils.py\", line 208, in new_func\n    return old_func(*args, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/deformable_detr_parser_head.py\", line 702, in get_bboxes\n    proposals = self._get_bboxes_single(\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py\", line 630, in _get_bboxes_single\n    cnt_preds, cxt_preds, _, _ = self.casual_head_forward([det_params], parse_feat, part_labels, det_center)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py\", line 437, in casual_head_forward\n    cnt_preds = self.cnt_part_parser(cnt_feats.view(N, -1, H, W))\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/container.py\", line 141, in forward\n    input = module(input)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/activation.py\", line 98, in forward\n    return F.relu(input, inplace=self.inplace)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/functional.py\", line 1299, in relu\n    result = torch.relu(input)\nRuntimeError: CUDA out of memory. Tried to allocate 2.46 GiB (GPU 0; 14.56 GiB total capacity; 10.66 GiB already allocated; 46.75 MiB free; 11.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF\n",
+      "end_utc": "2026-10-28T17:37:23.912861+00:00"
+    }
+  ],
+  "prior_run_sha256": "f532aeb0a7441fc38dbd1a01069bfe125f3fd0dc4e84b9055f8985a3c52ca8ca",
+  "reused_committed_ids": [
+    "0000001",
+    "0000003",
+    "0000004"
+  ],
+  "retry_image_ids": [
+    "0000018"
+  ],
+  "never_attempted_new_ids": 4996,
+  "automatic_retries": 0,
+  "new_segments_authorized": 1,
+  "selection_rule": "Retain prior committed successful output; no score-based output selection. Explicitly retry recorded OOM once within this new segment; stop on any new error. Old failure remains historical, current-ID disposition comes from current segment plus reused successes.",
+  "cumulative_prior_wallclock_seconds": 21.020694,
+  "cumulative_prior_retained_bytes": 553906,
+  "source_audit": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP"
+}
