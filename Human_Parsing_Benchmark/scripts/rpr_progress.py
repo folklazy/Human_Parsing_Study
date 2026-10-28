@@ -36,7 +36,7 @@ def line_count(path):
 def snapshot(root,liveness=alive,model='RPR_CIHP',controller_script='run_rpr_quality_round.py',worker_script='run_rpr_shared_segment.py'):
     state=read_json(root/'ROUND_STATUS.json');worker=read_json(root/'segments'/model/'RUN.json');last=last_frame(root/'segments'/model/'FRAMES.jsonl');raw=state.get('status','NO_STATUS')
     controller=liveness(state.get('controller_PID'),controller_script,root);wp=liveness(state.get('worker_PID'),worker_script,root)
-    terminal=raw in {'COMPLETE','INCOMPLETE','INCOMPLETE_REQUIRES_RECONCILIATION'}
+    terminal=raw in {'COMPLETE','INCOMPLETE','INCOMPLETE_REQUIRES_RECONCILIATION'} or state.get('queue_stopped',False)
     if terminal:phase='COMPLETE' if raw=='COMPLETE' else 'STOPPED_INCOMPLETE'
     elif raw=='POSTFLIGHT':phase='VALIDATING_ARTIFACTS' if controller is not False else 'INTERRUPTED_DURING_VALIDATION'
     elif raw=='RUNNING':

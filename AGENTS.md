@@ -1,3 +1,7 @@
+# Latest scoped user direction — CPI ConvNeXt-B diagnostic gate
+
+R50 paused with3successes/twoOOMattempts/mainnull. User explicitly authorizes ConvNeXt-B sharedqualityTRAINwarmup + one separateVAL0000018diagnostic; canonical5000 onlyifPASS. Neverreuse diagnostic or change FP32/threshold.05/native settings; stop onerror,noautoretry/fallback/R50/matrix/Sapiens/color/training. Read Human_Parsing_Benchmark/STATUS.md and its mainreport; use dedicatedConvNeXtcontroller only.
+
 # Latest CPI R50 operator continuation — stopped after repeated OOM
 
 User ordered another CPI R50 run; it executed in cpi-r50-manual-continuation-20261028T175036811629Z. Reused3 outputs, newsuccess0, VAL0000018 CUDA OOM again, history retained. Both processes exited; main scoresnull. Read Human_Parsing_Benchmark/STATUS.md and latest Thai report section. No automatic restart loop or other-model launch. Older instructions below remain historical.

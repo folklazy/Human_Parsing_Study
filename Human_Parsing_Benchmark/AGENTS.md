@@ -46,3 +46,7 @@ User orders CPI R50 continuation now. One manual segment `cpi-r50-manual-continu
 ## Manual continuation consumed — 2026-10-29T00:53:49.685389+07:00
 
 Explicit operator CPI R50 continuation `cpi-r50-manual-continuation-20261028T175036811629Z` ran and stopped after repeatedOOM0000018. No new success; reuse3 preserved. Current unique3/5000,failed1,notattempted4996; twofailureattempts retained. Both processes exited. User manual-run instruction has been executed; no automatic restart loop/othermodel/precisionchange. Read currentSTATUS/report before further work.
+
+## Latest user scope — ConvNeXt-B only (2026-10-29T01:17:06.416805+07:00)
+
+CPI R50 ispaused,preserve3successfulIDs/twoOOMattempts/mainnull. ExplicitConvNeXtshared-qualityauthority:requiredTRAINwarmupthenoneVAL0000018diagnosticwithoriginalConvNeXtcheckpoint/threshold.05/FP32/settings. OnlyifPASSlaunchcanonical5000,neverreusediagnostic;onerrorstop/noautoretry/fallback. UseConvNeXt-onlycontroller/observer,notR50bindingsoroldbroadqueue. Noretrain/othermodel/matrix/color. ReadcurrentSTATUS/mainreport.

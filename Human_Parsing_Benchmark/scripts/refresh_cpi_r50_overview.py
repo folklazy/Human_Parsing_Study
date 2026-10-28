@@ -6,7 +6,7 @@ import json,hashlib,csv
 P=Path(__file__).resolve().parents[1]
 
 def refresh(source_path,report_text,project=P):
-    project=Path(project);source_path=Path(source_path);s=json.loads(source_path.read_text());index_path=project/'manifests/CIHP_NATIVE_COHORT_INDEX.json';index=json.loads(index_path.read_text());mid='CPI_R50_CIHP'
+    project=Path(project);source_path=Path(source_path);s=json.loads(source_path.read_text());index_path=project/'manifests/CIHP_NATIVE_COHORT_INDEX.json';index=json.loads(index_path.read_text());mid=s['model_id'];assert mid in {'CPI_R50_CIHP','CPI_ConvNeXtB_CIHP'}
     assert s['model_id']==mid and s['expected']==5000 and s['frozen_config_sha256']==index['frozen_scientific_config_sha256']
     rows=index['models'];assert len(rows)==6 and len({r['model_id'] for r in rows})==6
     for r in rows:

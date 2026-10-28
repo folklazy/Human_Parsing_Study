@@ -1,0 +1,44 @@
+{
+  "mode": "SHARED_GPU_QUALITY_ONLY",
+  "authorized_models": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "quality_only": true,
+  "timing_ranking_allowed": false,
+  "authorization": "User explicitly authorizes SHARED_GPU_QUALITY_ONLY for this CPI ConvNeXt-B round, prioritizing quality/completeness over speed; supersedes previous admission gate only",
+  "changes": [
+    "Allow other compute PIDs at admission; resource policy override only, not model/scoring changes"
+  ],
+  "unchanged": [
+    "FP32",
+    "checkpoint",
+    "population",
+    "preprocessing/TTA",
+    "YOLO cache",
+    "ownership/association",
+    "scorer",
+    "24h cap",
+    "80GiB stream cap",
+    "50GiB disk guard",
+    "model/OOM retries0",
+    "no CPU/FP16 fallback"
+  ],
+  "limitations": [
+    "Shared execution can affect latency/free VRAM and may cause OOM; no guarantee of identical numerical outcomes",
+    "No clean speed or joint-residency VRAM ranking",
+    "No process of another project is modified"
+  ],
+  "admission_snapshot": {
+    "utc": "2026-10-28T18:16:14.064208+00:00",
+    "GPU": "Tesla T4, 1739 MiB, 13173 MiB, 0 %",
+    "compute_PIDs": [
+      "126277"
+    ]
+  },
+  "controller_wallclock_cap_hours": 24,
+  "diagnostic_required": true,
+  "diagnostic_ID": "0000018",
+  "diagnostic_canonical_reuse": false,
+  "R50_paused": true,
+  "authority": "Current user explicitly authorizes ConvNeXt-B shared-quality warmup, one VAL0000018 diagnostic, then canonical5000 only if diagnostic passes; no retries or settings changes"
+}

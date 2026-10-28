@@ -1,4 +1,4 @@
-> **Current CPI R50 round: INCOMPLETE / stopped.** Warmup passed; VAL `0000018` hit CUDA OOM. Complete3/5000,failed1,not-attempted4996; STRICT_COMPLETE main scores null. Shared-GPU authorization applied; no retry or ConvNeXt-B launch. Read [STATUS](STATUS.md) and [main report](reports/CIHP_CONTROLLED_CONTINUATION.md).
+> **Current scope: CPI ConvNeXt-B diagnostic-gated shared-GPU quality round.** R50 paused with3successful outputs/twoOOMattempts/mainnull. RequiredTRAINwarmup and separateVAL0000018 diagnostic; canonical5000 onlyifPASS, stoponerror. Read [STATUS](STATUS.md) / [main report](reports/CIHP_CONTROLLED_CONTINUATION.md).
 
 # Human Parsing Benchmark
 

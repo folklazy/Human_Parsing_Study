@@ -116,7 +116,7 @@ Results, when obtained, are YOLO-associated application native-label metrics, no
 
 ## Current cohort overview
 
-Updated 2026-10-29T00:52:07.606744+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
+Updated 2026-10-29T01:17:06.425367+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
 
 | Model | Status | Complete/5000 | mIoU20 inclBG | FG19 | Segment/resource |
 |---|---|---:|---:|---:|---|
@@ -125,7 +125,7 @@ Updated 2026-10-29T00:52:07.606744+07:00. **4/6 complete**, fields copied from c
 |D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log|
 |RPR_CIHP|COMPLETE|5000|59.124%|57.408%|rpr-cihp-shared-20261028T155439603873Z; SHARED_GPU_QUALITY_ONLY|
 |CPI_R50_CIHP|INCOMPLETE|3|null / unavailable|null / unavailable|cpi-r50-manual-continuation-20261028T175036811629Z; SHARED_GPU_QUALITY_ONLY|
-|CPI_ConvNeXtB_CIHP|HISTORICAL_SETUP_BLOCKED_OUTSIDE_CURRENT_SCOPE|0|null / unavailable|null / unavailable|continuation-20261028T073741308461Z (historical setup only); ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified|
+|CPI_ConvNeXtB_CIHP|READY_FOR_REQUIRED_DIAGNOSTIC_NOT_VALIDATION|0|null / unavailable|null / unavailable|cpi-convnext-shared-20261028T181609262813Z; SHARED_GPU_QUALITY_ONLY|
 
 Not a single execution segment or uncontended timing cohort. Native-label YOLO application scores are not official native-parser reproduction; no clean speed/VRAM ranking. Historical source reports and closed-model outputs are preserved.
 
@@ -214,3 +214,15 @@ CUDAรายงานallocated **10.66GiB**, reserved **10.80GiB**, ขอเ�
 [หลักฐานปิด manual continuation](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/MANUAL_CONTINUATION_OUTCOME.json) / [canonical completion](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json) / [attempt history](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/ATTEMPT_HISTORY.json) มีfailed attemptsรวม2ครั้งของIDเดียวกันจากสองsegments ต้องแยกจากfailed unique ID1; totalVALattempts5คือ3สำเร็จและ2OOM ไม่รวมTRAINwarmup รักษาfailureเดิมทั้งหมด ไม่เลือกผลจากคะแนนดีที่สุด ตอนนี้controller166181/worker166185 exitแล้ว คิวหยุดก่อนConvNeXt-B ไม่มีauto-retryหรือfallback
 
 แก้read-onlyprogress viewerให้นับผลรวม3reused+newsegmentอย่างถูกต้อง (เดิมแสดงsegment0โดยไม่รวมreused3) ตรวจ3CPUcasesรวมoriginallifecycle/stalePIDและcontinuationrunning/terminalexpectedcountsผ่าน ไม่มีการเปลี่ยนinference/scoring sourceหรือfrozenconfig การตรวจcurrentartifactsใช้finalauditเดิมและnewsegment0successfulpackets ไม่มีanotherinference/rescore pass
+
+## CPI ConvNeXt-B — ขอบเขตใหม่และ readiness (2026-10-29T01:17:06.416805+07:00)
+
+ผู้ใช้พักCPI R50 (เก็บ3successful IDs/สองOOMattempts/คะแนนหลักnull) และอนุมัติ **CPI_ConvNeXtB_CIHP เท่านั้น** พร้อม SHARED_GPU_QUALITY_ONLY โดยตรง ลำดับคือ TRAINwarmup0000930ตามprotocol → diagnosticVAL0000018หนึ่งครั้งที่แยกจากcanonical → fullVAL5000เฉพาะเมื่อdiagnosticผ่าน; หากOOM/CUDA/contracterrorหยุดทันที ไม่มีretry/fallback/ลดresolution/proposals/precision/threshold ไม่มีR50/matrix/Sapiens/color/trainingหรือจัดอันดับบางส่วน
+
+Round `cpi-convnext-shared-20261028T181609262813Z`, parent `cihp-native-six-20261028T034103254470Z`. [Readiness/checkpoint/config/environment evidence](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/READINESS.json) / [shared amendment](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/RESOURCE_POLICY.json) / [exact canonical5000-ID plan](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/SEGMENT_PLAN.json). Checkpoint `models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth` SHA256 `25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5` verified; nativeconfigSHA `3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117`, pinnedCPI source `d62cae523ba913fec4a7fda5816bc1d96bbf644d` และ frozen scientific source/config bindingsตรงเดิม ปัจจุบันnativecohortConvNeXt0VAL; setupBLOCKEDเก่าและhistoricalCPIต่างprotocolไม่ถูกนำมารวม
+
+Environment `.venvs/parser-legacy-cu113` packagefreezematchreadiness3TRAINเดิม (Torch1.10.2+cu113), noinstall/download. Native threshold **0.05** (ไม่ใช่R50.01), max100, FP32, native1333×800keepaspect/no-fliptestpipeline, batch1, YOLOcache/association/GT/scorerเดิม PriorTRAINpeakreserved1888MiBไม่ใช่worstcaseguarantee CurrentT4free13173MiB/externalPID126277allowed; resource24h/80GiB/50GiBguardsเดิม การผ่านdiagnosticไม่รับรองfullpopulation
+
+Diagnosticoutputsอยู่rawroot/diagnostic, canonicaloutputsอยู่rawroot/segments/CPI_ConvNeXtB_CIHP ไม่reuseกัน แม้diagnosticผ่าน0000018จะถูกรันcanonicalอีกครั้งตามลำดับปกติ เก็บnativeintegerplanes/extents/scores/metadataและrealnativepipelinegeometryก่อนforward พร้อมpeakallocated/reservedเมื่อทำได้ ไม่อ่านคะแนนdiagnosticเพื่อปรับsettings เวลา/bytesของdiagnosticรวมwarmup/modelsetupนับเป็นreadinesscostและหักจากresourcebudgetก่อนcanonical Controllerเป็นConvNeXt-only sourceที่แยกจากR50; scientificforward/scoringblocksไม่เปลี่ยน Geometryobserverdelegatepipelineโดยคืนobjectเดิม CPUchecks3new+4CPIregression+3progressผ่าน ไม่มีnewGPUinferenceก่อนlaunch
+
+รายงานหลักคือไฟล์นี้ Terminalจะเพิ่มdiagnosticผลจริง/tracebackและfullvalidationcompletionแยก; STRICT_COMPLETE mainnullถ้าไม่ครบ5000 RawartifactsภายนอกGit: `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/` ดูสถานะ `python3 Human_Parsing_Benchmark/scripts/cpi_convnext_progress.py --watch`. Timing/resourceเป็นsharedadapterdiagnostics รวมnativeCPIfileI/O ไม่ใช่cleanparser-only/end-to-end speedหรือmemoryranking

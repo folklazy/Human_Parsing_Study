@@ -1,16 +1,9 @@
 # Human Parsing Benchmark — current status
 
-Updated 2026-10-29T00:53:49.685389+07:00 Bangkok
+Updated 2026-10-29T01:17:06.416805+07:00 Bangkok
 
-**CPI_R50_MANUAL_CONTINUATION_INCOMPLETE / QUEUE_STOPPED**. ดำเนินการรันต่อตามผู้ใช้สั่งแล้วหนึ่งsegment; warmupผ่านแต่VAL0000018เกิดCUDA OOMซ้ำ ไม่มีผลใหม่เพิ่ม
+**CPI_CONVNEXT_READY_FOR_REQUIRED_DIAGNOSTIC**. User explicitly authorizes ConvNeXt-B shared-GPU quality-only. R50paused at3successful IDs/twoOOMattempts/mainnull; noothermodelreruns. No parsing worker active atpreflight; ConvNeXtcohort0canonicalVAL/reuse0/pending5000. Identity/checkpoint/config/source/environment verified; ten scopedCPUcases PASS.
 
-- Reused3 / newcomplete0 / uniquecomplete3/5000; failedunique1,invalid0,notattempted4996,missing successful4997,duplicate0
-- Historicalfailedattempt1 + currentfailedattempt1 =2OOMattemptsที่IDเดียวกัน; เก็บทั้งสองครั้ง ไม่ลบประวัติ
-- **STRICT_COMPLETE main scoresnull**, no subset ranking. OriginalFP32/scientificsource/config/YOLOcache/GT/scorer unchanged. Shared GPU admission used; no timing/VRAMranking
-- Round `cpi-r50-manual-continuation-20261028T175036811629Z`, launchcommit `dd02e228ebd215c034a785d41ea459f7db336bfd`; controller166181/worker166185 exited. No automatic retry or ConvNeXt-B
+Round `cpi-convnext-shared-20261028T181609262813Z`. [Main report](reports/CIHP_CONTROLLED_CONTINUATION.md), [readiness](runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/READINESS.json), [policy](runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/RESOURCE_POLICY.json), [canonical plan](runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/SEGMENT_PLAN.json). Frozen scientificconfig/FP32/native.05threshold/preprocessing/YOLO/GT/scoring unchanged.
 
-[รายงานส่งตรวจต่อ](reports/CIHP_CONTROLLED_CONTINUATION.md) / [completion](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json) / [manual outcome](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/MANUAL_CONTINUATION_OUTCOME.json) / [attempt history](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/ATTEMPT_HISTORY.json)
-
-ดูสถานะ `python3 Human_Parsing_Benchmark/scripts/cpi_r50_progress.py --watch` รวมreused3แล้ว; phaseSTOPPED_INCOMPLETE. Rawlogs/status: `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/`
-
-Next: รายงานOOMที่เกิดซ้ำจริง; การแก้peakmemoryต้องมีevidenceและคงscientificcontract ไม่เปิดrestartวน/ลดresolution/FP32หรือเริ่มโมเดลอื่นเอง QANet/M2FP/D2FP/RPRเดิมยังครบและไม่ถูกinferenceซ้ำ
+Next detachedConvNeXt-onlycontroller: TRAIN0000930warmup → one separateVAL0000018diagnostic → canonical5000 onlyifPASS. Onnewerrorstop/preserve/noautoretry; nodiagnosticcanonicalreuse. Read-only `python3 Human_Parsing_Benchmark/scripts/cpi_convnext_progress.py --watch`. Rawlogs/statusunder `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/`. NoR50/matrix/Sapiens/color/training; no partialranking.

@@ -63,3 +63,7 @@ Latest user explicitly authorizes GPU sharing for CPI_R50_CIHP quality/completen
 ### CPI R50 scoped round terminal — 2026-10-29T00:40:16.529470+07:00
 
 [Current report](reports/CIHP_CONTROLLED_CONTINUATION.md) and [completion](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json): explicit shared-GPU admission used, setup/warmup PASS, VAL CUDA OOM at0000018,3/5000 committed/verified and1failure; STRICT_COMPLETE main null, queue stopped. No scientific policy/config/source changes, no retries or next-model authorization. This is the outcome of the authorized attempt, not a change to metric/selection policy.
+
+## Current scoped authorization — CPI ConvNeXt-B only (2026-10-29T01:17:06.416805+07:00)
+
+UserpausesR50andexplicitlypermitsConvNeXtsharedqualityunderunchangedscientificsettings. RequiredTRAINwarmupthenoneVAL0000018diagnostic(separate,nevercanonicalreuse);onPASScanonicalofficial5000freshsegment,otherwiseSTOP/report. Includesdiagnosticcostin24h/80GiBbudget,freeguard50GiB,noautoretry/fallback/settingschanges/othermodel. [Currentreport](reports/CIHP_CONTROLLED_CONTINUATION.md), [policy](runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/RESOURCE_POLICY.json), [exactplan](runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-shared-20261028T181609262813Z/SEGMENT_PLAN.json). Timingonlydiagnostics,STRICT_COMPLETE;noautomaticmatrix/Sapiens/color.
