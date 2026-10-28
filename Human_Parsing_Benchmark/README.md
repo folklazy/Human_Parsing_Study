@@ -1,4 +1,4 @@
-> **Current scope: CPI ConvNeXt-B diagnostic-gated shared-GPU quality round.** R50 paused with3successful outputs/twoOOMattempts/mainnull. RequiredTRAINwarmup and separateVAL0000018 diagnostic; canonical5000 onlyifPASS, stoponerror. Read [STATUS](STATUS.md) / [main report](reports/CIHP_CONTROLLED_CONTINUATION.md).
+> **Current deliverable: four completed systems + preliminary mapping; CPI paused.** Read [Thai presentation report](reports/CIHP_FOUR_MODEL_RESULTS_TH.md) → [STATUS](STATUS.md). Native CIHP5,000 per completed system; CPI mainnull, no newinference/Sapiens/color. Older run/preparation notes below are historical where superseded.
 
 # Human Parsing Benchmark
 

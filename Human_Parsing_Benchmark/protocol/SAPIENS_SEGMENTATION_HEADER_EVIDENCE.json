@@ -1,0 +1,80 @@
+[
+  {
+    "model_id": "Sapiens2_0.4b",
+    "checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+    "header_bytes": 44592,
+    "header_sha256": "bccdfbe0ce3f29882dcc5d3e5a1984c95c49aabff01176eef428cca8064054cc",
+    "semantic_head_tensors": [
+      {
+        "key": "decode_head.conv_seg.bias",
+        "shape": [
+          29
+        ],
+        "dtype": "F32"
+      },
+      {
+        "key": "decode_head.conv_seg.weight",
+        "shape": [
+          29,
+          64,
+          1,
+          1
+        ],
+        "dtype": "F32"
+      }
+    ],
+    "full_weight_hash_repeated": false
+  },
+  {
+    "model_id": "Sapiens2_0.8b",
+    "checkpoint": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+    "header_bytes": 59416,
+    "header_sha256": "bdd2bd41514689c41b78b7aa5ee9f624709ae514e0366a54f4bbc2465e33f398",
+    "semantic_head_tensors": [
+      {
+        "key": "decode_head.conv_seg.bias",
+        "shape": [
+          29
+        ],
+        "dtype": "F32"
+      },
+      {
+        "key": "decode_head.conv_seg.weight",
+        "shape": [
+          29,
+          64,
+          1,
+          1
+        ],
+        "dtype": "F32"
+      }
+    ],
+    "full_weight_hash_repeated": false
+  },
+  {
+    "model_id": "Sapiens2_1b",
+    "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+    "header_bytes": 74088,
+    "header_sha256": "b2eb2d8dfcbfe7eb3498d8fc586dd97730990110b6d2f7711383ab9d394e4715",
+    "semantic_head_tensors": [
+      {
+        "key": "decode_head.conv_seg.bias",
+        "shape": [
+          29
+        ],
+        "dtype": "F32"
+      },
+      {
+        "key": "decode_head.conv_seg.weight",
+        "shape": [
+          29,
+          64,
+          1,
+          1
+        ],
+        "dtype": "F32"
+      }
+    ],
+    "full_weight_hash_repeated": false
+  }
+]

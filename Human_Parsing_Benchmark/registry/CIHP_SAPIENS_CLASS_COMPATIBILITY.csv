@@ -1,0 +1,21 @@
+CIHP_id,CIHP_name,Sapiens_candidate_ids,Sapiens_candidate_names,relationship,rationale,pixel_extent_equivalence,status
+0,Background,0,Background,EXACT,Background concept; foreground annotation/occluder policy may differ,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+1,Hat,1,Apparel,UNKNOWN,No dedicatedHat output; Apparel containsHairnet in52->29 but does not establish all hats,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+2,Hair,4,Hair,EXACT,Hair named concept one-to-one; boundary/occlusion equivalence not independently verified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+3,Glove,6;15,Left_Hand;Right_Hand,INCOMPATIBLE,Hand is not a separable Glove category; no dedicatedGlove label,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+4,Sunglasses,2,Eyeglass,PARTIAL_OVERLAP,"Sunglasses is narrower than Eyeglass, which merges frames/lenses",NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+5,UpperClothes,23,Upper_Clothing,PARTIAL_OVERLAP,Upper_Clothing broad category; cannot recoverUpperClothes vsCoat subtype,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+6,Dress,1,Apparel,UNKNOWN,Apparel is not verifiedDress: source mapping includesHairnet; no losslessupper/lowerDress split,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+7,Coat,23,Upper_Clothing,PARTIAL_OVERLAP,Coat subtype not separately representable byUpper_Clothing,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+8,Socks,10;19,Left_Sock;Right_Sock,UNION,Left/Right_Sock union matches namedSocks concept; extent convention unverified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+9,Pants,13,Lower_Clothing,PARTIAL_OVERLAP,Lower_Clothing includes at leastLower_Clothing/Lower_Spandex in34->29; Pants subtype not recoverable,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+10,Torso-skin,22,Torso,PARTIAL_OVERLAP,Torso vsTorso-skin exposure/neck/clothing boundary not established,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+11,Scarf,1,Apparel,UNKNOWN,NoScarf output; fullApparel definition not available,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+12,Skirt,13,Lower_Clothing,PARTIAL_OVERLAP,Lower_Clothing does not distinguishSkirt fromPants,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+13,Face,3;24;25;26;27;28,Face_Neck;Lower_Lip;Upper_Lip;Lower_Teeth;Upper_Teeth;Tongue,PARTIAL_OVERLAP,Union recovers facial subparts but retainsFace_Neck; neck boundary vsCIHPFace unknown,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+14,Left-arm,6;7;11,Left_Hand;Left_Lower_Arm;Left_Upper_Arm,PARTIAL_OVERLAP,Arm subparts/hand candidate union; exactCIHParm wrist/hand partition unverified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+15,Right-arm,15;16;20,Right_Hand;Right_Lower_Arm;Right_Upper_Arm,PARTIAL_OVERLAP,Arm subparts/hand candidate union; exactCIHParm wrist/hand partition unverified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+16,Left-leg,5;8;12,Left_Foot;Left_Lower_Leg;Left_Upper_Leg,PARTIAL_OVERLAP,Leg subparts/bareFoot candidate union; exactCIHPankle/foot partition unverified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+17,Right-leg,14;17;21,Right_Foot;Right_Lower_Leg;Right_Upper_Leg,PARTIAL_OVERLAP,Leg subparts/bareFoot candidate union; exactCIHPankle/foot partition unverified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+18,Left-shoe,9,Left_Shoe,EXACT,NamedLeft-shoe concept one-to-one; extent not independently verified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED
+19,Right-shoe,18,Right_Shoe,EXACT,NamedRight-shoe concept one-to-one; extent not independently verified,NOT_INDEPENDENTLY_VERIFIED,PROPOSAL_NOT_ACCEPTED

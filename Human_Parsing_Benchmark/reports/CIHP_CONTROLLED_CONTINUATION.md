@@ -300,3 +300,7 @@ Diagnostic0000018 **PASS** หลังTRAINwarmupตามprotocol; เวล�
 Full validation status **INCOMPLETE**, complete113/5000,failedVAL1,invalid0,notattempted4886,missing4887,duplicate0. DiagnosticfailureแยกจากVALfailure; ถ้าdiagnosticไม่ผ่านไม่มีcanonicalVALinference ถ้าผ่านcanonical0000018ยังต้องรันตามลำดับpopulationปกติ ไม่reusepacketdiagnostic การผ่านหนึ่งภาพไม่รับรองทุกภาพ ค่าdiagnosticwallclock23.091s/bytes463932ถูกคิดแยกและนำเข้าบัญชีresource24h/80GiB; คงfree-spaceguard50GiBและautomaticretry0
 
 ผลเป็นYOLO-associated application pipelineบนnativeCIHPlabels ไม่ใช่officialnative-parser reproduction STRICT_COMPLETEคะแนนหลักnullหากไม่ครบ TimingรวมCPI internalJPEGdecode/nativePNGwrites/re-reads เป็นadapter diagnostics ไม่ใช่parser-only/end-to-end latency/FPS/VRAMranking No R50/matrix/Sapiens/color/training. Rawlogs/packets/geometry/peakอยู่ `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z` และREPORT/STATUSนี้เป็นจุดเริ่มอ่าน ไม่รันแก้OOMยาวหรือเปลี่ยนวิธีคำนวณในรอบนี้
+
+## Current reporting scope — 2026-10-29T01:56:19.221143+07:00
+
+UserpausesbothCPIroundswithoutcancellingthem; successfulIDs/ledgers/OOMhistoryandnullmainscorespreserved. Currentcross-modelpresentation+preliminarymatrixis [CIHP_FOUR_MODEL_RESULTS_TH.md](CIHP_FOUR_MODEL_RESULTS_TH.md),builtfromfourcanonicalCOMPLETE5000systemsandsixretainedstatusrows. Earliersectionsremainhistoricalattemptrecords,notcurrentpermissiontoretry/launch.No newinference/OOMfix/Sapiens/color/training.

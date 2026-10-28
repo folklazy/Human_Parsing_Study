@@ -1,0 +1,402 @@
+{
+  "status": "PROPOSAL_NOT_ACCEPTED_NOT_EXECUTABLE",
+  "created_utc": "2026-10-28T18:50:00.794671+00:00",
+  "prepared_after_partial_model_results": true,
+  "rationale": "Class definitions and source mappings, not numerical score optimization",
+  "scores_computed": false,
+  "Sapiens_inference_started": false,
+  "native20_benchmark_unchanged": true,
+  "minimum_requested_targets": [
+    "FACE",
+    "HAIR",
+    "UPPER",
+    "LOWER"
+  ],
+  "target_ids": {
+    "0": "BACKGROUND",
+    "1": "FACE",
+    "2": "HAIR",
+    "3": "UPPER",
+    "4": "LOWER",
+    "5": "OTHER"
+  },
+  "CIHP_GT_and_native_predictions": {
+    "0": 0,
+    "1": 5,
+    "2": 2,
+    "3": 5,
+    "4": 5,
+    "5": 3,
+    "6": 5,
+    "7": 3,
+    "8": 5,
+    "9": 4,
+    "10": 5,
+    "11": 5,
+    "12": 4,
+    "13": 1,
+    "14": 5,
+    "15": 5,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 5
+  },
+  "Sapiens29_predictions": {
+    "0": 0,
+    "1": 5,
+    "2": 5,
+    "3": 1,
+    "4": 2,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 5,
+    "13": 4,
+    "14": 5,
+    "15": 5,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 5,
+    "20": 5,
+    "21": 5,
+    "22": 5,
+    "23": 3,
+    "24": 1,
+    "25": 1,
+    "26": 1,
+    "27": 1,
+    "28": 1
+  },
+  "global_valid_domain": "All fixedCIHPGT pixels0..19. Only sourceGT255 VOID for all models; no model/prediction-dependentGTignore. OTHER stays valid negative evidence for targetIoUs.",
+  "background": "GT0valid and separate fromOTHER. KnownDress6/Apparel1 goOTHER, neverVOID/invalid execution.",
+  "prediction_contract": "Unknown/out-of-range IDs are contractfailure. Known unsupported classes becomeOTHER; wrongtargetprediction onOTHERGT countsFP, OTHERprediction onvalidtargetGT countsFN.",
+  "person_domain": "If proposedview retains existing personmetrics: G_loc allnativeHumanIDs; G_sem must be regenerated perimage/person for this new target set, never inherit17520 semanticeligibility automatically. Sharedownerunknownsemanticpolicy remains fixed across models.",
+  "hard_label_order": "Compose native planes using frozen confidence/ownership first, then project hard labels; do not removeOTHER before overlap resolution. No probability aggregation available from canonicalhardmasks.",
+  "blocking_semantics": [
+    "Face_Neck and CIHPFace neck/face boundary is not established; the four-target sharedview is diagnostic/provisional, not a verified common taxonomy.",
+    "Upper/lower relation toCoat/Dress/Apparel not exhaustively defined. PreserveDress asOTHER; no heuristic splitting.",
+    "A three-targethair/upper/lower supplementaryview would not satisfy/remove the four-target requirement; no new score computed."
+  ],
+  "non_claims": [
+    "EXACT meansnamedconceptcorrespondence, not pixelpartitionequivalence",
+    "Mapping agreement is projected-task agreement, not officialnativeCIHP accuracy",
+    "Apparel is not defined asDress/allclothes/background",
+    "No per-modelGTvoid or model-specific targetdomain"
+  ],
+  "Sapiens_source_remappings": {
+    "DOME_MAPPING_52_to_29": {
+      "1": [
+        {
+          "source_id": 1,
+          "source_name": "Hairnet"
+        },
+        {
+          "source_id": 34,
+          "source_name": "Apparel"
+        }
+      ],
+      "3": [
+        {
+          "source_id": 2,
+          "source_name": "Upper_Gum"
+        },
+        {
+          "source_id": 3,
+          "source_name": "Palate"
+        },
+        {
+          "source_id": 4,
+          "source_name": "Lower_Gum"
+        },
+        {
+          "source_id": 5,
+          "source_name": "Floor_of_Mouth"
+        },
+        {
+          "source_id": 6,
+          "source_name": "Cheeks_interior"
+        },
+        {
+          "source_id": 7,
+          "source_name": "Eyelash"
+        },
+        {
+          "source_id": 8,
+          "source_name": "Eyebrow"
+        },
+        {
+          "source_id": 23,
+          "source_name": "Face_Neck_Skin"
+        }
+      ],
+      "13": [
+        {
+          "source_id": 22,
+          "source_name": "Lower_Clothing"
+        }
+      ],
+      "23": [
+        {
+          "source_id": 21,
+          "source_name": "Upper_Clothing"
+        }
+      ]
+    },
+    "DOME_MAPPING_34_to_29": {
+      "1": [
+        {
+          "source_id": 1,
+          "source_name": "Apparel"
+        }
+      ],
+      "3": [
+        {
+          "source_id": 5,
+          "source_name": "Face_Neck"
+        }
+      ],
+      "13": [
+        {
+          "source_id": 16,
+          "source_name": "Lower_Clothing"
+        },
+        {
+          "source_id": 17,
+          "source_name": "Lower_Spandex"
+        }
+      ],
+      "23": [
+        {
+          "source_id": 27,
+          "source_name": "Upper_Clothing"
+        }
+      ]
+    },
+    "INTERNAL_MAPPING_32_to_29": {
+      "1": [
+        {
+          "source_id": 28,
+          "source_name": "Apparel"
+        }
+      ],
+      "3": [
+        {
+          "source_id": 1,
+          "source_name": "Face_Neck"
+        },
+        {
+          "source_id": 2,
+          "source_name": "Nose"
+        },
+        {
+          "source_id": 3,
+          "source_name": "Left_Ear"
+        },
+        {
+          "source_id": 4,
+          "source_name": "Right_Ear"
+        },
+        {
+          "source_id": 5,
+          "source_name": "Left_Iris"
+        },
+        {
+          "source_id": 6,
+          "source_name": "Left_Sclera"
+        },
+        {
+          "source_id": 7,
+          "source_name": "Right_Iris"
+        },
+        {
+          "source_id": 8,
+          "source_name": "Right_Sclera"
+        },
+        {
+          "source_id": 9,
+          "source_name": "Left_Eyebrow"
+        },
+        {
+          "source_id": 10,
+          "source_name": "Right_Eyebrow"
+        }
+      ],
+      "13": [
+        {
+          "source_id": 25,
+          "source_name": "Lower_Clothing"
+        }
+      ],
+      "23": [
+        {
+          "source_id": 24,
+          "source_name": "Upper_Clothing"
+        }
+      ]
+    }
+  },
+  "source_evidence": [
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_utils.py",
+      "sha256": "6864218890e8aa15a8a6bc5d1ddc6658dd6a591a963936ab38abc18d49f3ba11",
+      "role": "DOME29 named IDs and source-to-target mappings",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": "https://github.com/facebookresearch/sapiens2/blob/7e5bae88456ac418ff0e58e74106c9fe192055d4/sapiens/dense/src/datasets/seg/seg_utils.py"
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/docs/SEG.md",
+      "sha256": "51d6401484256b5c18d1d0a2eea6bd570b509c8848e8cf6048ee40b7b3a0dfc5",
+      "role": "Official29-class declaration and checkpoint zoo",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": "https://github.com/facebookresearch/sapiens2/blob/7e5bae88456ac418ff0e58e74106c9fe192055d4/docs/SEG.md"
+    },
+    {
+      "path": "datasets/CIHP/README.md",
+      "sha256": "5f96e139a7570113b1b102ccf82f52b118726ce9be7d9dc86cbca8ca141bd081",
+      "role": "NativeCIHP named ID order, not an annotation boundary manual",
+      "source_commit": null,
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_shutterstock_dataset.py",
+      "sha256": "cc072a74cac2b9d7d6d9ee2845184de44832405975928e497e46e5348f15ab9f",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_dome_dataset.py",
+      "sha256": "d0ad6f5bcf66f55f2fe9ecfad2ed45d52b289f71b389812131b2a0dce15ea8d0",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_internal_dataset.py",
+      "sha256": "563724d1446bbc7b9ded7586eb940b5979b47741c63d06c45918065dd388fb23",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_base_dataset.py",
+      "sha256": "9ab6e57a2a84e03bd815fe75f3586346993ee45f8fe142c685de4fbfc0186231",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "role": "Bound checkpoint native config",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "role": "Bound checkpoint native config",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/M2FP/m2fp/data/datasets/register_cihp_parsing.py",
+      "sha256": "6e1fd778a3cda04994f0742c9a248c84c62cbd9c5a9e7e6a42a8cf01835c8496",
+      "role": "Explicit nativeCIHP categories0..19;20Human structured branch, not semantic class",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "role": "Bound checkpoint native config",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/D2FP/d2fp/data/datasets/register_cihp_parsing.py",
+      "sha256": "6e1fd778a3cda04994f0742c9a248c84c62cbd9c5a9e7e6a42a8cf01835c8496",
+      "role": "Explicit nativeCIHP categories0..19;20Human structured branch, not semantic class",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "URL": null
+    },
+    {
+      "path": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "role": "Bound checkpoint native config",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "role": "Bound checkpoint native config",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "role": "Bound checkpoint native config",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "role": "Bound checkpoint native config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.4b/config.json",
+      "sha256": "b7db51e87e88e28551037adce77223a54a207c0a1c3a8f309ef920b4aeb2f703",
+      "role": "Downloaded per-size config:29generic LABEL_n; names supplied by pinned docs/source, not this config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "role": "Bound checkpoint native config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "models/human_parsing/sapiens2/0.8b/config.json",
+      "sha256": "bca17dec16e7b642596a77a1dd2d0345107ec6e96b309d6356b6bbdd8c8fbbdf",
+      "role": "Downloaded per-size config:29generic LABEL_n; names supplied by pinned docs/source, not this config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "role": "Bound checkpoint native config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "models/human_parsing/sapiens2/1b/config.json",
+      "sha256": "1a951172d547eb508eec825e4258a24b8b1170df3e9bd9084b1b2a792fb82249",
+      "role": "Downloaded per-size config:29generic LABEL_n; names supplied by pinned docs/source, not this config",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    }
+  ],
+  "checkpoint_bindings": "registry/CIHP_SAPIENS_CHECKPOINT_LABEL_BINDINGS.csv",
+  "class_matrix": "registry/CIHP_SAPIENS_CLASS_COMPATIBILITY.csv",
+  "projection_table": "protocol/CIHP_SAPIENS_MAPPING_PROPOSAL.csv",
+  "remaining_questions": [
+    "ExactCIHPFace neck convention vsDOMEFace_Neck, includingocclusion/eyewear",
+    "Which garments fall inDOMEApparel beyondexplicitHairnet andoriginalApparel; relation toDress/Coat",
+    "WhetherCIHPArm/Leg includehand/barefoot regions andmatchingDOMEextents",
+    "Evidence-backedfixedcommonview/personsemanticeligible counts mustbe reviewed beforeexecution"
+  ]
+}

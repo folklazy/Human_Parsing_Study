@@ -1,0 +1,1260 @@
+{
+  "work_unit": "presentation-four-20261028T184321049969Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "frozen_sample": {
+    "seed": 20261028,
+    "selection": "4 smallest seeded SHA256 IDs per annotated count>=5 x area>187500 stratum; no model scores",
+    "ids": [
+      "0021448",
+      "0034387",
+      "0013903",
+      "0006909",
+      "0019475",
+      "0002416",
+      "0000822",
+      "0011746",
+      "0001538",
+      "0031248",
+      "0027897",
+      "0022835",
+      "0001413",
+      "0037964",
+      "0014704",
+      "0028993"
+    ],
+    "count": 16
+  },
+  "sample_sha256": "01823952c18bfa5a0bc3e550f2bf79bd539d17943afd98145ab96504e75a78bf",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "showcase_rule": "First frozen ID per annotated people>=5 x area>187500 stratum; set before opening predictions in this report, after aggregate results already existed",
+  "showcase_by_stratum": {
+    "people_ge5=1;area_gt187500=1": "0021448",
+    "people_ge5=1;area_gt187500=0": "0019475",
+    "people_ge5=0;area_gt187500=1": "0001538",
+    "people_ge5=0;area_gt187500=0": "0001413"
+  },
+  "new_model_inference": false,
+  "new_full_rescore": false,
+  "source_GT_modified": false,
+  "mask_geometry": "All full panels original grid, no categorical mask resize. JPEG previews for display only.",
+  "semantic_composition": "Exact frozen compose of saved hard-label planes/scores; owners display highest confidence over extents, local IDs not GT matching",
+  "source_renderer_sha256": "f52730e563cecae390e93dc17624aa620814804e8cfaf7e6099d208ef268ec03",
+  "records": [
+    {
+      "image_id": "0021448",
+      "GT_people": 5,
+      "original_wh": [
+        500,
+        613
+      ],
+      "GT_sha256": {
+        "Category_ids": "3e207c9b37ebaebba5f9dc4d022c19c9a8ebd4bd29e272ad3ff1f3459bbe387f",
+        "Human_ids": "65cba579e7bb24190b6d4eeb0cb68fdefa387000bf88f8916498e83e30c124f3",
+        "Instance_ids": "5cdab4e46b2e627e664899f18e50af049eca5decc062738b5e74ef3016c2adf8"
+      },
+      "RGB_sha256": "bd7112bf08f55f5d84a787b79e772cb487904fb0ab58d574134b3e0e98123c60",
+      "figure": "panels/0021448.png",
+      "preview": "previews/0021448.jpg",
+      "figure_sha256": "261e5e659cc857f30b99a7893c399967ab5594ed55fce6895afc6ef6fc709251",
+      "figure_size": [
+        3000,
+        1310
+      ],
+      "is_showcase": true,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0021448",
+          "packet_sha256": "6eda4c5a2956998a6b32d9ad0ab9818e7a3798cd98340f3346cd98ee6bc67f4b",
+          "metadata_sha256": "4617013f574f63402795a2fc51c2fcb3c533205f12a472f681bcbdfc736dc1bc",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            613
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0021448",
+          "packet_sha256": "38344ea0ec2c5217ae02747a3c7dc0a864a086cf58933de2bef75beaea198faa",
+          "metadata_sha256": "a9d931c9eb3a392cfe4c5075db07ab9ad1644016202bb0e8c182fae5d3e8ca6c",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            613
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0021448",
+          "packet_sha256": "5141a3b41f4ea3f8082f68d5809d764820e15aac0a0709bf7e6ca73e7c54ae77",
+          "metadata_sha256": "8a7cb1ef7247d57bd0cd10c3724f613e09791008c5ac4b4579489e1b8b6be414",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            613
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0021448",
+          "packet_sha256": "9741c92eb31ff009b9acb01eaf68dbeb0ff47c5544a5f43987c55ffc5fe3c026",
+          "metadata_sha256": "0368d0bb3a8bd557341baaef0393f91664dbebb0638c2d2caad832a1c9e42ea9",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            613
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0034387",
+      "GT_people": 5,
+      "original_wh": [
+        450,
+        600
+      ],
+      "GT_sha256": {
+        "Category_ids": "1b866d2e7887a4ac6b2e02dbdeeb22c3cc03b3b6e1949017213990b4fd12ee13",
+        "Human_ids": "e42fbbe5a21048597ffce36148899b6d4593ba5322f9138d3ce32ecccbcb6c34",
+        "Instance_ids": "1e4eaf226e8e961447a863e382bcb447b71680b5dadd3b17780cb81f0a6f5bf4"
+      },
+      "RGB_sha256": "6ec8559f90e1489c7d108e3476c6b87452bac01ae50e1fdee2225a0c024d283d",
+      "figure": "panels/0034387.png",
+      "preview": "previews/0034387.jpg",
+      "figure_sha256": "b9a1b4e2f906481b2bf7346ad8c6d7a21ee7c38e247b7d869403b7e1a6f40fe6",
+      "figure_size": [
+        2700,
+        1284
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0034387",
+          "packet_sha256": "1d292362d5d81c7cbeb176b65a288e829411b89a97ea943729fc33576007cc12",
+          "metadata_sha256": "c4e25d428e75c648f1a316a648b2eec7b6705b728a5757c01dbff849f6ecfb70",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            450,
+            600
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0034387",
+          "packet_sha256": "72d916b0d25097e19129d4f3aeef6ed50ec1b8ce6c8e9f47baf5d79e76e951fc",
+          "metadata_sha256": "22b34b13914c14b9adc1c703122c68b44dc810e171c5f0125552fff5b0d16b03",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            450,
+            600
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0034387",
+          "packet_sha256": "e3f3472ea69abc49a97c34fc1b168bffb90b8ccb57aaf4718c61fd616a5e5ab8",
+          "metadata_sha256": "0d44a16fa64bb0a6713ba1fb401dc023a9df81adb487da5648260eeead86323a",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            450,
+            600
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0034387",
+          "packet_sha256": "42f03d7f0efdaed4f652e7770473951776eb0ae49a1ee905f97bc413ae0d6265",
+          "metadata_sha256": "b64b765a35d4327a16862ce21005baffd650ea5c60d73c6d8b1a4ad36f679b42",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            450,
+            600
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0013903",
+      "GT_people": 5,
+      "original_wh": [
+        500,
+        376
+      ],
+      "GT_sha256": {
+        "Category_ids": "31c13e122c0331fa8737e9ebcfcdf136c4ff4a035202518b95e1c0189d568355",
+        "Human_ids": "03ada46042eaac30556403d2662bbc3d576edfacb49070f1ca98467f28ef99fd",
+        "Instance_ids": "4c88c87f0f482392e58269ad1e54efbe6326476e3b0f4c7b45bec27efaf2cd48"
+      },
+      "RGB_sha256": "85b8d9810329b47dd6cecbcf6e55d8419da21e5aaf5ec0b74814b1f22300d3d3",
+      "figure": "panels/0013903.png",
+      "preview": "previews/0013903.jpg",
+      "figure_sha256": "c0a0adbf268f28f87d0a0b619ee07b9070d0b31a58dec9b3985d731c77f0c4e1",
+      "figure_size": [
+        3000,
+        836
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0013903",
+          "packet_sha256": "3257ffb9bf6c0514fd2a15a546ecbe8b9143178ed4eb22d7e6dad88304b45d89",
+          "metadata_sha256": "9b87a17af5ab0080d02965e8865543c99f4bddeb49792e7324219ebfafb0c4c3",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            376
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0013903",
+          "packet_sha256": "0bdcdf345f64e4038c366dcc559a383bb0ffaf1eae9532a4fcb9c8eec3e33714",
+          "metadata_sha256": "febaf7606eb9e36198cbb205467c7c121746c7ac7a75dc016711288352abb85e",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            376
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0013903",
+          "packet_sha256": "a84d6ba894241b6305c779508e2d5c5827e7b07f4bd08238b4e9fed119d3541d",
+          "metadata_sha256": "04b3d4fcba73b12f56799247f660ab78cbc084d149e1f3015e6f0aaae15c68d4",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            376
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0013903",
+          "packet_sha256": "5a8df9b085b9e1ffcb9f774cd1a7f123038c781e03fcd51855b75058a81fb5f7",
+          "metadata_sha256": "ead326c61fa62f6139ea488608b36d2dfd62826640048bd32176fd6294730c0f",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            376
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0006909",
+      "GT_people": 8,
+      "original_wh": [
+        500,
+        407
+      ],
+      "GT_sha256": {
+        "Category_ids": "3c6e251788d9ba623b3ba543ed85558ac2190a93223066133dafae70e9539f1f",
+        "Human_ids": "dca8f8f434cf67d73ff17c2c7f4f5aff029093f69ed5a1e152b5f2899be097b6",
+        "Instance_ids": "9b1cf60cc9662abfc224a4846717ac49cf0eb3f6b5f213989e26735e6a32ea02"
+      },
+      "RGB_sha256": "27953ffc57a9039c88d8f0bdebf1898ce99cbbe03b88521675c5b36b73111718",
+      "figure": "panels/0006909.png",
+      "preview": "previews/0006909.jpg",
+      "figure_sha256": "f90d79eefae269385f63b2a0accee9ad35e32212874bb51c352c3c47a41452b1",
+      "figure_size": [
+        3000,
+        898
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0006909",
+          "packet_sha256": "e13adacb97be52838dc756cc7e2cb3cebbd7648c228efe102928466c28961f8a",
+          "metadata_sha256": "885efca5c22943b70fb5b6764756ddd96bc73037e4589e028454b2f705bc3f18",
+          "source_segment": null,
+          "final_person_count": 10,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            407
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0006909",
+          "packet_sha256": "a28a1d5ed99761f4c4efaf632ac8d1e88fc8c00af1fd4ebee2bcfe45180cb404",
+          "metadata_sha256": "ed0d1e12147eb5307a7ac84d341bb635bdb7cd0e11dfc73fd6373bc59be5c05b",
+          "source_segment": null,
+          "final_person_count": 6,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            407
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0006909",
+          "packet_sha256": "9e963e863ef88e8166b66744dfe41502b2f441a7eb5a1bcd8adabf34eecf06a1",
+          "metadata_sha256": "a4ee51e71801319792279d4d405f433a24204003a96feef5c84247e20972972f",
+          "source_segment": null,
+          "final_person_count": 6,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            407
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0006909",
+          "packet_sha256": "a857ccd667968f429da5ebf700e3b6ee6464596f415d73800f312533e0ea8db4",
+          "metadata_sha256": "ba98c06486c16080155c0e29d31f0ac202d911f0cea54dd6759dd756365fa05b",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 8,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            407
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0019475",
+      "GT_people": 5,
+      "original_wh": [
+        500,
+        375
+      ],
+      "GT_sha256": {
+        "Category_ids": "2bc81badffdf251244e27a4164bf8ef6c8059b35533f6c44ef7fdb9c4557b082",
+        "Human_ids": "2c8f9bcae14ec93a7a81a111752455b78b0aa031003e04c9eb79969599ebcafb",
+        "Instance_ids": "875cc8798467bc73fdc841bd42116d73b20bbfd99e8dc8f3a44b959896f9852e"
+      },
+      "RGB_sha256": "acb44b002978a4fd3a0fe1a960c2201589d1feb1b39183e09e78509fdbce9d17",
+      "figure": "panels/0019475.png",
+      "preview": "previews/0019475.jpg",
+      "figure_sha256": "68a7a58a3b1a1f16d4e9a4e7ef46edb34450d390da7a25e987bb09d3ca895ae2",
+      "figure_size": [
+        3000,
+        834
+      ],
+      "is_showcase": true,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0019475",
+          "packet_sha256": "7a2e0bfb680e7eb5d90b2e8678b5c01e5dc360ed98c4e2424c2f1da61c1d052b",
+          "metadata_sha256": "6d5691d46c9a8079ae7849850001e2612a899bf7622e06a5447b9dfdaa209b48",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0019475",
+          "packet_sha256": "133c962cb7fa137bb4b08ea5e40a332f28ea3e6e08788977ab42168bf52c2a0b",
+          "metadata_sha256": "64692623cdf1a93b634c8a93ea59b41711f7377441de5f42d6d30b2ad19bd26a",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0019475",
+          "packet_sha256": "2c79c0d6a1b008b50789430bfe7c248f2088013406f6739b98cc9fa1f545dc23",
+          "metadata_sha256": "5478c0363bb55f9f56310a4af4ccde4d3497c5a8b285171a2ca5b0f56b2e9760",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0019475",
+          "packet_sha256": "5fe38eca3f6ca1eb79934ee992dec36dfd9e0680b515e5abb74c6bb2a97ff10c",
+          "metadata_sha256": "5bdef0c7264d40d6506853a1fea963ed455a99afdc1366d8a91f0344fb089d00",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0002416",
+      "GT_people": 10,
+      "original_wh": [
+        500,
+        335
+      ],
+      "GT_sha256": {
+        "Category_ids": "e9de7bc41bf4827bf92f84a98cc55692ba924b3987b8741fad0727b5b1d980da",
+        "Human_ids": "4d7e041504c0c38ff01de567112193468ce42650e384be509ab8c9cc2ffd662e",
+        "Instance_ids": "5207f0c5ba912acff18a7cdffc6bbeabf72da989e96a9c247bad8ee44d08ea57"
+      },
+      "RGB_sha256": "4d9c9724a466d8f3383c9c461933062ef1536880a5f471cb00ba9870d5270d71",
+      "figure": "panels/0002416.png",
+      "preview": "previews/0002416.jpg",
+      "figure_sha256": "fc162e957687c8f32485edbc30f94f0d3b4c1bfab3c39496a002cc7e232b0c42",
+      "figure_size": [
+        3000,
+        754
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0002416",
+          "packet_sha256": "19695fc7c25bdcd14631c4473284a03d293f09e3e70dc8fcbea8f5941523059a",
+          "metadata_sha256": "876402b9910f545a17981944a152e1d252a4978f811dc5b2f2bd72cdac2a0727",
+          "source_segment": null,
+          "final_person_count": 15,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            335
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0002416",
+          "packet_sha256": "e0ea1adbe29e633319848f2f58a5a4cc2bf6ed061005a7b3f4d689fe9945334a",
+          "metadata_sha256": "046c8638659975402f0e11f7dfd80fe62cec4f8df34d48416cc0ebba58b862e3",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            335
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0002416",
+          "packet_sha256": "0a165775781f00757aa7999bcb5adcd2222d4ab2424d2c885057ba65793fb819",
+          "metadata_sha256": "c564cfd46873c794ece25f961dcedb4819c39af0380ab6d540a0b6fa927d47e1",
+          "source_segment": null,
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            335
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0002416",
+          "packet_sha256": "36fca73e5cbc40e2b37a74d4f61addc3c7488fc54a4002d08b6813ad7f75d711",
+          "metadata_sha256": "4a835a64c1bef30cd17fe1e2c2509f85d8ef1137a91c000b603bbd71c73378e9",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 10,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            335
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0000822",
+      "GT_people": 5,
+      "original_wh": [
+        500,
+        375
+      ],
+      "GT_sha256": {
+        "Category_ids": "579f9b81ce34ea3acf6ebed68e4aee2f30d139305bf0c65d644c1b10ac202644",
+        "Human_ids": "26e1880870c02136aec18d09714332babdc7162cfdec68e903781494065953fc",
+        "Instance_ids": "de7da2fbdbf2d059d9a7f16a8c229f5651145d8ab026474de0a2331d4ac21829"
+      },
+      "RGB_sha256": "8eeec7748b9c1ea46eb7156803382fed4fa7067c0ba8e8fe81ce7fcb7062d251",
+      "figure": "panels/0000822.png",
+      "preview": "previews/0000822.jpg",
+      "figure_sha256": "9f3c0ca07856283216607ecdc1efcc9eca7ab6022141c728da756334416c8fa8",
+      "figure_size": [
+        3000,
+        834
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0000822",
+          "packet_sha256": "e826d782b58f921ede7f281420722167e4e2f0d4b43a5fbb0bd97b899643ca52",
+          "metadata_sha256": "f4d9aec856fa51a40b7ca875cd08c4f6e942642da8ee500b12f5b351a8db1d74",
+          "source_segment": null,
+          "final_person_count": 11,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0000822",
+          "packet_sha256": "05ad6a75f866123116ec727f4077ca2b9a1a067708c07652f4a885fac7c8f7a7",
+          "metadata_sha256": "228e6cee16617586c6de15e915b28bd2a4ddb9465b822db2b3c1cf1ffc62eac6",
+          "source_segment": null,
+          "final_person_count": 6,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0000822",
+          "packet_sha256": "63e0b4de3b601f0c3ff070ad04513119d0d91bbc89fc05c9afe985f3bebeb14c",
+          "metadata_sha256": "f55cb865182a666b51f471aa171e8a3de687a6eecae9dca1eb7a7af6678ec69b",
+          "source_segment": null,
+          "final_person_count": 6,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0000822",
+          "packet_sha256": "34003ffb5d6a10dc6dde607178bbc4795511f8f79028b4a7943271ef767d810c",
+          "metadata_sha256": "fc5e32f5e414f99e04cb11aa17b1864785a0af5b515307a243916fdee53cb7de",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0011746",
+      "GT_people": 8,
+      "original_wh": [
+        334,
+        500
+      ],
+      "GT_sha256": {
+        "Category_ids": "c1786114c71b971d03445a7e8627754b12c4cc463635a1c0d9265f6e2b5b31c9",
+        "Human_ids": "cc161af6f13f267649d978bd6c09a0e1dfc8a9c3524118fecfb62a7c3d8174b8",
+        "Instance_ids": "5aa2f49a6517c7c938157634d30e6c6029f3a5ead36e8c014861901c395d0fb8"
+      },
+      "RGB_sha256": "fba9817fc2d25bd1cddb28f37a0dbde6f3ff3e291ef7edbf53c0690e623ed031",
+      "figure": "panels/0011746.png",
+      "preview": "previews/0011746.jpg",
+      "figure_sha256": "68627811e1a297a5fa3adc228047643f023143f3b49bb3753991b678925512af",
+      "figure_size": [
+        2004,
+        1084
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0011746",
+          "packet_sha256": "a1f695411882fdf0e68ea8912dd9663d68c84887d984e4ecfad243f5fe8a9f57",
+          "metadata_sha256": "a88d2b26b58db1b1820d3f25733e7d7eb9ba7afb9f6e33f724eeb0e83ff5bf22",
+          "source_segment": null,
+          "final_person_count": 10,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            334,
+            500
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0011746",
+          "packet_sha256": "93340764223fd2d079bb4f0b54153bf79e1ac324920b837a67ee6f80f38b8b35",
+          "metadata_sha256": "7dbea03e753a89ec03cef2a4067e388a77b20b90a258304cee53a8913f23d7b7",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            334,
+            500
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0011746",
+          "packet_sha256": "f349e2bde0205d0ad49ad777753fdb742b823159622a730d6ca1dae4ac483dba",
+          "metadata_sha256": "8d4d2d7cf2cfd1f969d777d8a708dffb9492ab904bb19ed8df3784ed9a738b3a",
+          "source_segment": null,
+          "final_person_count": 6,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            334,
+            500
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0011746",
+          "packet_sha256": "44bbeb73e43d50cb1e62075b3cc15078a0e443bf91a49c862ab14e25615636a5",
+          "metadata_sha256": "3130a6116242ccf4cef6c424f96db641c1735fff10a616d1239d2662f4ba0663",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 5,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            334,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0001538",
+      "GT_people": 2,
+      "original_wh": [
+        500,
+        500
+      ],
+      "GT_sha256": {
+        "Category_ids": "e4b1a0171b621fa4bf9a6a781e297aee5b30cf2877c6d809b761e6de98f58e54",
+        "Human_ids": "301d7ee0588d14d00dcd9ba5ca6f48d52368298741a92d47cd49faaa5983ef9c",
+        "Instance_ids": "cfb9d0d42c80c854d002681ac43da2df8c89813674ef24a88134adbc1c4878b9"
+      },
+      "RGB_sha256": "1e29a243a6885f6c62838a5a4ddb9107e75507380bc0f7f245a0e3efa4603f62",
+      "figure": "panels/0001538.png",
+      "preview": "previews/0001538.jpg",
+      "figure_sha256": "dad1f5f420acd87353ad8e5d9b6b7b726fd3caf7c417e241315cbe9a785b868e",
+      "figure_size": [
+        3000,
+        1084
+      ],
+      "is_showcase": true,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0001538",
+          "packet_sha256": "9ef73ebb70d4bb2e8788e6fa72c8183df07af26be275493ab020083c95546d3a",
+          "metadata_sha256": "b6c40628e764158664da8a5975f6af9322694c8ca1596003df53f9b0b98d979c",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            500
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0001538",
+          "packet_sha256": "d2c0214946b344a13887885853bcc927114c93eb19c18141d7ac58b381d5cef0",
+          "metadata_sha256": "64467383f9c53984df9f85526bbe6470a37729ed9fb11dca554fd6913f578a6c",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            500
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0001538",
+          "packet_sha256": "36993d996e8ecfeba947aaddc7a96086972c85b195c44dd4c7f6cc28b520900a",
+          "metadata_sha256": "578d81210ee0d0853cdb7017a6a67de6ec012da91a37566ea6d1b9775c8e7a7b",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            500
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0001538",
+          "packet_sha256": "e206519a81f4146983a9e5e53b9e6097e4bef7360916889ca6ab32321c9b6950",
+          "metadata_sha256": "afffc0cafabb042b34acbd61a3b9e6e80a1b22578b740aea627278ebc49dff81",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0031248",
+      "GT_people": 2,
+      "original_wh": [
+        500,
+        750
+      ],
+      "GT_sha256": {
+        "Category_ids": "d3fb049afa8ccb19a82e32d213a5489140624d0428e7f209a0d2a939dddff4c5",
+        "Human_ids": "c78d8522357af45dc12615004faa27b17899ec05986b176c087879de6a9778ff",
+        "Instance_ids": "43342a25b5efaa9749fc386ee422d41e8ab871345f29a8c90a1b32d5a87c39fc"
+      },
+      "RGB_sha256": "f32434dc6450c1535eca5cb360ace0265c2935bee10c19f149700a6d6cb03980",
+      "figure": "panels/0031248.png",
+      "preview": "previews/0031248.jpg",
+      "figure_sha256": "316aa9028818cf4457b56a56c6e6e2eb48acae99f3758f61aedf0282e5fe5783",
+      "figure_size": [
+        3000,
+        1584
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0031248",
+          "packet_sha256": "5f964b61bccd96dd9b9b8825ce9b1e66c2b2ef39cba7d2614b00a8ccc146f11f",
+          "metadata_sha256": "d9d28bb136cbd80bc1fa2c2bc07d99acac7e5145140790082481ae8fa8136337",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            750
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0031248",
+          "packet_sha256": "1053060fcf7a05ce98a636f00d88e371b1fbb3368771bfb41fb51ffd66c68abd",
+          "metadata_sha256": "368827285850ba22cd6d3c1ae8747c9cadc3140d1da3f6b0411aba971d36168a",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            750
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0031248",
+          "packet_sha256": "61920f686b913d4410a31409446fd22313f157aa7962e8482df9bcaac855ed3e",
+          "metadata_sha256": "3a8e767c3cd841fd65cac3099ef7388026b37726f304dee7faea8c8e6fd9ba7f",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            750
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0031248",
+          "packet_sha256": "b3ed4fb076b3e11e954fc0d004db36836cd43c15ee14bf277996910ab622947e",
+          "metadata_sha256": "03d849ae0be88ad3a3d9a399256416dd4f82ee8348edb043580e783594ff7768",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            750
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0027897",
+      "GT_people": 2,
+      "original_wh": [
+        831,
+        300
+      ],
+      "GT_sha256": {
+        "Category_ids": "99545c8a9044cdce63ade88aa00c91311c857ac8121fb9fe4d6d0f90bfb9c503",
+        "Human_ids": "d8b52a9fda92b55413ce23106d353651316e2d42280f86434a4e4a50daa42a5d",
+        "Instance_ids": "592eaca53a8645a0f9e4b07d177401f4c74fd0a8b985b119bfa9821dabef0c6d"
+      },
+      "RGB_sha256": "7e6aca0d6e92191a894ae254c02cf8e2f9f85a53ae76904e04dce8c9b916a657",
+      "figure": "panels/0027897.png",
+      "preview": "previews/0027897.jpg",
+      "figure_sha256": "1680f022861fb9323e21b04a34d4b43a302aa0801f33ea6ff0406c865fa046df",
+      "figure_size": [
+        4986,
+        684
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0027897",
+          "packet_sha256": "0bf42374487fc28f5e1c75433b312d6b932724b51d21ba216d390d40fe6a7b49",
+          "metadata_sha256": "c6051996d6cbdb452157f61b60d1d45113e541d6a42b1bcce161fde8d03bea25",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            831,
+            300
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0027897",
+          "packet_sha256": "df81018c64b0f06648bc3e11528ca3783a7b7220337b2ca1b66625af1ce9c414",
+          "metadata_sha256": "ffeb8a4edb15510151d909e097043b9ef8e600f9ceb3ed78337b07eec80713e5",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            831,
+            300
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0027897",
+          "packet_sha256": "638b7cb01cd72a7c0ccbd8eb557259d29c14047d362630ca8628ede2116f4e79",
+          "metadata_sha256": "b2ab18e71dbc5b1bc832db3613fd09ca6adf3315f3af2a1b06207aaccba92540",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            831,
+            300
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0027897",
+          "packet_sha256": "4da8b205e249ca989f28eb0530b5d98cf32ac6fe3e6b6da7ee4f0d89adf58a5b",
+          "metadata_sha256": "642bbcaeb72d36928534c5893a9d2b2a7a74961911c3c41d649fa0b1a6843bba",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            831,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0022835",
+      "GT_people": 2,
+      "original_wh": [
+        500,
+        503
+      ],
+      "GT_sha256": {
+        "Category_ids": "e3d8abbfb2c812b8507bc0ba67aecb1300d8ad5a0e8471ed6bb87cc1943b3887",
+        "Human_ids": "4fa8dfeb12161bd7bea771ef589553a14caf17250c164b4c6c1cddfd79797713",
+        "Instance_ids": "064b1632091c422c80e3e213cbd9f569bc3de4b0cb6623e5b7c6ed91f24d35d7"
+      },
+      "RGB_sha256": "66d931c621ae2c83f71e31ec5742ba5f4db26a3a2d199e51a46bdf6bdd36476c",
+      "figure": "panels/0022835.png",
+      "preview": "previews/0022835.jpg",
+      "figure_sha256": "a65ac1a0114647569a44ef860624e8897de1ca9bcb8b2684a3afaae8cfa00827",
+      "figure_size": [
+        3000,
+        1090
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0022835",
+          "packet_sha256": "6bf72ce0c719b09543250138a1641c88283a91b03681d56bd512cb64d229e6f1",
+          "metadata_sha256": "b91620a7f8ac4f33df68f53f4c48e6d7777f7173751da26f265502946c2c2687",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            503
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0022835",
+          "packet_sha256": "180b5b6d9f35a528c18da1525312f2a9d0691a3f8f9f925f86b13d30d53f12d8",
+          "metadata_sha256": "50e1619ac76b4c501c4650be7c6cbaad1f25101590ac3bfebfcd3aa7bd729b5d",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            503
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0022835",
+          "packet_sha256": "ba5d0812ea454ce53984fa0dc66cb4f621ba085bd73a3d4d55c30cd215b5f7a0",
+          "metadata_sha256": "0cfc8c34520198b37c0a60fcce9be79fc46da8429f0b53751ef48c69673f64f9",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            503
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0022835",
+          "packet_sha256": "b995922f1fb9751781476b8d2f270db5b893c0f4880ae5546fd068b97e000b3f",
+          "metadata_sha256": "433986e1f8f9f41f0b82c8af9e516bcded5603d308e4725757e9596600b95e7c",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            503
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0001413",
+      "GT_people": 4,
+      "original_wh": [
+        500,
+        375
+      ],
+      "GT_sha256": {
+        "Category_ids": "feb478c0f7ba04ea78c5d40f550d2634435fb9bceff6c97513743d49024b8bc7",
+        "Human_ids": "7737beaf2c939efa657c54b038e59949fe9d330eac848d106dc159e163f7159d",
+        "Instance_ids": "f2a4382a5d64383b14dd67d13b5abb9fd9377e654bf7202de775cd76118a001f"
+      },
+      "RGB_sha256": "5cff252a22efdaddf7b34075e87a7a8759221e1e7a49ea53aee39d4fb3cdeaa6",
+      "figure": "panels/0001413.png",
+      "preview": "previews/0001413.jpg",
+      "figure_sha256": "070b34302232d77d50056ef1397307fb2303fa6323bed6b41ae2a231c76ecd82",
+      "figure_size": [
+        3000,
+        834
+      ],
+      "is_showcase": true,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0001413",
+          "packet_sha256": "1e852f471ab1d8e7c7f3adcfe2779438036af8aa012cb15fbb3f6abb7e4c7989",
+          "metadata_sha256": "b0763b6f58176095af26dfcc3ffb0fe851a1dbc264387d964e8f6d3179b61522",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0001413",
+          "packet_sha256": "35336655e60fec2d39136366516105eb82a396cfbe5b1d0de5c589dbefe6253a",
+          "metadata_sha256": "01da358ec28be04c241f96cae6cd0e379efc02495a0c1d6d029bb732551db157",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0001413",
+          "packet_sha256": "20b01bb0509aeeaeb83ac74f7c85d374c1d73f5e5ab83133990a0020bad066e1",
+          "metadata_sha256": "a23f5b1e4de02d89dfcc0a04b23e5fe26c161ba48ede8d338225c186dcc47ea0",
+          "source_segment": null,
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0001413",
+          "packet_sha256": "7183e3d6a6eb8a1d3398c9afe846bb54fa6e630d7d5ee805b23e8ee25f74daf3",
+          "metadata_sha256": "43dff29f1fe4648e81f0712f1c8899383d93f583d1d7998dc635757f8cd524f1",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 4,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0037964",
+      "GT_people": 2,
+      "original_wh": [
+        300,
+        300
+      ],
+      "GT_sha256": {
+        "Category_ids": "7a6516293aa83f1863ebef6d28b2928d3c977d4db1b7c78183e096c5605c8057",
+        "Human_ids": "3dedbaaf09114b5e118b32d3e41a9ba0b8aceae483b7c7023b2cca0607914dc3",
+        "Instance_ids": "0dea227e1f04483c45ea6213c85f9543ce09be48c4654f4bbbe591bb58a1e681"
+      },
+      "RGB_sha256": "f9239e1c64006404ca2991e54d181c5ad5c1e8396a541b83ba1ca092f4fbfe94",
+      "figure": "panels/0037964.png",
+      "preview": "previews/0037964.jpg",
+      "figure_sha256": "b843da5587637042c7064ffb089c81e4562cab6038c6412ecf2d227f1b9369d2",
+      "figure_size": [
+        1800,
+        684
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0037964",
+          "packet_sha256": "c37d89503099323d4e672ae3f504e4abaaa535790bac1b80ec094b6bd2dd89e9",
+          "metadata_sha256": "b5ffd8690b8e89885dfd913463aafa8a1177842c68b1afab9bfe72b4b500114c",
+          "source_segment": null,
+          "final_person_count": 3,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            300,
+            300
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0037964",
+          "packet_sha256": "34764067d189677ea64b9ec80c37bcd2305307d51aa5a54ee3df0da45d599fbf",
+          "metadata_sha256": "8795212c148f5848c424587830b0298072dc78a42638233a2e9a0cff7931f73a",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            300,
+            300
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0037964",
+          "packet_sha256": "c83d1bf6a2ef3af453e4a75c4ca90154b9d65e6de96ff592bcb340f0ce87d535",
+          "metadata_sha256": "aef938e6caef96aaa3797bf67f21d198174fba72f377520025d729db612f1e8f",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            300,
+            300
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0037964",
+          "packet_sha256": "b3b6760996c6ec15c4176edbbb83a5952bea4086bc1e7af953089eedb2012332",
+          "metadata_sha256": "2f56edaef0798afdd72138f5f988db3305bfa72aaa8add4debbf9d1e01196fea",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            300,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0014704",
+      "GT_people": 2,
+      "original_wh": [
+        500,
+        375
+      ],
+      "GT_sha256": {
+        "Category_ids": "e0e2a8123c1893f78b787ad0c0d7b7ed153afe8389ed9a1abca87a1462e82d27",
+        "Human_ids": "385eaea712773cc34f0f8d1f30cefb99746e26a1f99e4cccdcb4973690d4348e",
+        "Instance_ids": "f40d64289718af14a757f1f3946f631e9fbcfbfe98646c270c762b2c2b463072"
+      },
+      "RGB_sha256": "c34878cba8d554a3cc2d1c6e5d18796c77d546fe2acf4f05faa71c4cb00241d5",
+      "figure": "panels/0014704.png",
+      "preview": "previews/0014704.jpg",
+      "figure_sha256": "22022149d910bce3ebec81567af4f824914e921c62a3c936a9a0d0c53c6051f6",
+      "figure_size": [
+        3000,
+        834
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0014704",
+          "packet_sha256": "93b7230773b6e971c4693ef4ec74e2355f71203a935744730cc88bd33845472c",
+          "metadata_sha256": "2960c6942ff7c36899966a6ff156c0fd3b5fbd0520adec768943b7b443a86e33",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0014704",
+          "packet_sha256": "13c7efbdf9a3f27993d16d8798ebc09908f5255e180224b1b6b11bceb593f927",
+          "metadata_sha256": "8b89163c9c3db50514613afe89bd5dca05bed740b11f848e2ee0ebd49683867b",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP/packets/0014704",
+          "packet_sha256": "051c36f826f082ffc8be67b93d8a4232a71f8542940adf95a54ce942844e2312",
+          "metadata_sha256": "f7c51d1444dc3e5b1370fe32a8f03fc9779434d3aaf82409928d33edd51cb3cf",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0014704",
+          "packet_sha256": "9e660e69dbc08e3e0a0be11feb6e260dbcf979c1300a205cf3bd82652d5f39a8",
+          "metadata_sha256": "daa2d33b3409b0d674d9b3dfd45ccb06ba4532414dc9bb017facd7dd71a073f2",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "0028993",
+      "GT_people": 2,
+      "original_wh": [
+        500,
+        332
+      ],
+      "GT_sha256": {
+        "Category_ids": "e7f9012a0e83dd11a9a492fbb39aebdb98241cb3e0ea72bebebb46418f822c62",
+        "Human_ids": "cf4caca0dd3cb53fec39f8173a35cd4f9c9d8bcac35e792be5e24f0d08d14304",
+        "Instance_ids": "7c538902be36dc96b7321c458aa808ebf0d9e1e76e6e50b3ccd68e4b852ff347"
+      },
+      "RGB_sha256": "bb85c05f0455b52e5d194bf3fc44ba043dd9a9c39f8089049dc631293e982b62",
+      "figure": "panels/0028993.png",
+      "preview": "previews/0028993.jpg",
+      "figure_sha256": "4f8e93a5f0d86b6aeeae757579422484c9a5ea0b45e58f19d6577de3e16e5828",
+      "figure_size": [
+        3000,
+        748
+      ],
+      "is_showcase": false,
+      "packets": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0028993",
+          "packet_sha256": "56e18951f0ddd8e87163298fe40c90ad1bfe3800ded4804ab8c325b1f86bde55",
+          "metadata_sha256": "bb2081eb9dcf5be8fd50fcd313503b31fa9d88298e6fc96bb304489a584e0ed8",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ROI",
+          "original_wh": [
+            500,
+            332
+          ]
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0028993",
+          "packet_sha256": "142d74085527ce7c66fbaa87e32fb4d58ae8f2221f18bfd9d62b1c7080ea2ef9",
+          "metadata_sha256": "95fc2077f7de2643670f5f948c54e3f9ea835c476faa601e07adb1174bf3b352",
+          "source_segment": null,
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            332
+          ]
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0028993",
+          "packet_sha256": "1e1059945ee2bbf698dd4d430a6fec4be4ac09ba5e950b09bb68fa36a3d3fdf0",
+          "metadata_sha256": "80f463f703d47cd310fde4bd38835f0383cae4bcf3d4caa8d115d5020b2e7eb8",
+          "source_segment": "continuation-20261028T073741308461Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            332
+          ]
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0028993",
+          "packet_sha256": "071f5fb3426225b7ddbea269c09ff7bbdf2fdf9ec37ec5ca39274052689c878f",
+          "metadata_sha256": "a4dceaf72b8731dae92c4c65275e3e9dfa39e223013d5588b56223bd21b7f9c2",
+          "source_segment": "rpr-cihp-shared-20261028T155439603873Z",
+          "final_person_count": 2,
+          "source_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+          "original_wh": [
+            500,
+            332
+          ]
+        }
+      ]
+    }
+  ]
+}

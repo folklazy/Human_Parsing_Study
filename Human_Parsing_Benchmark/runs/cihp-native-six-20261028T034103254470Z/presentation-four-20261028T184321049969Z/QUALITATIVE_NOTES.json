@@ -1,0 +1,40 @@
+{
+  "inspection": "AI_visual_spot_inspection_not_independent_human_annotation_QA",
+  "inspected_full_figures": [
+    "0021448",
+    "0019475",
+    "0001538",
+    "0001413"
+  ],
+  "selection": "FirstfrozenIDperGT-onlystratum beforeopeningpredictions; aggregateVALscoresalreadyavailable",
+  "no_dataset_error_prevalence_estimate": true,
+  "notes": {
+    "0021448": "ฉากธงบังตัวคน: GT5คนและทุกระบบส่ง5finalextents แต่พื้นที่UpperClothes/Coatและขอบบริเวณวัตถุบังยังต่างกัน การนับ5maskไม่ยืนยันownershipถูกทุกพิกเซล",
+    "0019475": "ฉากคนบังกัน: GT5คน, QANet/RP-R-CNN5finalextents, M2FP/D2FP4 ไม่ควรตีความจำนวนอย่างเดียวว่าphysicalpersonมี4คน จุด(60,230)GTUpperClothes5แต่ทั้งสี่ทำนายCoat7; จุด(100,250)GTCoat7แต่ทั้งสี่ทำนายUpperClothes5 (พิกัดภาพเดิมเริ่ม0) เป็นตัวอย่างclassboundary/category disagreementเทียบreleasedGT ไม่ใช่สาเหตุที่พิสูจน์แล้ว",
+    "0001538": "คนสองคนชิดและซ้อนกัน: ทุกระบบส่ง2finalextents แต่เส้นแบ่งHair/Face/Torso-skin/UpperClothesบริเวณคอเสื้อและขอบเสื้อแตกต่างกัน ยังไม่ใช้ภาพนี้ยืนยันface/neck equivalenceข้ามtaxonomy",
+    "0001413": "คนสี่คนขนาดเล็ก: GTและทุกระบบ4finalextents ควรดูรายละเอียดHat/Sunglasses/Faceและขอบมือ ไม่ใช้จำนวนmaskเท่ากันเป็นหลักฐานว่าทุกรายtargetถูกต้อง"
+  },
+  "other12_images": "Alignment/hash/schema checked; no claimofindependentdetailedhumanreview",
+  "point_inspection": {
+    "0019475": [
+      {
+        "xy": [
+          60,
+          230
+        ],
+        "GT": 5,
+        "all_four_predictions": 7
+      },
+      {
+        "xy": [
+          100,
+          250
+        ],
+        "GT": 7,
+        "all_four_predictions": 5
+      }
+    ]
+  },
+  "point_examples_selected_after_visual_inspection": true,
+  "no_scores_or_settings_changed": true
+}

@@ -1,18 +1,18 @@
 {
   "kind": "DERIVED_NAVIGATION_OVERVIEW_NOT_NEW_EXPERIMENT",
-  "updated_Bangkok": "2026-10-29T01:25:07.310443+07:00",
+  "updated_Bangkok": "2026-10-29T01:56:19.221143+07:00",
   "parent_run_id": "cihp-native-six-20261028T034103254470Z",
   "complete_models": 4,
   "cohort_model_count": 6,
-  "current_authorized_model": "CPI_ConvNeXtB_CIHP",
-  "current_round_status": "INCOMPLETE",
+  "current_authorized_model": null,
+  "current_round_status": "REPORTING_FOUR_COMPLETE_CPI_PAUSED_MAPPING_PROPOSAL",
   "metric_copy_only_no_rescoring": true,
   "sorted_by": "frozen roster order, not scores",
   "population": "Native CIHP officialVAL5000 per model",
   "frozen_scientific_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
   "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
   "CSV": "metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
-  "CSV_sha256": "fbc3a3e512f7e3f4d3a25432f25af4ac0521759ccd15f61dd9300740a2c88c88",
+  "CSV_sha256": "fd49aaa00ee9b031e46ef71f790657641f148229947dd615998234db99f6ab21",
   "models": [
     {
       "model_id": "QANet_CIHP_HRNetW48_512x384",
@@ -28,7 +28,8 @@
       "execution_segment_or_record": "cihp-native-six-20261028T034103254470Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
       "canonical_source_sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "COMPLETE"
     },
     {
       "model_id": "M2FP_R101_CIHP",
@@ -44,7 +45,8 @@
       "execution_segment_or_record": "cihp-native-six-20261028T034103254470Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
       "canonical_source_sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "COMPLETE"
     },
     {
       "model_id": "D2FP_R101_CIHP",
@@ -60,7 +62,8 @@
       "execution_segment_or_record": "cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
       "canonical_source_sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "COMPLETE"
     },
     {
       "model_id": "RPR_CIHP",
@@ -76,7 +79,8 @@
       "execution_segment_or_record": "rpr-cihp-shared-20261028T155439603873Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json",
       "canonical_source_sha256": "b03cef16f6209ba1c08cff89c310a4d6ea8031c8647ebb29ec01aa40f4a1751e",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "COMPLETE"
     },
     {
       "model_id": "CPI_R50_CIHP",
@@ -92,7 +96,8 @@
       "execution_segment_or_record": "cpi-r50-manual-continuation-20261028T175036811629Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json",
       "canonical_source_sha256": "59a67be335c1383985bdf57c00af3d950f0a537f061980ec3d9b440eca2a481e",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "PAUSED_NOT_CANCELLED"
     },
     {
       "model_id": "CPI_ConvNeXtB_CIHP",
@@ -108,7 +113,8 @@
       "execution_segment_or_record": "cpi-convnext-validation-20261028T182116250459Z",
       "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/COMPLETION.json",
       "canonical_source_sha256": "1284c9bb8f7ae4538ae86db80fb215a42b6a673276b3296bc808777feda94769",
-      "timing_rank_eligible": false
+      "timing_rank_eligible": false,
+      "work_status": "PAUSED_NOT_CANCELLED"
     }
   ],
   "limitations": [
@@ -117,6 +123,10 @@
     "RPR shared override is scoped to RPR and not inherited by CPI",
     "YOLO-conditioned application native-label scores, not official native parser reproduction",
     "Timing adapter diagnostics, CPI includes native file I/O; no clean/end-to-end speed ranking",
-    "Canonical per-run completions remain authoritative; nulls are not zeros; no six-model ranking/selection"
-  ]
+    "Canonical per-run completions remain authoritative; nulls are not zeros. Four COMPLETE configurations compared; no six/nine-system overall winner or clean speed ranking."
+  ],
+  "current_user_scope": "Summarize4canonicalcomplete systems andpreliminaryCIHP/Sapiensmatrix; no newinference/CPIretry/Sapiens/color",
+  "current_primary_report": "reports/CIHP_FOUR_MODEL_RESULTS_TH.md",
+  "presentation_work_unit": "presentation-four-20261028T184321049969Z",
+  "model_inference_authorized_this_work_unit": false
 }

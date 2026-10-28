@@ -1,0 +1,15 @@
+{
+  "gallery_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/presentations/presentation-four-20261028T184321049969Z",
+  "gallery_index": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/presentations/presentation-four-20261028T184321049969Z/index.html",
+  "gallery_index_sha256": "b8b725fe23e641b19655397b53c78a3899b49781af5b78e76e3a4aa4126815c7",
+  "private_bundle": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/presentations/presentation-four-20261028T184321049969Z/PRESENTATION_BUNDLE.zip",
+  "private_bundle_bytes": 24671117,
+  "private_bundle_sha256": "6234e3e7252ecd2fa252b4d0333b28d11ef28150bcb08d941e36705bac667187",
+  "zip_CRC_all_members": "PASS",
+  "zip_members": 66,
+  "main_report_direct_references_in_bundle": true,
+  "deep_history_references": "Use fullrepository/externalartifacts; not all archived source assets are in this presentation bundle",
+  "public_images_uploaded": false,
+  "distribution_policy": "Private research access only; no automatic public redistribution of dataset figures",
+  "bundled_report_and_verification_hash_agree": true
+}

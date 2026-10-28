@@ -71,3 +71,10 @@ Proposed B resource ceiling clarification:≤16parser TRAIN frame-system calls,�
 ## 2026-10-28 — user-adopted CIHP native Parsing9 revision3
 
 The current user explicitly replaces conflicting previous plan with proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md. CIHPnative active, Ninja deferred. Firstsix includesCPI_R50_CIHP/CPI_ConvNeXtB_CIHP again for a NEW native-GT run, not repair of historical results. SourceCIHP_PGN GoogleDrive provenance user-supplied. VAL5000, notCCIHP4961;native20-classsemantics. Preparation/implementation/CPUchecks and six-model testing authorized whenready, no per-model reapproval needed. Sapiens3followmatrix, no color/training/CCTV work now. Old7/10view/mappingdecisions retained as superseded history for prior CCIHP design.
+
+## REPORT_FOUR_AND_DRAFT_MAPPING_BEFORE_CPI_COMPLETION_20261029
+
+- State: **ACCEPTED task-order amendment only**; source: latestuserscope “พัก CPI R50 และ CPI ConvNeXt-B … สรุปผลสี่โมเดลที่ครบ พร้อม class-mapping matrix เบื้องต้น”
+- Accepted: publishreport/tables of4completecanonicalmodels,retainall6rows/CPIpaused-not-cancelled/nullmain,private16prelockedimagesfromsavedpredictions;classdefinitionreview/draftmatrixallowedbeforeCPIcompletion
+- Notacceptedbythisdecision: proposedcommonprojection/FaceNeckequivalence/newmetrics/eligibility/newinference/Sapiens/CCTV/color/training. MatrixstatusPROPOSAL_NOT_ACCEPTED_NOT_EXECUTABLE
+- Evidence/deliverable: [currentThai report](../reports/CIHP_FOUR_MODEL_RESULTS_TH.md),workunit `presentation-four-20261028T184321049969Z`; originalscientificconfig/results/historyimmutable

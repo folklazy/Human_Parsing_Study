@@ -50,3 +50,7 @@ Explicit operator CPI R50 continuation `cpi-r50-manual-continuation-20261028T175
 ## Latest user scope — ConvNeXt-B only (2026-10-29T01:17:06.416805+07:00)
 
 CPI R50 ispaused,preserve3successfulIDs/twoOOMattempts/mainnull. ExplicitConvNeXtshared-qualityauthority:requiredTRAINwarmupthenoneVAL0000018diagnosticwithoriginalConvNeXtcheckpoint/threshold.05/FP32/settings. OnlyifPASSlaunchcanonical5000,neverreusediagnostic;onerrorstop/noautoretry/fallback. UseConvNeXt-onlycontroller/observer,notR50bindingsoroldbroadqueue. Noretrain/othermodel/matrix/color. ReadcurrentSTATUS/mainreport.
+
+## Current user scope — four-model reporting and draft mapping (2026-10-29T01:56:19.221143+07:00)
+
+CPI R50 andConvNeXt-B paused,notexcluded. Preserve3/113successfulIDsandallOOMhistory/mainnull. Userauthorizesfourcompletecanonicalmetricsummary,16frozenimagesfromsavedpackets,preliminaryCIHP↔Sapiensmatrix only. No modelinference/retry/OOMoptimization/Sapiens/color/training/frozen-scientificchanges. Startwithreports/CIHP_FOUR_MODEL_RESULTS_TH.md andSTATUS. Sharedcode/assetsstaywhere theyare;figures/privatebundleexternalGit. Matrixpost-resultsdraftnotacceptedexecutionpolicy.

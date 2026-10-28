@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-10-28T18:57:05.367251+00:00",
+  "canonical_numbers_and_denominators": "PASS_COPY_AND_ALGEBRA_ONLY_NO_RESCORE",
+  "models": 6,
+  "complete": 4,
+  "per_class_rows": 80,
+  "person_rows": 8,
+  "selected_packet_hash_geometry_checks": 64,
+  "rendered_figures_strictly_loaded_and_hash_checked": 16,
+  "HTML_links": 48,
+  "local_HTTP_smoke": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes_match": true
+    },
+    {
+      "file": "panels/0021448.png",
+      "status": 200,
+      "bytes_match": true
+    },
+    {
+      "file": "previews/0019475.jpg",
+      "status": 200,
+      "bytes_match": true
+    }
+  ],
+  "new_report_local_links": 26,
+  "taxonomy_rows": 49,
+  "cross_relationship_rows": 20,
+  "checkpoint_bindings": 9,
+  "Sapiens_weight_headers": 3,
+  "no_new_inference": true,
+  "all_frozen_scientific_source_config_hashes_unchanged": true,
+  "source_snapshot_hash": "PASS",
+  "no_independent_human_QA_claim": true,
+  "main_report_sha256": "4ea1f86fe11f494915fef9d6a2b59fa5835b6f2738ade2199bed344ef5d4ee62",
+  "main_report_direct_references_packaged": true,
+  "bundle_verification_receipt": "External ARTIFACT_LOCATIONS.json records final ZIP SHA/CRC; no self-referential hash embedded in ZIP"
+}

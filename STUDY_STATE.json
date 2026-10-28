@@ -32,5 +32,14 @@
   "historical_stage0_full_roster_status": "BLOCKED_NOT_THE_CURRENT_COHORT_STATUS",
   "authoritative_result_csv": "metrics/first-cohort-benchmark-20261016T094257313856Z/QUALITY_RESULTS.csv",
   "run_manifest": "cohorts/first_cpi_t3b/RUN_MANIFEST.json",
-  "original_study_state_archive": "reports/archive/pre_public_snapshot/STUDY_STATE.json"
+  "original_study_state_archive": "reports/archive/pre_public_snapshot/STUDY_STATE.json",
+  "current_workspace": "Human_Parsing_Benchmark",
+  "current_work_status": "FOUR_MODEL_PRESENTATION_READY_CPI_PAUSED_MAPPING_PROPOSAL",
+  "current_report": "Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md",
+  "current_status_document": "Human_Parsing_Benchmark/STATUS.md",
+  "current_cohort_index": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+  "current_work_unit": "presentation-four-20261028T184321049969Z",
+  "current_execution_run_id": null,
+  "legacy_root_fields_scope": "Original current_run_id/config/mapping/populations/benchmark_status fields describe the archived first CPI cohort; retained as historical evidence. Current task scope is in current_workspace/STATUS and source-bound current_cohort_index.",
+  "current_model_inference_authorized": false
 }

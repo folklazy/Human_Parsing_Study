@@ -1,3 +1,25 @@
+# Human Parsing Study
+
+Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
+
+**Current deliverable: four COMPLETE systems (5,000 IDs each), both CPI systems PAUSED — not cancelled.** CPI main scores remain null under STRICT_COMPLETE. No new inference, Sapiens2, color study or training in this reporting work unit.
+
+| Start here | Purpose |
+|---|---|
+| [Thai presentation report](Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md) | Canonical results, per-class/person metrics, route differences, image locations and preliminary mapping |
+| [STATUS](Human_Parsing_Benchmark/STATUS.md) / [PLAN](Human_Parsing_Benchmark/PLAN.md) | Current scope and accepted task-order amendment |
+| [Current cohort index](Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json) | Source-bound six-system navigation, completed and paused rows |
+| [Mapping proposal](Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_MAPPING_PROPOSAL.json) | Post-results draft, not accepted/executable; Face/Neck and garment boundaries remain unresolved |
+| [Working workspace](Human_Parsing_Benchmark/README.md) | Canonical working/public-copy relationship and project references |
+
+The private 16-image gallery and presentation ZIP are external artifacts. Their locations and hashes are linked from the report; dataset figures, checkpoints, datasets and raw predictions are not redistributed here. A public clone alone does not reproduce the GPU benchmark or supply the gallery. No latency/FPS/VRAM-efficiency ranking is supported by these runs.
+
+## Historical publication and planning snapshots
+
+The content below is retained history. References to earlier current/pending scopes, CCIHP populations and the first CPI cohort do not supersede the STATUS/PLAN above.
+
+<details><summary>Earlier README snapshots and publication references</summary>
+
 > **Current scope: CPI ConvNeXt-B CIHP, diagnostic-gated shared-GPU quality run.** R50 paused; canonical5000 permitted only after separate0000018 diagnostic PASS. See [current STATUS](Human_Parsing_Benchmark/STATUS.md) and [main report](Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md) for actual outcome. Earlier scoped snapshots below are historical.
 
 > **Current scoped outcome (2026-10-29T00:40:16.529470+07:00): CPI R50 stopped INCOMPLETE after CUDA OOM.** Native CIHP complete3/5000,failed1,not-attempted4996; STRICT_COMPLETE main scores null. Setup/warmup passed; shared-GPU amendment was used. Earlier4 models remain closed. No ConvNeXt-B launch. [Current status](Human_Parsing_Benchmark/STATUS.md) · [Report for review](Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md). Older planning summaries below are historical; current PLAN/STATUS govern.
@@ -69,3 +91,6 @@ Anonymous README/result/config reads and remote HEAD were verified at the [initi
 The [previous roadmap](reports/PROJECT_ROADMAP_TH_20261020.md) is preserved as **WIP**, not an accepted new experiment. [STATUS](STATUS.json) and [WORK_LOG](WORK_LOG.md) separate historical decisions from the next Prompt A review. The user will supply Prompt A and the current parser list after this preservation step; neither the old 19-candidate roster nor the QANet proposal is automatically the new launch scope. No experiment was resumed. This selected documentation sync does not publish the newer local implementation/config tree.
 
 Native CIHP asset intake (2026-10-28): shared archive extracted on server; [receipt](Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md). Dataset payloads remain external; no benchmark/protocol changes.
+
+
+</details>

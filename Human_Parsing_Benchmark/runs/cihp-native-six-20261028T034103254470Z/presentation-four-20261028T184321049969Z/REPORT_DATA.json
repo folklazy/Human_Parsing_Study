@@ -1,0 +1,948 @@
+{
+  "status": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "execution_status": "COMPLETE",
+      "work_status": "COMPLETE",
+      "expected": 5000,
+      "complete": 5000,
+      "failed": 0,
+      "invalid": 0,
+      "not_attempted": 0,
+      "mIoU_20_including_BG": 0.6486614271812532,
+      "mIoU_19_foreground": 0.6344939309088313,
+      "native_reference_mIoU20": null,
+      "resource_policy": "ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified",
+      "execution_segment": "cihp-native-six-20261028T034103254470Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "missing_main_score_reason": null
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "execution_status": "COMPLETE",
+      "work_status": "COMPLETE",
+      "expected": 5000,
+      "complete": 5000,
+      "failed": 0,
+      "invalid": 0,
+      "not_attempted": 0,
+      "mIoU_20_including_BG": 0.6815521963906163,
+      "mIoU_19_foreground": 0.6679631688190221,
+      "native_reference_mIoU20": 0.6897492191762358,
+      "resource_policy": "ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified",
+      "execution_segment": "cihp-native-six-20261028T034103254470Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "missing_main_score_reason": null
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "execution_status": "COMPLETE",
+      "work_status": "COMPLETE",
+      "expected": 5000,
+      "complete": 5000,
+      "failed": 0,
+      "invalid": 0,
+      "not_attempted": 0,
+      "mIoU_20_including_BG": 0.6435195852144681,
+      "mIoU_19_foreground": 0.6282727908752036,
+      "native_reference_mIoU20": 0.6544421482466392,
+      "resource_policy": "ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log",
+      "execution_segment": "cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "missing_main_score_reason": null
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "execution_status": "COMPLETE",
+      "work_status": "COMPLETE",
+      "expected": 5000,
+      "complete": 5000,
+      "failed": 0,
+      "invalid": 0,
+      "not_attempted": 0,
+      "mIoU_20_including_BG": 0.5912413351410055,
+      "mIoU_19_foreground": 0.5740786804305948,
+      "native_reference_mIoU20": 0.5937803499302914,
+      "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+      "execution_segment": "rpr-cihp-shared-20261028T155439603873Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json",
+      "missing_main_score_reason": null
+    },
+    {
+      "model_id": "CPI_R50_CIHP",
+      "execution_status": "INCOMPLETE",
+      "work_status": "PAUSED_NOT_CANCELLED",
+      "expected": 5000,
+      "complete": 3,
+      "failed": 1,
+      "invalid": 0,
+      "not_attempted": 4996,
+      "mIoU_20_including_BG": null,
+      "mIoU_19_foreground": null,
+      "native_reference_mIoU20": null,
+      "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+      "execution_segment": "cpi-r50-manual-continuation-20261028T175036811629Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json",
+      "missing_main_score_reason": "STRICT_COMPLETE_NOT_SATISFIED; paused after recorded failure; successful subset not a full-population score"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "execution_status": "INCOMPLETE",
+      "work_status": "PAUSED_NOT_CANCELLED",
+      "expected": 5000,
+      "complete": 113,
+      "failed": 1,
+      "invalid": 0,
+      "not_attempted": 4886,
+      "mIoU_20_including_BG": null,
+      "mIoU_19_foreground": null,
+      "native_reference_mIoU20": null,
+      "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+      "execution_segment": "cpi-convnext-validation-20261028T182116250459Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/COMPLETION.json",
+      "missing_main_score_reason": "STRICT_COMPLETE_NOT_SATISFIED; paused after recorded failure; successful subset not a full-population score"
+    }
+  ],
+  "per_class": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 0,
+      "class_name": "Background",
+      "IoU": 0.9178438563572696,
+      "GT_pixel_support": 533617773,
+      "predicted_pixel_support": 537075888,
+      "union_pixels": 558279892
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 1,
+      "class_name": "Hat",
+      "IoU": 0.7215297647909951,
+      "GT_pixel_support": 5562258,
+      "predicted_pixel_support": 5550406,
+      "union_pixels": 6455110
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 2,
+      "class_name": "Hair",
+      "IoU": 0.7991868133364806,
+      "GT_pixel_support": 40760850,
+      "predicted_pixel_support": 40613642,
+      "union_pixels": 45228484
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 3,
+      "class_name": "Glove",
+      "IoU": 0.4204846975580075,
+      "GT_pixel_support": 522334,
+      "predicted_pixel_support": 383475,
+      "union_pixels": 637676
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 4,
+      "class_name": "Sunglasses",
+      "IoU": 0.6420914265295183,
+      "GT_pixel_support": 379419,
+      "predicted_pixel_support": 392607,
+      "union_pixels": 470148
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 5,
+      "class_name": "UpperClothes",
+      "IoU": 0.6861270166233505,
+      "GT_pixel_support": 84893554,
+      "predicted_pixel_support": 86241737,
+      "union_pixels": 101496085
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 6,
+      "class_name": "Dress",
+      "IoU": 0.56551648628696,
+      "GT_pixel_support": 17351843,
+      "predicted_pixel_support": 14490850,
+      "union_pixels": 20340056
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 7,
+      "class_name": "Coat",
+      "IoU": 0.6573929801216007,
+      "GT_pixel_support": 63305722,
+      "predicted_pixel_support": 63961126,
+      "union_pixels": 76787370
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 8,
+      "class_name": "Socks",
+      "IoU": 0.37532357467894295,
+      "GT_pixel_support": 1286257,
+      "predicted_pixel_support": 980803,
+      "union_pixels": 1648383
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 9,
+      "class_name": "Pants",
+      "IoU": 0.7496731453440404,
+      "GT_pixel_support": 35769654,
+      "predicted_pixel_support": 35875724,
+      "union_pixels": 40947864
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 10,
+      "class_name": "Torso-skin",
+      "IoU": 0.7586662486994618,
+      "GT_pixel_support": 12306143,
+      "predicted_pixel_support": 12384439,
+      "union_pixels": 14039379
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 11,
+      "class_name": "Scarf",
+      "IoU": 0.4005058274156202,
+      "GT_pixel_support": 1913574,
+      "predicted_pixel_support": 1560644,
+      "union_pixels": 2480688
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 12,
+      "class_name": "Skirt",
+      "IoU": 0.4200494133683852,
+      "GT_pixel_support": 2932691,
+      "predicted_pixel_support": 2901156,
+      "union_pixels": 4108200
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 13,
+      "class_name": "Face",
+      "IoU": 0.8769499984852096,
+      "GT_pixel_support": 37932488,
+      "predicted_pixel_support": 38642800,
+      "union_pixels": 40797724
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 14,
+      "class_name": "Left-arm",
+      "IoU": 0.7271076516993731,
+      "GT_pixel_support": 13247145,
+      "predicted_pixel_support": 12349903,
+      "union_pixels": 14820760
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 15,
+      "class_name": "Right-arm",
+      "IoU": 0.7255567736810538,
+      "GT_pixel_support": 14680267,
+      "predicted_pixel_support": 13539328,
+      "union_pixels": 16353907
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 16,
+      "class_name": "Left-leg",
+      "IoU": 0.6941083991646037,
+      "GT_pixel_support": 3138137,
+      "predicted_pixel_support": 3023464,
+      "union_pixels": 3637076
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 17,
+      "class_name": "Right-leg",
+      "IoU": 0.6945840729042816,
+      "GT_pixel_support": 3102484,
+      "predicted_pixel_support": 2987619,
+      "union_pixels": 3593863
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 18,
+      "class_name": "Left-shoe",
+      "IoU": 0.5759860593243691,
+      "GT_pixel_support": 1966143,
+      "predicted_pixel_support": 1865782,
+      "union_pixels": 2431446
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "class_id": 19,
+      "class_name": "Right-shoe",
+      "IoU": 0.5645443372555399,
+      "GT_pixel_support": 1990288,
+      "predicted_pixel_support": 1837631,
+      "union_pixels": 2446667
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 0,
+      "class_name": "Background",
+      "IoU": 0.9397437202509072,
+      "GT_pixel_support": 533617773,
+      "predicted_pixel_support": 542813889,
+      "union_pixels": 554934990
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 1,
+      "class_name": "Hat",
+      "IoU": 0.7584758777922781,
+      "GT_pixel_support": 5562258,
+      "predicted_pixel_support": 5441134,
+      "union_pixels": 6257346
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 2,
+      "class_name": "Hair",
+      "IoU": 0.8275980771104053,
+      "GT_pixel_support": 40760850,
+      "predicted_pixel_support": 39858436,
+      "union_pixels": 44112153
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 3,
+      "class_name": "Glove",
+      "IoU": 0.4909974795704071,
+      "GT_pixel_support": 522334,
+      "predicted_pixel_support": 449607,
+      "union_pixels": 651873
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 4,
+      "class_name": "Sunglasses",
+      "IoU": 0.6749660957581527,
+      "GT_pixel_support": 379419,
+      "predicted_pixel_support": 366564,
+      "union_pixels": 445372
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 5,
+      "class_name": "UpperClothes",
+      "IoU": 0.7241169053129698,
+      "GT_pixel_support": 84893554,
+      "predicted_pixel_support": 83128028,
+      "union_pixels": 97453706
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 6,
+      "class_name": "Dress",
+      "IoU": 0.6197353254292518,
+      "GT_pixel_support": 17351843,
+      "predicted_pixel_support": 15491859,
+      "union_pixels": 20277203
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 7,
+      "class_name": "Coat",
+      "IoU": 0.6999122665810819,
+      "GT_pixel_support": 63305722,
+      "predicted_pixel_support": 63150964,
+      "union_pixels": 74390125
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 8,
+      "class_name": "Socks",
+      "IoU": 0.4115468017589221,
+      "GT_pixel_support": 1286257,
+      "predicted_pixel_support": 980985,
+      "union_pixels": 1606211
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 9,
+      "class_name": "Pants",
+      "IoU": 0.7858538207594207,
+      "GT_pixel_support": 35769654,
+      "predicted_pixel_support": 35023997,
+      "union_pixels": 39641347
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 10,
+      "class_name": "Torso-skin",
+      "IoU": 0.7662355820766953,
+      "GT_pixel_support": 12306143,
+      "predicted_pixel_support": 11871923,
+      "union_pixels": 13689038
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 11,
+      "class_name": "Scarf",
+      "IoU": 0.46089991784421863,
+      "GT_pixel_support": 1913574,
+      "predicted_pixel_support": 1504140,
+      "union_pixels": 2339458
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 12,
+      "class_name": "Skirt",
+      "IoU": 0.42974229759284294,
+      "GT_pixel_support": 2932691,
+      "predicted_pixel_support": 2723421,
+      "union_pixels": 3956036
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 13,
+      "class_name": "Face",
+      "IoU": 0.8811052603498112,
+      "GT_pixel_support": 37932488,
+      "predicted_pixel_support": 36989348,
+      "union_pixels": 39828625
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 14,
+      "class_name": "Left-arm",
+      "IoU": 0.772849543046021,
+      "GT_pixel_support": 13247145,
+      "predicted_pixel_support": 12950024,
+      "union_pixels": 14776871
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 15,
+      "class_name": "Right-arm",
+      "IoU": 0.7761673953182342,
+      "GT_pixel_support": 14680267,
+      "predicted_pixel_support": 14182645,
+      "union_pixels": 16250108
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 16,
+      "class_name": "Left-leg",
+      "IoU": 0.7035120318693542,
+      "GT_pixel_support": 3138137,
+      "predicted_pixel_support": 3055567,
+      "union_pixels": 3635844
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 17,
+      "class_name": "Right-leg",
+      "IoU": 0.71755206028395,
+      "GT_pixel_support": 3102484,
+      "predicted_pixel_support": 2963599,
+      "union_pixels": 3531819
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 18,
+      "class_name": "Left-shoe",
+      "IoU": 0.5963114762631077,
+      "GT_pixel_support": 1966143,
+      "predicted_pixel_support": 1867490,
+      "union_pixels": 2401557
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "class_id": 19,
+      "class_name": "Right-shoe",
+      "IoU": 0.593721992844295,
+      "GT_pixel_support": 1990288,
+      "predicted_pixel_support": 1845404,
+      "union_pixels": 2406751
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 0,
+      "class_name": "Background",
+      "IoU": 0.9332086776604916,
+      "GT_pixel_support": 533617773,
+      "predicted_pixel_support": 546730730,
+      "union_pixels": 558836982
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 1,
+      "class_name": "Hat",
+      "IoU": 0.7284534503038468,
+      "GT_pixel_support": 5562258,
+      "predicted_pixel_support": 5561740,
+      "union_pixels": 6435810
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 2,
+      "class_name": "Hair",
+      "IoU": 0.8200587897804753,
+      "GT_pixel_support": 40760850,
+      "predicted_pixel_support": 39771557,
+      "union_pixels": 44247146
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 3,
+      "class_name": "Glove",
+      "IoU": 0.4054579470336341,
+      "GT_pixel_support": 522334,
+      "predicted_pixel_support": 322803,
+      "union_pixels": 601325
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 4,
+      "class_name": "Sunglasses",
+      "IoU": 0.652812267962376,
+      "GT_pixel_support": 379419,
+      "predicted_pixel_support": 357370,
+      "union_pixels": 445779
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 5,
+      "class_name": "UpperClothes",
+      "IoU": 0.7125259076927704,
+      "GT_pixel_support": 84893554,
+      "predicted_pixel_support": 81857933,
+      "union_pixels": 97371658
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 6,
+      "class_name": "Dress",
+      "IoU": 0.5952446121355793,
+      "GT_pixel_support": 17351843,
+      "predicted_pixel_support": 16376157,
+      "union_pixels": 21142839
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 7,
+      "class_name": "Coat",
+      "IoU": 0.689009420946274,
+      "GT_pixel_support": 63305722,
+      "predicted_pixel_support": 62394156,
+      "union_pixels": 74422248
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 8,
+      "class_name": "Socks",
+      "IoU": 0.36389546301425046,
+      "GT_pixel_support": 1286257,
+      "predicted_pixel_support": 1016019,
+      "union_pixels": 1688015
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 9,
+      "class_name": "Pants",
+      "IoU": 0.7678127982463248,
+      "GT_pixel_support": 35769654,
+      "predicted_pixel_support": 34614020,
+      "union_pixels": 39813986
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 10,
+      "class_name": "Torso-skin",
+      "IoU": 0.7538884999265149,
+      "GT_pixel_support": 12306143,
+      "predicted_pixel_support": 11537224,
+      "union_pixels": 13594574
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 11,
+      "class_name": "Scarf",
+      "IoU": 0.40287003418594375,
+      "GT_pixel_support": 1913574,
+      "predicted_pixel_support": 1378781,
+      "union_pixels": 2346871
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 12,
+      "class_name": "Skirt",
+      "IoU": 0.4103309866575281,
+      "GT_pixel_support": 2932691,
+      "predicted_pixel_support": 2795955,
+      "union_pixels": 4061916
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 13,
+      "class_name": "Face",
+      "IoU": 0.8742327096652723,
+      "GT_pixel_support": 37932488,
+      "predicted_pixel_support": 36776705,
+      "union_pixels": 39861215
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 14,
+      "class_name": "Left-arm",
+      "IoU": 0.7304559030413481,
+      "GT_pixel_support": 13247145,
+      "predicted_pixel_support": 12549571,
+      "union_pixels": 14907468
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 15,
+      "class_name": "Right-arm",
+      "IoU": 0.7366661666281668,
+      "GT_pixel_support": 14680267,
+      "predicted_pixel_support": 13625212,
+      "union_pixels": 16298745
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 16,
+      "class_name": "Left-leg",
+      "IoU": 0.6397108160210871,
+      "GT_pixel_support": 3138137,
+      "predicted_pixel_support": 2871067,
+      "union_pixels": 3664795
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 17,
+      "class_name": "Right-leg",
+      "IoU": 0.6390594159682419,
+      "GT_pixel_support": 3102484,
+      "predicted_pixel_support": 2877344,
+      "union_pixels": 3648329
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 18,
+      "class_name": "Left-shoe",
+      "IoU": 0.5129117982883068,
+      "GT_pixel_support": 1966143,
+      "predicted_pixel_support": 1627313,
+      "union_pixels": 2375192
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "class_id": 19,
+      "class_name": "Right-shoe",
+      "IoU": 0.5017860391309289,
+      "GT_pixel_support": 1990288,
+      "predicted_pixel_support": 1617367,
+      "union_pixels": 2402243
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 0,
+      "class_name": "Background",
+      "IoU": 0.9173317746388089,
+      "GT_pixel_support": 533617773,
+      "predicted_pixel_support": 545451697,
+      "union_pixels": 562797469
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 1,
+      "class_name": "Hat",
+      "IoU": 0.6565978146462993,
+      "GT_pixel_support": 5562258,
+      "predicted_pixel_support": 5193803,
+      "union_pixels": 6492862
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 2,
+      "class_name": "Hair",
+      "IoU": 0.7770786117373252,
+      "GT_pixel_support": 40760850,
+      "predicted_pixel_support": 39831467,
+      "union_pixels": 45351014
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 3,
+      "class_name": "Glove",
+      "IoU": 0.34535351638141243,
+      "GT_pixel_support": 522334,
+      "predicted_pixel_support": 287067,
+      "union_pixels": 601627
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 4,
+      "class_name": "Sunglasses",
+      "IoU": 0.5249206489155351,
+      "GT_pixel_support": 379419,
+      "predicted_pixel_support": 312407,
+      "union_pixels": 453680
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 5,
+      "class_name": "UpperClothes",
+      "IoU": 0.6672232698060726,
+      "GT_pixel_support": 84893554,
+      "predicted_pixel_support": 87327302,
+      "union_pixels": 103298016
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 6,
+      "class_name": "Dress",
+      "IoU": 0.5478756889707711,
+      "GT_pixel_support": 17351843,
+      "predicted_pixel_support": 14656731,
+      "union_pixels": 20679034
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 7,
+      "class_name": "Coat",
+      "IoU": 0.6419312966136083,
+      "GT_pixel_support": 63305722,
+      "predicted_pixel_support": 61619207,
+      "union_pixels": 76084139
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 8,
+      "class_name": "Socks",
+      "IoU": 0.33104851691739023,
+      "GT_pixel_support": 1286257,
+      "predicted_pixel_support": 880099,
+      "union_pixels": 1627556
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 9,
+      "class_name": "Pants",
+      "IoU": 0.716290708918234,
+      "GT_pixel_support": 35769654,
+      "predicted_pixel_support": 34116032,
+      "union_pixels": 40719026
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 10,
+      "class_name": "Torso-skin",
+      "IoU": 0.705188159020942,
+      "GT_pixel_support": 12306143,
+      "predicted_pixel_support": 11929432,
+      "union_pixels": 14212845
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 11,
+      "class_name": "Scarf",
+      "IoU": 0.3817996954256102,
+      "GT_pixel_support": 1913574,
+      "predicted_pixel_support": 1149688,
+      "union_pixels": 2216864
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 12,
+      "class_name": "Skirt",
+      "IoU": 0.37846073583367357,
+      "GT_pixel_support": 2932691,
+      "predicted_pixel_support": 2330585,
+      "union_pixels": 3818227
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 13,
+      "class_name": "Face",
+      "IoU": 0.8479406785835117,
+      "GT_pixel_support": 37932488,
+      "predicted_pixel_support": 37857687,
+      "union_pixels": 41013316
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 14,
+      "class_name": "Left-arm",
+      "IoU": 0.6579563006653574,
+      "GT_pixel_support": 13247145,
+      "predicted_pixel_support": 11938012,
+      "union_pixels": 15190483
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 15,
+      "class_name": "Right-arm",
+      "IoU": 0.6704777878150509,
+      "GT_pixel_support": 14680267,
+      "predicted_pixel_support": 13259204,
+      "union_pixels": 16725437
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 16,
+      "class_name": "Left-leg",
+      "IoU": 0.5829633644610056,
+      "GT_pixel_support": 3138137,
+      "predicted_pixel_support": 2737861,
+      "union_pixels": 3712024
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 17,
+      "class_name": "Right-leg",
+      "IoU": 0.5958850572780527,
+      "GT_pixel_support": 3102484,
+      "predicted_pixel_support": 2783796,
+      "union_pixels": 3688411
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 18,
+      "class_name": "Left-shoe",
+      "IoU": 0.44567436050769565,
+      "GT_pixel_support": 1966143,
+      "predicted_pixel_support": 1519907,
+      "union_pixels": 2411366
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "class_id": 19,
+      "class_name": "Right-shoe",
+      "IoU": 0.4328287156837546,
+      "GT_pixel_support": 1990288,
+      "predicted_pixel_support": 1477040,
+      "union_pixels": 2419918
+    }
+  ],
+  "person_metrics": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "mask_IoU_threshold": 0.5,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 16906,
+      "FP": 7156,
+      "FN": 614,
+      "Q_numerator": 10766.658593139484,
+      "extent_precision": 0.702601612501039,
+      "extent_recall": 0.9649543378995433,
+      "extent_F1": 0.8131403010918186,
+      "Q_person_sem_GT": 0.6145353078275961
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "mask_IoU_threshold": 0.75,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 15304,
+      "FP": 8758,
+      "FN": 2216,
+      "Q_numerator": 10009.165264714651,
+      "extent_precision": 0.6360236056853129,
+      "extent_recall": 0.8735159817351598,
+      "extent_F1": 0.7360877302679044,
+      "Q_person_sem_GT": 0.5712993872554024
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "mask_IoU_threshold": 0.5,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 16163,
+      "FP": 2119,
+      "FN": 1357,
+      "Q_numerator": 10114.383469955546,
+      "extent_precision": 0.8840936440214419,
+      "extent_recall": 0.9225456621004566,
+      "extent_F1": 0.9029104519300598,
+      "Q_person_sem_GT": 0.5773049925773713
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "mask_IoU_threshold": 0.75,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 15318,
+      "FP": 2964,
+      "FN": 2202,
+      "Q_numerator": 9786.505552299917,
+      "extent_precision": 0.8378733180177224,
+      "extent_recall": 0.8743150684931507,
+      "extent_F1": 0.8557063851181498,
+      "Q_person_sem_GT": 0.5585904995604976
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "mask_IoU_threshold": 0.5,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 15972,
+      "FP": 2176,
+      "FN": 1548,
+      "Q_numerator": 9678.728806165895,
+      "extent_precision": 0.8800969803835134,
+      "extent_recall": 0.9116438356164384,
+      "extent_F1": 0.8955926881238084,
+      "Q_person_sem_GT": 0.5524388587994232
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "mask_IoU_threshold": 0.75,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 14817,
+      "FP": 3331,
+      "FN": 2703,
+      "Q_numerator": 9237.39272588265,
+      "extent_precision": 0.8164536037028873,
+      "extent_recall": 0.8457191780821918,
+      "extent_F1": 0.8308287540652686,
+      "Q_person_sem_GT": 0.5272484432581421
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "mask_IoU_threshold": 0.5,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 16214,
+      "FP": 3351,
+      "FN": 1306,
+      "Q_numerator": 9745.794016768037,
+      "extent_precision": 0.8287247636084846,
+      "extent_recall": 0.9254566210045662,
+      "extent_F1": 0.8744236214102737,
+      "Q_person_sem_GT": 0.5562667817789976
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "mask_IoU_threshold": 0.75,
+      "G_loc": 17520,
+      "G_sem": 17520,
+      "TP": 14470,
+      "FP": 5095,
+      "FN": 3050,
+      "Q_numerator": 9015.41728038884,
+      "extent_precision": 0.7395859953999488,
+      "extent_recall": 0.8259132420091324,
+      "extent_F1": 0.7803694215990292,
+      "Q_person_sem_GT": 0.5145786118943402
+    }
+  ],
+  "showcase_by_stratum": {
+    "people_ge5=1;area_gt187500=1": "0021448",
+    "people_ge5=1;area_gt187500=0": "0019475",
+    "people_ge5=0;area_gt187500=1": "0001538",
+    "people_ge5=0;area_gt187500=0": "0001413"
+  }
+}

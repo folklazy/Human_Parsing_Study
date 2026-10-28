@@ -1,0 +1,241 @@
+{
+  "work_unit": "presentation-four-20261028T184321049969Z",
+  "created_utc": "2026-10-28T18:43:31.117613+00:00",
+  "status": "REPORTING_FOUR_COMPLETE_CPI_PAUSED",
+  "models_complete": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP"
+  ],
+  "sources": [
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/QANet_CIHP_HRNetW48_512x384/METRICS.json",
+      "sha256": "6e51c772cd92dad50f528dd93b761314118857b9c2711fd8906996d266dd535c"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/QANet_CIHP_HRNetW48_512x384/FRAMES.jsonl",
+      "sha256": "3185ae0165e6d0d3fccdc16d4fb8575399fa01176adba553c7137b5ebf54df5c",
+      "unique_complete_IDs": 5000
+    },
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/M2FP_R101_CIHP/METRICS.json",
+      "sha256": "7b1649edf5fb0103443083058a78f3f62b2b012e4a5972448a7bbcba7efdefec"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/M2FP_R101_CIHP/FRAMES.jsonl",
+      "sha256": "2ae5e87c4f8de05fd4ae07be2460918d2bbed0546e1061d4c610bf56bb3e0f19",
+      "unique_complete_IDs": 5000
+    },
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json",
+      "sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/METRICS.json",
+      "sha256": "fd737336e4f835485f1439bc2adf6eed43592145cd20c0576d2cc773af53a855"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/FRAMES.jsonl",
+      "sha256": "12454fe51faa24a353beb4a29131f4ac71912ef55ea15ddacf64cb6b5e171b12",
+      "unique_complete_IDs": 5000
+    },
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json",
+      "sha256": "b03cef16f6209ba1c08cff89c310a4d6ea8031c8647ebb29ec01aa40f4a1751e"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/assembled/validation/RPR_CIHP/METRICS.json",
+      "sha256": "1d968067df7b7d57085b56c484addb2886e1728068dbea548a81b0cbd8789e6f"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/assembled/validation/RPR_CIHP/FRAMES.jsonl",
+      "sha256": "fb4b82b5e1cf525b99cf57a272d0c044854a18ff7890071f96577ff46f8e154d",
+      "unique_complete_IDs": 5000
+    },
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json",
+      "sha256": "59a67be335c1383985bdf57c00af3d950f0a537f061980ec3d9b440eca2a481e"
+    },
+    {
+      "path": "runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/COMPLETION.json",
+      "sha256": "1284c9bb8f7ae4538ae86db80fb215a42b6a673276b3296bc808777feda94769"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP/FRAMES.jsonl",
+      "sha256": "715bb610babac3415b5efe1a656411ae9ce8fcf5ee72775b4182680c5b086a27"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/segments/CPI_R50_CIHP/FRAMES.jsonl",
+      "sha256": "2dce37e01077ec74f7d28a251da180ede24860832d07ab6145dda93fbea254cb"
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP/FRAMES.jsonl",
+      "sha256": "ff9ad605385849849d4b5d5081a9cfd3be2071d1767d43286a6c350c5ef14b2d"
+    }
+  ],
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "metrics_directory": "metrics/presentation-four-20261028T184321049969Z",
+  "raw_gallery": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/presentations/presentation-four-20261028T184321049969Z",
+  "gallery_manifest_sha256": "95b8553b928d348dc82ded1e1be7b18792e911b83a4fc7378184378e4302f5fd",
+  "metric_operations": "Copy exact canonical scalars/support; count ledgers and check algebra; no model inference or pixelwise rescore",
+  "source_script_sha256": "f52730e563cecae390e93dc17624aa620814804e8cfaf7e6099d208ef268ec03",
+  "CPI_attempt_counts": [
+    {
+      "model_id": "CPI_R50_CIHP",
+      "successful_unique_ids": [
+        "0000001",
+        "0000003",
+        "0000004"
+      ],
+      "successful_unique_count": 3,
+      "failed_unique_ids": [
+        "0000018"
+      ],
+      "failed_attempt_count": 2,
+      "total_VAL_attempts": 5,
+      "diagnostic_attempts_excluded": true,
+      "work_status": "PAUSED_NOT_CANCELLED"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "successful_unique_ids": [
+        "0000001",
+        "0000003",
+        "0000004",
+        "0000018",
+        "0000027",
+        "0000038",
+        "0000039",
+        "0000065",
+        "0000084",
+        "0000099",
+        "0000122",
+        "0000136",
+        "0000143",
+        "0000146",
+        "0000219",
+        "0000228",
+        "0000256",
+        "0000266",
+        "0000273",
+        "0000285",
+        "0000293",
+        "0000311",
+        "0000312",
+        "0000315",
+        "0000337",
+        "0000341",
+        "0000357",
+        "0000358",
+        "0000369",
+        "0000372",
+        "0000403",
+        "0000409",
+        "0000411",
+        "0000439",
+        "0000449",
+        "0000454",
+        "0000455",
+        "0000479",
+        "0000516",
+        "0000518",
+        "0000578",
+        "0000586",
+        "0000588",
+        "0000590",
+        "0000601",
+        "0000602",
+        "0000603",
+        "0000609",
+        "0000624",
+        "0000631",
+        "0000637",
+        "0000646",
+        "0000651",
+        "0000652",
+        "0000654",
+        "0000661",
+        "0000672",
+        "0000679",
+        "0000682",
+        "0000683",
+        "0000719",
+        "0000731",
+        "0000738",
+        "0000760",
+        "0000777",
+        "0000793",
+        "0000797",
+        "0000806",
+        "0000808",
+        "0000818",
+        "0000821",
+        "0000822",
+        "0000839",
+        "0000843",
+        "0000858",
+        "0000870",
+        "0000890",
+        "0000891",
+        "0000898",
+        "0000922",
+        "0000926",
+        "0000937",
+        "0000942",
+        "0000947",
+        "0000948",
+        "0000965",
+        "0000987",
+        "0000989",
+        "0001021",
+        "0001028",
+        "0001033",
+        "0001034",
+        "0001037",
+        "0001057",
+        "0001059",
+        "0001061",
+        "0001080",
+        "0001092",
+        "0001094",
+        "0001104",
+        "0001120",
+        "0001133",
+        "0001135",
+        "0001140",
+        "0001141",
+        "0001151",
+        "0001159",
+        "0001160",
+        "0001182",
+        "0001191",
+        "0001195",
+        "0001197",
+        "0001217"
+      ],
+      "successful_unique_count": 113,
+      "failed_unique_ids": [
+        "0001218"
+      ],
+      "failed_attempt_count": 1,
+      "total_VAL_attempts": 114,
+      "diagnostic_attempts_excluded": true,
+      "work_status": "PAUSED_NOT_CANCELLED"
+    }
+  ],
+  "render_source_snapshot": "runs/cihp-native-six-20261028T034103254470Z/presentation-four-20261028T184321049969Z/RENDER_SOURCE_SNAPSHOT.py",
+  "current_report_tool_sha256": "5cf95513372c3376a271ca8326421b8c9b30de3f620f0faacd73b3429df60a79",
+  "post_render_metadata_change": "Added missing_main_score_reason and normalized newly generated report CSV line endings toLF; no metric values or PNG pixels changed. Original render-source snapshot preserved.",
+  "new_model_inference": false,
+  "new_full_rescore": false
+}
