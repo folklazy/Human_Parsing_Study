@@ -1,0 +1,90 @@
+{
+  "status": "INCOMPLETE",
+  "round_id": "cpi-r50-shared-20261028T172951337299Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "model_id": "CPI_R50_CIHP",
+  "expected": 5000,
+  "controller_PID": 162019,
+  "start_utc": "2026-10-28T17:37:01.520635+00:00",
+  "launch_commit": "4c7248ff7166cfe81ec5fe1dfda8cfe77ffe776c",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "resource_policy_sha256": "ed813393385b5207877b438b374d37bf428cbd0819a7e7f3a15713ca6389d906",
+  "segment_plan_sha256": "081b602ac748008bf836f307d03aedd39fcd107d8f9dad8a77fd56a371314619",
+  "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+  "environment": ".venvs/parser-legacy-cu113",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "queue": [
+    "CPI_R50_CIHP"
+  ],
+  "model_retries": 0,
+  "worker_PID": 162023,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-B",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_native_six.json",
+    "--model",
+    "CPI_R50_CIHP",
+    "--phase",
+    "validation",
+    "--output",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP",
+    "--segment-manifest",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/SEGMENT_PLAN.json"
+  ],
+  "worker_exit_code": 1,
+  "end_utc": "2026-10-28T17:37:24.777607+00:00",
+  "complete": 3,
+  "failed": 1,
+  "invalid": 0,
+  "not_attempted": 4996,
+  "assembled_from_verified_artifacts": true,
+  "no_reinference_of_reused_ids": true,
+  "audit_locations": [
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/reuse_audits/0",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/reuse_audits/1",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/final_audit/CPI_R50_CIHP"
+  ],
+  "duplicate_IDs": 0,
+  "missing_IDs": 4997,
+  "worker_terminal_status": "INCOMPLETE",
+  "setup_status": "PASS",
+  "error_reason": "RuntimeError('CUDA out of memory. Tried to allocate 2.46 GiB (GPU 0; 14.56 GiB total capacity; 10.66 GiB already allocated; 46.75 MiB free; 11.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+  "queue_stopped": true,
+  "closure_utc": "2026-10-28T17:37:25.837051+00:00",
+  "closure_Bangkok": "2026-10-29T00:37:25.837247+07:00",
+  "checks": {
+    "hashes_metadata_NPZ_CRC_GT_and_saved_mask_rescore": "PASS",
+    "exact_expected_ID_union": false,
+    "no_duplicate_IDs": true,
+    "source_artifacts_preserved": true
+  },
+  "metrics": {
+    "primary": null,
+    "native_reference_primary": null,
+    "person_metrics": {
+      "0.5": null,
+      "0.75": null
+    },
+    "parser_pipeline_ms_mean": null,
+    "parser_pipeline_ms_P50": null,
+    "parser_pipeline_ms_P95": null,
+    "timing_scope": "Adapter diagnostics, unequal native I/O; no speed ranking",
+    "limitations": [
+      "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+      "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+      "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+      "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export."
+    ]
+  },
+  "raw_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z",
+  "limitations": [
+    "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+    "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+    "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+    "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export.",
+    "Shared GPU quality-only execution; latency/free VRAM/other workloads can vary. No timing ranking."
+  ],
+  "new_other_model_jobs": 0
+}

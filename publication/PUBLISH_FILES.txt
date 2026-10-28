@@ -33,6 +33,8 @@ Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/NATIVE_RE
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PERSON_METRICS.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/SUMMARY.csv
+Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/PER_CLASS.csv
+Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/SUMMARY.csv
 Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md
@@ -71,6 +73,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/HISTORICAL_LABEL_PROVENANCE.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/OVERVIEW_CONSISTENCY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/CONTROL_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/CONTROL_DIFF.patch
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/ENVIRONMENT_VERIFICATION.json
@@ -638,6 +641,7 @@ publication/CIHP_CONTINUATION_LAUNCH_20261028.json
 publication/CIHP_CONTROLLED_CONTINUATION_READY_20261028.json
 publication/CIHP_INTAKE_20261028T030159730335Z.json
 publication/CIHP_NATIVE_COMPLETION_20261028T034103254470Z.json
+publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json
 publication/CIHP_NATIVE_COMPLETION_rpr-cihp-shared-20261028T155439603873Z.json
 publication/CIHP_NATIVE_REPORTER_CONTINUATION_20261028.json
 publication/CIHP_NATIVE_REPORT_PREPARATION_20261028.json

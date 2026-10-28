@@ -1,0 +1,64 @@
+{
+  "work_unit": "cpi-r50-shared-20261028T172951337299Z",
+  "base_commit": "4c7248ff7166cfe81ec5fe1dfda8cfe77ffe776c",
+  "scope": "CPI_R50_CIHP-only shared-GPU quality round; compact summary/report/provenance, no masks/images/weights",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json",
+      "sha256": "690fd41e0977db582aef7de47defb26471347861fac5ea327aca5c4dda5a9b06",
+      "before_sha256": null,
+      "bytes": 5450
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/SUMMARY.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/SUMMARY.csv",
+      "sha256": "f01f11f23d03906ef70421f64597ef18848dcd778a190e7a2f6f20565143c783",
+      "before_sha256": null,
+      "bytes": 185
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/PER_CLASS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-r50-shared-20261028T172951337299Z/PER_CLASS.csv",
+      "sha256": "523d996ea1186806b07bbe18038736a92a3320febcc0658fe20846a4f7c003fe",
+      "before_sha256": null,
+      "bytes": 454
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "sha256": "4f7688f7717e1beb849b41abbe118a56d1750bb626329b6e461795661e564575",
+      "before_sha256": "f331a7555944c7c5c295e0b108500f96bad9d5655f773426ca07e823cc13837c",
+      "bytes": 5676
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "sha256": "a33d5503d9893da3c37225e82d6f7913ae5574683144a0a9de372ddf031aed4f",
+      "before_sha256": "7127f41318addc2aa5225990024d6145f94a99288f17bc0a89385600b0dca37c",
+      "bytes": 2193
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "9ba323eeebfbbb8246e08dca30b7a11513909e7da8960e2f8b0d6a1451fdbb3b",
+      "before_sha256": "5e5457659509c44ce77cf4416204436c5ae837ace4e418e17393ccb771014da1",
+      "bytes": 31493
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "3abed23186bd1ecfd92a43be79978ea21290bcf9df27fc3bb99db56049fbbeb6",
+      "before_sha256": "ac196a14b89d22fc20c602c6dbeafe90fa22a6dea7580f561fbc3aabd7fe472e",
+      "bytes": 524
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "e705eda248600a3d340d897d49b4dfb86012b50bd2fa1743999e8f3a0294382e",
+      "before_sha256": "3619060de3eb17ce7dc3c6821392a5738ccd41e3159fcb0bf8eb19e0053c79dc",
+      "bytes": 27901
+    }
+  ],
+  "launch_source_unchanged": true
+}
