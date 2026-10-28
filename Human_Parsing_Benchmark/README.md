@@ -47,3 +47,7 @@ Git เก็บ source/tests/configs/manifests/provenance/reports และ CSV
 YOLO26x-Seg เป็น frozen baseline ที่เลือกแล้ว ไม่เปิดเลือกใหม่ ผล CPI กลุ่มเดิมคง `FINISHED_WITH_INCOMPLETE_SYSTEMS`/null ตามจริง และไม่ใช้เป็นคะแนนของ batch CIHP native ใหม่นี้
 
 ข้อเสนอ CCIHP เจ็ด checkpoints/สิบ configurations และเอกสาร Prompt A เดิมยังอ่านย้อนหลังได้ใน [protocol review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md), [legacy references](docs/LEGACY_REFERENCES.md) และ Git history แต่ไม่ใช่ launch scope ปัจจุบัน การเปลี่ยนแผนไม่แก้ frozen results/GT และไม่อ้างว่ารู้ผลใหม่ก่อนเริ่มรัน
+
+## Controlled continuation — current operational pointer
+
+The original batch was interrupted; original LAUNCH/RUN RUNNING labels are preserved stale records, not liveness checks. Read [STATUS](STATUS.md) and [continuation/correction report](reports/CIHP_CONTROLLED_CONTINUATION.md). The continuation uses verified original packets plus disjoint fresh segments; no successful image is re-inferred. Its separate state lives under the parent artifact root's `continuations/` directory. No matrix/Sapiens/color run starts automatically.

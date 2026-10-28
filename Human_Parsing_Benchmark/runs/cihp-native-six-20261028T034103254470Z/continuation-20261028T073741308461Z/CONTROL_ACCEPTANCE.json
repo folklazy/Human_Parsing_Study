@@ -1,0 +1,27 @@
+{
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "frozen_scientific_source_bindings_unchanged": true,
+  "new_control_source_sha256": {
+    "reconcile_cihp_continuation": "14b32669647e454cf291bb89ca64965713ef539b16da4b61bd21423b5b700a66",
+    "run_cihp_segment": "75b6e8963846f0a7a8bb8ee507c4da91fb336490dcf346e3198c3833b932b842",
+    "continue_cihp_batch": "13e76bf691ff7927852722df781acd56acc50b05dcbb0742e4dc086e181b03fe"
+  },
+  "CPU_acceptance": {
+    "tests": 3,
+    "stage0_environment": "PASS",
+    "actual_legacy_environment": "PASS",
+    "actual_forward_not_run": true
+  },
+  "assembly_acceptance": {
+    "scope": "Actual verified QANet packets split2500+2500; no inference. CPU assembly acceptance, no model ranking.",
+    "complete_union_count": 5000,
+    "global_confusion_and_semantic_scores_equal_original": true,
+    "coverage_score_max_absolute_roundoff": 1.887379141862766e-15,
+    "roundoff_tolerance": 1e-12,
+    "missing2500_main_score_null": true,
+    "duplicate_fragment_rejected": true,
+    "source_prediction_files_changed": false
+  },
+  "scope": "Control/aggregation tests only; no model smoke, protocol alteration or partial VAL ranking",
+  "final_prelaunch_verification_utc": "2026-10-28T08:00:34.131304+00:00"
+}

@@ -1,0 +1,45 @@
+{
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "continuation_id": "continuation-20261028T073741308461Z",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "reconciliation_sha256": "d1e99596ce4e42b56e9d1dcbc075f6c4d8f7b3125eae842bef6ba19cde3343ec",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "reused": 5000,
+      "new_jobs": 0,
+      "plan_sha256": "eded74c29c18b3a82b90c9c680ef32c55b2681b5742d09eb79fce3bdd66447fc"
+    },
+    "M2FP_R101_CIHP": {
+      "reused": 5000,
+      "new_jobs": 0,
+      "plan_sha256": "72e9e27f7b9936e20d83ed0016be5ca37702253f22b4a2dbdcb33082473c5a52"
+    },
+    "D2FP_R101_CIHP": {
+      "reused": 1810,
+      "new_jobs": 3190,
+      "plan_sha256": "0461a7b39408de4e4ddb199ccb5e6273a0d104ef7df8d49241bbd9e5fcfb2a47"
+    },
+    "RPR_CIHP": {
+      "reused": 0,
+      "new_jobs": 5000,
+      "plan_sha256": "28b9059af4a1ff18d10fa353f987ceed978d39afe1874b9c801ecf320a2969c4"
+    },
+    "CPI_R50_CIHP": {
+      "reused": 0,
+      "new_jobs": 5000,
+      "plan_sha256": "59e21aa6e4483ca285ea545d7e806c6e537ab65771cce18dd0c0f55c15182e4f"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "reused": 0,
+      "new_jobs": 5000,
+      "plan_sha256": "5cbdf21235d3f29e8667feb9781974aec3a129fb3d47c970929dbf47f01a68a9"
+    }
+  },
+  "limitations": [
+    "Primary results are YOLO ROI/association pipelines on native CIHP labels, not an official native-parser benchmark for all models.",
+    "Timing is adapter diagnostics with unequal I/O boundaries; not clean parser-only or end-to-end speed ranking. CPI native file reads/writes are timed; global semantic composition/scoring is outside the timer.",
+    "Historical RPR/CPI TRAIN inference fingerprints repeat across models; never use them alone as cache identity. Reuse here is exclusively hash-validated VAL packets with current model/checkpoint/input/source/config bindings.",
+    "Artifacts support hard-label remapping under stored ownership, not every probability/native-confidence evaluation. M2FP/D2FP overlap arbitration precedes export."
+  ],
+  "original_records_modified": false
+}

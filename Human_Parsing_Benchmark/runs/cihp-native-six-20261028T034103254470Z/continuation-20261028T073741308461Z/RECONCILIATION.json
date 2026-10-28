@@ -1,0 +1,63 @@
+{
+  "parent_run": "cihp-native-six-20261028T034103254470Z",
+  "config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "verified_count": 5000,
+      "source_ledger_sha256": "3185ae0165e6d0d3fccdc16d4fb8575399fa01176adba553c7137b5ebf54df5c",
+      "verified_ledger_sha256": "7aa691b99eb29d514857704770cfd38a2127c1de1df5d20125ec84cc6acc0d2a",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384",
+      "completed_utc": "2026-10-28T07:44:55.982491+00:00",
+      "new_inference": false
+    },
+    "M2FP_R101_CIHP": {
+      "model_id": "M2FP_R101_CIHP",
+      "verified_count": 5000,
+      "source_ledger_sha256": "2ae5e87c4f8de05fd4ae07be2460918d2bbed0546e1061d4c610bf56bb3e0f19",
+      "verified_ledger_sha256": "9de87a63704ffffd429f19aa167072f3d6fa3e28119a97db40314f7aea347def",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP",
+      "completed_utc": "2026-10-28T07:54:32.999134+00:00",
+      "new_inference": false
+    },
+    "D2FP_R101_CIHP": {
+      "model_id": "D2FP_R101_CIHP",
+      "verified_count": 1810,
+      "source_ledger_sha256": "4c60aef77fd98252aabc0c6f0b1b27b4d851689728e7b92f6ed00eff8474d7db",
+      "verified_ledger_sha256": "3adfbdafb55f70672c56813730d5d1aec9dffa1563bdad3335d9eaa9743b8648",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/D2FP_R101_CIHP",
+      "completed_utc": "2026-10-28T07:58:00.829274+00:00",
+      "new_inference": false
+    },
+    "RPR_CIHP": {
+      "model_id": "RPR_CIHP",
+      "verified_count": 0,
+      "source_ledger_sha256": null,
+      "verified_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/RPR_CIHP",
+      "completed_utc": "2026-10-28T07:58:00.838310+00:00",
+      "new_inference": false
+    },
+    "CPI_R50_CIHP": {
+      "model_id": "CPI_R50_CIHP",
+      "verified_count": 0,
+      "source_ledger_sha256": null,
+      "verified_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/CPI_R50_CIHP",
+      "completed_utc": "2026-10-28T07:58:00.844126+00:00",
+      "new_inference": false
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "verified_count": 0,
+      "source_ledger_sha256": null,
+      "verified_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/CPI_ConvNeXtB_CIHP",
+      "completed_utc": "2026-10-28T07:58:00.850608+00:00",
+      "new_inference": false
+    }
+  },
+  "status": "VERIFIED",
+  "cause": "UNKNOWN; no model/OOM traceback; original controller/worker disappeared; monitor detected interruption",
+  "new_inference": false
+}

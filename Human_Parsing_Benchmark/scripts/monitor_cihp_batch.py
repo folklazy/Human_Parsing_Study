@@ -32,7 +32,7 @@ def publish(out,unit,files):
  return {'status':'SYNCED' if sent.returncode==0 and rh==commit else 'PENDING_SYNC','commit':commit,'remote_commit':rh,'push_exit':sent.returncode,'push_diagnostic':sent.stderr[-1200:]}
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--run-root',required=True);parser.add_argument('--expected-status-sha256',required=True);parser.add_argument('--expected-work-log-sha256',required=True);parser.add_argument('--health-log',default='GPU_HEALTH.jsonl');args=parser.parse_args();out=Path(args.run_root).resolve();unit=out.name
+ parser=argparse.ArgumentParser();parser.add_argument('--run-root',required=True);parser.add_argument('--expected-status-sha256',required=True);parser.add_argument('--expected-work-log-sha256',required=True);parser.add_argument('--health-log',default='GPU_HEALTH.jsonl');args=parser.parse_args();out=Path(args.run_root).resolve();unit=json.loads((out/'FROZEN_CONFIG.json').read_text())['run_id']
  if Path(args.health_log).name!=args.health_log:raise ValueError('Health-log basename required')
  with (out/args.health_log).open('x') as monitor:
   while True:
@@ -60,7 +60,7 @@ STRICT_COMPLETE: main scores remain null for incomplete systems; their failure/p
 
 Fixed 16-image original-grid comparisons are external under the run artifact root, `QUALITATIVE/index.html`. See completion for hashes and location. Cached YOLO means end-to-end FPS was not measured; parser timing/VRAM scopes remain explicit.
 
-Next: review terminal results/failures and native CIHP-to-Sapiens semantic matrix before any Sapiens execution. No Ninja, color, training or CCTV processing was started. Old YOLO/CPI results and source GT remain unchanged.
+Next: review terminal results/failures and continuation evidence. Matrix/Sapiens/color execution is not started by this continuation. No Ninja, training or CCTV processing was started. Old YOLO/CPI results and source GT remain unchanged.
 ''');files.append('STATUS.md')
  receipt=publish(out,unit,files);(out/'COMPLETION_PUBLICATION.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt),flush=True)
 if __name__=='__main__':main()
