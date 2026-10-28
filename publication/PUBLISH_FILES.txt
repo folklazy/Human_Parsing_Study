@@ -31,6 +31,8 @@ Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/NATIVE_RE
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PERSON_METRICS.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/SUMMARY.csv
+Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/PER_CLASS.csv
+Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/SUMMARY.csv
 Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md
 Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv
 Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json
@@ -65,6 +67,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/QANet_CIHP_HRNetW48_512x384.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/segment_plans/RPR_CIHP.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/ENVIRONMENT_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/LAUNCH_VERIFICATION.json
@@ -619,6 +622,7 @@ publication/CIHP_CONTINUATION_LAUNCH_20261028.json
 publication/CIHP_CONTROLLED_CONTINUATION_READY_20261028.json
 publication/CIHP_INTAKE_20261028T030159730335Z.json
 publication/CIHP_NATIVE_COMPLETION_20261028T034103254470Z.json
+publication/CIHP_NATIVE_COMPLETION_rpr-cihp-shared-20261028T155439603873Z.json
 publication/CIHP_NATIVE_REPORTER_CONTINUATION_20261028.json
 publication/CIHP_NATIVE_REPORT_PREPARATION_20261028.json
 publication/CIHP_SIX_EXECUTION_STARTED_20261028T034103254470Z.json

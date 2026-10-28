@@ -127,3 +127,7 @@ Actual launchcommitec3731211baf6520ac4c8fc567ef7eed8825ed19; controllerPID145516
 ## 2026-10-28T23:28:27.225630+07:00 — rpr-cihp-shared-20261028T155439603873Z: read-only progress viewer
 
 User asks for visible progress instead of repeated chat checks. Added stdlib-only rpr_progress.py with one-shot/JSON/optional5s terminal watch, separate inference/validation phases, counts/latest-image and PID/cmdline liveness. Stale RUNNING records show interruption rather than asserting a live worker. Watch exits on terminal/interruption; Ctrl+C affects only viewer. No model/GPU access, daemon, inference or scientific source/config change. Two targeted CPU lifecycle/stale-PID fixtures PASS; actual running status rendered successfully. Updated README/STATUS usage and publication guards only for these owned doc changes, preserving automatic terminal-report sync. Existing worker/controller continue unchanged; no CPI/other-model queue.
+
+## 2026-10-28T23:52:39.754400+07:00 — rpr-cihp-shared-20261028T155439603873Z: RPR-only terminal
+
+StatusCOMPLETE, complete5000/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no CPI/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.

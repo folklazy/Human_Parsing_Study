@@ -1,0 +1,2 @@
+status,expected,complete,failed,invalid,not_attempted,duplicate_IDs,missing_IDs,model_id,mIoU_20,mIoU_FG19,timing_rank_eligible
+COMPLETE,5000,5000,0,0,0,0,0,RPR_CIHP,0.5912413351410055,0.5740786804305948,False
