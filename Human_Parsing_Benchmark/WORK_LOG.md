@@ -155,3 +155,7 @@ Ready source commit4c7248ff7166cfe81ec5fe1dfda8cfe77ffe776c pushed/remote verifi
 ## 2026-10-29T00:51:33.391140+07:00 — cpi-r50-manual-continuation-20261028T175036811629Z: explicitly ordered manual CPI R50 continuation
 
 User orders run rather than another permission request. Original scientific hashes unchanged, no CPI process active; T4 free13173MiB/external1736MiB permitted. Reuse3prior committed packets after identity/hash audit validation;4997pending including one recordedOOM retry. Prior failed-attempt ledger immutable and copied to ATTEMPT_HISTORY; success-only aggregation view explicitly named. Cumulative oldwallclock21.020694s and retainedbytes charged. Exactly one new segment, no automatic retry/fallback/othermodels/settings changes. Next detached launch, firstpacket/terminalcheck; no score analysis.
+
+## 2026-10-29T00:52:07.602801+07:00 — cpi-r50-manual-continuation-20261028T175036811629Z: CPI R50-only terminal
+
+StatusINCOMPLETE, complete3/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no ConvNeXt/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.

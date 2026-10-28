@@ -1,6 +1,6 @@
 {
   "kind": "DERIVED_NAVIGATION_OVERVIEW_NOT_NEW_EXPERIMENT",
-  "updated_Bangkok": "2026-10-29T00:37:25.842179+07:00",
+  "updated_Bangkok": "2026-10-29T00:52:07.606744+07:00",
   "parent_run_id": "cihp-native-six-20261028T034103254470Z",
   "complete_models": 4,
   "cohort_model_count": 6,
@@ -12,7 +12,7 @@
   "frozen_scientific_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
   "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
   "CSV": "metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
-  "CSV_sha256": "a33d5503d9893da3c37225e82d6f7913ae5574683144a0a9de372ddf031aed4f",
+  "CSV_sha256": "be48c9382214e2ddb01791473ad247965459e7319bf9596ca1bbdc0f9a4551b4",
   "models": [
     {
       "model_id": "QANet_CIHP_HRNetW48_512x384",
@@ -89,9 +89,9 @@
       "mIoU_20_including_BG": null,
       "mIoU_19_foreground": null,
       "resource_policy": "SHARED_GPU_QUALITY_ONLY",
-      "execution_segment_or_record": "cpi-r50-shared-20261028T172951337299Z",
-      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/COMPLETION.json",
-      "canonical_source_sha256": "690fd41e0977db582aef7de47defb26471347861fac5ea327aca5c4dda5a9b06",
+      "execution_segment_or_record": "cpi-r50-manual-continuation-20261028T175036811629Z",
+      "canonical_source": "runs/cihp-native-six-20261028T034103254470Z/cpi-r50-manual-continuation-20261028T175036811629Z/COMPLETION.json",
+      "canonical_source_sha256": "59a67be335c1383985bdf57c00af3d950f0a537f061980ec3d9b440eca2a481e",
       "timing_rank_eligible": false
     },
     {
