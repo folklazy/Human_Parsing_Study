@@ -5,7 +5,7 @@
   "authority": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
   "authority_sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
   "config": "configs/cihp_native_six.json",
-  "config_sha256": "8c51783ab2a4633ab4a5a833a5c4b8132719fa48558b02e8b984d2efb2bb243e",
+  "config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
   "population": "manifests/CIHP_NATIVE_VALIDATION.json",
   "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
   "validation_count": 5000,

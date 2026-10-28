@@ -70,8 +70,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
-      "bytes": 14530,
-      "sha256": "8c51783ab2a4633ab4a5a833a5c4b8132719fa48558b02e8b984d2efb2bb243e"
+      "bytes": 14536,
+      "sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24"
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
@@ -170,8 +170,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/registry/CIHP_NATIVE_ROSTER.csv",
-      "bytes": 4025,
-      "sha256": "dfe25ca544a4135bb90bc619a664cef27b05150cdf75b59f8c484e29c237f701"
+      "bytes": 4031,
+      "sha256": "f1d16cba8415e53ed2d3eca532c522c5518dbbc6250b69351faf5ba377e65913"
     },
     {
       "path": "Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv",
@@ -211,7 +211,7 @@
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json",
       "bytes": 9061,
-      "sha256": "d1a606b2bd06b33fb49b968f9f2c66a9a62cda84b9e3bfe7c1c906f65b44aa35"
+      "sha256": "9f125b83b237ec4e453ec65e77e026ee3ea2b0cd1987a3c7d1f1a275a7b86a68"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
@@ -2877,6 +2877,11 @@
       "path": "publication/CIHP_INTAKE_20261028T030159730335Z.json",
       "bytes": 3146,
       "sha256": "9c2d0ba6c63782e0025dfec9d1886b4116da7e135fbe4e1dcf33ed787f9d076c"
+    },
+    {
+      "path": "publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json",
+      "bytes": 881,
+      "sha256": "1688a6a2ce819c5194855a4da0a6c5f66da27911fb9146f740ebd805fa24f2ab"
     },
     {
       "path": "publication/CIHP_SIX_READINESS_20261028T034103254470Z.json",

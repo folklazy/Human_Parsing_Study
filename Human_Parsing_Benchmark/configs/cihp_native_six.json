@@ -38,7 +38,7 @@
       "native_reference": false,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "M2FP_R101_CIHP": {
       "model_id": "M2FP_R101_CIHP",
@@ -55,7 +55,7 @@
       "native_reference": true,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "D2FP_R101_CIHP": {
       "model_id": "D2FP_R101_CIHP",
@@ -72,7 +72,7 @@
       "native_reference": true,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "RPR_CIHP": {
       "model_id": "RPR_CIHP",
@@ -89,7 +89,7 @@
       "native_reference": true,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "CPI_R50_CIHP": {
       "model_id": "CPI_R50_CIHP",
@@ -106,7 +106,7 @@
       "native_reference": true,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "CPI_ConvNeXtB_CIHP": {
       "model_id": "CPI_ConvNeXtB_CIHP",
@@ -123,7 +123,7 @@
       "native_reference": true,
       "phase": "CIHP_SIX",
       "native_semantic_classes": 20,
-      "current_status": "BOUND_NATIVE_IDENTITY_READINESS_PENDING"
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE"
     },
     "Sapiens2_0.4b": {
       "model_id": "Sapiens2_0.4b",

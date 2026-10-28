@@ -1,0 +1,21 @@
+{
+  "base": "a12fff7d58e5b4cc7f54d3d2e222bddedd0d8234",
+  "scope": "PreVAL metadata-state alignment only; no model parameters/scoring changes",
+  "config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
+      "sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/registry/CIHP_NATIVE_ROSTER.csv",
+      "sha256": "f1d16cba8415e53ed2d3eca532c522c5518dbbc6250b69351faf5ba377e65913"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json",
+      "sha256": "9f125b83b237ec4e453ec65e77e026ee3ea2b0cd1987a3c7d1f1a275a7b86a68"
+    }
+  ],
+  "authority": "Explicit user nativeCIHP firstsix whenready",
+  "benchmark_started": false
+}
