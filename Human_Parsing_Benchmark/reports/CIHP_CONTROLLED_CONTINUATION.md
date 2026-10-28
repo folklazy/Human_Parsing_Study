@@ -47,3 +47,7 @@ Next: finish reconciliation → exact segment manifest/dry plan → source/confi
 Three CPU control cases pass in both stage0 and actual legacy environments. Real QANet2500+2500 aggregation equals original global scores; person roundoff1.887e-15 (<1e-12), missing-fragment main score null, duplicate fragment rejected. [Acceptance](../runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/CONTROL_ACCEPTANCE.json). No new inference performed during reconciliation.
 
 Status at this closure: **CONTINUATION_READY_PRELAUNCH**, not a completed batch. Original model/input/preprocessing/ownership/scorer/config bytes preserved. New control-code snapshot is committed before continuation launch.
+
+## Actual launch — 2026-10-28T08:05:28.487293+00:00
+
+**CONTROLLED_CONTINUATION_RUNNING**. Actual continuation commit `e51464da35327811ee49453649394edbdd508872`, controller PID70184, D2 worker PID70200. First new VAL image0016688 committed with verified NPZ/metadata/fingerprint and no overlap with original1810 D2 IDs. No QANet/M2FP worker was launched. [Launch evidence](../runs/cihp-native-six-20261028T034103254470Z/continuation-20261028T073741308461Z/LAUNCH_VERIFICATION.json). The benchmark is still incomplete; no headline score/ranking from partial frames. Original frozen config and source identities verified unchanged again after first new output.

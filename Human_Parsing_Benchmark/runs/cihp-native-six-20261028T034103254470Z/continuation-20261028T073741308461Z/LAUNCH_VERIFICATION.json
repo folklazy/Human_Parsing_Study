@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-28T08:05:28.487293+00:00",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "continuation_id": "continuation-20261028T073741308461Z",
+  "actual_continuation_launch_commit": "e51464da35327811ee49453649394edbdd508872",
+  "original_launch_commit": "5e8f36ae2a249295c6a1b424b066b010449da048",
+  "controller_PID": 70184,
+  "D2_worker_PID": 70200,
+  "first_new_VAL_ID": "0016688",
+  "verified_new_completed_at_observation": 55,
+  "overlap_with_original_verified_D2_IDs": 0,
+  "first_NPZ_metadata_fingerprint_bindings": "PASS",
+  "frozen_config_source_unchanged": true,
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "reused_original_packets": 11810,
+  "new_planned_jobs": 18190,
+  "segment_parent_linked": true,
+  "new_QANet_M2FP_inference_jobs": 0,
+  "original_stale_LAUNCH_RUN_overwritten": false,
+  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z"
+}
