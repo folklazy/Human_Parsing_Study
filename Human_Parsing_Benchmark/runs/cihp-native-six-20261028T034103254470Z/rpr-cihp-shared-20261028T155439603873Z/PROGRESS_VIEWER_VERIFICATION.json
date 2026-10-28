@@ -1,0 +1,35 @@
+{
+  "utc_Bangkok": "2026-10-28T23:28:27.225630+07:00",
+  "script_sha256": "45a9f4590852910a9f9a3eed35bf7c345d10ec764050314c89ee86fdb6d582ef",
+  "new_tests_executed": 2,
+  "checks": [
+    "INFERENCE vs POSTFLIGHT vs terminal are distinct",
+    "stale RUNNING with dead PIDs becomes INTERRUPTED"
+  ],
+  "actual_snapshot": {
+    "time_Bangkok": "2026-10-28T23:28:27+07:00",
+    "round_id": "rpr-cihp-shared-20261028T155439603873Z",
+    "phase": "INFERENCE",
+    "controller_recorded_status": "RUNNING",
+    "inference_complete": 3256,
+    "expected": 5000,
+    "inference_percent": 65.1,
+    "remaining_inference": 1744,
+    "failed": 0,
+    "invalid": 0,
+    "artifact_packets_verified": 0,
+    "controller_PID": 145516,
+    "controller_alive": true,
+    "worker_PID": 145530,
+    "worker_alive": true,
+    "last_image_ID": "0030026",
+    "last_frame_end_utc": "2026-10-28T16:28:26.743759+00:00",
+    "terminal": false,
+    "queue_stopped": false,
+    "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+    "raw_root": "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z",
+    "note": "100% inference is not round completion; wait for artifact validation and terminal COMPLETE. No scores read, no new inference or GPU queries."
+  },
+  "scientific_worker_config_modified": false,
+  "new_inference_jobs": 0
+}

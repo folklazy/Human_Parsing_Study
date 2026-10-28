@@ -68,6 +68,7 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-pre
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/CONTROL_DIFF.patch
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/ENVIRONMENT_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/LAUNCH_VERIFICATION.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/PROGRESS_VIEWER_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
@@ -83,6 +84,7 @@ Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py
 Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py
 Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py
 Human_Parsing_Benchmark/scripts/report_cihp_batch.py
+Human_Parsing_Benchmark/scripts/rpr_progress.py
 Human_Parsing_Benchmark/scripts/run_cihp_segment.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
 Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
@@ -94,6 +96,7 @@ Human_Parsing_Benchmark/src/cihp_benchmark/data.py
 Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py
 Human_Parsing_Benchmark/tests/test_cihp_continuation.py
 Human_Parsing_Benchmark/tests/test_cihp_native.py
+Human_Parsing_Benchmark/tests/test_rpr_progress.py
 Human_Parsing_Benchmark/tests/test_rpr_shared_round.py
 LICENSE.md
 PRESENTATION_SUMMARY_TH.md
@@ -642,6 +645,7 @@ publication/RELEASE_VALIDATION.json
 publication/REPOSITORY_CREATION.json
 publication/REPOSITORY_VALIDATION.json
 publication/RPR_CIHP_PREFLIGHT_BLOCKED_20261028.json
+publication/RPR_PROGRESS_VIEWER_20261028.json
 publication/RPR_SHARED_QUALITY_LAUNCH_20261028.json
 publication/RPR_SHARED_QUALITY_READY_20261028.json
 publication/SOURCE_COPY_MANIFEST.json

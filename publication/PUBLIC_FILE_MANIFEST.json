@@ -55,18 +55,18 @@
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 8512,
-      "sha256": "0197dd29b24cfe07ee8d02ffa0981536ba9a04f35b3ec6ad6ef9eedcc45b2a58"
+      "bytes": 9710,
+      "sha256": "7aa9f77160784f838e312a784c8704db7b256d81cbfb7eefb081463c066b1ae5"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 1994,
-      "sha256": "9953f27e72425841772cd023930fae2bef4eee4436ea65929acf209b28b34fa9"
+      "bytes": 2560,
+      "sha256": "0e14aca90af3a0015bf284c05faa6b69a17d8923090b459e3df5444327f4127d"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 23458,
-      "sha256": "32303a0e20de713f85e8f620107d9f28a4cff7692975883ed377bf3c68d30499"
+      "bytes": 24310,
+      "sha256": "c6ff9c8f9181ca2c1dbf068c285ceaeb805d31cb1f23a2cfe5b9212be05354ab"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -354,6 +354,11 @@
       "sha256": "58784a850560f87968fa5d2e0ae9b0f5a06c5447045ee45c3aa1790e85dfffef"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/PROGRESS_VIEWER_VERIFICATION.json",
+      "bytes": 1420,
+      "sha256": "9dac3982b9b37d09d2baf3d6efc13384d247fba5389bad8f9c9da00c91ca144e"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json",
       "bytes": 1139,
       "sha256": "6b623887957e7b28addfeb3e4005847875067d90f035c03882ab499c037c3177"
@@ -429,6 +434,11 @@
       "sha256": "6f233e956faa99f8fc3f1b3f56ac53fcd833b06ee43bdd03ab6fca1e17ca362d"
     },
     {
+      "path": "Human_Parsing_Benchmark/scripts/rpr_progress.py",
+      "bytes": 5514,
+      "sha256": "45a9f4590852910a9f9a3eed35bf7c345d10ec764050314c89ee86fdb6d582ef"
+    },
+    {
       "path": "Human_Parsing_Benchmark/scripts/run_cihp_segment.py",
       "bytes": 4202,
       "sha256": "75b6e8963846f0a7a8bb8ee507c4da91fb336490dcf346e3198c3833b932b842"
@@ -482,6 +492,11 @@
       "path": "Human_Parsing_Benchmark/tests/test_cihp_native.py",
       "bytes": 2909,
       "sha256": "b25d43a3ebc907b7f3367206e9067486c2769c544d4eb415a2a4d1ec1501f6e9"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_rpr_progress.py",
+      "bytes": 1912,
+      "sha256": "32887a37f82ff120be53aaede5ef9964ae2be95a2cee6e8a656bee53d632ea2e"
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_rpr_shared_round.py",
@@ -3214,6 +3229,11 @@
       "sha256": "a74827b8aef4b3b7847417a3801ff4a9b963a07ed9f8f4b040140e64bb5beaf6"
     },
     {
+      "path": "publication/RPR_PROGRESS_VIEWER_20261028.json",
+      "bytes": 1744,
+      "sha256": "4157913de88cc3332a1d37b6ae4d56882c04360815ff8deb756370180797a414"
+    },
+    {
       "path": "publication/RPR_SHARED_QUALITY_LAUNCH_20261028.json",
       "bytes": 1358,
       "sha256": "7af7d756a6c1bdc0e9d6493f3af36ec1d63adab03850bfb466dd53a7db005208"
@@ -4644,6 +4664,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T16:02:28.023472+00:00",
+  "updated_utc": "2026-10-28T16:29:28.918551+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

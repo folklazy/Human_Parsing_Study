@@ -53,3 +53,13 @@ YOLO26x-Seg เป็น frozen baseline ที่เลือกแล้ว �
 ## Controlled continuation — current operational pointer
 
 The original batch was interrupted; original LAUNCH/RUN RUNNING labels are preserved stale records, not liveness checks. Read [STATUS](STATUS.md) and [continuation/correction report](reports/CIHP_CONTROLLED_CONTINUATION.md). The continuation uses verified original packets plus disjoint fresh segments; no successful image is re-inferred. Its separate state lives under the parent artifact root's `continuations/` directory. No matrix/Sapiens/color run starts automatically.
+
+## ดู progress สดโดยไม่ต้องถามแชท
+
+จาก workspace root ใช้:
+
+```bash
+python3 Human_Parsing_Benchmark/scripts/rpr_progress.py --watch
+```
+
+แสดงจำนวน/เปอร์เซ็นต์ inference, ความคืบหน้าตรวจ artifacts, ภาพล่าสุด, failed/invalid และ worker/controller PID ทุก5วินาที กด Ctrl+C ปิดเฉพาะตัวดู งาน inference ไม่หยุด ใช้ `--json` สำหรับ agent หรือไม่ใส่ `--watch` เพื่อดูครั้งเดียว ตัวเลข100%ของ inference ยังไม่ใช่การตรวจปิดรอบสำเร็จ ต้องรอ phase COMPLETE หลังตรวจ artifacts คำสั่งอ่านข้อมูลเดิมเท่านั้น ไม่มี GPU/model imports หรือ inference เพิ่ม รูปแบบนี้ควรใช้เป็นมาตรฐานแสดง progress ของรอบถัดไปโดยผูกกับ model/round จริง
