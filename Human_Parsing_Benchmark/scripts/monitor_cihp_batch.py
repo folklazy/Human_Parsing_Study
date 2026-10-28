@@ -32,8 +32,9 @@ def publish(out,unit,files):
  return {'status':'SYNCED' if sent.returncode==0 and rh==commit else 'PENDING_SYNC','commit':commit,'remote_commit':rh,'push_exit':sent.returncode,'push_diagnostic':sent.stderr[-1200:]}
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--run-root',required=True);parser.add_argument('--expected-status-sha256',required=True);parser.add_argument('--expected-work-log-sha256',required=True);args=parser.parse_args();out=Path(args.run_root).resolve();unit=out.name
- with (out/'GPU_HEALTH.jsonl').open('x') as monitor:
+ parser=argparse.ArgumentParser();parser.add_argument('--run-root',required=True);parser.add_argument('--expected-status-sha256',required=True);parser.add_argument('--expected-work-log-sha256',required=True);parser.add_argument('--health-log',default='GPU_HEALTH.jsonl');args=parser.parse_args();out=Path(args.run_root).resolve();unit=out.name
+ if Path(args.health_log).name!=args.health_log:raise ValueError('Health-log basename required')
+ with (out/args.health_log).open('x') as monitor:
   while True:
    launch=json.loads((out/'LAUNCH.json').read_text());now=datetime.now(timezone.utc).isoformat();gpu=subprocess.run(['nvidia-smi','--query-gpu=memory.used,memory.free,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True);pids=subprocess.run(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],capture_output=True,text=True)
    owned={str(v.get('PID')) for v in launch['models'].values()};actual=set(pids.stdout.split());monitor.write(json.dumps({'utc':now,'GPU_query':gpu.stdout.strip(),'GPU_compute_PIDs':sorted(actual),'external_PIDs':sorted(actual-owned),'quality_or_rank_analysis':False})+'\n');monitor.flush()
@@ -48,6 +49,18 @@ def main():
  completion=json.loads((P/'runs'/unit/'COMPLETION.json').read_text());status=P/'STATUS.md';files=['runs/'+unit+'/COMPLETION.json','reports/'+unit+'/REPORT_TH.md']+[str(f.relative_to(P)) for f in sorted((P/'metrics'/unit).glob('*.csv'))]
  if worklog_unchanged:files.append('WORK_LOG.md')
  if sha(status)==args.expected_status_sha256:
-  status.write_text(status.read_text()+f'\n## Batch terminal — {completion["end_utc"]}\n\n{completion["status"]}, complete_models={completion["complete_models"]}/6. [Result report](reports/{unit}/REPORT_TH.md) / [completion](runs/{unit}/COMPLETION.json). No Sapiens/Ninja/color or automatic failed-image retries.\n');files.append('STATUS.md')
+  (out/'STATUS_BEFORE_TERMINAL.md').write_bytes(status.read_bytes())
+  status.write_text(f'''# Human Parsing Benchmark — current status
+
+Updated: {completion["end_utc"]} UTC
+
+**{completion["status"]}** — official native CIHP validation 5,000 images per system, {completion["complete_models"]}/6 systems complete. Run `{unit}`. [Result report](reports/{unit}/REPORT_TH.md) / [completion](runs/{unit}/COMPLETION.json) / [PLAN](PLAN.md).
+
+STRICT_COMPLETE: main scores remain null for incomplete systems; their failure/pending rows are retained. Launch commit `{completion["launch_commit"]}` identifies execution code, not the later reporting/publication commit. Original controller and model attempts are preserved; no automatic failed-image retries or changed inference settings.
+
+Fixed 16-image original-grid comparisons are external under the run artifact root, `QUALITATIVE/index.html`. See completion for hashes and location. Cached YOLO means end-to-end FPS was not measured; parser timing/VRAM scopes remain explicit.
+
+Next: review terminal results/failures and native CIHP-to-Sapiens semantic matrix before any Sapiens execution. No Ninja, color, training or CCTV processing was started. Old YOLO/CPI results and source GT remain unchanged.
+''');files.append('STATUS.md')
  receipt=publish(out,unit,files);(out/'COMPLETION_PUBLICATION.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt),flush=True)
 if __name__=='__main__':main()

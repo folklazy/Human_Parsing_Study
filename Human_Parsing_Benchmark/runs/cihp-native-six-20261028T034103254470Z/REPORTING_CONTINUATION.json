@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-28T06:52:07.194477+00:00",
+  "run_id": "cihp-native-six-20261028T034103254470Z",
+  "action": "READ_ONLY_MONITOR_CONTINUATION_ONLY",
+  "old_monitor_PID": 42390,
+  "new_monitor_PID": 53568,
+  "original_telemetry": "GPU_HEALTH.jsonl",
+  "continued_telemetry": "GPU_HEALTH_CONTINUATION.jsonl",
+  "source_sha256": {
+    "monitor_cihp_batch.py": "76263fc2a265bc2a4ade15099b9d1678dbc78fba0325f211672fbf1ca9506ec1",
+    "report_cihp_batch.py": "6373532902fcdef2591b2a7f43713ca67cd39b1543bd439a44246178a5ef29b9",
+    "render_cihp_comparisons.py": "cfe476c8463a941e624183f26cbf62360fa5a537a2123d2e8bbc1965f352c494"
+  },
+  "controller_PID_unchanged": 34503,
+  "active_inference_PIDs_unchanged": {
+    "D2FP_R101_CIHP": 49052
+  },
+  "inference_restarted": false,
+  "new_model_attempts_started": 0,
+  "source_config_unchanged": true
+}
