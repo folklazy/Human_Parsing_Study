@@ -1,3 +1,7 @@
+# Latest explicit authorization — CPI R50 shared-GPU quality only
+
+User explicitly permits SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP in the current round, overriding its prior external-PID rejection. Prioritize quality/completeness, keep all scientific settings/guards/failure policy, no solo/shared experiment or old-model rerun. Use dedicated CPI R50 controller/wrapper/RESOURCE_POLICY.json, never RPR model bindings or historical broad queues. Check actual status/artifacts before launch; standard warmup and first packet then autonomous run. Stop before ConvNeXt/matrix/Sapiens/color/training. Read Human_Parsing_Benchmark/STATUS.md/report and use cpi_r50_progress.py. This supersedes the older blocked admission instructions below; historical records stay unchanged.
+
 # Current operational scope — CPI R50 only, original admission, BLOCKED
 
 Latest user authorizes CPI_R50_CIHP readiness/run only when original GPU resource policy passes; stop before ConvNeXt-B. Do not inherit RP-R-CNN shared override, launch a broad queue, wait/poll, stop other jobs or weaken policy. Current STATUS records an external GPU PID and no launch. Current overview is4/6 COMPLETE from canonical results; old REPORT_TH is labeled historical. Read Human_Parsing_Benchmark/STATUS.md and the CPI R50/current-overview report sections. QANet/M2FP/D2FP/RPR are closed, no reinference. No ConvNeXt/matrix/Sapiens/color/training. This scope supersedes older operational instructions below; history/scientific config/source remain unchanged.

@@ -30,3 +30,7 @@ Read STATUS/report and current RPR RESOURCE_POLICY.json. User requests proceedin
 ## Latest scope — CPI R50 only, original resource policy
 
 Read current STATUS and CPI R50 section of the report. User authorizes only CPI_R50_CIHP; do not inherit RPR shared admission or launch a broad queue. Current round blocked by external GPU PID; end without polling/other-process changes. Later continuation may proceed after original gate passes and scoped readiness closes. No ConvNeXt/matrix/Sapiens/color. Current overview4/6 is copied from canonical completions; old reports are labeled historical, not silently rewritten.
+
+## Latest user override — CPI R50 shared-GPU quality only
+
+User explicitly permits SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP, prioritizing quality/completeness; do not block solely on external PIDs or ask again. Read current STATUS/resource amendment; use CPI-specific controller and wrapper, never RPR model bindings or broad queues. Scientific settings/guards unchanged, no OOM retry/fallback/other-process modification. One standard TRAIN warmup and first VAL packet, then leave automatic processing; stop before ConvNeXt/matrix/Sapiens/color.

@@ -116,15 +116,27 @@ Results, when obtained, are YOLO-associated application native-label metrics, no
 
 ## Current cohort overview
 
-Updated 2026-10-29T00:07:17.768881+07:00. **4/6 systems complete**, copied directly from canonical completion records; no inference/rescoring or model ranking. Native labels and official5000 population are the common reporting basis, but execution segments/resource policies differ. [Canonical-source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json) / [current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv). Per-run completions remain authoritative; this is a navigation summary, not a merged run.
+Updated 2026-10-29T00:32:12.175639+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
 
-| System | Status | Complete/5000 | mIoU20 inclBG | FG19mIoU | Segment/resource context |
+| Model | Status | Complete/5000 | mIoU20 inclBG | FG19 | Segment/resource |
 |---|---|---:|---:|---:|---|
-|QANet_CIHP_HRNetW48_512x384|COMPLETE|5000|64.866%|63.449%|original parent|
-|M2FP_R101_CIHP|COMPLETE|5000|68.155%|66.796%|original parent|
-|D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|parent1810 + continuation3190; original admission, contention observed|
-|RPR_CIHP|COMPLETE|5000|59.124%|57.408%|separate RPR shared-GPU round|
-|CPI_R50_CIHP|BLOCKED_PREFLIGHT|0|null / unavailable|null / unavailable|current preflight only, original admission|
-|CPI_ConvNeXtB_CIHP|HISTORICAL_SETUP_BLOCKED_OUTSIDE_CURRENT_SCOPE|0|null / unavailable|null / unavailable|historical setup only; not authorized now|
+|QANet_CIHP_HRNetW48_512x384|COMPLETE|5000|64.866%|63.449%|cihp-native-six-20261028T034103254470Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified|
+|M2FP_R101_CIHP|COMPLETE|5000|68.155%|66.796%|cihp-native-six-20261028T034103254470Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified|
+|D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log|
+|RPR_CIHP|COMPLETE|5000|59.124%|57.408%|rpr-cihp-shared-20261028T155439603873Z; SHARED_GPU_QUALITY_ONLY|
+|CPI_R50_CIHP|READY_NOT_LAUNCHED|0|null / unavailable|null / unavailable|cpi-r50-shared-20261028T172951337299Z; SHARED_GPU_QUALITY_ONLY|
+|CPI_ConvNeXtB_CIHP|HISTORICAL_SETUP_BLOCKED_OUTSIDE_CURRENT_SCOPE|0|null / unavailable|null / unavailable|continuation-20261028T073741308461Z (historical setup only); ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified|
 
-Roster order only, not score order. No averages or winner are inferred. The earlier REPORT_TH.md and original per-run CSVs are preserved historical snapshots; RP-R-CNN0/5000 there is superseded for current navigation by its COMPLETE5000 shared-quality completion. Original admission is not evidence of exclusive runtime. CPI R50 remains blocked and ConvNeXt-B is outside this round.
+Not a single execution segment or uncontended timing cohort. Native-label YOLO application scores are not official native-parser reproduction; no clean speed/VRAM ranking. Historical source reports and closed-model outputs are preserved.
+
+## CPI R50 shared-GPU quality amendment — ready (2026-10-29T00:32:12.166849+07:00)
+
+User **explicitly authorizes** SHARED_GPU_QUALITY_ONLY for CPI_R50_CIHP in this round, prioritizing evaluation correctness/completeness/quality over speed. This supersedes the previous no-external-PID admission requirement for this checkpoint/round only; it is not an automatic transfer of the RPR override. No process/system/GPU configuration is changed, and no solo-versus-shared experiment is required. [Resource amendment](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/RESOURCE_POLICY.json).
+
+Parent `cihp-native-six-20261028T034103254470Z`, segment `cpi-r50-shared-20261028T172951337299Z`. Dedicated controller uses only modelID CPI_R50_CIHP, stops before ConvNeXt-B, and validates its own model/scope/hash bindings. [Exact5000-ID plan](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/SEGMENT_PLAN.json), [readiness](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/READINESS.json), [checks](../runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/CONTROL_ACCEPTANCE.json). Prior native CPI setup blocks retained; current VAL packets0/reuse0/pending5000, unrelated older CPI protocols excluded. No completed model is re-inferred.
+
+CPI checkpoint `models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth` SHA256 `e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35` verified; native-config/source/old frozen scientific bindings verified, installed-package freeze equals original3TRAIN readiness. Free VRAM13173MiB vs observed prior TRAIN peak reserved3760MiB (not a worst-case guarantee). One standardTRAIN0000930 warmup checks load/forward beforeVAL. Four scoped CPU control cases and two backward-compatible progress cases pass; no new GPU smoke or isolated-GPU comparison.
+
+Preserve native CIHP5000,20labels, FP32, resolution/TTA/thresholds, batch/deterministic seed/TF32 settings, YOLO cache, association/ownership, GT/scorer and24h/80GiB/50GiB/model-retry0/no fallback policies. Original config/worker/adapter/scorer bytes unchanged. Reuse reviewed resource/segment mechanics with a CPI-specific scope validator and timing metadata: native JPEG read, PNG writes/re-reads are inside CPI adapter timing, canonical export/GT scoring/global composition outside. Timing/resource traces are shared diagnostics, not latency/FPS/memory-efficiency ranking. Shared execution can change available memory/time; OOM/CUDA failures stop/preserve partial artifacts, never reduce quality/drop failed IDs/auto-retry.
+
+On launch: detached one-model controller, required warmup and short first-packet check only, then Codex ends turn. Automatic packet/hash/NPZ/GT/saved-mask re-score and exact-ID union validation produce strict COMPLETE/null incomplete main scores and update this R50 report plus canonical-source overview, without inference/scoring of other models. Progress command: `python3 Human_Parsing_Benchmark/scripts/cpi_r50_progress.py --watch` (read-only; Ctrl+C stops only viewer). No ConvNeXt/matrix/Sapiens/color/training/other experiments. State currently READY_NOT_LAUNCHED.

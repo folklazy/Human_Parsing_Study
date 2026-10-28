@@ -1,22 +1,11 @@
 # Human Parsing Benchmark — current status
 
-Updated 2026-10-29T00:07:17.768881+07:00 Bangkok
+Updated 2026-10-29T00:32:12.166849+07:00 Bangkok
 
-**CPI_R50_ROUND_BLOCKED — EXTERNAL_GPU_BUSY**. Current authorization CPI_R50_CIHP only, original GPU admission policy; no RPR shared override. Snapshot00:03:52+07:00 on29Oct: external PID126277 uses1736MiB onT4; utilization0%/free13173MiB does not pass the no-external-compute gate. No parsing worker/controller active or launched, no wait/poll, no retry or other-process intervention. Reuse0/remain5000, failed_VAL0/invalid_VAL0/not_attempted5000, main score null.
+**CPI_R50_SHARED_QUALITY_READY_NOT_LAUNCHED**. User explicitly amends CPI R50 admission to SHARED_GPU_QUALITY_ONLY for quality/completeness; no external-PID blockage. No global/system changes or solo/shared experiment. Prior QANet/M2FP/D2FP/RPR completions preserved. CPI_R50 existing/reuse0, pending5000; only CPI_R50 may launch, stop before ConvNeXt-B.
 
-[Main .md report: CPI R50 section and current overview](reports/CIHP_CONTROLLED_CONTINUATION.md) / [preflight](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-preflight-20261028T170717768881Z/PREFLIGHT.json) / [current canonical-source index](manifests/CIHP_NATIVE_COHORT_INDEX.json) / [current CSV](metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv). Parent `cihp-native-six-20261028T034103254470Z`, record `cpi-r50-preflight-20261028T170717768881Z`; execution segment/PID/launch N/A.
+Checkpoint/config/source hashes and environment freeze match original readiness. VRAM13173MiB free vs prior TRAIN reserved peak3760MiB, not an OOM guarantee. Standard TRAIN0000930 warmup/first VAL packet must pass. Frozen scientific configSHA`3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24`, FP32/preprocessing/thresholds/ownership/GT/scoring/limits unchanged. Shared timings/native CPI file I/O are diagnostics only, no speed or memory ranking.
 
-Current cohort **4/6 COMPLETE** from canonical results, in frozen roster order:
+[Main R50 report](reports/CIHP_CONTROLLED_CONTINUATION.md) / [resource amendment](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/RESOURCE_POLICY.json) / [exact plan](runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/SEGMENT_PLAN.json) / [overview](manifests/CIHP_NATIVE_COHORT_INDEX.json). Round `cpi-r50-shared-20261028T172951337299Z`, parent `cihp-native-six-20261028T034103254470Z`. Read-only progress: `python3 Human_Parsing_Benchmark/scripts/cpi_r50_progress.py --watch`. Current cohort4/6 closed; CPI pending, ConvNeXt outside current scope.
 
-| Model | Complete/5000 | Context |
-|---|---:|---|
-| QANet |5000|original parent|
-| M2FP |5000|original parent|
-| D2FP |5000|parent1810 + continuation3190|
-| RP-R-CNN |5000|separate SHARED_GPU_QUALITY_ONLY round|
-| CPI R50 |0|current resource-blocked preflight|
-| CPI ConvNeXt-B |0|historical blocked setup; not in current scope|
-
-No inference/rescoring for this summary. Original REPORT_TH.md now visibly labeled historical with a link to current overview; old contents/results remain byte-identical below the label. Not a single segment/resource regime or an exclusive timing claim; no model ranking.
-
-Next: end blocked round; on later continuation recheck resources once and proceed only within CPI_R50 scope when original gate passes. Checkpoint/nativeconfig/source/environment identities use recorded readiness; startup payload hash/model load/first packet remain pending. No ConvNeXt/matrix/Sapiens/color/training/additional experiment. All prior results and scientific config/source unchanged.
+Next commit/push reviewed control snapshot, launch one detached controller, check first packet briefly, end turn. Auto health/strict-complete validation/report at terminal. No fallback/unbounded restart/retry or other-process change. No ConvNeXt/matrix/Sapiens/color/training/other model inference.

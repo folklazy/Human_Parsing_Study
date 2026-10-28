@@ -1,0 +1,18 @@
+{
+  "scoped_CPI_tests_pass": 4,
+  "backwards_progress_lifecycle_tests_pass": 2,
+  "model_ids_allowed": [
+    "CPI_R50_CIHP"
+  ],
+  "model_ids_rejected": [
+    "RPR_CIHP",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "scientific_forward_scoring_source_blocks_unchanged": true,
+  "frozen_scientific_bindings_unchanged": true,
+  "weights_SHA256_verified": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+  "no_new_GPU_smoke_or_single_vs_shared_experiment": true,
+  "readiness_reused": "existing threeTRAIN actual checkpoint route; one requiredTRAIN warmup beforeVAL",
+  "new_wrapper_sha256": "93395fd75bd49a58c6e4c85f7bffcb593f10c947ad6efcf1bc97af3fdab87c46",
+  "new_controller_sha256": "ec8a4cb5cb36823375671fa99addac7e99f68cd2f4e57101451c1555cff1bcfc"
+}

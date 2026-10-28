@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 6540,
-      "sha256": "440e0570d6a48923cae3c9519417c860e31f9a3d6fbfb0c5beb685a528885f75"
+      "bytes": 7314,
+      "sha256": "423a141c9d796ba0440abea4b0eca11b5be2e3582f6e5618b9932fd642135e15"
     },
     {
       "path": "ARTIFACTS.md",
@@ -45,28 +45,28 @@
     },
     {
       "path": "Human_Parsing_Benchmark/AGENTS.md",
-      "bytes": 4945,
-      "sha256": "ff3203fde7f8d770b6b1324d12b43ea0620867fc96f0bc203ab366185064cf38"
+      "bytes": 5494,
+      "sha256": "289515c26fa2091f5b15775f26cce4b7328acaec7b5f54aca6f357987f8224e4"
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 10551,
-      "sha256": "2d1875ba341428c33ba2f1d5deae8c373aa99759a64d6de01dfa8074dceceb5a"
+      "bytes": 11295,
+      "sha256": "a610d84923cd0c290c7fbc71341eb51ca95de947f8f28d5b4353e68513dd7bb5"
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 9829,
-      "sha256": "4b6d9c3fe54bd2a1bfe6cc207af277761373c863ff2a1fa432a0aadbe99fe983"
+      "bytes": 10117,
+      "sha256": "3f066bf4a72e3ef0710f398e71bc3b91362269efceaa33e92a1da1e91bca78b6"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 2128,
-      "sha256": "6dd4339ed7f04b512f12d0145befa0115985ab2286e73152febac25930cd0641"
+      "bytes": 1832,
+      "sha256": "ac196a14b89d22fc20c602c6dbeafe90fa22a6dea7580f561fbc3aabd7fe472e"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 26172,
-      "sha256": "11b6ade066b2e9084352d03584dc7ad2ef7744805834c7e3e3c57ebca1485394"
+      "bytes": 27495,
+      "sha256": "3619060de3eb17ce7dc3c6821392a5738ccd41e3159fcb0bf8eb19e0053c79dc"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -105,8 +105,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
-      "bytes": 5713,
-      "sha256": "d3db5efa69888644e4c7fd41a9e0a029a82fd35234256b0bf9ed98ca478be5e4"
+      "bytes": 5691,
+      "sha256": "f331a7555944c7c5c295e0b108500f96bad9d5655f773426ca07e823cc13837c"
     },
     {
       "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
-      "bytes": 2233,
-      "sha256": "1ab33dc0340e9b48e61e4078cad415ef471d60dbb5b637ff50c6e5ac03ac3030"
+      "bytes": 2200,
+      "sha256": "7127f41318addc2aa5225990024d6145f94a99288f17bc0a89385600b0dca37c"
     },
     {
       "path": "Human_Parsing_Benchmark/metrics/cihp-native-six-20261028T034103254470Z/FAILURES.csv",
@@ -240,8 +240,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
-      "bytes": 24587,
-      "sha256": "504f8081f7972f0a0875f9d67daacdba1a51e9b074fd8a3f5356acb3392679cb"
+      "bytes": 27922,
+      "sha256": "5e5457659509c44ce77cf4416204436c5ae837ace4e418e17393ccb771014da1"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_ARCHIVE_INTAKE.md",
@@ -369,6 +369,36 @@
       "sha256": "bbde3fec36d3b981ca1d580c48d04dcc859940f19e5468649d4040fb4ebe348c"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/CONTROL_ACCEPTANCE.json",
+      "bytes": 760,
+      "sha256": "e0d62673a9b4ee1c56328d7fe61e49f1561e121fd21e33945a082eead6c64117"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/CONTROL_DIFF.patch",
+      "bytes": 8396,
+      "sha256": "bfe89930b3e3cf2fb0455a8c164a7dfed640fdf6bd99c9215f3379b8817abf47"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/ENVIRONMENT_VERIFICATION.json",
+      "bytes": 441,
+      "sha256": "ee07df3a874e5e7ee1d98b3ca66c99ec83ab450f29abd5f9f59cf8da7bd059f8"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/READINESS.json",
+      "bytes": 834,
+      "sha256": "ddc38485252392a151cb72ca7cd854d00b50377581ea2ca3a0adcabf6b7abc00"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/RESOURCE_POLICY.json",
+      "bytes": 1178,
+      "sha256": "ed813393385b5207877b438b374d37bf428cbd0819a7e7f3a15713ca6389d906"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-r50-shared-20261028T172951337299Z/SEGMENT_PLAN.json",
+      "bytes": 76688,
+      "sha256": "081b602ac748008bf836f307d03aedd39fcd107d8f9dad8a77fd56a371314619"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-preflight-20261028T153224395816Z/PREFLIGHT.json",
       "bytes": 3600,
       "sha256": "d6f3cfc850bd456ea3db41142b12d465b0e0add88444b83e659e7dde0ddf5da7"
@@ -454,6 +484,11 @@
       "sha256": "13e76bf691ff7927852722df781acd56acc50b05dcbb0742e4dc086e181b03fe"
     },
     {
+      "path": "Human_Parsing_Benchmark/scripts/cpi_r50_progress.py",
+      "bytes": 269,
+      "sha256": "d82315e775bd33d6d22ba6f00fbbfb98002d8099d98a133d44e8711cb5c81d82"
+    },
+    {
       "path": "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py",
       "bytes": 7880,
       "sha256": "2ef45791b00db16156cf9d4665351affb8bf593f3a0b4ead873f37d58deaf083"
@@ -462,6 +497,11 @@
       "path": "Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py",
       "bytes": 7160,
       "sha256": "14b32669647e454cf291bb89ca64965713ef539b16da4b61bd21423b5b700a66"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/refresh_cpi_r50_overview.py",
+      "bytes": 3489,
+      "sha256": "ea7f9b677d20c83e282b2a93f9574c1321a0e5992d0a0d0de04c67b9e1b4a4e8"
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py",
@@ -475,8 +515,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/rpr_progress.py",
-      "bytes": 5514,
-      "sha256": "45a9f4590852910a9f9a3eed35bf7c345d10ec764050314c89ee86fdb6d582ef"
+      "bytes": 5826,
+      "sha256": "b1b80aba28df683c58a3d054d4f40d7f087a6a043aef8a995e20e7822b8a143e"
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cihp_segment.py",
@@ -487,6 +527,16 @@
       "path": "Human_Parsing_Benchmark/scripts/run_cihp_system.py",
       "bytes": 13452,
       "sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py",
+      "bytes": 17525,
+      "sha256": "ec8a4cb5cb36823375671fa99addac7e99f68cd2f4e57101451c1555cff1bcfc"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py",
+      "bytes": 2732,
+      "sha256": "93395fd75bd49a58c6e4c85f7bffcb593f10c947ad6efcf1bc97af3fdab87c46"
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py",
@@ -532,6 +582,11 @@
       "path": "Human_Parsing_Benchmark/tests/test_cihp_native.py",
       "bytes": 2909,
       "sha256": "b25d43a3ebc907b7f3367206e9067486c2769c544d4eb415a2a4d1ec1501f6e9"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py",
+      "bytes": 3657,
+      "sha256": "399ed42603a5d6a5a64d2478e89d977283aa7c64fdb1adf0e7039f487797bd83"
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_rpr_progress.py",
@@ -3189,6 +3244,11 @@
       "sha256": "023b3d6e26f5c0f481d55d49812688de4d5401e1fe15ff56e47eb5b012ff764c"
     },
     {
+      "path": "publication/CPI_R50_SHARED_QUALITY_READY_20261028.json",
+      "bytes": 5744,
+      "sha256": "5a8d6746de040a4e8e27dec3b92b92441841773f83655fc2723326d0305c060e"
+    },
+    {
       "path": "publication/D2FP_ONLY_ROUND_CLOSURE_20261028.json",
       "bytes": 2299,
       "sha256": "07aada0f6c1706e841b5bfdb0d26987c79d2dded8e44d610d31e178c038f94b9"
@@ -4714,6 +4774,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-28T17:09:11.505853+00:00",
+  "updated_utc": "2026-10-28T17:34:08.861041+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

@@ -1,0 +1,22 @@
+{
+  "status": "READY_NOT_LAUNCHED",
+  "round_id": "cpi-r50-shared-20261028T172951337299Z",
+  "model_id": "CPI_R50_CIHP",
+  "expected": 5000,
+  "complete": 0,
+  "failed": 0,
+  "invalid": 0,
+  "not_attempted": 5000,
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "resource_policy_sha256": "ed813393385b5207877b438b374d37bf428cbd0819a7e7f3a15713ca6389d906",
+  "checkpoint_SHA256_verified": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+  "environment_package_freeze_matches": true,
+  "observed_free_VRAM_MiB": 13173,
+  "prior_TRAIN_peak_reserved_MiB": 3760,
+  "peak_TRAIN_is_not_a_worst_case_bound": true,
+  "warmup_required": "one original TRAIN0000930; no additional experiment",
+  "queue": [
+    "CPI_R50_CIHP"
+  ]
+}

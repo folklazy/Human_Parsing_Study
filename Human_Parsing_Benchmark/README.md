@@ -1,4 +1,4 @@
-> **Current round: CPI R50 resource BLOCKED under original GPU admission.** Current canonical overview: **4/6 complete** (QANet/M2FP/D2FP/RP-R-CNN); no model ranking. Read [STATUS](STATUS.md), [current overview](reports/CIHP_CONTROLLED_CONTINUATION.md#current-cohort-overview) and [CSV](metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv). RP-R-CNN completed its separate shared-quality round; that override does not authorize shared CPI. No ConvNeXt/matrix/Sapiens/color.
+> **Current round: CPI R50 shared-GPU quality-only readiness.** User explicitly authorizes coexistence for this CPI R50 round. Scientific config/FP32/GT/ownership/scoring unchanged; no latency/FPS/memory ranking. Read [STATUS](STATUS.md) and [main report](reports/CIHP_CONTROLLED_CONTINUATION.md). Only CPI R50, stop before ConvNeXt/matrix/Sapiens/color.
 
 # Human Parsing Benchmark
 
@@ -63,3 +63,11 @@ python3 Human_Parsing_Benchmark/scripts/rpr_progress.py --watch
 ```
 
 แสดงจำนวน/เปอร์เซ็นต์ inference, ความคืบหน้าตรวจ artifacts, ภาพล่าสุด, failed/invalid และ worker/controller PID ทุก5วินาที กด Ctrl+C ปิดเฉพาะตัวดู งาน inference ไม่หยุด ใช้ `--json` สำหรับ agent หรือไม่ใส่ `--watch` เพื่อดูครั้งเดียว ตัวเลข100%ของ inference ยังไม่ใช่การตรวจปิดรอบสำเร็จ ต้องรอ phase COMPLETE หลังตรวจ artifacts คำสั่งอ่านข้อมูลเดิมเท่านั้น ไม่มี GPU/model imports หรือ inference เพิ่ม รูปแบบนี้ควรใช้เป็นมาตรฐานแสดง progress ของรอบถัดไปโดยผูกกับ model/round จริง
+
+## CPI R50 live progress
+
+```bash
+python3 Human_Parsing_Benchmark/scripts/cpi_r50_progress.py --watch
+```
+
+Read-only 5-second view of inference, separate artifact verification, failures and PID liveness. Ctrl+C stops only this viewer. Use `--json` or omit `--watch` for one snapshot. The RP-R-CNN viewer still reads its own completed round; CPI has a separate round pointer and model bindings.

@@ -1,0 +1,9 @@
+{
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "package_freeze_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "prior_readiness_environment_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "matches_prior_readiness": true,
+  "readiness_TRAIN_peak_reserved_MiB": 3760.0,
+  "observed_free_VRAM_MiB": 13173,
+  "not_a_worst_case_or_no_OOM_guarantee": true
+}
