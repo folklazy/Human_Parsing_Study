@@ -1,0 +1,103 @@
+{
+  "status": "DIAGNOSTIC_PASS_READY_FOR_CANONICAL_VALIDATION",
+  "expected": 5000,
+  "complete": 0,
+  "failed": 0,
+  "invalid": 0,
+  "not_attempted": 5000,
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "round_id": "cpi-convnext-validation-20261028T182116250459Z",
+  "parent_run_id": "cihp-native-six-20261028T034103254470Z",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+  "checkpoint_bytes": 1301413296,
+  "checkpoint_file_SHA256_verified": true,
+  "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+  "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+  "all_frozen_scientific_bindings_verified": true,
+  "environment_sha256": "ab200b74b6c849c1b95628521b258835635fd7be2d9169f88df58241d5688852",
+  "matches_prior_environment": true,
+  "prior_readiness": {
+    "status": "COMPLETE",
+    "complete": 3,
+    "precision": "FP32",
+    "note": "Earlier readiness config hash predates freeze; current frozen bindings checked independently, no equivalence inferred solely from old config hash."
+  },
+  "native_score_threshold": 0.05,
+  "native_max_per_image": 100,
+  "native_test_pipeline": [
+    {
+      "type": "LoadImageFromFile"
+    },
+    {
+      "type": "MultiScaleFlipAug",
+      "img_scale": [
+        1333,
+        800
+      ],
+      "flip": false,
+      "transforms": [
+        {
+          "type": "Resize",
+          "keep_ratio": true
+        },
+        {
+          "type": "RandomFlip"
+        },
+        {
+          "type": "Normalize",
+          "mean": [
+            123.675,
+            116.28,
+            103.53
+          ],
+          "std": [
+            58.395,
+            57.12,
+            57.375
+          ],
+          "to_rgb": true
+        },
+        {
+          "type": "Pad",
+          "size_divisor": 32
+        },
+        {
+          "type": "ImageToTensor",
+          "keys": [
+            "img"
+          ]
+        },
+        {
+          "type": "Collect",
+          "keys": [
+            "img"
+          ]
+        }
+      ]
+    }
+  ],
+  "GPU_snapshot": {
+    "utc": "2026-10-28T18:16:17.331672+00:00",
+    "GPU": "Tesla T4, 1739 MiB, 13173 MiB, 0 %",
+    "compute_PIDs": [
+      "126277"
+    ]
+  },
+  "free_disk_GiB": 507.91954803466797,
+  "CPU_control_checks": {
+    "ConvNeXt_scope_transparent_geometry_failed_diagnostic_gate": 3,
+    "prior_CPI_scope_and_overview_regression": 4,
+    "progress_regression": 3,
+    "all": "PASS"
+  },
+  "scope": "CPI ConvNeXt-B only; required TRAIN0000930 warmup and one separateVAL0000018 diagnostic; canonical5000 only if PASS; R50 paused",
+  "canonical_diagnostic_reuse": false,
+  "old_current_cohort_VAL_inventory": "0; historicalsetupBLOCKED retained, other protocol experiments excluded",
+  "linked_diagnostic_round_id": "cpi-convnext-shared-20261028T181609262813Z",
+  "diagnostic_result_sha256": "b0bcc3efef3870a66658e51ed101ce5d8bd2e901130df535706616d91a1c568f",
+  "diagnostic_inference_attempts": 1,
+  "canonical_reuse_of_diagnostic": false
+}

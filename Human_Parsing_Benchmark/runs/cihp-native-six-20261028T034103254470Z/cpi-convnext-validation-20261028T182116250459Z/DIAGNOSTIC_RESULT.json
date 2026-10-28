@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "image_id": "0000018",
+  "canonical_eligible": false,
+  "start_utc": "2026-10-28T18:18:28.355692+00:00",
+  "start_Bangkok": "2026-10-29T01:18:28.355692+07:00",
+  "end_Bangkok": "2026-10-29T01:18:51.446616+07:00",
+  "wallclock_seconds": 23.09089693799615,
+  "worker_exit_code": 0,
+  "warmup_images": [
+    "0000930"
+  ],
+  "error": null,
+  "traceback": null,
+  "contract_check": "PASS_NPZ_CRC_HASH_METADATA_GEOMETRY_NATIVE20_GT_SAVED_SCORE",
+  "native_score_threshold": 0.05,
+  "geometry": [
+    {
+      "source": "0000930.jpg",
+      "native_pipeline_geometry": [
+        {
+          "ori_shape": [
+            346,
+            500,
+            3
+          ],
+          "img_shape": [
+            800,
+            1156,
+            3
+          ],
+          "pad_shape": [
+            800,
+            1184,
+            3
+          ],
+          "scale_factor": [
+            2.312000036239624,
+            2.312138795852661,
+            2.312000036239624,
+            2.312138795852661
+          ],
+          "flip": false
+        }
+      ]
+    },
+    {
+      "source": "0000018.jpg",
+      "native_pipeline_geometry": [
+        {
+          "ori_shape": [
+            375,
+            500,
+            3
+          ],
+          "img_shape": [
+            800,
+            1067,
+            3
+          ],
+          "pad_shape": [
+            800,
+            1088,
+            3
+          ],
+          "scale_factor": [
+            2.134000062942505,
+            2.133333444595337,
+            2.134000062942505,
+            2.133333444595337
+          ],
+          "flip": false
+        }
+      ]
+    }
+  ],
+  "peak_memory": {
+    "peak_allocated_MiB": 4618.3837890625,
+    "peak_reserved_MiB": 8484.0,
+    "scope": "Last native forward after worker reset; on setup failure may include model load/warmup; shared diagnostics only"
+  },
+  "retained_bytes": 463932,
+  "array_schema": {
+    "person_semantic_masks": {
+      "shape": [
+        12,
+        375,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "person_extents": {
+      "shape": [
+        12,
+        375,
+        500
+      ],
+      "dtype": "bool"
+    },
+    "person_scores": {
+      "shape": [
+        12
+      ],
+      "dtype": "float32"
+    },
+    "bboxes_xyxy": {
+      "shape": [
+        12,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "native_person_semantic_masks": {
+      "shape": [
+        26,
+        375,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "native_person_extents": {
+      "shape": [
+        26,
+        375,
+        500
+      ],
+      "dtype": "bool"
+    },
+    "native_person_scores": {
+      "shape": [
+        26
+      ],
+      "dtype": "float32"
+    },
+    "raw_native_person_semantic_masks": {
+      "shape": [
+        26,
+        375,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "raw_native_person_extents": {
+      "shape": [
+        26,
+        375,
+        500
+      ],
+      "dtype": "bool"
+    },
+    "raw_native_person_scores": {
+      "shape": [
+        26
+      ],
+      "dtype": "float32"
+    },
+    "raw_native_bboxes_xyxy": {
+      "shape": [
+        26,
+        4
+      ],
+      "dtype": "float32"
+    }
+  },
+  "packet_sha256": "150b87649de55f37cc864ee682032bb46a7cfad91b4ffd8ab3601caa204d251e",
+  "packet_metadata_sha256": "bb69a39164cdcca54a66b8a5b00ccc11606b62c7aad858bf4e6a8db7f31b6cf4",
+  "original_wh": [
+    500,
+    375
+  ],
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "verified_packet_path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z/diagnostic/packets/0000018",
+  "audit_state_path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/diagnostic_audit/RECONCILED.json",
+  "audit_state_sha256": "0b4213e55ecbbee2f397c9eaf023226101b12f067b4e2e1edc851250bf857f73",
+  "reconciliation_note": "Inference and export passed once. Original controller incorrectly passed folder diagnostic to a checker deriving model ID from folder.name. Corrected read-only model-named view; no model inference or diagnostic rerun. Original failed-controller result preserved.",
+  "original_diagnostic_round_id": "cpi-convnext-shared-20261028T181609262813Z",
+  "reconciled_utc": "2026-10-28T18:21:17.010464+00:00",
+  "additional_CPU_verification_seconds": 0.7598564220097614
+}

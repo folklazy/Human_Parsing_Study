@@ -1,0 +1,77 @@
+{
+  "base_commit": "e2584aa43d8135bb9b5efa3fbe4490ea540e9622",
+  "work_unit": "cpi-convnext-validation-20261028T182116250459Z",
+  "updated_utc": "2026-10-28T18:22:27.450790+00:00",
+  "scope": "Correct controllercheckerfolderbinding; validate one saved diagnostic, no second inference; prepare canonical5000 after PASS",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py",
+      "sha256": "27afbc4f5e1c4037874716e1543eb86af8fa51039f0b8375e77f84f95c9d6607",
+      "before_sha256": "99c45e833456709ac8fa784ba5c6a5c77037ed7a92a899a8f37583b956f0e365",
+      "bytes": 28364
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py",
+      "sha256": "7d5bc490d8dd70e43d6ca1e5941d87c1b5d040b0b1ce698b836076ae4da0bae6",
+      "before_sha256": "bf2883516d92967e19c31dd96c9f9e9d1b37968e7e8cd88bab85ac04a07c0028",
+      "bytes": 5343
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "5edb4ddcb434d5068833420a808cef9295607095490f7de14a07507db46d914e",
+      "before_sha256": "cbf9fcf1356768924dc211d57fa7732a3136fa6edaa0cc7df43b6fc36eca5b7a",
+      "bytes": 1361
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "9a21781f54c3dc44a25abb4f52d6ef502e232d66fba26c13f23ae5807ab06c3b",
+      "before_sha256": "2b69821155ff77a08c8a23198a9d58011da9b981329c5e69e853f5e35a0f3acb",
+      "bytes": 33108
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "f4938910bbef2537f35a411a5484b9245eb1be421f73699a78abe582e0ec2f51",
+      "before_sha256": "45d85aa045bfd6e74b90e9352ccd366fc843e1208576b17c855273a5f4adeae2",
+      "bytes": 65101
+    },
+    {
+      "path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "sha256": "a7fc43d76933a57fa46d6681fda8d2afbaddaa158f5deae4a4f25655a56a7337",
+      "before_sha256": "264fe7dd450bef6c9a8a777c03568f3d1800928b2f086b48f6edcaba38e93779",
+      "bytes": 5735
+    },
+    {
+      "path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "sha256": "e0a4e1ce1e282fc958abff4f31bc8ccade7215516eaff844c5c26592c329231f",
+      "before_sha256": "ffa33fe0763e06d6ece55ad4d1e9c5c130e4a05e68b39070d3aabe941a3e84a9",
+      "bytes": 2210
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/RESOURCE_POLICY.json",
+      "sha256": "a91e1b1c060099d93f3a173766ef30300fbf2e6586585489804504f9c15a3148",
+      "before_sha256": null,
+      "bytes": 1737
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/READINESS.json",
+      "sha256": "7504046f9a0fdf1e471e2e6cf9fe38b1373be257ae21af5aad33904e8b1e0291",
+      "before_sha256": null,
+      "bytes": 3300
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/SEGMENT_PLAN.json",
+      "sha256": "eebf0830cbe01d3c2d556392f10ac399fe435c7870366c82a8741c11d4b5ede4",
+      "before_sha256": null,
+      "bytes": 77072
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/DIAGNOSTIC_RESULT.json",
+      "sha256": "b0bcc3efef3870a66658e51ed101ce5d8bd2e901130df535706616d91a1c568f",
+      "before_sha256": null,
+      "bytes": 5027
+    }
+  ],
+  "targeted_CPU_cases": 4,
+  "diagnostic_model_attempts": 1,
+  "status": "DIAGNOSTIC_PASS_READY_FOR_VALIDATION"
+}

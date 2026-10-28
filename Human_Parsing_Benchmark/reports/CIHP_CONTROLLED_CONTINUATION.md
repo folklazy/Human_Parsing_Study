@@ -116,7 +116,7 @@ Results, when obtained, are YOLO-associated application native-label metrics, no
 
 ## Current cohort overview
 
-Updated 2026-10-29T01:18:51.468951+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
+Updated 2026-10-29T01:22:01.056356+07:00. **4/6 complete**, fields copied from canonical records in frozen roster order; no inference/rescoring/ranking. Distinct segments/resource policies remain explicit. [Current CSV](../metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv) / [source index](../manifests/CIHP_NATIVE_COHORT_INDEX.json).
 
 | Model | Status | Complete/5000 | mIoU20 inclBG | FG19 | Segment/resource |
 |---|---|---:|---:|---:|---|
@@ -125,7 +125,7 @@ Updated 2026-10-29T01:18:51.468951+07:00. **4/6 complete**, fields copied from c
 |D2FP_R101_CIHP|COMPLETE|5000|64.352%|62.827%|cihp-native-six-20261028T034103254470Z + continuation-20261028T073741308461Z; ORIGINAL_NO_CONTENTION_ADMISSION; exclusive runtime not certified; D2 concurrent external GPU PIDs observed in health log|
 |RPR_CIHP|COMPLETE|5000|59.124%|57.408%|rpr-cihp-shared-20261028T155439603873Z; SHARED_GPU_QUALITY_ONLY|
 |CPI_R50_CIHP|INCOMPLETE|3|null / unavailable|null / unavailable|cpi-r50-manual-continuation-20261028T175036811629Z; SHARED_GPU_QUALITY_ONLY|
-|CPI_ConvNeXtB_CIHP|BLOCKED_DIAGNOSTIC_FAILED|0|null / unavailable|null / unavailable|cpi-convnext-shared-20261028T181609262813Z; SHARED_GPU_QUALITY_ONLY|
+|CPI_ConvNeXtB_CIHP|DIAGNOSTIC_PASS_READY_FOR_CANONICAL_VALIDATION|0|null / unavailable|null / unavailable|cpi-convnext-validation-20261028T182116250459Z; SHARED_GPU_QUALITY_ONLY|
 
 Not a single execution segment or uncontended timing cohort. Native-label YOLO application scores are not official native-parser reproduction; no clean speed/VRAM ranking. Historical source reports and closed-model outputs are preserved.
 
@@ -260,3 +260,11 @@ KeyError: 'diagnostic'
 Full validation status **BLOCKED_DIAGNOSTIC_FAILED**, complete0/5000,failedVAL0,invalid0,notattempted5000,missing5000,duplicate0. DiagnosticfailureแยกจากVALfailure; ถ้าdiagnosticไม่ผ่านไม่มีcanonicalVALinference ถ้าผ่านcanonical0000018ยังต้องรันตามลำดับpopulationปกติ ไม่reusepacketdiagnostic การผ่านหนึ่งภาพไม่รับรองทุกภาพ ค่าdiagnosticwallclock23.091s/bytes463932ถูกคิดแยกและนำเข้าบัญชีresource24h/80GiB; คงfree-spaceguard50GiBและautomaticretry0
 
 ผลเป็นYOLO-associated application pipelineบนnativeCIHPlabels ไม่ใช่officialnative-parser reproduction STRICT_COMPLETEคะแนนหลักnullหากไม่ครบ TimingรวมCPI internalJPEGdecode/nativePNGwrites/re-reads เป็นadapter diagnostics ไม่ใช่parser-only/end-to-end latency/FPS/VRAMranking No R50/matrix/Sapiens/color/training. Rawlogs/packets/geometry/peakอยู่ `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-shared-20261028T181609262813Z` และREPORT/STATUSนี้เป็นจุดเริ่มอ่าน ไม่รันแก้OOMยาวหรือเปลี่ยนวิธีคำนวณในรอบนี้
+
+## CPI ConvNeXt-B — แก้การเชื่อม checker โดยไม่รัน diagnostic ซ้ำ (2026-10-29T01:22:01.051240+07:00)
+
+**Diagnostic0000018 PASS**: GPUforward/nativeexportสำเร็จจริงครั้งเดียวใน `cpi-convnext-shared-20261028T181609262813Z` แต่ตัวcontrollerใหม่ส่งfolderชื่อdiagnosticให้checkerที่ใช้folder.nameเป็นmodelID จึงได้KeyErrorก่อนตรวจpacket ไม่ใช่OOM/CUDA/outputmalformation ประวัติclassificationFAILEDเดิมถูกเก็บไว้ตามจริงและถูกแทนที่ด้วยผลตรวจรับจากsavedpacketนี้ ไม่แก้รายงานเดิมย้อนหลังให้ดูเหมือนไม่เกิดbug
+
+แก้เฉพาะorchestration directorybinding (futurediagnosticอยู่diagnostic/modelID) และเพิ่มhash-bound validation-only gateเพื่อใช้diagnosticที่ตรวจแล้ว ไม่rerun diagnostic ไม่เปลี่ยนcheckpoint/scientificconfig/FP32/nativepipeline/threshold.05 ตรวจexistingpacketผ่านNPZCRC/hash/model/checkpoint/input/GT/config/YOLO/evaluationbindingsและsavedmaskrescore0.50/0.75/native-reference จาก model-named read-only filesystemview Nativeintegerplanes0–19/originalgeometry500×375 ผ่าน, native26entries/final12people (เป็นoutputcountไม่ใช่accuracyclaim); transformed800×1067/padded800×1088; peakallocated4618.384MiB/reserved8484MiBภายใต้sharedGPU
+
+Freshcanonicalsegment `cpi-convnext-validation-20261028T182116250459Z` เชื่อมdiagnosticเดิมใน [verified diagnostic evidence](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/DIAGNOSTIC_RESULT.json), [readiness](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/READINESS.json), [plan](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/SEGMENT_PLAN.json), [policy](../runs/cihp-native-six-20261028T034103254470Z/cpi-convnext-validation-20261028T182116250459Z/RESOURCE_POLICY.json) Canonical pending5000/reuse0 รวม0000018ตามลำดับปกติ ไม่รวมdiagnosticpacketเป็นคะแนน นับต้นทุนdiagnostic23.091sและCPUverification/retainedartifactsในresourcebudgetเดิม Launcherยังตรวจhashgateก่อนเปิดGPU Source/config/scoringเดิมไม่แก้; targeted4CPUcasesรวมno-canonical-afterfailure,transparentobserverและsaveddiagnosticidentity/eligibilityผ่าน NoR50/matrix/Sapiens/color/training

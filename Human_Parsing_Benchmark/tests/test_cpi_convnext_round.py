@@ -30,10 +30,23 @@ class ConvNextRoundTests(unittest.TestCase):
             class Child:
                 pid=123;returncode=1
                 def __init__(self,*args,**kwargs):
-                    d=root/'diagnostic';d.mkdir();(d/'RUN.json').write_text(json.dumps({'status':'INCOMPLETE','stop_reason':'CUDA OOM fixture','warmup_images':['0000930']}))
+                    d=root/'diagnostic'/MID;d.mkdir(parents=True);(d/'RUN.json').write_text(json.dumps({'status':'INCOMPLETE','stop_reason':'CUDA OOM fixture','warmup_images':['0000930']}))
                 def wait(self,**kwargs):return 1
             with patch.object(controller,'P',out),patch.object(controller.subprocess,'Popen',Child),patch.object(controller.subprocess,'check_output',return_value='git-head'),patch.object(controller,'report') as report,patch.object(controller,'execute_validation') as validation:
                 controller.execute_diagnostic_then_validation(parent,root);validation.assert_not_called();state=report.call_args[0][2];self.assertEqual(state['status'],'BLOCKED_DIAGNOSTIC_FAILED');self.assertEqual(state['complete'],0);self.assertEqual(state['failed'],0);self.assertTrue(state['queue_stopped'])
             diagnostic=json.loads((root/'DIAGNOSTIC_RESULT.json').read_text());self.assertFalse(diagnostic['canonical_eligible']);self.assertEqual(diagnostic['image_id'],'0000018')
+
+    def test_saved_diagnostic_cannot_bypass_identity_or_eligibility(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);packet=root/'packet';packet.mkdir();(packet/'prediction.npz').write_bytes(b'fixture');audit=root/'audit.json';audit.write_text('{}')
+            sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+            d=dict(status='PASS',model_id=MID,image_id='0000018',canonical_eligible=False,frozen_config_sha256='cfg',verified_packet_path=str(packet),packet_sha256=sha(packet/'prediction.npz'),audit_state_path=str(audit),audit_state_sha256=sha(audit))
+            def write():
+                (root/'DIAGNOSTIC_RESULT.json').write_text(json.dumps(d));(root/'SEGMENT_PLAN.json').write_text(json.dumps(dict(validation_after_verified_saved_diagnostic=True,diagnostic_result_sha256=sha(root/'DIAGNOSTIC_RESULT.json'),config_sha256='cfg')))
+            write();controller.verify_saved_diagnostic_gate(root)
+            d['model_id']='CPI_R50_CIHP';write()
+            with self.assertRaises(AssertionError):controller.verify_saved_diagnostic_gate(root)
+            d['model_id']=MID;d['canonical_eligible']=True;write()
+            with self.assertRaises(AssertionError):controller.verify_saved_diagnostic_gate(root)
 
 if __name__=='__main__':unittest.main()

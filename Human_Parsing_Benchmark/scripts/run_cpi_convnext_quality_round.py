@@ -101,7 +101,7 @@ def diagnostic_report_text(root,parent,state):
 def execute_diagnostic_then_validation(parent,root):
     plan=json.loads((root/'SEGMENT_PLAN.json').read_text());cfg=json.loads((parent/'FROZEN_CONFIG.json').read_text());assert plan['model_id']==MID
     assert file_hash(__file__)==plan['controller_sha256'];assert not (root/'DIAGNOSTIC_RESULT.json').exists() and not (root/'LAUNCH.json').exists()
-    started=stamp();began=time.monotonic();diagnostic=root/'diagnostic';diagplan={**plan,'pending_ids':['0000018'],'reused_ids':[],'diagnostic_only':True,'scope':'READINESS_DIAGNOSTIC_ONLY_NOT_CANONICAL','prior_execution_seconds':0}
+    started=stamp();began=time.monotonic();diagnostic=root/'diagnostic'/MID;diagplan={**plan,'pending_ids':['0000018'],'reused_ids':[],'diagnostic_only':True,'scope':'READINESS_DIAGNOSTIC_ONLY_NOT_CANONICAL','prior_execution_seconds':0}
     write(root/'DIAGNOSTIC_PLAN.json',diagplan)
     cmd=[str(W/'.venvs/parser-legacy-cu113/bin/python'),'-B',str(P/'scripts/run_cpi_convnext_shared_segment.py'),'--config',str(W/plan['config']),'--model',MID,'--phase','validation','--output',str(diagnostic),'--segment-manifest',str(root/'DIAGNOSTIC_PLAN.json')]
     state={'status':'RUNNING_DIAGNOSTIC','round_id':root.name,'parent_run_id':parent.name,'model_id':MID,'expected':5000,'complete':0,'controller_PID':os.getpid(),'start_utc':started,'resource_mode':'SHARED_GPU_QUALITY_ONLY','queue':[MID]};write(root/'ROUND_STATUS.json',state)
@@ -135,8 +135,18 @@ def execute_diagnostic_then_validation(parent,root):
     write(root/'PRE_DIAGNOSTIC_SEGMENT_PLAN.json',plan);plan['prior_execution_seconds']+=d['wallclock_seconds'];plan['prior_retained_bytes']+=d['retained_bytes'];plan['diagnostic_result_sha256']=file_hash(root/'DIAGNOSTIC_RESULT.json');write(root/'SEGMENT_PLAN.json',plan);write(out/'SEGMENT_PLAN.json',plan)
     execute_validation(parent,root)
 
+def verify_saved_diagnostic_gate(root):
+    plan=json.loads((root/'SEGMENT_PLAN.json').read_text());d=json.loads((root/'DIAGNOSTIC_RESULT.json').read_text())
+    assert plan.get('validation_after_verified_saved_diagnostic') is True
+    assert file_hash(root/'DIAGNOSTIC_RESULT.json')==plan['diagnostic_result_sha256']
+    assert d['status']=='PASS' and d['model_id']==MID and d['image_id']=='0000018' and d['canonical_eligible'] is False
+    assert d['frozen_config_sha256']==plan['config_sha256']
+    assert file_hash(W/d['verified_packet_path']/'prediction.npz')==d['packet_sha256']
+    assert file_hash(W/d['audit_state_path'])==d['audit_state_sha256']
+
 def main():
-    a=argparse.ArgumentParser();a.add_argument('--parent',required=True);a.add_argument('--round-root',required=True);a.add_argument('--prepare',action='store_true');args=a.parse_args();parent=Path(args.parent).resolve();root=Path(args.round_root).resolve();assert root.is_relative_to(parent/'rounds')
+    a=argparse.ArgumentParser();a.add_argument('--parent',required=True);a.add_argument('--round-root',required=True);a.add_argument('--prepare',action='store_true');a.add_argument('--validation-only',action='store_true');args=a.parse_args();parent=Path(args.parent).resolve();root=Path(args.round_root).resolve();assert root.is_relative_to(parent/'rounds')
     if args.prepare:prepare(parent,root)
+    elif args.validation_only:verify_saved_diagnostic_gate(root);execute_validation(parent,root)
     else:execute_diagnostic_then_validation(parent,root)
 if __name__=='__main__':main()

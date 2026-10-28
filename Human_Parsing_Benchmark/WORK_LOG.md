@@ -171,3 +171,7 @@ CurrentuserpausesR50andexplicitlyauthorizesConvNeXtsharedqualitydiagnostic000001
 ## 2026-10-29T01:18:51.463231+07:00 — cpi-convnext-shared-20261028T181609262813Z: CPI ConvNeXt-B-only terminal
 
 StatusBLOCKED_DIAGNOSTIC_FAILED, complete0/5000. Shared resource override explicit; original config/scientific sources unchanged. Canonical artifacts validated; strict null incomplete main scores. Queue stopped; no ConvNeXt/other-model inference. Reportreports/CIHP_CONTROLLED_CONTINUATION.md. No cross-model ranking.
+
+## 2026-10-29T01:22:01.051240+07:00 — cpi-convnext-validation-20261028T182116250459Z: saved diagnostic reconciliation and canonical launch preparation
+
+Diagnosticmodelranonceandexported0000018successfully (native26/final12,peakallocated4618.384/reserved8484MiB). NewcontrollercheckerfoldernamebugKeyError misclassifiedcontractunverified; preservedoldresult/trace/commit. Fixedonlycontrolbinding and verifiedexistingpacket throughmodel-namedread-onlyview:NPZ/hash/native20/geometry/model/checkpoint/config/GT/YOLO/savedscoresPASS, noextraGPUinference. Freshlinkedcanonicalsegment5000/reuse0,diagnosticneverreusedascanonical,cost23.091s+CPUcheckandbytescharged. Addedgateidentity/eligibilityCPUcase,4targetedcasesPASS. Scientificsource/configunchanged,R50paused. Nextcommit/pushcorrectedcontrolandproofthenonecanonicaldetachedlaunch; noothermodels/retryloop.
