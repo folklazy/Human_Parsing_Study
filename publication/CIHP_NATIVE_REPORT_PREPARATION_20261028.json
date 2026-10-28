@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-28T06:47:44.774709+00:00",
+  "base_commit": "b5cbb587b5b761015f3d1f0e54d9d5179c56f741",
+  "scope": "Reporting-only source/docs/CPU reporting verification; frozen inference/scorer/config unchanged; no VAL score analysis",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "de5214a2066050383d1d639424970d8b660e6fcadc65d346664ad3207fda19cd",
+      "bytes": 7632,
+      "before_sha256": "dfd18ced9a1ef041cd95ec1f0cf6e987ad6070215492f189f131baf01de3b644"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "8e4dc489a0d0094a9b693e3656b9b102c3c4dd79c6fc3afbe8f00af72acfe37f",
+      "bytes": 14810,
+      "before_sha256": "f322b47ded18baa84e9ca03587c01b29d2f2b5464035a44cd6a6413d3a178050"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/report_cihp_batch.py",
+      "sha256": "6373532902fcdef2591b2a7f43713ca67cd39b1543bd439a44246178a5ef29b9",
+      "bytes": 15090,
+      "before_sha256": "4e09d12fe4659e10e2e19adf5f5ac356867ea314b6195d415fdea141b1f5fb4e"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py",
+      "sha256": "cfe476c8463a941e624183f26cbf62360fa5a537a2123d2e8bbc1965f352c494",
+      "bytes": 7641,
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/REPORTER_VERIFICATION.json",
+      "sha256": "48498359b1e62346619f2eb3b68abbd10d1e0b1ba1362433378c3a832ce106d1",
+      "bytes": 791,
+      "before_sha256": null
+    }
+  ]
+}

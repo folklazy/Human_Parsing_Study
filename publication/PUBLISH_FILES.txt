@@ -42,6 +42,7 @@ Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/LAUNCH_MANIFEST.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json
+Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/REPORTER_VERIFICATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -51,6 +52,7 @@ Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.j
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json
 Human_Parsing_Benchmark/scripts/audit_cihp_native.py
 Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py
+Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py
 Human_Parsing_Benchmark/scripts/report_cihp_batch.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
 Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
@@ -577,6 +579,7 @@ provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
 publication/CIHP_INTAKE_20261028T030159730335Z.json
+publication/CIHP_NATIVE_REPORT_PREPARATION_20261028.json
 publication/CIHP_SIX_EXECUTION_STARTED_20261028T034103254470Z.json
 publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json
 publication/CIHP_SIX_READINESS_20261028T034103254470Z.json

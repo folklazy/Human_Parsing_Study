@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-28T06:45:15.350757+00:00",
+  "scope": "Reporting-only CPU verification from six previously committed TRAIN packets; no inference or VAL score inspection",
+  "source": {
+    "render_cihp_comparisons.py": "cfe476c8463a941e624183f26cbf62360fa5a537a2123d2e8bbc1965f352c494",
+    "report_cihp_batch.py": "6373532902fcdef2591b2a7f43713ca67cd39b1543bd439a44246178a5ef29b9"
+  },
+  "TRAIN_image_id": "0000930",
+  "committed_panels": 6,
+  "original_grid_canvas": [
+    4000,
+    756
+  ],
+  "image_sha256": "d1261b060adfc77fa501364977e5c0a71f431400a3f1075e51fb3f817aeb42a5",
+  "active_VAL_visualization_guard_pass": true,
+  "initial_visualization_check": "NumPy2 uint8-modulo palette overflow found before rendering; renderer-only int64 indexing fix; no inference/scorer changes"
+}

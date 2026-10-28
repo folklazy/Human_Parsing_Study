@@ -1,78 +1,49 @@
-# Current active milestone — CIHP native first six
-
-[PLAN](PLAN.md) · [STATUS](STATUS.md) · [Adopted Parsing9 plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md) · [Readiness](reports/CIHP_NATIVE_READINESS.md). NativeCIHP5000, firstsixincludingCPI2;Ninjadeferred,Sapiens3aftermatrix. This explicit user plan supersedes conflicting earlierCCIHP7/10planningnotes below;historicalresultsunchanged.
-
 # Human Parsing Benchmark
 
-พื้นที่ทำงานหลักของ **แผนปัจจุบัน** สำหรับเปรียบเทียบและคัดเลือก pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระแบบ noncommercial academic research
+เปรียบเทียบ pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระ ผลเป็นการเปรียบเทียบ configuration ไม่ใช่การแยกผลของ architecture หรือข้อมูลฝึกโดยลำพัง
 
-**A_REVIEW_COMPLETE · REVIEWED_PROPOSAL** — มีข้อเสนอจาก code/metadata/หลักฐานจริงแล้ว รอ user decisions สำคัญก่อน DESIGN_READY; ยังไม่ LAUNCH_READY และไม่อนุมัติ implementation/inference/benchmark
+## เริ่มอ่าน
 
-## เริ่มอ่านตรงนี้
+**README → [STATUS](STATUS.md) → [PLAN](PLAN.md) → [decisions](docs/DECISIONS.md)**
 
-ลำดับสำหรับคนและ agent ทุกช่วง: **README → [STATUS](STATUS.md) → [PLAN](PLAN.md) → [relevant decisions](docs/DECISIONS.md)**
+แผนปัจจุบันคือ [CIHP native Parsing9](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md) ที่ผู้ใช้สั่งให้ใช้แทนข้อเสนอ CCIHP เดิม ขั้นตอนคือ **native CIHP หกตัวแรก → semantic compatibility matrix → Sapiens2 สามตัวบน CIHP → งานสีภายหลัง** การเก็บ inventory ไม่เท่ากับรัน benchmark ครบทุกรุ่น
 
-| เรื่อง | จุดอ้างอิงหลัก |
+| เรื่อง | แหล่งหลัก |
 |---|---|
-| สถานะ งานเสร็จ งานค้าง และ next action | [STATUS.md](STATUS.md) |
-| Authoritative experiment design และ A–D lifecycle | [PLAN.md](PLAN.md) |
-| Protocol review: findings, fairness, gaps และเหตุผล | [reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md) |
-| Exact checkpoints/routes/roster diff | [checkpoint matrix](registry/CHECKPOINT_ROUTE_REVIEW.csv), [routes](registry/ROUTES_PROPOSED.csv), [diff](registry/ROSTER_DIFF.csv) |
-| Mapping/requirements/risk review | [mapping](protocol/NATIVE_LABEL_MAPPING_DRAFT.csv), [requirements](registry/REQUIREMENTS_TARGETS.csv), [risks](registry/FAIRNESS_RISKS.csv) |
-| Draft specification และ exact workload proposal | [specification](protocol/REVIEWED_SPECIFICATION.json), [workload](manifests/WORKLOAD_PROPOSAL.json), [new denominators](manifests/POPULATION_DOMAIN_PROPOSAL.json) |
-| User decisions / proposals / historical boundaries | [docs/DECISIONS.md](docs/DECISIONS.md) |
-| รายชื่อที่ผู้ใช้ส่งให้ตรวจ ไม่ใช่ executable roster | [registry/CANDIDATES.csv](registry/CANDIDATES.csv) |
-| โค้ด dataset/checkpoint manifests และผลเดิม | [docs/LEGACY_REFERENCES.md](docs/LEGACY_REFERENCES.md) |
-| ที่เก็บ artifacts และ Git/local bindings | [docs/ARTIFACT_STORAGE.md](docs/ARTIFACT_STORAGE.md), [location specification](manifests/ARTIFACT_LOCATIONS.json) |
-| หลักฐาน file identities ที่ reuse | [manifests/LEGACY_EVIDENCE.json](manifests/LEGACY_EVIDENCE.json) |
-| ประวัติ work units / วิธี sync | [WORK_LOG.md](WORK_LOG.md), [docs/WORKSPACE_LAYOUT.md](docs/WORKSPACE_LAYOUT.md) |
+| สถานะและงานถัดไป | [STATUS.md](STATUS.md) |
+| กติกาที่ใช้งานปัจจุบัน | [PLAN.md](PLAN.md) |
+| Exact roster/checkpoint/source bindings | [CIHP_NATIVE_ROSTER.csv](registry/CIHP_NATIVE_ROSTER.csv), [frozen config](configs/cihp_native_six.json) |
+| Population official CIHP native VAL 5,000 | [CIHP_NATIVE_VALIDATION.json](manifests/CIHP_NATIVE_VALIDATION.json) |
+| ข้อมูลนำเข้าและ strict decoding/readiness | [intake](reports/CIHP_NATIVE_ARCHIVE_INTAKE.md), [readiness](reports/CIHP_NATIVE_READINESS.md) |
+| Launch identity และหลักฐานของ batch ปัจจุบัน | [run manifest](runs/cihp-native-six-20261028T034103254470Z/READINESS_MANIFEST.json), [launch](runs/cihp-native-six-20261028T034103254470Z/LAUNCH_MANIFEST.json) |
+| ภาพ diagnostics ที่ล็อกก่อนคะแนน | [16-image sample](manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json) |
+| ประวัติการทำงาน | [WORK_LOG.md](WORK_LOG.md) |
+| งาน/โค้ด/ผลเดิมและตำแหน่ง assets | [legacy references](docs/LEGACY_REFERENCES.md), [workspace layout](docs/WORKSPACE_LAYOUT.md) |
 
-## โจทย์และขอบเขต
+## การทดลองปัจจุบัน
 
-Phase 1 YOLO benchmark จบแล้ว ใช้ YOLO26x-Seg เป็น frozen baseline งานปัจจุบันคือ Phase 2–3: เตรียม ตรวจความพร้อม ประเมิน และคัดเลือก parsing configurations โดยใช้ **CCIHP เป็น public selection benchmark หลักตามทิศทางผู้ใช้** การกำหนดนี้ไม่ใช่การรับรองว่า annotations ถูกทุกคนหรือว่าคลาส CIHP/CCIHP ใช้เลขตรงกัน
+- First six: **QANet CIHP HRNet-W48 512×384, M2FP R101 CIHP, D2FP R101 CIHP, RP-R-CNN CIHP R50, CPI R50 CIHP, CPI ConvNeXt-B CIHP**
+- CIHP native labels 20 รวม background / 19 foreground; Dress ID6 คงเป็น Dress ไม่ใช้ CCIHP FaceMask ID6 และไม่ใช้ denominator 4,961 จากแผนเดิม
+- QANet ใช้ frozen YOLO ROI และ mask ownership อีกห้าตัวใช้ native full-frame API แล้ว association กับ frozen YOLO แบบ prediction-only; native references แยกจากผล application โดย reuse inference เดียวกัน
+- Native20 mIoU เป็นคะแนนหลัก, foreground19/per-class และ person-mask FP/FN/F1/coverage semantic quality แยกกัน ไม่เรียก custom metrics ว่า official AP/PCP
+- **STRICT_COMPLETE**: ระบบไม่ครบมีคะแนนหลัก null และยังอยู่ในตารางพร้อม failure/pending counts ไม่จัดอันดับจากภาพสำเร็จที่ต่างกัน
+- FP32/T4, native preprocessing/TTA/thresholds ที่ bind ไว้; ไม่มี automatic OOM retry, CPU/FP16 fallback หรือการ tune จาก VAL
+- เวลาเป็น synchronized parser-pipeline diagnostics ไม่รวม source I/O/export/scoring และไม่ใช่ fresh YOLO end-to-end FPS; ข้อจำกัด memory/timing อยู่ใน PLAN/config
 
-ต้องพิจารณา native full-frame และ YOLO-conditioned routes ตามความสามารถจริง รวม semantic quality, person ownership/instance quality, speed และ VRAM โดย Prompt A จะกำหนดการทดลองที่เปรียบเทียบกันได้ ขอบเขต timing และการใช้คะแนนคัดเลือก ไม่ยกค่าจาก CPI/MOTS20 หรือแผนเก่ามาเป็น defaults อัตโนมัติ
+อนุมัติรันหกตัวแรกเมื่อ readiness ผ่านแล้ว และ batch เริ่มแล้ว ดูสถานะจริงใน STATUS และ external `LAUNCH.json` ไม่ใช้ข้อความเก่าที่เคยห้าม Prompt A inference เป็นสถานะปัจจุบัน Sapiens2 0.4B/0.8B/1B ยังรอ matrix; Ninja พักไว้ งานสี/attributes/CCTV/training ยังไม่เริ่ม
 
-Phase 4 สี/attributes และ Phase 5 CCTV เป็นบริบทของ requirements สำหรับอนาคต ไม่อยู่ใน execution scope นี้ Person ID ในภาพนิ่งยังไม่หมายถึง Tracking/ReID
+## Working copy, Git และ artifacts
 
-## สิ่งที่มีอยู่แล้ว
+`Human_Parsing_Benchmark/` ระดับ workspace root เป็น working copy หลัก ส่วน `Human_Parsing_Study_Public/Human_Parsing_Benchmark/` เป็น publication copy ใน [folklazy/Human_Parsing_Study](https://github.com/folklazy/Human_Parsing_Study) ใช้ explicit path/hash sync ไม่สร้าง Git ซ้อนหรือย้ายโครงการเดิม
 
-- YOLO study และ baseline เดิม: คงที่เดิม อ่านอย่างเดียว
-- Dataset audits, checkpoint inventory, isolated environments, implementation และ bounded tests: มีหลักฐานเดิมให้ตรวจใช้ซ้ำ ไม่ดาวน์โหลด/ทดสอบทั้งหมดใหม่
-- CPI cohort เดิมปิด `FINISHED_WITH_INCOMPLETE_SYSTEMS` คะแนนหลัก null ตาม STRICT_COMPLETE ไม่ใช่ผลของแผนใหม่นี้และไม่มี quality winner
-- Roadmap 20 ตุลาคมเป็น WIP ที่เก็บต้นฉบับและ hashes แล้ว รายชื่อ 19 รุ่น/QANet สองตัวเดิมไม่เป็น launch scope ของรอบนี้
-- ผู้ใช้ส่งเจ็ด configurations จากห้า families ให้ตรวจใน Prompt A ดู registry; ยังไม่รับรอง readiness, checkpoint bindings หรือ execution
+datasets อยู่ shared `datasets/`, checkpoints อยู่ `models/`, environments อยู่ `.venvs/` โค้ด/compiled shims และหลักฐานเดิมที่ reuse ยังอยู่ตำแหน่งเดิม ไม่คัดลอก source ทั้งชุดเพื่อจัด repository
 
-## พื้นที่ทำงานและ Git
+Bulk artifacts ของ batch นี้อยู่ `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/` ชื่อนี้เป็น artifact location ที่กำหนดไว้ ไม่ได้หมายความว่าข้อมูลประเมินเป็น MHP-v2 ดู `LAUNCH.json`, `validation/<model>/RUN.json`, `FRAMES.jsonl`, `packets/` และ logs สำหรับสถานะจริง ตัวติดตามไม่เริ่ม inference/retry และจะสรุป comparative report หลัง batch สิ้นสุด ภาพเทียบใช้ sample เดิมทั้งหกระบบ ไม่มีเลือกภาพตามคะแนน
 
-Authoritative planning directory อยู่ที่ `Human_Parsing_Benchmark/` ระดับ workspace root ร่วมกับโครงการ YOLO ชื่อไม่ผูกกับ dataset เดียวหรือ version ของ implementation และไม่ต้องย้ายโค้ดเดิม
+Git เก็บ source/tests/configs/manifests/provenance/reports และ CSV สรุปที่เผยแพร่ได้ ไม่รวม datasets/weights/bulk masks/logits/logs/CCTV หรือ environment binaries การ clone repository อย่างเดียวไม่สามารถ reproduce GPU run ได้ ต้องมี external assets และ environments ตาม bindings ก่อน
 
-Reusable implementation/หลักฐานเดิมอยู่ `Human_Parsing_MHPv2_Study/` ตามเดิม ส่วน `Human_Parsing_Study_Public/Human_Parsing_Benchmark/` เป็น **publication copy** ใน Git repository เดิม [folklazy/Human_Parsing_Study](https://github.com/folklazy/Human_Parsing_Study) ไม่ใช่ working copy หลัก ไม่มี `.git` ใหม่และไม่มี automatic sync
+## ประวัติที่ยังคงไว้
 
-Clone จาก GitHub อ่านแผนและตรวจ metadata ได้ แต่ไม่มี datasets/weights/bulk artifacts หรือ implementation ล่าสุดทั้งหมด จึงยัง reproduce benchmark ใหม่ไม่ได้
+YOLO26x-Seg เป็น frozen baseline ที่เลือกแล้ว ไม่เปิดเลือกใหม่ ผล CPI กลุ่มเดิมคง `FINISHED_WITH_INCOMPLETE_SYSTEMS`/null ตามจริง และไม่ใช้เป็นคะแนนของ batch CIHP native ใหม่นี้
 
-## Current proposal and authority
-
-ใช้ PLAN.md ต่อเป็น authoritative design ไม่สร้างแผนชื่อ HUMAN_PARSING_EXPERIMENT_DESIGN_TH.md อีกชุด เปลี่ยนบทบาท CCIHP VAL เป็น checkpoint selection ตามคำสั่ง Prompt A อย่างเปิดเผย แต่ห้าม tune mappings/settings จากผล VAL และไม่อ้าง independent final confirmation
-
-เสนอ7 checkpoints / 10 configurations (7 application +3 native reference reused); C3 upper/lower/shoes shared task, C7 body/clothing compatible cohort และ Sapiens body diagnostics แยกกัน ทุกอย่างยัง REVIEWED_PROPOSAL ไม่ใช่การรับรอง roster หรือ execution
-
-Current reports/tables/specificationsมีเนื้อหาจริงแล้ว ไม่มี production configs/scripts/tests ใหม่ เก็บ input evidence และ review verification ใน runs/<review_id> ข้อมูลใหญ่ยังอยู่นอก Gitตามartifact specification
-
-**Next action:** อ่าน review/PLAN และตอบสาม design decisions ที่รวบรวมไว้ จากนั้นจึงอนุมัติ Stage B เฉพาะช่องว่าง implementation/readiness; Stage C full benchmark ต้องอนุมัติแยก ไม่มี automatic resume
-
-### Targeted Prompt A clarification (21 October 2026)
-
-Current [PLAN revision2](PLAN.md) and [review §H](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#h-การปิดหกประเด็นเฉพาะจุด--revision-2) resolve Dress/Apparel scoring versus execution, route-specific extent claims, selection margin versus uncertainty, interruption recovery proposal and storage accounting. Still REVIEWED_PROPOSAL; no new tests, B execution, inference or benchmark authorization. Draft JSON/CSV values are not active execution configurations.
-
-### Current revision3 — specification closure / B handoff
-
-[PLAN§11](PLAN.md#11-คำตัดสินคงเหลือ--ชุดเดียวก่อน-bfreeze) is the single remaining decision table; [PLAN§13](PLAN.md#13-stage-b-handoff--ระบุงานได้แล้ว-แต่ยังไม่เริ่ม) is the bounded implementation/acceptance handoff. Selectedseven/ten scope is confirmed as proposal, not launchauthorization. ApplicationC3 includes allseven across routefamilies, C7 includes supportedCIHPfour; native references separate. Mapping/evidence/view/eligibility and emptyoutcomes are explicit. Still REVIEWED_PROPOSAL, no Bimplementation/inference. [Revision3review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md#i-specification-closure-และ-stage-b-handoff--revision-3) · [qualitative sample](manifests/QUALITATIVE_REPORT_SAMPLE_DRAFT.json).
-
-### Native CIHP asset import — 28 October 2026
-
-Newly supplied archive extracted to shared `datasets/CIHP/` without overwriting existing datasets. [Import receipt](reports/CIHP_NATIVE_ARCHIVE_INTAKE.md) / [identity manifest](manifests/CIHP_NATIVE_IMPORT.json). Archive integrity/extraction verified; annotation quality and dataset-role changes are not accepted by this import. No new inference or benchmark.
-
-## Current user-adopted CIHP native milestone — 28 October2026
-
-[PLAN](PLAN.md) now implements [Parsing9 nativeCIHP plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md):CIHPfirstsix→matrix→Sapiens3;Ninjadeferred. UsecurrentSTATUS/configs/cihp_native_six.json. EarlierCCIHP7/10proposal notes above are historical, notcurrentexecutionauthority.
+ข้อเสนอ CCIHP เจ็ด checkpoints/สิบ configurations และเอกสาร Prompt A เดิมยังอ่านย้อนหลังได้ใน [protocol review](reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md), [legacy references](docs/LEGACY_REFERENCES.md) และ Git history แต่ไม่ใช่ launch scope ปัจจุบัน การเปลี่ยนแผนไม่แก้ frozen results/GT และไม่อ้างว่ารู้ผลใหม่ก่อนเริ่มรัน
