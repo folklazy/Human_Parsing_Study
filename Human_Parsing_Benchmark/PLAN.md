@@ -1,3 +1,5 @@
+> **Current scope supersedes prior full-evaluation-pending statements:** approved full C4-P revision2 on official CIHP5000; saved-only four systems + Sapiens2 0.4B. [Full config](configs/cihp_sapiens_c4p_full.json) / [report](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md). Stop after this batch.
+
 # Human Parsing Benchmark — current plan
 
 **CIHP_NATIVE_SIX_READINESS** · 28 October2026 UTC. User explicitly adopts [CIHP native Parsing9 plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md); it supersedes conflicting CCIHP-selection/7-checkpoint design provisions. Historical configs/results remain immutable and available in Git history and legacy study. This change authorizes preparation, implementation and first-six execution when readiness passes; it does not authorize Sapiens before matrix, color work or model training.
@@ -91,3 +93,7 @@ Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwar
 ## 2026-10-29T13:04:01.363721+07:00 — CPI manual CLI preparation only
 
 ผู้ใช้ขอคำสั่งรัน CPI ทั้งสองตัว จัดทำ [manual continuation CLI](docs/CPI_CONTINUATION_COMMANDS_TH.md) ที่ใช้ frozen worker/scientific settings เดิม แต่แยก operational manifest, output location และ cumulative reconciliation. CPU5casesและ existing3/113packet checksผ่าน ไม่มี inference/warmup/retryจริงใน work unit นี้ ไม่เปิด Sapiens/full common evaluation. Operatorต้องเรียก `--execute` เฉพาะรุ่นเพื่อเริ่ม manual attempt ใหม่; ไม่มี automatic next-model launch.
+
+## 2026-10-29T13:37:34.226601+07:00 — approved full C4-P
+
+Run `common-c4p-full-20261029T063458522990Z`. Same pilot scientific behavior/protocol; separate full population,6reuse+4994pending,≤1TRAINwarmup,oneGPUworker+oneCPUprocessforfour saved-onlysystems. Nativeglobalconfusionprojection checked againstpixels onfixedcrowd/Dress examples; per-personscoresrecomputedwithrevision2geometryties,notnative scalars. NoQ_C3/newmetric/bootstrap/nativeinference. Per-system5000STRICT_COMPLETE,primarynullifincomplete. Immutableattempts,80GiB/free50GiB/24h,sharedquality,noautomaticretry/fallback. Existingnative/pilot/GT unchanged; newoutputsownworkspace. Commitfreeze+launch,verifyfirstpacketthenreturn,automaticreports/Gitlogging,stopwithoutCPI/othersizes/YOLO/color/CCTV.

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "scope": "new streaming/full reporting + reused pilot scorer equivalence, not GPU acceptance",
+  "new_streaming_CPU_fixture_cases": 7,
+  "saved_integrations": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "image_id": "0021448",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "image_id": "0006909",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "image_id": "0021448",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "image_id": "0006909",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "image_id": "0021448",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "image_id": "0006909",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "image_id": "0021448",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "image_id": "0006909",
+      "projection_confusion_vs_pixels": "PASS",
+      "person_scorer_vs_frozen_revision2": "PASS"
+    }
+  ],
+  "pilot_reused_packets_checked": 6,
+  "source_native_unchanged": true,
+  "model_calls": 0
+}

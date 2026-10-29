@@ -1,3 +1,5 @@
+> **Current approved work: full CIHP–Sapiens C4-P evaluation.** [Report/status](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md) → [STATUS](STATUS.md). Saved-only four systems + Sapiens2 0.4B; reuse6/pending4,994; no CPI/other sizes/newYOLO.
+
 > **CPI operator commands prepared; no new inference.** [คำสั่ง R50 / ConvNeXt-B และ progress](docs/CPI_CONTINUATION_COMMANDS_TH.md). ใช้ผลเดิม 3/113 ภาพตามลำดับ; manual continuation ยังเสี่ยง OOM
 
 > **Current outcome: C4-P Sapiens2 0.4B pilot PASS (6/6 +1warmup,7-callbudgetconsumed).** [Closure report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU23cases/GTbindings/QANetextentparityverified; fullcommonscoresnotrun. Nativefour/CPIhistorypreserved;noautomaticnextmodel.

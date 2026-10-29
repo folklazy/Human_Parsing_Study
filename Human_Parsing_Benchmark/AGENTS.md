@@ -70,3 +70,7 @@ Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwar
 ## Latest scope — CPI commands prepared, no worker launched
 
 User requested runnable commands for both CPI models. Use docs/CPI_CONTINUATION_COMMANDS_TH.md and scripts/run_cpi_continuation.py, with frozen parser-legacy-cu113 Python. Default is CPU reconciliation only; explicit operator --execute starts one fresh manual attempt under shared-quality controls. New raw artifacts belong to Human_Parsing_Benchmark/outputs/cpi_continuations; old artifacts remain in legacy paths. CPU5cases and actual3/113 packet reconciliation passed; no new forwards, no claim OOM fixed. Do not reuse old broad queues or restart Sapiens pilot. Publication of CLI does not mean inference has launched.
+
+## Latest explicit user scope — full C4-P approved 2026-10-29T13:37:34.226601+07:00
+
+Run `common-c4p-full-20261029T063458522990Z` via configs/cihp_sapiens_c4p_full.json: saved-onlyQANet/M2FP/D2FP/RPR + Sapiens2seg0.4B5000,6pilot observationsreused+4994newVAL+≤1TRAINwarmup. Sharedquality authorized; oneGPUworker,one sequentialCPUworker;no autoretry/fallback/nextmodel. Currentfullapproval supersedes previousnot-authorizedfull statements; consumedpilotallowanceunchanged. Preserve allnative/pilot results/config/source. Do not edit hash-bound execution/scorer/source/config duringrun; firstcheckprocess/state beforeanyaction. No CPI/0.8B/1B/newYOLO/training/color/CCTV.

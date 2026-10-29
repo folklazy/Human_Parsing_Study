@@ -1,0 +1,16 @@
+{
+  "raw_prediction_arrays_GiB": 8.672606682404876,
+  "metadata_and_scores_allowance_GiB": 2.0,
+  "logs_references_gallery_allowance_GiB": 2.0,
+  "atomic_temporary_allowance_GiB": 1.0,
+  "operational_headroom_GiB": 8.0,
+  "preexisting_GT_and_native_predictions": "REFERENCED_NOT_COPIED",
+  "free_disk_GiB": 450.9494323730469,
+  "global_planning_envelope_GiB": 200,
+  "per_checkpoint_stream_cap_GiB": 80,
+  "minimum_free_GiB": 50,
+  "actual_sample_score_JSON_bytes_mean": 5362.75,
+  "ETA": null,
+  "compression_not_assumed": true,
+  "estimated_additional_total_GiB": 21.672606682404876
+}

@@ -1,0 +1,58 @@
+{
+  "original_artifacts": "PASS",
+  "records": [
+    {
+      "image_id": "0021448",
+      "manifest_sha256": "5a42e0fff2006fdce6b0f6d27f748ba55cfda07477c0a237200799c924286995",
+      "actual_sha256": "5a42e0fff2006fdce6b0f6d27f748ba55cfda07477c0a237200799c924286995",
+      "original_matches": true
+    },
+    {
+      "image_id": "0006909",
+      "manifest_sha256": "8cac99e07cfcdf8c1bdc51ec853a26a186f8c39ac3007236d56a90fb0720b229",
+      "actual_sha256": "8cac99e07cfcdf8c1bdc51ec853a26a186f8c39ac3007236d56a90fb0720b229",
+      "original_matches": true
+    },
+    {
+      "image_id": "0001538",
+      "manifest_sha256": "259e13a4a965c6f21bc7ca463cd3f28485ba1fca380d1ff6488a720da9a96879",
+      "actual_sha256": "259e13a4a965c6f21bc7ca463cd3f28485ba1fca380d1ff6488a720da9a96879",
+      "original_matches": true
+    },
+    {
+      "image_id": "0001413",
+      "manifest_sha256": "6565af0aa241b87974db1f9f8f1232111a5dde3fd5616cad75ade5f7dec06e31",
+      "actual_sha256": "6565af0aa241b87974db1f9f8f1232111a5dde3fd5616cad75ade5f7dec06e31",
+      "original_matches": true
+    },
+    {
+      "image_id": "0027897",
+      "manifest_sha256": "8b2ef5383e4454877409f33ebd145705c3b95ae437aaf2c87add36c15d042e97",
+      "actual_sha256": "8b2ef5383e4454877409f33ebd145705c3b95ae437aaf2c87add36c15d042e97",
+      "original_matches": true
+    },
+    {
+      "image_id": "0031248",
+      "manifest_sha256": "7a492130b409828dc0ccd0b327cd2b13f04efa4d462d550828df60799848498f",
+      "actual_sha256": "7a492130b409828dc0ccd0b327cd2b13f04efa4d462d550828df60799848498f",
+      "original_matches": true
+    }
+  ],
+  "original_manifest_sha256": "7c55798cbe70866696b193d453ab842cdecec33d74a5cfc0aacecb55045158f7",
+  "reviewer_copy_observation": {
+    "not_byte_identical_reported": [
+      "0021448",
+      "0006909",
+      "0027897",
+      "0031248"
+    ],
+    "matching_reported": [
+      "0001538",
+      "0001413"
+    ],
+    "independently_inspected_copy_bytes": false,
+    "transport_cause": "UNKNOWN_NOT_INFERRED"
+  },
+  "prediction_packet_checks_separate": true,
+  "manifest_not_rewritten": true
+}

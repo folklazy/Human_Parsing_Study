@@ -1,0 +1,72 @@
+[
+  {
+    "run_id": "common-c4p-full-20261029T063458522990Z",
+    "model_id": "QANet_CIHP_HRNetW48_512x384",
+    "status": "PENDING",
+    "complete": 0,
+    "expected": 5000,
+    "failed": 0,
+    "invalid": 0,
+    "missing": 5000,
+    "mIoU4": null,
+    "C3_global": null,
+    "resource_policy": null,
+    "route": "YOLO_ROI"
+  },
+  {
+    "run_id": "common-c4p-full-20261029T063458522990Z",
+    "model_id": "M2FP_R101_CIHP",
+    "status": "PENDING",
+    "complete": 0,
+    "expected": 5000,
+    "failed": 0,
+    "invalid": 0,
+    "missing": 5000,
+    "mIoU4": null,
+    "C3_global": null,
+    "resource_policy": null,
+    "route": "YOLO_ASSOCIATED_NATIVE_FRAME"
+  },
+  {
+    "run_id": "common-c4p-full-20261029T063458522990Z",
+    "model_id": "D2FP_R101_CIHP",
+    "status": "PENDING",
+    "complete": 0,
+    "expected": 5000,
+    "failed": 0,
+    "invalid": 0,
+    "missing": 5000,
+    "mIoU4": null,
+    "C3_global": null,
+    "resource_policy": null,
+    "route": "YOLO_ASSOCIATED_NATIVE_FRAME"
+  },
+  {
+    "run_id": "common-c4p-full-20261029T063458522990Z",
+    "model_id": "RPR_CIHP",
+    "status": "PENDING",
+    "complete": 0,
+    "expected": 5000,
+    "failed": 0,
+    "invalid": 0,
+    "missing": 5000,
+    "mIoU4": null,
+    "C3_global": null,
+    "resource_policy": null,
+    "route": "YOLO_ASSOCIATED_NATIVE_FRAME"
+  },
+  {
+    "run_id": "common-c4p-full-20261029T063458522990Z",
+    "model_id": "Sapiens2_0.4b",
+    "status": "PENDING",
+    "complete": 0,
+    "expected": 5000,
+    "failed": 0,
+    "invalid": 0,
+    "missing": 5000,
+    "mIoU4": null,
+    "C3_global": null,
+    "resource_policy": null,
+    "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP"
+  }
+]

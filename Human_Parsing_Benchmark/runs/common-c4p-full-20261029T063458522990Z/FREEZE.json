@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_USER_AUTHORIZED",
+  "created_utc": "2026-10-29T06:35:03.831231+00:00",
+  "config": "Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json",
+  "config_sha256": "3335a8ff86ba8f5ffef5a24d5a65f382562f8fa24996c4dee811606520dccd9e",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "source_hashes": {
+    "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+    "Human_Parsing_Benchmark/scripts/run_cihp_system.py": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+    "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+    "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e",
+    "Human_Parsing_Benchmark/src/common_view/full.py": "e917fdb37f0383e7755ffbde36629250093bf6d271827dea8f6d76535ad392ca",
+    "Human_Parsing_Benchmark/scripts/prepare_common_full.py": "9a33c4227f04df48a48b3b4b225a05b409ac71649198d7f7603357fa663a0c5c",
+    "Human_Parsing_Benchmark/scripts/run_common_full.py": "9e2b897dc6bdcc35a84fe603f299b9e7d535e925c29ce94a1d2e7d3ee14f6bcb",
+    "Human_Parsing_Benchmark/scripts/common_full_progress.py": "99b350178fab1f8b38fa9f9a5c6cfa35105cf18bd7644049f8746a97fd9595cc",
+    "Human_Parsing_Benchmark/scripts/render_common_full.py": "75f2db0e2b2dbf3b9919e01363cbc9b380606685657764aef5ffaf296b024186",
+    "Human_Parsing_Benchmark/tests/test_common_full.py": "22f5cbaa2378fb31965b72230d91b46e88d6e4bf17ab7539f7d93fdb4fcc64a5",
+    "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py": "2ef45791b00db16156cf9d4665351affb8bf593f3a0b4ead873f37d58deaf083"
+  },
+  "reused": 6,
+  "pending": 4994,
+  "GT_denominators_verified_from_bound_manifest": {
+    "G_loc": 17520,
+    "G_sem_C4": 17454
+  },
+  "source_identity_reuse": "Pilot checkpoint SHA256 retained; unchanged size+mtime, exact source revisions/hashes/environment checked",
+  "launch_commit": "TO_BE_RECORDED_BY_CONTROLLER_BEFORE_FORWARD"
+}
