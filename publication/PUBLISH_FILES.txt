@@ -202,7 +202,15 @@ Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/LAUNCH.json
+Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/RESOURCE_POLICY.json
+Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/AUTHORIZATION.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER_GUARD.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FIRST_PACKET_CHECK.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/PRELAUNCH_PUBLICATION.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/PROCESS.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/SEGMENT_LINK.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/FIRST_PACKET_CHECK.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/PROCESS.json
@@ -234,6 +242,7 @@ Human_Parsing_Benchmark/scripts/common_full_progress.py
 Human_Parsing_Benchmark/scripts/continue_cihp_batch.py
 Human_Parsing_Benchmark/scripts/cpi_convnext_progress.py
 Human_Parsing_Benchmark/scripts/cpi_r50_progress.py
+Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py
 Human_Parsing_Benchmark/scripts/materialize_common_gt.py
 Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py
 Human_Parsing_Benchmark/scripts/prepare_common_full.py
@@ -836,6 +845,7 @@ publication/CPI_CONVNEXT_MANUAL_CLOSURE_convnext-20261029T070405365918Z.json
 publication/CPI_CONVNEXT_OPERATOR_cpi-convnext-operator-20261029T065934808724Z.json
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json
 publication/CPI_MANUAL_CLI_20261029.json
+publication/CPI_MANUAL_LAUNCH_cpi-convnext-idle-gpu-20261029T151038229214Z.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json
 publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json
 publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json

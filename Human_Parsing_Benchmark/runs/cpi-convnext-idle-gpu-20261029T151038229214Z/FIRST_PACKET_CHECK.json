@@ -1,0 +1,72 @@
+{
+  "checked_utc": "2026-10-29T15:13:04.684268+00:00",
+  "first_new_image": "0001641",
+  "previously_failed_same_image": true,
+  "result": "PASS",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "segment_id": "convnext-20261029T151056554085Z",
+  "packet_sha256": "a318aa843fc461b1f4d757374f6e81d13ce887e13334fffe265c57976f265a55",
+  "metadata_sha256": "c5190001d54ec00540517ff310347278848c7e6b9ecdce8ff9124fa756b23672",
+  "integer_native20_original_geometry": {
+    "person_semantic_masks": {
+      "shape": [
+        7,
+        333,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        10,
+        13,
+        14,
+        15
+      ]
+    },
+    "native_person_semantic_masks": {
+      "shape": [
+        56,
+        333,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        1,
+        2,
+        5,
+        10,
+        13,
+        14,
+        15
+      ]
+    },
+    "raw_native_person_semantic_masks": {
+      "shape": [
+        56,
+        333,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        1,
+        2,
+        5,
+        10,
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "GT_binding_checked": true,
+  "saved_mask_scores_equal_both_thresholds": true,
+  "recorded_peak_allocated_MiB": 10489.0869140625,
+  "recorded_peak_reserved_MiB": 10718.0,
+  "controller_detached": true,
+  "model_retries": 0,
+  "no_full_population_rehash_or_rescore": true
+}

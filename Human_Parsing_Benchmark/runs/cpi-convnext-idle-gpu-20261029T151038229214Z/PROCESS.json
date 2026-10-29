@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-29T15:10:55.798895+00:00",
+  "role": "DETACHED_CPI_CONVNEXT_CONTROLLER",
+  "PID": 607715,
+  "PGID": 607715,
+  "SID": 607715,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+    "--model",
+    "convnext",
+    "--execute"
+  ],
+  "stdin": "DEVNULL",
+  "stdout_stderr": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-convnext-idle-gpu-20261029T151038229214Z/CONTROLLER.log",
+  "working_directory": "WORKSPACE_ROOT",
+  "launch_commit": "bb3ee296718a8c559e04acdd6e1613c01176d2f1",
+  "status": "INFERENCE_FIRST_PACKET_VERIFIED",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "auto_retry": false,
+  "next_model": false,
+  "birth_ticks": 19019112,
+  "worker_PID": 607888,
+  "segment_id": "convnext-20261029T151056554085Z",
+  "segment_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T151056554085Z",
+  "first_new_image": "0001641"
+}

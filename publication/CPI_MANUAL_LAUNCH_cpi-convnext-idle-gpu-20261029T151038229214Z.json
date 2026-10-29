@@ -1,0 +1,68 @@
+{
+  "work_unit": "cpi-convnext-idle-gpu-20261029T151038229214Z",
+  "created_utc": "2026-10-29T15:14:29.523177+00:00",
+  "scope": "First-party operator reporting observer and compact CPI launch/first-packet evidence only. No third-party source, datasets, images, model weights, raw logs, NPZ, or scientific code/config changes.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "e05eae4b2d9468f06133cd212522341a01fce310e85d27d65e45edae82dc1bee",
+      "bytes": 1821
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "cacba7b682fd5301c5d252a64f5c5da940d7e1764dd4f5c45dcdfd0d23720153",
+      "bytes": 55323
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+      "sha256": "5a11b24b7255d7dcf475fd2f3244742add6095f93f909b1a9dfa67014be53820",
+      "bytes": 8703
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/PROCESS.json",
+      "sha256": "574f30eba663754f1abc6cb8b358091344fefae46aa5362c0f7a0ef3b4121047",
+      "bytes": 1047
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/SEGMENT_LINK.json",
+      "sha256": "0f2142213620fc4548d8b0af698a95c7da452ce741e854fbc8aac941d4060591",
+      "bytes": 282
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FIRST_PACKET_CHECK.json",
+      "sha256": "40002d9ffc57f9f3bb2248f6e61119e25b423068f995b80c7450405fe1216d28",
+      "bytes": 1463
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER_GUARD.json",
+      "sha256": "ba762e2c6d7a920746a7dfccf2b692d3593a8cf4a9332455dcefd08db7b25606",
+      "bytes": 375
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/PRELAUNCH_PUBLICATION.json",
+      "sha256": "65e5977cfa3367e4121b35e5e0ba1625bca63b9a6c027b2a5f0511f50e5d8a79",
+      "bytes": 278
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/SEGMENT_PLAN.json",
+      "sha256": "3e324e790cd95ebd8d23859424da202d84c9b480e5257f88f36502a6ce8d100c",
+      "bytes": 77731
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/RESOURCE_POLICY.json",
+      "sha256": "4fd01b96d7b9969c23e20a49462e529b534659250c6dbf36188e55d1c66e378c",
+      "bytes": 318
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/LAUNCH.json",
+      "sha256": "106dfbab775f77eed8c6a60b5918c45965e30753778fa2351dfe697681c2a3ad",
+      "bytes": 1268
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "sha256": "325c8a3be7ef85edb436385f8845a895f961d130fec9422d8067a80c65502d06",
+      "bytes": 3264
+    }
+  ],
+  "verification": "Actual first packet readback and saved-mask scores both thresholds passed; observer syntax-only check, not execution acceptance; controller source is unchanged and authorized in launch commit."
+}

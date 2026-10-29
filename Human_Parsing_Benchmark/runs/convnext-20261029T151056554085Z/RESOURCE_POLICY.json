@@ -1,0 +1,12 @@
+{
+  "mode": "SHARED_GPU_QUALITY_ONLY",
+  "authorized_models": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "quality_only": true,
+  "timing_ranking_allowed": false,
+  "authority": "Explicit operator invocation of requested CPI continuation command",
+  "model_retries": 0,
+  "fallback": false,
+  "same_scientific_settings": true
+}

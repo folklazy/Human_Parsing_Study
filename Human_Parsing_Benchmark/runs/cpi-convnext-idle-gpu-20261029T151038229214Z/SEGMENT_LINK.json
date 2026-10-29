@@ -1,0 +1,6 @@
+{
+  "operator_record": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z",
+  "raw_segment": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T151056554085Z",
+  "segment_id": "convnext-20261029T151056554085Z",
+  "controller_PID": 607715
+}

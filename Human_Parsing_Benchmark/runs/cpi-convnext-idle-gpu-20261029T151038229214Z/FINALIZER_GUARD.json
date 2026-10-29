@@ -1,0 +1,6 @@
+{
+  "status_sha256": "e05eae4b2d9468f06133cd212522341a01fce310e85d27d65e45edae82dc1bee",
+  "source": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+  "source_sha256": "5a11b24b7255d7dcf475fd2f3244742add6095f93f909b1a9dfa67014be53820",
+  "behavior": "Read-only existing PID observer, canonical terminal report and publication only; no inference or retry"
+}
