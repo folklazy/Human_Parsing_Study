@@ -1,0 +1,63 @@
+{
+  "work_unit": "cpi-memory-repair-20261029T153956552075Z",
+  "created_utc": "2026-10-29T15:40:23.984036+00:00",
+  "scope": "Separate memory-bounded CPI diagnostic implementation/CPU acceptance/config/docs. No frozen execution/source/config edits, raw packets/images/weights/logs.",
+  "redistribution": "Adapted restoration fragment from pinned CPI-Parser/OpenMMLab Apache2 source, attribution in implementation/tests and verbatim upstream license included. No new first-party license selected.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py",
+      "sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "bytes": 5846
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_memory.py",
+      "sha256": "efe337f0e609009375b0ebf99f1ddd039f4d23ab96857fababbb28dc187e9915",
+      "bytes": 3418
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+      "sha256": "51e73c5bf12e61ea1465ba0f48758f30428921dc263a90e98ca3d4797a84c4ce",
+      "bytes": 12723
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json",
+      "sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+      "bytes": 4563
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
+      "sha256": "fbb7949765da9c894939ac22e8ec64f045fbd333d9907c8a9541618a95edbb1a",
+      "bytes": 3471
+    },
+    {
+      "path": "Human_Parsing_Benchmark/provenance/licenses/CPI-Parser-APACHE-2.0.txt",
+      "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+      "bytes": 11398
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "6c4c4b2651b8974c45981d5ffe8b9769a9cf3c982ee09e5516d0dbc9754358d7",
+      "bytes": 494
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "ba5535c2d72ad422e0e6758f212b35af3efb3178b4815ac30844ab7a16aadb55",
+      "bytes": 19785
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "22758cc4267ef58a7be4892fa08ae980ea5767cdb8a8ffd62414f725f7818817",
+      "bytes": 57004
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+      "bytes": 4563
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json",
+      "sha256": "dd2c24c8953f2794aaf58deb3d837307716de1a4de2144b4046c922381922e45",
+      "bytes": 517
+    }
+  ]
+}

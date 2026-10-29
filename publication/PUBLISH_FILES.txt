@@ -16,6 +16,7 @@ Human_Parsing_Benchmark/configs/cihp_sapiens_04b_pilot.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_08b_full.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_08b_pilot.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json
+Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json
 Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md
 Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md
 Human_Parsing_Benchmark/docs/DECISIONS.md
@@ -69,6 +70,7 @@ Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_MAPPING_PROPOSAL.json
 Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv
 Human_Parsing_Benchmark/protocol/REVIEWED_SPECIFICATION.json
 Human_Parsing_Benchmark/protocol/SAPIENS_SEGMENTATION_HEADER_EVIDENCE.json
+Human_Parsing_Benchmark/provenance/licenses/CPI-Parser-APACHE-2.0.txt
 Human_Parsing_Benchmark/registry/CANDIDATES.csv
 Human_Parsing_Benchmark/registry/CHECKPOINT_ROUTE_REVIEW.csv
 Human_Parsing_Benchmark/registry/CIHP_NATIVE_ROSTER.csv
@@ -86,6 +88,7 @@ Human_Parsing_Benchmark/reports/CIHP_SAPIENS_04B_PILOT_TH.md
 Human_Parsing_Benchmark/reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md
 Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md
 Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md
+Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md
 Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md
 Human_Parsing_Benchmark/reports/convnext-20261029T070405365918Z.md
@@ -220,6 +223,8 @@ Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/PROCES
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SEGMENT_LINK.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SOURCE_AMENDMENT.json
 Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -265,6 +270,7 @@ Human_Parsing_Benchmark/scripts/run_common_sapiens_pilot.py
 Human_Parsing_Benchmark/scripts/run_cpi_continuation.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_shared_segment.py
+Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py
 Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
@@ -276,6 +282,7 @@ Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
 Human_Parsing_Benchmark/scripts/write_four_model_report.py
 Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py
 Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py
+Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py
 Human_Parsing_Benchmark/src/cihp_benchmark/data.py
 Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py
 Human_Parsing_Benchmark/src/common_view/__init__.py
@@ -291,6 +298,7 @@ Human_Parsing_Benchmark/tests/test_common_full.py
 Human_Parsing_Benchmark/tests/test_common_view.py
 Human_Parsing_Benchmark/tests/test_cpi_continuation.py
 Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py
+Human_Parsing_Benchmark/tests/test_cpi_memory.py
 Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py
 Human_Parsing_Benchmark/tests/test_rpr_progress.py
 Human_Parsing_Benchmark/tests/test_rpr_shared_round.py
@@ -852,6 +860,7 @@ publication/CPI_CONVNEXT_OPERATOR_cpi-convnext-operator-20261029T065934808724Z.j
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json
 publication/CPI_MANUAL_CLI_20261029.json
 publication/CPI_MANUAL_LAUNCH_cpi-convnext-idle-gpu-20261029T151038229214Z.json
+publication/CPI_MEMORY_REPAIR_cpi-memory-repair-20261029T153956552075Z.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json
 publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json
 publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json

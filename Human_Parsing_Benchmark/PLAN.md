@@ -101,3 +101,7 @@ Run `common-c4p-full-20261029T063458522990Z`. Same pilot scientific behavior/pro
 ## 2026-10-29T15:14:48.282103+07:00 ? approved Sapiens2 0.8B C4-P concurrent/queued scope
 
 Run `sapiens08-c4p-20261029T081254180014Z`. User authorizes `Sapiens2_0.8b` on official CIHP VAL 5,000 under unchanged C4-P revision-2 protocol (`SHARED_GPU_QUALITY_ONLY`) alongside running `0.4B` without interrupting `0.4B` or recomputing the 4 completed saved-only models. Separate checkpoint (`e7c1655b...`), config (`967f27e2...`), output tree, and lock (`SAPIENS08.lock`). Empirical admission (`10,236.83 MiB` combined budget vs `14,911.69 MiB` usable) admits concurrent execution with automatic fallback to resource queue (`QUEUE.jsonl`) if headroom drops; 6-ID pilot automatically freezes and promotes to full 5,000 when passed. Stop after `0.4B` and `0.8B`; no `1B`, `CPI`, training, or color benchmark.
+
+## 2026-10-29T15:39:56.552075+00:00 — CPI memory repair, bounded implementation check
+
+LatestuserrequestsfixOOMafteridleGPUattempt. Implementmodel-localperson-chunkrestorationrevision1, keepfrozenCPIconfig/source/results. CPU4oracles/anchorchecked;≤3diagnosticcallsTRAIN0000930→VAL0003218→VAL0001641, oneattempt/noautoretry. RequireGPUtoy/nativeprefixequivalence, packet/geometry/nativeIDs/scorercheck andexactoldpacketregression. [Currentrepairreport](reports/CPI_MEMORY_REPAIR_TH.md). No fullcohortrestart inthisunit; futurecontinuationmustbindnewimplementationandcountdiagnosticresources.

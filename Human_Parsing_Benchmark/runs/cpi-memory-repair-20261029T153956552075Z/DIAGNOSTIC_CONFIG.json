@@ -1,0 +1,60 @@
+{
+  "run_id": "cpi-memory-repair-20261029T153956552075Z",
+  "created_utc": "2026-10-29T15:39:56.552075+00:00",
+  "authority": "Latest user requests cause and repair of CPI OOM. Bounded repair validation only; no full benchmark or automatic retry.",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "frozen_config": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-memory-repair-20261029T153956552075Z",
+  "protected_hashes": {
+    "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+    "Human_Parsing_Benchmark/scripts/run_cihp_system.py": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+    "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+    "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e",
+    "Human_Parsing_Benchmark/configs/cihp_native_six.json": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+    "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py": "51e73c5bf12e61ea1465ba0f48758f30428921dc263a90e98ca3d4797a84c4ce",
+    "Human_Parsing_Benchmark/tests/test_cpi_memory.py": "efe337f0e609009375b0ebf99f1ddd039f4d23ab96857fababbb28dc187e9915",
+    "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+    "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
+    "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+    "third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+    "third_party/human_parsing/CPI-Parser/mmdet/models/utils/parser_misc.py": "3f000ecccc831be81ca620fefcc91e8edc911abda5a18dc9b2d44e23ec8b1f0f"
+  },
+  "head_source_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+  "calls": [
+    [
+      "Training",
+      "0000930"
+    ],
+    [
+      "Validation",
+      "0003218"
+    ],
+    [
+      "Validation",
+      "0001641"
+    ]
+  ],
+  "max_model_frame_calls": 3,
+  "automatic_retries": 0,
+  "FP32": true,
+  "scientific_parameters_changed": [],
+  "implementation_revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+  "person_chunk_size": 1,
+  "canonical_benchmark": false,
+  "regression_packet": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T151056554085Z/segments/CPI_ConvNeXtB_CIHP/packets/0001641/prediction.npz",
+  "regression_packet_sha256": "a318aa843fc461b1f4d757374f6e81d13ce887e13334fffe265c57976f265a55",
+  "prior_execution_seconds": 389.39318,
+  "prior_retained_bytes": 27368778,
+  "resource_clock_sources": [
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T070405365918Z/segments/CPI_ConvNeXtB_CIHP/RUN.json",
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T151056554085Z/segments/CPI_ConvNeXtB_CIHP/RUN.json",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/CPI_ConvNeXtB_CIHP/RUN.json",
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP/RUN.json"
+  ],
+  "native_CPU_branch_above2500_pixels": "Retained exactly; not newly introduced fallback",
+  "future_continuation_requirement": "Include this diagnostic RUN execution_seconds/retained bytes in cumulative accounting; use separately bound patched implementation, never silently modify old frozen config."
+}

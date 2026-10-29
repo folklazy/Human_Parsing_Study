@@ -50,8 +50,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/PLAN.md",
-      "bytes": 19184,
-      "sha256": "82769d0450a8785ac5efd6b6c194944eb6b2f9f0972651975f9a258ac98e2919"
+      "sha256": "ba5535c2d72ad422e0e6758f212b35af3efb3178b4815ac30844ab7a16aadb55",
+      "bytes": 19785
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
@@ -60,13 +60,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 555,
-      "sha256": "252f863d8962ca2d330a86a424b633fdce98d4751fbc61e2dcc2d0ab5537597b"
+      "sha256": "6c4c4b2651b8974c45981d5ffe8b9769a9cf3c982ee09e5516d0dbc9754358d7",
+      "bytes": 494
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 56311,
-      "sha256": "925c890906f39901ac267276530cd3189cbdaaa90dc1cae53e20eb644bceaee3"
+      "sha256": "22758cc4267ef58a7be4892fa08ae980ea5767cdb8a8ffd62414f725f7818817",
+      "bytes": 57004
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -87,6 +87,11 @@
       "path": "Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json",
       "bytes": 178252,
       "sha256": "3335a8ff86ba8f5ffef5a24d5a65f382562f8fa24996c4dee811606520dccd9e"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json",
+      "sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+      "bytes": 4563
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
@@ -334,6 +339,11 @@
       "bytes": 1845
     },
     {
+      "path": "Human_Parsing_Benchmark/provenance/licenses/CPI-Parser-APACHE-2.0.txt",
+      "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+      "bytes": 11398
+    },
+    {
       "path": "Human_Parsing_Benchmark/registry/CANDIDATES.csv",
       "bytes": 1636,
       "sha256": "5af7f5101c4a3f6fd354a49ce50aa737935a0e50fabdcdd1e6212512141f8cc8"
@@ -407,6 +417,11 @@
       "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
       "bytes": 7215,
       "sha256": "0a376035f5271aee1052ded4fbeacf79143227539f4224511b2e0a3e4b5d40f3"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
+      "sha256": "fbb7949765da9c894939ac22e8ec64f045fbd333d9907c8a9541618a95edbb1a",
+      "bytes": 3471
     },
     {
       "path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
@@ -944,6 +959,16 @@
       "sha256": "2a38db1cf3e2a020296ff0226547d80af9adc1df3cd87e9a0de8e9b8b999f9c7"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json",
+      "sha256": "dd2c24c8953f2794aaf58deb3d837307716de1a4de2144b4046c922381922e45",
+      "bytes": 517
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+      "bytes": 4563
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
       "bytes": 11385,
       "sha256": "f5c5a78ec2de0b138f49a8bd853011f4db8287e9c3a705608f408683fed6c4d4"
@@ -1144,6 +1169,11 @@
       "sha256": "e3bde0f84c4c1675e5e1f20617518d93d8cbc0e2628ddcd7983f1f9bc6328196"
     },
     {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+      "sha256": "51e73c5bf12e61ea1465ba0f48758f30428921dc263a90e98ca3d4797a84c4ce",
+      "bytes": 12723
+    },
+    {
       "path": "Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py",
       "bytes": 17525,
       "sha256": "ec8a4cb5cb36823375671fa99addac7e99f68cd2f4e57101451c1555cff1bcfc"
@@ -1189,6 +1219,11 @@
       "sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99"
     },
     {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py",
+      "sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "bytes": 5846
+    },
+    {
       "path": "Human_Parsing_Benchmark/src/cihp_benchmark/data.py",
       "bytes": 1729,
       "sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134"
@@ -1227,6 +1262,11 @@
       "path": "Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py",
       "sha256": "7d5bc490d8dd70e43d6ca1e5941d87c1b5d040b0b1ce698b836076ae4da0bae6",
       "bytes": 5343
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_memory.py",
+      "sha256": "efe337f0e609009375b0ebf99f1ddd039f4d23ab96857fababbb28dc187e9915",
+      "bytes": 3418
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py",
@@ -3999,6 +4039,11 @@
       "bytes": 3087
     },
     {
+      "path": "publication/CPI_MEMORY_REPAIR_cpi-memory-repair-20261029T153956552075Z.json",
+      "sha256": "b88a787bc0dc4812bb750fc79762e57d37e748aa7a06419442bba4871759a5e5",
+      "bytes": 2629
+    },
+    {
       "path": "publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json",
       "bytes": 2602,
       "sha256": "d9ce9fa01ba04da74bd005b6f01f4b57e8c60538ddc460be2f539a4848715315"
@@ -5559,6 +5604,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T15:16:21.417411+00:00",
+  "updated_utc": "2026-10-29T15:40:23.988211+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

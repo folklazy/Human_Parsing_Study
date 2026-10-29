@@ -313,3 +313,7 @@ Controller exited; canonical INCOMPLETE, 337/5000. Existing controller reconcile
 ## 2026-10-29T22:16:21.320332+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: closure explanation
 
 Canonical337=145reused+192new, failed1/invalid0/missing4663/notattempted4662/duplicate0/mainnull. NewOOM0003218 atnativeupsampling, request4.64GiB/free3.80GiB/allocated6.88GiB/reserved9.40GiB; no attribution to architecture/externalPID/fragmentation without evidence. Controller/workerexit and GPU0empty confirmed afterclosure. Thai report condensed with exactidentity, failure evidence and expandedtraceback limitation; rawfailure/oldattempts/canonicalmetrics unchanged. No retry/new inference. Next stop and hand off report.
+
+## 2026-10-29T22:39:56.552075+07:00 — cpi-memory-repair-20261029T153956552075Z: memory implementation/CPU closure
+
+HEAD31607f8/mainclean; GPUempty/noactiveCPI/Sapiens; sourcefrozenunchanged. NativeheadupsamplesallN×20inparallel; F.pad failureconfirmed. Addedseparateperson-axisstreamingrestoration/plugin, fourindependentCPUcasesPASS/anchorinstallCPUonly. ExactFP32/channels/geometry/thresholds/allpersonsretained; noallocator/envchanges. Sourcebounddiagnostic≤3callsandresourcehistoryprepared, GPUforwardnotyetstarted. UpstreamadaptedoperationsattributedwithApache2licensecopy;firstpartylicensestatusunchanged. Nextpublishprelaunchthendetacheddiagnostic; stoperror/noautoretry/fullrun.
