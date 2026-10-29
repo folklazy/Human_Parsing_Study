@@ -269,3 +269,11 @@ Prelaunch operational correction 2026-10-29T07:03:01.257278+00:00: CPI viewer co
 ## 2026-10-29T07:04:42.498489+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
 
 Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP', 'D2FP_R101_CIHP']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.
+
+## 2026-10-29T14:09:52.447523+07:00 — convnext-20261029T070405365918Z: terminal manual attempt
+
+Detachedcontroller401349/SID401349,worker401656,launchcommit924f6c4ab033c4636b68bc279a89024dc56e3a8f. Reconcile113PASS,pending4887;TRAINwarmupPASS,32newsuccessfulVALpackets,OOM0001641request4.10GiB/allocated6.14/reserved8.86/free1.67. Bothprocessesexited,queuehalted,noautomaticretry/fallback. Finalauditnew32andprior113verified,unique145/5000,failed1/invalid0/notattempted4854/missing4855/duplicate0;mainnull. Oldfailed0001218nowresolvedbynewvalidoutputbutallattemptsretained. Read-onlyfirst-packetinspectioninitiallylookedfornonexistentnative-score thresholdfield;correctedcheckerusesvalidatedaudit/files/hashes,notalteringscoresorVALfailurecounts. No native/core/common scientific source/config changes. Otherbatchobservedrunningwithoutfailureatcheck;CPI/native20andcommonC4Preportsseparate. Thai closure reports/convnext-20261029T070405365918Z.md and canonical compact recordsreadyforGit;no furtherCPI/R50/othersizes.
+
+## 2026-10-29T07:12:06.000831+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
+
+Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP', 'D2FP_R101_CIHP', 'RPR_CIHP']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.

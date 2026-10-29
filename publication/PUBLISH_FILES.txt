@@ -161,6 +161,8 @@ Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/QANet_CIHP_H
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RESOURCE_BUDGET.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REUSE_COMPATIBILITY.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/COMPLETION.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/METRICS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_LOCATIONS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_VERIFICATION.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json
@@ -771,6 +773,7 @@ publication/CIHP_NATIVE_COMPLETION_20261028T034103254470Z.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-1.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json
+publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-4.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-shared-20261028T181609262813Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z.json
