@@ -17,7 +17,8 @@ def main():
     cfgpath=P/'configs/cihp_sapiens_04b_pilot.json';cfg=json.loads(cfgpath.read_text());raw=W/cfg['artifact_root'];record=W/cfg['record_root']
     cpu=json.loads((raw/'CPU_ACCEPTANCE.json').read_text());assert cpu['status']=='PASS'
     for p,h in cpu['source_hashes'].items():assert sha_file(W/p)==h,p
-    gt=json.loads((raw/'gt_bindings/SUMMARY.json').read_text());assert gt['count']==5000
+    gtroot=W/cfg.get('GT_binding_root',str((raw/'gt_bindings').relative_to(W)))
+    gt=json.loads((gtroot/'SUMMARY.json').read_text());assert gt['count']==5000
     assert gt['protocol_sha256']==cfg['protocol_sha256']==sha_file(W/cfg['protocol'])
     for p,h in cfg['native_preserved'].items():assert sha_file(W/p)==h,p
     ck=W/cfg['model']['checkpoint'];native_cfg=W/cfg['model']['native_config']

@@ -10,6 +10,7 @@ import numpy as np
 P=Path(__file__).resolve().parents[1];W=P.parent
 sys.path.insert(0,str(P/'src'));sys.path.insert(0,str(P/'scripts'))
 from common_view.core import load_spec,sha_file,score_packet,gt_domains
+from common_view.detector_cache import normalize_detector_masks
 from common_view.packets import atomic_json,fingerprint,write_packet,read_packet,score_saved_packet,reporter
 from common_view.sapiens_route import prepare_rgb,logits_to_native,ownership_planes
 from cihp_benchmark.data import read_image
@@ -44,8 +45,9 @@ def main():
         assert {'size':st.st_size,'mtime_ns':st.st_mtime_ns}==readiness['checkpoint_stat']
         spec=load_spec(W/config['protocol']);assert sha_file(W/config['protocol'])==config['protocol_sha256']
         for f,digest in config['native_preserved'].items():assert sha_file(W/f)==digest,f
-        binding={json.loads(l)['image_id']:json.loads(l) for l in (raw/'gt_bindings/BINDINGS.jsonl').read_text().splitlines()}
-        assert sha_file(raw/'gt_bindings/BINDINGS.jsonl')==readiness['GT_manifest_sha256']
+        gtroot=W/config.get('GT_binding_root',str((raw/'gt_bindings').relative_to(W)))
+        binding={json.loads(l)['image_id']:json.loads(l) for l in (gtroot/'BINDINGS.jsonl').read_text().splitlines()}
+        assert sha_file(gtroot/'BINDINGS.jsonl')==readiness['GT_manifest_sha256']
         pop={r['id']:r for r in json.loads((W/config['native_population']).read_text())['members']}
         detector={r['image_id']:r for r in map(json.loads,(W/config['YOLO']['validation_ledger']).open())}
         tr=json.loads((W/config['YOLO']['training_run']).read_text());train=next(r for r in tr['images'] if r['image_id']==config['warmup_id'])
@@ -72,9 +74,12 @@ def main():
             for f,digest in readiness['source_hashes'].items():assert sha_file(W/f)==digest,f
             current=ck.stat();assert {'size':current.st_size,'mtime_ns':current.st_mtime_ns}==readiness['checkpoint_stat']
             retained=sum(f.stat().st_size for f in raw.rglob('*') if f.is_file())
+            if config.get('parent_artifact_root'):
+                retained+=sum(f.stat().st_size for f in (W/config['parent_artifact_root']).rglob('*') if f.is_file())
             if retained>config['max_stream_gib']*2**30:raise RuntimeError('Streamstorage guard')
             if shutil.disk_usage(raw).free<config['minimum_free_gib']*2**30+64*2**20:raise RuntimeError('Free-space guard')
-            if time.monotonic()-start>config['max_hours']*3600:raise RuntimeError('Time guard')
+            budget_seconds=(datetime.now(timezone.utc)-datetime.fromisoformat(config.get('budget_start_utc',state['start_utc']))).total_seconds()
+            if budget_seconds>config['max_hours']*3600:raise RuntimeError('Time guard')
             free,_=torch.cuda.mem_get_info(0)
             if free<=0:raise RuntimeError('No free CUDA memory')
 
@@ -91,17 +96,19 @@ def main():
             detpath=W/'Human_Parsing_MHPv2_Study'/d['artifact']
             assert sha_file(detpath)==d['artifact_sha256']
             with np.load(detpath,allow_pickle=False) as z:extents=z['masks'].copy()
-            assert extents.dtype==bool and extents.shape==(len(d['opportunities']),h,w)
+            source_mask_dtype=str(extents.dtype)
+            extents=normalize_detector_masks(extents,len(d['opportunities']),(h,w))
             keep=[j for j,e in enumerate(extents) if e.any()]
             extents=extents[keep];ops=[d['opportunities'][j] for j in keep]
             confidence=np.array([op['score'] for op in ops],np.float32)
             stage='PREPROCESS'
             tensor,geometry=prepare_rgb(rgb,model.pipeline,model.data_preprocessor)
+            geometry.update(detector_mask_source_dtype=source_mask_dtype,detector_mask_conversion='LOSSLESS_BINARY0_1_TO_BOOL_NO_GEOMETRY_CHANGE')
             tensor=tensor.cuda()
             attempt['geometry']=geometry;state['current_image']=iid;state['current_stage']=stage
             atomic_json(raw/'CURRENT_ATTEMPT.json',attempt)
             stage='MODEL_FORWARD'
-            if state['model_frame_calls']>=7:raise RuntimeError('Callbudget exhausted')
+            if config.get('parent_model_frame_calls',0)+state['model_frame_calls']>=7:raise RuntimeError('Totalcallbudget exhausted')
             state['model_frame_calls']+=1;state['current_stage']=stage;atomic_json(raw/'RUN.json',state)
             torch.cuda.synchronize();torch.cuda.reset_peak_memory_stats();begin=time.perf_counter()
             with torch.inference_mode():

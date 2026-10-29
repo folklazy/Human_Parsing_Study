@@ -1,0 +1,17 @@
+{
+  "previous_run": "common-c4p-pilot-20261029T010410394659Z",
+  "previous_status": "STOPPED_INCOMPLETE",
+  "previous_stage": "SOURCE_BINDINGS",
+  "previous_model_frame_calls": 0,
+  "previous_invalid_setup_attempts": 1,
+  "previous_strict_load": "PASS",
+  "correction": "Lossless uint8 binary0/1 mask ->bool, no resize/threshold/geometry/ownership change",
+  "scientific_protocol_changed": false,
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "new_segment": "common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
+  "authorized_remaining_calls": 7,
+  "model_attempts_per_image_still_one": true,
+  "no_GPU_model_call_retry": true,
+  "GT_bindings_reused_from": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings",
+  "created_utc": "2026-10-29T01:29:05.186522+00:00"
+}

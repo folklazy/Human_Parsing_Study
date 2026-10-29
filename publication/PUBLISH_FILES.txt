@@ -139,8 +139,15 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-sha
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/PROGRESS_VIEWER_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/GT_BINDING_SUMMARY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/READINESS.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/RESOURCE_POLICY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/SETUP_CORRECTION.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/GT_BINDING_SUMMARY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/PILOT_COMPLETION.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/PROCESS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/PROTOCOL_AMENDMENT.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/READINESS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/RESOURCE_POLICY.json
@@ -186,6 +193,7 @@ Human_Parsing_Benchmark/src/cihp_benchmark/data.py
 Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py
 Human_Parsing_Benchmark/src/common_view/__init__.py
 Human_Parsing_Benchmark/src/common_view/core.py
+Human_Parsing_Benchmark/src/common_view/detector_cache.py
 Human_Parsing_Benchmark/src/common_view/packets.py
 Human_Parsing_Benchmark/src/common_view/sapiens_route.py
 Human_Parsing_Benchmark/tests/test_cihp_continuation.py
@@ -729,6 +737,7 @@ publication/CIHP_SIX_EXECUTION_STARTED_20261028T034103254470Z.json
 publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json
 publication/CIHP_SIX_READINESS_20261028T034103254470Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
+publication/COMMON_VIEW_BINARY_CACHE_FIX_20261029.json
 publication/COMMON_VIEW_IMPLEMENTATION_PILOT_20261029.json
 publication/COMMON_VIEW_PROTOCOL_PROPOSAL_20261029.json
 publication/CPI_CONVNEXT_DIAGNOSTIC_READY_20261028.json

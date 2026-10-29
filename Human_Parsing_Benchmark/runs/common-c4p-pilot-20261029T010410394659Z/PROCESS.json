@@ -1,0 +1,17 @@
+{
+  "pid": 220161,
+  "pgid": 220161,
+  "session_id": 220161,
+  "detached": true,
+  "stdin": "/dev/null",
+  "stdout": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/worker.log",
+  "command_workspace_relative": [
+    ".venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "Human_Parsing_Benchmark/scripts/run_common_sapiens_pilot.py",
+    "--config",
+    "Human_Parsing_Benchmark/configs/cihp_sapiens_04b_pilot.json"
+  ],
+  "launch_public_commit": "a514f3b8e39f5653d1863903754a636eda08ae66",
+  "queue": "Sapiens2_0.4b only;1warmup+6VAL;max7calls;stoponfirsterror"
+}

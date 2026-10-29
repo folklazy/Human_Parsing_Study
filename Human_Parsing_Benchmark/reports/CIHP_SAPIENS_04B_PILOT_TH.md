@@ -1,6 +1,6 @@
 # รายงาน CIHP–Sapiens2 0.4B common-view implementation และ pilot
 
-Work/run `common-c4p-pilot-20261029T010410394659Z` · Protocol `CIHP_SAPIENS_C4P / revision-2-pilot` · Updated 2026-10-29T08:20:28.215191+07:00 (UTC+07)
+Current segment `common-c4p-pilot-20261029T010410394659Z-binary-cache-fix` · Parent setup `common-c4p-pilot-20261029T010410394659Z` · Protocol `CIHP_SAPIENS_C4P / revision-2-pilot` · Updated 2026-10-29T08:20:28.215191+07:00 (UTC+07)
 
 **PRE_FORWARD_READY / PILOT_NOT_YET_LAUNCHED** — snapshot ก่อน model calls ไม่ใช่ผล pilot. ผู้ใช้อนุมัติ implementation/CPU acceptance และ pilot0.4B≤7calls ภายใต้ SHARED_GPU_QUALITY_ONLY เท่านั้น ไม่อนุมัติ full evaluation/CPI retries/รุ่นอื่น
 
@@ -14,7 +14,7 @@ Work/run `common-c4p-pilot-20261029T010410394659Z` · Protocol `CIHP_SAPIENS_C4P
 
 Newpackage `src/common_view`, scripts/materialize_common_gt.py,verify_common_view_cpu.py,prepare_common_pilot.py,run_common_sapiens_pilot.py,render_common_pilot.py แยกจากnativebenchmark configs/cihp_sapiens_04b_pilot.json binds revision2 ไม่แก้frozenworker/scorer/adapters/nativeconfigs
 
-22independentexpectedvaluecasesผ่าน actualpacket→scorer→reporter รวม tinyunion/OTHER/overlap/empty/missed/duplicate/VOID/ownerunknown/zero-denominator/geometry/IDrenaming/ties/cache/orphan/strictnull. Actualpinnedsourcepreprocessorผ่านasymmetricRGBnormalization+logit-mapback+packetfixture Savednativepackets4ระบบ×1ภาพ0021448ผ่านread-onlyintegration ไม่มีinferenceซ้ำ ดู [CPUacceptance](../runs/common-c4p-pilot-20261029T010410394659Z/CPU_ACCEPTANCE.json)
+23independentexpectedvaluecasesผ่าน actualpacket→scorer→reporter รวม tinyunion/OTHER/overlap/empty/missed/duplicate/VOID/ownerunknown/zero-denominator/geometry/IDrenaming/ties/cache/orphan/strictnull. Actualpinnedsourcepreprocessorผ่านasymmetricRGBnormalization+logit-mapback+packetfixture Savednativepackets4ระบบ×1ภาพ0021448ผ่านread-onlyintegration ไม่มีinferenceซ้ำ ดู [CPUacceptance](../runs/common-c4p-pilot-20261029T010410394659Z/CPU_ACCEPTANCE.json)
 
 MaterializeGT-onlyครบ5,000IDs: G_loc17,520, **G_sem_C4=17,454**, ownerunknown0/VOID0; ไม่ใช่การscoring5,000predictions ไม่มีpersondenominatorC3 [GTsummary](../runs/common-c4p-pilot-20261029T010410394659Z/GT_BINDING_SUMMARY.json)
 
@@ -31,3 +31,9 @@ Pendinglaunch: ≤1TRAIN0000930warmupnot-scored แล้ว VAL0021448,0006909,
 Artifactsแยกprivate workspace-relative: `Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z`; GTdomains/eligibility,BINDINGS.jsonl,CPUlogs,readiness/envอยู่แล้ว Canonicalnative/สองCPIพักคงเดิม ภาพdatasetไม่ขึ้นpublicGit เมื่อpilotมีผลให้อัปเดตรายงานนี้จากcanonicalRUN/packet/score/parity/closureและตรวจvisualgeometry/ownershipก่อนสรุป
 
 Next: commitreadiness/protocol/sourceก่อนcalls→launchdedicateddetached0.4Bonly→readback6packets/saved-maskscore/QANetextentparity→reportclosure ห้ามเปิดรุ่นอื่นหรือfullvalidationจากpilotผ่าน
+
+## Pre-forward setup correction — 2026-10-29T08:31:06.729574+07:00
+
+Parentworker220161 strictloaded406,601,693parametersแล้วหยุดSOURCE_BINDINGSเพราะreaderassertboolแต่frozenYOLOwarmupcacheเป็นuint8binary0/1; **modelcalls0**,VAL0,ไม่ใช่OOMหรือVALinferencefailure. เก็บparentRUN/EXECUTION/FAILURE/logไว้ครบ ไม่มีnativepredictionถูกทับ.
+
+แก้commonreaderเท่านั้น:validatebinary0/1+geometryก่อนlosslessastypebool ไม่มีthreshold/resize/ownershipchange. เพิ่มindependentbinaryfixtureและactual7frozen-cachepre-forwardprobes; CPU23cases+4savedpacketintegrationsผ่าน. Reusetarget/GTbindingsเดิมไม่materialize5,000ซ้ำ. Newfreshsegment common-c4p-pilot-20261029T010410394659Z-binary-cache-fix linksparent;งบรวมparent0+new≤7modelcalls,ภาพแต่ละภาพยังไม่เคยmodel-forwardในparent. เป็นsetup/retestscopeที่บันทึกชัด ไม่ใช่automaticOOM/modelretryหรือเพิ่มbudget/scientificsetting. Sharedresourceguard80GiBรวมสองsegments/time24hนับจากparentstart/free50GiBเดิม.

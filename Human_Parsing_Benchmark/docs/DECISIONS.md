@@ -88,3 +88,7 @@ The current user explicitly replaces conflicting previous plan with proposals/CI
 ## ACCEPTED_SCOPED_PILOT_ONLY — revision-2 — 2026-10-29T08:20:28.215191+07:00
 
 Latestuserexplicitlyauthorizescommonpipelineimplementation/CPUacceptanceandconditionalSapiens2_0.4b7-callpilotonlywithSHARED_GPU_QUALITY_ONLY. Geometrycanonicalmatching+identicalgeometryfallback/ambiguityreplacesnumericGT-IDordering;C3globalonly/nosecondpersondenominator. Mapping/Faceproxy/OTHERunchanged. Nativefrozenpipeline/results/CPIpausedimmutable. [Currentreport](../reports/CIHP_SAPIENS_04B_PILOT_TH.md); runcommon-c4p-pilot-20261029T010410394659Z. Fullcommon5,000/othermodels/training/color/CCTVnotauthorized.
+
+## 2026-10-29T08:31:06.729574+07:00 — binary-cache setup correction, same scientific protocol/budget
+
+Parent common-c4p-pilot-20261029T010410394659Z strictloadPASS then SOURCE_BINDINGSINVALID:uint8binary0/1cacheexpectedbool, modelcalls0,VAL0,noOOM. Keepfailure/process/log/ledgerhistory. Losslessvalidatedbinaryastypeboolonly;23CPUoraclecases+actual7cacheprobes+4savednativepacketintegrationsPASS. Fresh common-c4p-pilot-20261029T010410394659Z-binary-cache-fix usesparentGTbindingsandmaxaggregate7calls (parent0),oneactualforwardattempt/image,noautomaticmodel/OOMretry.80GiBaggregatesbothsegments,time24hfromparentstart,free50GiBunchanged. Revision2mapping/Face/OTHER/C3/scoringunchanged;newimplementationhashesandsetupcorrectionrecordbeforelaunch. Nextcommitfix/readinessthenboundedpilotonly.

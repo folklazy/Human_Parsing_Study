@@ -1,5 +1,5 @@
 {
-  "run_id": "common-c4p-pilot-20261029T010410394659Z",
+  "run_id": "common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
   "protocol": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
   "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
   "model": {
@@ -33,8 +33,8 @@
   "minimum_free_gib": 50,
   "max_stream_gib": 80,
   "max_hours": 24,
-  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z",
-  "record_root": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z",
+  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
+  "record_root": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
   "native_population": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json",
   "native_population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
   "YOLO": {
@@ -81,5 +81,10 @@
     1024,
     768
   ],
-  "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP"
+  "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+  "parent_run_id": "common-c4p-pilot-20261029T010410394659Z",
+  "parent_artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z",
+  "parent_model_frame_calls": 0,
+  "budget_start_utc": "2026-10-29T01:23:17.916957+00:00",
+  "GT_binding_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings"
 }

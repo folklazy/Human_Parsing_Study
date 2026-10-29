@@ -1,0 +1,14 @@
+{
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "minimum_free_gib": 50,
+  "max_stream_gib": 80,
+  "max_hours": 24,
+  "max_model_frame_calls": 7,
+  "automatic_model_OOM_retry": 0,
+  "explicit_user_amendment": true,
+  "no_other_process_modification": true,
+  "no_system_GPU_changes": true,
+  "timing_ranking_allowed": false,
+  "scope": "Sapiens2_0.4b pilot only",
+  "reason": "Quality/output/scorer/completeness priority; explicit sharing authorization"
+}

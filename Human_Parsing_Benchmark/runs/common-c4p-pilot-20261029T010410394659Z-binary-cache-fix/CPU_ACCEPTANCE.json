@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-29T01:29:11.915028+00:00",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "tests_scope": "independentrequirementsfixtures including actualCPUsourcepreprocessor and packet/scorer/reporter; not wholeprojecttestsuite",
+  "counterexample": {
+    "mask_IoU": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "native_legacy_Q_before_after_GTID_rename": [
+      1.0,
+      0.0
+    ],
+    "amended_geometry_Q_before_after_GTID_rename": [
+      1.0,
+      1.0
+    ],
+    "alternative_assignment_Q": [
+      1.0,
+      0.0
+    ],
+    "limitations": "identicalGTgeometryusesstableIDfallback;identicalpredgeometryusespacketindex;ambiguityreported,no unconditionalgeometryresolution"
+  },
+  "C3": "GLOBAL_ONLY_FACE_VALID_NEGATIVE_NO_SECOND_PERSON_DENOMINATOR",
+  "saved_packet_integrations": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0021448",
+      "packet_sha256": "6eda4c5a2956998a6b32d9ad0ab9818e7a3798cd98340f3346cd98ee6bc67f4b",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0021448",
+      "packet_sha256": "38344ea0ec2c5217ae02747a3c7dc0a864a086cf58933de2bef75beaea198faa",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0021448",
+      "packet_sha256": "5141a3b41f4ea3f8082f68d5809d764820e15aac0a0709bf7e6ca73e7c54ae77",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0021448",
+      "packet_sha256": "9741c92eb31ff009b9acb01eaf68dbeb0ff47c5544a5f43987c55ffc5fe3c026",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    }
+  ],
+  "actual_frozen_detector_cache_probes": [
+    {
+      "image_id": "0000930",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "df4413a0c95d149a145f25a552cbbe26544b8f0945f3405d9ac940385113304b"
+    },
+    {
+      "image_id": "0021448",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "4b86efdce23e4bbd02283c3e673243ffb372162f5f8871804503e20d3803bfd5"
+    },
+    {
+      "image_id": "0006909",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "bfdf04d48b5ef318a0fe8e068813cf863cf539db3189cba11884da9f7c1db56f"
+    },
+    {
+      "image_id": "0001538",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "8586bea231abd8b3f3d9d4aa81305c9999bc1134620f7f390f40064b14938962"
+    },
+    {
+      "image_id": "0001413",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "d68feea4c7781a7906610ec10448199328df4fbfc3052ea2f497e375b9555dd8"
+    },
+    {
+      "image_id": "0027897",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "5ee3b77b284aa36e8ec89a993fef60438e9d5037059ac65003ee64d12a8790da"
+    },
+    {
+      "image_id": "0031248",
+      "source_dtype": "uint8",
+      "normalized_dtype": "bool",
+      "same_binary_geometry": true,
+      "artifact_sha256": "505b41dc3b3a7cb8b973b96396b95c8b450534909c3c9f609eb56466d15640e8"
+    }
+  ],
+  "model_forward_calls": 0,
+  "seconds": 6.183196299010888,
+  "source_hashes": {
+    "Human_Parsing_Benchmark/src/common_view/__init__.py": "088f101ec3f110ead4df3f62b9f052afcea4cfb83c4f578ccbcb5180a5d597f1",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/detector_cache.py": "f1e1d94f8ca37fc4ef8834faa2f71bc12e9bab62d016c3979588286d651fa18b",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/tests/test_common_view.py": "b480d2deec3bf1568f7a2a8f6f1a5dce4859e3e08b4728008f84845afd190dc6",
+    "Human_Parsing_Benchmark/scripts/verify_common_view_cpu.py": "a0a2eb5bad2ec9dc8d845d386b49326b86cddf0ecbb820c2356b74bf41ecf814"
+  },
+  "native_preserved": "PASS"
+}

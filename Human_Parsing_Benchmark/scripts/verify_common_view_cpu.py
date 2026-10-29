@@ -6,6 +6,7 @@ import numpy as np
 P=Path(__file__).resolve().parents[1];W=P.parent
 sys.path.insert(0,str(P/'src'))
 from common_view.core import load_spec,sha_file,score_packet
+from common_view.detector_cache import normalize_detector_masks
 from common_view.packets import atomic_json,score_saved_packet,reporter
 from cihp_benchmark.data import read_image
 
@@ -37,6 +38,17 @@ def main():
         integrations.append({'model_id':x['model_id'],'image_id':'0021448','source_packet':x['packet'],
                              'packet_sha256':before['prediction.npz'],'source_members_unchanged':True,
                              'packet_scorer_reporter':'PASS','scope':'one saved frame only; not fullbenchmark'})
+    cache_probes=[]
+    val={r['image_id']:r for r in map(json.loads,(W/config['YOLO']['validation_ledger']).open())}
+    training=json.loads((W/config['YOLO']['training_run']).read_text())
+    warm=next(r for r in training['images'] if r['image_id']==config['warmup_id'])
+    for iid,d in [(config['warmup_id'],warm)]+[(iid,val[iid]) for iid in config['pilot_ids']]:
+        path=W/'Human_Parsing_MHPv2_Study'/d['artifact'];assert sha_file(path)==d['artifact_sha256']
+        wh=d.get('original_wh',d.get('wh'))
+        with np.load(path,allow_pickle=False) as z:source=z['masks'].copy()
+        mask=normalize_detector_masks(source,len(d['opportunities']),(wh[1],wh[0]))
+        assert np.array_equal(source,mask)
+        cache_probes.append(dict(image_id=iid,source_dtype=str(source.dtype),normalized_dtype=str(mask.dtype),same_binary_geometry=True,artifact_sha256=d['artifact_sha256']))
     # Evidence of the actual old-ID-dependent counterexample and the amended invariance.
     from cihp_benchmark.evaluation import score_frame
     c=np.array([[5,9]],np.uint8);p=np.array([[[5,0]],[[0,9]]],np.uint8);e=np.ones((2,1,2),bool);scores=np.ones(2)
@@ -54,7 +66,7 @@ def main():
                                'amended_geometry_Q_before_after_GTID_rename':new,'alternative_assignment_Q':[1.,0.],
                                'limitations':'identicalGTgeometryusesstableIDfallback;identicalpredgeometryusespacketindex;ambiguityreported,no unconditionalgeometryresolution'},
              'C3':'GLOBAL_ONLY_FACE_VALID_NEGATIVE_NO_SECOND_PERSON_DENOMINATOR',
-             'saved_packet_integrations':integrations,'model_forward_calls':0,'seconds':time.perf_counter()-t0,
+             'saved_packet_integrations':integrations,'actual_frozen_detector_cache_probes':cache_probes,'model_forward_calls':0,'seconds':time.perf_counter()-t0,
              'source_hashes':{str(p.relative_to(W)):sha_file(p) for p in sources},'native_preserved':'PASS'}
     atomic_json(raw/'CPU_ACCEPTANCE.json',receipt);atomic_json(record/'CPU_ACCEPTANCE.json',receipt)
     print(json.dumps({'status':'PASS','tests':result.testsRun,'saved_packets':len(integrations),'counterexample':receipt['counterexample']}))

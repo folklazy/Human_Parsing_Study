@@ -34,6 +34,14 @@ class CommonViewAcceptance(unittest.TestCase):
             self.assertEqual(json.loads((Path(temp) / 'REPORT.json').read_text()), report)
             return row['scores']['0.5'], row['scores']['0.75'], report
 
+    def test_binary_cache_representation_not_new_mask_policy(self):
+        from common_view.detector_cache import normalize_detector_masks
+        a=np.array([[[0,1],[1,0]]],np.uint8)
+        b=normalize_detector_masks(a,1,(2,2))
+        self.assertEqual(b.dtype,bool);np.testing.assert_array_equal(b,[[[False,True],[True,False]]])
+        np.testing.assert_array_equal(a,[[[0,1],[1,0]]])
+        with self.assertRaises(ValueError):normalize_detector_masks(np.array([[[255]]],np.uint8),1,(1,1))
+
     def test_total_native_mapping_expected_literal_values(self):
         np.testing.assert_array_equal(project(np.arange(20,dtype=np.uint8),SPACE,SPEC),
             [0,5,2,5,5,3,5,3,5,4,5,5,4,1,5,5,5,5,5,5])
