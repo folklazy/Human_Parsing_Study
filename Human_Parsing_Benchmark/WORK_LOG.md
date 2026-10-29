@@ -251,3 +251,7 @@ Outputsfullconfig/newcode/tests,runs/common-c4p-full-20261029T063458522990Z/free
 ## 2026-10-29T13:43:06.533541+07:00 — common-c4p-full-20261029T063458522990Z: detached launch verified
 
 Launchcommitb64eeb98128f9178ac5556d302c1efd8e92dad64;controllerPID/PGID/SID380379,reparentedPID1,stdinDEVNULL,stdoutcontroller.log. GPUworkerPID380414;standardTRAINwarmupPASS,firstnewVAL0000001atomicCOMMIT/native29/originalgeometry/YOLOownership/savedscorechecksPASS. Freeze6reuse/4994pending;observedcomplete45/5000,newVALcalls40(mayincludeinflight). CPUoneprocessstates{'QANet_CIHP_HRNetW48_512x384': {'status': 'SCORING', 'complete': 565, 'pid': 381824}, 'M2FP_R101_CIHP': {'status': 'PENDING', 'complete': 0, 'pid': None}, 'D2FP_R101_CIHP': {'status': 'PENDING', 'complete': 0, 'pid': None}, 'RPR_CIHP': {'status': 'PENDING', 'complete': 0, 'pid': None}};no saved-model/YOLOinference. No errors/fallback/retry observed at first check. Workerbatchcontinues;noongoingagentpolling. Logs/status/progress and fullThai report linked. Stopafterapproved5-systemscope.
+
+## 2026-10-29T06:50:15.391287+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
+
+Completed systems: ['QANet_CIHP_HRNetW48_512x384']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.
