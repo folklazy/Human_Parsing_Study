@@ -1,10 +1,10 @@
 # ข้อเสนอ common view สำหรับ CIHP–Sapiens2: face, hair, uppercloth, lowercloth
 
-สถานะ **PROPOSED_NOT_FROZEN** · Protocol `CIHP_SAPIENS_C4P`, revision `proposal-1` · Work unit `common-view-proposal-20261029T004437Z` · 29 ตุลาคม 2026 (เวลาไทย UTC+07)
+สถานะ common full evaluation **NOT_AUTHORIZED**; revision **`revision-2-pilot` ACCEPTED_SCOPED_PILOT_ONLY** · Protocol `CIHP_SAPIENS_C4P` (proposal-1 history ที่commit7218282) · Work unit `common-view-proposal-20261029T004437Z` · 29 ตุลาคม 2026 (เวลาไทย UTC+07)
 
-เอกสารนี้เป็นทางเข้าหลักของ **ข้อเสนอ** common view พร้อมแผนตรวจ implementation ไม่ใช่ผล common-view evaluation หรือคำอนุมัติรัน งานนี้ทำหลังเห็นผลสี่ระบบแล้ว จึง **ไม่ใช่ preregistered/confirmatory protocol** เลือก projection จากนิยามและข้อจำกัดของข้อมูล ไม่ใช้คะแนน VAL เลือก mapping, thresholds หรือวิธี postprocess
+เอกสารนี้เป็นทางเข้าหลักของ common-view definitions: ผู้ใช้อนุมัติ implementation/CPU acceptance และ conditional0.4Bpilot≤7calls ในรอบใหม่แล้ว แต่ **ไม่อนุมัติ full common evaluation** อ่าน [รายงาน implementation/pilot](CIHP_SAPIENS_04B_PILOT_TH.md) สำหรับสถานะจริง ข้อเสนอเดิมที่commit7218282ไม่ใช่คำอนุมัติรันย้อนหลัง งานนี้ทำหลังเห็นผลสี่ระบบแล้ว จึง **ไม่ใช่ preregistered/confirmatory protocol** เลือก projection จากนิยามและข้อจำกัดของข้อมูล ไม่ใช้คะแนน VAL เลือก mapping, thresholds หรือวิธี postprocess
 
-อ่านประกอบ: [ผล native CIHP สี่ระบบ](CIHP_FOUR_MODEL_RESULTS_TH.md), [draft specification](../protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json), [mapping ครบ 49 native IDs](../protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv), [หลักฐานที่ตรวจจริง](../runs/common-view-proposal-20261029T004437Z/EVIDENCE.json)
+อ่านประกอบ: [ผล native CIHP สี่ระบบ](CIHP_FOUR_MODEL_RESULTS_TH.md), [revision-2 pilot specification](../protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json), [mapping ครบ 49 native IDs](../protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv), [หลักฐานที่ตรวจจริง](../runs/common-view-proposal-20261029T004437Z/EVIDENCE.json)
 
 ## 1. ข้อเสนอหลักที่แนะนำ
 
@@ -19,7 +19,7 @@
 
 **ขอบเขตคำอ้าง:** C4-P ไม่ใช่ strict semantic/annotation equivalence ของสี่คลาส ไม่ใช่ official CIHP reproduction ของ Sapiens และไม่รับรองว่า parser ส่ง face-only หรือ upper/lower ของเดรสได้ คะแนน C4-P สูงหรือ pilot ผ่าน **ยังไม่เท่ากับผ่าน minimum สี่ target แบบ strict** หากต้องใช้ face-only ที่แยกคอ หรือเสื้อผ้าบน/ล่างของเดรสจริง ต้องเพิ่มข้อมูล/โมดูลและประเมินเป็น task/configuration ใหม่
 
-คำแนะนำนี้เลือกวิธีดำเนินการให้แล้ว ไม่ปล่อยแต่ละแถวเป็น UNKNOWN เพื่อรอผู้ใช้เลือกทั้งหมด: เดิน implementation verification และ pilot ที่มีขอบเขตตามข้อ 10 เมื่อได้รับคำสั่งรอบถัดไป; ไม่รื้อ native benchmark ไม่ rerun สี่โมเดลเพื่อเปลี่ยน input route และไม่เพิ่ม auxiliary model ในข้อเสนอหลัก
+คำแนะนำนี้เลือกวิธีดำเนินการให้แล้ว ไม่ปล่อยแต่ละแถวเป็น UNKNOWN เพื่อรอผู้ใช้เลือกทั้งหมด: ผู้ใช้อนุมัติ implementation verification และ conditionalpilot ตามข้อ10ในรอบปัจจุบันแล้ว ให้ดูactualสถานะในpilotreport; ไม่รื้อ native benchmark ไม่ rerun สี่โมเดลเพื่อเปลี่ยน input route และไม่เพิ่ม auxiliary model ในข้อเสนอหลัก
 
 ## 2. Baseline และสิ่งที่ยังคงเดิม
 
@@ -27,7 +27,7 @@
 
 ผล QANet/M2FP/D2FP/RP-R-CNN คง COMPLETE ตัวละ 5,000 official CIHP VAL IDs จาก canonical completion เดิม CPI R50/ConvNeXt-B **พัก ไม่ได้ยกเลิก** ผลสำเร็จ 3/113 IDs และ OOM history คงเดิม คะแนนหลัก null ตาม STRICT_COMPLETE ไม่ใช้ subset มารวม comparison นี้ ไม่มี current worker/controller ของ CIHP/CPI ตรงกับ process scan ตอนเริ่มงาน; ไม่ได้อ้างว่า GPU หรือ server ทั้งเครื่องว่าง
 
-Frozen config `configs/cihp_native_six.json`, adapters/scorer/worker, native results, source GT, population, checkpoint bindings และ draft matrix เดิมไม่เปลี่ยน รอบนี้ไม่มี inference, pilot, training, common-view full scoring หรือการแก้ active config/source รายละเอียดตรวจซ้ำอยู่ [consistency receipt](../runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json)
+Frozen config `configs/cihp_native_six.json`, adapters/scorer/worker, native results, source GT, population, checkpoint bindings และ draft matrix เดิมไม่เปลี่ยน รอบproposal-1ไม่มี inference/pilot/implementation;รอบrevision2อนุมัติแยกcommonimplementationและpilotเท่านั้น ยังไม่มีfullcommonscoringหรือแก้nativeconfig/source รายละเอียดตรวจซ้ำอยู่ [consistency receipt](../runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json)
 
 ประชากรของข้อเสนอคือ [native CIHP Validation 5,000 IDs](../manifests/CIHP_NATIVE_VALIDATION.json), SHA256 `0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7` ไม่ใช่ CCIHP main4,961/Ninja ประชากร VAL นี้ใช้เปรียบเทียบ/คัดเลือก application configurations ได้ตามแผนปัจจุบัน แต่ไม่ใช่ independent unseen final test และห้าม tune จากคะแนน VAL
 
@@ -132,9 +132,9 @@ Primary: **`C4P_global_mIoU4`** และ IoU ของสี่ targetเสม
 
 - GT extent ของคน i: `E_i=(H==i)∩V` ที่ไม่ว่าง; G_loc เป็นจำนวนดังกล่าวทั้งประชากร ผูก source Human_ids/population/valid-domain hashes ใหม่ แม้คาดว่าเลขเดิม17,520จะตรง ก็ไม่ใช้เลขนั้นแทนการ materialize bindings
 - Predicted extent ใช้ **source extent ของ application** ตัดเฉพาะ source VOID เดียวกันขณะให้คะแนน ไม่ตัดตาม target semantics; raw extents ต้อง nonempty ถ้าเหลือเฉพาะ VOID หลังตัดให้บันทึก VOID_ONLY extent แยกและไม่นำมานับ extent FP ไม่เปลี่ยนผล global ซึ่ง VOID ถูกตัดอยู่แล้ว
-- Matching แบบ one-to-one mask IoU ที่0.50หลัก/0.75เสริม: maximize จำนวน eligible pairs ก่อน แล้ว maximize sum IoU ขอบเขต exact tie ของ common scorer ต้อง deterministic ตาม GT ID เรียงขึ้น/packet index เรียงขึ้น (sum-IoU optima ที่ต่างกันไม่เกิน absolute1e-12 ถือเป็นtie แล้วเลือก lexicographically first optimum; thresholdeligibilityเป็นinclusive≥0.50/0.75); ต้องมี hand-checked tie case ไม่ฝาก correctness ไว้กับ SciPy version อย่างเดียว ข้อนี้ระบุให้ common scorer ใหม่ ไม่ re-score/แก้ native20 matching ย้อนหลัง
+- Matching แบบ one-to-one mask IoU ที่0.50หลัก/0.75เสริม: maximize จำนวน eligible pairs ก่อน แล้ว maximize sum IoU ใช้ geometry canonical ordering `(bbox y0,x0,y1,x1,area,sumY,sumX,packedbooleanmaskbytes)` แล้วเลือก lexicographic optimum บนลำดับนี้ใน sum-IoU tolerance1e-12 โดยไม่ใช้semanticclass/quality เลือกคู่ thresholdinclusive≥0.50/0.75; ถ้าGTgeometryเหมือนกันจริง fallbackstableGTID และถ้าpredgeometryเหมือนกัน fallbackpacketindex พร้อมรายงานalternativeoptimum/identicalgeometrygroups รับรองGT-IDrenaminginvarianceเฉพาะGTgeometryต่างกัน ไม่รับรองpredictionpermutationinvarianceเมื่อgeometryเหมือนกัน Native20matching/resultsคงเดิม
 - Count TP=#pairs, FP=#evaluated pred extents−TP, FN=G_loc−TP; P=TP/(TP+FP),R=TP/G_loc,F1=2TP/(2TP+FP+FN) denominator0→null ไม่เรียก parsing AP หรือ parser-native ownership accuracy
-- G_sem(C4) = จำนวน GT persons ที่มีอย่างน้อยหนึ่ง target1..4 บน Vp; derive GT-only รายภาพ/คนและ freeze ก่อนอ่านคะแนน เปลี่ยน target setแล้วต้อง derive G_sem(C3) แยก ไม่สืบทอด17,520หรือเลือกคนที่โมเดลทำนายสำเร็จ
+- G_sem(C4) = จำนวน GT persons ที่มีอย่างน้อยหนึ่ง target1..4 บน Vp; derive GT-only รายภาพ/คนและ freeze ก่อนอ่านคะแนน เปลี่ยน target setแล้วต้อง **ไม่สร้าง G_sem(C3)/Q_C3**; C3เป็นglobalmean2/3/4เท่านั้น และFaceยังvalidnegative; ไม่สืบทอด17,520สำหรับC4หรือเลือกคนที่โมเดลทำนายสำเร็จ
 - สำหรับ matched eligible GTi สร้าง GTperson plane เป็น projected category เฉพาะ H=i,ที่อื่น BG; เทียบ paired prediction บน **Vp ทั้งภาพ** ให้ K_i เป็น union ของ target IDs1..4 ที่มีใน GTperson หรือ paired prediction เฉลี่ย IoU ของ K_i เพื่อได้ q_i; OTHER/BG ไม่เป็น positive target แต่ยังเป็น negatives Unmatched eligible GT ให้ q_i=0 แล้ว `Q_C4_GT=sum q_i/G_sem`; G_sem0→null
 - ไม่มี predicted person → GTคนถูกพลาดตามmatching มี valid extentแต่ semantic-empty/OTHER-only → retainและจับคู่ได้; ถ้า GTมีtarget,q_i=0 การใช้คำว่า empty prediction ต้องระบุ empty person list หรือ empty target semantics ไม่รวมเป็นกรณีเดียว
 - Unmatched predictions เป็น extentFP และมีผล global semantic FP เมื่อทับ negative pixels แต่ไม่ถูกลงโทษโดยตรงใน GT-onlyQ จึงห้ามเรียก Q leader ว่า overall winnerโดยลำพัง ต้องเปิด FP/F1 และ per-target support/limitations พร้อมกัน
@@ -203,7 +203,7 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 |Probability-union,calibration,softmetrics/APทุกแบบ|ไม่รองรับครบจากcanonicalhardmasks|nativepixelprobabilities/partconfidencesสูญไปแล้ว confidenceที่มีส่วนใหญ่ระดับperson/YOLO ไม่fabricateเป็นsemanticprobability; optionalpilotlogitrecordไม่ทำให้สี่ระบบเก่ากู้logitsได้|
 |Timing/VRAMranking|ไม่รองรับจากชุดนี้|ต้องcleanmatchedprofileแยกหากได้รับอนุมัติ ไม่เอาYOLOcachedreadtimeเป็นYOLOinference|
 
-## 9. แผนตรวจ implementation ที่มอบหมายได้ โดยยังไม่ทำในรอบนี้
+## 9. เกณฑ์ตรวจ implementation (หลักฐาน actual revision2 อยู่ใน pilot report)
 
 ให้ implement common projection/scorer/reporter **แยกmodule/config/outputversion** จาก frozennativepipeline เริ่มCPUexpectedcasesก่อนmodelpilot ใช้packetจริงเดิมเฉพาะread-onlygeometry/integration; ไม่รับรองevaluatorจากtestcount
 
@@ -219,7 +219,7 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 
 ### 9.1 Expected results ที่คำนวณได้โดยอิสระ
 
-ค่าต่อไปนี้เป็น **ข้อกำหนด fixtures ไม่ใช่ tests ที่รันแล้ว** ใช้ arraysเล็กที่เขียนค่าตรงและexpectedfractionsคำนวณมือ ห้ามgenerateexpectedจากfunctionunder-test ยืนยันnumericresultsกับreporterไม่ใช่เพียงprocessreturn0
+ค่าต่อไปนี้เป็น **expectedrequirementsfixtures**; การตรวจจริง22CPUcasesและsavedpacketintegrationระบุในpilotreport/CPU_ACCEPTANCE.json ไม่ใช้เพียงจำนวนtestsรับรองทุกเส้นทาง ใช้ arraysเล็กที่เขียนค่าตรงและexpectedfractionsคำนวณมือ ห้ามgenerateexpectedจากfunctionunder-test ยืนยันnumericresultsกับreporterไม่ใช่เพียงprocessreturn0
 
 |กรณี|Expected results|
 |---|---|
@@ -237,7 +237,7 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 |SharedVOID|เพิ่มGT255pixelพร้อมpredtargetที่จุดนั้นไม่เปลี่ยนconfusion/Q/extent-domainของทุกโมเดล;pred255บนanypixelยังinvalidตามoutputcontract|
 |Ownerunknown|GTFace/Human0pixelเข้ากlobalFacecountsแต่ไม่เข้าG_sem/personsemanticdomain;sameVpทุกระบบ|
 |Zeroeligibility/emptyclass|G_sem0→Qnullพร้อมreason;zero-unionclassIoU0fixedmacro,precision/recall0denominator→null;ไม่แทนmissingfailureด้วย0|
-|Tie/ordering|equalIoUeligiblepairsเลือกlexicographicallyfirstoptimalGTID/predindex;scoretieglobalเลือกlowerpacketindex;เปลี่ยนfilesystemiterationorderไม่เปลี่ยนผลเมื่อpacketindicesคงเดิม|
+|Tie/ordering|equalIoUeligiblepairsเลือกlexicographicallyfirstoptimalgeometryorderและstablefallbackเฉพาะidenticalgeometry;scoretieglobalเลือกlowerpacketindex;เปลี่ยนfilesystemiterationorderไม่เปลี่ยนผลเมื่อpacketindicesคงเดิม|
 |Contractfailure/partialoutput|unknownnativeID,shapeผิด,NaNscoreหรือmissingcommit→invalid/incomplete/mainnull;recognizedunsupportedยังCOMPLETE;interruptionเก็บorphanไม่reuseจนfingerprintsreconcile|
 |Isolation|packet/GTsameแต่เปลี่ยนprotocol/source/checkpoint/detectorbindingต้องไม่reusewrongcache;ไม่overwriteoriginalnativeartifact;roundtripJSONใช้nullไม่NaN|
 
@@ -245,7 +245,7 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 
 ## 10. Pilot ที่เสนอ: Sapiens2 0.4B เพียงหนึ่งขนาด
 
-**PLAN_ONLY — ยังไม่เปิดงาน** ใช้6ภาพจากfrozen16เดิม ไม่ใช้modelscoreเลือก:
+**AUTHORIZED_CONDITIONAL_ON_CPU_AND_READINESS — pilotเท่านั้น** actuallaunch/completionดูpilotreport ใช้6ภาพจากfrozen16เดิม ไม่ใช้modelscoreเลือก:
 
 |ลำดับ|ID|เหตุผลcoverageที่ล็อกก่อนSapiensCIHPscore|
 |---|---|---|
@@ -278,9 +278,9 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 |Sapiensrouteยังไม่verifiedในcohortนี้|ต้องtargetedpilotก่อนrunproposalใหญ่|อดีตfullframepilotsไม่แทนapplicationcontract/VRAMverificationรอบนี้|
 |Exposure/input/ownershipต่างกัน|controlsameGT/task/scoreและreportconfigurationdifferences|ไม่แยกผลarchitecture/trainingdata/adapterหรือรับรองunseenimage/generalCCTVperformance|
 
-**ไม่ต้องให้ผู้ใช้ตัดสินทุกแถวใหม่:** ข้อเสนอหลักคือ C4-P operational question ตามนิยามด้านบน พร้อมFaceapproximation/C3sensitivity/rejectiondiagnostics;ถ้ารับแนวนี้ งานถัดไปที่มอบหมายได้คือ implementแยกmodule +independentCPUacceptancecases+GTdomainbindings จากนั้นขอ/ใช้คำอนุมัติที่ระบุpilot7callsอย่างชัดเจน ก่อนproposalfullscoring/inference ไม่มีการอนุมัติใดถูกสันนิษฐานจากเอกสารนี้
+**ไม่ต้องให้ผู้ใช้ตัดสินทุกแถวใหม่:** ข้อเสนอหลักคือ C4-P operational question ตามนิยามด้านบน พร้อมFaceapproximation/C3sensitivity/rejectiondiagnostics;ถ้ารับแนวนี้ งานถัดไปที่มอบหมายได้คือ implementแยกmodule +independentCPUacceptancecases+GTdomainbindings คำอนุมัติpilot≤7calls/sharedGPUได้รับโดยตรงแล้วในrevision2; fullscoring/รุ่นอื่นยังไม่อนุมัติและต้องแยกคำสั่ง ไม่ขออนุมัติpilotขั้นตอนปกติซ้ำ
 
-## 12. งานที่ทำจริงและสถานะส่งต่อ
+## 12. ประวัติ proposal-1 และการส่งต่อ (ก่อน implementation)
 
 รอบนี้อ่านsource/config/report/bindingsที่เกี่ยวข้อง,ตรวจGT16masksแบบจำกัด/เปิด2ambiguityimages,ตรวจexistingpacketfieldsหนึ่งภาพต่อสี่ระบบและcanonicalglobalconfusion4ชุดเท่านั้น ไม่คำนวณcommonviewscores ไม่โหลดโมเดล ไม่รันtestsuiteหรือinference
 
@@ -351,3 +351,7 @@ Timing/VRAMเดิมยังเป็นadapter/shared-GPUdiagnostics มี
 |28|Tongue|1 FACE_CIHP_REFERENCE|SCORED_TARGET|
 
 GT255=sharedVOID; prediction255/unknownID=contractfailure. ชื่อtargetที่เท่ากันเป็นoutputtaskเดียวกัน ไม่ใช่หลักฐานว่าsourceannotationboundaryเท่ากัน รายละเอียดevidence/projection/eligibilityแยกคอลัมน์ในCSVและdraftspec
+
+## Revision-2 ก่อน pilot scores — 2026-10-29T08:20:28.215191+07:00
+
+ผู้ใช้รับรองให้แก้ties/C3และimplement+CPUacceptanceก่อนSapiens0.4Bpilot≤7calls/sharedGPUโดยตรง ไม่ต้องขอซ้ำ Nativepipeline/source/resultsไม่เปลี่ยน Counterexampleเดิมมี2GTpixels/2identicalpredextents (IoU.5ทุกคู่):stableGT-IDmatchingให้Q1ก่อนrenameและQ0หลังrename, geometrycanonicalให้Q1ทั้งสอง; identicalgeometryambiguityยังรายงานไม่ใช้semanticเลือกคู่ C3มีglobalmeanเท่านั้นไม่มีpersondenominatorอีกชุด. Currentbindings/acceptance/outcomeใน [pilotreport](CIHP_SAPIENS_04B_PILOT_TH.md); [amendment](../runs/common-c4p-pilot-20261029T010410394659Z/PROTOCOL_AMENDMENT.json). เก็บproposal-1specเดิมและGithistory; full5,000scoringและ0.8B/1Bยังไม่อนุมัติ

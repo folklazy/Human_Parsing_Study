@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-29T01:17:26.245481+00:00",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "tests_run": 22,
+  "failures": 0,
+  "errors": 0,
+  "tests_scope": "independentrequirementsfixtures including actualCPUsourcepreprocessor and packet/scorer/reporter; not wholeprojecttestsuite",
+  "counterexample": {
+    "mask_IoU": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "native_legacy_Q_before_after_GTID_rename": [
+      1.0,
+      0.0
+    ],
+    "amended_geometry_Q_before_after_GTID_rename": [
+      1.0,
+      1.0
+    ],
+    "alternative_assignment_Q": [
+      1.0,
+      0.0
+    ],
+    "limitations": "identicalGTgeometryusesstableIDfallback;identicalpredgeometryusespacketindex;ambiguityreported,no unconditionalgeometryresolution"
+  },
+  "C3": "GLOBAL_ONLY_FACE_VALID_NEGATIVE_NO_SECOND_PERSON_DENOMINATOR",
+  "saved_packet_integrations": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0021448",
+      "packet_sha256": "6eda4c5a2956998a6b32d9ad0ab9818e7a3798cd98340f3346cd98ee6bc67f4b",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0021448",
+      "packet_sha256": "38344ea0ec2c5217ae02747a3c7dc0a864a086cf58933de2bef75beaea198faa",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0021448",
+      "packet_sha256": "5141a3b41f4ea3f8082f68d5809d764820e15aac0a0709bf7e6ca73e7c54ae77",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "image_id": "0021448",
+      "source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0021448",
+      "packet_sha256": "9741c92eb31ff009b9acb01eaf68dbeb0ff47c5544a5f43987c55ffc5fe3c026",
+      "source_members_unchanged": true,
+      "packet_scorer_reporter": "PASS",
+      "scope": "one saved frame only; not fullbenchmark"
+    }
+  ],
+  "model_forward_calls": 0,
+  "seconds": 5.700559165998129,
+  "source_hashes": {
+    "Human_Parsing_Benchmark/src/common_view/__init__.py": "088f101ec3f110ead4df3f62b9f052afcea4cfb83c4f578ccbcb5180a5d597f1",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/tests/test_common_view.py": "9a161056f7ae0646201c1b900956e3e32dce4e47a9ee3108085ca80fe7133b7f",
+    "Human_Parsing_Benchmark/scripts/verify_common_view_cpu.py": "66875fae8e9bf37c6f13bb8d3a4d05f816405e7efbedd38f6c39ce87d3620978"
+  },
+  "native_preserved": "PASS"
+}

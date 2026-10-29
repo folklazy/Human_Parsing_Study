@@ -1,4 +1,4 @@
-> **Current work: CIHP–Sapiens common-view protocol proposal (PROPOSED_NOT_FROZEN).** Read [ข้อเสนอหลัก/แผนตรวจ implementation](reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) → [STATUS](STATUS.md). [ผล native สี่ระบบ](reports/CIHP_FOUR_MODEL_RESULTS_TH.md) คงเดิม; CPI paused/mainnull. No inference, pilot or common-view scoring authorized in this work unit.
+> **Current work: isolated C4-P revision-2 implementation and authorized0.4Bpilot≤7calls.** [Pilot report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU acceptance passed; use actualcurrentstatus before launch. Both CPIpaused; nativefourresults preserved; nofullcommonbenchmark/othermodels.
 
 # Human Parsing Benchmark
 

@@ -84,3 +84,7 @@ The current user explicitly replaces conflicting previous plan with proposals/CI
 - **ACCEPTED_SCOPE_ONLY:** latestuserasksread-onlydefinition/source/savedoutputreview, actionablecommonprotocol+implementation/pilotplan, narrowlycorrectQANetrecallwording,commit/push; noactualinference/pilot/fullcommonviewevaluation/nativeexecutionchange. CPIbothpaused.
 - **PROPOSED_NOT_FROZEN:** C4-P operationaltargetagreement, completeGT/predprojection/OTHERpolicy, Faceproxyclaim, Sapiensfullframe+YOLOmaskownershiproute, commonmetrics/denominators/tiepolicy and boundedpilot. Theseare recommendations,notnewacceptedexecutionpolicy.
 - Source/authority: currentuserscope and [mainproposal](../reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md); [draftspec](../protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json). Nativehistoricalmatrix/results/first-cohortdecisionsnotrewritten; noDIRECT_VERIFIEDupgrade.
+
+## ACCEPTED_SCOPED_PILOT_ONLY — revision-2 — 2026-10-29T08:20:28.215191+07:00
+
+Latestuserexplicitlyauthorizescommonpipelineimplementation/CPUacceptanceandconditionalSapiens2_0.4b7-callpilotonlywithSHARED_GPU_QUALITY_ONLY. Geometrycanonicalmatching+identicalgeometryfallback/ambiguityreplacesnumericGT-IDordering;C3globalonly/nosecondpersondenominator. Mapping/Faceproxy/OTHERunchanged. Nativefrozenpipeline/results/CPIpausedimmutable. [Currentreport](../reports/CIHP_SAPIENS_04B_PILOT_TH.md); runcommon-c4p-pilot-20261029T010410394659Z. Fullcommon5,000/othermodels/training/color/CCTVnotauthorized.

@@ -1,0 +1,14 @@
+{
+  "revision": "revision-2-pilot",
+  "recorded_before_pilot_scores": true,
+  "created_utc": "2026-10-29T01:04:10.394659+00:00",
+  "previous_public_commit": "721828273ca761cc2c0a3825a25ed79c44ec3f6d",
+  "changes": {
+    "ties": "geometrycanonical,stablefallbackonlyidenticalgeometry,ambiguityreported; counterexampleCPUrequired",
+    "C3": "globalonly,Facevalidnegative,noQ_C3/G_sem_C3"
+  },
+  "mapping_unchanged": true,
+  "native_unchanged": true,
+  "spec_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "resource_amendment": "ExplicitSHARED_GPU_QUALITY_ONLYfor0.4Bpilot;externalPIDaloneisnotblocker; nootherprocess/devicechanges/noOOMretry"
+}

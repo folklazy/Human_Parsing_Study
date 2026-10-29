@@ -1,3 +1,7 @@
+# Latest scope — common-view revision2 scoped implementation/pilot
+
+Userexplicitlyauthorizesindependentcommonpipeline/CPUacceptanceandoneSapiens2_0.4bpilot≤7calls(1TRAINwarmup+6specifiedVAL),SHARED_GPU_QUALITY_ONLY. ReadHuman_Parsing_Benchmark/STATUS.mdandpilotreportbeforeanyaction. Nofullcommonscoring,0.8B/1B,YOLOnewinference,CPIretry,training/color/CCTV. Do notresumewhenterminalorbudgetconsumed;nativeconfig/source/resultsimmutable. Olderproposalscopebelowishistorical.
+
 # Latest scope — common-view proposal only
 
 Read Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md and STATUS. Currentuserauthorizesboundedsource/GT/savedartifactreview and actionable PROPOSED_NOT_FROZEN C4-P protocol + implementation/pilotplanning only. No scorer/executionimplementation, modelinference, pilot, fullcommonscoring, CPIretry, training/downloads/color/CCTV. Preserveallnativeoutputs/configs andbothpausedCPIhistories/nulls. Proposed7pilotcallsarenotexecutionapproval. Olderoperationalpermissionsbelowarehistorical.

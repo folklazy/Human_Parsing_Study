@@ -75,3 +75,7 @@ User explicitly pauses CPI R50/ConvNeXt-B, preservesallartifacts/OOMhistory/main
 ## 2026-10-29T07:51:06.417630+07:00 — common-view design continuation (proposal only)
 
 [CIHP–Sapiens common-view protocol](reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) เป็นข้อเสนอหลัก C4-P projectedapplicationagreement/4targets กับ CIHP reference โดยเปิดเผยFace_Neck approximation, non-Dress garmentfamilies และ validOTHER;C3sensitivityไม่แทนminimumfour. Draftspec/49-IDprojectionแยกจากnativeconfig;matrix/bindingsเดิมคงhistoricalproposal. Scorer/route/FPFN/domain/persondenominatorsและ≤7-call0.4Bpilotเป็นงานส่งต่อที่ยังไม่authorized/implemented ไม่มีinference/fullcommonscoring/activeexecutionchangeในรอบนี้ Native20results/configsและCPIpausednullคงเดิม ทำหลังเห็นผล4ระบบ ไม่preregisteredหรือVALtuning
+
+## Scoped implementation/pilot authorization — 2026-10-29T08:20:28.215191+07:00
+
+Latestuserexplicitlyauthorizescommonpipelineimplementation/CPUacceptanceandconditionalSapiens2_0.4b7-callpilotonlywithSHARED_GPU_QUALITY_ONLY. Geometrycanonicalmatching+identicalgeometryfallback/ambiguityreplacesnumericGT-IDordering;C3globalonly/nosecondpersondenominator. Mapping/Faceproxy/OTHERunchanged. Nativefrozenpipeline/results/CPIpausedimmutable. [Currentreport](reports/CIHP_SAPIENS_04B_PILOT_TH.md); runcommon-c4p-pilot-20261029T010410394659Z. Fullcommon5,000/othermodels/training/color/CCTVnotauthorized.

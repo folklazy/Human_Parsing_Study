@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_GT_ONLY_NO_MODEL_SCORING",
+  "count": 5000,
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "manifest_sha256": "1a6f635ffdd0da1b767a6d7279e0437130bdfdd47e510fbfdaeb9b047cc82cc0",
+  "manifest": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings/BINDINGS.jsonl",
+  "global_support": [
+    533617773,
+    37932488,
+    40760850,
+    148199276,
+    38702345,
+    77446292
+  ],
+  "G_loc": 17520,
+  "G_sem_C4": 17454,
+  "owner_unknown_pixels": 0,
+  "source_VOID_pixels": 0
+}
