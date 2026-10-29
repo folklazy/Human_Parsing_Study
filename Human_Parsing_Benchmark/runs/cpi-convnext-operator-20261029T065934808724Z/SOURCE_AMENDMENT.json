@@ -1,0 +1,9 @@
+{
+  "scope": "Operational progress liveness only; before new CPI launch",
+  "before_sha256": "5bf6d766a6d59cf8ac2d4909fc175ec727da32b03ff91e763d92064a1e10da3a",
+  "after_sha256": "0271912dcbd0f239b3a14d78ad0734fba157cfc9fb010d7bd344cdd51fd4ae9a",
+  "reason": "Controller CLI creates root internally so cmdline lacks root; validate PID birth ticks+model instead of false missing-controller report",
+  "scientific_worker_config_source_changed": false,
+  "CPU_existing_orchestration_cases_passed": 5,
+  "created_utc": "2026-10-29T07:03:01.257278+00:00"
+}

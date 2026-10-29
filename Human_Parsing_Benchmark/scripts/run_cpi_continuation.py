@@ -219,6 +219,7 @@ def execute(root, cfg, pop, det, plan):
     state = {'status': 'RUNNING', 'round_id': root.name, 'model_id': plan['model_id'],
              'expected': len(pop), 'controller_PID': os.getpid(), 'start_utc': started,
              'resource_mode': 'SHARED_GPU_QUALITY_ONLY', 'reused': len(plan['reused_ids'])}
+    state['controller_start_ticks'] = int(Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19])
     state['GPU_at_launch'] = subprocess.check_output(
         ['nvidia-smi', '--query-gpu=name,memory.used,memory.free,utilization.gpu',
          '--format=csv,noheader'], text=True).strip()
@@ -319,10 +320,25 @@ def main():
     ART.mkdir(parents=True, exist_ok=True)
     pointer = ART / ('CURRENT_' + a.model + '.txt')
     if a.status:
-        from rpr_progress import snapshot, render
+        from rpr_progress import snapshot, render, alive
         root = W / pointer.read_text().strip()
+        def controller_alive(pid, script, location):
+            state = json.loads((location / 'ROUND_STATUS.json').read_text())
+            if pid != state.get('controller_PID'):
+                return alive(pid, script, location)
+            if not pid:
+                return False
+            try:
+                proc = Path('/proc') / str(pid)
+                argv = (proc / 'cmdline').read_bytes().split(b'\0')
+                ticks = int((proc / 'stat').read_text().rsplit(')', 1)[1].split()[19])
+                return (state.get('controller_start_ticks') == ticks and
+                        any(Path(os.fsdecode(v)).name == script for v in argv if v) and
+                        b'--model' in argv and argv[argv.index(b'--model')+1] == a.model.encode())
+            except FileNotFoundError:
+                return False
         while True:
-            status = snapshot(root, model=MODELS[a.model], controller_script=Path(__file__).name,
+            status = snapshot(root, liveness=controller_alive, model=MODELS[a.model], controller_script=Path(__file__).name,
                               worker_script=Path(__file__).name)
             print(render(status), flush=True)
             if not a.watch or status['terminal'] or status['phase'].startswith('INTERRUPTED'):

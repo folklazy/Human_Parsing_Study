@@ -184,6 +184,7 @@ Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/RESOURCE_PO
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/EVIDENCE.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json
+Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SOURCE_AMENDMENT.json
 Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json

@@ -263,3 +263,5 @@ Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP']. Canonical 
 ## 2026-10-29T13:59:34.808724+07:00 — cpi-convnext-operator-20261029T065934808724Z: explicit ConvNeXt concurrent attempt
 
 UserrequestsConvNeXt-Bnow;supersedespriornoCPIrestrictiononlyforthismanualattempt. Sapiens0.4Bfull/CPUcommoncontinueuntouched. GPUfree12173MiB/Sapiens2736MiB,nootherCPIworkersobserved. UseexistingversionedCLI/frozennativeconfig/scorer/FP32/settings/resourceguards;freshsegment,reconcileold113successesifvalid,pendingonly,onerrorstop/noautoretry/fallback. Native20CPIremainsseparatefromcommonC4-P. Authorization/source/checkpointbindingsrecorded;nextcommitthenlaunchdetached,recheckfirstnewpacketorretainedfailure;noR50/0.8B/1B.
+
+Prelaunch operational correction 2026-10-29T07:03:01.257278+00:00: CPI viewer controller liveness now checks recorded PID birth ticks/model; internal root is absent from controller argv. Frozen worker/inference/scorer/config unchanged; existing5orchestrationfixturesPASS. Source before/after recorded in runs/cpi-convnext-operator-20261029T065934808724Z/SOURCE_AMENDMENT.json. No CPI forward yet.
