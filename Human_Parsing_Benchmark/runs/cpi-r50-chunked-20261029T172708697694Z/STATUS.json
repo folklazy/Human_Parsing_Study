@@ -1,0 +1,17 @@
+{
+  "status": "BLOCKED_R50_READINESS_OOM",
+  "updated_Bangkok": "2026-10-30T00:32:44.559860+07:00",
+  "model_id": "CPI_R50_CIHP",
+  "diagnostic_run": "cpi-r50-memory-20261029T172708697694Z",
+  "diagnostic_calls": 2,
+  "warmup_passed": 1,
+  "VAL_diagnostic_success": 0,
+  "VAL_diagnostic_failed": 1,
+  "full_validation": "NOT_STARTED",
+  "canonical_record": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T061025618419Z/COMPLETION.json",
+  "canonical_complete": 3,
+  "canonical_expected": 5000,
+  "canonical_primary": null,
+  "automatic_retry": false,
+  "next_model": false
+}

@@ -341,3 +341,7 @@ CanonicalCOMPLETE5000,missing0/duplicate0/failed0/invalid0,5000artifactvalidatio
 ## 2026-10-30T00:27:08.697694+07:00 — cpi-r50-chunked-20261029T172708697694Z: next-model scope/readiness
 
 Userตัวต่อไปเลย authorizesR50 afterConvNeXt COMPLETE5000. ActualGPUempty/noactiveworker/disk450GiB/main67ca3a4clean. Reusememorypluginunchanged; parameterizedoperationaldiagnostic/continuation/reporter permodel instead ofcopyingConvbindings. CPU4controlcasesPASS(includes2newwrong-model/resource-isolationchecks), nooldmemorytest/fullauditrerun. R50owncheckpoint/config/source/failure0000018/regression0000004 bound; ≤3readinesscalls then conditionalpending-onlyfullround. NoR50forwardyet,noothermodel. Nextpublishprelaunchthenreadiness.
+
+## 2026-10-30T00:32:44.559860+07:00 — cpi-r50-chunked-20261029T172708697694Z: R50 bounded readiness closure
+
+Diagnosticcpi-r50-memory-20261029T172708697694Z/PID700943 DIAGNOSTIC_FAILED after2calls: TRAIN0000930PASS, VAL0000018OOM; knownsuccess0000004notattempted. OwnR50checkpoint/nativeconfig/strictload46,567,335parameters/GPUfixturePASS. Errorin casual_head_forward→cnt_part_parser→ReLU BEFORE restoration: request2.46GiB/free2.40GiB/allocated10.66/reserved10.80GiB,total14.56; noexternalPID-onlyblock. Noautoretry/fallback/fullR50queue. Savedfailure/rawhistory andprotectedhashes16unchanged; ConvNeXtcanonicalCOMPLETE5000hashunchanged. R50canonical3/mainnull; nextisboundedupstreamfeaturememorydesign/verification, notmasksettings/VALtuning. MainThai report/machinestate current; nextpublishthenstop.

@@ -1,0 +1,78 @@
+{
+  "work_unit": "cpi-r50-chunked-20261029T172708697694Z-readiness-closure",
+  "base_commit": "72053cb09a3202075ead626cc48c8789bf83af92",
+  "scope": "R50 readiness OOM closure, compact GPU/traceback/provenance and current navigation only; full run not started, all old canonical results preserved",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "320c9286feccfc1e42ee3cd24636fa553ba732628bdb75db6e97c9eb4c0d166e",
+      "before_sha256": "4260c80e9a52e77a9f329aca25a9639ae4b802a1d9a9b425aaf0f23aede914ff",
+      "bytes": 885
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "7836adb14b0387a44f5e19c5d44ce80615f533af22915e7e03f6307d83884611",
+      "before_sha256": "e6d3cd1058b0f6a099df7fad2715c6d43050d05a3234f922845f66ff16d80cc3",
+      "bytes": 11123
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "f0985d69920b3857a429c6cdcdce725cb14fadfce5b9e62d26f74c1543fb2f7b",
+      "before_sha256": "fc15cf70c1d2b6289b27c0ae06155c6d93b60e802821a8b85b5655313d515d5b",
+      "bytes": 21337
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "00eef15d65dab96c60f5e962306ef787cd39db14f9dc436beb79d0ae27d5e449",
+      "before_sha256": "e17688d2d4ee4064eadfbf8089eacf3b3a19ff69f954db46f06bd28053c9531f",
+      "bytes": 61337
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "public_path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "6a765dfa3e4154545f7655279135027b14218d35c0812406507f68e47af69c35",
+      "before_sha256": "b59ea1133c23326925c7cc2a551617e4f61c6d42cbcdb359d1068fba8c2b189c",
+      "bytes": 14470
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md",
+      "public_path": "Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md",
+      "sha256": "de424b35c70647684b6bf5d1da3d30e20340d6f2516c728c4e2ec6943cf76447",
+      "before_sha256": "0daf0b4fc23baf5e0464d6ad4e6ced2e260d31f60f336dfb8ee8ce477f399c1c",
+      "bytes": 8981
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-r50-chunked-20261029T172708697694Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-r50-chunked-20261029T172708697694Z.md",
+      "sha256": "3d52a835075ce98127f7d501eca9a1c57a783e8a26b8b4aaabace07de801238c",
+      "before_sha256": "ac50fda7fd41da3cd554349c284d0919b6f93b963fbfd36d48de0e73e7b29f49",
+      "bytes": 7917
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/STATUS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/STATUS.json",
+      "sha256": "747a92f168a7c625fba87ee87835b685c8f1fd698fe2318bbfafccfba598f69c",
+      "before_sha256": null,
+      "bytes": 591
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/GPU_DIAGNOSTIC.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/GPU_DIAGNOSTIC.json",
+      "sha256": "112bbe5fd39f95f41914c4d4714a701bf5268d04e67c631e87079a76ce0ed805",
+      "before_sha256": null,
+      "bytes": 7398
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/PROCESS.json",
+      "sha256": "ca1ab83e0591470ae51b35ed9c7559b5fee62bb1085273f495bc5da76486f957",
+      "before_sha256": null,
+      "bytes": 741
+    }
+  ],
+  "launch_source_unchanged": true
+}

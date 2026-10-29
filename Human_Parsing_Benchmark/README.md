@@ -1,4 +1,4 @@
-> **Current: repaired CPI ConvNeXt validation COMPLETE 5,000/5,000; artifacts verified.** [Completion report](reports/cpi-convnext-chunked-20261029T160327964412Z.md) → [STATUS](STATUS.md). No next model/retry; R50 remains paused.
+> **Current: R50 readiness stopped on upstream feature-memory OOM; full run not started.** [R50 report](reports/cpi-r50-chunked-20261029T172708697694Z.md) → [STATUS](STATUS.md). ConvNeXt-B COMPLETE5000 preserved; R50canonical3/5000/mainnull.
 
 The notices below are historical snapshots; STATUS is current.
 

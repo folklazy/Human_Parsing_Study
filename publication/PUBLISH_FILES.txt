@@ -244,8 +244,11 @@ Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNO
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/PROCESS.json
 Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/DIAGNOSTIC_LINK.json
+Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/STATUS.json
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/DIAGNOSTIC_CONFIG.json
+Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/GPU_DIAGNOSTIC.json
+Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/PROCESS.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -862,6 +865,7 @@ publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z.
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-shared-20261028T181609262813Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z.json
+publication/CIHP_NATIVE_COMPLETION_cpi-r50-chunked-20261029T172708697694Z-readiness-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z-ready.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json

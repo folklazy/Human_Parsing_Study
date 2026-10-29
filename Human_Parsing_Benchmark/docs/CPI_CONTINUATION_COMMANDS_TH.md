@@ -1,3 +1,5 @@
+> **R50 current outcome:** latest [R50 readiness](../reports/cpi-r50-chunked-20261029T172708697694Z.md) failed before maskrestoration. Wrapper now supports per-model bindings, but R50 has no matching DIAGNOSTIC_PASS and cannot launch full until that gate passes. No automatic retry; ConvNeXt-B complete result unchanged.
+
 > **Memory repair update:** ใช้ [repaired ConvNeXt wrapper](../scripts/run_cpi_chunked_continuation.py) สำหรับperson-chunkrestorationที่ผ่านdiagnostic; [report](../reports/CPI_MEMORY_REPAIR_TH.md). Original `run_cpi_continuation.py`ด้านล่างไม่ได้ติดตั้งpatch. ConvNeXt canonical337/5000; R50patchGPUยังไม่ทดสอบ. Executeเป็นmanuallaunch ไม่ใช่automaticretry.
 
 # คำสั่ง CPI continuation สำหรับ operator

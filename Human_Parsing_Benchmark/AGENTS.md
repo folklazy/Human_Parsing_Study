@@ -90,3 +90,7 @@ LatestuserrequestedOOMcause/repair. Model-local person-axis restoration preserve
 ## 2026-10-29T23:08:11.945471+07:00 — repaired ConvNeXt full continuation now explicitly authorized/running
 
 Latestuserเริ่มทำเลย supersedesprior nofullrestart for ConvNeXt-only. Segmentconvnext-20261029T160359716460Z,controller640227/worker640842; firstcheckprocess/artifacts and neverduplicate/restartautomatically. Newwrapper usesmemoryrevision1,337verifiedreuse/4663pending,new0003218PASS. Frozenconfigs/source/scorer/otherresults unchanged. ReadSTATUS and reports/cpi-convnext-chunked-20261029T160327964412Z.md; usechunkedwrapperprogress,notoldCLIviewer. NoR50/nextmodel/Sapiens/training/color/CCTV.
+
+## 2026-10-30T00:32:44.559860+07:00 — R50 readiness failed, no full job running
+
+Latestusernextmodelscope consumedbyR50readinessattempt; diagnosticcpi-r50-memory-20261029T172708697694Z/PID700943exited. R50ownload/warmup/GPUfixturepassed butVAL0000018OOM inupstreamcnt_part_parser.ReLU, beforememoryrevision1restoration. Fullnotlaunched, noautomaticretry/nextmodel. Readreports/cpi-r50-chunked-20261029T172708697694Z.md andSTATUS. PreserveR50canonical3/5000/null/failurehistory; ConvNeXt5000/Sapiens04/08/native/common untouched. Additionalfeaturememoryimplementation/retest isnotdoneinthisround; nofallback/scientificsettingchange.

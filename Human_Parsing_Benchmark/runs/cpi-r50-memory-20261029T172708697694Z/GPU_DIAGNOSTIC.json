@@ -1,0 +1,98 @@
+{
+  "run_id": "cpi-r50-memory-20261029T172708697694Z",
+  "model_id": "CPI_R50_CIHP",
+  "status": "DIAGNOSTIC_FAILED",
+  "PID": 700943,
+  "SID": 700943,
+  "start_utc": "2026-10-29T17:28:08.019695+00:00",
+  "model_frame_calls": 2,
+  "complete": 0,
+  "failed": 1,
+  "canonical": false,
+  "primary": null,
+  "automatic_retries": 0,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "config_sha256": "10a3e190a356a46831ec5b5f856a157ad4cd3c90593c8b8572c082d5792ffc2a",
+  "launch_commit": "72053cb09a3202075ead626cc48c8789bf83af92",
+  "GPU_before": "Tesla T4, 0 MiB, 14912 MiB",
+  "patch": {
+    "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+    "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+    "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+    "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+    "person_chunk_size": 1,
+    "native_reference_prefix": 2,
+    "source_file_modified": false,
+    "scientific_parameters_changed": []
+  },
+  "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+  "current_image": "0000018",
+  "observations": [
+    {
+      "split": "Training",
+      "image_id": "0000930",
+      "start_utc": "2026-10-29T17:28:22.422993+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T17:28:22.876842+00:00",
+      "memory": {
+        "peak_allocated_MiB": 584.16162109375,
+        "peak_reserved_MiB": 1184.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            2,
+            20,
+            100,
+            148
+          ],
+          "image_shape": [
+            800,
+            1156,
+            3
+          ],
+          "original_shape": [
+            346,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            2,
+            346,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 151552000,
+          "chunk_stride_grid_float_bytes": 75776000
+        }
+      ],
+      "regression": null,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-r50-memory-20261029T172708697694Z/packets/Training/0000930",
+      "packet_sha256": "f31d9fbc4a1feab316c0304c6bc65faa397657bb2001497d3223acd107723b4f"
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py\", line 152, in main\n    arrays, metadata = adapter.infer(rgb, rgbpath, d['opportunities'], ownership)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py\", line 92, in infer\n    try:os.chdir(Path(source_jpeg).parent);raw=inference_detector(self.model,Path(source_jpeg).name)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/apis/inference.py\", line 151, in inference_detector\n    results = model(return_loss=False, rescale=True, **data)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/mmcv/runner/fp16_utils.py\", line 119, in new_func\n    return old_func(*args, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/base.py\", line 174, in forward\n    return self.forward_test(img, img_metas, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/base.py\", line 147, in forward_test\n    return self.simple_test(imgs[0], img_metas[0], **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/detectors/single_stage.py\", line 102, in simple_test\n    results_list = self.bbox_head.simple_test(\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/base_dense_head.py\", line 360, in simple_test\n    return self.simple_test_bboxes(feats, img_metas, rescale=rescale)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/detr_head.py\", line 704, in simple_test_bboxes\n    results_list = self.get_bboxes(*outs, img_metas, rescale=rescale)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/mmcv/runner/fp16_utils.py\", line 208, in new_func\n    return old_func(*args, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/deformable_detr_parser_head.py\", line 702, in get_bboxes\n    proposals = self._get_bboxes_single(\n  File \"<CPI-person-chunk-restoration-revision1>\", line 75, in _get_bboxes_single\n  File \"/home/skyaidev/folk/Human-Body-Extraction/third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py\", line 437, in casual_head_forward\n    cnt_preds = self.cnt_part_parser(cnt_feats.view(N, -1, H, W))\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/container.py\", line 141, in forward\n    input = module(input)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1102, in _call_impl\n    return forward_call(*input, **kwargs)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/modules/activation.py\", line 98, in forward\n    return F.relu(input, inplace=self.inplace)\n  File \"/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/lib/python3.9/site-packages/torch/nn/functional.py\", line 1299, in relu\n    result = torch.relu(input)\nRuntimeError: CUDA out of memory. Tried to allocate 2.46 GiB (GPU 0; 14.56 GiB total capacity; 10.66 GiB already allocated; 2.40 GiB free; 10.80 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF\n",
+  "end_utc": "2026-10-29T17:28:23.477787+00:00",
+  "execution_seconds": 15.446934356994461,
+  "no_full_benchmark": true,
+  "automatic_restart": false,
+  "parameters": 46567335,
+  "postflight": {
+    "checked_Bangkok": "2026-10-30T00:32:44.559860+07:00",
+    "protected_hashes_unchanged": 16,
+    "ConvNeXt_complete5000_record_unchanged": true,
+    "diagnostic_worker_exited": true,
+    "warmup_pass": true,
+    "failed_VAL": "0000018",
+    "regression_VAL0000004": "NOT_ATTEMPTED_STOP_ON_ERROR",
+    "full_validation": "NOT_STARTED",
+    "diagnostic_predictions_canonical": false,
+    "canonical_R50_complete": 3,
+    "canonical_R50_primary": null
+  }
+}
