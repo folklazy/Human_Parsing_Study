@@ -13,6 +13,7 @@ Human_Parsing_Benchmark/STATUS.md
 Human_Parsing_Benchmark/WORK_LOG.md
 Human_Parsing_Benchmark/configs/cihp_native_six.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_04b_pilot.json
+Human_Parsing_Benchmark/configs/cihp_sapiens_08b_pilot.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json
 Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md
 Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md
@@ -203,6 +204,10 @@ Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
 Human_Parsing_Benchmark/runs/proposal-clarification-20261021T063557842659Z/EDITORIAL_RECORD.json
+Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/AUTHORIZATION.json
+Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/PILOT_CONFIG.json
+Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/READINESS.json
+Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json
 Human_Parsing_Benchmark/runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/workspace-setup-20261021T032315998981Z/SETUP_MANIFEST.json
@@ -217,6 +222,7 @@ Human_Parsing_Benchmark/scripts/materialize_common_gt.py
 Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py
 Human_Parsing_Benchmark/scripts/prepare_common_full.py
 Human_Parsing_Benchmark/scripts/prepare_common_pilot.py
+Human_Parsing_Benchmark/scripts/prepare_sapiens08.py
 Human_Parsing_Benchmark/scripts/reconcile_cihp_continuation.py
 Human_Parsing_Benchmark/scripts/refresh_cpi_r50_overview.py
 Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py
@@ -235,6 +241,7 @@ Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
 Human_Parsing_Benchmark/scripts/run_rpr_shared_segment.py
+Human_Parsing_Benchmark/scripts/run_sapiens08.py
 Human_Parsing_Benchmark/scripts/verify_common_pilot_artifacts.py
 Human_Parsing_Benchmark/scripts/verify_common_view_cpu.py
 Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
@@ -248,6 +255,7 @@ Human_Parsing_Benchmark/src/common_view/core.py
 Human_Parsing_Benchmark/src/common_view/detector_cache.py
 Human_Parsing_Benchmark/src/common_view/full.py
 Human_Parsing_Benchmark/src/common_view/packets.py
+Human_Parsing_Benchmark/src/common_view/sapiens08_resources.py
 Human_Parsing_Benchmark/src/common_view/sapiens_route.py
 Human_Parsing_Benchmark/tests/test_cihp_continuation.py
 Human_Parsing_Benchmark/tests/test_cihp_native.py
@@ -258,6 +266,7 @@ Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py
 Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py
 Human_Parsing_Benchmark/tests/test_rpr_progress.py
 Human_Parsing_Benchmark/tests/test_rpr_shared_round.py
+Human_Parsing_Benchmark/tests/test_sapiens08_resources.py
 LICENSE.md
 PRESENTATION_SUMMARY_TH.md
 README.md
@@ -835,6 +844,7 @@ publication/RPR_CIHP_PREFLIGHT_BLOCKED_20261028.json
 publication/RPR_PROGRESS_VIEWER_20261028.json
 publication/RPR_SHARED_QUALITY_LAUNCH_20261028.json
 publication/RPR_SHARED_QUALITY_READY_20261028.json
+publication/SAPIENS08_C4P_PRELAUNCH_sapiens08-c4p-20261029T081254180014Z.json
 publication/SOURCE_COPY_MANIFEST.json
 publication/SPECIFICATION_HANDOFF_20261021T092521331823Z.json
 publication/VALIDATION_SCOPE.md

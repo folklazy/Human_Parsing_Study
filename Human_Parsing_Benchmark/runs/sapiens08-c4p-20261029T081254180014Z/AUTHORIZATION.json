@@ -1,0 +1,11 @@
+{
+  "status": "USER_AUTHORIZED",
+  "scope": "SAPIENS2_08B_C4P_PILOT_THEN_FULL_USER_AUTHORIZED",
+  "authority": "User explicitly authorizes 0.8B pilot6+at most1warmup then full5000 when passed; shared concurrently with04 if resource guards pass; otherwise queue; no other models",
+  "pilot_config_sha256": "f82570ee0594f79a00f3d8b5db86cdd84afb7fb3fb11d2b2ffee7213fd0b3e39",
+  "no04interruption": true,
+  "no_other_models": true,
+  "no_recompute_existing_four": true,
+  "shared_quality": true,
+  "model_calls": 0
+}

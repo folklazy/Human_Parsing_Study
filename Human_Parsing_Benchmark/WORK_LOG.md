@@ -277,3 +277,7 @@ Detachedcontroller401349/SID401349,worker401656,launchcommit924f6c4ab033c4636b68
 ## 2026-10-29T07:12:06.000831+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
 
 Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP', 'D2FP_R101_CIHP', 'RPR_CIHP']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.
+
+## 2026-10-29T15:14:48.282103+07:00 ? sapiens08-c4p-20261029T081254180014Z: Sapiens2 0.8B readiness and concurrent admission freeze
+
+User expands scope to include `Sapiens2_0.8b` C4-P (pilot 6 VAL + 1 TRAIN warmup, then automatic full 5,000 promotion) under `SHARED_GPU_QUALITY_ONLY` while preserving running `0.4B` (`PID 380379`/`380414`). Verified `0.8B` safetensors SHA256 `e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec`, native config `967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a`, `[29, 64, 1, 1]` FP32 head, unchanged scorer/GT bindings, and 4 resource-accounting unit tests (`test_sapiens08_resources.py` PASS). Fixed config dict access `cfg.model['decode_head']['num_classes']` in `prepare_sapiens08.py` before freeze. Three consecutive GPU/RAM snapshots (`ADMIT_PILOT`, combined budget `10,236.83 MiB` / `14,911.69 MiB` usable) recorded in `runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json`. Existing 4 saved-only models not rescored.

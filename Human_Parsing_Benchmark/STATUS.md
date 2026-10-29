@@ -26,3 +26,11 @@ Next: detached batch continues without chat; use progress viewer/state for curre
 ## Later explicit CPI ConvNeXt attempt — 2026-10-29T14:09:52.447523+07:00
 
 Userapprovedconcurrentmanualattempt,now **STOPPED_INCOMPLETE**. Reuse113+new32=145/5000,failed1/invalid0,missing4855,mainnull. OOM0001641 (request4.10GiB/free1.67GiB);noautomaticretry. BothPIDs401349/401656exited. [Thai closure](reports/convnext-20261029T070405365918Z.md). OriginalSapiens0.4B/commonCPUcontinuewithoutscientificchanges;usecommonprogressforlivecounts. NoR50/otherSapienssize.
+
+## Sapiens2 0.8B concurrent C4-P scope ? 2026-10-29T15:14:48.282103+07:00
+
+Authorized `Sapiens2_0.8b` pilot (1 TRAIN warmup + 6 fixed VAL IDs) then automatic promotion to full 5,000 VAL under `SHARED_GPU_QUALITY_ONLY` while preserving active `0.4B` batch. Run `sapiens08-c4p-20261029T081254180014Z`. [Pilot config](configs/cihp_sapiens_08b_pilot.json) ? [readiness](runs/sapiens08-c4p-20261029T081254180014Z/READINESS.json) ? [resource readiness](runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json) ? [0.8B report](reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md).
+
+```bash
+.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/run_sapiens08.py --status --watch
+```

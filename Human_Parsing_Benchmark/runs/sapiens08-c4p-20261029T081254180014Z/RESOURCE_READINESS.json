@@ -1,0 +1,94 @@
+{
+  "status": "ADMIT_PILOT",
+  "samples": [
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 2841.0,
+      "observed_peer_MiB": 2736.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 3222.9157905578613,
+      "requested_08_budget_MiB": 5986.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 10236.831581115723,
+      "remaining_after_budgets_MiB": 4674.855918884277,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 25728.31640625,
+      "RAM_admitted": true,
+      "utc": 1793261574.4138105,
+      "observed_free_MiB": 12071.0,
+      "peer04_complete": 3224,
+      "peer04_state": "INFERENCE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 3219,
+      "own_peak_reference_MiB": 4346.0,
+      "GPU_processes": {
+        "380414": 2736.0,
+        "456257": 102.0
+      }
+    },
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 2841.0,
+      "observed_peer_MiB": 2736.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 3222.9157905578613,
+      "requested_08_budget_MiB": 5986.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 10236.831581115723,
+      "remaining_after_budgets_MiB": 4674.855918884277,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 25749.48046875,
+      "RAM_admitted": true,
+      "utc": 1793261576.4756196,
+      "observed_free_MiB": 12071.0,
+      "peer04_complete": 3225,
+      "peer04_state": "INFERENCE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 3219,
+      "own_peak_reference_MiB": 4346.0,
+      "GPU_processes": {
+        "380414": 2736.0,
+        "456257": 102.0
+      }
+    },
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 2841.0,
+      "observed_peer_MiB": 2736.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 3222.9157905578613,
+      "requested_08_budget_MiB": 5986.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 10236.831581115723,
+      "remaining_after_budgets_MiB": 4674.855918884277,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 25720.94921875,
+      "RAM_admitted": true,
+      "utc": 1793261578.5391314,
+      "observed_free_MiB": 12071.0,
+      "peer04_complete": 3226,
+      "peer04_state": "INFERENCE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 3219,
+      "own_peak_reference_MiB": 4346.0,
+      "GPU_processes": {
+        "380414": 2736.0,
+        "456257": 102.0
+      }
+    }
+  ],
+  "largest_mapback_all5000_MiB": 104.91579055786133,
+  "queue_vs_execution_caps": {
+    "queue_hours": 24,
+    "execution_hours": 24
+  },
+  "remaining_disk_GiB": 450.60372161865234,
+  "empirical_bounds_not_all_image_guarantee": true,
+  "only_one_visible_assigned_GPU": true
+}

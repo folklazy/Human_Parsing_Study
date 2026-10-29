@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PRE_FORWARD",
+  "model_id": "Sapiens2_0.8b",
+  "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+  "checkpoint_stat": {
+    "size": 3310187452,
+    "mtime_ns": 1791799862520192990
+  },
+  "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+  "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+  "native29_head": [
+    29,
+    64,
+    1,
+    1
+  ],
+  "native29_dtype": "F32",
+  "environment_sha256": "f38f354b0bc6c667ecab22de0da11b7cfc9bf55b5173afefb6b7fe3ab8f89a29",
+  "torch": "2.14.0+cu130",
+  "CUDA": "13.0",
+  "config_pipeline_preprocessor_equivalent_to_04": true,
+  "common_scorer_acceptance": "UNCHANGED_BINDINGS_REUSE_PREVIOUS23+7_CASES_NO_FULL_RETEST",
+  "new_resource_fixture_cases": 4,
+  "strict_state_load_and_pilot": "REQUIRED_NOT_YET_EXECUTED",
+  "model_calls": 0
+}
