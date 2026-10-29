@@ -333,3 +333,7 @@ Prelaunchfd94aea;controller640227/worker640842/SID640227/PPID1detached. Reconcil
 ## 2026-10-30T00:21:59.326025+07:00 — cpi-convnext-chunked-20261029T160327964412Z: automatic terminal observation
 
 Controller exited; canonical COMPLETE, 5000/5000. Existing controller reconciled packets and saved-mask scores; this observer only assembled report/navigation. Failure/attempt history retained; no retry/next model/inference/rescore.
+
+## 2026-10-30T00:22:57.223379+07:00 — repaired ConvNeXt completion navigation
+
+CanonicalCOMPLETE5000,missing0/duplicate0/failed0/invalid0,5000artifactvalidationdone; terminalobserverpublishedb462d7f. UpdatedonlycurrentREADME/repairreportpointerfromRUNNINGtoCOMPLETE,not historicaldiagnosticevidence/results. No inference/rescore/retry/nextmodel.

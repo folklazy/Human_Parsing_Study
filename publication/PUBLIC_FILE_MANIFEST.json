@@ -55,8 +55,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "sha256": "f5de7659738ff9a79bbcc4b2cf95f3b9942dfd4370cf18197e89e25eea598fae",
-      "bytes": 11125
+      "bytes": 11111,
+      "sha256": "e6d3cd1058b0f6a099df7fad2715c6d43050d05a3234f922845f66ff16d80cc3"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
@@ -65,8 +65,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 59505,
-      "sha256": "4a3259869ff5ba852ac30ada04769624748b387b66706c724b8f32b76e894b1d"
+      "bytes": 59854,
+      "sha256": "cc8fd8c189f9aa85744a35370e45c713861d9e8aae4a3c65ca0231f3394f1d74"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -425,8 +425,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
-      "sha256": "f7d7ddba2957bbe6cf3085e397f7cdc77c00b4fa86954a7d88a5b800137ed8a6",
-      "bytes": 9802
+      "bytes": 9840,
+      "sha256": "aeae68c4da2a279cfcf2a68e5df6b79520c1cfedeeb6990d0d95f8f871da8634"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md",
@@ -4014,6 +4014,11 @@
       "sha256": "1c9bacb1699f6e966c6dbafbf6848b4d5739987ebd2423d75d2107daf0407941"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-navigation.json",
+      "bytes": 1337,
+      "sha256": "61e984a537f9e898f5ce215b7d748fd46a01e6a582156dde62f752a9282984ec"
+    },
+    {
       "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-observer.json",
       "bytes": 698,
       "sha256": "51207dacec681e964abaf5e3acd23956c15225473435c9abac4abb7d129725d0"
@@ -5719,6 +5724,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T17:21:59.443406+00:00",
+  "updated_utc": "2026-10-29T17:22:57.273285+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

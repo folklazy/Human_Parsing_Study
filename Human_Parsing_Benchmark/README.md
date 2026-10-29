@@ -1,4 +1,4 @@
-> **Current: repaired CPI ConvNeXt validation RUNNING.** [Attempt/report](reports/cpi-convnext-chunked-20261029T160327964412Z.md) → [STATUS](STATUS.md). Verified337 reused; pending4663 at launch; first new canonical packet PASS. No next model.
+> **Current: repaired CPI ConvNeXt validation COMPLETE 5,000/5,000; artifacts verified.** [Completion report](reports/cpi-convnext-chunked-20261029T160327964412Z.md) → [STATUS](STATUS.md). No next model/retry; R50 remains paused.
 
 The notices below are historical snapshots; STATUS is current.
 

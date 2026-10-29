@@ -1,4 +1,4 @@
-> **Subsequent authorized execution:** repaired ConvNeXt continuation is now RUNNING; [current report](cpi-convnext-chunked-20261029T160327964412Z.md). The diagnostic evidence below remains a separate earlier work unit.
+> **Subsequent authorized execution:** repaired ConvNeXt continuation is COMPLETE, 5,000/5,000 with artifact validation; [completion report](cpi-convnext-chunked-20261029T160327964412Z.md). The diagnostic evidence below remains a separate earlier work unit.
 
 # CPI OOM — สาเหตุ การแก้ไข และผลตรวจจริง
 

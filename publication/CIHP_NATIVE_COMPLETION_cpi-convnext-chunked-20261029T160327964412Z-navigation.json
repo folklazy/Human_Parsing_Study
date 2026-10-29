@@ -1,0 +1,29 @@
+{
+  "work_unit": "cpi-convnext-chunked-20261029T160327964412Z-navigation",
+  "base_commit": "b462d7fe0db18f577ee7e276dfc5a7ea340f9239",
+  "scope": "Canonical completion navigation only; no results or artifacts changed",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "e6d3cd1058b0f6a099df7fad2715c6d43050d05a3234f922845f66ff16d80cc3",
+      "before_sha256": "f5de7659738ff9a79bbcc4b2cf95f3b9942dfd4370cf18197e89e25eea598fae",
+      "bytes": 11111
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
+      "sha256": "aeae68c4da2a279cfcf2a68e5df6b79520c1cfedeeb6990d0d95f8f871da8634",
+      "before_sha256": "f7d7ddba2957bbe6cf3085e397f7cdc77c00b4fa86954a7d88a5b800137ed8a6",
+      "bytes": 9840
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "cc8fd8c189f9aa85744a35370e45c713861d9e8aae4a3c65ca0231f3394f1d74",
+      "before_sha256": "4a3259869ff5ba852ac30ada04769624748b387b66706c724b8f32b76e894b1d",
+      "bytes": 59854
+    }
+  ],
+  "launch_source_unchanged": true
+}

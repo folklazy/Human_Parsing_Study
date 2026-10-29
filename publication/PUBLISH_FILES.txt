@@ -847,6 +847,7 @@ publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-4.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-closure.json
+publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-navigation.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-observer.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z-explanation.json
