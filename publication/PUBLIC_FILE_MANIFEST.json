@@ -65,8 +65,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 53630,
-      "sha256": "ebfa59fefea1c851cbf3eb310e1375388eab971e497bfa09055ba665f18439cc"
+      "bytes": 53823,
+      "sha256": "3c0f55248fddb1bcacb1dc960375968d08cdc0f55381bf97739d74a9fd97bb12"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -299,6 +299,11 @@
       "sha256": "aead13e49a52164d00fa60987c65c742882caa2000e7f1c17d56ed5fb70e73be"
     },
     {
+      "path": "Human_Parsing_Benchmark/metrics/sapiens08-c4p-20261029T081254180014Z/PER_TARGET.csv",
+      "bytes": 410,
+      "sha256": "751102559efd26351a6283de32a04d7df619ce2d7261e810d36928c0387b20e3"
+    },
+    {
       "path": "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md",
       "bytes": 36724,
       "sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b"
@@ -395,8 +400,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md",
-      "bytes": 5969,
-      "sha256": "ecd6e59c6ea31b60310c612c56ec4968e848961707ce1d1f55fe191db020ee05"
+      "bytes": 3662,
+      "sha256": "dd2214f44c48807608ed85b046c6750e328c26c72543acedf38600cb4313f251"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
@@ -900,8 +905,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/COMPLETION.json",
-      "bytes": 4379,
-      "sha256": "0d09865a3ecf0e5c2c11a211f1c02ca07c1a08af6a7e2c673c03488d4d08a6f4"
+      "bytes": 1482,
+      "sha256": "8927f9e6ca22302e8671805e5d7bece9d4661aa04ee2a056df07075f519ae8d1"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/FULL_CONFIG.json",
@@ -915,8 +920,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/METRICS.json",
-      "bytes": 67454,
-      "sha256": "adeab3c7f98224b603fd40ab7aa4b9a6008e4e65ca35de7fb6ca9f738a0f131f"
+      "bytes": 11215,
+      "sha256": "881d376917834c9041b0a3b6ed7ce58b706303005d41cbc844baa6ca8dd701b5"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/PILOT_COMPLETION.json",
@@ -935,8 +940,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/REPORT_TH.md",
-      "bytes": 5896,
-      "sha256": "a815484dc57f04a2efb70030506a0a3b8da3fa407f87b8dd94707dfd148c51ff"
+      "bytes": 3575,
+      "sha256": "5da18185b619f14a710bcc4451c3c4ff1ee81aec183e2297438e5b6fad1a82a7"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json",
@@ -3840,8 +3845,8 @@
     },
     {
       "path": "publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-closure.json",
-      "bytes": 2188,
-      "sha256": "1486792fc231de25d6059adad38e55116eb84246721b08d4692fd52606bcba4a"
+      "bytes": 2687,
+      "sha256": "b6a706894f58bd809386bb1044f5434baca24784864840f0ea1bfbd42dca9c4e"
     },
     {
       "path": "publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-pilot-pass-full-freeze.json",
@@ -5459,6 +5464,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T11:11:43.005573+00:00",
+  "updated_utc": "2026-10-29T14:50:31.282739+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

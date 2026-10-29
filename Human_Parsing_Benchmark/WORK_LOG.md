@@ -293,3 +293,7 @@ Sapiens0.8B statusBLOCKED,pilot6/6,canonical671/5000,calls672,queue60.3s/executi
 ## 2026-10-29T11:11:42.931667+00:00 UTC — common-c4p-full-20261029T063458522990Z: batch terminal
 
 FINISHED_COMPLETE; GPU + saved-only CPU workers exited, no next-model launch. Canonical per-system results/strict nulls and immutable attempts under fresh run. Full report updated; no native scientific changes or extra inference.
+
+## 2026-10-29T21:50:31.233600+07:00 — sapiens08-c4p-20261029T081254180014Z: closure
+
+Sapiens0.8B status COMPLETE, pilot 6/6, canonical 5000/5000, calls 5001, queue 60.3s/execution 16923.5s.

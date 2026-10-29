@@ -59,6 +59,7 @@ Human_Parsing_Benchmark/metrics/presentation-four-20261028T184321049969Z/QANet_C
 Human_Parsing_Benchmark/metrics/presentation-four-20261028T184321049969Z/RPR_CIHP.json
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/SUMMARY.csv
+Human_Parsing_Benchmark/metrics/sapiens08-c4p-20261029T081254180014Z/PER_TARGET.csv
 Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md
 Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json
 Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv
