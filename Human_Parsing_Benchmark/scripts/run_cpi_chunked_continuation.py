@@ -21,33 +21,50 @@ original_prepare = base.prepare
 original_clocks = base.elapsed_seconds
 
 
+def implementation(mid=None):
+    mid = MID if mid is None else mid
+    paths = ['Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py']
+    revision, module = REVISION, 'cihp_benchmark.cpi_memory'
+    if mid == 'CPI_R50_CIHP':
+        paths.append('Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py')
+        revision, module = 'CPI_FEATURE_BUFFER_REUSE_2', 'cihp_benchmark.cpi_feature_memory'
+    sources = {rel: base.file_hash(W / rel) for rel in paths}
+    digest = (next(iter(sources.values())) if len(sources) == 1 else
+              hashlib.sha256(json.dumps(sources, sort_keys=True).encode()).hexdigest())
+    return {'revision': revision, 'module': module, 'sources': sources, 'sha256': digest}
+
+
 def dependencies():
     paths = ['src/cihp_benchmark/cpi_memory.py', 'scripts/run_cpi_continuation.py',
              'scripts/run_cihp_segment.py', 'scripts/run_rpr_shared_segment.py',
              'scripts/run_cpi_r50_shared_segment.py', 'scripts/run_cpi_convnext_shared_segment.py']
-    return {str((P / rel).relative_to(W)): base.file_hash(P / rel) for rel in paths}
+    result = {str((P / rel).relative_to(W)): base.file_hash(P / rel) for rel in paths}
+    result.update(implementation()['sources'])
+    return result
 
 
 def expanded(mid):
     if mid != MID:
         raise ValueError('Continuation model differs from selected model')
     text = original_expand(mid)
-    patch_rel = 'Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py'
-    patch_sha = base.file_hash(W / patch_rel)
+    profile = implementation(mid)
+    patch_sha = profile['sha256']
     anchor = "adapter=NativeAdapter(W,spec,out/'adapter');result['model_details']=adapter.details;atomic(out/'RUN.json',result)"
     if text.count(anchor) != 1:
         raise ValueError('Frozen model-construction anchor changed')
-    insert = (f"\n  if file_hash(W/{patch_rel!r})!={patch_sha!r}:raise ValueError('Memory implementation changed')"
-              "\n  from cihp_benchmark.cpi_memory import install as install_memory_repair"
-              f"\n  result['memory_implementation']=install_memory_repair(adapter.model.bbox_head,{HEAD_SHA!r})"
-              "\n  atomic(out/'RUN.json',result)")
+    insert = ''.join(f"\n  if file_hash(W/{rel!r})!={digest!r}:raise ValueError('Memory implementation changed')"
+                     for rel, digest in profile['sources'].items())
+    insert += (f"\n  from {profile['module']} import install as install_memory_repair"
+               f"\n  result['memory_implementation']=install_memory_repair(adapter.model.bbox_head,{HEAD_SHA!r})"
+               "\n  atomic(out/'RUN.json',result)")
     text = text.replace(anchor, anchor + insert)
     marker = 'metadata.update(actual_resource_mode='
     if text.count(marker) != 1:
         raise ValueError('Frozen packet metadata anchor changed')
     provenance = (
-        f"metadata['memory_implementation_revision']={REVISION!r};"
+        f"metadata['memory_implementation_revision']={profile['revision']!r};"
         f"metadata['memory_implementation_sha256']={patch_sha!r};"
+        f"metadata['memory_implementation_sources']={profile['sources']!r};"
         "metadata['base_inference_fingerprint']=metadata['inference_fingerprint'];"
         "metadata['implementation_fingerprint']=hashlib.sha256(json.dumps("
         "{'base':metadata['base_inference_fingerprint'],'revision':metadata['memory_implementation_revision'],"
@@ -76,6 +93,7 @@ def clocks(records):
 
 def prepare(mid, root):
     cfg, pop, det, plan = original_prepare(mid, root)
+    profile = implementation(mid)
     receipts = diagnostic_records()
     matched = []
     for receipt in receipts:
@@ -84,8 +102,10 @@ def prepare(mid, root):
         binding = json.loads(snapshot.read_text())
         if (state.get('status') == 'DIAGNOSTIC_PASS'
                 and binding['model_id'] == mid
+                and binding['implementation_revision'] == profile['revision']
+                and state['patch']['revision'] == profile['revision']
                 and state['config_sha256'] == base.file_hash(snapshot)
-                and binding['protected_hashes']['Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py'] == base.file_hash(P / 'src/cihp_benchmark/cpi_memory.py')
+                and all(binding['protected_hashes'].get(rel) == digest for rel, digest in profile['sources'].items())
                 and binding['protected_hashes']['Human_Parsing_Benchmark/configs/cihp_native_six.json'] == base.file_hash(P / 'configs/cihp_native_six.json')
                 and state['patch']['original_head_sha256'] == HEAD_SHA
                 and any(r.get('regression') == 'ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET' for r in state['observations'])):
@@ -96,7 +116,9 @@ def prepare(mid, root):
     plan['prior_retained_bytes'] += additional
     if plan['prior_retained_bytes'] >= cfg['max_per_system_artifact_gib'] * 2**30:
         raise ValueError('Cumulative retained-artifact cap consumed')
-    plan.update(implementation_revision=REVISION,
+    plan.update(implementation_revision=profile['revision'],
+                implementation_sources=profile['sources'],
+                implementation_source_sha256=profile['sha256'],
                 implementation_dependencies=dependencies(),
                 compatible_gpu_repair_evidence=matched,
                 diagnostic_resources_included=[str(f.relative_to(W)) for f in receipts],
@@ -107,7 +129,7 @@ def prepare(mid, root):
                     'diagnostic_predictions_reused_as_canonical': False})
     policy_path = W / plan['resource_policy']
     policy = json.loads(policy_path.read_text())
-    policy.update(implementation_revision=REVISION,
+    policy.update(implementation_revision=profile['revision'],
                   authority='Explicit operator invocation of repaired ' + mid + ' continuation',
                   diagnostic_resource_accounting='Included in prior worker time and retained bytes')
     base.write(policy_path, policy)
@@ -131,7 +153,7 @@ def main():
     if '--worker' in sys.argv:
         path = Path(sys.argv[sys.argv.index('--segment-manifest') + 1])
         plan = json.loads(path.read_text())
-        if plan.get('implementation_revision') != REVISION:
+        if plan.get('implementation_revision') != implementation()['revision']:
             raise ValueError('Explicit memory implementation binding required')
         for rel, expected in plan['implementation_dependencies'].items():
             if base.file_hash(W / rel) != expected:

@@ -1,0 +1,74 @@
+{
+  "work_unit": "cpi-r50-feature-20261029T175338825178Z",
+  "created_utc": "2026-10-29T17:54:35.927315+00:00",
+  "scope": "Inference-only R50 private-buffer reuse and dead-feature lifetime implementation, CPU acceptance, conditional continuation bindings and docs. No frozen/native on-disk changes/results or raw datasets/packets/logs/weights.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py",
+      "sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "bytes": 7088
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_feature_memory.py",
+      "sha256": "c5b066c8befc779c829daea98e092623412139be8acd0c2cf7bcf9ac6819f9d6",
+      "bytes": 4025
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py",
+      "sha256": "3c198b46c36439ef565ffc024293e9270de866d199dc4d7cc434e063b1ca16eb",
+      "bytes": 4141
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+      "sha256": "69b6e2f254aec674d33b5a5abac79bc3fc5c5483390561cee8fe6b3a19d828ef",
+      "bytes": 14989
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+      "sha256": "77936605e9b09e60aefdff1958379019ad26972a600066dd7e0a4281139faa5a",
+      "bytes": 8675
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_r50_feature_memory_diagnostic.json",
+      "sha256": "8c8eb6ca171d8dae9d234d90859633832949575767bd07f1bcf92587771c7f17",
+      "bytes": 5019
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "16c4d79e88627e35d5d6b1dc6142cbc09b2c323126a6112a65dbf5ca41022aa2",
+      "bytes": 578
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "eb6e6d96ae2ae64b5303e2e7fa60ee1f51fe914170a0dca6293632d708f6be47",
+      "bytes": 62173
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "sha256": "6f6492c5b5c9a87fd25255e40f14769990ba832f857239d3ea8a7931d8770c21",
+      "bytes": 2758
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/AUTHORIZATION.json",
+      "sha256": "8d917178863227f4b6b2013772ff63a1feab1ddc505813174e84a86a35cd218a",
+      "bytes": 1579
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK.json",
+      "sha256": "74efb77a2cc47e169ce12a9df81bfb8e55a31554cbfd61f805f1bce44e352bce",
+      "bytes": 276
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "8c8eb6ca171d8dae9d234d90859633832949575767bd07f1bcf92587771c7f17",
+      "bytes": 5019
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/CPU_ACCEPTANCE.json",
+      "sha256": "a2291ff9f83b18ee11caf10220a208b568c573d5f3b139bb3b077d6acea52b42",
+      "bytes": 1379
+    }
+  ],
+  "redistribution": "New adaptation of pinned CPI/OpenMMLab source anchors/dynamic operations, Apache2 attribution in module and previously published full upstream license retained. No new first-party license.",
+  "GPU_readiness": "NOT_RUN; CPU3feature+5control tests PASS, nativeCUDA layout unit fixture only; old diagnostic failure preserved."
+}

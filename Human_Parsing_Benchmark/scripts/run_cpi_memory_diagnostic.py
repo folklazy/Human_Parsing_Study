@@ -106,8 +106,31 @@ def main():
             guard()
             adapter = NativeAdapter(W, spec, root / 'adapter')
             state['model_details'] = adapter.details
+            feature_reference = None
+            if cfg['implementation_revision'] == 'CPI_FEATURE_BUFFER_REUSE_2':
+                if mid != 'CPI_R50_CIHP':
+                    raise ValueError('Feature-buffer repair is scoped to R50')
+                head = adapter.model.bbox_head
+                gen = torch.Generator(device='cuda').manual_seed(91)
+                feature_input = torch.randn((1, head.parse_head_channels, 3, 5), device='cuda', generator=gen)
+                feature_parameters = torch.randn((3, head.total_params), device='cuda', generator=gen) * .01
+                feature_labels = torch.ones((3, 19), device='cuda', dtype=torch.bool)
+                feature_labels[1] = False
+                feature_centers = torch.tensor([[3., 7.], [17., 5.], [9., 11.]], device='cuda')
+                with torch.no_grad():
+                    native_result = head.casual_head_forward([feature_parameters], feature_input, feature_labels, feature_centers)
+                    feature_reference = [v.detach().clone() for v in native_result[:2]]
+                del native_result
+                from cihp_benchmark.cpi_feature_memory import install
             state['patch'] = install(adapter.model.bbox_head, cfg['head_source_sha256'],
                                      observer=events.append, reference_prefix=2)
+            if feature_reference is not None:
+                with torch.no_grad():
+                    actual_feature = head.casual_head_forward([feature_parameters], feature_input, feature_labels, feature_centers)
+                if any(not torch.equal(a, b) for a, b in zip(feature_reference, actual_feature[:2])):
+                    raise ValueError('GPU native-vs-buffer-reuse feature predictions differ')
+                state['GPU_feature_native_vs_reuse'] = 'PASS_EXACT_FLOAT32_TENSORS'
+                del feature_reference, actual_feature, feature_input, feature_parameters, feature_labels, feature_centers
             # CUDA checks numerical/geometry equivalence before any model frame.
             native_aligned = type(adapter.model.bbox_head)._get_bboxes_single.__globals__['aligned_bilinear']
             fixture_generator = torch.Generator(device='cuda').manual_seed(719)
@@ -203,6 +226,8 @@ def main():
             state['status'] = 'DIAGNOSTIC_PASS'
         except Exception:
             state.update(status='DIAGNOSTIC_FAILED', failed=1, error=traceback.format_exc())
+            if 'adapter' in locals() and hasattr(adapter.model.bbox_head, '_cpi_feature_memory_last'):
+                state['feature_failure_context'] = adapter.model.bbox_head._cpi_feature_memory_last
             write(root / 'FAILURE.json', state)
             print(state['error'], flush=True)
         finally:

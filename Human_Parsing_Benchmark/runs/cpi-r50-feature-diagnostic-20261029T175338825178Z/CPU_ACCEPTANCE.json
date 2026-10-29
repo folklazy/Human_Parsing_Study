@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "feature_tests": 3,
+  "control_tests": 5,
+  "commands": [
+    "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_feature_memory.py -v",
+    "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v"
+  ],
+  "reference": "Actual pinned native casual_head_forward; expected cnt/cxt float32 tensors bitwise equal to repaired function, same input arrays/parameter pointers. Guards reject train/grad/hooks/changedparser.",
+  "CPU_fixture_scope": "train_cfg=None matches inference builder; part_bias initialized for synthetic weights. Native CPU coordinate/cat layout fails view for N>1, so coordinate values copied contiguous in BOTH CPU reference and candidate. This is fixture-only, not model patch; CUDA original coordinate/cat/view layout independently PASS with no model-frame calls; GPU native numerical comparison still required.",
+  "fixture_corrections": "Initial builder trainmatcher omitted and CPU layout mismatch corrected before GPU/model-frame calls; expected numerical values/acceptance not relaxed.",
+  "old_memory_oracles": "Reuse revision1 CPU4 and ConvNeXt full5000 evidence, unchanged cpi_memory.py; not substitute for R50 revision2 GPU proof.",
+  "feature_module_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+  "GPU_model_frames": "NOT_STARTED"
+}
