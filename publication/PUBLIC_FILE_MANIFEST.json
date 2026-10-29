@@ -60,13 +60,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "sha256": "962f3aabb039b112d585071341db7b59110c37712c415d2f7312cc60ecfe0976",
-      "bytes": 1682
+      "bytes": 553,
+      "sha256": "c7027cf8ef41d59226c04f888234e312ea49c6c3c789a60ebdbfbb28f42c551e"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "sha256": "b4a9826f2d8bba4ec94e9cd8c0659f3af65c00aff36cbd7aa9cc44c52e3d2201",
-      "bytes": 59154
+      "bytes": 59505,
+      "sha256": "4a3259869ff5ba852ac30ada04769624748b387b66706c724b8f32b76e894b1d"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -445,8 +445,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/cpi-convnext-chunked-20261029T160327964412Z.md",
-      "sha256": "b26120846ced05197b44daaa0985310a95717b6c6fe0066716be2c75a7b62387",
-      "bytes": 4083
+      "bytes": 4922,
+      "sha256": "a5f59d198b3e9f7d3222b25bcf3b3299261b07e0cc7b1fa2b17f3e1f41c6322f"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
@@ -914,6 +914,11 @@
       "bytes": 77731
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/COMPLETION.json",
+      "bytes": 18727,
+      "sha256": "14e9ea51bf3cac462a973821ead8f5a7e2ba3344e32d01882ce21cd70f7d19d1"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/LAUNCH.json",
       "sha256": "85b1c38357f30847bbc25f7978c2315363bfcf8bd1bef17a85576f50bab6fb96",
       "bytes": 1276
@@ -957,6 +962,11 @@
       "path": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/SEGMENT_LINK.json",
       "sha256": "da05d196edd958b75efd604864c791ae182b00e5b534c48e71360a81e19399fa",
       "bytes": 281
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/TERMINAL_OBSERVATION.json",
+      "bytes": 352,
+      "sha256": "c6137f7cd6f2fc6e66f1256f1c31070f0cbae1f618c1e50bf8dfbeb8e98cb105"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/AUTHORIZATION.json",
@@ -3999,6 +4009,11 @@
       "sha256": "658069fc9680d2268a666643bc1ff1fc24032a502d985478350a9bf9e44dfdcb"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-closure.json",
+      "bytes": 2156,
+      "sha256": "1c9bacb1699f6e966c6dbafbf6848b4d5739987ebd2423d75d2107daf0407941"
+    },
+    {
       "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-observer.json",
       "bytes": 698,
       "sha256": "51207dacec681e964abaf5e3acd23956c15225473435c9abac4abb7d129725d0"
@@ -5704,6 +5719,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T16:08:59.115672+00:00",
+  "updated_utc": "2026-10-29T17:21:59.443406+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

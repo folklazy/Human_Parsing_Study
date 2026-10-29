@@ -329,3 +329,7 @@ User saysเริ่มทำเลย after repairPASS; scopeConvNeXt-only/nat
 ## 2026-10-29T23:08:11.945471+07:00 — cpi-convnext-chunked-20261029T160327964412Z: repaired canonical launch/firstpacket PASS
 
 Prelaunchfd94aea;controller640227/worker640842/SID640227/PPID1detached. Reconciled337/pending4663exactdisjoint5000; repairdiagnosticsnotcanonical. Firstnew0003218 NPZbyteidenticaltodiagnostic, independentnewcall, geometry/native20/hash/GT/bothsavedscorers/effectiveimplementationidentityPASS. Priorrepairclockincluded411.492817s; sameguards/noautoretry. Snapshotnew204/failed0,primarynulluntilfullaudit. Reporteradjustedtoidentifynewwrapperandformatcanonicalquality/person/perclasstablesonlyatterminal; noscoring/modelchanges. Nextpublishlaunch/attachread-onlyobserverthenendturn,letworkerfinish/stop.
+
+## 2026-10-30T00:21:59.326025+07:00 — cpi-convnext-chunked-20261029T160327964412Z: automatic terminal observation
+
+Controller exited; canonical COMPLETE, 5000/5000. Existing controller reconciled packets and saved-mask scores; this observer only assembled report/navigation. Failure/attempt history retained; no retry/next model/inference/rescore.
