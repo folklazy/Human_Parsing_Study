@@ -1,0 +1,5 @@
+run_id,protocol_revision,scope,target_id,target,IoU,GT_pixels,pred_pixels,union_pixels
+common-c4p-pilot-20261029T010410394659Z-binary-cache-fix,revision-2-pilot,SIX_IMAGE_PILOT_ONLY,1,1 Face ตาม CIHP reference / approximate Face_Neck proxy,0.6472017178902161,52314,70419,74510
+common-c4p-pilot-20261029T010410394659Z-binary-cache-fix,revision-2-pilot,SIX_IMAGE_PILOT_ONLY,2,2 Hair,0.8302063552348399,75513,69055,78990
+common-c4p-pilot-20261029T010410394659Z-binary-cache-fix,revision-2-pilot,SIX_IMAGE_PILOT_ONLY,3,3 Upper non-Dress family,0.6752536303958624,162564,174296,201080
+common-c4p-pilot-20261029T010410394659Z-binary-cache-fix,revision-2-pilot,SIX_IMAGE_PILOT_ONLY,4,4 Lower non-Dress family,0.7175029190192096,59674,47706,62521

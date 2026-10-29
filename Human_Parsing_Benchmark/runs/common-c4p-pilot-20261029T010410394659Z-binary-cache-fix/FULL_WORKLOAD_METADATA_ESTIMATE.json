@@ -1,0 +1,19 @@
+{
+  "source": "existingpopulation+frozenYOLOledger metadata only;no new inference",
+  "frames": 5000,
+  "YOLO_opportunities": 24062,
+  "uncompressed_prediction_array_GiB_estimate": 8.672606682404876,
+  "largest_packet_by_estimate": {
+    "image_id": "0013072",
+    "wh": [
+      890,
+      668
+    ],
+    "YOLO_opportunities": 14,
+    "uncompressed_packet_bytes_upper_estimate": 17241360,
+    "original_logits_mapback_bytes": 68964320
+  },
+  "compressed_storage_estimate": null,
+  "ETA": null,
+  "limitation": "Upperestimateusingcachedopcountbeforeemptynormalization; excludes metadata/logs/atomictemporary/headroom; compression and peakactivationcannotbe inferred. Not an approved launchcap."
+}

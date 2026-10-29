@@ -1,0 +1,12 @@
+{
+  "status": "PASS_DOCUMENT_NUMERIC_LINK_SOURCE_CONSISTENCY",
+  "local_links": 74,
+  "source_protected_hashes": 18,
+  "launch_source_hashes": 16,
+  "full_common_scores_not_computed": true,
+  "report_sha256": "a9f375b5fb6dbebb13248824faa111efcfd940b4aa85ebfffa97552a9f8b2048",
+  "native_metric_values_unchanged": true,
+  "code_AST_parse": true,
+  "qualitative_images_viewed": 6,
+  "model_calls_aggregate": 7
+}

@@ -1,0 +1,19 @@
+{
+  "pid": 222281,
+  "pgid": 222281,
+  "session_id": 222281,
+  "detached": true,
+  "stdin": "/dev/null",
+  "log": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/worker.log",
+  "command_workspace_relative": [
+    ".venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "Human_Parsing_Benchmark/scripts/run_common_sapiens_pilot.py",
+    "--config",
+    "Human_Parsing_Benchmark/configs/cihp_sapiens_04b_pilot.json"
+  ],
+  "launch_public_commit": "a7683da4b4ad5bfe4a248aba168d74a1cdc24391",
+  "parent_run_id": "common-c4p-pilot-20261029T010410394659Z",
+  "parent_model_calls": 0,
+  "maximum_model_calls_across_segments": 7
+}

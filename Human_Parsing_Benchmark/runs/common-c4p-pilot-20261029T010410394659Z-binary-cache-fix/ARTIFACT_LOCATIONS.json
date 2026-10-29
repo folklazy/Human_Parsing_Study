@@ -1,0 +1,13 @@
+{
+  "run_id": "common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
+  "artifact_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
+  "source_GT_bindings": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings",
+  "gallery": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/gallery/index.html",
+  "raw_logs": "external_only",
+  "source_checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+  "environment": ".venvs/sapiens2-pilot",
+  "published_dataset_images": false,
+  "native_fullframe29_and_person_planes": "externalNPZsixpackets",
+  "full_logits_saved": false,
+  "canonical_native_results_unchanged": true
+}

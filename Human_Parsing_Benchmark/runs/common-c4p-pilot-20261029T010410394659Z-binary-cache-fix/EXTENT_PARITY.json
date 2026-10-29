@@ -1,0 +1,146 @@
+[
+  {
+    "image_id": "0021448",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 5,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 5,
+        "G_sem_C4": 5
+      },
+      "0.75": {
+        "TP": 2,
+        "FP": 3,
+        "FN": 3,
+        "extent_F1": 0.4,
+        "G_loc": 5,
+        "G_sem_C4": 5
+      }
+    },
+    "QANet_packet_sha256": "6eda4c5a2956998a6b32d9ad0ab9818e7a3798cd98340f3346cd98ee6bc67f4b",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0021448"
+  },
+  {
+    "image_id": "0006909",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 8,
+        "FP": 2,
+        "FN": 0,
+        "extent_F1": 0.8888888888888888,
+        "G_loc": 8,
+        "G_sem_C4": 8
+      },
+      "0.75": {
+        "TP": 8,
+        "FP": 2,
+        "FN": 0,
+        "extent_F1": 0.8888888888888888,
+        "G_loc": 8,
+        "G_sem_C4": 8
+      }
+    },
+    "QANet_packet_sha256": "e13adacb97be52838dc756cc7e2cb3cebbd7648c228efe102928466c28961f8a",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0006909"
+  },
+  {
+    "image_id": "0001538",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      },
+      "0.75": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      }
+    },
+    "QANet_packet_sha256": "9ef73ebb70d4bb2e8788e6fa72c8183df07af26be275493ab020083c95546d3a",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0001538"
+  },
+  {
+    "image_id": "0001413",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 4,
+        "G_sem_C4": 4
+      },
+      "0.75": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 1,
+        "extent_F1": 0.75,
+        "G_loc": 4,
+        "G_sem_C4": 4
+      }
+    },
+    "QANet_packet_sha256": "1e852f471ab1d8e7c7f3adcfe2779438036af8aa012cb15fbb3f6abb7e4c7989",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0001413"
+  },
+  {
+    "image_id": "0027897",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      },
+      "0.75": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      }
+    },
+    "QANet_packet_sha256": "0bf42374487fc28f5e1c75433b312d6b932724b51d21ba216d390d40fe6a7b49",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0027897"
+  },
+  {
+    "image_id": "0031248",
+    "identical_cached_extent_arrays": true,
+    "scores": {
+      "0.5": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      },
+      "0.75": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "extent_F1": 1.0,
+        "G_loc": 2,
+        "G_sem_C4": 2
+      }
+    },
+    "QANet_packet_sha256": "5f964b61bccd96dd9b9b8825ce9b1e66c2b2ef39cba7d2614b00a8ccc146f11f",
+    "QANet_source_packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0031248"
+  }
+]

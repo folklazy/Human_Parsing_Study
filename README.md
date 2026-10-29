@@ -2,7 +2,7 @@
 
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
 
-**Current work: isolated C4-P revision-2 implementation and scoped Sapiens2 0.4B pilot (≤7 calls), explicitly authorized with SHARED_GPU_QUALITY_ONLY.** Read the pilot report/STATUS for actual launch/outcome; no fullcommon5,000/othermodel authorization. Four native systems and both paused CPI histories remain unchanged.
+**Current outcome: Sapiens2 0.4B C4-P pilot PASS, 6/6 diagnostic images +1warmup, all7modelcalls consumed.** CPU23oraclecases, GT-onlybindings5,000, savedmask/atomicexport/QANetextentparityverified. This is not a full5,000commonbenchmark; no furtherinferenceauthorized. NativefourresultsandbothpausedCPIhistoriesunchanged.
 
 | Start here | Purpose |
 |---|---|

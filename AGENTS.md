@@ -1,3 +1,7 @@
+# Latest terminal scope — C4-P 0.4B pilot closed, seven-call budget consumed
+
+Read Human_Parsing_Benchmark/reports/CIHP_SAPIENS_04B_PILOT_TH.md and STATUS. PilotPASS6/6+warmup1,total7calls;firstsetupinvalid0callsretained/losslessbinaryreaderfixed. Workerexited/queuestopped. Noautomaticrestart/0.8B/1B/fullcommonscoring/CPIretry/YOLOnewinference/training/color/CCTV. Nativefrozenconfig/source/resultsimmutable. Currentconfig/protocolauthorizationflagsareconsumedhistoricalpermission,notpermissiontoexecuteagain. Fullqualityscopecanbeproposedonly;requiresseparateuserapproval/launchconfig.
+
 # Latest scope — common-view revision2 scoped implementation/pilot
 
 Userexplicitlyauthorizesindependentcommonpipeline/CPUacceptanceandoneSapiens2_0.4bpilot≤7calls(1TRAINwarmup+6specifiedVAL),SHARED_GPU_QUALITY_ONLY. ReadHuman_Parsing_Benchmark/STATUS.mdandpilotreportbeforeanyaction. Nofullcommonscoring,0.8B/1B,YOLOnewinference,CPIretry,training/color/CCTV. Do notresumewhenterminalorbudgetconsumed;nativeconfig/source/resultsimmutable. Olderproposalscopebelowishistorical.

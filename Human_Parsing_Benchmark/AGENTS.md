@@ -62,3 +62,7 @@ Read reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md and STATUS. Userauthorizes 
 ## Latest explicit authorization — 2026-10-29T08:20:28.215191+07:00
 
 Userauthorizesseparatecommonviewimplementation,CPUacceptance,andconditionalSapiens2_0.4bpilotonly(1TRAINwarmup+6specifiedVAL≤7calls),SHARED_GPU_QUALITY_ONLY;noexternalPID-onlyblock,nootherprocesschanges,noautomaticretry/fallback. ReadSTATUS and reports/CIHP_SAPIENS_04B_PILOT_TH.md. Nativefrozenfiles/results/GTandbothpausedCPIimmutable. No0.8B/1B/fullcommonscoring/YOLOnewinference/training/color/CCTV. Onefreshattemptcontrolleronly; stoponerror; oldlaunchpermissionsnotreusable.
+
+## 2026-10-29T08:45:10.351455+07:00 — scoped common pilot closed; budget consumed
+
+Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwarmup+6specifiedVAL=7calls,6complete0failed/invalid/noOOM/fallback/retry. Parentsetupinvalid0forwardcallsretained;losslessbinarycacheconversionfixedwithoutscientificchange. CPU23/saved4×1/cache7PASS,GT-onlyG_loc17520/G_sem_C417454,6savedmaskrescore/atomiccontract/QANetextentparityPASS. Nativefrozen18hashes/source/resultsunchanged;CPIpaused. [Closure](reports/CIHP_SAPIENS_04B_PILOT_TH.md). Noautomaticrestart/othermodel/full5,000;fullqualityproposalpossiblebutrequiresseparateacceptedlaunchconfig/approval. Oldpilotconfigflagsdescribetheconsumedauthorization,notnewpermission.

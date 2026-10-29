@@ -1,0 +1,107 @@
+{
+  "scope": "AI visual spotinspection of all6fixedpilotfigures; not independentannotationQA",
+  "checked_utc": "2026-10-29T01:39:21.317297+00:00",
+  "systematic_geometry_or_channel_bug_observed": false,
+  "limitations": "Visual inspection does not prove allboundaries correct; asymmetricCPUfixture/geometry/hash checks support coordinate/channelcontract independently.",
+  "notes": [
+    {
+      "image_id": "0021448",
+      "observation": "RGB/GT/native/app maps align at athletes and flag occlusions; neck/medal and clothing-edge disagreement remains. Do not infer missingphysicalpeople from count alone."
+    },
+    {
+      "image_id": "0006909",
+      "observation": "Crowded overlapping people: GTDress region is partly predicted as Upper/LowerClothing in native IDs. This becomes validOTHER-vs-target disagreement; no Dress split or per-modelignore."
+    },
+    {
+      "image_id": "0001538",
+      "observation": "Close-up face/hair aligned; Face_Neck proxy extends into some GT Torso-skin pixels below face. This is observed discordance compatible with boundary-taxonomy mismatch, not proof that all such pixels are taxonomy-only errors."
+    },
+    {
+      "image_id": "0001413",
+      "observation": "Firefighting attire: some Hair predictions on GTHat/OTHER and garment boundaries differ; GT Hair absent in this frame. Absence stays valid negative, not void."
+    },
+    {
+      "image_id": "0027897",
+      "observation": "Wide frame remaps into original aspect correctly; headdress/hair and dress/clothing labels disagree. Garment/prop segmentation differences visible, not a coordinate rotation/flip."
+    },
+    {
+      "image_id": "0031248",
+      "observation": "Portrait wedding scene: much of GTDress projects from nativeApparel toOTHER; garment/veil edges and skin/clothing partitions differ. This example does not establish Apparel=Dress universally."
+    }
+  ],
+  "discordance_counts_from_saved_native_ID_application_composition": [
+    {
+      "image_id": "0021448",
+      "GT_persons": 5,
+      "GT_semantic_eligible": 5,
+      "predicted_persons": 5,
+      "GT_Dress_pixels": 0,
+      "GT_Dress_pred_Apparel": 0,
+      "GT_Dress_pred_LowerClothing": 0,
+      "GT_Dress_pred_UpperClothing": 0,
+      "GT_TorsoSkin_pred_FaceNeck": 597,
+      "GT_Hat_pred_Hair": 0
+    },
+    {
+      "image_id": "0006909",
+      "GT_persons": 8,
+      "GT_semantic_eligible": 8,
+      "predicted_persons": 10,
+      "GT_Dress_pixels": 12870,
+      "GT_Dress_pred_Apparel": 124,
+      "GT_Dress_pred_LowerClothing": 19,
+      "GT_Dress_pred_UpperClothing": 12598,
+      "GT_TorsoSkin_pred_FaceNeck": 1158,
+      "GT_Hat_pred_Hair": 10
+    },
+    {
+      "image_id": "0001538",
+      "GT_persons": 2,
+      "GT_semantic_eligible": 2,
+      "predicted_persons": 2,
+      "GT_Dress_pixels": 0,
+      "GT_Dress_pred_Apparel": 0,
+      "GT_Dress_pred_LowerClothing": 0,
+      "GT_Dress_pred_UpperClothing": 0,
+      "GT_TorsoSkin_pred_FaceNeck": 17486,
+      "GT_Hat_pred_Hair": 0
+    },
+    {
+      "image_id": "0001413",
+      "GT_persons": 4,
+      "GT_semantic_eligible": 4,
+      "predicted_persons": 4,
+      "GT_Dress_pixels": 0,
+      "GT_Dress_pred_Apparel": 0,
+      "GT_Dress_pred_LowerClothing": 0,
+      "GT_Dress_pred_UpperClothing": 0,
+      "GT_TorsoSkin_pred_FaceNeck": 0,
+      "GT_Hat_pred_Hair": 56
+    },
+    {
+      "image_id": "0027897",
+      "GT_persons": 2,
+      "GT_semantic_eligible": 2,
+      "predicted_persons": 2,
+      "GT_Dress_pixels": 16824,
+      "GT_Dress_pred_Apparel": 515,
+      "GT_Dress_pred_LowerClothing": 0,
+      "GT_Dress_pred_UpperClothing": 15045,
+      "GT_TorsoSkin_pred_FaceNeck": 315,
+      "GT_Hat_pred_Hair": 0
+    },
+    {
+      "image_id": "0031248",
+      "GT_persons": 2,
+      "GT_semantic_eligible": 2,
+      "predicted_persons": 2,
+      "GT_Dress_pixels": 59397,
+      "GT_Dress_pred_Apparel": 58409,
+      "GT_Dress_pred_LowerClothing": 0,
+      "GT_Dress_pred_UpperClothing": 265,
+      "GT_TorsoSkin_pred_FaceNeck": 478,
+      "GT_Hat_pred_Hair": 0
+    }
+  ],
+  "mapping_changed_after_pilot": false
+}

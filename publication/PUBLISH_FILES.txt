@@ -139,8 +139,18 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-sha
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/PROGRESS_VIEWER_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_LOCATIONS.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_VERIFICATION.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/EXTENT_PARITY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FINAL_CONSISTENCY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FULL_WORKLOAD_METADATA_ESTIMATE.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/GT_BINDING_SUMMARY.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/METRICS_DIAGNOSTICS.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_CLASS_METRICS.csv
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_COMPLETION.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PROCESS.json
+Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/QUALITATIVE_REVIEW.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/READINESS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/SETUP_CORRECTION.json
@@ -184,6 +194,7 @@ Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
 Human_Parsing_Benchmark/scripts/run_rpr_shared_segment.py
+Human_Parsing_Benchmark/scripts/verify_common_pilot_artifacts.py
 Human_Parsing_Benchmark/scripts/verify_common_view_cpu.py
 Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
 Human_Parsing_Benchmark/scripts/write_four_model_report.py
@@ -739,6 +750,7 @@ publication/CIHP_SIX_READINESS_20261028T034103254470Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
 publication/COMMON_VIEW_BINARY_CACHE_FIX_20261029.json
 publication/COMMON_VIEW_IMPLEMENTATION_PILOT_20261029.json
+publication/COMMON_VIEW_PILOT_CLOSURE_20261029.json
 publication/COMMON_VIEW_PROTOCOL_PROPOSAL_20261029.json
 publication/CPI_CONVNEXT_DIAGNOSTIC_READY_20261028.json
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json

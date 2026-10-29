@@ -1,4 +1,4 @@
-> **Current work: isolated C4-P revision-2 implementation and authorized0.4Bpilot≤7calls.** [Pilot report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU acceptance passed; use actualcurrentstatus before launch. Both CPIpaused; nativefourresults preserved; nofullcommonbenchmark/othermodels.
+> **Current outcome: C4-P Sapiens2 0.4B pilot PASS (6/6 +1warmup,7-callbudgetconsumed).** [Closure report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU23cases/GTbindings/QANetextentparityverified; fullcommonscoresnotrun. Nativefour/CPIhistorypreserved;noautomaticnextmodel.
 
 # Human Parsing Benchmark
 

@@ -1,0 +1,212 @@
+{
+  "work_unit": "common-c4p-pilot-20261029T010410394659Z-binary-cache-fix",
+  "phase": "PILOT_CLOSURE_POST_RUN_SNAPSHOT",
+  "created_utc": "2026-10-29T01:51:31.903504+00:00",
+  "base_commit": "a7683da4b4ad5bfe4a248aba168d74a1cdc24391",
+  "actual_launch_commit": "a7683da4b4ad5bfe4a248aba168d74a1cdc24391",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "before_sha256": "f6ca0254d4accc42aa00bf21108b5a2f7379f51db725adcd31762fe111d50431",
+      "sha256": "1b552096118ff109511e2bf61b07fbd4611ab6b52a42c4ff423f75a27ef0f993",
+      "bytes": 10058
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "before_sha256": "9ae15df0aa4e1f24c16ba199fe49e14b48e58777b59c49915e5058512fbd9109",
+      "sha256": "b25a4dac3814bbec5321cd0c77bb57e8c1b4a06f3b6b9a91c1e09b2785e23eb3",
+      "bytes": 1932
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "before_sha256": "dc9b72065c9b0f76e59c86a5c2b6c9dd87f8edddcee530bfd015d9b5185ea5b6",
+      "sha256": "3f447d8916ad61980c4b6342024387af5daeac9f038b1f232224ae4d482401ba",
+      "bytes": 16543
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "before_sha256": "1ff51c51f335263472f5ee4062137c0686aedfa92895487d7a77c761443b4b1d",
+      "sha256": "72e4d4aeda6233340449ff870b4df7a48308fb7733ec583181744fd879661bf5",
+      "bytes": 44343
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "before_sha256": "309fb89afc8a70d09ef3525d53ba6a4f5685031b348d745386019159d421216f",
+      "sha256": "163a2d8812640f82df113c86bd19a9976de0d97c451f4378b9dade80bc7245e3",
+      "bytes": 9964
+    },
+    {
+      "path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "before_sha256": "ba2cb85763b3700f30f6668f1d2a262de29a84048778def5a0eb62a0973f99e5",
+      "sha256": "d1150a4847048952490a449767495572648328ddfdabe8fd48324db820a604f5",
+      "bytes": 15098
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_04B_PILOT_TH.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_04B_PILOT_TH.md",
+      "before_sha256": "aff865445375eba987641a9815e78166c25a0c2e5d4afa00c1b2559bac0d970a",
+      "sha256": "a9f375b5fb6dbebb13248824faa111efcfd940b4aa85ebfffa97552a9f8b2048",
+      "bytes": 25080
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/verify_common_pilot_artifacts.py",
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/verify_common_pilot_artifacts.py",
+      "before_sha256": null,
+      "sha256": "d6fc3591cab797b93052e3278a2617cbbf002725be231bd7bfbfbd8eeb1d0636",
+      "bytes": 6621
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_LOCATIONS.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_LOCATIONS.json",
+      "before_sha256": null,
+      "sha256": "842f47acb66ab9e68213c7f8ba48c7a0e94d626acb35fdc6d9f5fae6e862cd60",
+      "bytes": 960
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_VERIFICATION.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_VERIFICATION.json",
+      "before_sha256": null,
+      "sha256": "54c15d2bc0a97f985a45b5872be31df416b91e4cf6cd0f0b7223841a6c361800",
+      "bytes": 6616
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json",
+      "before_sha256": "a29577730b11256b792abb71c148e8933dfced1fb47af054c6255216ddfcab2d",
+      "sha256": "a29577730b11256b792abb71c148e8933dfced1fb47af054c6255216ddfcab2d",
+      "bytes": 5624
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/EXTENT_PARITY.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/EXTENT_PARITY.json",
+      "before_sha256": null,
+      "sha256": "ba78bdd0a7450b6ec9f7f8a7bdf0d78cb8b396158dd74203948e519342220f0d",
+      "bytes": 3952
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FINAL_CONSISTENCY.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FINAL_CONSISTENCY.json",
+      "before_sha256": null,
+      "sha256": "fbda2bb7367c62bc2eb03412b973e276c4a1f292219ac003fb847c5614a0ef3a",
+      "bytes": 410
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FULL_WORKLOAD_METADATA_ESTIMATE.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/FULL_WORKLOAD_METADATA_ESTIMATE.json",
+      "before_sha256": null,
+      "sha256": "8f199d510ca482fe597eb2c1029af2c209c5f907f02401566a4942dfe1263e34",
+      "bytes": 696
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/GT_BINDING_SUMMARY.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/GT_BINDING_SUMMARY.json",
+      "before_sha256": "13b0c1910a127af4cb27638215d6618e8aeecb83b77684429a2d4f296ba6632d",
+      "sha256": "13b0c1910a127af4cb27638215d6618e8aeecb83b77684429a2d4f296ba6632d",
+      "bytes": 726
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/METRICS_DIAGNOSTICS.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/METRICS_DIAGNOSTICS.json",
+      "before_sha256": null,
+      "sha256": "27cbc9d6abf8f3469c093177d32832a6e1a53d2e19ff757738fb88a7fb9e7274",
+      "bytes": 2860
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_CLASS_METRICS.csv",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_CLASS_METRICS.csv",
+      "before_sha256": null,
+      "sha256": "b543212e47ec8386c5223b18772e0c1a02e95df34e86c149015f7c103d308ce5",
+      "bytes": 745
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_COMPLETION.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PILOT_COMPLETION.json",
+      "before_sha256": null,
+      "sha256": "0fa269a4cb6d39c0578c9f6ec737746086870f0a103e0c3f70593623368e2f58",
+      "bytes": 1710
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PROCESS.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/PROCESS.json",
+      "before_sha256": null,
+      "sha256": "8c55b893a204c943217db477140caa3a21ab7b910c6ac4263361385d6296230e",
+      "bytes": 724
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/QUALITATIVE_REVIEW.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/QUALITATIVE_REVIEW.json",
+      "before_sha256": null,
+      "sha256": "ff75950062e69099f40a79dcda68c90c3c0d97c2d8eed97f24e35cddfb142ec3",
+      "bytes": 4070
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/READINESS.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/READINESS.json",
+      "before_sha256": "6d0eb7e3cf482b37aa8adec16a5ff56e5179e542379b02e587c5784499b65966",
+      "sha256": "6d0eb7e3cf482b37aa8adec16a5ff56e5179e542379b02e587c5784499b65966",
+      "bytes": 3786
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/RESOURCE_POLICY.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/RESOURCE_POLICY.json",
+      "before_sha256": "59e080ed7fbfd708622852b60d01b36687e2b363652b10fc0843551b94983f8a",
+      "sha256": "59e080ed7fbfd708622852b60d01b36687e2b363652b10fc0843551b94983f8a",
+      "bytes": 458
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/SETUP_CORRECTION.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/SETUP_CORRECTION.json",
+      "before_sha256": "00aefbbf7338918f8a84d4af49e7cee1b633867a4cbcacf2ecf7179a88699924",
+      "sha256": "00aefbbf7338918f8a84d4af49e7cee1b633867a4cbcacf2ecf7179a88699924",
+      "bytes": 914
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "e1a509011ed8d427617564d2313903a8b7c05ea23242229bb560dd11c1aacdce",
+      "sha256": "cf6a23501621ab271c3230f40ac32b74a6f8a323212823eb97d5b66b502c6560",
+      "bytes": 10861
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "aa7e25bd356579d068703d409821aaee262d51819f9913efb0f6d873a82ee58a",
+      "sha256": "9dc0301758106dacfd8b155e928fa770a4132adfd74f331336a49b38cbfbf104",
+      "bytes": 11612
+    },
+    {
+      "path": "STUDY_STATE.json",
+      "before_sha256": "931021e16122e6ea076035b12b5b23fae1f3675288127cad5bafe92768edee1b",
+      "sha256": "4424198f92f319d14625b1eba29fba047b18b4d155a6764f1bccbb68538baa01",
+      "bytes": 2727
+    },
+    {
+      "path": "publication/PUBLISH_FILES.txt",
+      "before_sha256": "d5b72d406f3a66fefac58e5d2811dd527bd97cc55d81cfa3b7606df89d25fdfe",
+      "sha256": "71f6498397d5faac038c4d809f0452527e67c81af943b222243de652c84b2797",
+      "bytes": 84369
+    }
+  ],
+  "checks": {
+    "links": 67,
+    "native_immutable_files": 18,
+    "common_launch_source_hashes": 16,
+    "model_calls": 7,
+    "warmup": 1,
+    "VAL_complete": 6,
+    "VAL_failed": 0,
+    "VAL_invalid": 0,
+    "parent_setup_invalid_before_model_calls": 1,
+    "CPU_oracle_tests": 23,
+    "readback_rescore_QANet_extent_parity": "PASS",
+    "AI_figures_spot_inspected": 6,
+    "staged_assets_secrets_symlinks_size": "PASS"
+  },
+  "scope": "First-partycode/compactCSV+JSONevidence/provenance/reportonly. Privategallery/NPZ/GTsidecars/rawlogs/environmentbinaries/checkpoints/datasetsnotpublished;existinglicenseunchanged. No thirdpartycodeaddition.",
+  "full_common_evaluation_authorized": false,
+  "next_model_started": false
+}
