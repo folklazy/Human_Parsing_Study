@@ -285,3 +285,7 @@ User expands scope to include `Sapiens2_0.8b` C4-P (pilot 6 VAL + 1 TRAIN warmup
 ## 2026-10-29T15:17:20.282620+07:00 — sapiens08-c4p-20261029T081254180014Z: pilot-pass-full-freeze
 
 Sapiens0.8B statusFULL_READY,pilot6/6,canonical6/5000,calls7,queue0.0s/execution148.9s. Own checkpoint/native29/source/scientificidentity/GT bindings;no04modification/noexistingfourrescoring/noqualitytuning/retry/fallback. SourceprovenanceandThai reportrecorded.
+
+## 2026-10-29T16:19:11.514142+07:00 — sapiens08-c4p-20261029T081254180014Z: closure
+
+Sapiens0.8B statusBLOCKED,pilot6/6,canonical671/5000,calls672,queue60.3s/execution3799.9s. Own checkpoint/native29/source/scientificidentity/GT bindings;no04modification/noexistingfourrescoring/noqualitytuning/retry/fallback. SourceprovenanceandThai reportrecorded.

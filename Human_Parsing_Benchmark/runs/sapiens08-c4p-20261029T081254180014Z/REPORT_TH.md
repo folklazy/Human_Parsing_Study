@@ -1,15 +1,15 @@
 # Sapiens2 segmentation 0.8B — CIHP C4-P
 
-อัปเดต 2026-10-29T15:17:20.281451+07:00 · run `sapiens08-c4p-20261029T081254180014Z` · **FULL_READY**
+อัปเดต 2026-10-29T16:19:11.506735+07:00 · run `sapiens08-c4p-20261029T081254180014Z` · **BLOCKED**
 
 ## สถานะและขอบเขต
 
 |ระบบ|สถานะ|Complete/5,000|
 |---|---|---:|
-|Sapiens2 0.4B (รอบเดิม)|INFERENCE|3357/5000|
-|Sapiens2 0.8B|FULL_READY|6/5000|
+|Sapiens2 0.4B (รอบเดิม)|INFERENCE|4425/5000|
+|Sapiens2 0.8B|BLOCKED|671/5000|
 
-Pilot0.8B 6/6; model-frame callsรวม 7; warmup 1; reused 6; queue 0.0s แยกจาก execution 148.9s. ค่า complete ของ0.8Bนับ canonical หลัง pilot ผ่าน/manifestfreezeเท่านั้น. ทั้งสองค่าเวลานี้เป็น operational accounting ไม่ใช่ speed ranking
+Pilot0.8B 6/6; model-frame callsรวม 672; warmup 1; reused 6; queue 60.3s แยกจาก execution 3799.9s. ค่า complete ของ0.8Bนับ canonical หลัง pilot ผ่าน/manifestfreezeเท่านั้น. ทั้งสองค่าเวลานี้เป็น operational accounting ไม่ใช่ speed ranking
 
 ผู้ใช้อนุมัติ pilotหนึ่งTRAINwarmup+6fixedVAL แล้ว full validation5,000 เมื่อผ่าน โดยไม่ถามซ้ำ; shared-GPU quality-only พร้อม0.4Bได้เมื่อadmissionผ่าน มิฉะนั้นqueueไม่หยุด0.4B. รอคิวสูงสุด24hแยกจากexecution24h,stream80GiB/free50GiBเดิม. ไม่มี1B/CPI/training/color/YOLO inference และไม่คำนวณ common view สี่โมเดลเดิมซ้ำ
 
