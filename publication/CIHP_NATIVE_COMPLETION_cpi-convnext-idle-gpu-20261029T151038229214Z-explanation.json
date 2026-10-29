@@ -1,0 +1,22 @@
+{
+  "work_unit": "cpi-convnext-idle-gpu-20261029T151038229214Z-explanation",
+  "base_commit": "08851abf988ef8ab08bf4645b92ae347ecc0df21",
+  "scope": "Explain canonical CPI OOM outcome and exact model identity; no new inference or metrics changes",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "sha256": "11e34b2c26821d6c614acf33487a187d4256214550587730345fff1249dc7f89",
+      "before_sha256": "42eab9cb755ee7549a25a1c6a2e699e4bcbd2c76b21dd3016f6448f3dd481b85",
+      "bytes": 6057
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "925c890906f39901ac267276530cd3189cbdaaa90dc1cae53e20eb644bceaee3",
+      "before_sha256": "3317002477ddfe48a262d58a8bb284cea99f625dc24e506f0271b6e4ad2cd058",
+      "bytes": 56311
+    }
+  ],
+  "launch_source_unchanged": true
+}

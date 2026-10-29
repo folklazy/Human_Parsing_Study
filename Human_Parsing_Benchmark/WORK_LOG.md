@@ -309,3 +309,7 @@ Detached controller607715/worker607888/SID607715, parentPID1 confirmed; prelaunc
 ## 2026-10-29T22:15:10.047958+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: automatic terminal observation
 
 Controller exited; canonical INCOMPLETE, 337/5000. Existing controller reconciled packets and saved-mask scores; this observer only assembled report/navigation. Failure/attempt history retained; no retry/next model/inference/rescore.
+
+## 2026-10-29T22:16:21.320332+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: closure explanation
+
+Canonical337=145reused+192new, failed1/invalid0/missing4663/notattempted4662/duplicate0/mainnull. NewOOM0003218 atnativeupsampling, request4.64GiB/free3.80GiB/allocated6.88GiB/reserved9.40GiB; no attribution to architecture/externalPID/fragmentation without evidence. Controller/workerexit and GPU0empty confirmed afterclosure. Thai report condensed with exactidentity, failure evidence and expandedtraceback limitation; rawfailure/oldattempts/canonicalmetrics unchanged. No retry/new inference. Next stop and hand off report.
