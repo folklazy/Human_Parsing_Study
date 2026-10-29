@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-29T16:08:59.007018+00:00",
+  "PID": 644700,
+  "SID": 644700,
+  "PGID": 644700,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+    "--operator-record",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z"
+  ],
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER.log",
+  "role": "READ_ONLY_TERMINAL_CANONICAL_REPORT_OBSERVER",
+  "inference_or_retry": false
+}

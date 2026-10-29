@@ -1,0 +1,15 @@
+{
+  "work_unit": "cpi-convnext-chunked-20261029T160327964412Z-observer",
+  "base_commit": "a36821da545c7e65191c2813bf52586a64a9c0f1",
+  "scope": "Detached read-only observer identity for repaired ConvNeXt; no new inference/config/source change",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_PROCESS.json",
+      "sha256": "172d9e97a4f1f387881ecc65a1bfeac6bdbd184fba09ade362f8ab4e12201997",
+      "before_sha256": null,
+      "bytes": 629
+    }
+  ],
+  "launch_source_unchanged": true
+}
