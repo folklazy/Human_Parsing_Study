@@ -1,0 +1,43 @@
+{
+  "work_unit": "cpi-r50-schedule-diagnostic-20261029T180852377295Z-acceptance",
+  "base_commit": "ea94ab7be73d4e418306b4c881e7be0f608bf905",
+  "scope": "Revision3 bounded native-equivalent R50 GPU readiness proof/current report only; no full inference yet or canonical changes",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "bcd670cf00baa5c04f6118fa8a1e2c0008877db77502b22208a91e930f4a362d",
+      "before_sha256": "7e802d50ccf9537dfa5f7403a5ff8cc90e9e1a14081c6a685961614bec9d75b7",
+      "bytes": 620
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "da512ded623e8643f25870dc30e198cc374243eb9632bc7e10dc2fa46db6117d",
+      "before_sha256": "1ed4ea20803d32275cdc7e6443f7c596a98902b639acf6190505921cbcd9e561",
+      "bytes": 64156
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "sha256": "b31ea94625028bec54e9b3ad2e0702f42bc0c782accf81e30d8ce964ec277c0f",
+      "before_sha256": "bf74eb5face87af2a1daf100b6dbf5dd5377649f759c6483c05a621d71351a89",
+      "bytes": 7208
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json",
+      "sha256": "fa37aaac333865a5c7fe206963b1d82e7567a4415deecad1a4eb734c3b75cd1d",
+      "before_sha256": null,
+      "bytes": 8682
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/PROCESS.json",
+      "sha256": "048c080a96d7f03d44a040535fbec89e4a59739bd101d2407cd4c71d7968442b",
+      "before_sha256": null,
+      "bytes": 865
+    }
+  ],
+  "launch_source_unchanged": true
+}

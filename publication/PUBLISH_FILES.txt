@@ -266,6 +266,8 @@ Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/GPU_DIAGNOSTI
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/PROCESS.json
 Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/DIAGNOSTIC_CONFIG.json
+Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json
+Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/PROCESS.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -893,6 +895,7 @@ publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-chunked-20261029T172708697694Z-readiness-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z-ready.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z.json
+publication/CIHP_NATIVE_COMPLETION_cpi-r50-schedule-diagnostic-20261029T180852377295Z-acceptance.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json
 publication/CIHP_NATIVE_COMPLETION_rpr-cihp-shared-20261028T155439603873Z.json
 publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-closure.json

@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-29T18:09:15.631576+00:00",
+  "PID": 735631,
+  "SID": 735631,
+  "PGID": 735631,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cpi_r50_feature_schedule_diagnostic.json",
+    "--execute"
+  ],
+  "log": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/PROCESS.log",
+  "model_id": "CPI_R50_CIHP",
+  "implementation_revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+  "launch_commit": "ea94ab7be73d4e418306b4c881e7be0f608bf905",
+  "scope": "One native maximum-shape head fixture and \u22643image-model calls; oneattempt/frame; noautomaticretry"
+}

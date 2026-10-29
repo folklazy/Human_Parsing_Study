@@ -60,13 +60,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "sha256": "7e802d50ccf9537dfa5f7403a5ff8cc90e9e1a14081c6a685961614bec9d75b7",
-      "bytes": 613
+      "bytes": 620,
+      "sha256": "bcd670cf00baa5c04f6118fa8a1e2c0008877db77502b22208a91e930f4a362d"
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "sha256": "1ed4ea20803d32275cdc7e6443f7c596a98902b639acf6190505921cbcd9e561",
-      "bytes": 63625
+      "bytes": 64156,
+      "sha256": "da512ded623e8643f25870dc30e198cc374243eb9632bc7e10dc2fa46db6117d"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -475,8 +475,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
-      "sha256": "bf74eb5face87af2a1daf100b6dbf5dd5377649f759c6483c05a621d71351a89",
-      "bytes": 5978
+      "bytes": 7208,
+      "sha256": "b31ea94625028bec54e9b3ad2e0702f42bc0c782accf81e30d8ce964ec277c0f"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json",
@@ -1177,6 +1177,16 @@
       "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/DIAGNOSTIC_CONFIG.json",
       "sha256": "a8b88ae585c8e6ad2d30c8c4f7a6f5274fb17ab7a17d4792eee33248fe8fade1",
       "bytes": 5260
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json",
+      "bytes": 8682,
+      "sha256": "fa37aaac333865a5c7fe206963b1d82e7567a4415deecad1a4eb734c3b75cd1d"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/PROCESS.json",
+      "bytes": 865,
+      "sha256": "048c080a96d7f03d44a040535fbec89e4a59739bd101d2407cd4c71d7968442b"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
@@ -4244,6 +4254,11 @@
       "sha256": "09585957b109f7933324847998a5c8dd2385f1a21fb996019529d38246f7f1f2"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_cpi-r50-schedule-diagnostic-20261029T180852377295Z-acceptance.json",
+      "bytes": 2233,
+      "sha256": "e2b002a8a58691f1b621e3c96e67b047a2c8df25a8147cccffc9051b9bbf815f"
+    },
+    {
       "path": "publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json",
       "bytes": 3362,
       "sha256": "0b31cb58d549df231a2a31e7c03a1f5f35e297a466f153e889417f30ff335eef"
@@ -5919,6 +5934,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T18:09:07.093592+00:00",
+  "updated_utc": "2026-10-29T18:11:17.973487+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

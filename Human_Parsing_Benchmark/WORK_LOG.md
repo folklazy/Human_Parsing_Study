@@ -357,3 +357,7 @@ DiagnosticPID722673/launchb992b13 ended3calls(1TRAIN+2VAL),0OOM/failure. Actual0
 ## 2026-10-30T01:08:52.377295+07:00 — R50 revision2 closure/revision3 repair
 
 Revision2fullr50-20261029T175950070549Z stoppedafter14new+3reuse=17 at0000266, private_dynamic F.conv2d allocation3.27/free2.39GiB; closedcanonicalstats/hash/scoresalreadyverifiedbycontroller, nooldsuccesslost. Currentuserrepaircontinuessource-isolatedrevision3: complete/freecontentbranchbeforerecreatinginputcopyandcontextbranch, unchangedconvolutionall-candidateshapes/operatorswithinbranches. NativeCPU3oracles+controls5PASS; oldv2module/source/results preserved, newschedulingmoduleadded. Freshdiagnosticbudget3framecalls +explicitmaximum-native-capacityheadfixture; noGT/settings/scoresusedtotune, noautoretryloop. Resourcescountallfailed/successfulattempts, prior124.125505s; nextprelaunchpublishthenGPUcheck.
+
+## 2026-10-30T01:11:17.918473+07:00 — revision3 GPU readiness PASS
+
+Diagcpi-r50-schedule-diagnostic-20261029T180852377295Z/PID735631/launch ea94ab7: nativeCUDAfloatoracleEXACT; maximalconfigured100query/100x168featureheadPASS alloc12948.94MiB(noimage/GT); actual3callsTRAIN93/VAL266/VAL18 PASS. Known80candidate18 NPZ/allarrays/scores byteexactto v2canonical. New17canonicalretained; no unchanged-source retry. Protectedhashes18unchanged. Nextpublishacceptance thenseparatefreshR50segment/reconcile17/pending4983, noothermodel.

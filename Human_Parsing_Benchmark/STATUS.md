@@ -1,5 +1,5 @@
 # Human Parsing Benchmark — current status
 
-**CPI_R50_REVISION3_CPU_PASS_GPU_PENDING** · 2026-10-30T01:08:52.377295+07:00
+**CPI_R50_REVISION3_GPU_PASS_FULL_PREPARING** · 2026-10-30T01:11:17.918473+07:00
 
-[Current report](reports/cpi-r50-feature-20261029T175338825178Z.md). Revision2passedold0000018butfullsegmentr50-20261029T175950070549Z stoppedat0000266after14new, canonical17/5000/null, failuresretained. Newrevision3serialindependentfeaturebranches, samekernelshapes/weights/FP32/thresholds; CPU3+control5PASS. Nextmaximumshapeheadfixture+≤3imageGPUdiagnostic then conditionalpending-onlyfullrun ifPASS; notsame-sourceautoretry. ConvNeXt5000/otherresults/frozen/nativefiles unchanged.
+[Current report](reports/cpi-r50-feature-20261029T175338825178Z.md). Revision2historyINCOMPLETE17preserved. Revision3same-shapeindependentbranchschedule: CPU3/controls5/nativeGPUfloatequality/max-shapehead100queriesPASS; actual3imagecalls/2VALcomplete/0failure. Known0000018allarrays/NPZ/scores exact, newfailed0000266passes. Nextconditionalpending-onlyR50full,17canonical/4983pendingexpected; no diagnosticreuse/automaticretry/fallback/nextmodel. Otherresults/frozen/nativefiles preserved.
