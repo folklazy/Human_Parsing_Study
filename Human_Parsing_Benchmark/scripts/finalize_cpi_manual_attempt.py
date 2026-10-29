@@ -158,6 +158,15 @@ Failure records ของ segment นี้ (N/A เมื่อไม่มี)
             '[0.8B](reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md). '
             f'Four native/common systems preserved. {other_model_note} No new experiment.\n')
         files.append('STATUS.md')
+    readme = P / 'README.md'
+    if guard.get('readme_sha256') and digest(readme) == guard['readme_sha256']:
+        lines = readme.read_text().splitlines()
+        lines[0] = (f'> **Current: {model_name} {result["status"]}, '
+                    f'{result.get("complete", "N/A")}/5000.** '
+                    f'[Canonical completion report](reports/{rec.name}.md) → [STATUS](STATUS.md). '
+                    'No automatic next model/retry; previous results preserved.')
+        readme.write_text('\n'.join(lines) + '\n')
+        files.append('README.md')
     with (P / 'WORK_LOG.md').open('a') as out:
         out.write(f'\n## {stamp} — {rec.name}: automatic terminal observation\n\n'
                   f'Controller exited; canonical {result["status"]}, '

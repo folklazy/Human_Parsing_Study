@@ -349,3 +349,7 @@ Diagnosticcpi-r50-memory-20261029T172708697694Z/PID700943 DIAGNOSTIC_FAILED afte
 ## 2026-10-30T00:53:38.825178+07:00 — cpi-r50-feature-20261029T175338825178Z: feature memory implementation/CPU acceptance
 
 LatestuserrequestsrepairafterupstreamR50OOM. NoactiveGPUjob/mainclean; frozen/native source/checkpoint/config unchanged. Newrevision2 onlyeval/no_grad/privateReLUreuse/deadbufferrelease; no query-axis batching/kernelshape/precision/threshold changes, restoration1unchanged. NativeCPUreferencefloatpredictions/input/parampointerequalityPASS plusguardcases3; controls5PASS including R50requiresrevision2 whileConvretainsrevision1. Fixturebuildertrain_cfg/layoutcorrections disclosedbeforeGPU; nativeCUDAcoordlayoutprobePASS,model-frame0. OwnR50configfresh ≤3calls,newmanualrepairbudget notautoretry; conditionalfullallowedafterPASS,priorfailedhistory/resourcesincluded. NextpublishprelaunchthenGPUdiagnostic.
+
+## 2026-10-30T00:57:24.860388+07:00 — cpi-r50-feature-20261029T175338825178Z: R50 revision2 GPU readiness PASS
+
+DiagnosticPID722673/launchb992b13 ended3calls(1TRAIN+2VAL),0OOM/failure. Actual0000018passed(peakallocated12822.23MiB/reserved13108); known0000004 allarrays/NPZbytes/SHA/scoresboththresholdsidentical. UnmodifiednativeCUDAfeaturefixturevsreuse rawfloat32EXACT; noCPUlayoutshimusedonGPU. Boundhashes17unchanged; oldmemory1andfrozen/model/sourceGT/ConvNeXt5000unchanged. Explicituserrepair+priorR50nextscope allowconditionalfull; nextpublishreadiness/launchcommits then freshdetachedR50pending-onlycontroller. Noautoretry/fallback/nextmodel.

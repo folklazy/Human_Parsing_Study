@@ -1,0 +1,251 @@
+{
+  "run_id": "cpi-r50-feature-diagnostic-20261029T175338825178Z",
+  "model_id": "CPI_R50_CIHP",
+  "status": "DIAGNOSTIC_PASS",
+  "PID": 722673,
+  "SID": 722673,
+  "start_utc": "2026-10-29T17:54:46.451724+00:00",
+  "model_frame_calls": 3,
+  "complete": 2,
+  "failed": 0,
+  "canonical": false,
+  "primary": null,
+  "automatic_retries": 0,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "config_sha256": "8c8eb6ca171d8dae9d234d90859633832949575767bd07f1bcf92587771c7f17",
+  "launch_commit": "b992b1314dc8c6a57ebf783e650412fccf836cb4",
+  "GPU_before": "Tesla T4, 0 MiB, 14912 MiB",
+  "patch": {
+    "revision": "CPI_FEATURE_BUFFER_REUSE_2",
+    "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+    "restoration": {
+      "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+      "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+      "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+      "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+      "person_chunk_size": 1,
+      "native_reference_prefix": 2,
+      "source_file_modified": false,
+      "scientific_parameters_changed": []
+    },
+    "feature_original_method_sha256": "e18223c8f390205e2afef09b7bbaf31cd0419eb524cfd0d2198e17a8ea2d3acb",
+    "feature_expanded_method_sha256": "b37a0361a40f95a05f4428f66f139bd5245b5e82b22d119444f4fde347d20daf",
+    "native_dynamic_forward_sha256": "fb9db85455c6bb25c2b19c01454f3911b505cb5f0e9042416a6c6bf259429f30",
+    "dynamic_convolution_relu_private_buffer_reuse": true,
+    "released_dead_buffers": [
+      "parse_feats_list",
+      "parse_feats",
+      "cnt_masks",
+      "normalizer",
+      "inst_feats",
+      "inst_part_feats",
+      "cnt_feats",
+      "cxt_feats"
+    ],
+    "part_parser_relu_inplace": true,
+    "returned_unused_features": null,
+    "source_file_modified": false,
+    "scientific_parameters_changed": [],
+    "training_and_autograd": "REJECTED"
+  },
+  "GPU_feature_native_vs_reuse": "PASS_EXACT_FLOAT32_TENSORS",
+  "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+  "current_image": "0000004",
+  "observations": [
+    {
+      "split": "Training",
+      "image_id": "0000930",
+      "start_utc": "2026-10-29T17:54:58.838515+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T17:54:59.250032+00:00",
+      "memory": {
+        "peak_allocated_MiB": 515.50927734375,
+        "peak_reserved_MiB": 1044.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            2,
+            20,
+            100,
+            148
+          ],
+          "image_shape": [
+            800,
+            1156,
+            3
+          ],
+          "original_shape": [
+            346,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            2,
+            346,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 151552000,
+          "chunk_stride_grid_float_bytes": 75776000,
+          "feature_memory": {
+            "candidate_count": 2,
+            "feature_channels": 32,
+            "feature_hw": [
+              100,
+              148
+            ],
+            "parts": 19,
+            "one_expanded_part_buffer_bytes": 71987200,
+            "relu_private_buffer_reuse": true,
+            "discarded_return_features": true,
+            "same_operator_shapes_and_order": true
+          }
+        }
+      ],
+      "regression": null,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-r50-feature-diagnostic-20261029T175338825178Z/packets/Training/0000930",
+      "packet_sha256": "f31d9fbc4a1feab316c0304c6bc65faa397657bb2001497d3223acd107723b4f"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0000018",
+      "start_utc": "2026-10-29T17:54:59.264896+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T17:55:02.045552+00:00",
+      "memory": {
+        "peak_allocated_MiB": 12822.23486328125,
+        "peak_reserved_MiB": 13108.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            80,
+            20,
+            100,
+            136
+          ],
+          "image_shape": [
+            800,
+            1067,
+            3
+          ],
+          "original_shape": [
+            375,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            80,
+            375,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 5570560000,
+          "chunk_stride_grid_float_bytes": 69632000,
+          "feature_memory": {
+            "candidate_count": 80,
+            "feature_channels": 32,
+            "feature_hw": [
+              100,
+              136
+            ],
+            "parts": 19,
+            "one_expanded_part_buffer_bytes": 2646016000,
+            "relu_private_buffer_reuse": true,
+            "discarded_return_features": true,
+            "same_operator_shapes_and_order": true
+          }
+        }
+      ],
+      "regression": null,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-r50-feature-diagnostic-20261029T175338825178Z/packets/Validation/0000018",
+      "packet_sha256": "0c62720f82e3d5a8fb10ece8d420a63d84985d00e0f77b7b7a14b1bc93697d9b"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0000004",
+      "start_utc": "2026-10-29T17:55:02.064470+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T17:55:03.091698+00:00",
+      "memory": {
+        "peak_allocated_MiB": 573.14697265625,
+        "peak_reserved_MiB": 13114.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            4,
+            20,
+            100,
+            124
+          ],
+          "image_shape": [
+            800,
+            985,
+            3
+          ],
+          "original_shape": [
+            650,
+            800,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            4,
+            650,
+            800
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 253952000,
+          "chunk_stride_grid_float_bytes": 63488000,
+          "feature_memory": {
+            "candidate_count": 4,
+            "feature_channels": 32,
+            "feature_hw": [
+              100,
+              124
+            ],
+            "parts": 19,
+            "one_expanded_part_buffer_bytes": 120627200,
+            "relu_private_buffer_reuse": true,
+            "discarded_return_features": true,
+            "same_operator_shapes_and_order": true
+          }
+        }
+      ],
+      "regression": "ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET",
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-r50-feature-diagnostic-20261029T175338825178Z/packets/Validation/0000004",
+      "packet_sha256": "e6087bc83c57042b5d97a2926b67cc5b863ea611e388f29e17eb8ba952637033"
+    }
+  ],
+  "end_utc": "2026-10-29T17:55:03.093139+00:00",
+  "execution_seconds": 16.634270543028833,
+  "no_full_benchmark": true,
+  "automatic_restart": false,
+  "parameters": 46567335,
+  "postflight": {
+    "checked_Bangkok": "2026-10-30T00:57:24.860388+07:00",
+    "native_frozen_and_bound_hashes_unchanged": 17,
+    "ConvNeXt5000_completion_unchanged": true,
+    "regression_NPZ_byte_identical": true,
+    "regression_scores_both_thresholds_identical": true,
+    "diagnostic_exited": true,
+    "canonical_R50_count_still": 3,
+    "full_validation": "NOT_STARTED_YET"
+  }
+}

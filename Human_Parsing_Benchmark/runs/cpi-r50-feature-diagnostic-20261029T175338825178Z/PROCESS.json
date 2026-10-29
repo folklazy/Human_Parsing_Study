@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-29T17:54:44.120244+00:00",
+  "PID": 722673,
+  "SID": 722673,
+  "PGID": 722673,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cpi_r50_feature_memory_diagnostic.json",
+    "--execute"
+  ],
+  "log": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/PROCESS.log",
+  "model_id": "CPI_R50_CIHP",
+  "implementation_revision": "CPI_FEATURE_BUFFER_REUSE_2",
+  "launch_commit": "b992b1314dc8c6a57ebf783e650412fccf836cb4",
+  "scope": "\u22643model-frame diagnostic calls, no retry; conditional separate full launch only on PASS"
+}

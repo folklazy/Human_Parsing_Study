@@ -1,0 +1,38 @@
+{
+  "work_unit": "cpi-r50-feature-20261029T175338825178Z",
+  "created_utc": "2026-10-29T17:59:39.240700+00:00",
+  "scope": "R50 revision2 GPU proof/current report and optional guarded README update in independent terminal observer. No scientific/source/config edits or raw artifacts.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+      "sha256": "388c0d08ecf7fd78b841e6961162bf0191f1b4ee5a75d17e9b2994da9221efb3",
+      "bytes": 12120
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "ab17d69daa4ded918fdb4becdc5a543fe4960f2d07d9787b13c018ef52d280e9",
+      "bytes": 647
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "b2d5fcf22ba7c3558254f0e3aafdec5dbb50b587a00883d84ed982a9fd3b86b1",
+      "bytes": 62827
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "sha256": "965118105d20d57e8cf5ad743b506a7f9b24756bf4bd80f3e9c1f96dea18615c",
+      "bytes": 4453
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/GPU_DIAGNOSTIC.json",
+      "sha256": "5c41a258c10f2f6c2777f756820707f3a6cf930b7e3013a30ced96589291cb41",
+      "bytes": 8047
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/PROCESS.json",
+      "sha256": "e5dd511905bac1cdbdad6d67e3fe999a884aa2253f97dabd15ddda4e7a1857f1",
+      "bytes": 849
+    }
+  ],
+  "actual": "3model-framecalls/2VAL PASS, nativeCUDAfloatfixture exact, regression0000004allarrays/NPZ/scores exact, firstfailed0000018passes; fullnotlaunchedatcommit."
+}
