@@ -1,9 +1,9 @@
 {
-  "created_utc": "2026-10-29T17:59:49.729045+00:00",
-  "PID": 727516,
-  "SID": 727516,
-  "PGID": 727516,
-  "birth_ticks": 20032506,
+  "created_utc": "2026-10-29T18:11:59.640452+00:00",
+  "PID": 738024,
+  "SID": 738024,
+  "PGID": 738024,
+  "birth_ticks": 20105497,
   "controller_script": "run_cpi_chunked_continuation.py",
   "command": [
     "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
@@ -14,11 +14,14 @@
     "--execute"
   ],
   "model_id": "CPI_R50_CIHP",
-  "implementation_revision": "CPI_FEATURE_BUFFER_REUSE_2",
-  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-r50-feature-20261029T175338825178Z/CONTROLLER.log",
-  "launch_commit": "3ed3a44b19e56548bfc380772e35faba0ae69c46",
-  "GPU_at_launch": "Tesla T4, 0 MiB, 14912 MiB",
-  "external_GPU_PIDs": [],
-  "phase": "PREPARING_RECONCILIATION",
-  "next_model": false
+  "implementation_revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-r50-feature-20261029T175338825178Z-revision3/CONTROLLER.log",
+  "launch_commit": "cbb9a434312736ae38e79323c47534be0e706bbc",
+  "phase": "INFERENCE_FIRST_PACKET_VERIFIED",
+  "next_model": false,
+  "worker_PID": 738128,
+  "segment_id": "r50-20261029T181200001439Z",
+  "segment_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T181200001439Z",
+  "reused": 17,
+  "pending_at_launch": 4983
 }

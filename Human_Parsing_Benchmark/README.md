@@ -1,4 +1,4 @@
-> **Current: R50 readiness stopped on upstream feature-memory OOM; full run not started.** [R50 report](reports/cpi-r50-chunked-20261029T172708697694Z.md) → [STATUS](STATUS.md). ConvNeXt-B COMPLETE5000 preserved; R50canonical3/5000/mainnull.
+> **Current: repaired CPI R50 revision3 validation RUNNING.** [Current report](reports/cpi-r50-feature-20261029T175338825178Z.md) → [STATUS](STATUS.md). 17 verified reused; 4,983 pending at launch; no next model.
 
 The notices below are historical snapshots; STATUS is current.
 

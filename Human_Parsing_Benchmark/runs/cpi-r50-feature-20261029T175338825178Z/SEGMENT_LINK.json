@@ -1,6 +1,7 @@
 {
   "operator_record": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z",
-  "raw_segment": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T175950070549Z",
-  "segment_id": "r50-20261029T175950070549Z",
-  "controller_PID": 727516
+  "raw_segment": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T181200001439Z",
+  "segment_id": "r50-20261029T181200001439Z",
+  "controller_PID": 738024,
+  "implementation_revision": "CPI_FEATURE_BRANCH_SCHEDULE_3"
 }

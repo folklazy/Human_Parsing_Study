@@ -94,3 +94,7 @@ Latestuserเริ่มทำเลย supersedesprior nofullrestart for ConvN
 ## 2026-10-30T00:32:44.559860+07:00 — R50 readiness failed, no full job running
 
 Latestusernextmodelscope consumedbyR50readinessattempt; diagnosticcpi-r50-memory-20261029T172708697694Z/PID700943exited. R50ownload/warmup/GPUfixturepassed butVAL0000018OOM inupstreamcnt_part_parser.ReLU, beforememoryrevision1restoration. Fullnotlaunched, noautomaticretry/nextmodel. Readreports/cpi-r50-chunked-20261029T172708697694Z.md andSTATUS. PreserveR50canonical3/5000/null/failurehistory; ConvNeXt5000/Sapiens04/08/native/common untouched. Additionalfeaturememoryimplementation/retest isnotdoneinthisround; nofallback/scientificsettingchange.
+
+## 2026-10-30T01:14:54.758042+07:00 — R50 revision3 running; do not duplicate
+
+CurrentuserrequestsR50memoryrepairandcontinuation. Revision2fullINCOMPLETE17retained; revision3independentbranchschedule(nativefloat/kernelshapes preserved) GPUfixture/maxnativeheadshape/3imagechecksPASS. Segmentr50-20261029T181200001439Z,controller738024/worker738128,reuse17/pending4983,newcanonical266PASS. ReadSTATUS/currentreportandcheckrealprocessbeforeanyaction. No same-sourceautoretry/fallback/nextmodel;frozen/nativeconfig/scorer/checkpoints/sourceGT/ConvNeXt5000/otherresults untouched.

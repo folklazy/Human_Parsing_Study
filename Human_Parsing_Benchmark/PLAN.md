@@ -117,3 +117,7 @@ Userเริ่มทำเลย authorizes fresh single-model attempt under u
 ### 2026-10-30T00:32:44.559860+07:00 — next-model R50 readiness stopped
 
 UserauthorizedR50 nextafterConvNeXt complete. Source-isolatedsamepersonchunkrevision, R50ownGPUreadiness: warmupPASS, firstfailedhistoricalVAL0000018OOM upstreamcnt_part_parser.ReLU beforemaskrestoration;2calls/noautretry/fullvalidationNOT_STARTED. [Currentreport](reports/cpi-r50-chunked-20261029T172708697694Z.md). Canonical3/mainnull retained; futureworkmustaddressfeaturememoryandpassR50ownregression/diagnostic before full launch.
+
+### 2026-10-30T01:14:54.758042+07:00 — R50 feature repair / revision3 launch
+
+Revision2diagnosticpassedbutfullstoppedat0000266after17total; oldhistoryretained. Revision3same-kernel-shape independentbranchschedule passednativefloatreference/maximumheadcapacity100queries/3boundedimagecalls, byteexactknownpacket. Freshsegmentr50-20261029T181200001439Z,17reuse/4983pending; firstcanonical0000266PASS. [Currentreport](reports/cpi-r50-feature-20261029T175338825178Z.md). DetachedrunstopsafterR50/error,STRICT_COMPLETE/cumulativeguards unchanged; no othermodel.

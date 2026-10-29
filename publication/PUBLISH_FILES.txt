@@ -251,6 +251,8 @@ Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/STATUS.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK_REVISION2.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FINALIZER_GUARD.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FIRST_PACKET_CHECK.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS_REVISION2.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/REVISION3_DECISION.json
@@ -276,6 +278,9 @@ Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/LAUNCH.json
+Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/RESOURCE_POLICY.json
+Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/FULL_CONFIG.json
@@ -897,6 +902,7 @@ publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T17503681
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-schedule-diagnostic-20261029T180852377295Z-acceptance.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-shared-20261028T172951337299Z.json
+publication/CIHP_NATIVE_COMPLETION_r50-20261029T181200001439Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_rpr-cihp-shared-20261028T155439603873Z.json
 publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-pilot-pass-full-freeze.json

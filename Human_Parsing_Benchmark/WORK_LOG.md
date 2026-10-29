@@ -361,3 +361,7 @@ Revision2fullr50-20261029T175950070549Z stoppedafter14new+3reuse=17 at0000266, p
 ## 2026-10-30T01:11:17.918473+07:00 — revision3 GPU readiness PASS
 
 Diagcpi-r50-schedule-diagnostic-20261029T180852377295Z/PID735631/launch ea94ab7: nativeCUDAfloatoracleEXACT; maximalconfigured100query/100x168featureheadPASS alloc12948.94MiB(noimage/GT); actual3callsTRAIN93/VAL266/VAL18 PASS. Known80candidate18 NPZ/allarrays/scores byteexactto v2canonical. New17canonicalretained; no unchanged-source retry. Protectedhashes18unchanged. Nextpublishacceptance thenseparatefreshR50segment/reconcile17/pending4983, noothermodel.
+
+## 2026-10-30T01:14:54.758042+07:00 — revision3 full launch/firstcanonicalpacket PASS
+
+Launchcbb9a43/controller738024/worker738128/SID738024/PPID1detached; segmentr50-20261029T181200001439Z. Reconciled17old/pending4983exact5000,no diagnostics reused. Newfirst0000266 allnative20geometry/NPZ/GT/bothscores/effectivefingerprint3sourcehashesPASS; NPZ byteidenticaltodifferentdiagnosticpacket(newcall). Snapshotnew150/failed0; no qualityranking. Priorresource144.928098sincludesoldfailed/diag2/diag3/v2worker;samecaps/noauto retry/fallback. Nextattachread-onlycanonicalfinalizer, publishlaunchthenendturn, donotpolltofinish.

@@ -1,0 +1,7 @@
+{
+  "status_sha256": "3b1b6741215653f2c43b2f9392b409cb8977eb6f35e3c27fc01a5775c1d236c4",
+  "readme_sha256": "5613cd830dd5e1208532c8895b25fcaef2762515fbffac9a16e59615bfa45f09",
+  "source": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+  "source_sha256": "388c0d08ecf7fd78b841e6961162bf0191f1b4ee5a75d17e9b2994da9221efb3",
+  "behavior": "Exact existing controller PID/birthtick observer; terminalcanonicalreport/publication only, no inference or retry"
+}
