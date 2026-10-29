@@ -1,0 +1,84 @@
+{
+  "checked_utc": "2026-10-29T16:06:21.787868+00:00",
+  "result": "PASS",
+  "first_new_image": "0003218",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "segment": "convnext-20261029T160359716460Z",
+  "packet_sha256": "3aa277304b59719994db9046a4599a9cbf4a4d36b6aa8c1d6dfe701424c7e40d",
+  "metadata_sha256": "bdd81ab0534b9a653e5c49ba76879699f548fdc7257151762490bedd08279dc9",
+  "original_grid_native20_integer": {
+    "person_semantic_masks": {
+      "shape": [
+        9,
+        344,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15
+      ]
+    },
+    "native_person_semantic_masks": {
+      "shape": [
+        62,
+        344,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15
+      ]
+    },
+    "raw_native_person_semantic_masks": {
+      "shape": [
+        65,
+        344,
+        500
+      ],
+      "dtype": "uint8",
+      "labels": [
+        0,
+        2,
+        5,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "implementation_revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+  "effective_fingerprint_verified": true,
+  "canonical_NPZ_byte_identical_to_repair_diagnostic": true,
+  "diagnostic_packet_reused_as_canonical": false,
+  "new_inference_call": true,
+  "saved_mask_scores_both_thresholds_match": true,
+  "GT_hash_bindings_match": true,
+  "peak_allocated_MiB": 9751.70068359375,
+  "peak_reserved_MiB": 11618.0,
+  "prior_diagnostic_resource_accounted": [
+    "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-memory-repair-20261029T153956552075Z/RUN.json"
+  ],
+  "reused": 337,
+  "pending_at_launch": 4663,
+  "controller_detached": true,
+  "automatic_retry": false
+}

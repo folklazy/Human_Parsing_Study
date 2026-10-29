@@ -1,3 +1,5 @@
+> **Subsequent authorized execution:** repaired ConvNeXt continuation is now RUNNING; [current report](cpi-convnext-chunked-20261029T160327964412Z.md). The diagnostic evidence below remains a separate earlier work unit.
+
 # CPI OOM — สาเหตุ การแก้ไข และผลตรวจจริง
 
 **DIAGNOSTIC_PASS** · ปิดรอบเวลาไทย `2026-10-29T22:48:52.969845+07:00` · run `cpi-memory-repair-20261029T153956552075Z`. แก้จุดที่ล้มเหลวและทดสอบผ่านแล้ว ยังไม่เปิด full validation ใหม่

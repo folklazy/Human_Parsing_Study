@@ -86,3 +86,7 @@ Segment convnext-20261029T070405365918Z stopped on confirmed OOM0001641 after32n
 ## 2026-10-29T22:50:05.630552+07:00 — CPI memory repair diagnostic passed, no full restart
 
 LatestuserrequestedOOMcause/repair. Model-local person-axis restoration preserves FP32/allcandidates/20channels/spatialoperators; nativefiles/frozenconfig/scorer/results unchanged. Read reports/CPI_MEMORY_REPAIR_TH.md. Diagnostic3calls passed; canonical ConvNeXt337/5000/null unchanged, R50GPUrepairuntested. Future patched ConvNeXt uses scripts/run_cpi_chunked_continuation.py, separateeffectiveimplementationidentity and includes diagnostic resource costs. Original CLI doesnotinstallpatch. Noautomaticfullrun/retry/nextmodel; Sapiens04/08complete untouched.
+
+## 2026-10-29T23:08:11.945471+07:00 — repaired ConvNeXt full continuation now explicitly authorized/running
+
+Latestuserเริ่มทำเลย supersedesprior nofullrestart for ConvNeXt-only. Segmentconvnext-20261029T160359716460Z,controller640227/worker640842; firstcheckprocess/artifacts and neverduplicate/restartautomatically. Newwrapper usesmemoryrevision1,337verifiedreuse/4663pending,new0003218PASS. Frozenconfigs/source/scorer/otherresults unchanged. ReadSTATUS and reports/cpi-convnext-chunked-20261029T160327964412Z.md; usechunkedwrapperprogress,notoldCLIviewer. NoR50/nextmodel/Sapiens/training/color/CCTV.

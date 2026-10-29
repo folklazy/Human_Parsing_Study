@@ -325,3 +325,7 @@ Launch1bcea01/PID622542 DIAGNOSTIC_PASS,3calls(1TRAIN+2VAL),0fail/OOM/retry. Act
 ## 2026-10-29T23:03:27.964412+07:00 — cpi-convnext-chunked-20261029T160327964412Z: repaired continuation authorization/preflight
 
 User saysเริ่มทำเลย after repairPASS; scopeConvNeXt-only/nativeCIHP5000, reuseverified337/pending4663,no diagnostic reuse. ActualGPU0empty/noactiveCPI/Sapiens/disk451GiB/publicHEADbcecb52clean. Nativeconfig/source/scorer remainunchanged; boundedimplementationrevision installedbyseparatewrapper. Adapted independentterminalobserver PIDidentity to accept exact newcontrollername+birthticks, no inference/scoringchanges. Nextpublishprelaunchthen detachedcontrolledcontinuation/firstcanonicalpacketcheck; noautoretry/nextmodel.
+
+## 2026-10-29T23:08:11.945471+07:00 — cpi-convnext-chunked-20261029T160327964412Z: repaired canonical launch/firstpacket PASS
+
+Prelaunchfd94aea;controller640227/worker640842/SID640227/PPID1detached. Reconciled337/pending4663exactdisjoint5000; repairdiagnosticsnotcanonical. Firstnew0003218 NPZbyteidenticaltodiagnostic, independentnewcall, geometry/native20/hash/GT/bothsavedscorers/effectiveimplementationidentityPASS. Priorrepairclockincluded411.492817s; sameguards/noautoretry. Snapshotnew204/failed0,primarynulluntilfullaudit. Reporteradjustedtoidentifynewwrapperandformatcanonicalquality/person/perclasstablesonlyatterminal; noscoring/modelchanges. Nextpublishlaunch/attachread-onlyobserverthenendturn,letworkerfinish/stop.

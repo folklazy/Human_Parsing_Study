@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-29T16:03:59.333111+00:00",
+  "PID": 640227,
+  "PGID": 640227,
+  "SID": 640227,
+  "birth_ticks": 19337466,
+  "controller_script": "run_cpi_chunked_continuation.py",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+    "--model",
+    "convnext",
+    "--execute"
+  ],
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-convnext-chunked-20261029T160327964412Z/CONTROLLER.log",
+  "launch_commit": "fd94aeadebb5be4d4450b29476b631db3c5fdf88",
+  "phase": "INFERENCE_FIRST_PACKET_VERIFIED",
+  "GPU_at_launch": "Tesla T4, 0 MiB, 14912 MiB",
+  "external_GPU_PIDs_at_launch": [],
+  "scope": "CPI_ConvNeXtB_CIHP only; no retry/next model",
+  "worker_PID": 640842,
+  "segment_id": "convnext-20261029T160359716460Z",
+  "segment_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z",
+  "reused": 337,
+  "pending_at_launch": 4663
+}

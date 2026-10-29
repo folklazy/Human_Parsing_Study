@@ -1,4 +1,4 @@
-> **Current: CPI memory repair diagnostic PASS; no full restart.** [Repair report/commands](reports/CPI_MEMORY_REPAIR_TH.md) → [STATUS](STATUS.md). ConvNeXt canonical337/5000; Sapiens0.4B/0.8B COMPLETE5000.
+> **Current: repaired CPI ConvNeXt validation RUNNING.** [Attempt/report](reports/cpi-convnext-chunked-20261029T160327964412Z.md) → [STATUS](STATUS.md). Verified337 reused; pending4663 at launch; first new canonical packet PASS. No next model.
 
 The notices below are historical snapshots; STATUS is current.
 

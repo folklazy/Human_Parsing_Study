@@ -1,0 +1,6 @@
+{
+  "operator_record": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z",
+  "raw_segment": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z",
+  "segment_id": "convnext-20261029T160359716460Z",
+  "controller_PID": 640227
+}

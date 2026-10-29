@@ -1,0 +1,6 @@
+{
+  "status_sha256": "962f3aabb039b112d585071341db7b59110c37712c415d2f7312cc60ecfe0976",
+  "source": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+  "source_sha256": "4f861deae0dad30d82259fec398f9ba3dd7ed1a570aeccd2b6a5950bfbf13f14",
+  "behavior": "Read existing exact PID/birth ticks; canonical terminal report/publication only; no inference or rescore/retry"
+}

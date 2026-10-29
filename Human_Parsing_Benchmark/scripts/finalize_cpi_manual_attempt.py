@@ -44,6 +44,27 @@ def alive(process):
         return False
 
 
+def quality_tables(result):
+    metrics = result.get('metrics', {})
+    primary = metrics.get('primary')
+    if primary is None:
+        return 'คะแนนหลักและ person metrics เป็น **null** ตาม STRICT_COMPLETE; ไม่รายงาน subset เป็นคะแนนชุดเต็ม.\n'
+    text = (f"mIoU20 รวม BG **{100 * primary['mIoU_20_including_BG']:.3f}%**, "
+            f"FG19 mIoU **{100 * primary['mIoU_19_foreground']:.3f}%**. "
+            'IoU รายคลาสเป็นเปอร์เซ็นต์; support/union หน่วยพิกเซล.\n\n'
+            '|Class|IoU %|GT support|Prediction support|Union|\n|---|---:|---:|---:|---:|\n')
+    for i, label in enumerate(primary['labels']):
+        text += (f"|{label}|{100 * primary['IoU'][i]:.3f}|{primary['GT_pixel_support'][i]}|"
+                 f"{primary['predicted_pixel_support'][i]}|{primary['union'][i]}|\n")
+    text += ('\n|Matching threshold|GT persons G_loc|Semantic-eligible G_sem|TP|FP|FN|Extent precision|Extent recall|Extent F1|Q_person_sem_GT|\n'
+             '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n')
+    for threshold, values in (metrics.get('person_metrics') or {}).items():
+        cells = [values.get(k) for k in ['G_loc', 'G_sem', 'TP', 'FP', 'FN',
+                                        'extent_precision', 'extent_recall', 'extent_F1', 'Q_person_sem_GT']]
+        text += '|' + threshold + '|' + '|'.join('N/A' if v is None else str(v) for v in cells) + '|\n'
+    return text + '\nPerson rates เป็นfraction0–1; extent F1คือmask-extent matching ไม่ใช่parsing AP. Q denominatorคือGT semantic-eligible personsรวมmissedตามfrozenprotocol.\n'
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--operator-record', required=True)
@@ -72,6 +93,8 @@ def main():
             raise ValueError('Incomplete result must have null primary')
     modelrun = root / 'segments/CPI_ConvNeXtB_CIHP/RUN.json'
     run = json.loads(modelrun.read_text()) if modelrun.exists() else {}
+    plan = json.loads((root / 'SEGMENT_PLAN.json').read_text())
+    implementation = plan.get('implementation_revision', 'ORIGINAL_NATIVE_IMPLEMENTATION')
     ledger = modelrun.parent / 'FRAMES.jsonl'
     failures = [json.loads(line) for line in ledger.read_text().splitlines()
                 if json.loads(line)['status'] != 'COMPLETE'] if ledger.exists() else []
@@ -88,6 +111,8 @@ def main():
 
 ผู้ใช้ขอกลับมาทดสอบ CPI หลัง GPU ว่าง. เปิดเฉพาะ ConvNeXt-B หลัง Sapiens2 0.4B/0.8B ครบตัวละ 5,000. Frozen checkpoint/config/FP32/preprocessing/TTA/thresholds/YOLO/ownership/scorer เดิม ไม่เปลี่ยน. [Authorization](../runs/{rec.name}/AUTHORIZATION.json), [process](../runs/{rec.name}/PROCESS.json), [segment plan](../runs/{root.name}/SEGMENT_PLAN.json).
 
+Effective implementation: **{implementation}**. เมื่อเป็นperson-chunkrevision ใช้ [repair evidence](CPI_MEMORY_REPAIR_TH.md); source/dependencies/reuse compatibility และdiagnosticresourceaccountingผูกในsegmentplan ไม่ใช้basefingerprintเก่าตัวเดียวแทนimplementationidentity. Diagnosticpredictionsไม่รวมcanonical; nativeconfigs/source/resultsเก่าคงเดิม.
+
 |รายการ|จำนวน|
 |---|---:|
 |Expected|5,000|
@@ -97,7 +122,9 @@ def main():
 |Failed / invalid|{result.get('failed', 'N/A')} / {result.get('invalid', 'N/A')}|
 |Duplicate successes|{result.get('duplicate_IDs', 'N/A')}|
 
-Primary native20 metrics: `{json.dumps(result.get('metrics', {}).get('primary'), ensure_ascii=False)}`. คะแนนหลักเป็น null หากไม่ครบตาม STRICT_COMPLETE ไม่ใช้ subset เทียบกับชุดเต็ม. Canonical source: [completion](../runs/{root.name}/COMPLETION.json). Start UTC `{result.get('start_utc', 'N/A')}`, end UTC `{result.get('end_utc', 'N/A')}`; TRAIN warmup `{run.get('warmup_images', [])}`; launch commit `{result.get('launch_commit', process['launch_commit'])}`.
+{quality_tables(result)}
+
+Canonical source: [completion](../runs/{root.name}/COMPLETION.json). Start UTC `{result.get('start_utc', 'N/A')}`, end UTC `{result.get('end_utc', 'N/A')}`; TRAIN warmup `{run.get('warmup_images', [])}`; launch commit `{result.get('launch_commit', process['launch_commit'])}`.
 
 Packet แรกและ first-packet contract checks อยู่ใน [หลักฐาน](../runs/{rec.name}/FIRST_PACKET_CHECK.json). Controller ตรวจ NPZ/hash/metadata/GT และ saved-mask scores ด้วย verifier เดิมก่อนรวมผล ไม่พึ่ง counters ค้าง. Observer นี้อ่าน canonical results เท่านั้น ไม่ rescore หรือ inference. Raw artifacts `{root.relative_to(W)}` เก็บภายนอก Git; historical OOM/attempts และผลสำเร็จเดิมไม่ลบหรือเขียนทับ.
 

@@ -109,3 +109,7 @@ LatestuserrequestsfixOOMafteridleGPUattempt. Implementmodel-localperson-chunkres
 ### 2026-10-29T22:50:05.630552+07:00 — bounded memory-repair verification complete
 
 DIAGNOSTIC_PASS: CPU4/GPUfixture/nativeprefix checks plus3actualcalls(TRAIN0000930,VAL0003218,VAL0001641) passed; known0001641 packet/allarrays/scores exactly match original. RepairedConvNeXt continuation prepared with2CPUcontrolchecks, implementation fingerprint/dependency/diagnosticresource bindings. Nofullrunlaunched; firstcanonicalpatchedpacket/exact5000completion remain future checks. [Currentrepairreport](reports/CPI_MEMORY_REPAIR_TH.md).
+
+### 2026-10-29T23:08:11.945471+07:00 — explicit repaired ConvNeXt continuation launched
+
+Userเริ่มทำเลย authorizes fresh single-model attempt under unchangedscience/person-chunkrevision1. Segmentconvnext-20261029T160359716460Z;337reuse/4663pending,diagnosticexcluded,firstcanonical0003218packetPASS. Detachedbatch stopsaftermodel/error; noautomaticretry/nextmodel. [Currentreport](reports/cpi-convnext-chunked-20261029T160327964412Z.md); cumulativeguards/STRICT_COMPLETE retained.
