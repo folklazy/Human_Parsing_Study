@@ -73,6 +73,14 @@ def main():
     if not rec.is_relative_to(P / 'runs'):
         raise ValueError('Existing project operator record required')
     process = json.loads((rec / 'PROCESS.json').read_text())
+    authority = json.loads((rec / 'AUTHORIZATION.json').read_text())
+    mid = authority.get('model_id', 'CPI_ConvNeXtB_CIHP')
+    if mid not in ['CPI_R50_CIHP', 'CPI_ConvNeXtB_CIHP']:
+        raise ValueError('Unexpected model authorization')
+    model_name = 'CPI-Parser R50 CIHP' if mid == 'CPI_R50_CIHP' else 'CPI ConvNeXt-B CIHP'
+    status_name = 'CPI_R50' if mid == 'CPI_R50_CIHP' else 'CPI_CONVNEXT'
+    other_model_note = ('ConvNeXt-B COMPLETE5000 preserved; no next model.'
+                        if mid == 'CPI_R50_CIHP' else 'CPI R50 paused; no next model.')
     link = json.loads((rec / 'SEGMENT_LINK.json').read_text())
     root = W / link['raw_segment']
     if not root.resolve().is_relative_to(P / 'outputs/cpi_continuations'):
@@ -87,11 +95,11 @@ def main():
     result = json.loads(terminal.read_text()) if terminal.exists() else {
         'status': 'INTERRUPTED_REQUIRES_RECONCILIATION', 'metrics': {'primary': None}}
     if terminal.exists():
-        if result['model_id'] != 'CPI_ConvNeXtB_CIHP' or result['round_id'] != root.name:
+        if result['model_id'] != mid or result['round_id'] != root.name:
             raise ValueError('Terminal model/segment binding mismatch')
         if result['status'] != 'COMPLETE' and result['metrics']['primary'] is not None:
             raise ValueError('Incomplete result must have null primary')
-    modelrun = root / 'segments/CPI_ConvNeXtB_CIHP/RUN.json'
+    modelrun = root / 'segments' / mid / 'RUN.json'
     run = json.loads(modelrun.read_text()) if modelrun.exists() else {}
     plan = json.loads((root / 'SEGMENT_PLAN.json').read_text())
     implementation = plan.get('implementation_revision', 'ORIGINAL_NATIVE_IMPLEMENTATION')
@@ -105,11 +113,11 @@ def main():
                'automatic_retry': False}
     write(rec / 'TERMINAL_OBSERVATION.json', receipt)
     report = P / 'reports' / (rec.name + '.md')
-    report.write_text(f'''# CPI ConvNeXt-B — manual continuation หลัง Sapiens จบ
+    report.write_text(f'''# {model_name} — controlled continuation
 
 ตรวจปิดรอบเวลาไทย `{stamp}` · **{result['status']}** · segment `{root.name}`
 
-ผู้ใช้ขอกลับมาทดสอบ CPI หลัง GPU ว่าง. เปิดเฉพาะ ConvNeXt-B หลัง Sapiens2 0.4B/0.8B ครบตัวละ 5,000. Frozen checkpoint/config/FP32/preprocessing/TTA/thresholds/YOLO/ownership/scorer เดิม ไม่เปลี่ยน. [Authorization](../runs/{rec.name}/AUTHORIZATION.json), [process](../runs/{rec.name}/PROCESS.json), [segment plan](../runs/{root.name}/SEGMENT_PLAN.json).
+ผู้ใช้อนุมัติให้ดำเนินเฉพาะ `{mid}`. {other_model_note} Sapiens2 0.4B/0.8B ครบตัวละ5,000และไม่รันซ้ำ. Frozen checkpoint/config/FP32/preprocessing/TTA/thresholds/YOLO/ownership/scorer เดิม ไม่เปลี่ยน. [Authorization](../runs/{rec.name}/AUTHORIZATION.json), [process](../runs/{rec.name}/PROCESS.json), [segment plan](../runs/{root.name}/SEGMENT_PLAN.json).
 
 Effective implementation: **{implementation}**. เมื่อเป็นperson-chunkrevision ใช้ [repair evidence](CPI_MEMORY_REPAIR_TH.md); source/dependencies/reuse compatibility และdiagnosticresourceaccountingผูกในsegmentplan ไม่ใช้basefingerprintเก่าตัวเดียวแทนimplementationidentity. Diagnosticpredictionsไม่รวมcanonical; nativeconfigs/source/resultsเก่าคงเดิม.
 
@@ -133,7 +141,7 @@ Failure records ของ segment นี้ (N/A เมื่อไม่มี)
 {json.dumps(failures, ensure_ascii=False, indent=2)}
 ```
 
-ผลเป็น YOLO-associated application pipeline บน native CIHP20 ไม่ใช่ official native-parser reproduction หรือ C4-P. Timing เป็น adapter diagnostics รวม CPI native file I/O ภายใต้ shared-quality authorization แม้ GPU ว่างตอน launch; ไม่ใช้จัดอันดับ latency/FPS/VRAM efficiency. Free VRAM ตอน launch ไม่รับประกันครบทุกภาพ. คง24h/80GiB/free50GiB, stop-on-error, no automatic OOM/model retry/fallback/next model. CPI R50 ยังพัก. ไม่มี 1B/training/color/CCTV.
+ผลเป็น YOLO-associated application pipeline บน native CIHP20 ไม่ใช่ official native-parser reproduction หรือ C4-P. Timing เป็น adapter diagnostics รวม CPI native file I/O ภายใต้ shared-quality authorization แม้ GPU ว่างตอน launch; ไม่ใช้จัดอันดับ latency/FPS/VRAM efficiency. Free VRAM ตอน launch ไม่รับประกันครบทุกภาพ. คง24h/80GiB/free50GiB, stop-on-error, no automatic OOM/model retry/fallback/next model. {other_model_note} ไม่มี1B/training/color/CCTV.
 ''')
     files = [str(report.relative_to(P)), f'runs/{rec.name}/TERMINAL_OBSERVATION.json']
     compact = P / 'runs' / root.name
@@ -142,13 +150,13 @@ Failure records ของ segment นี้ (N/A เมื่อไม่มี)
     if digest(P / 'STATUS.md') == guard['status_sha256']:
         (P / 'STATUS.md').write_text(
             f'# Human Parsing Benchmark — current status\n\nUpdated: {stamp} (Asia/Bangkok)\n\n'
-            f'**CPI_CONVNEXT_{result["status"]}** · [current report](reports/{rec.name}.md). '
+            f'**{status_name}_{result["status"]}** · [current report](reports/{rec.name}.md). '
             f'Complete {result.get("complete", "N/A")}/5000; primary is null unless STRICT_COMPLETE. '
             'Controller stopped; no automatic next model/retry.\n\n'
             'Sapiens2 0.4B and 0.8B each COMPLETE5000: '
             '[0.4B/common cohort](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md), '
             '[0.8B](reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md). '
-            'Four native/common systems preserved. CPI R50 paused; no new experiment.\n')
+            f'Four native/common systems preserved. {other_model_note} No new experiment.\n')
         files.append('STATUS.md')
     with (P / 'WORK_LOG.md').open('a') as out:
         out.write(f'\n## {stamp} — {rec.name}: automatic terminal observation\n\n'

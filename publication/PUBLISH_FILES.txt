@@ -17,6 +17,7 @@ Human_Parsing_Benchmark/configs/cihp_sapiens_08b_full.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_08b_pilot.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json
 Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json
+Human_Parsing_Benchmark/configs/cpi_r50_memory_diagnostic.json
 Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md
 Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md
 Human_Parsing_Benchmark/docs/DECISIONS.md
@@ -94,6 +95,7 @@ Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH
 Human_Parsing_Benchmark/reports/convnext-20261029T070405365918Z.md
 Human_Parsing_Benchmark/reports/cpi-convnext-chunked-20261029T160327964412Z.md
 Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md
+Human_Parsing_Benchmark/reports/cpi-r50-chunked-20261029T172708697694Z.md
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json
@@ -240,6 +242,10 @@ Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPT
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNOSTIC.json
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/PROCESS.json
+Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/AUTHORIZATION.json
+Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/DIAGNOSTIC_LINK.json
+Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -886,6 +892,7 @@ publication/CPI_MEMORY_REPAIR_CLOSURE_cpi-memory-repair-20261029T153956552075Z.j
 publication/CPI_MEMORY_REPAIR_cpi-memory-repair-20261029T153956552075Z.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json
 publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json
+publication/CPI_R50_READINESS_cpi-r50-chunked-20261029T172708697694Z.json
 publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json
 publication/CPI_R50_SHARED_QUALITY_READY_20261028.json
 publication/D2FP_ONLY_ROUND_CLOSURE_20261028.json

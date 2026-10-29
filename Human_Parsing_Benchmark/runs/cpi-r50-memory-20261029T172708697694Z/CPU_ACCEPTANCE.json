@@ -1,0 +1,11 @@
+{
+  "control_tests": "4 passed, exit0",
+  "command": "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v",
+  "new_checks": [
+    "R50 scope rejects ConvNeXt IDs",
+    "R50 diagnostic resource receipts isolated from ConvNeXt"
+  ],
+  "reused_checks": "Original memory arithmetic CPU4+ConvNeXt GPU/full5000 proof, same cpi_memory.py unchanged; does not replace R50 GPU verification.",
+  "R50_GPU_status": "NOT_STARTED",
+  "module_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234"
+}

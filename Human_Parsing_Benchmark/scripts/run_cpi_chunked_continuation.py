@@ -1,4 +1,4 @@
-"""ConvNeXt-only controlled continuation with explicit memory implementation.
+"""One-model CPI controlled continuation with explicit memory implementation.
 
 Default reconciliation only. --execute is a fresh manual attempt, never a retry
 loop. The legacy controller/scientific config stay unchanged on disk.
@@ -30,7 +30,7 @@ def dependencies():
 
 def expanded(mid):
     if mid != MID:
-        raise ValueError('Only the GPU-validated ConvNeXt memory repair is exposed')
+        raise ValueError('Continuation model differs from selected model')
     text = original_expand(mid)
     patch_rel = 'Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py'
     patch_sha = base.file_hash(W / patch_rel)
@@ -83,6 +83,7 @@ def prepare(mid, root):
         snapshot = P / 'runs' / state['run_id'] / 'DIAGNOSTIC_CONFIG.json'
         binding = json.loads(snapshot.read_text())
         if (state.get('status') == 'DIAGNOSTIC_PASS'
+                and binding['model_id'] == mid
                 and state['config_sha256'] == base.file_hash(snapshot)
                 and binding['protected_hashes']['Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py'] == base.file_hash(P / 'src/cihp_benchmark/cpi_memory.py')
                 and binding['protected_hashes']['Human_Parsing_Benchmark/configs/cihp_native_six.json'] == base.file_hash(P / 'configs/cihp_native_six.json')
@@ -107,7 +108,7 @@ def prepare(mid, root):
     policy_path = W / plan['resource_policy']
     policy = json.loads(policy_path.read_text())
     policy.update(implementation_revision=REVISION,
-                  authority='Explicit operator invocation of repaired ConvNeXt continuation',
+                  authority='Explicit operator invocation of repaired ' + mid + ' continuation',
                   diagnostic_resource_accounting='Included in prior worker time and retained bytes')
     base.write(policy_path, policy)
     plan['resource_policy_sha256'] = base.file_hash(policy_path)
@@ -116,13 +117,17 @@ def prepare(mid, root):
 
 
 def main():
+    global MID
     if '--help' in sys.argv:
-        print(__doc__ + '\nUse --model convnext [--execute | --status [--watch]].')
+        print(__doc__ + '\nUse --model {convnext,r50} [--execute | --status [--watch]]. Each model requires its own matching GPU diagnostic.')
         return
     if '--model' in sys.argv:
         requested = sys.argv[sys.argv.index('--model') + 1]
-        if requested not in ['convnext', MID]:
-            raise ValueError('This wrapper is ConvNeXt-only; R50 has no GPU repair evidence')
+        models = {'convnext': 'CPI_ConvNeXtB_CIHP', 'r50': 'CPI_R50_CIHP',
+                  'CPI_ConvNeXtB_CIHP': 'CPI_ConvNeXtB_CIHP', 'CPI_R50_CIHP': 'CPI_R50_CIHP'}
+        if requested not in models:
+            raise ValueError('Explicit CPI model required')
+        MID = models[requested]
     if '--worker' in sys.argv:
         path = Path(sys.argv[sys.argv.index('--segment-manifest') + 1])
         plan = json.loads(path.read_text())

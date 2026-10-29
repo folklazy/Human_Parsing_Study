@@ -1,0 +1,29 @@
+{
+  "created_Bangkok": "2026-10-30T00:27:08.697694+07:00",
+  "authority": "Latest user: ตัวต่อไปเลย. Next incomplete first-six model is CPI_R50_CIHP; conditional bounded readiness+remaining validation execution only.",
+  "model_id": "CPI_R50_CIHP",
+  "diagnostic_run": "cpi-r50-memory-20261029T172708697694Z",
+  "diagnostic_config": "Human_Parsing_Benchmark/configs/cpi_r50_memory_diagnostic.json",
+  "diagnostic_max_calls": 3,
+  "conditional_validation_allowed": true,
+  "full_population": 5000,
+  "expected_reuse": 3,
+  "must_reconcile_actual_prior_outputs": true,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY (prior explicit R50 authorization retained)",
+  "implementation_revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+  "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+  "scientific_parameters_changed": [],
+  "automatic_OOM_or_model_retries": 0,
+  "fallback": false,
+  "next_model_allowed": false,
+  "diagnostic_predictions_canonical": false,
+  "ConvNeXt_complete": {
+    "segment": "convnext-20261029T160359716460Z",
+    "complete": 5000,
+    "completion_sha256": "14e9ea51bf3cac462a973821ead8f5a7e2ba3344e32d01882ce21cd70f7d19d1"
+  },
+  "other_results": "QANet/M2FP/D2FP/RPR/Sapiens04/08/YOLO unchanged; no inference/training/color/CCTV/1B outside scope"
+}

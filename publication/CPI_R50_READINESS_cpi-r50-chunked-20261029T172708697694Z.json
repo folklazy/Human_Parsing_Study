@@ -1,0 +1,69 @@
+{
+  "work_unit": "cpi-r50-chunked-20261029T172708697694Z",
+  "created_utc": "2026-10-29T17:27:46.762888+00:00",
+  "scope": "Explicit R50-next readiness/conditional continuation authorization, model-specific operational reuse and CPU controls. Memory module/native scientific sources/configs unchanged, no raw images/logs/masks/weights.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+      "sha256": "13722f53f05775aff25c8caf86d5b0af3ba85e03e6e996f7252aa5cd42ab8d88",
+      "bytes": 13010
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+      "sha256": "9e743fe28842cd15f60ac04fbf34a33822917a67c459094ece80c2e7557853a7",
+      "bytes": 7485
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+      "sha256": "34856cd951873ffed817c76bb948c30fa340181b583604102de11cb7ed24e82b",
+      "bytes": 11560
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py",
+      "sha256": "39118b0f46eed9de5f296cacb42e8f9a133515c4655bc214e1ac63d6d2007083",
+      "bytes": 3292
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_r50_memory_diagnostic.json",
+      "sha256": "10a3e190a356a46831ec5b5f856a157ad4cd3c90593c8b8572c082d5792ffc2a",
+      "bytes": 4320
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "4260c80e9a52e77a9f329aca25a9639ae4b802a1d9a9b425aaf0f23aede914ff",
+      "bytes": 599
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "e17688d2d4ee4064eadfbf8089eacf3b3a19ff69f954db46f06bd28053c9531f",
+      "bytes": 60525
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-r50-chunked-20261029T172708697694Z.md",
+      "sha256": "ac50fda7fd41da3cd554349c284d0919b6f93b963fbfd36d48de0e73e7b29f49",
+      "bytes": 2356
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/AUTHORIZATION.json",
+      "sha256": "6eae3dd50ccb25cecb461a55199cc0f48e486510378a0b01775759d90fa715f2",
+      "bytes": 1577
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/DIAGNOSTIC_LINK.json",
+      "sha256": "48635b28b9f6d7e6d4033efa7689aab2f4294c750457af8b2606792441094270",
+      "bytes": 244
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "10a3e190a356a46831ec5b5f856a157ad4cd3c90593c8b8572c082d5792ffc2a",
+      "bytes": 4320
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/CPU_ACCEPTANCE.json",
+      "sha256": "2e5be9cf1d31200de02c512d3d23f8967778e669e220f9aa49113af341ce1f87",
+      "bytes": 549
+    }
+  ],
+  "existing_ConvNeXt_status": "COMPLETE5000 immutable; old launch source snapshots remain in Git",
+  "redistribution": "Own operational code/config/doc changes only; no additional third-party source."
+}

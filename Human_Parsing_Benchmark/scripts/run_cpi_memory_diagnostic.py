@@ -23,6 +23,19 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+def diagnostic_scope(cfg):
+    scopes = {
+        'CPI_ConvNeXtB_CIHP': [['Training', '0000930'], ['Validation', '0003218'], ['Validation', '0001641']],
+        'CPI_R50_CIHP': [['Training', '0000930'], ['Validation', '0000018'], ['Validation', '0000004']],
+    }
+    mid = cfg['model_id']
+    if mid not in scopes or cfg['calls'] != scopes[mid]:
+        raise ValueError('Exact model-specific three-call diagnostic scope differs')
+    if cfg['max_model_frame_calls'] != 3 or cfg['automatic_retries'] != 0:
+        raise ValueError('Diagnostic budget differs')
+    return mid, scopes[mid][-1][1]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True)
@@ -34,14 +47,10 @@ def main():
         print(json.dumps({'status': 'NOT_EXECUTED', 'run_id': cfg['run_id'], 'max_calls': 3}))
         return
     frozen = json.loads((W / cfg['frozen_config']).read_text())
-    mid = 'CPI_ConvNeXtB_CIHP'
+    mid, regression_image = diagnostic_scope(cfg)
     spec = frozen['models'][mid]
     if Path(sys.prefix).resolve() != (W / spec['environment']).resolve():
         raise ValueError('Frozen CPI environment required')
-    if cfg['model_id'] != mid or cfg['calls'] != [['Training', '0000930'], ['Validation', '0003218'], ['Validation', '0001641']]:
-        raise ValueError('Three-call ConvNeXt-only diagnostic scope differs')
-    if cfg['max_model_frame_calls'] != 3 or cfg['automatic_retries'] != 0:
-        raise ValueError('Diagnostic budget differs')
     with (P / 'outputs/cpi_continuations/CPI.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         from run_cpi_continuation import reject_existing_worker
@@ -157,7 +166,7 @@ def main():
                         if 'semantic' in key and (value.dtype.kind not in 'ui' or np.any(value >= 20) or value.shape[-2:] != rgb.shape[:2]):
                             raise ValueError('Native20/original geometry contract failed')
                     regression = None
-                    if iid == '0001641' and split == 'Validation':
+                    if iid == regression_image and split == 'Validation':
                         oldpath = W / cfg['regression_packet']
                         if file_hash(oldpath) != cfg['regression_packet_sha256']:
                             raise ValueError('Saved reference packet changed')

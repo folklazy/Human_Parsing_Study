@@ -60,13 +60,13 @@
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 553,
-      "sha256": "c7027cf8ef41d59226c04f888234e312ea49c6c3c789a60ebdbfbb28f42c551e"
+      "sha256": "4260c80e9a52e77a9f329aca25a9639ae4b802a1d9a9b425aaf0f23aede914ff",
+      "bytes": 599
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 59854,
-      "sha256": "cc8fd8c189f9aa85744a35370e45c713861d9e8aae4a3c65ca0231f3394f1d74"
+      "sha256": "e17688d2d4ee4064eadfbf8089eacf3b3a19ff69f954db46f06bd28053c9531f",
+      "bytes": 60525
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
@@ -92,6 +92,11 @@
       "path": "Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json",
       "sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
       "bytes": 4563
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_r50_memory_diagnostic.json",
+      "sha256": "10a3e190a356a46831ec5b5f856a157ad4cd3c90593c8b8572c082d5792ffc2a",
+      "bytes": 4320
     },
     {
       "path": "Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md",
@@ -452,6 +457,11 @@
       "path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
       "bytes": 6057,
       "sha256": "11e34b2c26821d6c614acf33487a187d4256214550587730345fff1249dc7f89"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-r50-chunked-20261029T172708697694Z.md",
+      "sha256": "ac50fda7fd41da3cd554349c284d0919b6f93b963fbfd36d48de0e73e7b29f49",
+      "bytes": 2356
     },
     {
       "path": "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json",
@@ -1049,6 +1059,26 @@
       "bytes": 653
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/AUTHORIZATION.json",
+      "sha256": "6eae3dd50ccb25cecb461a55199cc0f48e486510378a0b01775759d90fa715f2",
+      "bytes": 1577
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/DIAGNOSTIC_LINK.json",
+      "sha256": "48635b28b9f6d7e6d4033efa7689aab2f4294c750457af8b2606792441094270",
+      "bytes": 244
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/CPU_ACCEPTANCE.json",
+      "sha256": "2e5be9cf1d31200de02c512d3d23f8967778e669e220f9aa49113af341ce1f87",
+      "bytes": 549
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "10a3e190a356a46831ec5b5f856a157ad4cd3c90593c8b8572c082d5792ffc2a",
+      "bytes": 4320
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json",
       "bytes": 11385,
       "sha256": "f5c5a78ec2de0b138f49a8bd853011f4db8287e9c3a705608f408683fed6c4d4"
@@ -1175,8 +1205,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
-      "sha256": "4f861deae0dad30d82259fec398f9ba3dd7ed1a570aeccd2b6a5950bfbf13f14",
-      "bytes": 11045
+      "sha256": "34856cd951873ffed817c76bb948c30fa340181b583604102de11cb7ed24e82b",
+      "bytes": 11560
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/monitor_cihp_batch.py",
@@ -1240,8 +1270,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
-      "sha256": "e3ebd88daa61333a6057e7f3630a04be889eaadd8ec5306390076e9b09e538c6",
-      "bytes": 7215
+      "sha256": "9e743fe28842cd15f60ac04fbf34a33822917a67c459094ece80c2e7557853a7",
+      "bytes": 7485
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py",
@@ -1255,8 +1285,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
-      "sha256": "51e73c5bf12e61ea1465ba0f48758f30428921dc263a90e98ca3d4797a84c4ce",
-      "bytes": 12723
+      "sha256": "13722f53f05775aff25c8caf86d5b0af3ba85e03e6e996f7252aa5cd42ab8d88",
+      "bytes": 13010
     },
     {
       "path": "Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py",
@@ -1345,8 +1375,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py",
-      "sha256": "56f0aba301240baa7d2164ed141005e57024bdbc7e77cfdcdd28f8b79259422e",
-      "bytes": 2007
+      "sha256": "39118b0f46eed9de5f296cacb42e8f9a133515c4655bc214e1ac63d6d2007083",
+      "bytes": 3292
     },
     {
       "path": "Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py",
@@ -4174,6 +4204,11 @@
       "sha256": "023b3d6e26f5c0f481d55d49812688de4d5401e1fe15ff56e47eb5b012ff764c"
     },
     {
+      "path": "publication/CPI_R50_READINESS_cpi-r50-chunked-20261029T172708697694Z.json",
+      "sha256": "b9775dd22a2211fe90edb8214ba29c74331c274f05dd0e0fa63914c122e91cae",
+      "bytes": 2972
+    },
+    {
       "path": "publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json",
       "bytes": 3826,
       "sha256": "993473ca1b8673fd50ad296db5b2b42fed71657f7de693d7a1faef477e7f420b"
@@ -5724,6 +5759,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T17:22:57.273285+00:00",
+  "updated_utc": "2026-10-29T17:27:46.768076+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }
