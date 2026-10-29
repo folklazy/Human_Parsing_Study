@@ -1,0 +1,10 @@
+{
+  "checked_Bangkok": "2026-10-30T01:30:01.454773+07:00",
+  "segment": "r50-20261029T181200001439Z",
+  "status": "INCOMPLETE",
+  "canonical_completion_present": true,
+  "completion_sha256": "c2fb3ad7ae6bbd89c2d91501b7bd18241107568dcd7dc464c6b9b67363df9564",
+  "observer_PID": 742068,
+  "no_inference_or_rescore": true,
+  "automatic_retry": false
+}

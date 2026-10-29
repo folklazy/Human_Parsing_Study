@@ -365,3 +365,7 @@ Diagcpi-r50-schedule-diagnostic-20261029T180852377295Z/PID735631/launch ea94ab7:
 ## 2026-10-30T01:14:54.758042+07:00 — revision3 full launch/firstcanonicalpacket PASS
 
 Launchcbb9a43/controller738024/worker738128/SID738024/PPID1detached; segmentr50-20261029T181200001439Z. Reconciled17old/pending4983exact5000,no diagnostics reused. Newfirst0000266 allnative20geometry/NPZ/GT/bothscores/effectivefingerprint3sourcehashesPASS; NPZ byteidenticaltodifferentdiagnosticpacket(newcall). Snapshotnew150/failed0; no qualityranking. Priorresource144.928098sincludesoldfailed/diag2/diag3/v2worker;samecaps/noauto retry/fallback. Nextattachread-onlycanonicalfinalizer, publishlaunchthenendturn, donotpolltofinish.
+
+## 2026-10-30T01:30:01.454773+07:00 — cpi-r50-feature-20261029T175338825178Z: automatic terminal observation
+
+Controller exited; canonical INCOMPLETE, 912/5000. Existing controller reconciled packets and saved-mask scores; this observer only assembled report/navigation. Failure/attempt history retained; no retry/next model/inference/rescore.

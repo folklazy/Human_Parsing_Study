@@ -1,0 +1,50 @@
+{
+  "work_unit": "cpi-r50-feature-20261029T175338825178Z-closure",
+  "base_commit": "24a63c3ecdce938727c05cbfeae974d85c0ab970",
+  "scope": "CPI ConvNeXt terminal canonical records and Thai report only; no raw masks/logs",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "sha256": "989f94fe31ac47ace02a1a4b44f3faa4f2882caeb0ba083ce7dc7b4fea2f9165",
+      "before_sha256": "df1f0e0efd0ad40f9af1d27cf3391844d43f987ddc8717e65e46732070d63d5e",
+      "bytes": 7242
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/TERMINAL_OBSERVATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/TERMINAL_OBSERVATION.json",
+      "sha256": "b9780c80b8c9a59f6a69267b8ce32b904fb46a8362ee1541b635a0410cd781e7",
+      "before_sha256": null,
+      "bytes": 349
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/COMPLETION.json",
+      "sha256": "c2fb3ad7ae6bbd89c2d91501b7bd18241107568dcd7dc464c6b9b67363df9564",
+      "before_sha256": null,
+      "bytes": 84816
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "f0a6e16057ddd0e909be61981b2bc5045b845923d0d44d6300f992c30a87a9cf",
+      "before_sha256": "3b1b6741215653f2c43b2f9392b409cb8977eb6f35e3c27fc01a5775c1d236c4",
+      "bytes": 578
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "c1864e2e769cb68b105b6798bacffb1ec6d729dbca8f2a00c950e39656ad9b71",
+      "before_sha256": "5613cd830dd5e1208532c8895b25fcaef2762515fbffac9a16e59615bfa45f09",
+      "bytes": 11101
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "16eae861d7a9f0795bb774238d142cb594bd640367b8965a751b9046603d1d07",
+      "before_sha256": "9092488c81b4a71f44c183703a3e82babb39ed708e6eea98a19dcefb71283093",
+      "bytes": 65127
+    }
+  ],
+  "launch_source_unchanged": true
+}

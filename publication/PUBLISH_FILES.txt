@@ -259,6 +259,7 @@ Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS_REVI
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/REVISION3_DECISION.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK_REVISION2.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/TERMINAL_OBSERVATION.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/GPU_DIAGNOSTIC.json
@@ -279,6 +280,7 @@ Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/r50-20261029T181200001439Z/SEGMENT_PLAN.json
@@ -899,6 +901,7 @@ publication/CIHP_NATIVE_COMPLETION_cpi-convnext-shared-20261028T181609262813Z.js
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-chunked-20261029T172708697694Z-readiness-closure.json
+publication/CIHP_NATIVE_COMPLETION_cpi-r50-feature-20261029T175338825178Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-feature-20261029T175338825178Z-observer.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z-ready.json
 publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z.json

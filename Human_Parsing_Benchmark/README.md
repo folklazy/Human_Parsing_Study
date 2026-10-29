@@ -1,4 +1,4 @@
-> **Current: repaired CPI R50 revision3 validation RUNNING.** [Current report](reports/cpi-r50-feature-20261029T175338825178Z.md) → [STATUS](STATUS.md). 17 verified reused; 4,983 pending at launch; no next model.
+> **Current: CPI-Parser R50 CIHP INCOMPLETE, 912/5000.** [Canonical completion report](reports/cpi-r50-feature-20261029T175338825178Z.md) → [STATUS](STATUS.md). No automatic next model/retry; previous results preserved.
 
 The notices below are historical snapshots; STATUS is current.
 
