@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-29T18:16:31.358553+00:00",
+  "PID": 742068,
+  "SID": 742068,
+  "PGID": 742068,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+    "--operator-record",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z"
+  ],
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-r50-feature-20261029T175338825178Z-revision3/FINALIZER.log",
+  "role": "READ_ONLY_CANONICAL_TERMINAL_REPORT_OBSERVER",
+  "inference_or_retry": false
+}

@@ -1109,6 +1109,11 @@
       "sha256": "1325a6e63cf3779513db05093730a654a89453a89bf1abb3ccbc2e8f7eec6519"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FINALIZER_PROCESS.json",
+      "bytes": 629,
+      "sha256": "6e27136f8cca74521e1a46deaa186064a9ebc759e122f6c60ea4463ef0a6f618"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FIRST_PACKET_CHECK.json",
       "bytes": 2254,
       "sha256": "9ad38718d35f78550c8f926342684c44b521dda01a49336625854340bce8c77e"
@@ -4269,6 +4274,11 @@
       "sha256": "3d1f5147a534ce1a74d7a6982d631e517d67df356c70796796fc71045b175e0a"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_cpi-r50-feature-20261029T175338825178Z-observer.json",
+      "bytes": 676,
+      "sha256": "9b6b1b10ec93394fe069dd408f224ce08bc1ba43d0d0e0a05cd4b7d09034aadc"
+    },
+    {
       "path": "publication/CIHP_NATIVE_COMPLETION_cpi-r50-manual-continuation-20261028T175036811629Z-ready.json",
       "bytes": 3189,
       "sha256": "a2e3cea5c47d30b7d95097ee0224ae88c74c4a16aac8915ab1e99f8526e82596"
@@ -5964,6 +5974,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T18:15:42.294347+00:00",
+  "updated_utc": "2026-10-29T18:16:31.452933+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

@@ -1,0 +1,15 @@
+{
+  "work_unit": "cpi-r50-feature-20261029T175338825178Z-observer",
+  "base_commit": "ebbe40cc8b125252a84a48f1404a86502a55fc20",
+  "scope": "Exact detached observer process for R50 canonical closure only; no inference/config change",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FINALIZER_PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/FINALIZER_PROCESS.json",
+      "sha256": "6e27136f8cca74521e1a46deaa186064a9ebc759e122f6c60ea4463ef0a6f618",
+      "before_sha256": null,
+      "bytes": 629
+    }
+  ],
+  "launch_source_unchanged": true
+}
