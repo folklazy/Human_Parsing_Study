@@ -1,0 +1,21 @@
+{
+  "work_unit": "cpi-convnext-operator-20261029T065934808724Z",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json",
+      "sha256": "4368068cf24c04cf0c0ba218834131d469498dfba336ceecb5a7573f65a0133d",
+      "before_sha256": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "5f6dc052562fd19760efd5428d1e38e3e2627d5807c333eaac819cebf39cedb0",
+      "before_sha256": "538e894873663d9c074f1a31de315d777b82ff7efa5307869676bdf151a5bdd7"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "b9626d5295f7be91f7412ae29a94248e45e911fb82c1f3c16dadc97fb9fc6cfd",
+      "before_sha256": "17fbdb18cecfb6a9777b0b37dfe4919b5c42b01c51faf411295757f715d46609"
+    }
+  ],
+  "scope": "Authorization/documentation only; active code/config unchanged"
+}

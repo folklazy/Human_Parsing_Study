@@ -183,6 +183,7 @@ Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/READINESS.j
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/EVIDENCE.json
+Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
@@ -786,6 +787,7 @@ publication/COMMON_VIEW_IMPLEMENTATION_PILOT_20261029.json
 publication/COMMON_VIEW_PILOT_CLOSURE_20261029.json
 publication/COMMON_VIEW_PROTOCOL_PROPOSAL_20261029.json
 publication/CPI_CONVNEXT_DIAGNOSTIC_READY_20261028.json
+publication/CPI_CONVNEXT_OPERATOR_cpi-convnext-operator-20261029T065934808724Z.json
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json
 publication/CPI_MANUAL_CLI_20261029.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json

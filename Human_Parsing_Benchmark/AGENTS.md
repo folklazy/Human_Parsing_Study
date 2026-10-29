@@ -74,3 +74,7 @@ User requested runnable commands for both CPI models. Use docs/CPI_CONTINUATION_
 ## Latest explicit user scope — full C4-P approved 2026-10-29T13:37:34.226601+07:00
 
 Run `common-c4p-full-20261029T063458522990Z` via configs/cihp_sapiens_c4p_full.json: saved-onlyQANet/M2FP/D2FP/RPR + Sapiens2seg0.4B5000,6pilot observationsreused+4994newVAL+≤1TRAINwarmup. Sharedquality authorized; oneGPUworker,one sequentialCPUworker;no autoretry/fallback/nextmodel. Currentfullapproval supersedes previousnot-authorizedfull statements; consumedpilotallowanceunchanged. Preserve allnative/pilot results/config/source. Do not edit hash-bound execution/scorer/source/config duringrun; firstcheckprocess/state beforeanyaction. No CPI/0.8B/1B/newYOLO/training/color/CCTV.
+
+## Latest explicit user override — concurrent CPI ConvNeXt manual attempt 2026-10-29T13:59:34.808724+07:00
+
+User asks to try CPI ConvNeXt-B now, while Sapiens0.4B continues. Authorization runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json; use existing run_cpi_continuation.py --model convnext --execute once. This overrides previous noCPI restriction for this one manual attempt only; preserve sharedquality/frozen native scientific settings, reuse audited successful IDs, fresh pending segment, stop on new error/noautoretry/fallback/nextmodel. Never modify active common-view source/config or interrupt its GPU/CPU workers. Keep native20 results separate from C4-P. R50/0.8B/1B remain outside scope.

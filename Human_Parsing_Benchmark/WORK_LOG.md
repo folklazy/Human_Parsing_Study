@@ -259,3 +259,7 @@ Completed systems: ['QANet_CIHP_HRNetW48_512x384']. Canonical fixed-protocol sco
 ## 2026-10-29T06:57:33.205474+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
 
 Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.
+
+## 2026-10-29T13:59:34.808724+07:00 — cpi-convnext-operator-20261029T065934808724Z: explicit ConvNeXt concurrent attempt
+
+UserrequestsConvNeXt-Bnow;supersedespriornoCPIrestrictiononlyforthismanualattempt. Sapiens0.4Bfull/CPUcommoncontinueuntouched. GPUfree12173MiB/Sapiens2736MiB,nootherCPIworkersobserved. UseexistingversionedCLI/frozennativeconfig/scorer/FP32/settings/resourceguards;freshsegment,reconcileold113successesifvalid,pendingonly,onerrorstop/noautoretry/fallback. Native20CPIremainsseparatefromcommonC4-P. Authorization/source/checkpointbindingsrecorded;nextcommitthenlaunchdetached,recheckfirstnewpacketorretainedfailure;noR50/0.8B/1B.

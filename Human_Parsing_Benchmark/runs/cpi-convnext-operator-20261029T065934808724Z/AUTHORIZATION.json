@@ -1,0 +1,42 @@
+{
+  "status": "EXPLICIT_USER_AUTHORIZED_MANUAL_CONTINUATION",
+  "created_utc": "2026-10-29T06:59:34.808724+00:00",
+  "created_Bangkok": "2026-10-29T13:59:34.808724+07:00",
+  "scope": [
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "authority": "Latest user: ลอง - ConvNeXt-B เลย; explicit attempt while existing Sapiens0.4B continues",
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "population": "official CIHP validation 5000; native20 frozen protocol",
+  "frozen_config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+  "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+  "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+  "environment": ".venvs/parser-legacy-cu113",
+  "execution_script": "Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+  "execution_script_sha256": "5bf6d766a6d59cf8ac2d4909fc175ec727da32b03ff91e763d92064a1e10da3a",
+  "changes": [
+    "One fresh explicit operator ConvNeXt continuation; reusable successes validated, pending IDs only",
+    "Concurrent sharing with independently running Sapiens2_0.4b explicitly requested"
+  ],
+  "unchanged": [
+    "checkpoint",
+    "FP32",
+    "resolution",
+    "TTA",
+    "score threshold",
+    "batch",
+    "frozen YOLO cache",
+    "ownership",
+    "native CIHP20 scorer",
+    "resource limits"
+  ],
+  "automatic_model_OOM_retry": 0,
+  "fallback": false,
+  "stop_on_error": true,
+  "next_model_allowed": false,
+  "other_runs": "Do not pause/kill/reconfigure Sapiens0.4B or CPUcommon workers; native/common outputs remain separate",
+  "R50_paused": true,
+  "other_Sapiens_sizes": false,
+  "previous_failure_attempts_preserved": true
+}
