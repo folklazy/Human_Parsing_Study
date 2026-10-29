@@ -1,0 +1,97 @@
+{
+  "work_unit": "convnext-20261029T070405365918Z",
+  "created_utc": "2026-10-29T07:12:21.832884+00:00",
+  "phase": "POST_RUN_INCOMPLETE_OOM",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "be4f2ede74cdba05b1de2af520da1da1eed92ad88bf0c8f6826b205944940766",
+      "before_sha256": "691ad8ac8c7cde8d409ab4665a52faeff90fb758a44c5ce70844b5671904e9c0",
+      "bytes": 3062
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "7ee63a4c1a21a915233314b52e3d57c02f90eb7834125d4bc9567d66749b08d1",
+      "before_sha256": "b9626d5295f7be91f7412ae29a94248e45e911fb82c1f3c16dadc97fb9fc6cfd",
+      "bytes": 12551
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "8024b018227e672a306d230796fac1ed7bab41bf74b46ecfa9256116d59894b4",
+      "before_sha256": "844dd6499811db139571333015af9c3f6e4ee420cfaaf57c68c7eec6e26ab25b",
+      "bytes": 10814
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md",
+      "sha256": "117f35e923a1218797e42d8ebf86f74132534edf21e6f5739d822eeb2ff78db1",
+      "before_sha256": "7d39f2703d587c464cfc7009237c8fc8d85452a9bab091811ab2071cd16d5c2a",
+      "bytes": 76325
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/convnext-20261029T070405365918Z.md",
+      "sha256": "4aaf426bb6407c80a6465d8aa42f2689cdd2d9be494cd33b8fe8562f7dd03297",
+      "before_sha256": null,
+      "bytes": 7238
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/RESOURCE_POLICY.json",
+      "sha256": "4fd01b96d7b9969c23e20a49462e529b534659250c6dbf36188e55d1c66e378c",
+      "before_sha256": null,
+      "bytes": 318
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/LAUNCH.json",
+      "sha256": "17e9120399f53fcfe701ca04c66b8e4d2fd070a88f3e8ea5fd356b48b2faca3a",
+      "before_sha256": null,
+      "bytes": 1289
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/COMPLETION.json",
+      "sha256": "b9e03e13edec9b21ee6699f03dd4f633d6eacc4438f9fcfceb642d59c73ac203",
+      "before_sha256": null,
+      "bytes": 82244
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/SEGMENT_PLAN.json",
+      "sha256": "c1e424a6d790c2d27fcde8658c5fb851ee74a8bf436f26696f716127e3716c2e",
+      "before_sha256": null,
+      "bytes": 77364
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/PROCESS.json",
+      "sha256": "e7a007adc05c56bfbfe67641149723f2dc830de5f06ee89700b33c7c9c1fb6be",
+      "before_sha256": null,
+      "bytes": 784
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/FIRST_PACKET_CHECK.json",
+      "sha256": "24355b7764c6e8678fe32d17fcc252360faa514e07e231c3b8bc08966367a350",
+      "before_sha256": null,
+      "bytes": 1291
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SEGMENT_LINK.json",
+      "sha256": "2a38db1cf3e2a020296ff0226547d80af9adc1df3cd87e9a0de8e9b8b999f9c7",
+      "before_sha256": null,
+      "bytes": 531
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/EXTERNAL_CPI_CONCURRENCY.json",
+      "sha256": "333b2e3b05d40de01973f92c91afd9f35c06fba8118d58d9adc0222f8100be4e",
+      "before_sha256": null,
+      "bytes": 460
+    }
+  ],
+  "actual_launch_commit": "924f6c4ab033c4636b68bc279a89024dc56e3a8f",
+  "checks": {
+    "old113_plus_new32_verified": 145,
+    "failed": 1,
+    "invalid": 0,
+    "missing": 4855,
+    "duplicate": 0,
+    "primary": null,
+    "scientific_config_sources_unchanged": true,
+    "no_autoretry": true,
+    "no_raw_assets_published": true
+  }
+}

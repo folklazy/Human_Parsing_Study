@@ -1,0 +1,33 @@
+{
+  "status": "RUNNING",
+  "round_id": "convnext-20261029T070405365918Z",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "expected": 5000,
+  "controller_PID": 401349,
+  "start_utc": "2026-10-29T07:04:24.040739+00:00",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "reused": 113,
+  "controller_start_ticks": 16098031,
+  "GPU_at_launch": "Tesla T4, 2739 MiB, 12173 MiB, 100 %",
+  "external_GPU_PIDs_at_launch": [
+    "380414"
+  ],
+  "launch_commit": "924f6c4ab033c4636b68bc279a89024dc56e3a8f",
+  "worker_PID": 401656,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-B",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+    "--worker",
+    "--segment-manifest",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T070405365918Z/SEGMENT_PLAN.json",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_native_six.json",
+    "--model",
+    "CPI_ConvNeXtB_CIHP",
+    "--phase",
+    "validation",
+    "--output",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T070405365918Z/segments/CPI_ConvNeXtB_CIHP"
+  ]
+}

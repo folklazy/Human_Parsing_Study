@@ -78,3 +78,7 @@ Run `common-c4p-full-20261029T063458522990Z` via configs/cihp_sapiens_c4p_full.j
 ## Latest explicit user override — concurrent CPI ConvNeXt manual attempt 2026-10-29T13:59:34.808724+07:00
 
 User asks to try CPI ConvNeXt-B now, while Sapiens0.4B continues. Authorization runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json; use existing run_cpi_continuation.py --model convnext --execute once. This overrides previous noCPI restriction for this one manual attempt only; preserve sharedquality/frozen native scientific settings, reuse audited successful IDs, fresh pending segment, stop on new error/noautoretry/fallback/nextmodel. Never modify active common-view source/config or interrupt its GPU/CPU workers. Keep native20 results separate from C4-P. R50/0.8B/1B remain outside scope.
+
+## Latest terminal — CPI ConvNeXt manual attempt
+
+Segment convnext-20261029T070405365918Z stopped on confirmed OOM0001641 after32new successes+113reused=145/5000;failed1/invalid0/missing4855,mainnull. BothPIDs401349/401656 exited,oldfailed0001218nowvalidbutallhistoryretained. No automatic restart/newCPI/R50. Sapiens0.4B/commonCPU batch remains separately authorized/running,source/config unchanged; read currentprogress before any action. Thai closure reports/convnext-20261029T070405365918Z.md.

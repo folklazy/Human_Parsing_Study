@@ -304,3 +304,7 @@ Full validation status **INCOMPLETE**, complete113/5000,failedVAL1,invalid0,nota
 ## Current reporting scope — 2026-10-29T01:56:19.221143+07:00
 
 UserpausesbothCPIroundswithoutcancellingthem; successfulIDs/ledgers/OOMhistoryandnullmainscorespreserved. Currentcross-modelpresentation+preliminarymatrixis [CIHP_FOUR_MODEL_RESULTS_TH.md](CIHP_FOUR_MODEL_RESULTS_TH.md),builtfromfourcanonicalCOMPLETE5000systemsandsixretainedstatusrows. Earliersectionsremainhistoricalattemptrecords,notcurrentpermissiontoretry/launch.No newinference/OOMfix/Sapiens/color/training.
+
+## CPI ConvNeXt manual continuation — 2026-10-29T14:09:52.447523+07:00
+
+ผู้ใช้อนุญาตลองร่วมกับ Sapiens0.4B; segment `convnext-20261029T070405365918Z`, frozen native20/FP32/settings unchanged. Reuse113+new32verified=145/5000,failed1/invalid0/missing4855/duplicate0,mainnull STRICT_COMPLETE. WarmupPASS,OOM0001641ขอ4.10GiB/free1.67GiBแล้วหยุด/noautoretry. ทั้งcontroller/workerexited;failedattempthistorypreserved. [รายงานไทยปิดรอบ](convnext-20261029T070405365918Z.md) / [canonical](../runs/convnext-20261029T070405365918Z/COMPLETION.json). Sapiens/commonCPUcontinueuntouched,notCPI/commonmixedscores.

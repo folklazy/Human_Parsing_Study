@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-29T07:04:04.983667+00:00",
+  "controller_PID": 401349,
+  "PGID": 401349,
+  "SID": 401349,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+    "--model",
+    "convnext",
+    "--execute"
+  ],
+  "launch_commit": "924f6c4ab033c4636b68bc279a89024dc56e3a8f",
+  "authorization": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json",
+  "console_log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-convnext-operator-20261029T065934808724Z-console.log",
+  "detached": "start_new_session/stdinDEVNULL/logfile",
+  "other_workers_unchanged": true
+}

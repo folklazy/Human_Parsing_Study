@@ -1,0 +1,8 @@
+{
+  "segment_id": "convnext-20261029T070405365918Z",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T070405365918Z",
+  "config_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+  "SEGMENT_PLAN_sha256": "c1e424a6d790c2d27fcde8658c5fb851ee74a8bf436f26696f716127e3716c2e",
+  "completion_record": "Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/COMPLETION.json",
+  "source_amendment": "d7db0e715e61ab5452b29a0664ba22dee17058815e4e0a14fe77003b7dbfcaf2"
+}

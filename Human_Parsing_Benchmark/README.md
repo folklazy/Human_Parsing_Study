@@ -4,6 +4,8 @@
 
 > **Current outcome: C4-P Sapiens2 0.4B pilot PASS (6/6 +1warmup,7-callbudgetconsumed).** [Closure report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU23cases/GTbindings/QANetextentparityverified; fullcommonscoresnotrun. Nativefour/CPIhistorypreserved;noautomaticnextmodel.
 
+> CPI ConvNeXt manual continuation หยุดจาก OOM หลังรวม145/5000; [รายงานไทย](reports/convnext-20261029T070405365918Z.md). แยกจาก common-view batch ที่ยังทำงาน
+
 # Human Parsing Benchmark
 
 เปรียบเทียบ pretrained human parsing checkpoints/configurations เพื่อแยกส่วนร่างกาย เสื้อผ้า และ accessories ที่รองรับ ในงานวิจัยนักศึกษาอิสระ ผลเป็นการเปรียบเทียบ configuration ไม่ใช่การแยกผลของ architecture หรือข้อมูลฝึกโดยลำพัง

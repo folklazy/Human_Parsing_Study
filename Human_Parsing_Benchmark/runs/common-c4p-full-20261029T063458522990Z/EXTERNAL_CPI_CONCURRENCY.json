@@ -1,0 +1,12 @@
+{
+  "authority": "Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json",
+  "CPI_segment": "convnext-20261029T070405365918Z",
+  "start_utc": "2026-10-29T07:04:24.040739+00:00",
+  "end_utc": "2026-10-29T07:05:45.021249+00:00",
+  "CPI_controller": 401349,
+  "CPI_worker": 401656,
+  "shared_GPU_quality_only": true,
+  "scientific_config_source_unchanged": true,
+  "CPI_status": "INCOMPLETE_OOM",
+  "new_CPI_successes": 32
+}
