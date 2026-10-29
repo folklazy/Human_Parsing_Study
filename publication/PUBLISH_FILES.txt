@@ -89,6 +89,7 @@ Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md
 Human_Parsing_Benchmark/reports/HUMAN_PARSING_PROTOCOL_REVIEW_TH.md
 Human_Parsing_Benchmark/reports/cihp-native-six-20261028T034103254470Z/REPORT_TH.md
 Human_Parsing_Benchmark/reports/convnext-20261029T070405365918Z.md
+Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/ACTUAL_DECODER_PARITY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/D2FP_ROUND_CLOSURE.json
@@ -201,6 +202,7 @@ Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/convnext-20261029T070405365918Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/FIRST_PACKET_CHECK.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/PROCESS.json
@@ -807,6 +809,7 @@ publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-1.
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-4.json
+publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-shared-20261028T181609262813Z.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-validation-20261028T182116250459Z.json

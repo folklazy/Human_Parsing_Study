@@ -297,3 +297,7 @@ FINISHED_COMPLETE; GPU + saved-only CPU workers exited, no next-model launch. Ca
 ## 2026-10-29T21:50:31.233600+07:00 — sapiens08-c4p-20261029T081254180014Z: closure
 
 Sapiens0.8B status COMPLETE, pilot 6/6, canonical 5000/5000, calls 5001, queue 60.3s/execution 16923.5s.
+
+## 2026-10-29T22:10:38.229214+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: ConvNeXt-only manual continuation
+
+Latest user returns to CPI after Sapiens completion. Actual GPU0 empty, no matching live controller/worker, disk451GiB free; canonical04/08 COMPLETE5000. Retain all scientific bindings, OOM history and previous145 successes; require fresh reconciliation before launch/pending declaration. No model forward yet. Existing single-model controller unchanged; shared-quality policy, one explicit attempt, no retry/fallback/R50/other models. Scope record and current report created; next publish prelaunch evidence then detached continuation and first-packet verification.

@@ -1,0 +1,36 @@
+{
+  "work_unit": "cpi-convnext-idle-gpu-20261029T151038229214Z",
+  "base_commit": "8e02da9dc8d8d31c66c251bb806fbba5d66fd00f",
+  "scope": "Explicit ConvNeXt-only manual continuation authorization and post-Sapiens current status; no raw artifacts or scientific changes",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "d3c4ef26f8e089db34969906b292125fc8a8d41585bda6887b45f07ede4500b7",
+      "before_sha256": "639c9447821a7e921104c9d90c4baa456340313e40dba131508c2db3faec4d2f",
+      "bytes": 1581
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "5401337b0c2b792bb78b489859e32c5b72ff38d7f1cb9bcf5f56e4ef6be292fe",
+      "before_sha256": "3c0f55248fddb1bcacb1dc960375968d08cdc0f55381bf97739d74a9fd97bb12",
+      "bytes": 54512
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/AUTHORIZATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/AUTHORIZATION.json",
+      "sha256": "b55a76ceb8a804d2f4c624e148b442506acf772ddbc67bf43135a980d7602349",
+      "before_sha256": null,
+      "bytes": 1330
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "sha256": "d620b93a3f0bc31a94167fbd6b6b6ca7440210767bf1b97e99c40c67db5dd316",
+      "before_sha256": null,
+      "bytes": 1835
+    }
+  ],
+  "launch_source_unchanged": true
+}
