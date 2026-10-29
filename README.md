@@ -2,10 +2,11 @@
 
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
 
-**Current deliverable: four COMPLETE systems (5,000 IDs each), both CPI systems PAUSED — not cancelled.** CPI main scores remain null under STRICT_COMPLETE. No new inference, Sapiens2, color study or training in this reporting work unit.
+**Current work: CIHP–Sapiens C4-P common-view protocol proposal, PROPOSED_NOT_FROZEN.** Native results remain four COMPLETE systems (5,000 IDs each), both CPI systems PAUSED — not cancelled, mainnull under STRICT_COMPLETE. No implementation/inference/pilot/common-view scores in this design work unit.
 
 | Start here | Purpose |
 |---|---|
+| [Common-view protocol proposal](Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) | Recommended four-target operational evaluation, Face proxy limitations, Sapiens route and bounded implementation/pilot plan |
 | [Thai presentation report](Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md) | Canonical results, per-class/person metrics, route differences, image locations and preliminary mapping |
 | [STATUS](Human_Parsing_Benchmark/STATUS.md) / [PLAN](Human_Parsing_Benchmark/PLAN.md) | Current scope and accepted task-order amendment |
 | [Current cohort index](Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json) | Source-bound six-system navigation, completed and paused rows |

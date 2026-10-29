@@ -1,0 +1,46 @@
+{
+  "work_unit": "common-view-proposal-20261029T004437Z",
+  "checked_utc": "2026-10-29T00:52:44.852782+00:00",
+  "status": "PASS_DOCUMENT_SCHEMA_SOURCE_CONSISTENCY_ONLY",
+  "not_execution_acceptance": true,
+  "new_model_inference": false,
+  "common_view_scoring": false,
+  "CPU_evaluator_tests_executed": false,
+  "schema_checks": {
+    "native_CIHP_IDs": 20,
+    "native_Sapiens_IDs": 29,
+    "unique_mapping_rows": 49,
+    "old_numeric_mapping_preserved": true,
+    "roles_names_and_spec_match": true,
+    "all_four_target_IDs_scored": true,
+    "GT_population_binding_count": 5000,
+    "pilot_plan_only_frame_calls": 7,
+    "all_six_pilot_IDs_in_existing_frozen16": true
+  },
+  "checks": {
+    "all_protected_native_source_config_matrix_population_hashes_unchanged": 10,
+    "all_bounded_source_evidence_hashes_still_match": 16,
+    "canonical_compact_metric_files_byte_unchanged": 8,
+    "native_report_result_tables_identical_to_baseline": true,
+    "report_recall_threshold_wording_corrected": true,
+    "report_generator_AST_parse": true,
+    "valid_domain_is_GT_only_and_same_in_spec": "MANUAL_REVIEW_PASS",
+    "expected_case_results": "HAND_DERIVED_REQUIREMENTS_ONLY_NOT_EXECUTED"
+  },
+  "local_links_checked": 84,
+  "broken_local_links": [],
+  "bounded_inspection": {
+    "GT_masks_read": 16,
+    "GT_images_spot_viewed": 2,
+    "saved_packet_field_checks": 4,
+    "canonical_full_population20x20_confusions_checked": 4,
+    "new_common_scores_computed": 0
+  },
+  "limits": [
+    "These checks do not certify a scorer implementation, route correctness onGPU, semantic equivalence, G_sem totals, newmodelmemory or fullcohort completeness",
+    "No fulltestsuite, inference, full rescore, dataset audit or bulkweightrehash"
+  ],
+  "main_report_sha256": "fd70a9ee024a8699feda0920b637567bdf1a67edf4bc6b1924e1947233332f30",
+  "draft_specification_sha256": "3bb30150977ee41e922f2b4ef90a6232702e0dc7ed991cd68b823e5dc11554c6",
+  "projection_csv_sha256": "73312a6c19db3f2900cc04ef8b6c5e5dc9edf21fef1b2e7b2392e578f1ff1ee3"
+}

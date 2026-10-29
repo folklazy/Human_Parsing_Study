@@ -1,0 +1,986 @@
+{
+  "work_unit": "common-view-proposal-20261029T004437Z",
+  "status": "READ_ONLY_DESIGN_EVIDENCE_NOT_EXECUTION_ACCEPTANCE",
+  "created_utc": "2026-10-29T00:45:38.230102+00:00",
+  "base_public_commit": "6fa6d8e2aea67f3cd6ccf5e26aa4078eaac3af3c",
+  "scope": "Design only; no model inference, common-view cohort scoring, model load or source-GT modification",
+  "protected_before": {
+    "Human_Parsing_Benchmark/configs/cihp_native_six.json": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+    "Human_Parsing_Benchmark/scripts/run_cihp_system.py": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+    "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_MAPPING_PROPOSAL.json": "62951d4b60a9704906641f483b395de8d9d8357123b72c3819330fab162664d9",
+    "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_MAPPING_PROPOSAL.csv": "48f3465c93d05065f88c4485da17f1f810dbcafab0e888c54f8e6debf1f3aae7",
+    "Human_Parsing_Benchmark/registry/CIHP_SAPIENS_CLASS_COMPATIBILITY.csv": "112ef1cd40ff40df5d21b1496b1f5315e73967b23cfe618854f3eaa12f10376d",
+    "Human_Parsing_Benchmark/registry/CIHP_SAPIENS_CHECKPOINT_LABEL_BINDINGS.csv": "41be883736b2e22077dfb85f93a6c98ddf413b21e5b05fd70f18e8503cf22d1b",
+    "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+    "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json": "01823952c18bfa5a0bc3e550f2bf79bd539d17943afd98145ab96504e75a78bf"
+  },
+  "sources": [
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_utils.py",
+      "sha256": "6864218890e8aa15a8a6bc5d1ddc6658dd6a591a963936ab38abc18d49f3ba11",
+      "role": "DOME29 named IDs and source-to-target mappings",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": "https://github.com/facebookresearch/sapiens2/blob/7e5bae88456ac418ff0e58e74106c9fe192055d4/sapiens/dense/src/datasets/seg/seg_utils.py"
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/docs/SEG.md",
+      "sha256": "51d6401484256b5c18d1d0a2eea6bd570b509c8848e8cf6048ee40b7b3a0dfc5",
+      "role": "Official29-class declaration and checkpoint zoo",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": "https://github.com/facebookresearch/sapiens2/blob/7e5bae88456ac418ff0e58e74106c9fe192055d4/docs/SEG.md"
+    },
+    {
+      "path": "datasets/CIHP/README.md",
+      "sha256": "5f96e139a7570113b1b102ccf82f52b118726ce9be7d9dc86cbca8ca141bd081",
+      "role": "NativeCIHP named ID order, not an annotation boundary manual",
+      "source_commit": null,
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_shutterstock_dataset.py",
+      "sha256": "cc072a74cac2b9d7d6d9ee2845184de44832405975928e497e46e5348f15ab9f",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_dome_dataset.py",
+      "sha256": "d0ad6f5bcf66f55f2fe9ecfad2ed45d52b289f71b389812131b2a0dce15ea8d0",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_internal_dataset.py",
+      "sha256": "563724d1446bbc7b9ded7586eb940b5979b47741c63d06c45918065dd388fb23",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_base_dataset.py",
+      "sha256": "9ab6e57a2a84e03bd815fe75f3586346993ee45f8fe142c685de4fbfc0186231",
+      "role": "29-class dataset mapping and dropped-source-ID ->255 behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "URL": null
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/tools/vis/vis_seg.py",
+      "sha256": "ec4829a1737998c90d8dfb337c49801da6ee2e595d1b18ae4adfe65af3b51bf9",
+      "role": "Official full-frame image -> interpolate logits -> argmax example",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/transforms/seg_transforms.py",
+      "sha256": "5a3bbff03d31574ec186dcc37a2d456c90a8a321e935ddaf7eb9cf02489d979b",
+      "role": "Exact SegResize interpolation and keep_ratio behavior",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/engine/datasets/data_preprocessors/image_preprocessor.py",
+      "sha256": "0fecebc7ac0cbd9d116251b42d07f59840ce070419726535b3f2d6836999dc4d",
+      "role": "ImagePreprocessor padding default and RGB normalization",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "role": "29-class test pipeline and preprocessor; training warmup/batch are NOT inference instructions",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "path": "Human_Parsing_CCIHP_10_Image_Pilot/scripts/run_sapiens2.py",
+      "sha256": "959be30934fbd4367e2a2d22ea0978413cbc3ee9891ffdf22c34418f815680f3",
+      "role": "Historical full-frame FP32 route, reused as design evidence only; not run",
+      "source_commit": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py",
+      "sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+      "role": "Executed QANet ROI+clip and native-frame association contracts",
+      "source_commit": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py",
+      "sha256": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+      "role": "Frozen native compose, matching and person scoring; not edited",
+      "source_commit": null
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cihp_system.py",
+      "sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+      "role": "Saved confusion/scoring artifacts and timing boundaries",
+      "source_commit": null
+    },
+    {
+      "path": "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py",
+      "sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+      "role": "Frozen YOLO-native prediction-only bbox association",
+      "source_commit": null
+    }
+  ],
+  "web_sources": [
+    {
+      "URL": "https://arxiv.org/html/2604.21681v1",
+      "role": "Sapiens2 paper section5/appendixA3:29-class vocabulary; not a face/neck or apparel annotation manual"
+    },
+    {
+      "URL": "https://arxiv.org/pdf/1808.00157",
+      "role": "PGN/CIHP paper section3.1-3.2:annotation process and semantic categories; no precise neck/dress instruction recovered"
+    },
+    {
+      "URL": "https://github.com/Engineering-Course/CIHP_PGN/tree/0cf1cbe54a44fc86abe2023b0e762df3f9605242",
+      "role": "Official PGN repository master SHA resolved via GitHub API during bounded source inspection"
+    },
+    {
+      "URL": "https://openaccess.thecvf.com/content_ECCV_2018/papers/Ke_Gong_Instance-level_Human_Parsing_ECCV_2018_paper.pdf",
+      "access": "403 via direct fetch; arXiv author paper read instead"
+    }
+  ],
+  "process_check": {
+    "scope": "ps process arguments matching current CIHP/CPI worker/controller names, excluding search process",
+    "active_matching_worker_or_controller_found": false,
+    "limitation": "Point-in-time matching scan, not a general server/GPU-idleness certification"
+  },
+  "source_boundary_limit": "Public named-class lists, loader remappings and paper annotation summary checked; no detailed original Face_Neck/Apparel garment-boundary manual found in this bounded set. Do not infer dataset-wide equivalence from sample masks.",
+  "bounded_GT_scan": {
+    "frame": "existing pre-score16IDs only; no new sampling from model scores",
+    "selection_intent": "find namedDress,upper/lowerfamily and face/torso boundary ambiguities, not favor a model",
+    "stats": [
+      {
+        "image_id": "0021448",
+        "Category_ids_sha256": "3e207c9b37ebaebba5f9dc4d022c19c9a8ebd4bd29e272ad3ff1f3459bbe387f",
+        "shape": [
+          613,
+          500
+        ],
+        "counts": {
+          "0": 255998,
+          "2": 1970,
+          "5": 141,
+          "7": 21200,
+          "9": 21986,
+          "10": 661,
+          "13": 2277,
+          "14": 701,
+          "15": 1566
+        }
+      },
+      {
+        "image_id": "0034387",
+        "Category_ids_sha256": "1b866d2e7887a4ac6b2e02dbdeeb22c3cc03b3b6e1949017213990b4fd12ee13",
+        "shape": [
+          600,
+          450
+        ],
+        "counts": {
+          "0": 139873,
+          "2": 5060,
+          "5": 35968,
+          "9": 50316,
+          "10": 4699,
+          "13": 9186,
+          "14": 12349,
+          "15": 4123,
+          "16": 484,
+          "17": 538,
+          "18": 3735,
+          "19": 3669
+        }
+      },
+      {
+        "image_id": "0013903",
+        "Category_ids_sha256": "31c13e122c0331fa8737e9ebcfcdf136c4ff4a035202518b95e1c0189d568355",
+        "shape": [
+          376,
+          500
+        ],
+        "counts": {
+          "0": 174534,
+          "2": 1926,
+          "5": 3932,
+          "7": 4280,
+          "10": 478,
+          "13": 2102,
+          "14": 151,
+          "15": 597
+        }
+      },
+      {
+        "image_id": "0006909",
+        "Category_ids_sha256": "3c6e251788d9ba623b3ba543ed85558ac2190a93223066133dafae70e9539f1f",
+        "shape": [
+          407,
+          500
+        ],
+        "counts": {
+          "0": 86450,
+          "1": 6092,
+          "2": 5991,
+          "3": 447,
+          "4": 57,
+          "5": 18716,
+          "6": 12870,
+          "7": 22841,
+          "9": 28810,
+          "10": 1641,
+          "11": 1199,
+          "12": 3622,
+          "13": 3634,
+          "14": 4518,
+          "15": 2781,
+          "16": 1505,
+          "17": 1220,
+          "18": 866,
+          "19": 240
+        }
+      },
+      {
+        "image_id": "0019475",
+        "Category_ids_sha256": "2bc81badffdf251244e27a4164bf8ef6c8059b35533f6c44ef7fdb9c4557b082",
+        "shape": [
+          375,
+          500
+        ],
+        "counts": {
+          "0": 134260,
+          "1": 6054,
+          "2": 271,
+          "3": 1140,
+          "5": 12309,
+          "7": 23300,
+          "9": 3976,
+          "10": 603,
+          "13": 1143,
+          "14": 1019,
+          "15": 3425
+        }
+      },
+      {
+        "image_id": "0002416",
+        "Category_ids_sha256": "e9de7bc41bf4827bf92f84a98cc55692ba924b3987b8741fad0727b5b1d980da",
+        "shape": [
+          335,
+          500
+        ],
+        "counts": {
+          "0": 130135,
+          "1": 2173,
+          "2": 559,
+          "3": 470,
+          "5": 398,
+          "7": 18686,
+          "9": 11640,
+          "10": 438,
+          "13": 1234,
+          "14": 62,
+          "15": 70,
+          "16": 37,
+          "18": 667,
+          "19": 931
+        }
+      },
+      {
+        "image_id": "0000822",
+        "Category_ids_sha256": "579f9b81ce34ea3acf6ebed68e4aee2f30d139305bf0c65d644c1b10ac202644",
+        "shape": [
+          375,
+          500
+        ],
+        "counts": {
+          "0": 118195,
+          "2": 5796,
+          "5": 3630,
+          "7": 38099,
+          "9": 17740,
+          "10": 563,
+          "13": 1479,
+          "14": 930,
+          "15": 218,
+          "16": 16,
+          "17": 35,
+          "18": 500,
+          "19": 299
+        }
+      },
+      {
+        "image_id": "0011746",
+        "Category_ids_sha256": "c1786114c71b971d03445a7e8627754b12c4cc463635a1c0d9265f6e2b5b31c9",
+        "shape": [
+          500,
+          334
+        ],
+        "counts": {
+          "0": 113840,
+          "1": 1356,
+          "2": 905,
+          "4": 132,
+          "5": 14507,
+          "7": 9534,
+          "9": 22680,
+          "10": 309,
+          "13": 1245,
+          "14": 621,
+          "15": 498,
+          "18": 667,
+          "19": 706
+        }
+      },
+      {
+        "image_id": "0001538",
+        "Category_ids_sha256": "e4b1a0171b621fa4bf9a6a781e297aee5b30cf2877c6d809b761e6de98f58e54",
+        "shape": [
+          500,
+          500
+        ],
+        "counts": {
+          "0": 62716,
+          "1": 8694,
+          "2": 61144,
+          "5": 43003,
+          "10": 33552,
+          "13": 38328,
+          "15": 2563
+        }
+      },
+      {
+        "image_id": "0031248",
+        "Category_ids_sha256": "d3fb049afa8ccb19a82e32d213a5489140624d0428e7f209a0d2a939dddff4c5",
+        "shape": [
+          750,
+          500
+        ],
+        "counts": {
+          "0": 290386,
+          "2": 1022,
+          "5": 630,
+          "6": 59397,
+          "7": 8395,
+          "9": 5256,
+          "10": 1261,
+          "13": 1952,
+          "14": 2431,
+          "15": 2180,
+          "16": 333,
+          "17": 218,
+          "18": 863,
+          "19": 676
+        }
+      },
+      {
+        "image_id": "0027897",
+        "Category_ids_sha256": "99545c8a9044cdce63ade88aa00c91311c857ac8121fb9fe4d6d0f90bfb9c503",
+        "shape": [
+          300,
+          831
+        ],
+        "counts": {
+          "0": 200507,
+          "2": 5386,
+          "6": 16824,
+          "7": 18835,
+          "10": 834,
+          "13": 3318,
+          "14": 2064,
+          "15": 1532
+        }
+      },
+      {
+        "image_id": "0022835",
+        "Category_ids_sha256": "e3d8abbfb2c812b8507bc0ba67aecb1300d8ad5a0e8471ed6bb87cc1943b3887",
+        "shape": [
+          503,
+          500
+        ],
+        "counts": {
+          "0": 183700,
+          "2": 7146,
+          "5": 20659,
+          "7": 17026,
+          "9": 8700,
+          "10": 575,
+          "13": 9150,
+          "14": 1020,
+          "15": 1124,
+          "18": 1051,
+          "19": 1349
+        }
+      },
+      {
+        "image_id": "0001413",
+        "Category_ids_sha256": "feb478c0f7ba04ea78c5d40f550d2634435fb9bceff6c97513743d49024b8bc7",
+        "shape": [
+          375,
+          500
+        ],
+        "counts": {
+          "0": 146873,
+          "1": 5672,
+          "3": 1855,
+          "4": 850,
+          "7": 28803,
+          "13": 2805,
+          "14": 271,
+          "15": 371
+        }
+      },
+      {
+        "image_id": "0037964",
+        "Category_ids_sha256": "7a6516293aa83f1863ebef6d28b2928d3c977d4db1b7c78183e096c5605c8057",
+        "shape": [
+          300,
+          300
+        ],
+        "counts": {
+          "0": 21459,
+          "2": 16119,
+          "5": 14561,
+          "10": 7388,
+          "13": 25249,
+          "15": 5224
+        }
+      },
+      {
+        "image_id": "0014704",
+        "Category_ids_sha256": "e0e2a8123c1893f78b787ad0c0d7b7ed153afe8389ed9a1abca87a1462e82d27",
+        "shape": [
+          375,
+          500
+        ],
+        "counts": {
+          "0": 85982,
+          "2": 10819,
+          "5": 31130,
+          "8": 9287,
+          "9": 13935,
+          "10": 1564,
+          "11": 1444,
+          "13": 3676,
+          "14": 8204,
+          "15": 6018,
+          "16": 4792,
+          "17": 3583,
+          "18": 4897,
+          "19": 2169
+        }
+      },
+      {
+        "image_id": "0028993",
+        "Category_ids_sha256": "e7f9012a0e83dd11a9a492fbb39aebdb98241cb3e0ea72bebebb46418f822c62",
+        "shape": [
+          332,
+          500
+        ],
+        "counts": {
+          "0": 143184,
+          "2": 975,
+          "5": 684,
+          "6": 617,
+          "7": 6769,
+          "8": 712,
+          "9": 3968,
+          "10": 241,
+          "11": 2791,
+          "13": 1205,
+          "14": 1138,
+          "15": 1364,
+          "16": 102,
+          "17": 680,
+          "18": 934,
+          "19": 636
+        }
+      }
+    ],
+    "selected_visual_inspection": [
+      "0006909",
+      "0001538"
+    ],
+    "observations_scope": "AI spot observations, no independent human annotation review or dataset-wide boundary equivalence"
+  },
+  "observed_points": [
+    {
+      "image_id": "0001538",
+      "xy_zero_based": [
+        130,
+        240
+      ],
+      "Category_id": 13,
+      "visual_region": "face in RGB"
+    },
+    {
+      "image_id": "0001538",
+      "xy_zero_based": [
+        170,
+        310
+      ],
+      "Category_id": 10,
+      "visual_region": "below chin / exposed neck-upperchest in RGB; point does not establish entire neck convention"
+    },
+    {
+      "image_id": "0006909",
+      "xy_zero_based": [
+        310,
+        190
+      ],
+      "Category_id": 6,
+      "visual_region": "dress garment region"
+    },
+    {
+      "image_id": "0006909",
+      "xy_zero_based": [
+        310,
+        290
+      ],
+      "Category_id": 6,
+      "visual_region": "same dress garment lower area"
+    }
+  ],
+  "available_sufficient_statistics": [
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/CONFUSION.npy",
+      "sha256": "e06da774c59c9e1b623505109c0b7dac02050815ed7a38cd9c0921ea5a2aeec9",
+      "shape": [
+        20,
+        20
+      ],
+      "dtype": "int64",
+      "total_valid_pixels": 876659024,
+      "GT_margins_equal_canonical": true,
+      "role": "Full canonicalpopulation20x20globalhist sufficientfor fixedlabelprojection only; not projected/scored in this workunit"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/M2FP_R101_CIHP/CONFUSION.npy",
+      "sha256": "8e3764b5e8ab61248c24567bc5f3f81a63c82342d20d264ae5be20e4013d6ec3",
+      "shape": [
+        20,
+        20
+      ],
+      "dtype": "int64",
+      "total_valid_pixels": 876659024,
+      "GT_margins_equal_canonical": true,
+      "role": "Full canonicalpopulation20x20globalhist sufficientfor fixedlabelprojection only; not projected/scored in this workunit"
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/QANet_CIHP_HRNetW48_512x384/CONFUSION.npy",
+      "sha256": "cdc902d00381824eb4e33d68d01f6b2e4c015486a9920071918f1f9754117c3a",
+      "shape": [
+        20,
+        20
+      ],
+      "dtype": "int64",
+      "total_valid_pixels": 876659024,
+      "GT_margins_equal_canonical": true,
+      "role": "Full canonicalpopulation20x20globalhist sufficientfor fixedlabelprojection only; not projected/scored in this workunit"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "path": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/assembled/validation/RPR_CIHP/CONFUSION.npy",
+      "sha256": "aa9778482b8533b9850b2840c2a4ad2c00ea3aab2befc269385e1cef8850df16",
+      "shape": [
+        20,
+        20
+      ],
+      "dtype": "int64",
+      "total_valid_pixels": 876659024,
+      "GT_margins_equal_canonical": true,
+      "role": "Full canonicalpopulation20x20globalhist sufficientfor fixedlabelprojection only; not projected/scored in this workunit"
+    }
+  ],
+  "saved_packet_fields_checked": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "image_id": "0021448",
+      "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/QANet_CIHP_HRNetW48_512x384/packets/0021448",
+      "fields": {
+        "person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "native_person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "native_person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "raw_native_person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "raw_native_person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_unowned_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        }
+      },
+      "native_score_histogram_shape": [
+        20,
+        20
+      ],
+      "inspection": "Boundedonepacketpermodel; no new scoring/model execution"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "image_id": "0021448",
+      "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/validation/M2FP_R101_CIHP/packets/0021448",
+      "fields": {
+        "person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_person_semantic_masks": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "native_person_extents": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "native_person_scores": {
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_person_semantic_masks": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "raw_native_person_extents": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "raw_native_person_scores": {
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_bboxes_xyxy": {
+          "shape": [
+            7,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_full_frame_semantic_mask": {
+          "shape": [
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        }
+      },
+      "native_score_histogram_shape": [
+        20,
+        20
+      ],
+      "inspection": "Boundedonepacketpermodel; no new scoring/model execution"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "image_id": "0021448",
+      "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/D2FP_R101_CIHP/packets/0021448",
+      "fields": {
+        "person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "native_person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "native_person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "raw_native_person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "raw_native_person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "native_full_frame_semantic_mask": {
+          "shape": [
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        }
+      },
+      "native_score_histogram_shape": [
+        20,
+        20
+      ],
+      "inspection": "Boundedonepacketpermodel; no new scoring/model execution"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "image_id": "0021448",
+      "packet": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/rpr-cihp-shared-20261028T155439603873Z/segments/RPR_CIHP/packets/0021448",
+      "fields": {
+        "person_semantic_masks": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "person_extents": {
+          "shape": [
+            5,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "person_scores": {
+          "shape": [
+            5
+          ],
+          "dtype": "float32"
+        },
+        "bboxes_xyxy": {
+          "shape": [
+            5,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "native_person_semantic_masks": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "native_person_extents": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "native_person_scores": {
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_person_semantic_masks": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "uint8"
+        },
+        "raw_native_person_extents": {
+          "shape": [
+            7,
+            613,
+            500
+          ],
+          "dtype": "bool"
+        },
+        "raw_native_person_scores": {
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        "raw_native_bboxes_xyxy": {
+          "shape": [
+            7,
+            4
+          ],
+          "dtype": "float32"
+        }
+      },
+      "native_score_histogram_shape": [
+        20,
+        20
+      ],
+      "inspection": "Boundedonepacketpermodel; no new scoring/model execution"
+    }
+  ]
+}

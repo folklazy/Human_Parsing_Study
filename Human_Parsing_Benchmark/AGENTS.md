@@ -54,3 +54,7 @@ CPI R50 ispaused,preserve3successfulIDs/twoOOMattempts/mainnull. ExplicitConvNeX
 ## Current user scope — four-model reporting and draft mapping (2026-10-29T01:56:19.221143+07:00)
 
 CPI R50 andConvNeXt-B paused,notexcluded. Preserve3/113successfulIDsandallOOMhistory/mainnull. Userauthorizesfourcompletecanonicalmetricsummary,16frozenimagesfromsavedpackets,preliminaryCIHP↔Sapiensmatrix only. No modelinference/retry/OOMoptimization/Sapiens/color/training/frozen-scientificchanges. Startwithreports/CIHP_FOUR_MODEL_RESULTS_TH.md andSTATUS. Sharedcode/assetsstaywhere theyare;figures/privatebundleexternalGit. Matrixpost-resultsdraftnotacceptedexecutionpolicy.
+
+## Latest user scope — common-view proposal only (2026-10-29T07:51:06.417630+07:00)
+
+Read reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md and STATUS. Userauthorizes source/GT/saved-artifactboundedreview and a PROPOSED_NOT_FROZEN actionableprotocol/CPUacceptance/pilotplan only. No implementation of scorer/execution, inference/pilot/fullcommonscoring/downloads/training/CPIretry. CPIpaused,4nativecompleteoutputsimmutable. Do notread draftpilotcalls or oldconfigflags as executionapproval. Historicalmatrix/bindingspreserved; Faceproxyisnotface-onlyequivalence.

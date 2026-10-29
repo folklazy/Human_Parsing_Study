@@ -1,8 +1,13 @@
 # Human Parsing Benchmark — current status
 
-Updated **2026-10-29T01:56:19.221143+07:00 Bangkok (UTC+07)**
+Updated **2026-10-29T07:51:06.417630+07:00 Bangkok (UTC+07)**
 
-**FOUR_MODEL_PRESENTATION_READY / CPI_PAUSED_NOT_CANCELLED / MAPPING_PROPOSAL**
+**COMMON_VIEW_PROTOCOL_PROPOSED_NOT_FROZEN / FOUR_NATIVE_RESULTS_PRESERVED / CPI_PAUSED_NOT_CANCELLED**
+
+- งานปัจจุบัน: [ข้อเสนอ C4-P และแผนตรวจ implementation](reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) พร้อม [draft spec](protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json)/[49-ID mapping](protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv). วัด CIHP target-output agreement สี่ช่อง; Face_Neck เป็น approximate Face proxy ไม่ strict equivalence; OTHER valid/domain เดียวกัน
+- ข้อเสนอทำหลังผลสี่ระบบ ไม่ preregistered และไม่ใช้คะแนนเลือกmapping; ไม่ freeze/implement/execute จากเอกสารนี้
+- ตรวจsourceที่pin, GT16masks/spot2images, existingpacketfields4 และ canonical20×20confusions4 แบบread-only; ไม่projectconfusionหรือcomputecommonscore. [Evidence](runs/common-view-proposal-20261029T004437Z/EVIDENCE.json), [consistency](runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json)
+- Pilotที่เสนอเท่านั้น: Sapiens2_0.4b,6preselectedVALdiagnosticIDs+≤1TRAINwarmup (≤7calls),ยังไม่อนุมัติ/เปิด; CPUpacket→scorer→reporterexpectedcasesเป็นข้อกำหนด ยังไม่implemented/tested
 
 - [รายงานภาษาไทยสำหรับส่งตรวจและนำเสนอ](reports/CIHP_FOUR_MODEL_RESULTS_TH.md) เป็นcurrentsummary authoritative; [currentcohort](manifests/CIHP_NATIVE_COHORT_INDEX.json)
 - QANet/M2FP/D2FP/RP-R-CNN canonicalCOMPLETE **5,000 IDsตัวละชุด**, nativeGTpersons17,520; metricscopiedexactly,noinference/fullrescore
@@ -17,4 +22,4 @@ Privategalleryจากworkspace root:
 
 Staticviewinstructionsและexactmetrics/provenanceอยู่ในรายงาน ไม่publishdatasetimages/rawpredictions/weightsไปpublicGit
 
-Next: ใช้รายงาน/ชุดภาพนำเสนอและreviewmatrixตามclassdefinition; ตัดสินprojection/domain/eligibilityก่อนคำสั่งประเมินถัดไป CPIพักไว้ ไม่restartจากhistoricalpermissions ไม่มีmodelworkerของรอบนี้ขณะเริ่มreporting
+Next: reviewข้อเสนอหลัก C4-P operational claim และมอบหมาย implementation แยกจาก frozennativecode: totalmapping/fixedGTdomain, independentCPUexpectedcases,materializedG_loc/G_sem,route/export/readiness จากนั้น pilot เฉพาะเมื่อได้รับคำสั่งแยก ไม่เริ่มจากpermissionsเก่า CPIพัก; minimumstrictface/upper-lowerDressยังไม่ได้พิสูจน์

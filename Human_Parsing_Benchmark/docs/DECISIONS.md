@@ -78,3 +78,9 @@ The current user explicitly replaces conflicting previous plan with proposals/CI
 - Accepted: publishreport/tables of4completecanonicalmodels,retainall6rows/CPIpaused-not-cancelled/nullmain,private16prelockedimagesfromsavedpredictions;classdefinitionreview/draftmatrixallowedbeforeCPIcompletion
 - Notacceptedbythisdecision: proposedcommonprojection/FaceNeckequivalence/newmetrics/eligibility/newinference/Sapiens/CCTV/color/training. MatrixstatusPROPOSAL_NOT_ACCEPTED_NOT_EXECUTABLE
 - Evidence/deliverable: [currentThai report](../reports/CIHP_FOUR_MODEL_RESULTS_TH.md),workunit `presentation-four-20261028T184321049969Z`; originalscientificconfig/results/historyimmutable
+
+## COMMON_VIEW_PROTOCOL_PROPOSAL_20261029
+
+- **ACCEPTED_SCOPE_ONLY:** latestuserasksread-onlydefinition/source/savedoutputreview, actionablecommonprotocol+implementation/pilotplan, narrowlycorrectQANetrecallwording,commit/push; noactualinference/pilot/fullcommonviewevaluation/nativeexecutionchange. CPIbothpaused.
+- **PROPOSED_NOT_FROZEN:** C4-P operationaltargetagreement, completeGT/predprojection/OTHERpolicy, Faceproxyclaim, Sapiensfullframe+YOLOmaskownershiproute, commonmetrics/denominators/tiepolicy and boundedpilot. Theseare recommendations,notnewacceptedexecutionpolicy.
+- Source/authority: currentuserscope and [mainproposal](../reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md); [draftspec](../protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json). Nativehistoricalmatrix/results/first-cohortdecisionsnotrewritten; noDIRECT_VERIFIEDupgrade.

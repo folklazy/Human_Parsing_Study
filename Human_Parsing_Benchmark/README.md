@@ -1,4 +1,4 @@
-> **Current deliverable: four completed systems + preliminary mapping; CPI paused.** Read [Thai presentation report](reports/CIHP_FOUR_MODEL_RESULTS_TH.md) → [STATUS](STATUS.md). Native CIHP5,000 per completed system; CPI mainnull, no newinference/Sapiens/color. Older run/preparation notes below are historical where superseded.
+> **Current work: CIHP–Sapiens common-view protocol proposal (PROPOSED_NOT_FROZEN).** Read [ข้อเสนอหลัก/แผนตรวจ implementation](reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) → [STATUS](STATUS.md). [ผล native สี่ระบบ](reports/CIHP_FOUR_MODEL_RESULTS_TH.md) คงเดิม; CPI paused/mainnull. No inference, pilot or common-view scoring authorized in this work unit.
 
 # Human Parsing Benchmark
 

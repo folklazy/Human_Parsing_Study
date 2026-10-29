@@ -71,3 +71,7 @@ UserpausesR50andexplicitlypermitsConvNeXtsharedqualityunderunchangedscientificse
 ## Accepted task-order amendment — reporting four complete before CPI closure (2026-10-29T01:56:19.221143+07:00)
 
 User explicitly pauses CPI R50/ConvNeXt-B, preservesallartifacts/OOMhistory/mainnull, and authorizesreportingfourCOMPLETE systems plus preliminaryclassmatrix now ratherthan waitingforCPI. This doesnotexclude/cancelCPI, alterfrozen native20protocol/config/scorer or authorize newmodelinference. Native4resultsand16frozenIDsuseexistingartifacts only; nativeCIHP↔Sapiensmappingispost-resultsdraft, notaccepted/executable/frozen. NoCPIretry/OOMwork/Sapiens/color/training/CCTV. Currentdeliverable [CIHP_FOUR_MODEL_RESULTS_TH.md](reports/CIHP_FOUR_MODEL_RESULTS_TH.md). Furthercommon-viewscoring needsreviewedclass/domain/eligibilitydecision; nottriggeredbythismatrix.
+
+## 2026-10-29T07:51:06.417630+07:00 — common-view design continuation (proposal only)
+
+[CIHP–Sapiens common-view protocol](reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) เป็นข้อเสนอหลัก C4-P projectedapplicationagreement/4targets กับ CIHP reference โดยเปิดเผยFace_Neck approximation, non-Dress garmentfamilies และ validOTHER;C3sensitivityไม่แทนminimumfour. Draftspec/49-IDprojectionแยกจากnativeconfig;matrix/bindingsเดิมคงhistoricalproposal. Scorer/route/FPFN/domain/persondenominatorsและ≤7-call0.4Bpilotเป็นงานส่งต่อที่ยังไม่authorized/implemented ไม่มีinference/fullcommonscoring/activeexecutionchangeในรอบนี้ Native20results/configsและCPIpausednullคงเดิม ทำหลังเห็นผล4ระบบ ไม่preregisteredหรือVALtuning

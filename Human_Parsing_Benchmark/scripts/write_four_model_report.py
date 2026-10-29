@@ -100,7 +100,7 @@ GTpixel supportรวม **876,659,024 pixels** เท่ากันทุก�
 
 ## 6. สิ่งที่สรุปได้ และสิ่งที่ยังสรุปไม่ได้
 
-**จากข้อมูลจริง:** M2FPมีglobalsemanticIoUและextentF1สูงสุดในสี่ระบบที่ครบ ส่วนQANetมีGT-personsemanticQและrecallสูงกว่าแต่FP7,156ที่threshold0.50เทียบM2FP2,119 จึงเป็นtrade-offจริง ตัวเลขเหล่านี้ไม่บังคับให้สร้างweightedscoreใหม่หรือเลือกoverallwinnerจากความรู้สึก
+**จากข้อมูลจริง:** M2FPมีglobalsemanticIoUและextentF1สูงสุดในสี่ระบบที่ครบ ส่วนQANetมีGT-personsemanticQสูงกว่าที่ทั้งสองthreshold และrecallสูงกว่าที่matchingthreshold0.50; ที่0.75 M2FPมีrecallสูงกว่าเล็กน้อย ขณะที่QANetมีFP7,156ที่threshold0.50เทียบM2FP2,119 จึงเป็นtrade-offจริง ตัวเลขเหล่านี้ไม่บังคับให้สร้างweightedscoreใหม่หรือเลือกoverallwinnerจากความรู้สึก
 
 **คำอธิบายที่เป็นไปได้ ไม่ใช่ผลพิสูจน์สาเหตุ:** routeที่QANetรับYOLOROIและclipด้วยYOLOmaskอาจมีส่วนต่อcoverage/Q/FP; nativeparsersถูกกรองด้วยYOLOassociation ความต่างยังรวมcheckpointtraining/nativeTTA/resolution/threshold/postprocess จึงไม่แยกสาเหตุarchitectureได้
 

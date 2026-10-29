@@ -1,3 +1,7 @@
+# Latest scope — common-view proposal only
+
+Read Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md and STATUS. Currentuserauthorizesboundedsource/GT/savedartifactreview and actionable PROPOSED_NOT_FROZEN C4-P protocol + implementation/pilotplanning only. No scorer/executionimplementation, modelinference, pilot, fullcommonscoring, CPIretry, training/downloads/color/CCTV. Preserveallnativeoutputs/configs andbothpausedCPIhistories/nulls. Proposed7pilotcallsarenotexecutionapproval. Olderoperationalpermissionsbelowarehistorical.
+
 # Latest scope — four-model presentation and preliminary mapping only
 
 Current user pauses CPI R50 and CPI ConvNeXt-B without cancelling either. Preserve3/113successfulIDs and all OOM history, mainnull. Current deliverable: Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md. Canonicalfour systems are COMPLETE5000 each; report inrosterorder, no fullrescore/inference/speedranking. Fixed16sample figures stay private/externalGit. Mappingmatrix is post-results PROPOSAL, not accepted/frozen/executable; no Sapiens/common-view scores. No retry/OOMoptimization/newmodel/training/color/CCTV. Read README→STATUS→PLAN→acceptedtaskorder; older permissions below are historical.

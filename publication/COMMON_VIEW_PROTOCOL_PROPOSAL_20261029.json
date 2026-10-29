@@ -1,0 +1,188 @@
+{
+  "work_unit": "common-view-proposal-20261029T004437Z",
+  "created_utc": "2026-10-29T00:53:16.595641+00:00",
+  "base_commit": "6fa6d8e2aea67f3cd6ccf5e26aa4078eaac3af3c",
+  "remote": "https://github.com/folklazy/Human_Parsing_Study.git",
+  "scope": "Design documentation and non-executable draftspec/labeltable; correction ofrecall threshold wording only, no native metric changes",
+  "status": "REVIEWED_FOR_ROUTINE_PUBLICATION",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "before_sha256": "4a001a0bbf95b81784e8cd3b24ee2f91ddc5529f1f278992eb4283550e9bdff4",
+      "sha256": "3d11d10c91d173ec01d26c3779a53fc2f2a849cff0cd393bb475309c71a7892f",
+      "bytes": 10193
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "before_sha256": "fa24bb49921afb53d2b3dac083422e2b3040948bf66dfbd9188a11ea4751b40a",
+      "sha256": "b818b55f5a915c031337e3473336848b332c6e59bf07790fd14a9436b46aab80",
+      "bytes": 4043
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "before_sha256": "2188cffbaf8535b42a1f4f50ddbd667a14abcdcc62f22584fd8fae21c27f0734",
+      "sha256": "cdc2c74a3ac37a919f627f355d2c63a7e328597061da32726f69149282f8f240",
+      "bytes": 14401
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "before_sha256": "55dc016741a7f6bf605cef5cc3001b1711a6e154e5c3d26b39af2b763b56ac4d",
+      "sha256": "a8880be1e48cc477835b41c797b79659197fe8962386bf509a355c080804a396",
+      "bytes": 40194
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "public_path": "Human_Parsing_Benchmark/AGENTS.md",
+      "before_sha256": "931150d2e9037c8b58b460a86f8195442a5e80fe2f1c74214e022151e8e30ad1",
+      "sha256": "c7eab9034bdba15f3425e0326fd3fb492736ba7625e33cee4452f9f5324fa483",
+      "bytes": 8665
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "public_path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "before_sha256": "8de5b57794ce9419a8b3587043d7dbaf8e50559437e69522f40db64fe87d1dcc",
+      "sha256": "3ba63ca618d24e3884bde08da96e0264d67c192a0268cbe5d64202cf39b9f6be",
+      "bytes": 12950
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md",
+      "before_sha256": "4ea1f86fe11f494915fef9d6a2b59fa5835b6f2738ade2199bed344ef5d4ee62",
+      "sha256": "56276980186ebebf54efeefe1e22ac29e34667049d0f6ce82c72d48bb85e9322",
+      "bytes": 42328
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md",
+      "before_sha256": null,
+      "sha256": "fd70a9ee024a8699feda0920b637567bdf1a67edf4bc6b1924e1947233332f30",
+      "bytes": 66119
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/write_four_model_report.py",
+      "public_path": "Human_Parsing_Benchmark/scripts/write_four_model_report.py",
+      "before_sha256": "320c983cc23bb3b6520fe673c82a333ff9200bee1e9002cf681611a7c3cb4910",
+      "sha256": "91866c6f6725c924f318592411c6691c37d7d61df5d38399537d11584ee86cd6",
+      "bytes": 37751
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json",
+      "public_path": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json",
+      "before_sha256": null,
+      "sha256": "3bb30150977ee41e922f2b4ef90a6232702e0dc7ed991cd68b823e5dc11554c6",
+      "bytes": 10573
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv",
+      "public_path": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv",
+      "before_sha256": null,
+      "sha256": "73312a6c19db3f2900cc04ef8b6c5e5dc9edf21fef1b2e7b2392e578f1ff1ee3",
+      "bytes": 10360
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/EVIDENCE.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/EVIDENCE.json",
+      "before_sha256": null,
+      "sha256": "49cb5f228aac30b4897bba6997f3aaa06f4fca7e3d254b211597e1a5600466c5",
+      "bytes": 28610
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json",
+      "before_sha256": null,
+      "sha256": "6c3dbd15c3be56b6386a8511a78d81f8a29e69e039caa3de470dc8fa1af87d9b",
+      "bytes": 2026
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "README.md",
+      "before_sha256": "ee055911999a9c77a1557548a23577eaee0c7ca15259609c987fdb1c99ccb777",
+      "sha256": "355c0b0610c33d717e06cc0012a2a9e387de3decc32a60c1bf24b83a8e645fec",
+      "bytes": 10665
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "AGENTS.md",
+      "before_sha256": "416bfca62bae7bc32eb42ce48ba9c53aaf3af96c65f2bf0dec69b6438f3ae32b",
+      "sha256": "bb724bba9110a8f04332184ee7c4274627839c176cd33fe83d325132882cfde9",
+      "bytes": 10060
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "STUDY_STATE.json",
+      "before_sha256": "ec0c928c40fcff7f112064fd6d45857e5b2bec09be5ba8693798af27e7e05dc6",
+      "sha256": "c418894db63a94f599ac71fe90c37cf4b0950913f4a906e907f000bc1050efbe",
+      "bytes": 2487
+    },
+    {
+      "source_workspace_relative": null,
+      "public_path": "publication/PUBLISH_FILES.txt",
+      "before_sha256": "95499b29555102e94e22286b84fb1291a8e5f249c4487f8a2aceec37371b44fa",
+      "sha256": "350c30d1c9d9fcf9714d0d6fc4248a4d93caf5000883b6b115bea77d847732ee",
+      "bytes": 81090
+    }
+  ],
+  "self_hash": "Omitted to avoid self-reference; Git identifies this publication record",
+  "redistribution_review": "Only first-party prose, factual label mappings, boundedmetadata/counts/hashrecords and an existing first-party reportgenerator wording correction. Primary source URLs cited; no third-party source code, dataset imagery, weights, bulk predictions or logs added. Existing first-party license unchanged.",
+  "checks": {
+    "explicit_scope_source_public_byte_equal": true,
+    "symlink_largefile_secret_pattern_check": "PASS_WORK_UNIT_FILES_ONLY",
+    "public_local_links_checked": 95,
+    "new_inference": false,
+    "new_execution_scorer_implementation": false,
+    "native_config_source_results_unchanged": true,
+    "canonical_result_tables_unchanged": true,
+    "consistency_receipt": {
+      "work_unit": "common-view-proposal-20261029T004437Z",
+      "checked_utc": "2026-10-29T00:52:44.852782+00:00",
+      "status": "PASS_DOCUMENT_SCHEMA_SOURCE_CONSISTENCY_ONLY",
+      "not_execution_acceptance": true,
+      "new_model_inference": false,
+      "common_view_scoring": false,
+      "CPU_evaluator_tests_executed": false,
+      "schema_checks": {
+        "native_CIHP_IDs": 20,
+        "native_Sapiens_IDs": 29,
+        "unique_mapping_rows": 49,
+        "old_numeric_mapping_preserved": true,
+        "roles_names_and_spec_match": true,
+        "all_four_target_IDs_scored": true,
+        "GT_population_binding_count": 5000,
+        "pilot_plan_only_frame_calls": 7,
+        "all_six_pilot_IDs_in_existing_frozen16": true
+      },
+      "checks": {
+        "all_protected_native_source_config_matrix_population_hashes_unchanged": 10,
+        "all_bounded_source_evidence_hashes_still_match": 16,
+        "canonical_compact_metric_files_byte_unchanged": 8,
+        "native_report_result_tables_identical_to_baseline": true,
+        "report_recall_threshold_wording_corrected": true,
+        "report_generator_AST_parse": true,
+        "valid_domain_is_GT_only_and_same_in_spec": "MANUAL_REVIEW_PASS",
+        "expected_case_results": "HAND_DERIVED_REQUIREMENTS_ONLY_NOT_EXECUTED"
+      },
+      "local_links_checked": 84,
+      "broken_local_links": [],
+      "bounded_inspection": {
+        "GT_masks_read": 16,
+        "GT_images_spot_viewed": 2,
+        "saved_packet_field_checks": 4,
+        "canonical_full_population20x20_confusions_checked": 4,
+        "new_common_scores_computed": 0
+      },
+      "limits": [
+        "These checks do not certify a scorer implementation, route correctness onGPU, semantic equivalence, G_sem totals, newmodelmemory or fullcohort completeness",
+        "No fulltestsuite, inference, full rescore, dataset audit or bulkweightrehash"
+      ],
+      "main_report_sha256": "fd70a9ee024a8699feda0920b637567bdf1a67edf4bc6b1924e1947233332f30",
+      "draft_specification_sha256": "3bb30150977ee41e922f2b4ef90a6232702e0dc7ed991cd68b823e5dc11554c6",
+      "projection_csv_sha256": "73312a6c19db3f2900cc04ef8b6c5e5dc9edf21fef1b2e7b2392e578f1ff1ee3"
+    }
+  },
+  "sync_rule": "Canonical editable workspace-root Human_Parsing_Benchmark and separate public staging; explicit paths only. Do not wholesale sync sources/assets or overwrite native artifacts.",
+  "claim": "Post-results proposal, not preregistered/frozen/executable. No image/data assets or new experiment approval."
+}

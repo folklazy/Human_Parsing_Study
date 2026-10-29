@@ -118,7 +118,7 @@ GTpixel supportรวม **876,659,024 pixels** เท่ากันทุก�
 
 ## 6. สิ่งที่สรุปได้ และสิ่งที่ยังสรุปไม่ได้
 
-**จากข้อมูลจริง:** M2FPมีglobalsemanticIoUและextentF1สูงสุดในสี่ระบบที่ครบ ส่วนQANetมีGT-personsemanticQและrecallสูงกว่าแต่FP7,156ที่threshold0.50เทียบM2FP2,119 จึงเป็นtrade-offจริง ตัวเลขเหล่านี้ไม่บังคับให้สร้างweightedscoreใหม่หรือเลือกoverallwinnerจากความรู้สึก
+**จากข้อมูลจริง:** M2FPมีglobalsemanticIoUและextentF1สูงสุดในสี่ระบบที่ครบ ส่วนQANetมีGT-personsemanticQสูงกว่าที่ทั้งสองthreshold และrecallสูงกว่าที่matchingthreshold0.50; ที่0.75 M2FPมีrecallสูงกว่าเล็กน้อย ขณะที่QANetมีFP7,156ที่threshold0.50เทียบM2FP2,119 จึงเป็นtrade-offจริง ตัวเลขเหล่านี้ไม่บังคับให้สร้างweightedscoreใหม่หรือเลือกoverallwinnerจากความรู้สึก
 
 **คำอธิบายที่เป็นไปได้ ไม่ใช่ผลพิสูจน์สาเหตุ:** routeที่QANetรับYOLOROIและclipด้วยYOLOmaskอาจมีส่วนต่อcoverage/Q/FP; nativeparsersถูกกรองด้วยYOLOassociation ความต่างยังรวมcheckpointtraining/nativeTTA/resolution/threshold/postprocess จึงไม่แยกสาเหตุarchitectureได้
 
@@ -242,3 +242,7 @@ R50: successfulunique3,failedunique1ที่0000018,failedattempts2จากส
 [Provenance](../runs/cihp-native-six-20261028T034103254470Z/presentation-four-20261028T184321049969Z/PROVENANCE.json) เก็บSHAcanonicalcompletion/metrics/ledgers/sourceconfig/sample/renderer;[exactreportdata](../runs/cihp-native-six-20261028T034103254470Z/presentation-four-20261028T184321049969Z/REPORT_DATA.json) เก็บค่าที่นำมาพิมพ์ตาราง ไม่มีตัวเลขจากroundedchat คำสั่งสร้างตาราง/ภาพคือ `python3`ของenvironmentที่มีnumpy/Pillow/SciPyแล้วรัน`scripts/build_four_model_presentation.py`; matrixใช้`scripts/build_cihp_sapiens_matrix.py` ทั้งสองเป็นreport-onlyไม่มีmodelinference แต่อาศัยexternaldatasets/checkpointsmetadata/savedpacketsและpathsในprovenance จึง**ไม่อ้างว่าclonepublicrepoอย่างเดียวreproducebenchmarkหรือเปิดภาพได้ทันที** ไม่rebuildเพียงเพื่อให้ชื่อworkunitเหมือนเดิม เพราะทุกครั้งสร้างfreshartifactdirectory
 
 รูป16ภาพ/64selectedpacketsตรวจhash/geometryครั้งนี้;fullpopulationartifactvalidation/re-scoreใช้หลักฐานเดิมที่ยังตรงกัน ไม่ทำfullrescore/hashweights/datasetauditซ้ำเพื่อจัดเอกสาร รูปและprivatebundleอยู่externalGit;เฉพาะfirstpartycode,plans/proposals,CSV/JSONsmall/provenance/reportที่แจกจ่ายได้ถูกpublish
+
+## ข้อเสนอ common view ฉบับดำเนินการต่อ (29 ตุลาคม2026)
+
+อ่าน [CIHP–Sapiens C4-P protocol proposal](CIHP_SAPIENS_COMMON_VIEW_PROTOCOL_TH.md) สำหรับนิยามสี่target, OTHER/VOID, Face_Neck limitation, Sapiens routeและboundedpilotplan สถานะPROPOSED_NOT_FROZEN หลังเห็นผลสี่ระบบ ไม่มีcommonviewscore/inferenceใหม่ ตารางและcanonicalผลnativeข้างต้นไม่เปลี่ยน PrivateZIPเดิมเป็นsnapshotก่อนการชี้แจงถ้อยคำrecallครั้งนี้ ให้ใช้รายงานในGitrevisionปัจจุบันสำหรับข้อความที่แก้แล้ว
