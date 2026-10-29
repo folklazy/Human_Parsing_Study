@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-29T15:14:39.984063+00:00",
+  "PID": 609566,
+  "SID": 609566,
+  "PGID": 609566,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+    "--operator-record",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z"
+  ],
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER.log",
+  "role": "READ_ONLY_TERMINAL_REPORT_OBSERVER",
+  "no_inference_or_retry": true
+}

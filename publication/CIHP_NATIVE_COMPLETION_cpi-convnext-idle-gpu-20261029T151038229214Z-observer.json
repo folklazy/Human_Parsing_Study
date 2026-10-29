@@ -1,0 +1,15 @@
+{
+  "work_unit": "cpi-convnext-idle-gpu-20261029T151038229214Z-observer",
+  "base_commit": "8a25a5ac0ac002a23c99f30fceb046117c466f7f",
+  "scope": "Read-only detached terminal observer process provenance; no inference change",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER_PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER_PROCESS.json",
+      "sha256": "ceb09c0fed7d501117707e292af9afb0081cb1ae559a3ec904e17560a84137a8",
+      "before_sha256": null,
+      "bytes": 623
+    }
+  ],
+  "launch_source_unchanged": true
+}

@@ -894,6 +894,11 @@
       "bytes": 375
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FINALIZER_PROCESS.json",
+      "bytes": 623,
+      "sha256": "ceb09c0fed7d501117707e292af9afb0081cb1ae559a3ec904e17560a84137a8"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/FIRST_PACKET_CHECK.json",
       "sha256": "40002d9ffc57f9f3bb2248f6e61119e25b423068f995b80c7450405fe1216d28",
       "bytes": 1463
@@ -3864,6 +3869,11 @@
       "sha256": "658069fc9680d2268a666643bc1ff1fc24032a502d985478350a9bf9e44dfdcb"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z-observer.json",
+      "bytes": 680,
+      "sha256": "accf0743ad7273e7157f8af602c1104eb30bd3aaf5a43c7869b776f2663e9b54"
+    },
+    {
       "path": "publication/CIHP_NATIVE_COMPLETION_cpi-convnext-idle-gpu-20261029T151038229214Z.json",
       "bytes": 1765,
       "sha256": "f5c72370a8b68aeea24b961072d0af5a536a8aae3137af18b70ce5c86035d55d"
@@ -5529,6 +5539,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T15:14:29.526747+00:00",
+  "updated_utc": "2026-10-29T15:14:51.156663+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }
