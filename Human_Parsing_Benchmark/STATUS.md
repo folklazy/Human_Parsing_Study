@@ -1,9 +1,9 @@
 # Human Parsing Benchmark — current status
 
-**CPI_MEMORY_REPAIR_DIAGNOSTIC_PASS** · 2026-10-29T22:48:52.969845+07:00 (Asia/Bangkok)
+**CPI_CONVNEXT_CHUNKED_PREPARING** · 2026-10-29T23:03:27.964412+07:00 (Asia/Bangkok)
 
-[Repair report and commands](reports/CPI_MEMORY_REPAIR_TH.md). Run `cpi-memory-repair-20261029T153956552075Z`: CPU4/control2cases PASS; GPU3calls complete (TRAIN0000930,VAL0003218/0001641),failed0/OOM0. Previously failed0003218 passed; saved0001641 NPZ/allarrays/scores exactly match. Diagnostic only; fullvalidation not launched; worker exited.
+User authorizes repaired ConvNeXt-only continuation. [Current attempt](reports/cpi-convnext-chunked-20261029T160327964412Z.md) / [authorization](runs/cpi-convnext-chunked-20261029T160327964412Z/AUTHORIZATION.json) / [repair evidence](reports/CPI_MEMORY_REPAIR_TH.md). Reconcile canonical337 and remaining4663 before launch; no diagnostic prediction reuse. New person-chunk restoration preserves all scientific settings; independently bound implementation, same STRICT_COMPLETE. No worker launched yet at this record timestamp.
 
-Canonical ConvNeXt native20 remains337/5000/primarynull; history preserved. New implementation/CLI separately bound; old CLI does not installpatch. R50paused/GPUrepairuntested; Sapiens0.4B/0.8B COMPLETE5000; four native/common results unchanged.
+GPU0 empty/free14912MiB, no CPI/Sapiens/controller found, disk451GiB free at preflight. Existing24h/80GiB/free50GiB guards and stop-on-error/noautoretry/fallback retained. R50paused; Sapiens0.4B/0.8B COMPLETE5000 and native/common results unchanged.
 
-Next: repaired single-model continuation when launched, reuse verified337/remaining4663, firstcanonicalpacket check and cumulative resource accounting. Noautomaticretry/nextmodel/1B/training/color/CCTV.
+Next: launch detached repaired single-model controller, verify first new canonical packet, then let it run/stop automatically. No next model, training/color/CCTV.

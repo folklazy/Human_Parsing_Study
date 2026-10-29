@@ -31,12 +31,15 @@ def write(path, data):
 
 
 def alive(process):
+    script = process.get('controller_script', 'run_cpi_continuation.py')
+    if script not in ['run_cpi_continuation.py', 'run_cpi_chunked_continuation.py']:
+        raise ValueError('Unexpected CPI controller identity')
     try:
         node = Path('/proc') / str(process['PID'])
         ticks = int((node / 'stat').read_text().rsplit(')', 1)[1].split()[19])
         args = (node / 'cmdline').read_bytes().split(b'\0')
         return ticks == process['birth_ticks'] and any(
-            os.fsdecode(v).endswith('/run_cpi_continuation.py') for v in args if v)
+            Path(os.fsdecode(v)).name == script for v in args if v)
     except FileNotFoundError:
         return False
 

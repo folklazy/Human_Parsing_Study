@@ -1,0 +1,32 @@
+{
+  "work_unit": "cpi-convnext-chunked-20261029T160327964412Z",
+  "created_utc": "2026-10-29T16:03:48.100541+00:00",
+  "scope": "Explicit repaired ConvNeXt launch authorization and report-observer identity support only. No scientific config/scorer/third-party changes or raw artifacts.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/scripts/finalize_cpi_manual_attempt.py",
+      "sha256": "db5447e5005503afbe48369f3d08f194d2c489802e02626b1517cdf20d8528e3",
+      "bytes": 8908
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "df71b6f1a9be2c3bef47517de6514ef00ea7291e8f1727efd5012c02e0cb8aff",
+      "bytes": 1075
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "a515114264900c420e4b64fd6dea7d087f43d325c8318b4826facdf33c6ab8be",
+      "bytes": 58422
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/AUTHORIZATION.json",
+      "sha256": "36fc5baea7deb7e651f87617261e2fc045e5a79a56c98a3e2f1a369121e944ad",
+      "bytes": 1488
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-convnext-chunked-20261029T160327964412Z.md",
+      "sha256": "a349e65e807cd57cce8bd77bd6c88b6c63c77d70938c1e2007c36bcca45a2239",
+      "bytes": 1521
+    }
+  ]
+}

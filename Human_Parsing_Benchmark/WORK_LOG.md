@@ -321,3 +321,7 @@ HEAD31607f8/mainclean; GPUempty/noactiveCPI/Sapiens; sourcefrozenunchanged. Nati
 ## 2026-10-29T22:48:52.969845+07:00 — cpi-memory-repair-20261029T153956552075Z: GPU repair closure
 
 Launch1bcea01/PID622542 DIAGNOSTIC_PASS,3calls(1TRAIN+2VAL),0fail/OOM/retry. Actual0003218 65×20×100×148: bulkstridegrid4.587GiB→chunk72.27MiB; completedpeakallocated9751.11/reserved11726MiB. Known0001641 ALLarrays/NPZ/SHA andscoreJSONboththresholdsexacttooldcanonical. GPUfixture/actualprefix2labelsPASS. Protectedsource/config16hashesunchanged. SeparateConvNeXt-onlypatchedCLI CPU2controlsPASS; nofullcontrollerGPUrun/fullrescore. Newimplementationfingerprints/dependencies/resourceclockinclude diagnostic; oldsource/config unchanged. Canonicalstill337/mainnull/R50paused/Sapiensuntouched. Nextpublish/reportverificationthenstop.
+
+## 2026-10-29T23:03:27.964412+07:00 — cpi-convnext-chunked-20261029T160327964412Z: repaired continuation authorization/preflight
+
+User saysเริ่มทำเลย after repairPASS; scopeConvNeXt-only/nativeCIHP5000, reuseverified337/pending4663,no diagnostic reuse. ActualGPU0empty/noactiveCPI/Sapiens/disk451GiB/publicHEADbcecb52clean. Nativeconfig/source/scorer remainunchanged; boundedimplementationrevision installedbyseparatewrapper. Adapted independentterminalobserver PIDidentity to accept exact newcontrollername+birthticks, no inference/scoringchanges. Nextpublishprelaunchthen detachedcontrolledcontinuation/firstcanonicalpacketcheck; noautoretry/nextmodel.
