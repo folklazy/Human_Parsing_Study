@@ -149,12 +149,14 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-sha
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/PROGRESS_VIEWER_VERIFICATION.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/BATCH_COMPLETION.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/COMPLETION.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/METRICS.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/EXTERNAL_CPI_CONCURRENCY.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/FIRST_PACKET_CHECK.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/FREEZE.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/GALLERY_INDEX.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/GALLERY_RECONCILIATION.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/M2FP_R101_CIHP/COMPLETION.json
@@ -168,6 +170,8 @@ Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RESOURCE_BUD
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REUSE_COMPATIBILITY.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/COMPLETION.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/METRICS.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/COMPLETION.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/METRICS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_LOCATIONS.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/ARTIFACT_VERIFICATION.json
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z-binary-cache-fix/CPU_ACCEPTANCE.json
@@ -797,6 +801,7 @@ publication/CIHP_CONTINUATION_LAUNCH_20261028.json
 publication/CIHP_CONTROLLED_CONTINUATION_READY_20261028.json
 publication/CIHP_INTAKE_20261028T030159730335Z.json
 publication/CIHP_NATIVE_COMPLETION_20261028T034103254470Z.json
+publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-1.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json

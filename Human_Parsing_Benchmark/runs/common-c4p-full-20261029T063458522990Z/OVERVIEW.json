@@ -58,14 +58,14 @@
   {
     "run_id": "common-c4p-full-20261029T063458522990Z",
     "model_id": "Sapiens2_0.4b",
-    "status": "INFERENCE",
-    "complete": 1138,
+    "status": "COMPLETE",
+    "complete": 5000,
     "expected": 5000,
     "failed": 0,
     "invalid": 0,
-    "missing": 3862,
-    "mIoU4": null,
-    "C3_global": null,
+    "missing": 0,
+    "mIoU4": 0.7582749250772065,
+    "C3_global": 0.7703815667266753,
     "resource_policy": "SHARED_GPU_QUALITY_ONLY",
     "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP"
   }

@@ -1,0 +1,92 @@
+{
+  "work_unit": "common-c4p-full-20261029T063458522990Z-closure",
+  "base_commit": "19a05b066b1dd68c301a1b1f8cce50b49413b88a",
+  "scope": "Approved full C4-P compact results/provenance only, no raw data/images",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/COMPLETION.json",
+      "sha256": "4f9659c6d9b28c94170d0feeef0694d75d41ae5078c0c20b5c1c29149714bbba",
+      "before_sha256": null,
+      "bytes": 821
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/METRICS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/METRICS.json",
+      "sha256": "150ea776cd4c0cd345a2383201ad307875945cc95ed81403717ad03b4d259842",
+      "before_sha256": null,
+      "bytes": 11311
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv",
+      "sha256": "691c6aee5c71735fcc400caf8d2c47e292e4f8e080ee4e6eaaaa52760e1f5235",
+      "before_sha256": "357d916deed9874993a65fd23e9a59b0454dfd8eda80418cdabcf45ba7c0a127",
+      "bytes": 952
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PER_TARGET.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PER_TARGET.csv",
+      "sha256": "ea49b6f3ee719154de0447cfec6a7ef42b48819446db7f76f9b6a932f65b8ecc",
+      "before_sha256": "0733b11e9f7dfc88f3e7bbc5065b20e39c7524debacbee5de3f726d94d5d7a86",
+      "bytes": 2560
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PERSON_METRICS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PERSON_METRICS.csv",
+      "sha256": "e6249ea5530ec0fc4429fd253d2e131d7ed88c40c6c96614b7446e59b3af52f8",
+      "before_sha256": "45bceefde76cd6023791043a904fa0fa457e87c6889bc1ab2688af54c5d62981",
+      "bytes": 2527
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json",
+      "sha256": "f3c5f6dfa640814d5307c4341fc34f21c7e3793fcec76fa072f55a96121a4a6c",
+      "before_sha256": "a9acb5722ad23333afff3e4e8c20f329e8ad6fa035167a6dc5360501068baf2c",
+      "bytes": 1927
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
+      "sha256": "0a376035f5271aee1052ded4fbeacf79143227539f4224511b2e0a3e4b5d40f3",
+      "before_sha256": "36141929d1262348d84e8cd5e36d4ef08780d0ccb32378dd633bab23f406cf38",
+      "bytes": 7215
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md",
+      "sha256": "1fc4d99aa43f1fc9ba0db94d4b8f5460149f41bc3c696dec9296eb6b911f084c",
+      "before_sha256": "dfa4995ec5743e97d2f997581fd3702aca96e34152f5d5e0d2e2a223b7f2f96a",
+      "bytes": 6956
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/GALLERY_INDEX.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/GALLERY_INDEX.json",
+      "sha256": "bcc7936009dcb092800863a598a691a8484581bb1e332f7ddfb888023c3bfda5",
+      "before_sha256": null,
+      "bytes": 581
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "639c9447821a7e921104c9d90c4baa456340313e40dba131508c2db3faec4d2f",
+      "before_sha256": "94e8f2ae7ba5a4c2beea8cc7a400e6948b7348557cca81e8f7cb51b693197a7b",
+      "bytes": 498
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "ebfa59fefea1c851cbf3eb310e1375388eab971e497bfa09055ba665f18439cc",
+      "before_sha256": "1a097a5b887374bacbbfc05f2e94f91dabb1a0d0264c464853f46c50966ce8ea",
+      "bytes": 53630
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/BATCH_COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/BATCH_COMPLETION.json",
+      "sha256": "553d5c28943c74083a99482441966706a92727cd41ddca80d2f689948fc4db2c",
+      "before_sha256": null,
+      "bytes": 1705
+    }
+  ],
+  "launch_source_unchanged": true
+}

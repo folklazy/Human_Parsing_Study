@@ -1,0 +1,24 @@
+{
+  "fixed_sample": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json",
+  "gallery": "Human_Parsing_Benchmark/outputs/common_view/common-c4p-full-20261029T063458522990Z/gallery/index.html",
+  "manifest_sha256": "4216412fc7ebf984bbdcee1495ad65d9d9ee7efca54c47578bed218b1ac279db",
+  "IDs": [
+    "0021448",
+    "0034387",
+    "0013903",
+    "0006909",
+    "0019475",
+    "0002416",
+    "0000822",
+    "0011746",
+    "0001538",
+    "0031248",
+    "0027897",
+    "0022835",
+    "0001413",
+    "0037964",
+    "0014704",
+    "0028993"
+  ],
+  "images_public": false
+}
