@@ -1,0 +1,44 @@
+{
+  "status": "PASS_FIRST_NEW_PACKET",
+  "checked_utc": "2026-10-29T06:43:06.531451+00:00",
+  "image_id": "0000001",
+  "packet": "Human_Parsing_Benchmark/outputs/common_view/common-c4p-full-20261029T063458522990Z/models/Sapiens2_0.4b/packets/0000001",
+  "packet_sha256": "a33109b2d322fa2081a046764b87531d3114e31b5d170eeff788be178f5e70a1",
+  "atomic_COMMIT_readback": true,
+  "native29_integer_original_geometry": true,
+  "YOLO_ownership_relation": true,
+  "saved_mask_scoring": true,
+  "score_sha256": "0d8c6a7c8c1aa462508578b2e3b34f1529a011762ba1b8f60cc24f2692890b73",
+  "gpu_worker_PID": 380414,
+  "controller_PID": 380379,
+  "SID": 380379,
+  "controller_reparented_to_PID1": true,
+  "reused": 6,
+  "pending_at_freeze": 4994,
+  "observed_complete": 45,
+  "observed_new_VAL_calls": 40,
+  "warmup": "PASS",
+  "CPU_states": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "status": "SCORING",
+      "complete": 565,
+      "pid": 381824
+    },
+    "M2FP_R101_CIHP": {
+      "status": "PENDING",
+      "complete": 0,
+      "pid": null
+    },
+    "D2FP_R101_CIHP": {
+      "status": "PENDING",
+      "complete": 0,
+      "pid": null
+    },
+    "RPR_CIHP": {
+      "status": "PENDING",
+      "complete": 0,
+      "pid": null
+    }
+  },
+  "launch_commit": "b64eeb98128f9178ac5556d302c1efd8e92dad64"
+}

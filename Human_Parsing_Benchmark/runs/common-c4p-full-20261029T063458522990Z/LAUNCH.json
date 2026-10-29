@@ -1,0 +1,43 @@
+{
+  "run_id": "common-c4p-full-20261029T063458522990Z",
+  "status": "RUNNING",
+  "start_utc": "2026-10-29T06:40:55.265613+00:00",
+  "controller_PID": 380379,
+  "PGID": 380379,
+  "SID": 380379,
+  "launch_commit": "b64eeb98128f9178ac5556d302c1efd8e92dad64",
+  "config_sha256": "3335a8ff86ba8f5ffef5a24d5a65f382562f8fa24996c4dee811606520dccd9e",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "workers": {
+    "gpu": {
+      "PID": 380414,
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+        "-u",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_common_full.py",
+        "--config",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json",
+        "--worker",
+        "gpu"
+      ],
+      "log": "Human_Parsing_Benchmark/outputs/common_view/common-c4p-full-20261029T063458522990Z/gpu.log"
+    },
+    "cpu": {
+      "PID": 381824,
+      "command": [
+        "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+        "-u",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_common_full.py",
+        "--config",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json",
+        "--worker",
+        "cpu"
+      ],
+      "log": "Human_Parsing_Benchmark/outputs/common_view/common-c4p-full-20261029T063458522990Z/cpu.log"
+    }
+  },
+  "queue_stopped": false,
+  "workers_status": {
+    "gpu": null
+  }
+}

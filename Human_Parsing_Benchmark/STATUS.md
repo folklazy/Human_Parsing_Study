@@ -2,7 +2,7 @@
 
 Updated 2026-10-29T13:37:34.226601+07:00 Bangkok UTC+07
 
-**COMMON_C4P_FULL_USER_AUTHORIZED_FROZEN / LAUNCH_PENDING**
+**COMMON_C4P_FULL_RUNNING / FIRST_NEW_PACKET_PASS**
 
 [Full report and five-system status](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md) · [full config](configs/cihp_sapiens_c4p_full.json) · [freeze](runs/common-c4p-full-20261029T063458522990Z/FREEZE.json)
 
@@ -19,4 +19,6 @@ Run `common-c4p-full-20261029T063458522990Z`. New artifacts `Human_Parsing_Bench
 .venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/common_full_progress.py --watch
 ```
 
-Next: commit/pushfreeze,detachedcontroller,verifyfirstnewpacketthenreturn. One GPU worker plus one sequential saved-only CPU process after first new packet; per-system STRICT_COMPLETE, no automatic next model.
+Launch 2026-10-29T13:43:06.533541+07:00 check: controllerPID380379/SID380379,GPUworkerPID380414;launchcommit`b64eeb98128f9178ac5556d302c1efd8e92dad64`. Firstnewpacket0000001COMMIT/native29/geometry/ownership/saved-scorePASS. ObservedGPUcomplete45/5000(reused6);CPUstates recorded in [first packet check](runs/common-c4p-full-20261029T063458522990Z/FIRST_PACKET_CHECK.json).
+
+Next: detached batch continues without chat; use progress viewer/state for current counts. One GPU worker plus one sequential saved-only CPU process. No continuous Codex polling, no protocol changes, no next model/retry. Automatic Thai report and per-system Git updates then terminal closure; primary remains null per incomplete system.

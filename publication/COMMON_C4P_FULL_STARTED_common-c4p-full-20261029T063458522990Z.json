@@ -1,0 +1,68 @@
+{
+  "work_unit": "common-c4p-full-20261029T063458522990Z",
+  "phase": "POST_LAUNCH_FIRST_NEW_PACKET_VERIFIED_NOT_COMPLETION",
+  "created_utc": "2026-10-29T06:44:45.101339+00:00",
+  "actual_launch_commit": "b64eeb98128f9178ac5556d302c1efd8e92dad64",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "691ad8ac8c7cde8d409ab4665a52faeff90fb758a44c5ce70844b5671904e9c0",
+      "before_sha256": "0f75839dd9c5332aa4cd1749f1c65f8fa673583005f10494ebe9dc9b6deeb60e",
+      "bytes": 2479
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "9850c8345cbad701ab6f4d07a80fd94fe28aa73a98425641bc1df38e72ab2feb",
+      "before_sha256": "3fecc72b64cd1a071540696ce925995ab36515d71bb59f83bb8faa53c858e350",
+      "bytes": 48155
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
+      "sha256": "0ddc4d8593bec235644a53a5fb64461b96e769286796685ec7255bf6c80ec13c",
+      "before_sha256": "bbfb5c0991c6e47156a92807ecc25939ecea943ef8ac703d9dfabf47e7250016",
+      "bytes": 7180
+    },
+    {
+      "path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv",
+      "sha256": "be5201922744cf3faae6b833066fa32d3485da2b65bd462273e154908d5512f5",
+      "before_sha256": "5df231e2a69681abba2aa7ecbbe0655e53606688372ca77ea9d6e72bc06cebe4",
+      "bytes": 701
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/LAUNCH.json",
+      "sha256": "417b6fce6f8dab92890cefb38c209bed84d182448e7058b9e91dd0f0cae217b1",
+      "before_sha256": null,
+      "bytes": 1611
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/PROCESS.json",
+      "sha256": "4d883a4bfc57f9cd43cfa150ecdadf34ac3c3141f9abb26b10dedb7896c55103",
+      "before_sha256": null,
+      "bytes": 767
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/FIRST_PACKET_CHECK.json",
+      "sha256": "12b50c7ecea48bf79d496d69d36f916a9559fa803302028890b7c27250337a0d",
+      "before_sha256": null,
+      "bytes": 1292
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json",
+      "sha256": "ac409d60ad5e95185f456bf5c9364955ecde54567b5c85d17b6dc8635e101c10",
+      "before_sha256": "3d65d847a5024404f50386a30f1b3d85eaa9fa8bc73b394e2af6a664f7924cf3",
+      "bytes": 1722
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md",
+      "sha256": "804b602b740ec54935dc88b8d220acd3f7bedd959eefaa1a339662e132b4af94",
+      "before_sha256": "4ae38aedb5d33ddae4e63370280fed0fc179f29f7c7c2cd65a7986b54871a8b2",
+      "bytes": 6921
+    }
+  ],
+  "checks": {
+    "native_source_config_results_unchanged": true,
+    "first_packet": "PASS",
+    "raw_assets_added": false,
+    "full_completion": "NOT_YET"
+  }
+}

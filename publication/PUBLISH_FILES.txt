@@ -144,9 +144,12 @@ Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-sha
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/FIRST_PACKET_CHECK.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/FREEZE.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/GALLERY_RECONCILIATION.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json
+Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/PROCESS.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RESOURCE_BUDGET.json
 Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REUSE_COMPATIBILITY.json
@@ -769,6 +772,7 @@ publication/CIHP_SIX_LAUNCH_BINDINGS_20261028T034103254470Z.json
 publication/CIHP_SIX_READINESS_20261028T034103254470Z.json
 publication/CLEAN_CHECKOUT_VALIDATION.json
 publication/COMMON_C4P_FULL_LAUNCH_common-c4p-full-20261029T063458522990Z.json
+publication/COMMON_C4P_FULL_STARTED_common-c4p-full-20261029T063458522990Z.json
 publication/COMMON_VIEW_BINARY_CACHE_FIX_20261029.json
 publication/COMMON_VIEW_IMPLEMENTATION_PILOT_20261029.json
 publication/COMMON_VIEW_PILOT_CLOSURE_20261029.json

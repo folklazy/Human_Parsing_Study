@@ -1,0 +1,17 @@
+{
+  "run_id": "common-c4p-full-20261029T063458522990Z",
+  "launch_utc": "2026-10-29T06:40:54.705929+00:00",
+  "controller_PID": 380379,
+  "PGID": 380379,
+  "SID": 380379,
+  "launch_commit": "b64eeb98128f9178ac5556d302c1efd8e92dad64",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_common_full.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json"
+  ],
+  "log": "Human_Parsing_Benchmark/outputs/common_view/common-c4p-full-20261029T063458522990Z/controller.log",
+  "detached_mechanism": "start_new_session=True;stdinDEVNULL;stdout/stderrfile;noTTY"
+}
