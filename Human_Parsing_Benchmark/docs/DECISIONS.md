@@ -96,3 +96,7 @@ Parent common-c4p-pilot-20261029T010410394659Z strictloadPASS then SOURCE_BINDIN
 ## 2026-10-29T08:45:10.351455+07:00 — scoped common pilot closed; budget consumed
 
 Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwarmup+6specifiedVAL=7calls,6complete0failed/invalid/noOOM/fallback/retry. Parentsetupinvalid0forwardcallsretained;losslessbinarycacheconversionfixedwithoutscientificchange. CPU23/saved4×1/cache7PASS,GT-onlyG_loc17520/G_sem_C417454,6savedmaskrescore/atomiccontract/QANetextentparityPASS. Nativefrozen18hashes/source/resultsunchanged;CPIpaused. [Closure](../reports/CIHP_SAPIENS_04B_PILOT_TH.md). Noautomaticrestart/othermodel/full5,000;fullqualityproposalpossiblebutrequiresseparateacceptedlaunchconfig/approval. Oldpilotconfigflagsdescribetheconsumedauthorization,notnewpermission.
+
+## 2026-10-29T22:50:05.630552+07:00 — CPI person-chunk restoration engineering amendment
+
+Status: IMPLEMENTED_AND_VERIFIED_BOUNDED_DIAGNOSTIC; not a full benchmark launch/freeze. Authority: current user asks to fix actualOOM, with previous scientificsettings retained. RevisionCPI_PERSON_CHUNK_RESTORATION_1 processes independent candidate axis oneatime; no class/input/precision/threshold changes. CPU4+controls2/GPU3calls PASS, knownpacket exactregression. Nativeprotocol/results unchanged; explicitpatchedimplementation bindings/reusecompatibility/resources apply to any later manualcontinuation. R50 has no GPU repair evidence. [Report](../reports/CPI_MEMORY_REPAIR_TH.md).

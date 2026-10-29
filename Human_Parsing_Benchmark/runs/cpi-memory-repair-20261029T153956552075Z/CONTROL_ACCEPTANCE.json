@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "cases": 2,
+  "command": "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v",
+  "requirements": [
+    "Implementation identity after base identity/before packet commit; patch before warmup; stop-on-error retained",
+    "Diagnostic/worker execution clocks counted exactly once"
+  ],
+  "wrapper_full_GPU_execution": "NOT_RUN",
+  "scope": "CPU controls only"
+}

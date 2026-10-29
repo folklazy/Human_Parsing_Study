@@ -105,3 +105,7 @@ Run `sapiens08-c4p-20261029T081254180014Z`. User authorizes `Sapiens2_0.8b` on o
 ## 2026-10-29T15:39:56.552075+00:00 — CPI memory repair, bounded implementation check
 
 LatestuserrequestsfixOOMafteridleGPUattempt. Implementmodel-localperson-chunkrestorationrevision1, keepfrozenCPIconfig/source/results. CPU4oracles/anchorchecked;≤3diagnosticcallsTRAIN0000930→VAL0003218→VAL0001641, oneattempt/noautoretry. RequireGPUtoy/nativeprefixequivalence, packet/geometry/nativeIDs/scorercheck andexactoldpacketregression. [Currentrepairreport](reports/CPI_MEMORY_REPAIR_TH.md). No fullcohortrestart inthisunit; futurecontinuationmustbindnewimplementationandcountdiagnosticresources.
+
+### 2026-10-29T22:50:05.630552+07:00 — bounded memory-repair verification complete
+
+DIAGNOSTIC_PASS: CPU4/GPUfixture/nativeprefix checks plus3actualcalls(TRAIN0000930,VAL0003218,VAL0001641) passed; known0001641 packet/allarrays/scores exactly match original. RepairedConvNeXt continuation prepared with2CPUcontrolchecks, implementation fingerprint/dependency/diagnosticresource bindings. Nofullrunlaunched; firstcanonicalpatchedpacket/exact5000completion remain future checks. [Currentrepairreport](reports/CPI_MEMORY_REPAIR_TH.md).

@@ -223,8 +223,11 @@ Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/PROCES
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SEGMENT_LINK.json
 Human_Parsing_Benchmark/runs/cpi-convnext-operator-20261029T065934808724Z/SOURCE_AMENDMENT.json
 Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CONTROL_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/DIAGNOSTIC_CONFIG.json
+Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNOSTIC.json
+Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/PROCESS.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -267,6 +270,7 @@ Human_Parsing_Benchmark/scripts/run_cihp_segment.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
 Human_Parsing_Benchmark/scripts/run_common_full.py
 Human_Parsing_Benchmark/scripts/run_common_sapiens_pilot.py
+Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py
 Human_Parsing_Benchmark/scripts/run_cpi_continuation.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_shared_segment.py
@@ -296,6 +300,7 @@ Human_Parsing_Benchmark/tests/test_cihp_continuation.py
 Human_Parsing_Benchmark/tests/test_cihp_native.py
 Human_Parsing_Benchmark/tests/test_common_full.py
 Human_Parsing_Benchmark/tests/test_common_view.py
+Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py
 Human_Parsing_Benchmark/tests/test_cpi_continuation.py
 Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py
 Human_Parsing_Benchmark/tests/test_cpi_memory.py
@@ -860,6 +865,7 @@ publication/CPI_CONVNEXT_OPERATOR_cpi-convnext-operator-20261029T065934808724Z.j
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json
 publication/CPI_MANUAL_CLI_20261029.json
 publication/CPI_MANUAL_LAUNCH_cpi-convnext-idle-gpu-20261029T151038229214Z.json
+publication/CPI_MEMORY_REPAIR_CLOSURE_cpi-memory-repair-20261029T153956552075Z.json
 publication/CPI_MEMORY_REPAIR_cpi-memory-repair-20261029T153956552075Z.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json
 publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json

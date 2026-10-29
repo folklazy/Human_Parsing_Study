@@ -1,0 +1,187 @@
+{
+  "run_id": "cpi-memory-repair-20261029T153956552075Z",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "status": "DIAGNOSTIC_PASS",
+  "PID": 622542,
+  "SID": 622542,
+  "start_utc": "2026-10-29T15:40:44.604333+00:00",
+  "model_frame_calls": 3,
+  "complete": 2,
+  "failed": 0,
+  "canonical": false,
+  "primary": null,
+  "automatic_retries": 0,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "config_sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+  "launch_commit": "1bcea01ab9905bd3e55ea4c75cc89cb1d1efb960",
+  "GPU_before": "Tesla T4, 0 MiB, 14912 MiB",
+  "patch": {
+    "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+    "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+    "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+    "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+    "person_chunk_size": 1,
+    "native_reference_prefix": 2,
+    "source_file_modified": false,
+    "scientific_parameters_changed": []
+  },
+  "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+  "current_image": "0001641",
+  "observations": [
+    {
+      "split": "Training",
+      "image_id": "0000930",
+      "start_utc": "2026-10-29T15:41:01.303814+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T15:41:02.070572+00:00",
+      "memory": {
+        "peak_allocated_MiB": 796.88037109375,
+        "peak_reserved_MiB": 1252.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            2,
+            20,
+            100,
+            148
+          ],
+          "image_shape": [
+            800,
+            1156,
+            3
+          ],
+          "original_shape": [
+            346,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            2,
+            346,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 151552000,
+          "chunk_stride_grid_float_bytes": 75776000
+        }
+      ],
+      "regression": null,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-memory-repair-20261029T153956552075Z/packets/Training/0000930",
+      "packet_sha256": "a7699fc91341f913c27e8577445bf2fab705a684608409613ca9f7f503aab24e"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0003218",
+      "start_utc": "2026-10-29T15:41:02.085280+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T15:41:04.430663+00:00",
+      "memory": {
+        "peak_allocated_MiB": 9751.1142578125,
+        "peak_reserved_MiB": 11726.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            65,
+            20,
+            100,
+            148
+          ],
+          "image_shape": [
+            800,
+            1163,
+            3
+          ],
+          "original_shape": [
+            344,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            65,
+            344,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 4925440000,
+          "chunk_stride_grid_float_bytes": 75776000
+        }
+      ],
+      "regression": null,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-memory-repair-20261029T153956552075Z/packets/Validation/0003218",
+      "packet_sha256": "3aa277304b59719994db9046a4599a9cbf4a4d36b6aa8c1d6dfe701424c7e40d"
+    },
+    {
+      "split": "Validation",
+      "image_id": "0001641",
+      "start_utc": "2026-10-29T15:41:04.442630+00:00",
+      "status": "COMPLETE",
+      "attempt": 1,
+      "end_utc": "2026-10-29T15:41:06.702716+00:00",
+      "memory": {
+        "peak_allocated_MiB": 8548.87744140625,
+        "peak_reserved_MiB": 11726.0
+      },
+      "decoder_events": [
+        {
+          "low_resolution_shape": [
+            56,
+            20,
+            100,
+            152
+          ],
+          "image_shape": [
+            800,
+            1201,
+            3
+          ],
+          "original_shape": [
+            333,
+            500,
+            3
+          ],
+          "person_chunk_size": 1,
+          "rescale": true,
+          "aligned_stride": 8,
+          "output_shape": [
+            56,
+            333,
+            500
+          ],
+          "native_reference_prefix": 2,
+          "reference_labels_equal": true,
+          "full_stride_grid_float_bytes": 4358144000,
+          "chunk_stride_grid_float_bytes": 77824000
+        }
+      ],
+      "regression": "ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET",
+      "packet": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-memory-repair-20261029T153956552075Z/packets/Validation/0001641",
+      "packet_sha256": "a318aa843fc461b1f4d757374f6e81d13ce887e13334fffe265c57976f265a55"
+    }
+  ],
+  "end_utc": "2026-10-29T15:41:06.703970+00:00",
+  "execution_seconds": 22.092025204998208,
+  "no_full_benchmark": true,
+  "automatic_restart": false,
+  "parameters": 107444791,
+  "postflight": {
+    "protected_source_config_hashes_unchanged": 16,
+    "atomic_NPZ_readback_and_SHA": "PASS",
+    "known_success_saved_NPZ_byte_identical": true,
+    "known_success_scores_both_thresholds_identical": true,
+    "canonical_count_changed": false,
+    "GPU_process_exited": true,
+    "checked_Bangkok": "2026-10-29T22:48:52.969845+07:00"
+  }
+}

@@ -1,3 +1,5 @@
+> **Memory repair update:** ใช้ [repaired ConvNeXt wrapper](../scripts/run_cpi_chunked_continuation.py) สำหรับperson-chunkrestorationที่ผ่านdiagnostic; [report](../reports/CPI_MEMORY_REPAIR_TH.md). Original `run_cpi_continuation.py`ด้านล่างไม่ได้ติดตั้งpatch. ConvNeXt canonical337/5000; R50patchGPUยังไม่ทดสอบ. Executeเป็นmanuallaunch ไม่ใช่automaticretry.
+
 # คำสั่ง CPI continuation สำหรับ operator
 
 สถานะ 29 ตุลาคม 2026: ผู้ใช้ขอคำสั่งรัน CPI ทั้งสองตัว งานจัดเตรียมนี้ **ไม่ได้เปิด inference** และไม่ได้แก้ OOM หรือรับประกันว่าจะไม่เกิดซ้ำ ผล native สี่โมเดลและ Sapiens pilot ไม่เปลี่ยน

@@ -1,3 +1,7 @@
+> **Current: CPI memory repair diagnostic PASS; no full restart.** [Repair report/commands](reports/CPI_MEMORY_REPAIR_TH.md) → [STATUS](STATUS.md). ConvNeXt canonical337/5000; Sapiens0.4B/0.8B COMPLETE5000.
+
+The notices below are historical snapshots; STATUS is current.
+
 > **Current approved work: full CIHP–Sapiens C4-P evaluation.** [Report/status](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md) → [STATUS](STATUS.md). Saved-only four systems + Sapiens2 0.4B; reuse6/pending4,994; no CPI/other sizes/newYOLO.
 
 > **CPI operator commands prepared; no new inference.** [คำสั่ง R50 / ConvNeXt-B และ progress](docs/CPI_CONTINUATION_COMMANDS_TH.md). ใช้ผลเดิม 3/113 ภาพตามลำดับ; manual continuation ยังเสี่ยง OOM

@@ -82,3 +82,7 @@ User asks to try CPI ConvNeXt-B now, while Sapiens0.4B continues. Authorization 
 ## Latest terminal — CPI ConvNeXt manual attempt
 
 Segment convnext-20261029T070405365918Z stopped on confirmed OOM0001641 after32new successes+113reused=145/5000;failed1/invalid0/missing4855,mainnull. BothPIDs401349/401656 exited,oldfailed0001218nowvalidbutallhistoryretained. No automatic restart/newCPI/R50. Sapiens0.4B/commonCPU batch remains separately authorized/running,source/config unchanged; read currentprogress before any action. Thai closure reports/convnext-20261029T070405365918Z.md.
+
+## 2026-10-29T22:50:05.630552+07:00 — CPI memory repair diagnostic passed, no full restart
+
+LatestuserrequestedOOMcause/repair. Model-local person-axis restoration preserves FP32/allcandidates/20channels/spatialoperators; nativefiles/frozenconfig/scorer/results unchanged. Read reports/CPI_MEMORY_REPAIR_TH.md. Diagnostic3calls passed; canonical ConvNeXt337/5000/null unchanged, R50GPUrepairuntested. Future patched ConvNeXt uses scripts/run_cpi_chunked_continuation.py, separateeffectiveimplementationidentity and includes diagnostic resource costs. Original CLI doesnotinstallpatch. Noautomaticfullrun/retry/nextmodel; Sapiens04/08complete untouched.

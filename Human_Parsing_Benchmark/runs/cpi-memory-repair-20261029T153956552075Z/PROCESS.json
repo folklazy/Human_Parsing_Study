@@ -1,0 +1,16 @@
+{
+  "PID": 622542,
+  "SID": 622542,
+  "PGID": 622542,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json",
+    "--execute"
+  ],
+  "log": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/PROCESS.log",
+  "launch_commit": "1bcea01ab9905bd3e55ea4c75cc89cb1d1efb960",
+  "purpose": "Bounded \u22643-frame diagnostic only; no full validation"
+}

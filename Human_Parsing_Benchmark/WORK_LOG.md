@@ -317,3 +317,7 @@ Canonical337=145reused+192new, failed1/invalid0/missing4663/notattempted4662/dup
 ## 2026-10-29T22:39:56.552075+07:00 — cpi-memory-repair-20261029T153956552075Z: memory implementation/CPU closure
 
 HEAD31607f8/mainclean; GPUempty/noactiveCPI/Sapiens; sourcefrozenunchanged. NativeheadupsamplesallN×20inparallel; F.pad failureconfirmed. Addedseparateperson-axisstreamingrestoration/plugin, fourindependentCPUcasesPASS/anchorinstallCPUonly. ExactFP32/channels/geometry/thresholds/allpersonsretained; noallocator/envchanges. Sourcebounddiagnostic≤3callsandresourcehistoryprepared, GPUforwardnotyetstarted. UpstreamadaptedoperationsattributedwithApache2licensecopy;firstpartylicensestatusunchanged. Nextpublishprelaunchthendetacheddiagnostic; stoperror/noautoretry/fullrun.
+
+## 2026-10-29T22:48:52.969845+07:00 — cpi-memory-repair-20261029T153956552075Z: GPU repair closure
+
+Launch1bcea01/PID622542 DIAGNOSTIC_PASS,3calls(1TRAIN+2VAL),0fail/OOM/retry. Actual0003218 65×20×100×148: bulkstridegrid4.587GiB→chunk72.27MiB; completedpeakallocated9751.11/reserved11726MiB. Known0001641 ALLarrays/NPZ/SHA andscoreJSONboththresholdsexacttooldcanonical. GPUfixture/actualprefix2labelsPASS. Protectedsource/config16hashesunchanged. SeparateConvNeXt-onlypatchedCLI CPU2controlsPASS; nofullcontrollerGPUrun/fullrescore. Newimplementationfingerprints/dependencies/resourceclockinclude diagnostic; oldsource/config unchanged. Canonicalstill337/mainnull/R50paused/Sapiensuntouched. Nextpublish/reportverificationthenstop.

@@ -1,0 +1,74 @@
+{
+  "work_unit": "cpi-memory-repair-20261029T153956552075Z",
+  "created_utc": "2026-10-29T15:50:05.778843+00:00",
+  "scope": "Bounded GPU diagnostic and source-isolated continuation wrapper with CPU control checks; no canonical inference rerun/full run, raw packets, images or logs.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+      "sha256": "e3ebd88daa61333a6057e7f3630a04be889eaadd8ec5306390076e9b09e538c6",
+      "bytes": 7215
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py",
+      "sha256": "56f0aba301240baa7d2164ed141005e57024bdbc7e77cfdcdd28f8b79259422e",
+      "bytes": 2007
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CPI_MEMORY_REPAIR_TH.md",
+      "sha256": "5373a54b5a5a98dec2c13a962548a0169afaba0ed09c2cba874cccefdded4735",
+      "bytes": 9581
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "ea42ea0f541db1d166c6255f5e894346ee2377fd9a87f403833014956ba12484",
+      "bytes": 11088
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "22b4ef0b4c81ede321feeb65d5e9035a4d30a59a583d6a50515d808db5033032",
+      "bytes": 933
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "e53d3108bca6b03eb761aff0a5abcb65cc5544f9449fa7ac5e0e1355d22094ed",
+      "bytes": 20321
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "6b4c7e1cb3c1f87cdd543f21b18692e28ecc9f0a499f86ba0bcd150e3052e669",
+      "bytes": 57744
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "sha256": "7a5a5f7898de90a810c1c762f513dff8445b40dcbf515849d056f64bfb44d75b",
+      "bytes": 13207
+    },
+    {
+      "path": "Human_Parsing_Benchmark/docs/DECISIONS.md",
+      "sha256": "c67105c6524003b23966e3dfa7bb9515abf01f4dc3b0e22d45cf8f07932799e5",
+      "bytes": 15779
+    },
+    {
+      "path": "Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md",
+      "sha256": "0daf0b4fc23baf5e0464d6ad4e6ced2e260d31f60f336dfb8ee8ce477f399c1c",
+      "bytes": 8659
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNOSTIC.json",
+      "sha256": "c27108e469bdfebdaaea21e0bbc330fb905f18cc2974566e990ff167b234c68d",
+      "bytes": 5706
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CONTROL_ACCEPTANCE.json",
+      "sha256": "f110e2ad6a76379c06e838a9e34bcfa44c8488a9efda9266116828dbe9f6e2c2",
+      "bytes": 427
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/PROCESS.json",
+      "sha256": "0ea2f8f7deee4ba1f1d1ddcde966efede3f4966cde13493a3720f43105fb3be7",
+      "bytes": 653
+    }
+  ],
+  "redistribution": "New wrapper/tests first-party; previously attributed Apache2 restoration fragment unchanged; no additional third-party redistribution.",
+  "evidence": "Warmup+2VAL calls passed, 0001641 packet byte-identical, 0003218 no OOM; CPU4+controls2. Full5000 not proven/started."
+}
