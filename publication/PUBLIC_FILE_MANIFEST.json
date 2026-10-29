@@ -65,13 +65,18 @@
     },
     {
       "path": "Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 52579,
-      "sha256": "de11efc31c4411e3fdbf5ef5073531a63d9b39a9f5f3cbfdac7919960eaa0304"
+      "bytes": 52945,
+      "sha256": "ddabec254ae6bc73a083233fe680e478393cc508ed942a776bb5ac9dab66a190"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_native_six.json",
       "bytes": 14536,
       "sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cihp_sapiens_08b_full.json",
+      "bytes": 167612,
+      "sha256": "afbaa86f2855d9764c553b42944e7d3bb2ee3ce1a9ddbee0860eb6c1d1286612"
     },
     {
       "path": "Human_Parsing_Benchmark/configs/cihp_sapiens_08b_pilot.json",
@@ -387,6 +392,11 @@
       "path": "Human_Parsing_Benchmark/reports/CIHP_NATIVE_READINESS.md",
       "bytes": 7081,
       "sha256": "dbe003667fdc1cebbbc58b363ebff3c9a925d8631fe705b0c1a0b4a1e24cc023"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_08B_C4P_RESULTS_TH.md",
+      "bytes": 5969,
+      "sha256": "cab0925a8ed8ee650cbccc4e07260f950c1a51e28465d5390e8cd8868ae3ef29"
     },
     {
       "path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
@@ -869,6 +879,21 @@
       "sha256": "2200b85ce5b59e7bbfbde3e6fc349475dc63b052ba67cabe87f5cb582efa76b0"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/FULL_CONFIG.json",
+      "bytes": 167612,
+      "sha256": "afbaa86f2855d9764c553b42944e7d3bb2ee3ce1a9ddbee0860eb6c1d1286612"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/LAUNCH.json",
+      "bytes": 1067,
+      "sha256": "82b18d13cd4108c15ee974243408d8be62c63e4029208b8bc774e23c1377004c"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/PILOT_COMPLETION.json",
+      "bytes": 2677,
+      "sha256": "da944b9c2d653a2132665136ab271c4eeb525419eb013fb8a5130e30a20fa622"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/PILOT_CONFIG.json",
       "bytes": 89605,
       "sha256": "f82570ee0594f79a00f3d8b5db86cdd84afb7fb3fb11d2b2ffee7213fd0b3e39"
@@ -879,9 +904,19 @@
       "sha256": "60199d3454ee909b5faf732b88f5113d78322ba01e3bc04c190e3791011fa429"
     },
     {
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/REPORT_TH.md",
+      "bytes": 5896,
+      "sha256": "e602d9d680c03f7193bb4ba2ec4c02b57701481e1ab33e8114faf8ba0858caf7"
+    },
+    {
       "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json",
       "bytes": 3267,
       "sha256": "93eff0ce25c0f3a4a3b6d8f95e7094d58afa1a8ff54b6de3c2845e3a022424cf"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/REUSE_COMPATIBILITY.json",
+      "bytes": 569,
+      "sha256": "d4684edbba95754dd00b0969f5b37ac44693688abcf99dcab0d5111297a2a8e9"
     },
     {
       "path": "Human_Parsing_Benchmark/runs/specification-handoff-20261021T092521331823Z/CONSISTENCY_REVIEW.json",
@@ -3769,6 +3804,11 @@
       "sha256": "1b87b0d73249e67774b2f79e8cb822104935957fb2d731d767fd4bd0b645c1b8"
     },
     {
+      "path": "publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-pilot-pass-full-freeze.json",
+      "bytes": 3181,
+      "sha256": "e6b18b1cbc4238d1b3562da17ca1cda3e76464e5c694689febd9dfa03c70c1ef"
+    },
+    {
       "path": "publication/CIHP_NATIVE_REPORTER_CONTINUATION_20261028.json",
       "bytes": 1310,
       "sha256": "7b77b3119a2f1e8135208c300576cc4c900240c9fc71a77b983fe3fd69f6945b"
@@ -5379,6 +5419,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-29T08:14:48.282239+00:00",
+  "updated_utc": "2026-10-29T08:17:20.334636+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }
