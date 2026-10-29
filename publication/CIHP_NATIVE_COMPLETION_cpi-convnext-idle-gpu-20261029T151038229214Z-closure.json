@@ -1,0 +1,43 @@
+{
+  "work_unit": "cpi-convnext-idle-gpu-20261029T151038229214Z-closure",
+  "base_commit": "14832b73808789a6bd2a8f587ca5bf587a322c0b",
+  "scope": "CPI ConvNeXt terminal canonical records and Thai report only; no raw masks/logs",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/cpi-convnext-idle-gpu-20261029T151038229214Z.md",
+      "sha256": "42eab9cb755ee7549a25a1c6a2e699e4bcbd2c76b21dd3016f6448f3dd481b85",
+      "before_sha256": "325c8a3be7ef85edb436385f8845a895f961d130fec9422d8067a80c65502d06",
+      "bytes": 6804
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/TERMINAL_OBSERVATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-convnext-idle-gpu-20261029T151038229214Z/TERMINAL_OBSERVATION.json",
+      "sha256": "9fdfcfffdfe78f2c2e91f951c4c69e977092d0adf78d67e231b327761c2edc27",
+      "before_sha256": null,
+      "bytes": 354
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/convnext-20261029T151056554085Z/COMPLETION.json",
+      "sha256": "84b9bdcec22f77cd7694db71574ff0359f93c22de288708d5c38e56f925eddb4",
+      "before_sha256": null,
+      "bytes": 83216
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "252f863d8962ca2d330a86a424b633fdce98d4751fbc61e2dcc2d0ab5537597b",
+      "before_sha256": "e05eae4b2d9468f06133cd212522341a01fce310e85d27d65e45edae82dc1bee",
+      "bytes": 555
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "3317002477ddfe48a262d58a8bb284cea99f625dc24e506f0271b6e4ad2cd058",
+      "before_sha256": "cacba7b682fd5301c5d252a64f5c5da940d7e1764dd4f5c45dcdfd0d23720153",
+      "bytes": 55676
+    }
+  ],
+  "launch_source_unchanged": true
+}

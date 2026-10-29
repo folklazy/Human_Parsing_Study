@@ -305,3 +305,7 @@ Latest user returns to CPI after Sapiens completion. Actual GPU0 empty, no match
 ## 2026-10-29T22:14:04.456886+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: launch and first-packet acceptance
 
 Detached controller607715/worker607888/SID607715, parentPID1 confirmed; prelaunch Git bb3ee296718a8c559e04acdd6e1613c01176d2f1. Reconciled145 prior IDs; frozen pending4855 disjoint exact5000. TRAINwarmup PASS; first new0001641 (priorOOM) PASS with native20/original-grid/NPZ/GT/exact saved-score checks both thresholds, peakallocated10489.09/reserved10718MiB. Observednew160/failed0; not finalcompleteness. No change to frozen scientific source/config; no native/common reruns. Added independent terminal-report observer, syntax checked only, no evaluator changes or testsuite rerun. Next let detached one-model batch finish/stop, auto-report from canonicalrecords, no retries/nextmodel.
+
+## 2026-10-29T22:15:10.047958+07:00 — cpi-convnext-idle-gpu-20261029T151038229214Z: automatic terminal observation
+
+Controller exited; canonical INCOMPLETE, 337/5000. Existing controller reconciled packets and saved-mask scores; this observer only assembled report/navigation. Failure/attempt history retained; no retry/next model/inference/rescore.
