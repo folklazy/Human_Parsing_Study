@@ -1,6 +1,6 @@
 # CIHP–Sapiens C4-P full evaluation — สถานะและผลจริง
 
-อัปเดต 2026-10-29T13:57:33.203732+07:00 Bangkok UTC+07 · run `common-c4p-full-20261029T063458522990Z` · **2/5 ระบบ COMPLETE**
+อัปเดต 2026-10-29T14:04:42.495415+07:00 Bangkok UTC+07 · run `common-c4p-full-20261029T063458522990Z` · **3/5 ระบบ COMPLETE**
 
 ## ขอบเขตและวิธีทดลอง
 
@@ -18,9 +18,9 @@ Global CIHP confusion20×20 projected หลังตรวจ pixel equivalence
 |---|---|---:|---:|---:|
 |QANet_CIHP_HRNetW48_512x384|COMPLETE|5000/5000|80.984|78.747|
 |M2FP_R101_CIHP|COMPLETE|5000/5000|83.623|82.127|
-|D2FP_R101_CIHP|PENDING|0/5000|null|null|
+|D2FP_R101_CIHP|COMPLETE|5000/5000|82.610|81.005|
 |RPR_CIHP|PENDING|0/5000|null|null|
-|Sapiens2_0.4b|INFERENCE|605/5000|null|null|
+|Sapiens2_0.4b|INFERENCE|876/5000|null|null|
 
 [Overview CSV](../../metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv) · [current canonical overview](OVERVIEW.json). Per-target IoU/support/union และ person metrics/denominators เพิ่มเมื่อระบบนั้น COMPLETE; ไม่สร้างคะแนน subset เป็นผลชุดเต็ม. Completion counts ต้องผ่าน source/GT/packet/score bindings และ exact5,000 unique IDs. ระบบที่ครบรายงานได้โดยไม่อ้างว่าทั้ง cohort เสร็จ
 

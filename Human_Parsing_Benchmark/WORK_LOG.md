@@ -265,3 +265,7 @@ Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP']. Canonical 
 UserrequestsConvNeXt-Bnow;supersedespriornoCPIrestrictiononlyforthismanualattempt. Sapiens0.4Bfull/CPUcommoncontinueuntouched. GPUfree12173MiB/Sapiens2736MiB,nootherCPIworkersobserved. UseexistingversionedCLI/frozennativeconfig/scorer/FP32/settings/resourceguards;freshsegment,reconcileold113successesifvalid,pendingonly,onerrorstop/noautoretry/fallback. Native20CPIremainsseparatefromcommonC4-P. Authorization/source/checkpointbindingsrecorded;nextcommitthenlaunchdetached,recheckfirstnewpacketorretainedfailure;noR50/0.8B/1B.
 
 Prelaunch operational correction 2026-10-29T07:03:01.257278+00:00: CPI viewer controller liveness now checks recorded PID birth ticks/model; internal root is absent from controller argv. Frozen worker/inference/scorer/config unchanged; existing5orchestrationfixturesPASS. Source before/after recorded in runs/cpi-convnext-operator-20261029T065934808724Z/SOURCE_AMENDMENT.json. No CPI forward yet.
+
+## 2026-10-29T07:04:42.498489+00:00 UTC — common-c4p-full-20261029T063458522990Z: saved-only CPU completion
+
+Completed systems: ['QANet_CIHP_HRNetW48_512x384', 'M2FP_R101_CIHP', 'D2FP_R101_CIHP']. Canonical fixed-protocol scores retained, no model inference or post-hoc mapping/settings changes. Remaining workers continue under approved scope.

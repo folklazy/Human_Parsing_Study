@@ -1,0 +1,71 @@
+{
+  "work_unit": "common-c4p-full-20261029T063458522990Z-cpu-3",
+  "base_commit": "924f6c4ab033c4636b68bc279a89024dc56e3a8f",
+  "scope": "Approved common-view CPU work-unit compact results only, no images/raw data",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/COMPLETION.json",
+      "sha256": "009274b16e8b5b78589447d01ec19d5ab9f1e59a7b9292ad9ef2bd12494360cf",
+      "before_sha256": null,
+      "bytes": 745
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/METRICS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/METRICS.json",
+      "sha256": "dd20d07556fcd1b82903a616a5ade03469dad83860bd1b32439b06b8534a2d2e",
+      "before_sha256": null,
+      "bytes": 9467
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv",
+      "sha256": "a166a7ac55730c6aa484b5141756e62276ac4cf195df0691a2442ba4236e3fe5",
+      "before_sha256": "264745b5092a4b86f86288ede4c59294347639aa782a17461be2c90d7303dd6e",
+      "bytes": 858
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PER_TARGET.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PER_TARGET.csv",
+      "sha256": "1d6f4e830b75cf54f0d6fdd19e1d0e81a8157ce3fe7464f81b4eac8e57fcb8e4",
+      "before_sha256": "529db9dd71bf04378dc4a1fd4f285b5de10b4ff75090d40ecae78af9f04d7cff",
+      "bytes": 1623
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PERSON_METRICS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PERSON_METRICS.csv",
+      "sha256": "0ec445d3a0291c0e72ad5030ff4b541d75c7f9208a367067dea4b5d5e4464f57",
+      "before_sha256": "7711d7010e60a107baf34d78c0b7e09c43adfc5ade395004920b83d020a03379",
+      "bytes": 1661
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/OVERVIEW.json",
+      "sha256": "37f62cdd1b7b54ed886dbf497f4d57d6637b49da57776d82fa2fa26ea608d818",
+      "before_sha256": "2cc37745a82f6ba6e03e07b141176d728d5af467abea9ee2b5de8ae908bb6fba",
+      "bytes": 1851
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md",
+      "sha256": "943b94fe92251a465d1eaa0d8c25b578eb3ee48628287cfb3be6d5ce6bfde5fe",
+      "before_sha256": "ae2e89d2f8d420cbf1352232d127d40bdb00637cc555bb91e001b9119ce0cbfb",
+      "bytes": 7203
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md",
+      "public_path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/REPORT_TH.md",
+      "sha256": "bf70ef427043055b10001b53d893b2e1d80da8a08997d7c5ceefbaae0a857535",
+      "before_sha256": "ca23db5d0c6514cc5eae5f25b475ed1bf9822696309773c0017bd89c9d9c8ff8",
+      "bytes": 6944
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "94045f5c11222e0d3765a146d42287e1a165af45baa215d9ea535b405a473579",
+      "before_sha256": "74a2751c822d96e963a344628d9ee297d441623df48d0f2c48fb7c7eef776881",
+      "bytes": 50196
+    }
+  ],
+  "launch_source_unchanged": true
+}
