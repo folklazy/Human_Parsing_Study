@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "same_scientific_identity": "cd4f46dba22b97c8975376f547678196559b03cc1018e4abfa71d893727ee46a",
+  "pilot_config_sha256": "d9ad80f19078a953e4bc8a08a57033ca224f1ae1e54b9659bbb787dcf1efeaa4",
+  "full_config_sha256": "f7429af4a2df242129f37d104aedf936e476d0808a68579660ee6f9c7032a857",
+  "all_six_atomic_packets_checked": true,
+  "reused_ids": [
+    "0021448",
+    "0006909",
+    "0001538",
+    "0001413",
+    "0027897",
+    "0031248"
+  ],
+  "pending_count": 4994,
+  "old_fingerprints_not_modified": true,
+  "score_not_used_for_reuse_choice": true
+}

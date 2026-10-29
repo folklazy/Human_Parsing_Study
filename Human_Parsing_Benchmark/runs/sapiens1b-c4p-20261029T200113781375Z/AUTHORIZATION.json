@@ -1,0 +1,11 @@
+{
+  "status": "USER_AUTHORIZED",
+  "scope": "SAPIENS2_1B_C4P_PILOT_THEN_FULL_USER_AUTHORIZED",
+  "authority": "User explicitly authorizes 1B pilot6+at most1warmup then full5000 when passed, run alone on GPU after CPI completion (tmux); same C4-P protocol as 0.4B/0.8B; no other models",
+  "pilot_config_sha256": "d9ad80f19078a953e4bc8a08a57033ca224f1ae1e54b9659bbb787dcf1efeaa4",
+  "no04interruption": true,
+  "no_other_models": true,
+  "no_recompute_existing_four": true,
+  "shared_quality": true,
+  "model_calls": 0
+}

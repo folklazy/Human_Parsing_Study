@@ -1,0 +1,91 @@
+{
+  "status": "ADMIT_PILOT",
+  "samples": [
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 105.0,
+      "observed_peer_MiB": 0.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 0.0,
+      "requested_08_budget_MiB": 8578.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 9605.915790557861,
+      "remaining_after_budgets_MiB": 5305.771709442139,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 26079.08984375,
+      "RAM_admitted": true,
+      "utc": 1793304074.1146193,
+      "observed_free_MiB": 14807.0,
+      "peer04_complete": 5000,
+      "peer04_state": "COMPLETE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 4995,
+      "own_peak_reference_MiB": 6938.0,
+      "GPU_processes": {
+        "814622": 102.0
+      }
+    },
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 105.0,
+      "observed_peer_MiB": 0.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 0.0,
+      "requested_08_budget_MiB": 8578.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 9605.915790557861,
+      "remaining_after_budgets_MiB": 5305.771709442139,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 26045.46875,
+      "RAM_admitted": true,
+      "utc": 1793304076.1793418,
+      "observed_free_MiB": 14807.0,
+      "peer04_complete": 5000,
+      "peer04_state": "COMPLETE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 4995,
+      "own_peak_reference_MiB": 6938.0,
+      "GPU_processes": {
+        "814622": 102.0
+      }
+    },
+    {
+      "admitted": true,
+      "usable_total_MiB": 14911.6875,
+      "observed_used_MiB": 105.0,
+      "observed_peer_MiB": 0.0,
+      "other_MiB": 3.0,
+      "protected_peer_budget_MiB": 0.0,
+      "requested_08_budget_MiB": 8578.915790557861,
+      "global_headroom_MiB": 1024,
+      "estimated_combined_MiB": 9605.915790557861,
+      "remaining_after_budgets_MiB": 5305.771709442139,
+      "basis": "historical08peak + observed04peak + fullpopulationmapback + contexts + growth + headroom",
+      "all_image_feasibility_guaranteed": false,
+      "RAM_available_MiB": 26012.48046875,
+      "RAM_admitted": true,
+      "utc": 1793304078.2555885,
+      "observed_free_MiB": 14807.0,
+      "peer04_complete": 5000,
+      "peer04_state": "COMPLETE",
+      "peer04_peak_reserved_MiB": 2606.0,
+      "peer04_peak_samples": 4995,
+      "own_peak_reference_MiB": 6938.0,
+      "GPU_processes": {
+        "814622": 102.0
+      }
+    }
+  ],
+  "largest_mapback_all5000_MiB": 104.91579055786133,
+  "queue_vs_execution_caps": {
+    "queue_hours": 24,
+    "execution_hours": 24
+  },
+  "remaining_disk_GiB": 448.8632354736328,
+  "empirical_bounds_not_all_image_guarantee": true,
+  "only_one_visible_assigned_GPU": true
+}

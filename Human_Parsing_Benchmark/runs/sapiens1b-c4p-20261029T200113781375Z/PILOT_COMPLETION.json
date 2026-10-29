@@ -1,0 +1,113 @@
+{
+  "status": "PILOT_PASS",
+  "expected": 6,
+  "complete": 6,
+  "model_calls": 7,
+  "warmup": 1,
+  "primary": null,
+  "pilot_diagnostics": {
+    "mIoU4": 0.6794706336185712,
+    "C3_global_mean_only": 0.6858125034766483,
+    "IoU": [
+      0.900516900105424,
+      0.6604450240443394,
+      0.8359332836472977,
+      0.6064405787132785,
+      0.6150636480693691,
+      0.44229549195023954
+    ],
+    "GT_support": [
+      1042930,
+      52314,
+      75513,
+      162564,
+      59674,
+      178805
+    ],
+    "pred_support": [
+      1077089,
+      69918,
+      67363,
+      183089,
+      39415,
+      134926
+    ],
+    "union": [
+      1115496,
+      73614,
+      77822,
+      215167,
+      61353,
+      217522
+    ],
+    "zero_union": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "precision": [
+      0.932627665866052,
+      0.695357418690466,
+      0.965723023024509,
+      0.7126916417698497,
+      0.9574020043130788,
+      0.7130501163600789
+    ],
+    "recall": [
+      0.9631739426423633,
+      0.9293496960660627,
+      0.8614940473825698,
+      0.8026746389114441,
+      0.632369206019372,
+      0.5380666088755908
+    ]
+  },
+  "person_diagnostics": {
+    "0.5": {
+      "G_loc": 23,
+      "G_sem_C4": 23,
+      "TP": 23,
+      "FP": 2,
+      "FN": 0,
+      "Q_numerator": 10.004302156547913,
+      "contamination_numerator": 3171,
+      "matched_target_denominator": 360035,
+      "background_leakage_numerator": 9340,
+      "predicted_persons_including_semantic_empty": 25,
+      "void_only_predicted_extents": 0,
+      "Q_C4_GT": 0.43496965898034406,
+      "precision": 0.92,
+      "recall": 1.0,
+      "extent_F1": 0.9583333333333334,
+      "contamination": 0.00880747705084228,
+      "background_leakage": 0.025941922313108448,
+      "ambiguous_matching_frames": 0
+    },
+    "0.75": {
+      "G_loc": 23,
+      "G_sem_C4": 23,
+      "TP": 19,
+      "FP": 6,
+      "FN": 4,
+      "Q_numerator": 7.604385227671207,
+      "contamination_numerator": 2209,
+      "matched_target_denominator": 331419,
+      "background_leakage_numerator": 7170,
+      "predicted_persons_including_semantic_empty": 25,
+      "void_only_predicted_extents": 0,
+      "Q_C4_GT": 0.33062544468135685,
+      "precision": 0.76,
+      "recall": 0.8260869565217391,
+      "extent_F1": 0.7916666666666666,
+      "contamination": 0.006665278695548536,
+      "background_leakage": 0.021634245471744227,
+      "ambiguous_matching_frames": 0
+    }
+  },
+  "scientific_identity_sha256": "cd4f46dba22b97c8975376f547678196559b03cc1018e4abfa71d893727ee46a",
+  "geometry_native29_atomic_readback_GT_scoring": "PASS",
+  "readiness_not_based_on_quality": true
+}
