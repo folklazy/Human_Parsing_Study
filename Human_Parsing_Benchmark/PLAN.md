@@ -87,3 +87,7 @@ Parent common-c4p-pilot-20261029T010410394659Z strictloadPASS then SOURCE_BINDIN
 ## 2026-10-29T08:45:10.351455+07:00 — scoped common pilot closed; budget consumed
 
 Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwarmup+6specifiedVAL=7calls,6complete0failed/invalid/noOOM/fallback/retry. Parentsetupinvalid0forwardcallsretained;losslessbinarycacheconversionfixedwithoutscientificchange. CPU23/saved4×1/cache7PASS,GT-onlyG_loc17520/G_sem_C417454,6savedmaskrescore/atomiccontract/QANetextentparityPASS. Nativefrozen18hashes/source/resultsunchanged;CPIpaused. [Closure](reports/CIHP_SAPIENS_04B_PILOT_TH.md). Noautomaticrestart/othermodel/full5,000;fullqualityproposalpossiblebutrequiresseparateacceptedlaunchconfig/approval. Oldpilotconfigflagsdescribetheconsumedauthorization,notnewpermission.
+
+## 2026-10-29T13:04:01.363721+07:00 — CPI manual CLI preparation only
+
+ผู้ใช้ขอคำสั่งรัน CPI ทั้งสองตัว จัดทำ [manual continuation CLI](docs/CPI_CONTINUATION_COMMANDS_TH.md) ที่ใช้ frozen worker/scientific settings เดิม แต่แยก operational manifest, output location และ cumulative reconciliation. CPU5casesและ existing3/113packet checksผ่าน ไม่มี inference/warmup/retryจริงใน work unit นี้ ไม่เปิด Sapiens/full common evaluation. Operatorต้องเรียก `--execute` เฉพาะรุ่นเพื่อเริ่ม manual attempt ใหม่; ไม่มี automatic next-model launch.

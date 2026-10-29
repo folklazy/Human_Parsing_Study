@@ -66,3 +66,7 @@ Userauthorizesseparatecommonviewimplementation,CPUacceptance,andconditionalSapie
 ## 2026-10-29T08:45:10.351455+07:00 — scoped common pilot closed; budget consumed
 
 Runcommon-c4p-pilot-20261029T010410394659Z-binary-cache-fix PILOT_PASS:1TRAINwarmup+6specifiedVAL=7calls,6complete0failed/invalid/noOOM/fallback/retry. Parentsetupinvalid0forwardcallsretained;losslessbinarycacheconversionfixedwithoutscientificchange. CPU23/saved4×1/cache7PASS,GT-onlyG_loc17520/G_sem_C417454,6savedmaskrescore/atomiccontract/QANetextentparityPASS. Nativefrozen18hashes/source/resultsunchanged;CPIpaused. [Closure](reports/CIHP_SAPIENS_04B_PILOT_TH.md). Noautomaticrestart/othermodel/full5,000;fullqualityproposalpossiblebutrequiresseparateacceptedlaunchconfig/approval. Oldpilotconfigflagsdescribetheconsumedauthorization,notnewpermission.
+
+## Latest scope — CPI commands prepared, no worker launched
+
+User requested runnable commands for both CPI models. Use docs/CPI_CONTINUATION_COMMANDS_TH.md and scripts/run_cpi_continuation.py, with frozen parser-legacy-cu113 Python. Default is CPU reconciliation only; explicit operator --execute starts one fresh manual attempt under shared-quality controls. New raw artifacts belong to Human_Parsing_Benchmark/outputs/cpi_continuations; old artifacts remain in legacy paths. CPU5cases and actual3/113 packet reconciliation passed; no new forwards, no claim OOM fixed. Do not reuse old broad queues or restart Sapiens pilot. Publication of CLI does not mean inference has launched.

@@ -1,0 +1,93 @@
+{
+  "work_unit": "cpi-manual-cli-20261029",
+  "created_utc": "2026-10-29T06:04:36.383321+00:00",
+  "base_commit": "93a68d7fe136b30f9786f8b5531b87a2ddd451e7",
+  "phase": "OPERATOR_COMMANDS_NO_GPU_LAUNCH",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/.gitignore",
+      "source_workspace_relative": "Human_Parsing_Benchmark/.gitignore",
+      "before_sha256": "ea476a72dcba1e3305d874488e98c6bfc04d6575951c47bfe0b52fee65638168",
+      "sha256": "b883e3b5773c99c27baf45361ea90bce015fd0a9855941401499f1ef1465d3b3",
+      "bytes": 448
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/run_cpi_continuation.py",
+      "before_sha256": null,
+      "sha256": "5bf6d766a6d59cf8ac2d4909fc175ec727da32b03ff91e763d92064a1e10da3a",
+      "bytes": 19391
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_continuation.py",
+      "source_workspace_relative": "Human_Parsing_Benchmark/tests/test_cpi_continuation.py",
+      "before_sha256": null,
+      "sha256": "73fb2e42af6b19ffc76fb44b438f073ba3a6c2b0c30dda13d79e88c6eecd24ce",
+      "bytes": 3574
+    },
+    {
+      "path": "Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md",
+      "before_sha256": null,
+      "sha256": "989bcfdf0c9a00bea13ca8c0b09a9df41845dd0798e74e6a3b4cc16f93e36926",
+      "bytes": 8184
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "before_sha256": "b25a4dac3814bbec5321cd0c77bb57e8c1b4a06f3b6b9a91c1e09b2785e23eb3",
+      "sha256": "62cca417168fb369dc4cbd5e2a19541cc80a526ac85a8cf18bc96cb40f316782",
+      "bytes": 3027
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "before_sha256": "1b552096118ff109511e2bf61b07fbd4611ab6b52a42c4ff423f75a27ef0f993",
+      "sha256": "f2189bb08fb28a73b37c86de175b35ab6faf9614ae3b88a375a0cef2881a7f2c",
+      "bytes": 10332
+    },
+    {
+      "path": "Human_Parsing_Benchmark/PLAN.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "before_sha256": "3f447d8916ad61980c4b6342024387af5daeac9f038b1f232224ae4d482401ba",
+      "sha256": "396335b07b44131e691965f7b5d6ca23cfc143a2da2a42fa45aebd2fbb5a36bc",
+      "bytes": 17313
+    },
+    {
+      "path": "Human_Parsing_Benchmark/AGENTS.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/AGENTS.md",
+      "before_sha256": "163a2d8812640f82df113c86bd19a9976de0d97c451f4378b9dade80bc7245e3",
+      "sha256": "32975c5f774a3f28ce0d32fa336ee0f138a7b50054460c1b362c983e2d433cbd",
+      "bytes": 10650
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "before_sha256": "72e4d4aeda6233340449ff870b4df7a48308fb7733ec583181744fd879661bf5",
+      "sha256": "e87f00268580d770d11b2007a7ecb8597ac84e9fb092ba6425d2a84faa1c3571",
+      "bytes": 45761
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json",
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json",
+      "before_sha256": null,
+      "sha256": "d53fd1a871e42a5e2a34ed396b6aa245461bb39c1b7ae5d5aa53e17228cec180",
+      "bytes": 2338
+    }
+  ],
+  "publication_review": {
+    "first_party_operational_code_and_docs_only": true,
+    "third_party_files_added": false,
+    "raw_predictions_datasets_weights_logs_CCTV_assets_added": false,
+    "first_party_license_unchanged": true,
+    "native_frozen_scientific_source_config_and_results_unchanged": true
+  },
+  "verification": {
+    "CPU_cases": 5,
+    "R50_reconciliation_verified_IDs": 3,
+    "ConvNeXt_reconciliation_verified_IDs": 113,
+    "model_calls": 0,
+    "GPU_execution_of_new_CLI": "NOT_TESTED",
+    "OOM_fix": "NOT_CLAIMED"
+  }
+}

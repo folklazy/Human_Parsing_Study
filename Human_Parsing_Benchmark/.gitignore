@@ -4,6 +4,7 @@
 /.env.*
 /.cache/
 /tmp/
+/outputs/
 __pycache__/
 *.py[cod]
 # Fail-safe bulk locations only. No blanket runs/, CSV, JSON or image exclusion.

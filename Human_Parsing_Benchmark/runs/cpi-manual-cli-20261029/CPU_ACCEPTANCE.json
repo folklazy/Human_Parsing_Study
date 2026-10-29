@@ -1,0 +1,44 @@
+{
+  "work_unit": "cpi-manual-cli-20261029",
+  "checked_Bangkok": "2026-10-29T13:04:01.363721+07:00",
+  "CPU_cases_passed": 5,
+  "model_calls": 0,
+  "new_worker_launches": 0,
+  "reconciliation": {
+    "r50": {
+      "root": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T060101073979Z",
+      "status": "RECONCILIATION_ONLY_NO_FORWARD",
+      "verified": 3,
+      "pending": 4997,
+      "plan_sha256": "f77cccd973da4dc7c4df28a8a29847f0711c251d65655b82ebce17923d7f70fa",
+      "prior_execution_seconds": 36.955850999999996,
+      "source_folders": [
+        "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/CPI_R50_CIHP",
+        "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-manual-continuation-20261028T175036811629Z/segments/CPI_R50_CIHP",
+        "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP"
+      ]
+    },
+    "convnext": {
+      "root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T060016922443Z",
+      "status": "RECONCILIATION_ONLY_NO_FORWARD",
+      "verified": 113,
+      "pending": 4887,
+      "plan_sha256": "776eed577900f43952c9d7a39693bfff6648e2fa333d6d1c61ffa5480edfcde6",
+      "prior_execution_seconds": 114.988118,
+      "source_folders": [
+        "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/segments/CPI_ConvNeXtB_CIHP",
+        "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP"
+      ]
+    }
+  },
+  "source_files_sha256": {
+    "Human_Parsing_Benchmark/scripts/run_cpi_continuation.py": "5bf6d766a6d59cf8ac2d4909fc175ec727da32b03ff91e763d92064a1e10da3a",
+    "Human_Parsing_Benchmark/tests/test_cpi_continuation.py": "73fb2e42af6b19ffc76fb44b438f073ba3a6c2b0c30dda13d79e88c6eecd24ce"
+  },
+  "limitations": [
+    "No GPU execution acceptance of new controller",
+    "OOM remains unresolved",
+    "Exact replay requires frozen CPI environment",
+    "Read-only reconciliation, not a new full benchmark"
+  ]
+}

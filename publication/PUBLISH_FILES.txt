@@ -14,6 +14,7 @@ Human_Parsing_Benchmark/WORK_LOG.md
 Human_Parsing_Benchmark/configs/cihp_native_six.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_04b_pilot.json
 Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md
+Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md
 Human_Parsing_Benchmark/docs/DECISIONS.md
 Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md
 Human_Parsing_Benchmark/docs/RESEARCH_REFERENCES.md
@@ -163,6 +164,7 @@ Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/READINESS.j
 Human_Parsing_Benchmark/runs/common-c4p-pilot-20261029T010410394659Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/CONSISTENCY_CHECKS.json
 Human_Parsing_Benchmark/runs/common-view-proposal-20261029T004437Z/EVIDENCE.json
+Human_Parsing_Benchmark/runs/cpi-manual-cli-20261029/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
@@ -188,6 +190,7 @@ Human_Parsing_Benchmark/scripts/rpr_progress.py
 Human_Parsing_Benchmark/scripts/run_cihp_segment.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
 Human_Parsing_Benchmark/scripts/run_common_sapiens_pilot.py
+Human_Parsing_Benchmark/scripts/run_cpi_continuation.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_quality_round.py
 Human_Parsing_Benchmark/scripts/run_cpi_convnext_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_cpi_r50_quality_round.py
@@ -210,6 +213,7 @@ Human_Parsing_Benchmark/src/common_view/sapiens_route.py
 Human_Parsing_Benchmark/tests/test_cihp_continuation.py
 Human_Parsing_Benchmark/tests/test_cihp_native.py
 Human_Parsing_Benchmark/tests/test_common_view.py
+Human_Parsing_Benchmark/tests/test_cpi_continuation.py
 Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py
 Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py
 Human_Parsing_Benchmark/tests/test_rpr_progress.py
@@ -754,6 +758,7 @@ publication/COMMON_VIEW_PILOT_CLOSURE_20261029.json
 publication/COMMON_VIEW_PROTOCOL_PROPOSAL_20261029.json
 publication/CPI_CONVNEXT_DIAGNOSTIC_READY_20261028.json
 publication/CPI_CONVNEXT_SAVED_DIAGNOSTIC_VERIFIED_20261028.json
+publication/CPI_MANUAL_CLI_20261029.json
 publication/CPI_R50_MANUAL_CONTINUATION_VERIFIED_20261028.json
 publication/CPI_R50_PREFLIGHT_AND_COHORT_INDEX_20261028.json
 publication/CPI_R50_SHARED_QUALITY_CLOSURE_VERIFIED_20261028.json

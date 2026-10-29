@@ -1,3 +1,5 @@
+> **CPI operator commands prepared; no new inference.** [คำสั่ง R50 / ConvNeXt-B และ progress](docs/CPI_CONTINUATION_COMMANDS_TH.md). ใช้ผลเดิม 3/113 ภาพตามลำดับ; manual continuation ยังเสี่ยง OOM
+
 > **Current outcome: C4-P Sapiens2 0.4B pilot PASS (6/6 +1warmup,7-callbudgetconsumed).** [Closure report](reports/CIHP_SAPIENS_04B_PILOT_TH.md) → [STATUS](STATUS.md). CPU23cases/GTbindings/QANetextentparityverified; fullcommonscoresnotrun. Nativefour/CPIhistorypreserved;noautomaticnextmodel.
 
 # Human Parsing Benchmark
