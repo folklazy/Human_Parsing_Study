@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-29T17:59:49.729045+00:00",
+  "PID": 727516,
+  "SID": 727516,
+  "PGID": 727516,
+  "birth_ticks": 20032506,
+  "controller_script": "run_cpi_chunked_continuation.py",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+    "--model",
+    "r50",
+    "--execute"
+  ],
+  "model_id": "CPI_R50_CIHP",
+  "implementation_revision": "CPI_FEATURE_BUFFER_REUSE_2",
+  "log": "Human_Parsing_Benchmark/outputs/cpi_continuations/cpi-r50-feature-20261029T175338825178Z/CONTROLLER.log",
+  "launch_commit": "3ed3a44b19e56548bfc380772e35faba0ae69c46",
+  "GPU_at_launch": "Tesla T4, 0 MiB, 14912 MiB",
+  "external_GPU_PIDs": [],
+  "phase": "PREPARING_RECONCILIATION",
+  "next_model": false
+}

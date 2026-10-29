@@ -353,3 +353,7 @@ LatestuserrequestsrepairafterupstreamR50OOM. NoactiveGPUjob/mainclean; frozen/na
 ## 2026-10-30T00:57:24.860388+07:00 — cpi-r50-feature-20261029T175338825178Z: R50 revision2 GPU readiness PASS
 
 DiagnosticPID722673/launchb992b13 ended3calls(1TRAIN+2VAL),0OOM/failure. Actual0000018passed(peakallocated12822.23MiB/reserved13108); known0000004 allarrays/NPZbytes/SHA/scoresboththresholdsidentical. UnmodifiednativeCUDAfeaturefixturevsreuse rawfloat32EXACT; noCPUlayoutshimusedonGPU. Boundhashes17unchanged; oldmemory1andfrozen/model/sourceGT/ConvNeXt5000unchanged. Explicituserrepair+priorR50nextscope allowconditionalfull; nextpublishreadiness/launchcommits then freshdetachedR50pending-onlycontroller. Noautoretry/fallback/nextmodel.
+
+## 2026-10-30T01:08:52.377295+07:00 — R50 revision2 closure/revision3 repair
+
+Revision2fullr50-20261029T175950070549Z stoppedafter14new+3reuse=17 at0000266, private_dynamic F.conv2d allocation3.27/free2.39GiB; closedcanonicalstats/hash/scoresalreadyverifiedbycontroller, nooldsuccesslost. Currentuserrepaircontinuessource-isolatedrevision3: complete/freecontentbranchbeforerecreatinginputcopyandcontextbranch, unchangedconvolutionall-candidateshapes/operatorswithinbranches. NativeCPU3oracles+controls5PASS; oldv2module/source/results preserved, newschedulingmoduleadded. Freshdiagnosticbudget3framecalls +explicitmaximum-native-capacityheadfixture; noGT/settings/scoresusedtotune, noautoretryloop. Resourcescountallfailed/successfulattempts, prior124.125505s; nextprelaunchpublishthenGPUcheck.

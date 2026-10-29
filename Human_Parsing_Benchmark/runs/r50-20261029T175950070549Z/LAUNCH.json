@@ -1,0 +1,31 @@
+{
+  "status": "RUNNING",
+  "round_id": "r50-20261029T175950070549Z",
+  "model_id": "CPI_R50_CIHP",
+  "expected": 5000,
+  "controller_PID": 727516,
+  "start_utc": "2026-10-29T17:59:53.036843+00:00",
+  "resource_mode": "SHARED_GPU_QUALITY_ONLY",
+  "reused": 3,
+  "controller_start_ticks": 20032506,
+  "GPU_at_launch": "Tesla T4, 0 MiB, 14912 MiB, 0 %",
+  "external_GPU_PIDs_at_launch": [],
+  "launch_commit": "3ed3a44b19e56548bfc380772e35faba0ae69c46",
+  "worker_PID": 727583,
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/parser-legacy-cu113/bin/python",
+    "-B",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+    "--worker",
+    "--segment-manifest",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T175950070549Z/SEGMENT_PLAN.json",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/cihp_native_six.json",
+    "--model",
+    "CPI_R50_CIHP",
+    "--phase",
+    "validation",
+    "--output",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T175950070549Z/segments/CPI_R50_CIHP"
+  ]
+}

@@ -27,7 +27,8 @@ def implementation(mid=None):
     revision, module = REVISION, 'cihp_benchmark.cpi_memory'
     if mid == 'CPI_R50_CIHP':
         paths.append('Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py')
-        revision, module = 'CPI_FEATURE_BUFFER_REUSE_2', 'cihp_benchmark.cpi_feature_memory'
+        paths.append('Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py')
+        revision, module = 'CPI_FEATURE_BRANCH_SCHEDULE_3', 'cihp_benchmark.cpi_feature_schedule'
     sources = {rel: base.file_hash(W / rel) for rel in paths}
     digest = (next(iter(sources.values())) if len(sources) == 1 else
               hashlib.sha256(json.dumps(sources, sort_keys=True).encode()).hexdigest())

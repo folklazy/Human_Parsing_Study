@@ -18,6 +18,7 @@ Human_Parsing_Benchmark/configs/cihp_sapiens_08b_pilot.json
 Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json
 Human_Parsing_Benchmark/configs/cpi_memory_diagnostic.json
 Human_Parsing_Benchmark/configs/cpi_r50_feature_memory_diagnostic.json
+Human_Parsing_Benchmark/configs/cpi_r50_feature_schedule_diagnostic.json
 Human_Parsing_Benchmark/configs/cpi_r50_memory_diagnostic.json
 Human_Parsing_Benchmark/docs/ARTIFACT_STORAGE.md
 Human_Parsing_Benchmark/docs/CPI_CONTINUATION_COMMANDS_TH.md
@@ -249,6 +250,12 @@ Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/DIAGNOSTIC_L
 Human_Parsing_Benchmark/runs/cpi-r50-chunked-20261029T172708697694Z/STATUS.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK_REVISION2.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS_REVISION2.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/REVISION3_DECISION.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK.json
+Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK_REVISION2.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/CPU_ACCEPTANCE.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/GPU_DIAGNOSTIC.json
@@ -257,10 +264,16 @@ Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/CPU_ACCEPTANC
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/GPU_DIAGNOSTIC.json
 Human_Parsing_Benchmark/runs/cpi-r50-memory-20261029T172708697694Z/PROCESS.json
+Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/CPU_ACCEPTANCE.json
+Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/DIAGNOSTIC_CONFIG.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/INPUT_EVIDENCE.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/REVIEW_VALIDATION.json
 Human_Parsing_Benchmark/runs/design-review-20261021T033935094789Z/SOURCE_AND_PROCESS_REVIEW.json
 Human_Parsing_Benchmark/runs/proposal-clarification-20261021T063557842659Z/EDITORIAL_RECORD.json
+Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/COMPLETION.json
+Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/LAUNCH.json
+Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/RESOURCE_POLICY.json
+Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/SEGMENT_PLAN.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/FULL_CONFIG.json
@@ -316,6 +329,7 @@ Human_Parsing_Benchmark/scripts/write_four_model_report.py
 Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py
 Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py
 Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py
+Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py
 Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py
 Human_Parsing_Benchmark/src/cihp_benchmark/data.py
 Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py
@@ -334,6 +348,7 @@ Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py
 Human_Parsing_Benchmark/tests/test_cpi_continuation.py
 Human_Parsing_Benchmark/tests/test_cpi_convnext_round.py
 Human_Parsing_Benchmark/tests/test_cpi_feature_memory.py
+Human_Parsing_Benchmark/tests/test_cpi_feature_schedule.py
 Human_Parsing_Benchmark/tests/test_cpi_memory.py
 Human_Parsing_Benchmark/tests/test_cpi_r50_shared_round.py
 Human_Parsing_Benchmark/tests/test_rpr_progress.py
@@ -894,6 +909,7 @@ publication/COMMON_VIEW_BINARY_CACHE_FIX_20261029.json
 publication/COMMON_VIEW_IMPLEMENTATION_PILOT_20261029.json
 publication/COMMON_VIEW_PILOT_CLOSURE_20261029.json
 publication/COMMON_VIEW_PROTOCOL_PROPOSAL_20261029.json
+publication/CPI_BRANCH_SCHEDULE_cpi-r50-schedule-diagnostic-20261029T180852377295Z.json
 publication/CPI_CHUNKED_FIRST_PACKET_cpi-convnext-chunked-20261029T160327964412Z.json
 publication/CPI_CHUNKED_LAUNCH_cpi-convnext-chunked-20261029T160327964412Z.json
 publication/CPI_CONVNEXT_DIAGNOSTIC_READY_20261028.json

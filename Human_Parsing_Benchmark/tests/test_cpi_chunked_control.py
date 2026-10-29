@@ -15,16 +15,16 @@ class ChunkedControls(unittest.TestCase):
     def test_r50_requires_feature_repair_while_convnext_keeps_original_revision(self):
         r50 = wrapper.implementation('CPI_R50_CIHP')
         convnext = wrapper.implementation('CPI_ConvNeXtB_CIHP')
-        self.assertEqual(r50['revision'], 'CPI_FEATURE_BUFFER_REUSE_2')
-        self.assertEqual(r50['module'], 'cihp_benchmark.cpi_feature_memory')
-        self.assertEqual(len(r50['sources']), 2)
+        self.assertEqual(r50['revision'], 'CPI_FEATURE_BRANCH_SCHEDULE_3')
+        self.assertEqual(r50['module'], 'cihp_benchmark.cpi_feature_schedule')
+        self.assertEqual(len(r50['sources']), 3)
         self.assertEqual(convnext['revision'], 'CPI_PERSON_CHUNK_RESTORATION_1')
         self.assertEqual(len(convnext['sources']), 1)
         with patch.object(wrapper, 'MID', 'CPI_R50_CIHP'):
             source = wrapper.expanded('CPI_R50_CIHP')
         compile(source, '<R50-revision2>', 'exec')
-        self.assertIn('from cihp_benchmark.cpi_feature_memory import install', source)
-        self.assertIn('CPI_FEATURE_BUFFER_REUSE_2', source)
+        self.assertIn('from cihp_benchmark.cpi_feature_schedule import install', source)
+        self.assertIn('CPI_FEATURE_BRANCH_SCHEDULE_3', source)
 
     def test_r50_diagnostic_cannot_use_convnext_ids(self):
         config = {'model_id': 'CPI_R50_CIHP', 'max_model_frame_calls': 3, 'automatic_retries': 0,

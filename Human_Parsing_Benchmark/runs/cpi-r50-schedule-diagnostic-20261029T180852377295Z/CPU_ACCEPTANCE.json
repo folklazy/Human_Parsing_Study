@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "native_feature_tests": 3,
+  "control_tests": 5,
+  "commands": [
+    "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_feature_schedule.py -v",
+    "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v"
+  ],
+  "reference": "Same pinned native float32 numerical/input/parameter oracles and guards as revision2; serialbranchoutputs exactly equal. Existing CPU-only layout fixture copy documented previously remains fixture-only, no GPU shim.",
+  "scope": "No whole-suite rerun, no GPU image yet. Nativecode/weights/precision/shapes/within-branch operator order unchanged; only independent-branch scheduling/inputcopy recreation differs."
+}

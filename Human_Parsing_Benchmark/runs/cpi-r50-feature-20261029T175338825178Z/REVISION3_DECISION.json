@@ -1,0 +1,24 @@
+{
+  "created_Bangkok": "2026-10-30T01:08:52.377295+07:00",
+  "authority": "Current user จัดการเเก้ไขที: continue same-output R50 memory repair after concrete revision2 run failure",
+  "revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+  "supersedes_for_future_R50": "CPI_FEATURE_BUFFER_REUSE_2",
+  "revision2_full_segment": "r50-20261029T175950070549Z",
+  "revision2_result": {
+    "complete": 17,
+    "new_successes": 14,
+    "failed_image": "0000266",
+    "failed": 1,
+    "primary": null,
+    "completion_sha256": "58b01a9fcbcc8eb6c304ced7ee6b0a173332e43a4b9e156690d009f7b3b842ad"
+  },
+  "concrete_failure": "private_dynamic_forward F.conv2d alloc3.27GiB/free2.39GiB, allocated7.08/reserved10.81GiB. Content features still live during context feature computation.",
+  "change": "Consume/free content feature branch before context; recreate the same copied inst_feats input; same candidate count/convolution shapes/precision/weights and order within each branch.",
+  "diagnostic_run": "cpi-r50-schedule-diagnostic-20261029T180852377295Z",
+  "diagnostic_config": "Human_Parsing_Benchmark/configs/cpi_r50_feature_schedule_diagnostic.json",
+  "full_allowed_only_on_new_matching_PASS": true,
+  "canonical_diagnostic_reuse": false,
+  "automatic_retry": 0,
+  "fallback": false,
+  "next_model": false
+}

@@ -1,0 +1,5 @@
+{
+  "run_id": "cpi-r50-feature-diagnostic-20261029T175338825178Z",
+  "config": "Human_Parsing_Benchmark/configs/cpi_r50_feature_memory_diagnostic.json",
+  "raw_root": "Human_Parsing_Benchmark/outputs/cpi_memory_diagnostics/cpi-r50-feature-diagnostic-20261029T175338825178Z"
+}

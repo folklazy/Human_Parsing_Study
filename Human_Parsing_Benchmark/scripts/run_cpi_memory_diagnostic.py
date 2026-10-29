@@ -29,6 +29,8 @@ def diagnostic_scope(cfg):
         'CPI_R50_CIHP': [['Training', '0000930'], ['Validation', '0000018'], ['Validation', '0000004']],
     }
     mid = cfg['model_id']
+    if mid == 'CPI_R50_CIHP' and cfg.get('implementation_revision') == 'CPI_FEATURE_BRANCH_SCHEDULE_3':
+        scopes[mid] = [['Training', '0000930'], ['Validation', '0000266'], ['Validation', '0000018']]
     if mid not in scopes or cfg['calls'] != scopes[mid]:
         raise ValueError('Exact model-specific three-call diagnostic scope differs')
     if cfg['max_model_frame_calls'] != 3 or cfg['automatic_retries'] != 0:
@@ -107,7 +109,7 @@ def main():
             adapter = NativeAdapter(W, spec, root / 'adapter')
             state['model_details'] = adapter.details
             feature_reference = None
-            if cfg['implementation_revision'] == 'CPI_FEATURE_BUFFER_REUSE_2':
+            if cfg['implementation_revision'] in ['CPI_FEATURE_BUFFER_REUSE_2', 'CPI_FEATURE_BRANCH_SCHEDULE_3']:
                 if mid != 'CPI_R50_CIHP':
                     raise ValueError('Feature-buffer repair is scoped to R50')
                 head = adapter.model.bbox_head
@@ -121,7 +123,10 @@ def main():
                     native_result = head.casual_head_forward([feature_parameters], feature_input, feature_labels, feature_centers)
                     feature_reference = [v.detach().clone() for v in native_result[:2]]
                 del native_result
-                from cihp_benchmark.cpi_feature_memory import install
+                if cfg['implementation_revision'] == 'CPI_FEATURE_BRANCH_SCHEDULE_3':
+                    from cihp_benchmark.cpi_feature_schedule import install
+                else:
+                    from cihp_benchmark.cpi_feature_memory import install
             state['patch'] = install(adapter.model.bbox_head, cfg['head_source_sha256'],
                                      observer=events.append, reference_prefix=2)
             if feature_reference is not None:
@@ -131,6 +136,34 @@ def main():
                     raise ValueError('GPU native-vs-buffer-reuse feature predictions differ')
                 state['GPU_feature_native_vs_reuse'] = 'PASS_EXACT_FLOAT32_TENSORS'
                 del feature_reference, actual_feature, feature_input, feature_parameters, feature_labels, feature_centers
+                if cfg['implementation_revision'] == 'CPI_FEATURE_BRANCH_SCHEDULE_3':
+                    # Fixed maximum-query/feature-grid head check, not an image
+                    # inference or a source of benchmark/selection scores.
+                    stress = cfg['feature_stress']
+                    max_queries = head.test_cfg.get('max_per_img', head.num_query)
+                    if stress != {'candidates': max_queries, 'feature_hw': [100, 168]}:
+                        raise ValueError('Fixed native-capacity stress scope differs')
+                    aug = adapter.cfg.data.test.pipeline[1]
+                    if tuple(aug['img_scale']) != (1333, 800) or head.parse_feat_stride != 8:
+                        raise ValueError('Native resize/feature-stride capacity binding differs')
+                    if next(t['size_divisor'] for t in aug['transforms'] if t['type'] == 'Pad') != 32:
+                        raise ValueError('Native pad capacity binding differs')
+                    guard()
+                    stress_gen = torch.Generator(device='cuda').manual_seed(921)
+                    stress_input = torch.randn((1, head.parse_head_channels, 100, 168), device='cuda', generator=stress_gen)
+                    stress_params = torch.randn((max_queries, head.total_params), device='cuda', generator=stress_gen) * .01
+                    stress_labels = torch.ones((max_queries, 19), device='cuda', dtype=torch.bool)
+                    stress_centers = torch.full((max_queries, 2), 400., device='cuda')
+                    torch.cuda.reset_peak_memory_stats()
+                    with torch.no_grad():
+                        stress_out = head.casual_head_forward([stress_params], stress_input, stress_labels, stress_centers)
+                    if any(v.shape != (max_queries, 20, 100, 168) or not torch.isfinite(v).all() for v in stress_out[:2]):
+                        raise ValueError('Maximum-shape head contract failed')
+                    torch.cuda.synchronize()
+                    state['GPU_feature_stress'] = dict(stress, status='PASS', image_frame_calls=0,
+                        peak_allocated_MiB=torch.cuda.max_memory_allocated() / 2**20,
+                        peak_reserved_MiB=torch.cuda.max_memory_reserved() / 2**20)
+                    del stress_out, stress_input, stress_params, stress_labels, stress_centers
             # CUDA checks numerical/geometry equivalence before any model frame.
             native_aligned = type(adapter.model.bbox_head)._get_bboxes_single.__globals__['aligned_bilinear']
             fixture_generator = torch.Generator(device='cuda').manual_seed(719)

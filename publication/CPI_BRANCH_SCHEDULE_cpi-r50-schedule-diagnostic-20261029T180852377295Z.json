@@ -1,0 +1,118 @@
+{
+  "work_unit": "cpi-r50-feature-20261029T175338825178Z",
+  "created_utc": "2026-10-29T18:09:07.087601+00:00",
+  "scope": "Preserve revision2 INCOMPLETE17/failure; separate revision3 branch scheduling and bounded diagnostic/CPU controls. No raw assets/native/frozen config/scorer edits.",
+  "files": [
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py",
+      "sha256": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+      "bytes": 4269
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_feature_schedule.py",
+      "sha256": "f1311aa4c29fe386faf56cbd2092b80bf64b8d5528c8aa0cc177f4fe366e0199",
+      "bytes": 477
+    },
+    {
+      "path": "Human_Parsing_Benchmark/tests/test_cpi_chunked_control.py",
+      "sha256": "beceef51c9a2c4f825d8e87d8690880da98270b01bb33987a39b660534168f9f",
+      "bytes": 4151
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py",
+      "sha256": "9201759de2f6ba79042debc95c4e636afa06b6b78a5934776e29f9c4ce0116bf",
+      "bytes": 17782
+    },
+    {
+      "path": "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py",
+      "sha256": "128020c0808392ed43f4706a30ed43217f8ad6129691fdbb302fe4a8bbd06ddc",
+      "bytes": 8771
+    },
+    {
+      "path": "Human_Parsing_Benchmark/configs/cpi_r50_feature_schedule_diagnostic.json",
+      "sha256": "a8b88ae585c8e6ad2d30c8c4f7a6f5274fb17ab7a17d4792eee33248fe8fade1",
+      "bytes": 5260
+    },
+    {
+      "path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "7e802d50ccf9537dfa5f7403a5ff8cc90e9e1a14081c6a685961614bec9d75b7",
+      "bytes": 613
+    },
+    {
+      "path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "1ed4ea20803d32275cdc7e6443f7c596a98902b639acf6190505921cbcd9e561",
+      "bytes": 63625
+    },
+    {
+      "path": "Human_Parsing_Benchmark/reports/cpi-r50-feature-20261029T175338825178Z.md",
+      "sha256": "bf74eb5face87af2a1daf100b6dbf5dd5377649f759c6483c05a621d71351a89",
+      "bytes": 5978
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS.json",
+      "sha256": "b96f3c49c0ccd1a5149f7c7222078e4938cfd9c3221d84d2ef73544050a62433",
+      "bytes": 871
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK.json",
+      "sha256": "ad5741f332da57387f532f9d96815e6a28cf0adb0bba42cba643b7723cc3b747",
+      "bytes": 266
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/PROCESS_REVISION2.json",
+      "sha256": "b96f3c49c0ccd1a5149f7c7222078e4938cfd9c3221d84d2ef73544050a62433",
+      "bytes": 871
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/SEGMENT_LINK_REVISION2.json",
+      "sha256": "ad5741f332da57387f532f9d96815e6a28cf0adb0bba42cba643b7723cc3b747",
+      "bytes": 266
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK_REVISION2.json",
+      "sha256": "74efb77a2cc47e169ce12a9df81bfb8e55a31554cbfd61f805f1bce44e352bce",
+      "bytes": 276
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/DIAGNOSTIC_LINK.json",
+      "sha256": "330d99ba2b8959a74f16a69843c9a56018bab2917769bd756361dc67dad664be",
+      "bytes": 280
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-20261029T175338825178Z/REVISION3_DECISION.json",
+      "sha256": "fbe17aaf942dc2e9362a3694df972305df869733bbe774dea59c8b9c337017f3",
+      "bytes": 1320
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/DIAGNOSTIC_CONFIG.json",
+      "sha256": "a8b88ae585c8e6ad2d30c8c4f7a6f5274fb17ab7a17d4792eee33248fe8fade1",
+      "bytes": 5260
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/CPU_ACCEPTANCE.json",
+      "sha256": "d678ced9992e49e7109f9bb82c1eaf39519023bb12efcd598c2cb3bf6e4124fe",
+      "bytes": 728
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/SEGMENT_PLAN.json",
+      "sha256": "8cd796b6d3c66193779cc30a0c3cba1ec858e412564ddaa5e0b885fac82671ff",
+      "bytes": 80836
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/RESOURCE_POLICY.json",
+      "sha256": "32d2e8ec5b5987959fcba90d28dcdee5948043528efa990f0528837795f3dd72",
+      "bytes": 459
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/LAUNCH.json",
+      "sha256": "7f3f3983d8b52d58ae160afce551a09ac799c0189c97e8ff7918555ea7590d35",
+      "bytes": 1241
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/r50-20261029T175950070549Z/COMPLETION.json",
+      "sha256": "58b01a9fcbcc8eb6c304ced7ee6b0a173332e43a4b9e156690d009f7b3b842ad",
+      "bytes": 94392
+    }
+  ],
+  "license": "Apache2 pinned anchors attribution/previous upstream license retained, own scheduling logic; first-party license unchanged."
+}
