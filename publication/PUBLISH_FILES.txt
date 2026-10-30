@@ -229,6 +229,8 @@ Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/COMPATIBILITY.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_GUARD.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_PROCESS.json
@@ -357,6 +359,7 @@ Human_Parsing_Benchmark/scripts/run_cpi_r50_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_rpr_quality_round.py
 Human_Parsing_Benchmark/scripts/run_rpr_shared_segment.py
 Human_Parsing_Benchmark/scripts/run_sapiens08.py
+Human_Parsing_Benchmark/scripts/score_cpi_common_saved.py
 Human_Parsing_Benchmark/scripts/verify_common_pilot_artifacts.py
 Human_Parsing_Benchmark/scripts/verify_common_view_cpu.py
 Human_Parsing_Benchmark/scripts/visualize_cihp_gt.py
@@ -916,6 +919,7 @@ publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-1.
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-4.json
+publication/CIHP_NATIVE_COMPLETION_cpi-common-c4p-20261030-preflight.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-navigation.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-observer.json

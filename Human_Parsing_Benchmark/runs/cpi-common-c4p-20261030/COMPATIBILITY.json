@@ -1,0 +1,205 @@
+{
+  "run_id": "cpi-common-c4p-20261030",
+  "created_utc": "2026-10-30T03:59:35.678453+00:00",
+  "status": "PACKET_CONTRACT_COMPATIBLE",
+  "inference": false,
+  "denominators_from_GT_bindings": {
+    "G_loc": 17520,
+    "G_sem_C4": 17454
+  },
+  "models": {
+    "CPI_R50_CIHP": {
+      "revisions": {
+        "CPI_FEATURE_BUFFER_REUSE_2": 14,
+        "CPI_FEATURE_BRANCH_SCHEDULE_3": 4983,
+        "ORIGINAL_FROZEN_NATIVE": 3
+      },
+      "segments": [
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T175950070549Z/segments/CPI_R50_CIHP",
+          "accepted": 14,
+          "revisions": {
+            "CPI_FEATURE_BUFFER_REUSE_2": 14
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/1",
+          "reconciled_sha256": "ca278a42704dc0eae0fd8408efa52ef452e497c06f754b9c4f6d591f2d393fe3",
+          "verified_ledger_sha256": "e3c60862d54e56ca618c10e15728316dc373a0305782fd5d704c597543d5db04"
+        },
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T181200001439Z/segments/CPI_R50_CIHP",
+          "accepted": 895,
+          "revisions": {
+            "CPI_FEATURE_BRANCH_SCHEDULE_3": 895
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/2",
+          "reconciled_sha256": "bad9e58d603086c7597413eb532721fa5d5dc71bf877c39571b5d5a7260c3616",
+          "verified_ledger_sha256": "f12a1e6ffba79f7aa563fd9373d88b2234a41ac4623345f5e7fcc413299c877e"
+        },
+        {
+          "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-r50-shared-20261028T172951337299Z/segments/CPI_R50_CIHP",
+          "accepted": 3,
+          "revisions": {
+            "ORIGINAL_FROZEN_NATIVE": 3
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/5",
+          "reconciled_sha256": "7a680e39753ac407123f4ce7052b19a962c52974b87da9f4b532f1ae590e70be",
+          "verified_ledger_sha256": "b998b72273f2cd32717dc1d10189401dd0a357d0744f4b21d735ec221a4fad65"
+        },
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/segments/CPI_R50_CIHP",
+          "accepted": 4088,
+          "revisions": {
+            "CPI_FEATURE_BRANCH_SCHEDULE_3": 4088
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/final_audit/CPI_R50_CIHP",
+          "reconciled_sha256": "affeafe534360169d700713e23e42d9a6378b2b085b3e7d5ada93f1ac72dab3f",
+          "verified_ledger_sha256": "acd78d9c0af458434c716ba3dc26b3af84abf709d3db3cad86d258b5ce548143"
+        }
+      ],
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "geometry": "native full-frame → original-grid native20 → unchanged saved YOLO-associated ownership; no remasking",
+      "environment": "native parser-legacy-cu113 recorded in parent/segment LAUNCH/ENVIRONMENT; common scorer uses existing sapiens2-pilot CPU environment",
+      "historical_failed_attempts": 5,
+      "population": 5000
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "revisions": {
+        "ORIGINAL_FROZEN_NATIVE": 337,
+        "CPI_PERSON_CHUNK_RESTORATION_1": 4663
+      },
+      "segments": [
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T070405365918Z/segments/CPI_ConvNeXtB_CIHP",
+          "accepted": 32,
+          "revisions": {
+            "ORIGINAL_FROZEN_NATIVE": 32
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/0",
+          "reconciled_sha256": "4238fd447e2c8c8ec9b0827e774e1bc80059fc4477bae780c2f1bf8f1d72cdb1",
+          "verified_ledger_sha256": "9ce77272e383599acb647716eba54458042873e057722d97828275c9ab6824d9"
+        },
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T151056554085Z/segments/CPI_ConvNeXtB_CIHP",
+          "accepted": 192,
+          "revisions": {
+            "ORIGINAL_FROZEN_NATIVE": 192
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/1",
+          "reconciled_sha256": "26df74204095c1e87a3fdf9435e8a37494191c87d28b1c85619933eb38d04f6b",
+          "verified_ledger_sha256": "77242ff56f2f67798a23b2580ac12388654c1fa91bce6f938e68176369366015"
+        },
+        {
+          "source_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/rounds/cpi-convnext-validation-20261028T182116250459Z/segments/CPI_ConvNeXtB_CIHP",
+          "accepted": 113,
+          "revisions": {
+            "ORIGINAL_FROZEN_NATIVE": 113
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/3",
+          "reconciled_sha256": "a8e793ee550fcf10306672c92fd20ded1d4bec8f78e6c708a397572562c1426a",
+          "verified_ledger_sha256": "bcd288038e0b8384fa3504351e2c3f329b8446121726257a9b019435754e7936"
+        },
+        {
+          "source_root": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/segments/CPI_ConvNeXtB_CIHP",
+          "accepted": 4663,
+          "revisions": {
+            "CPI_PERSON_CHUNK_RESTORATION_1": 4663
+          },
+          "audit": "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/final_audit/CPI_ConvNeXtB_CIHP",
+          "reconciled_sha256": "4263615349dfada88caa78ef4866292db0100aa82d0060520c8a64205f4b6092",
+          "verified_ledger_sha256": "816715a57181c09a06e3d90c1249eb396c80ea0ac9b1579707ba68ffc8d14532"
+        }
+      ],
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "geometry": "native full-frame → original-grid native20 → unchanged saved YOLO-associated ownership; no remasking",
+      "environment": "native parser-legacy-cu113 recorded in parent/segment LAUNCH/ENVIRONMENT; common scorer uses existing sapiens2-pilot CPU environment",
+      "historical_failed_attempts": 3,
+      "population": 5000
+    }
+  },
+  "equivalence_limit": "Bounded CPU/GPU parity and sample output equality, not population-wide bitwise equivalence to unmodified native inference.",
+  "different_evidence": {
+    "forward": "CPU/GPU function fixtures and named model-image regressions",
+    "integrity": "prior per-packet NPZ/CRC/metadata audits plus current small metadata bindings and required array decoding",
+    "scorer": "prior native saved-mask scorer agreement; new common person metrics calculated with unchanged revision2"
+  },
+  "parity_evidence": [
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNOSTIC.json",
+      "sha256": "c27108e469bdfebdaaea21e0bbc330fb905f18cc2974566e990ff167b234c68d",
+      "status": "DIAGNOSTIC_PASS",
+      "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+      "GPU_feature_native_vs_reuse": null,
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "regression": null,
+      "observed_image_ids": [
+        "0000930",
+        "0003218",
+        "0001641"
+      ]
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json",
+      "sha256": "dd2c24c8953f2794aaf58deb3d837307716de1a4de2144b4046c922381922e45",
+      "status": "PASS",
+      "revision": null,
+      "GPU_feature_native_vs_reuse": null,
+      "GPU_synthetic_native_vs_chunked": null,
+      "regression": null,
+      "observed_image_ids": []
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/GPU_DIAGNOSTIC.json",
+      "sha256": "5c41a258c10f2f6c2777f756820707f3a6cf930b7e3013a30ced96589291cb41",
+      "status": "DIAGNOSTIC_PASS",
+      "revision": "CPI_FEATURE_BUFFER_REUSE_2",
+      "GPU_feature_native_vs_reuse": "PASS_EXACT_FLOAT32_TENSORS",
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "regression": null,
+      "observed_image_ids": [
+        "0000930",
+        "0000018",
+        "0000004"
+      ]
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/CPU_ACCEPTANCE.json",
+      "sha256": "a2291ff9f83b18ee11caf10220a208b568c573d5f3b139bb3b077d6acea52b42",
+      "status": "PASS",
+      "revision": null,
+      "GPU_feature_native_vs_reuse": null,
+      "GPU_synthetic_native_vs_chunked": null,
+      "regression": null,
+      "observed_image_ids": []
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json",
+      "sha256": "fa37aaac333865a5c7fe206963b1d82e7567a4415deecad1a4eb734c3b75cd1d",
+      "status": "DIAGNOSTIC_PASS",
+      "revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+      "GPU_feature_native_vs_reuse": "PASS_EXACT_FLOAT32_TENSORS",
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "regression": null,
+      "observed_image_ids": [
+        "0000930",
+        "0000266",
+        "0000018"
+      ]
+    },
+    {
+      "path": "Human_Parsing_Benchmark/runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/CPU_ACCEPTANCE.json",
+      "sha256": "d678ced9992e49e7109f9bb82c1eaf39519023bb12efcd598c2cb3bf6e4124fe",
+      "status": "PASS",
+      "revision": null,
+      "GPU_feature_native_vs_reuse": null,
+      "GPU_synthetic_native_vs_chunked": null,
+      "regression": null,
+      "observed_image_ids": []
+    }
+  ]
+}

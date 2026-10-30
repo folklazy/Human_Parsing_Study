@@ -1,0 +1,42 @@
+{
+  "work_unit": "cpi-common-c4p-20261030-preflight",
+  "base_commit": "ca5b3bbb6bf08bb9e8f8f4b30da41e626d5c0a94",
+  "scope": "Saved-artifact common C4-P orchestration, compact evidence and analysis only; no inference, native frozen code/config/results unchanged",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/score_cpi_common_saved.py",
+      "public_path": "Human_Parsing_Benchmark/scripts/score_cpi_common_saved.py",
+      "sha256": "e9cc888c3ec421d1e926f3c0ba3d79c9ce2bbf47e8cacdcecf1b33dbe19e2949",
+      "before_sha256": null,
+      "bytes": 17445
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json",
+      "sha256": "fc5f8613d33eca7e41cc86c553c8edbe64f306b03e83629ff243f4997e971483",
+      "before_sha256": null,
+      "bytes": 82851
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/COMPATIBILITY.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/COMPATIBILITY.json",
+      "sha256": "37e4a8ade66c635d2053a751db9496b11e0757758abb0d32731f034c7e99f446",
+      "before_sha256": null,
+      "bytes": 10260
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "689d379acb267c111454e5c5f9f150a50b8b95044db83d0bd11da56643f4a87a",
+      "before_sha256": "6e373f080720b0c4e8bb23bd4c7d3d11368b8ed29127297af6e990b1e32c5920",
+      "bytes": 2297
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "b62fcc626bca201a191d61d61ac0d4d09da315639bda5c1a8dfdd622314d8c81",
+      "before_sha256": "ab6c43b6c1f72b5cadda25160cb542ed5bd53e98b884fcaccb9edcb7b58d3ab7",
+      "bytes": 67892
+    }
+  ]
+}

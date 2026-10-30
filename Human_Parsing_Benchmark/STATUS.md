@@ -1,3 +1,5 @@
+> **Current work: CPI saved-only common C4-P compatibility PASS; CPU scoring prepared, not launched yet.** Exact5,000 accepted packets per CPI; no model inference. Frozen common revision2 unchanged. Previous closure below is historical; next launch two bounded CPU streams and normalize nine-system results.
+
 # Human Parsing Benchmark — current status
 
 Updated: 2026-10-30T10:44:14.373500+07:00 (Asia/Bangkok)
