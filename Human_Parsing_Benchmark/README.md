@@ -1,4 +1,4 @@
-> **Current: CPI-Parser R50 CIHP INCOMPLETE, 912/5000.** [Canonical completion report](reports/cpi-r50-feature-20261029T175338825178Z.md) → [STATUS](STATUS.md). No automatic next model/retry; previous results preserved.
+> **Current: execution complete — native20 6 systems; common C4-P 7 systems; 9 unique checkpoints, each 5,000 CIHP VAL IDs.** [รายงานรวมสำหรับส่งตรวจ](reports/CIHP_EVALUATION_HANDOFF_TH.md) → [STATUS](STATUS.md). CPI common-view scoring remains undone; no new worker launched by this review.
 
 The notices below are historical snapshots; STATUS is current.
 

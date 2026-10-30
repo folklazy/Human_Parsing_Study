@@ -1,3 +1,5 @@
+> **Current closure review (2026-10-30T10:44:14.373500+07:00):** Native20 6/6 COMPLETE and C4-P revision2 7/7 COMPLETE, 9 unique checkpoints. [Current handoff](reports/CIHP_EVALUATION_HANDOFF_TH.md) / [STATUS](STATUS.md). Earlier scope/outcome sections below are dated history; no new execution is authorized by this closure. CPI common-view scoring and final selection remain separate work.
+
 > **Current scope supersedes prior full-evaluation-pending statements:** approved full C4-P revision2 on official CIHP5000; saved-only four systems + Sapiens2 0.4B. [Full config](configs/cihp_sapiens_c4p_full.json) / [report](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md). Stop after this batch.
 
 # Human Parsing Benchmark — current plan

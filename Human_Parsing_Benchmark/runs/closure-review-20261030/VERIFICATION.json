@@ -1,0 +1,307 @@
+{
+  "kind": "READ_ONLY_CLOSURE_REVIEW_NOT_NEW_EXECUTION_ACCEPTANCE",
+  "checked_Bangkok": "2026-10-30T10:44:14.373500+07:00",
+  "base_public_commit": "284e9eaeed21ba6ecb23b32da610fd4846a60ec2",
+  "checkpoints_with_complete_inference": 9,
+  "native20_complete_systems": 6,
+  "C4P_complete_systems": 7,
+  "population_count": 5000,
+  "checks": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "view": "native20",
+      "exact_unique_population": true,
+      "basis": "assembled terminal FRAMES ledger + previously accepted completion; no packet rehash/rescore"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "view": "native20",
+      "exact_unique_population": true,
+      "basis": "assembled terminal FRAMES ledger + previously accepted completion; no packet rehash/rescore"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "view": "native20",
+      "exact_unique_population": true,
+      "basis": "assembled terminal FRAMES ledger + previously accepted completion; no packet rehash/rescore"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "view": "native20",
+      "exact_unique_population": true,
+      "basis": "existing final-audit/NPZ/saved-mask PASS in canonical completion; reused without new full audit"
+    },
+    {
+      "model_id": "CPI_R50_CIHP",
+      "view": "native20",
+      "exact_unique_population": true,
+      "reused": 912,
+      "new_verified": 4088,
+      "historical_failed_attempts": 5,
+      "basis": "existing per-segment RECONCILED verified_ids union and compact/raw completion agreement; no new bulk hash/scoring"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "view": "native20",
+      "exact_unique_population": true,
+      "reused": 337,
+      "new_verified": 4663,
+      "historical_failed_attempts": 3,
+      "basis": "existing per-segment RECONCILED verified_ids union and compact/raw completion agreement; no new bulk hash/scoring"
+    },
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [
+        {
+          "image_id": "0006307",
+          "phase": "full",
+          "stage": "MODEL_LOAD",
+          "status": "FAILED"
+        }
+      ],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "view": "C4-P",
+      "exact_unique_population": true,
+      "score_file_membership": true,
+      "terminal_observation_count": 5000,
+      "retained_failed_ledger_events": [],
+      "basis": "terminal/reused ledger IDs and score filenames; existing atomic-readback/saved-mask evidence reused, no new score computation"
+    }
+  ],
+  "required_small_bindings": {
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": {
+      "sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "matches_current_and_launch_commit": true
+    },
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": {
+      "sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "matches_current_and_launch_commit": true
+    },
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": {
+      "sha256": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+      "matches_current_and_launch_commit": true
+    }
+  },
+  "GPU_snapshot": "0, Tesla T4, 0 MiB, 14912 MiB, 0 %",
+  "active_project_python_workers": [],
+  "sources": {
+    "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": {
+      "sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+      "bytes": 1895656
+    },
+    "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/COMPLETION.json": {
+      "sha256": "6f80e767f8d78194cf137bbbdf9f289de96a47d92b30aca6d3e7f03015e2d2cc",
+      "bytes": 11133
+    },
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/QANet_CIHP_HRNetW48_512x384/METRICS.json": {
+      "sha256": "6e51c772cd92dad50f528dd93b761314118857b9c2711fd8906996d266dd535c",
+      "bytes": 3887
+    },
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/M2FP_R101_CIHP/METRICS.json": {
+      "sha256": "7b1649edf5fb0103443083058a78f3f62b2b012e4a5972448a7bbcba7efdefec",
+      "bytes": 6027
+    },
+    "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/continuations/continuation-20261028T073741308461Z/assembled/validation/D2FP_R101_CIHP/METRICS.json": {
+      "sha256": "fd737336e4f835485f1439bc2adf6eed43592145cd20c0576d2cc773af53a855",
+      "bytes": 6030
+    },
+    "Human_Parsing_Benchmark/runs/cihp-native-six-20261028T034103254470Z/rpr-cihp-shared-20261028T155439603873Z/COMPLETION.json": {
+      "sha256": "b03cef16f6209ba1c08cff89c310a4d6ea8031c8647ebb29ec01aa40f4a1751e",
+      "bytes": 10545
+    },
+    "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/COMPLETION.json": {
+      "sha256": "24db5f019a4e4a6fda623c1e7175bbc445850820e431032ed5431ff74ad75a17",
+      "bytes": 28939
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/COMPLETION.json": {
+      "sha256": "24db5f019a4e4a6fda623c1e7175bbc445850820e431032ed5431ff74ad75a17",
+      "bytes": 28939
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/SEGMENT_PLAN.json": {
+      "sha256": "8cab4d8c8b24cd98363a255af886fae112c100d098f37f0675d5169fedeb5962",
+      "bytes": 82209
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/0/RECONCILED.json": {
+      "sha256": "790986648dbcb1db086869255504602b6854d23a9681ab5aef1b29705e5f7daa",
+      "bytes": 83451
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/1/RECONCILED.json": {
+      "sha256": "ca278a42704dc0eae0fd8408efa52ef452e497c06f754b9c4f6d591f2d393fe3",
+      "bytes": 84203
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/2/RECONCILED.json": {
+      "sha256": "bad9e58d603086c7597413eb532721fa5d5dc71bf877c39571b5d5a7260c3616",
+      "bytes": 85611
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/3/RECONCILED.json": {
+      "sha256": "bc1cf80dcf22240b815c2ca0153b4fa4258fab9dd500238bbf8f9767208e42e8",
+      "bytes": 83509
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/4/RECONCILED.json": {
+      "sha256": "3148f860cebf7eeeae4d8b026b9c4686f3ece86e9f07bcc39db3b8cf58141aa6",
+      "bytes": 83517
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/reuse_audits/5/RECONCILED.json": {
+      "sha256": "7a680e39753ac407123f4ce7052b19a962c52974b87da9f4b532f1ae590e70be",
+      "bytes": 83997
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/r50-20261029T183615747685Z/final_audit/CPI_R50_CIHP/RECONCILED.json": {
+      "sha256": "affeafe534360169d700713e23e42d9a6378b2b085b3e7d5ada93f1ac72dab3f",
+      "bytes": 86202
+    },
+    "Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/COMPLETION.json": {
+      "sha256": "14e9ea51bf3cac462a973821ead8f5a7e2ba3344e32d01882ce21cd70f7d19d1",
+      "bytes": 18727
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/COMPLETION.json": {
+      "sha256": "14e9ea51bf3cac462a973821ead8f5a7e2ba3344e32d01882ce21cd70f7d19d1",
+      "bytes": 18727
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/SEGMENT_PLAN.json": {
+      "sha256": "b4f0291b36fb5d92ceea8ddcd6aea5d59deeeeac1e4971bbe3a543fd31a29e1b",
+      "bytes": 79936
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/0/RECONCILED.json": {
+      "sha256": "4238fd447e2c8c8ec9b0827e774e1bc80059fc4477bae780c2f1bf8f1d72cdb1",
+      "bytes": 84490
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/1/RECONCILED.json": {
+      "sha256": "26df74204095c1e87a3fdf9435e8a37494191c87d28b1c85619933eb38d04f6b",
+      "bytes": 85043
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/2/RECONCILED.json": {
+      "sha256": "973605ec316ed095fd319c7c3b8b034d7a713ac59e9ee241f736542fa76dd2c3",
+      "bytes": 83521
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/reuse_audits/3/RECONCILED.json": {
+      "sha256": "a8e793ee550fcf10306672c92fd20ded1d4bec8f78e6c708a397572562c1426a",
+      "bytes": 84914
+    },
+    "Human_Parsing_Benchmark/outputs/cpi_continuations/convnext-20261029T160359716460Z/final_audit/CPI_ConvNeXtB_CIHP/RECONCILED.json": {
+      "sha256": "4263615349dfada88caa78ef4866292db0100aa82d0060520c8a64205f4b6092",
+      "bytes": 86220
+    },
+    "Human_Parsing_Benchmark/configs/cihp_sapiens_c4p_full.json": {
+      "sha256": "3335a8ff86ba8f5ffef5a24d5a65f382562f8fa24996c4dee811606520dccd9e",
+      "bytes": 178252
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/QANet_CIHP_HRNetW48_512x384/COMPLETION.json": {
+      "sha256": "23ccdd2c9c71d86f5954f25fcd73303a894b2399236201adddf8716c6943e237",
+      "bytes": 758
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/QANet_CIHP_HRNetW48_512x384/METRICS.json": {
+      "sha256": "52ab82c9126da5ef9eb0ba886a325fbf6ee1a900091c56ca15fa15aebc1282f7",
+      "bytes": 9461
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/M2FP_R101_CIHP/COMPLETION.json": {
+      "sha256": "8b799001dcc1d60943a78c920f783368c6b9894638709374f3bc1c97a59098f3",
+      "bytes": 745
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/M2FP_R101_CIHP/METRICS.json": {
+      "sha256": "129b7b0953b9d073c4006e1bb16c3b1669a6e4bb7fb192bdd632b93518ad9df9",
+      "bytes": 9467
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/COMPLETION.json": {
+      "sha256": "009274b16e8b5b78589447d01ec19d5ab9f1e59a7b9292ad9ef2bd12494360cf",
+      "bytes": 745
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/METRICS.json": {
+      "sha256": "dd20d07556fcd1b82903a616a5ade03469dad83860bd1b32439b06b8534a2d2e",
+      "bytes": 9467
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/COMPLETION.json": {
+      "sha256": "8bb426eb4befd88cefd9d854813ca2914354976d9c5c3387a007c618efaa88dc",
+      "bytes": 739
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/METRICS.json": {
+      "sha256": "457a0569edf02e4a5d62f7634ca2dcb2d3fa450530594c66d44ea8f51ff2a4bd",
+      "bytes": 9470
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/COMPLETION.json": {
+      "sha256": "4f9659c6d9b28c94170d0feeef0694d75d41ae5078c0c20b5c1c29149714bbba",
+      "bytes": 821
+    },
+    "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/METRICS.json": {
+      "sha256": "150ea776cd4c0cd345a2383201ad307875945cc95ed81403717ad03b4d259842",
+      "bytes": 11311
+    },
+    "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/COMPLETION.json": {
+      "sha256": "8927f9e6ca22302e8671805e5d7bece9d4661aa04ee2a056df07075f519ae8d1",
+      "bytes": 1482
+    },
+    "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/METRICS.json": {
+      "sha256": "881d376917834c9041b0a3b6ed7ce58b706303005d41cbc844baa6ca8dd701b5",
+      "bytes": 11215
+    },
+    "Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/COMPLETION.json": {
+      "sha256": "46474b2754b2001fd9e86e332d223cb2735b267629c54697d0decf469190b9e0",
+      "bytes": 1467
+    },
+    "Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/METRICS.json": {
+      "sha256": "4d24f91943d128fea8b8599130e16728c839860c17136423e3858414651aeea7",
+      "bytes": 11178
+    }
+  },
+  "new_inference": false,
+  "new_tests": false,
+  "new_full_rescore": false,
+  "bulk_NPZ_rehash": false,
+  "limitations": [
+    "Completion relies on prior packet/scorer acceptance; this review does not independently recalculate all scores.",
+    "Historical failed attempts remain; zero unresolved failures is not zero historical failures.",
+    "CPI common C4-P not evaluated; native20 and C4-P are separate tasks.",
+    "Sapiens completion primary field is null; authoritative full scores are METRICS.primary, not the unused completion field."
+  ]
+}

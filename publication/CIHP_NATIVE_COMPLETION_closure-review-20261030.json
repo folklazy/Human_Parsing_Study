@@ -1,0 +1,127 @@
+{
+  "work_unit": "closure-review-20261030",
+  "base_commit": "284e9eaeed21ba6ecb23b32da610fd4846a60ec2",
+  "scope": "Read-only nine-checkpoint closure/handoff, native6/common7 canonical summaries and missing R50 terminal compact records only; no inference/source/config changes or raw assets",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "7dfc9d4aafce8810f134de006f5a7cf00dc213c7c25ad5e5cbe9d2f361071386",
+      "before_sha256": "c1864e2e769cb68b105b6798bacffb1ec6d729dbca8f2a00c950e39656ad9b71",
+      "bytes": 11219
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "5d7e5d064506b1c1a6b8d56308a193860277a04f0460d9b7a59630238fd767af",
+      "before_sha256": "ef62ce92d85143f258380caee1ac0d6b6baf57da226041e9e43e45340e3b3c05",
+      "bytes": 22290
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "6e373f080720b0c4e8bb23bd4c7d3d11368b8ed29127297af6e990b1e32c5920",
+      "before_sha256": "f0a6e16057ddd0e909be61981b2bc5045b845923d0d44d6300f992c30a87a9cf",
+      "bytes": 1988
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "ab6c43b6c1f72b5cadda25160cb542ed5bd53e98b884fcaccb9edcb7b58d3ab7",
+      "before_sha256": "0f69eabc07dee6115c71a366d5796866801cc4801d6dc045c874d29f1c452a16",
+      "bytes": 66868
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_EVALUATION_HANDOFF_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_EVALUATION_HANDOFF_TH.md",
+      "sha256": "776f3e1d184ef4586f1fb4cccedb20db02b2a9308332664a83b6327b6e93ee25",
+      "before_sha256": null,
+      "bytes": 25028
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json",
+      "sha256": "ea2df24f4fc85b1f100b9c39f2f375cc0b33209e7ab6b2282f19c70d25255cd9",
+      "before_sha256": "cf8974eb5309b3601fed782205b6c7ab192a11d08e8048bbb5d472d810fd5029",
+      "bytes": 5914
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/CIHP_NATIVE_COHORT_OVERVIEW.csv",
+      "sha256": "0ce398c6e10c00cd85fcf885d16a40f26d3bf8c066d16283955f8b7cdb0eb309",
+      "before_sha256": "fd49aaa00ee9b031e46ef71f790657641f148229947dd615998234db99f6ab21",
+      "bytes": 2066
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/closure-review-20261030/VERIFICATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/closure-review-20261030/VERIFICATION.json",
+      "sha256": "75e0e1a7166bfb84c339c7b57a2499dbbaa35241c38ce814edf1b4e155ecf45b",
+      "before_sha256": null,
+      "bytes": 14816
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/closure-review-20261030/NATIVE_PER_CLASS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/closure-review-20261030/NATIVE_PER_CLASS.csv",
+      "sha256": "7a131e6d2a25c3c4525a1162994e94ae57730b16f4cae87a40d6ca4f580c25e0",
+      "before_sha256": null,
+      "bytes": 7730
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/closure-review-20261030/PERSON_METRICS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/closure-review-20261030/PERSON_METRICS.csv",
+      "sha256": "c65ed0f3d64c609e88b7b24e43a491e88c8f2e83410579d3a08aac5270ee2890",
+      "before_sha256": null,
+      "bytes": 4625
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/closure-review-20261030/COMMON_SUMMARY.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/closure-review-20261030/COMMON_SUMMARY.csv",
+      "sha256": "2818c2f8ac8259a19987e42b764105caf5de89a257d77e8823b2af0d60f33fdf",
+      "before_sha256": null,
+      "bytes": 2388
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/closure-review-20261030/NATIVE_SUMMARY.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/closure-review-20261030/NATIVE_SUMMARY.csv",
+      "sha256": "f5b1209b292eee8436503e547126d779970a0dc2b76d296b5532fadec564b556",
+      "before_sha256": null,
+      "bytes": 1915
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/RESOURCE_POLICY.json",
+      "public_path": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/RESOURCE_POLICY.json",
+      "sha256": "ae21dc4345c64f35d82c8c490f45ce6209718262478d163f5a993c4874f6c5e2",
+      "before_sha256": null,
+      "bytes": 462
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/LAUNCH.json",
+      "public_path": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/LAUNCH.json",
+      "sha256": "171d1a447ce1cca80dc2c1ff83099fa92996913e55bef4b8a02bb731dd632327",
+      "before_sha256": null,
+      "bytes": 1243
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/COMPLETION.json",
+      "sha256": "24db5f019a4e4a6fda623c1e7175bbc445850820e431032ed5431ff74ad75a17",
+      "before_sha256": null,
+      "bytes": 28939
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/SEGMENT_PLAN.json",
+      "public_path": "Human_Parsing_Benchmark/runs/r50-20261029T183615747685Z/SEGMENT_PLAN.json",
+      "sha256": "8cab4d8c8b24cd98363a255af886fae112c100d098f37f0675d5169fedeb5962",
+      "before_sha256": null,
+      "bytes": 82209
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/r50-20261029T183615747685Z.md",
+      "public_path": "Human_Parsing_Benchmark/reports/r50-20261029T183615747685Z.md",
+      "sha256": "f344b306e7b77df3cdb923c7c67664e0f38fca929ada793d75d19e553e357a1b",
+      "before_sha256": null,
+      "bytes": 673
+    }
+  ],
+  "launch_source_unchanged": true
+}
