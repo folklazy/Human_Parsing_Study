@@ -65,6 +65,7 @@ Human_Parsing_Benchmark/metrics/presentation-four-20261028T184321049969Z/RPR_CIH
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/rpr-cihp-shared-20261028T155439603873Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/sapiens08-c4p-20261029T081254180014Z/PER_TARGET.csv
+Human_Parsing_Benchmark/metrics/sapiens1b-c4p-20261029T200113781375Z/PER_TARGET.csv
 Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md
 Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_DRAFT.json
 Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_LABELS.csv
@@ -298,8 +299,10 @@ Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/REPORT_TH.md
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/RESOURCE_READINESS.json
 Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/REUSE_COMPATIBILITY.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/AUTHORIZATION.json
+Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/FULL_CONFIG.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/LAUNCH.json
+Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/METRICS.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/PILOT_COMPLETION.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/PILOT_CONFIG.json
 Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/READINESS.json
@@ -922,6 +925,7 @@ publication/CIHP_NATIVE_COMPLETION_r50-20261029T181200001439Z-launch.json
 publication/CIHP_NATIVE_COMPLETION_rpr-cihp-shared-20261028T155439603873Z.json
 publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_sapiens08-c4p-20261029T081254180014Z-pilot-pass-full-freeze.json
+publication/CIHP_NATIVE_COMPLETION_sapiens1b-c4p-20261029T200113781375Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_sapiens1b-c4p-20261029T200113781375Z-pilot-pass-full-freeze.json
 publication/CIHP_NATIVE_REPORTER_CONTINUATION_20261028.json
 publication/CIHP_NATIVE_REPORT_PREPARATION_20261028.json
