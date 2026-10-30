@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checked_Bangkok": "2026-10-30T11:11:02.674074+07:00",
+  "common_complete": 9,
+  "exact_IDs_per_system": 5000,
+  "accepted_seven_sources_unchanged": true,
+  "canonical_primary_normalized_without_mutation": true,
+  "aggregate_projection_matches_histograms": true,
+  "full_precision_arithmetic": true,
+  "denominators_from_bindings": {
+    "status": "COMPLETE_GT_ONLY_NO_MODEL_SCORING",
+    "count": 5000,
+    "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+    "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+    "manifest_sha256": "1a6f635ffdd0da1b767a6d7279e0437130bdfdd47e510fbfdaeb9b047cc82cc0",
+    "manifest": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings/BINDINGS.jsonl",
+    "global_support": [
+      533617773,
+      37932488,
+      40760850,
+      148199276,
+      38702345,
+      77446292
+    ],
+    "G_loc": 17520,
+    "G_sem_C4": 17454,
+    "owner_unknown_pixels": 0,
+    "source_VOID_pixels": 0
+  },
+  "inference_calls": 0,
+  "new_GPU_diagnostics": 0,
+  "full_native_rescore": false,
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "note": "New CPI person scoring; seven accepted common metrics reused. Source native metadata/audit identities checked; no population-wide forward-equivalence claim.",
+  "accepted_native_and_previous_evidence_hashes_unchanged": true,
+  "scientific_source_hashes_unchanged": true,
+  "CPU_checkpoint_resume_scope": "Explicit resume implemented with config/input/score hashes and immutable ledgers; no forced-interruption experiment was performed in this successful round.",
+  "projection_pixel_checks": {
+    "CPI_R50_CIHP": 10,
+    "CPI_ConvNeXtB_CIHP": 10
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "image_id": "0000001",
+      "source_fingerprint": "fc779df6dfbfb25191ff6486aa5f4eb74788f92e41eb10f1e865a206ea940b3e",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0000018",
+      "source_fingerprint": "2b9f11f74e4cfb06f25eac31c9c9f8d1c51a502edfe5221487ebeea98e06816e",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0000266",
+      "source_fingerprint": "0f81f8fa31c8ba1f0ff5ad833e55da43228ccf835f0428d1b15f5cd094a8f56e",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0001413",
+      "source_fingerprint": "ec1181f1c79d0558bc439f34beeb016e09f12678824468b494354bff2cbcd273",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0001538",
+      "source_fingerprint": "63ac2273faba4fffd9165b09afc319c5039eb29823f6db9032e9501b1e8a13a4",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0006909",
+      "source_fingerprint": "527d36f64dc65c0f1de2a5de27f3d0f443924dbbdbaf9348e0d8bad30cb0962a",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0008467",
+      "source_fingerprint": "bd222d5d88ae7b39f6631d9d4addbb0bc072cd2582d512fedd5cb6d8051abbf8",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0021448",
+      "source_fingerprint": "cb9134f0037a638aab76018e047afdb213171e294fb09579e1964bc0fa76741d",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0027897",
+      "source_fingerprint": "3e2842543cd71266162fa1e31760c96187a4b6f729378ceb9c69cc57a0e18c19",
+      "native_and_mapped_pixel_confusion_exact": true
+    },
+    {
+      "image_id": "0031248",
+      "source_fingerprint": "163a7e33609eec3ed60a6cf3ab3ad3129cc542b4dfa1fcc53d8853328102205b",
+      "native_and_mapped_pixel_confusion_exact": true
+    }
+  ],
+  "resume_note": "Any samples committed by prior attempt remain evidenced in their score/provenance files; no source scores overwritten."
+}

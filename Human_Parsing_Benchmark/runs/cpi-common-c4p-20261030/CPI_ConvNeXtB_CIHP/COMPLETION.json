@@ -1,0 +1,26 @@
+{
+  "run_id": "cpi-common-c4p-20261030",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "status": "COMPLETE",
+  "pid": 911434,
+  "start_utc": "2026-10-30T04:01:30.142213+00:00",
+  "expected": 5000,
+  "complete": 5000,
+  "config_sha256": "fc5f8613d33eca7e41cc86c553c8edbe64f306b03e83629ff243f4997e971483",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "new_model_calls": 0,
+  "resource_policy": "CPU_SAVED_ARTIFACTS_ONLY; source GPU runs SHARED_GPU_QUALITY_ONLY",
+  "current_image": "0038401",
+  "missing": 0,
+  "duplicate": 0,
+  "invalid": 0,
+  "failed": 0,
+  "end_utc": "2026-10-30T04:07:56.049750+00:00",
+  "queue_stopped": true,
+  "metrics_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json",
+  "primary_source": "METRICS.json.primary",
+  "source_implementation_revisions": {
+    "ORIGINAL_FROZEN_NATIVE": 337,
+    "CPI_PERSON_CHUNK_RESTORATION_1": 4663
+  }
+}

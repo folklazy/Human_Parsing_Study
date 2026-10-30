@@ -1,0 +1,42 @@
+{
+  "status": "FAILED_BEFORE_SCORER_IMPORT",
+  "reason": "launcher resolved venv interpreter symlink to system Python; numpy unavailable",
+  "workers": [
+    {
+      "model_id": "CPI_R50_CIHP",
+      "pid": 911288,
+      "SID": 911288,
+      "command": [
+        "/usr/bin/python3.12",
+        "-u",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/score_cpi_common_saved.py",
+        "--config",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json",
+        "--model",
+        "CPI_R50_CIHP"
+      ],
+      "log": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/CPU.log",
+      "launch_commit": "4adcfe49a4f5165ff37aa0b0765113de94cb213f",
+      "model_inference": false
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "pid": 911289,
+      "SID": 911289,
+      "command": [
+        "/usr/bin/python3.12",
+        "-u",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/score_cpi_common_saved.py",
+        "--config",
+        "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json",
+        "--model",
+        "CPI_ConvNeXtB_CIHP"
+      ],
+      "log": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/CPU.log",
+      "launch_commit": "4adcfe49a4f5165ff37aa0b0765113de94cb213f",
+      "model_inference": false
+    }
+  ],
+  "scores_written": 0,
+  "model_calls": 0
+}

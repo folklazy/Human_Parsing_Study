@@ -1,0 +1,83 @@
+{
+  "run_id": "cpi-common-c4p-20261030",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030",
+  "model_inference": false,
+  "models": {
+    "CPI_R50_CIHP": {
+      "files": {
+        "INPUTS.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/INPUTS.jsonl",
+          "sha256": "32e25853fead69e3ee61d81e021c77fef2a2fae90e82fd6ffc51a26b3aa2f3f6",
+          "bytes": 4221493
+        },
+        "SOURCE_CONFUSION.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/SOURCE_CONFUSION.json",
+          "sha256": "4b5f4a741dc73219df09fb6e77eb5b7bfa0e5a8c1eaae2dcf22ae660f9610282",
+          "bytes": 4303
+        },
+        "SCORING.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/SCORING.jsonl",
+          "sha256": "d07880cbbae63104f2255ceecb3f0a9680ee248496d9da2baba33f28e758bc8c",
+          "bytes": 1335000
+        },
+        "ATTEMPTS.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/ATTEMPTS.jsonl",
+          "sha256": "5abe7dc27d15cd57dab57cf37f3241983e52b6c1f5f157d94238025b81250605",
+          "bytes": 242
+        },
+        "COMPLETION.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/COMPLETION.json",
+          "sha256": "54a032e9ec536ff0d165e71b1ae29f35ef7e5a4ef0c0f6a58e320ffb2fbf5634",
+          "bytes": 964
+        },
+        "METRICS.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json",
+          "sha256": "2a8da92e0958bae50648ee9fce4249b663d6f4d43c3ebe2b0e8933f6485508bd",
+          "bytes": 9720
+        }
+      },
+      "source_prediction_NPZ": "Referenced only; not copied or modified",
+      "scores_directory": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_R50_CIHP/scores",
+      "score_files": 5000,
+      "retained_bytes": 42184160
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "files": {
+        "INPUTS.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/INPUTS.jsonl",
+          "sha256": "98eb2ec93aa956ef466f0791735877de729fff0568546740ee72f6e89b86cc0a",
+          "bytes": 4301748
+        },
+        "SOURCE_CONFUSION.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/SOURCE_CONFUSION.json",
+          "sha256": "321a0815ba03fdedaeca917579ca39c74075a293ecf44e80981cd70b71d44b2d",
+          "bytes": 4282
+        },
+        "SCORING.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/SCORING.jsonl",
+          "sha256": "582fe6e9f03f0db52faad32d0de57cfdb1404e9a43e31d83011cdcd95fa14713",
+          "bytes": 1335000
+        },
+        "ATTEMPTS.jsonl": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/ATTEMPTS.jsonl",
+          "sha256": "722e73252b23ec46615508b7502e6b8c6d116fb5b2c8fc76c4ea76a8e96dea20",
+          "bytes": 242
+        },
+        "COMPLETION.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/COMPLETION.json",
+          "sha256": "2b07de377e8513800ec00937ff342fb91ff1db220329e842a005cb1033618f68",
+          "bytes": 941
+        },
+        "METRICS.json": {
+          "path": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json",
+          "sha256": "7acb2e97ff817904280485584778413cf2b362f4e9c50a9fbcf13f6bc26f4557",
+          "bytes": 9665
+        }
+      },
+      "source_prediction_NPZ": "Referenced only; not copied or modified",
+      "scores_directory": "Human_Parsing_Benchmark/outputs/common_view/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/scores",
+      "score_files": 5000,
+      "retained_bytes": 42539174
+    }
+  }
+}

@@ -1,3 +1,5 @@
+> **Historical closure snapshot at 2026-10-30 10:44 Bangkok. Superseded for current common-view availability:** CPI common scoring is now complete and common C4-P is **9/9**. Use [CIHP_COMMON_NINE_RESULTS_TH.md](CIHP_COMMON_NINE_RESULTS_TH.md) and [STATUS](../STATUS.md) for current results. The 7/7 / CPI-not-yet-common statements below describe this earlier snapshot; native results/history remain valid.
+
 # สรุปตรวจปิดรอบ Human Parsing สำหรับส่งให้ผู้ช่วยตรวจต่อ
 
 ตรวจเมื่อ **2026-10-30T10:44:14.373500+07:00 (เวลาไทย UTC+07)** — สถานะ **EXECUTION_COMPLETE / HANDOFF_READY_WITH_LIMITATIONS**

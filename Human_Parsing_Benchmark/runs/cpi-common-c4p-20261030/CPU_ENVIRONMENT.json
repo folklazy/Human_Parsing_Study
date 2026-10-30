@@ -1,0 +1,14 @@
+{
+  "scope": "CPU saved-artifact common revision2 scoring environment",
+  "python_executable": "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+  "python_version": "3.12.3",
+  "prefix": "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pillow": "12.3.0"
+  },
+  "GPU_framework_imported": false,
+  "configuration_sha256": "fc5f8613d33eca7e41cc86c553c8edbe64f306b03e83629ff243f4997e971483",
+  "relationship": "Existing sapiens2-pilot environment, same common scorer stack used for seven accepted results; no package/environment changes."
+}

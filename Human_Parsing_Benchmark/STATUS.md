@@ -1,18 +1,17 @@
-> **Current work: CPI saved-only common C4-P compatibility PASS; CPU scoring prepared, not launched yet.** Exact5,000 accepted packets per CPI; no model inference. Frozen common revision2 unchanged. Previous closure below is historical; next launch two bounded CPU streams and normalize nine-system results.
-
 # Human Parsing Benchmark — current status
 
-Updated: 2026-10-30T10:44:14.373500+07:00 (Asia/Bangkok)
+Updated: 2026-10-30T11:11:02.869193+07:00 (Asia/Bangkok)
 
-**EXECUTION_COMPLETE / HANDOFF_READY_WITH_LIMITATIONS** — [รายงานรวมสำหรับส่งตรวจ](reports/CIHP_EVALUATION_HANDOFF_TH.md).
+**COMMON_C4P_COMPLETE_9_OF_9 / ANALYSIS_READY_FOR_REVIEW** — [รายงานผลหลักและ shortlist](reports/CIHP_COMMON_NINE_RESULTS_TH.md).
 
-- 9 unique checkpoints มี canonical observations ครบตัวละ5,000 official CIHP Validation IDs.
-- Native20: QANet/M2FP/D2FP/RP-R-CNN/CPI R50/CPI ConvNeXt-B **6/6 COMPLETE**.
-- Common C4-P revision2: QANet/M2FP/D2FP/RP-R-CNN + Sapiens2 0.4B/0.8B/1B **7/7 COMPLETE**.
-- CPIสองตัวยังไม่ได้ทำcommon C4-P; ห้ามเทียบnative20คะแนนกับcommon4โดยตรงหรืออ้าง9ระบบมีcommonleaderboardแล้ว.
-- R50ล่าสุด [completion](runs/r50-20261029T183615747685Z/COMPLETION.json): reuse912 +new4088=5000; missing/duplicate/failed/invalid0; ended2026-10-30T02:56:12+07:00. รอบ912/5000ก่อนหน้ายังคงhistoricalINCOMPLETE พร้อมOOMhistory.
-- ไม่มีprojectinference/controllerPythonทำงานเมื่อเช็ค GPU `0, Tesla T4, 0 MiB, 14912 MiB, 0 %`. tmux sessionsที่เหลือไม่ใช่liveworker; ไม่มีkill/restart/newmodel.
+- Official CIHP Validation exact5,000 unique IDs ต่อระบบ common C4-P revision2 ครบ9/9 checkpoints.
+- รอบนี้ CPI R50/ConvNeXt-B ใช้ saved artifacts เท่านั้น ครบตัวละ5,000; missing/duplicate/invalid/failed0. อีก7ระบบreuse accepted canonical common metrics ไม่มีrescoreทั้งชุด.
+- Native20ยังครบ6/6และคงผลเดิม; common/global scoresไม่ปะปนกับnative20.
+- M2FP_R101_CIHP สูงสุด global IoU ทั้งสี่ targets และ C4-P mean83.623%; QANetสูงสุด Q_C4_GT ทั้งmatching0.50/0.75แต่FPมากกว่า. ShortlistจากCIHP: M2FPหลัก, QANetสำหรับGT-personQ, CPIConvNeXt-Bเป็นtrade-offเพิ่มเติม ไม่ใช่deploymentacceptance.
+- Faceใช้CIHP reference; SapiensFace_Neckเป็นproxy, Upper/Lower non-Dress, OTHER/VOIDคงrevision2 ไม่มีmapping/settingsเปลี่ยนจากคะแนน.
 
-Current native index: [CIHP_NATIVE_COHORT_INDEX](manifests/CIHP_NATIVE_COHORT_INDEX.json). [Verification scope](runs/closure-review-20261030/VERIFICATION.json) ระบุสิ่งที่ตรวจและหลักฐานเดิมที่reuse ไม่มีfullNPZrehash/fullrescore/testsใหม่.
+[Normalized result index](manifests/CIHP_COMMON_RESULT_INDEX.json) ประกาศcanonicalMETRICS.primaryและlegacycompletionnullเหตุผลโดยไม่แก้historicalcompletion. [Compatibility](runs/cpi-common-c4p-20261030/COMPATIBILITY.json), [parity review](runs/cpi-common-c4p-20261030/PARITY_REVIEW.json), [verification](runs/cpi-common-c4p-20261030/FINAL_VERIFICATION.json), [external artifact references](runs/cpi-common-c4p-20261030/ARTIFACT_MANIFEST.json).
 
-Next action: ส่งรายงานรวม/CSVให้ผู้review แล้วตัดสินงานanalysisหรือCPIcommonevaluationแยก ไม่มีautomaticbenchmark/retry/newexperiment. ยังไม่ประกาศoverallwinner/CCTVready/clean speed ranking. Historical attempts/configs/sourceGT/results preserved.
+CPIประวัติOOM/recovery/source-revisionmixคงครบ ไม่มีpopulationwidebitwiseequivalenceclaim. CPUscoringสองstreamจบแล้ว ไม่มีnewmodelinference/GPUdiagnostic/training/OOMrepair/color/CCTV ไม่มีcleanlatency/FPS/VRAMranking.
+
+Next action: ส่งรายงานและCSVให้ผู้review แล้วผู้ใช้ตัดสินconfiguration/ขั้นตอนต่อไป ไม่มีautomaticexperimentเพิ่ม. [Previous closure handoff](reports/CIHP_EVALUATION_HANDOFF_TH.md) เป็นsnapshotก่อนCPIcommon.

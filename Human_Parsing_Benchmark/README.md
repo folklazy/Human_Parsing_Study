@@ -1,4 +1,4 @@
-> **Current: execution complete — native20 6 systems; common C4-P 7 systems; 9 unique checkpoints, each 5,000 CIHP VAL IDs.** [รายงานรวมสำหรับส่งตรวจ](reports/CIHP_EVALUATION_HANDOFF_TH.md) → [STATUS](STATUS.md). CPI common-view scoring remains undone; no new worker launched by this review.
+> **Current: common C4-P revision2 COMPLETE 9/9 checkpoints, 5,000 CIHP VAL IDs each.** [รายงานผลและ shortlist](reports/CIHP_COMMON_NINE_RESULTS_TH.md) → [STATUS](STATUS.md) → [normalized canonical result index](manifests/CIHP_COMMON_RESULT_INDEX.json). Native20 results preserved; CPI added by saved-only CPU scoring, no model inference.
 
 The notices below are historical snapshots; STATUS is current.
 

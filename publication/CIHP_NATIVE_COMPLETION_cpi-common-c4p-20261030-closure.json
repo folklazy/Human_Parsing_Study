@@ -1,0 +1,182 @@
+{
+  "work_unit": "cpi-common-c4p-20261030-closure",
+  "base_commit": "4adcfe49a4f5165ff37aa0b0765113de94cb213f",
+  "scope": "Saved-artifact common C4-P orchestration, compact evidence and analysis only; no inference, native frozen code/config/results unchanged",
+  "files": [
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/scripts/report_common_nine.py",
+      "public_path": "Human_Parsing_Benchmark/scripts/report_common_nine.py",
+      "sha256": "8796a772eae49d9675554af407b636657a47cc1293ac7e51689b36f75fa494d3",
+      "before_sha256": null,
+      "bytes": 31493
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "ea58f3483e99adda88aa8a96a2dec5120235638e6b8a83cf6b263c18e2407bfe",
+      "before_sha256": "7dfc9d4aafce8810f134de006f5a7cf00dc213c7c25ad5e5cbe9d2f361071386",
+      "bytes": 11244
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "def0e4c128a4c2108972ea75b806d69a4c229dfc9ced191e4bc5d612fb9821f2",
+      "before_sha256": "689d379acb267c111454e5c5f9f150a50b8b95044db83d0bd11da56643f4a87a",
+      "bytes": 2470
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/PLAN.md",
+      "public_path": "Human_Parsing_Benchmark/PLAN.md",
+      "sha256": "c518310208e8ac25e6f672c1b022d53c74fc4bf667f21163e0fc4cf25a59f36a",
+      "before_sha256": "5d7e5d064506b1c1a6b8d56308a193860277a04f0460d9b7a59630238fd767af",
+      "bytes": 22659
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "e14a61b9a387931cb6b56dbd1299cf45217b6ed487d21bcdfc3f0d38605ef1af",
+      "before_sha256": "b62fcc626bca201a191d61d61ac0d4d09da315639bda5c1a8dfdd622314d8c81",
+      "bytes": 69701
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_EVALUATION_HANDOFF_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_EVALUATION_HANDOFF_TH.md",
+      "sha256": "5e453aaa64dc7e7dcbdb8de88b9790c53d1e5986811d7de43979a7db364eee95",
+      "before_sha256": "776f3e1d184ef4586f1fb4cccedb20db02b2a9308332664a83b6327b6e93ee25",
+      "bytes": 25436
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/reports/CIHP_COMMON_NINE_RESULTS_TH.md",
+      "public_path": "Human_Parsing_Benchmark/reports/CIHP_COMMON_NINE_RESULTS_TH.md",
+      "sha256": "c9862daf33ff0cd5812518e8ce4d17ce5f7c42b42407960ab412beeb724ace80",
+      "before_sha256": null,
+      "bytes": 26009
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/manifests/CIHP_COMMON_RESULT_INDEX.json",
+      "public_path": "Human_Parsing_Benchmark/manifests/CIHP_COMMON_RESULT_INDEX.json",
+      "sha256": "8a7e63250af0a921b5dcb1376b3a531ae617d6cd6a4a123136bd3d3cd02775b2",
+      "before_sha256": null,
+      "bytes": 17015
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPU_ENVIRONMENT.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPU_ENVIRONMENT.json",
+      "sha256": "18c6b5a5adfbcf5c7c525ad6cedf8f9d47985b14d10d86915916da527ef9dc28",
+      "before_sha256": null,
+      "bytes": 649
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SETUP_ATTEMPT_1.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SETUP_ATTEMPT_1.json",
+      "sha256": "638630c1be7f15fc720b073823b7aa8cd101a783f53109ec0561c3bdc6bb5dc1",
+      "before_sha256": null,
+      "bytes": 1548
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PROCESS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PROCESS.json",
+      "sha256": "2463b2c087f20f22ec0342432630db8c361c87a7a4d10932556c18c379bbfff2",
+      "before_sha256": null,
+      "bytes": 1517
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/ARTIFACT_MANIFEST.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/ARTIFACT_MANIFEST.json",
+      "sha256": "730b1cfa0a8eede6fc118daa8452f69c703314adcdac05f5f13212afa19832a2",
+      "before_sha256": null,
+      "bytes": 4072
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PARITY_REVIEW.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PARITY_REVIEW.json",
+      "sha256": "43f694d73d66e58007e26ff860a72a8553052354b50c055c61c4cb0b47494c2a",
+      "before_sha256": null,
+      "bytes": 32647
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/FINAL_VERIFICATION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/FINAL_VERIFICATION.json",
+      "sha256": "a0a04831e36fd69272860b522ff45c29ff591da1ac73cdc71a8d158c6a6cbd79",
+      "before_sha256": null,
+      "bytes": 1858
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/PROJECTION_CHECK.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/PROJECTION_CHECK.json",
+      "sha256": "e16138f206f9d5045a1dffaecf8f4a9495e4568ae6df58c5e4f7ea4bd2f6ba66",
+      "before_sha256": null,
+      "bytes": 2101
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/COMPLETION.json",
+      "sha256": "2b07de377e8513800ec00937ff342fb91ff1db220329e842a005cb1033618f68",
+      "before_sha256": null,
+      "bytes": 941
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json",
+      "sha256": "7acb2e97ff817904280485584778413cf2b362f4e9c50a9fbcf13f6bc26f4557",
+      "before_sha256": null,
+      "bytes": 9665
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/PROJECTION_CHECK.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/PROJECTION_CHECK.json",
+      "sha256": "51a26956b83d3750b486f47fb4ac26539e2a0b604daa205ef432073a078cfaca",
+      "before_sha256": null,
+      "bytes": 2101
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/COMPLETION.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/COMPLETION.json",
+      "sha256": "54a032e9ec536ff0d165e71b1ae29f35ef7e5a4ef0c0f6a58e320ffb2fbf5634",
+      "before_sha256": null,
+      "bytes": 964
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json",
+      "public_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json",
+      "sha256": "2a8da92e0958bae50648ee9fce4249b663d6f4d43c3ebe2b0e8933f6485508bd",
+      "before_sha256": null,
+      "bytes": 9720
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/LEADERS.json",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/LEADERS.json",
+      "sha256": "6aa1fa8617c25d12edf080b9aa40b1349ee1cde2d5f770f45acf824eed711cad",
+      "before_sha256": null,
+      "bytes": 4127
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PERSON_METRICS.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PERSON_METRICS.csv",
+      "sha256": "b7a0eb54b3ae8f29366043bb889c750d8d6956e529c07e7f7ca39f5b16ea8c6d",
+      "before_sha256": null,
+      "bytes": 3859
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/DISCORDANCE.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/DISCORDANCE.csv",
+      "sha256": "11e9d010bf62318c5c0981d0c7c19c82fe97d06a6d1c0a6b6f339f8995cd1203",
+      "before_sha256": null,
+      "bytes": 844
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/COMMON_SUMMARY.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/COMMON_SUMMARY.csv",
+      "sha256": "f38d23fe070ad901abb823150a360ca9ed8e1ba5f964aad931771d9dcf9ed34e",
+      "before_sha256": null,
+      "bytes": 3806
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PER_TARGET.csv",
+      "public_path": "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PER_TARGET.csv",
+      "sha256": "603a2d413e9ca816361f46366a2d7b962f4540fb5b76800f0b384c1f59d51429",
+      "before_sha256": null,
+      "bytes": 4726
+    }
+  ]
+}

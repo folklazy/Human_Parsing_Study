@@ -1,0 +1,600 @@
+{
+  "status": "BOUNDED_PARITY_EVIDENCE_ACCEPTED_WITH_LIMITATION",
+  "not_population_bitwise_equivalence": true,
+  "forward_output_evidence": [
+    {
+      "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "launch_commit": "1bcea01ab9905bd3e55ea4c75cc89cb1d1efb960",
+      "GPU_record": "runs/cpi-memory-repair-20261029T153956552075Z/GPU_DIAGNOSTIC.json",
+      "GPU_record_sha256": "c27108e469bdfebdaaea21e0bbc330fb905f18cc2974566e990ff167b234c68d",
+      "CPU_record": "runs/cpi-memory-repair-20261029T153956552075Z/CPU_ACCEPTANCE.json",
+      "CPU_record_sha256": "dd2c24c8953f2794aaf58deb3d837307716de1a4de2144b4046c922381922e45",
+      "immutable_diagnostic_config_sha256": "43705649fc9d64b6510284193fd0b39a6b0bcae21d9e2b3bd04c611ff66392fc",
+      "CPU_acceptance": {
+        "status": "PASS",
+        "environment": ".venvs/parser-legacy-cu113",
+        "command": "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_memory.py -v",
+        "test_cases": 4,
+        "result": "4 passed, exit0; no full-suite rerun",
+        "native_method_anchor_install": "PASS_CPU_ONLY_NO_MODEL_CONSTRUCTION_OR_FORWARD",
+        "old_source_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+        "new_implementation_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234"
+      },
+      "patch": {
+        "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+        "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+        "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+        "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+        "person_chunk_size": 1,
+        "native_reference_prefix": 2,
+        "source_file_modified": false,
+        "scientific_parameters_changed": []
+      },
+      "GPU_feature_native_vs_reuse": null,
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "GPU_stress": null,
+      "observations": [
+        {
+          "split": "Training",
+          "image_id": "0000930",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "a7699fc91341f913c27e8577445bf2fab705a684608409613ca9f7f503aab24e"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0003218",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "3aa277304b59719994db9046a4599a9cbf4a4d36b6aa8c1d6dfe701424c7e40d"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0001641",
+          "status": "COMPLETE",
+          "regression": "ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET",
+          "packet_sha256": "a318aa843fc461b1f4d757374f6e81d13ce887e13334fffe265c57976f265a55"
+        }
+      ],
+      "postflight": {
+        "protected_source_config_hashes_unchanged": 16,
+        "atomic_NPZ_readback_and_SHA": "PASS",
+        "known_success_saved_NPZ_byte_identical": true,
+        "known_success_scores_both_thresholds_identical": true,
+        "canonical_count_changed": false,
+        "GPU_process_exited": true,
+        "checked_Bangkok": "2026-10-29T22:48:52.969845+07:00"
+      },
+      "small_dependency_review": {
+        "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": {
+          "expected_sha256": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": {
+          "expected_sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": {
+          "expected_sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": {
+          "expected_sha256": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cihp_system.py": {
+          "expected_sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": {
+          "expected_sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": {
+          "expected_sha256": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/configs/cihp_native_six.json": {
+          "expected_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": {
+          "expected_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py": {
+          "expected_sha256": "51e73c5bf12e61ea1465ba0f48758f30428921dc263a90e98ca3d4797a84c4ce",
+          "current_matches": false,
+          "launch_commit_blob_matches": true,
+          "evidence_interpretation": "Historical launch binding; current operational script/config has since evolved"
+        },
+        "Human_Parsing_Benchmark/tests/test_cpi_memory.py": {
+          "expected_sha256": "efe337f0e609009375b0ebf99f1ddd039f4d23ab96857fababbb28dc187e9915",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py": {
+          "expected_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md": {
+          "expected_sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": {
+          "expected_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py": {
+          "expected_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/utils/parser_misc.py": {
+          "expected_sha256": "3f000ecccc831be81ca620fefcc91e8edc911abda5a18dc9b2d44e23ec8b1f0f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        }
+      },
+      "large_payload_identity": "Original recorded weights/environment evidence reused; no bulk rehash."
+    },
+    {
+      "revision": "CPI_FEATURE_BUFFER_REUSE_2",
+      "model_id": "CPI_R50_CIHP",
+      "launch_commit": "b992b1314dc8c6a57ebf783e650412fccf836cb4",
+      "GPU_record": "runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/GPU_DIAGNOSTIC.json",
+      "GPU_record_sha256": "5c41a258c10f2f6c2777f756820707f3a6cf930b7e3013a30ced96589291cb41",
+      "CPU_record": "runs/cpi-r50-feature-diagnostic-20261029T175338825178Z/CPU_ACCEPTANCE.json",
+      "CPU_record_sha256": "a2291ff9f83b18ee11caf10220a208b568c573d5f3b139bb3b077d6acea52b42",
+      "immutable_diagnostic_config_sha256": "8c8eb6ca171d8dae9d234d90859633832949575767bd07f1bcf92587771c7f17",
+      "CPU_acceptance": {
+        "status": "PASS",
+        "feature_tests": 3,
+        "control_tests": 5,
+        "commands": [
+          "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_feature_memory.py -v",
+          "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v"
+        ],
+        "reference": "Actual pinned native casual_head_forward; expected cnt/cxt float32 tensors bitwise equal to repaired function, same input arrays/parameter pointers. Guards reject train/grad/hooks/changedparser.",
+        "CPU_fixture_scope": "train_cfg=None matches inference builder; part_bias initialized for synthetic weights. Native CPU coordinate/cat layout fails view for N>1, so coordinate values copied contiguous in BOTH CPU reference and candidate. This is fixture-only, not model patch; CUDA original coordinate/cat/view layout independently PASS with no model-frame calls; GPU native numerical comparison still required.",
+        "fixture_corrections": "Initial builder trainmatcher omitted and CPU layout mismatch corrected before GPU/model-frame calls; expected numerical values/acceptance not relaxed.",
+        "old_memory_oracles": "Reuse revision1 CPU4 and ConvNeXt full5000 evidence, unchanged cpi_memory.py; not substitute for R50 revision2 GPU proof.",
+        "feature_module_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+        "GPU_model_frames": "NOT_STARTED"
+      },
+      "patch": {
+        "revision": "CPI_FEATURE_BUFFER_REUSE_2",
+        "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+        "restoration": {
+          "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+          "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+          "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+          "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+          "person_chunk_size": 1,
+          "native_reference_prefix": 2,
+          "source_file_modified": false,
+          "scientific_parameters_changed": []
+        },
+        "feature_original_method_sha256": "e18223c8f390205e2afef09b7bbaf31cd0419eb524cfd0d2198e17a8ea2d3acb",
+        "feature_expanded_method_sha256": "b37a0361a40f95a05f4428f66f139bd5245b5e82b22d119444f4fde347d20daf",
+        "native_dynamic_forward_sha256": "fb9db85455c6bb25c2b19c01454f3911b505cb5f0e9042416a6c6bf259429f30",
+        "dynamic_convolution_relu_private_buffer_reuse": true,
+        "released_dead_buffers": [
+          "parse_feats_list",
+          "parse_feats",
+          "cnt_masks",
+          "normalizer",
+          "inst_feats",
+          "inst_part_feats",
+          "cnt_feats",
+          "cxt_feats"
+        ],
+        "part_parser_relu_inplace": true,
+        "returned_unused_features": null,
+        "source_file_modified": false,
+        "scientific_parameters_changed": [],
+        "training_and_autograd": "REJECTED"
+      },
+      "GPU_feature_native_vs_reuse": "PASS_EXACT_FLOAT32_TENSORS",
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "GPU_stress": null,
+      "observations": [
+        {
+          "split": "Training",
+          "image_id": "0000930",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "f31d9fbc4a1feab316c0304c6bc65faa397657bb2001497d3223acd107723b4f"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0000018",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "0c62720f82e3d5a8fb10ece8d420a63d84985d00e0f77b7b7a14b1bc93697d9b"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0000004",
+          "status": "COMPLETE",
+          "regression": "ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET",
+          "packet_sha256": "e6087bc83c57042b5d97a2926b67cc5b863ea611e388f29e17eb8ba952637033"
+        }
+      ],
+      "postflight": {
+        "checked_Bangkok": "2026-10-30T00:57:24.860388+07:00",
+        "native_frozen_and_bound_hashes_unchanged": 17,
+        "ConvNeXt5000_completion_unchanged": true,
+        "regression_NPZ_byte_identical": true,
+        "regression_scores_both_thresholds_identical": true,
+        "diagnostic_exited": true,
+        "canonical_R50_count_still": 3,
+        "full_validation": "NOT_STARTED_YET"
+      },
+      "small_dependency_review": {
+        "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": {
+          "expected_sha256": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": {
+          "expected_sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": {
+          "expected_sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": {
+          "expected_sha256": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cihp_system.py": {
+          "expected_sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": {
+          "expected_sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": {
+          "expected_sha256": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/configs/cihp_native_six.json": {
+          "expected_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": {
+          "expected_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": {
+          "expected_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py": {
+          "expected_sha256": "69b6e2f254aec674d33b5a5abac79bc3fc5c5483390561cee8fe6b3a19d828ef",
+          "current_matches": false,
+          "launch_commit_blob_matches": true,
+          "evidence_interpretation": "Historical launch binding; current operational script/config has since evolved"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py": {
+          "expected_sha256": "77936605e9b09e60aefdff1958379019ad26972a600066dd7e0a4281139faa5a",
+          "current_matches": false,
+          "launch_commit_blob_matches": true,
+          "evidence_interpretation": "Historical launch binding; current operational script/config has since evolved"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py": {
+          "expected_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/utils/parser_misc.py": {
+          "expected_sha256": "3f000ecccc831be81ca620fefcc91e8edc911abda5a18dc9b2d44e23ec8b1f0f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py": {
+          "expected_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md": {
+          "expected_sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": {
+          "expected_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        }
+      },
+      "large_payload_identity": "Original recorded weights/environment evidence reused; no bulk rehash."
+    },
+    {
+      "revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+      "model_id": "CPI_R50_CIHP",
+      "launch_commit": "ea94ab7be73d4e418306b4c881e7be0f608bf905",
+      "GPU_record": "runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/GPU_DIAGNOSTIC.json",
+      "GPU_record_sha256": "fa37aaac333865a5c7fe206963b1d82e7567a4415deecad1a4eb734c3b75cd1d",
+      "CPU_record": "runs/cpi-r50-schedule-diagnostic-20261029T180852377295Z/CPU_ACCEPTANCE.json",
+      "CPU_record_sha256": "d678ced9992e49e7109f9bb82c1eaf39519023bb12efcd598c2cb3bf6e4124fe",
+      "immutable_diagnostic_config_sha256": "a8b88ae585c8e6ad2d30c8c4f7a6f5274fb17ab7a17d4792eee33248fe8fade1",
+      "CPU_acceptance": {
+        "status": "PASS",
+        "native_feature_tests": 3,
+        "control_tests": 5,
+        "commands": [
+          "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_feature_schedule.py -v",
+          "python -m unittest discover -s Human_Parsing_Benchmark/tests -p test_cpi_chunked_control.py -v"
+        ],
+        "reference": "Same pinned native float32 numerical/input/parameter oracles and guards as revision2; serialbranchoutputs exactly equal. Existing CPU-only layout fixture copy documented previously remains fixture-only, no GPU shim.",
+        "scope": "No whole-suite rerun, no GPU image yet. Nativecode/weights/precision/shapes/within-branch operator order unchanged; only independent-branch scheduling/inputcopy recreation differs."
+      },
+      "patch": {
+        "revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+        "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+        "restoration": {
+          "revision": "CPI_PERSON_CHUNK_RESTORATION_1",
+          "original_head_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+          "original_method_sha256": "3bfc1bdb1c1dc020f5a2d4b41ef5155c2b62427947e2c64df5b83f5005eca2ce",
+          "expanded_method_sha256": "29b4c7046a2f6fa4cf488c0dd58a7e35a0ae20275e216d6a677f778044a275de",
+          "person_chunk_size": 1,
+          "native_reference_prefix": 2,
+          "source_file_modified": false,
+          "scientific_parameters_changed": []
+        },
+        "feature_original_method_sha256": "e18223c8f390205e2afef09b7bbaf31cd0419eb524cfd0d2198e17a8ea2d3acb",
+        "feature_expanded_method_sha256": "b37a0361a40f95a05f4428f66f139bd5245b5e82b22d119444f4fde347d20daf",
+        "native_dynamic_forward_sha256": "fb9db85455c6bb25c2b19c01454f3911b505cb5f0e9042416a6c6bf259429f30",
+        "dynamic_convolution_relu_private_buffer_reuse": true,
+        "released_dead_buffers": [
+          "parse_feats_list",
+          "parse_feats",
+          "cnt_masks",
+          "normalizer",
+          "inst_feats",
+          "inst_part_feats",
+          "cnt_feats",
+          "cxt_feats"
+        ],
+        "part_parser_relu_inplace": true,
+        "returned_unused_features": null,
+        "source_file_modified": false,
+        "scientific_parameters_changed": [],
+        "training_and_autograd": "REJECTED",
+        "buffer_reuse_revision": "CPI_FEATURE_BUFFER_REUSE_2",
+        "scheduled_method_sha256": "69e260cda6bf9a3e57645712cff9d90d214c7b4ac74fbadc0bc89eeb61be353f",
+        "branch_schedule": "content fully consumed/freed before context; same all-candidate tensors",
+        "recreated_input": "repeat of unchanged inst_feats, no additional float operations"
+      },
+      "GPU_feature_native_vs_reuse": "PASS_EXACT_FLOAT32_TENSORS",
+      "GPU_synthetic_native_vs_chunked": "PASS_EXACT_LABELS",
+      "GPU_stress": {
+        "candidates": 100,
+        "feature_hw": [
+          100,
+          168
+        ],
+        "status": "PASS",
+        "image_frame_calls": 0,
+        "peak_allocated_MiB": 12948.94189453125,
+        "peak_reserved_MiB": 13028.0
+      },
+      "observations": [
+        {
+          "split": "Training",
+          "image_id": "0000930",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "f31d9fbc4a1feab316c0304c6bc65faa397657bb2001497d3223acd107723b4f"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0000266",
+          "status": "COMPLETE",
+          "regression": null,
+          "packet_sha256": "62630cd78117ee2c8ace04de6d636d02c4d6fc31bf3dd8561361ca132f614808"
+        },
+        {
+          "split": "Validation",
+          "image_id": "0000018",
+          "status": "COMPLETE",
+          "regression": "ALL_ARRAYS_EXACT_EQUAL_TO_SAVED_NATIVE_PACKET",
+          "packet_sha256": "0c62720f82e3d5a8fb10ece8d420a63d84985d00e0f77b7b7a14b1bc93697d9b"
+        }
+      ],
+      "postflight": {
+        "protected_hashes_unchanged": 18,
+        "regression_allarrays_NPZ_scores_exact": true,
+        "worker_exited": true,
+        "checked_Bangkok": "2026-10-30T01:11:17.918473+07:00",
+        "canonical_before_new_full": 17
+      },
+      "small_dependency_review": {
+        "Human_Parsing_Benchmark/src/cihp_benchmark/__init__.py": {
+          "expected_sha256": "e070ce718157f7bb69f59d376c43a474f5cd5100c0c98e340cee9434ff0ac6b4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": {
+          "expected_sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": {
+          "expected_sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/evaluation.py": {
+          "expected_sha256": "f91ced59c86a24d7b15301360360c099bac96b9b8237e06b26341da5fefde03f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cihp_system.py": {
+          "expected_sha256": "83504f3b9148bebac79366a9353ec346853346f4957b4e0921a86881accac0f4",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/src/application_v2/evaluation.py": {
+          "expected_sha256": "a81e610518ffd4cfd1daee0352b896b221c5b371bd61a5d2dd527a4e78be24ba",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/scripts/pilot_fp32_amp.py": {
+          "expected_sha256": "620e1d0cf7d888e7081f4e208f980332ac67b0ab5f768ab6f4008193d57cb03e",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/configs/cihp_native_six.json": {
+          "expected_sha256": "3b6c98ef8056bc24c0a503559972619b7cb82bcf40cdfa2983579a84567c5a24",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": {
+          "expected_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": {
+          "expected_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": {
+          "expected_sha256": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cpi_memory_diagnostic.py": {
+          "expected_sha256": "9201759de2f6ba79042debc95c4e636afa06b6b78a5934776e29f9c4ce0116bf",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/scripts/run_cpi_chunked_continuation.py": {
+          "expected_sha256": "128020c0808392ed43f4706a30ed43217f8ad6129691fdbb302fe4a8bbd06ddc",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/dense_heads/causal_parser_head.py": {
+          "expected_sha256": "85b75e0fe38465ec460107c11111702345a6de091a8ba3d399ca266878ca7573",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/mmdet/models/utils/parser_misc.py": {
+          "expected_sha256": "3f000ecccc831be81ca620fefcc91e8edc911abda5a18dc9b2d44e23ec8b1f0f",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py": {
+          "expected_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md": {
+          "expected_sha256": "de84fe9c2cacd59e2ac04d6443e5217052813d5f733e05d7cb7088eaec644a2b",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        },
+        "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json": {
+          "expected_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+          "current_matches": true,
+          "launch_commit_blob_matches": null,
+          "evidence_interpretation": "Current scientific dependency matches"
+        }
+      },
+      "large_payload_identity": "Original recorded weights/environment evidence reused; no bulk rehash."
+    }
+  ],
+  "distinct_claims": {
+    "packet_integrity": "existing final accepted NPZ hash/CRC/metadata checks; current metadata hashes and required array decoding during CPU scoring",
+    "native_saved_mask_scorer": "existing saved native scorer matches do not prove unmodified forward equivalence",
+    "new_common_scorer": "unchanged common revision2 from saved ownership; new scalar Q computed, not copied"
+  },
+  "native_current_small_bindings": {
+    "CPI_R50_CIHP": {
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "environment": ".venvs/parser-legacy-cu113"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "environment": ".venvs/parser-legacy-cu113"
+    }
+  }
+}

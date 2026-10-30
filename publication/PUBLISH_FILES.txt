@@ -28,6 +28,7 @@ Human_Parsing_Benchmark/docs/LEGACY_REFERENCES.md
 Human_Parsing_Benchmark/docs/RESEARCH_REFERENCES.md
 Human_Parsing_Benchmark/docs/WORKSPACE_LAYOUT.md
 Human_Parsing_Benchmark/manifests/ARTIFACT_LOCATIONS.json
+Human_Parsing_Benchmark/manifests/CIHP_COMMON_RESULT_INDEX.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_COHORT_INDEX.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_DIAGNOSTIC_SAMPLE.json
 Human_Parsing_Benchmark/manifests/CIHP_NATIVE_IMPORT.json
@@ -50,6 +51,11 @@ Human_Parsing_Benchmark/metrics/closure-review-20261030/PERSON_METRICS.csv
 Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/OVERVIEW.csv
 Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PERSON_METRICS.csv
 Human_Parsing_Benchmark/metrics/common-c4p-full-20261029T063458522990Z/PER_TARGET.csv
+Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/COMMON_SUMMARY.csv
+Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/DISCORDANCE.csv
+Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/LEADERS.json
+Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PERSON_METRICS.csv
+Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PER_TARGET.csv
 Human_Parsing_Benchmark/metrics/cpi-convnext-shared-20261028T181609262813Z/PER_CLASS.csv
 Human_Parsing_Benchmark/metrics/cpi-convnext-shared-20261028T181609262813Z/SUMMARY.csv
 Human_Parsing_Benchmark/metrics/cpi-convnext-validation-20261028T182116250459Z/PER_CLASS.csv
@@ -89,6 +95,7 @@ Human_Parsing_Benchmark/registry/FAIRNESS_RISKS.csv
 Human_Parsing_Benchmark/registry/REQUIREMENTS_TARGETS.csv
 Human_Parsing_Benchmark/registry/ROSTER_DIFF.csv
 Human_Parsing_Benchmark/registry/ROUTES_PROPOSED.csv
+Human_Parsing_Benchmark/reports/CIHP_COMMON_NINE_RESULTS_TH.md
 Human_Parsing_Benchmark/reports/CIHP_CONTROLLED_CONTINUATION.md
 Human_Parsing_Benchmark/reports/CIHP_EVALUATION_HANDOFF_TH.md
 Human_Parsing_Benchmark/reports/CIHP_FOUR_MODEL_RESULTS_TH.md
@@ -229,8 +236,20 @@ Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/COMPLETION.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/LAUNCH.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/RESOURCE_POLICY.json
 Human_Parsing_Benchmark/runs/convnext-20261029T160359716460Z/SEGMENT_PLAN.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/ARTIFACT_MANIFEST.json
 Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/COMPATIBILITY.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/COMPLETION.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/PROJECTION_CHECK.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/COMPLETION.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/PROJECTION_CHECK.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPU_ENVIRONMENT.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/FINAL_VERIFICATION.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PARITY_REVIEW.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/PROCESS.json
 Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SCORING_CONFIG.json
+Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/SETUP_ATTEMPT_1.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/AUTHORIZATION.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_GUARD.json
 Human_Parsing_Benchmark/runs/cpi-convnext-chunked-20261029T160327964412Z/FINALIZER_PROCESS.json
@@ -344,6 +363,7 @@ Human_Parsing_Benchmark/scripts/render_cihp_comparisons.py
 Human_Parsing_Benchmark/scripts/render_common_full.py
 Human_Parsing_Benchmark/scripts/render_common_pilot.py
 Human_Parsing_Benchmark/scripts/report_cihp_batch.py
+Human_Parsing_Benchmark/scripts/report_common_nine.py
 Human_Parsing_Benchmark/scripts/rpr_progress.py
 Human_Parsing_Benchmark/scripts/run_cihp_segment.py
 Human_Parsing_Benchmark/scripts/run_cihp_system.py
@@ -919,6 +939,7 @@ publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-1.
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-2.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-3.json
 publication/CIHP_NATIVE_COMPLETION_common-c4p-full-20261029T063458522990Z-cpu-4.json
+publication/CIHP_NATIVE_COMPLETION_cpi-common-c4p-20261030-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-common-c4p-20261030-preflight.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-closure.json
 publication/CIHP_NATIVE_COMPLETION_cpi-convnext-chunked-20261029T160327964412Z-navigation.json

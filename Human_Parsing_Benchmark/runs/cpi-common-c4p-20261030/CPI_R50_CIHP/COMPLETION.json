@@ -1,0 +1,27 @@
+{
+  "run_id": "cpi-common-c4p-20261030",
+  "model_id": "CPI_R50_CIHP",
+  "status": "COMPLETE",
+  "pid": 911433,
+  "start_utc": "2026-10-30T04:01:30.129311+00:00",
+  "expected": 5000,
+  "complete": 5000,
+  "config_sha256": "fc5f8613d33eca7e41cc86c553c8edbe64f306b03e83629ff243f4997e971483",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "new_model_calls": 0,
+  "resource_policy": "CPU_SAVED_ARTIFACTS_ONLY; source GPU runs SHARED_GPU_QUALITY_ONLY",
+  "current_image": "0038401",
+  "missing": 0,
+  "duplicate": 0,
+  "invalid": 0,
+  "failed": 0,
+  "end_utc": "2026-10-30T04:07:49.078794+00:00",
+  "queue_stopped": true,
+  "metrics_path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json",
+  "primary_source": "METRICS.json.primary",
+  "source_implementation_revisions": {
+    "CPI_FEATURE_BUFFER_REUSE_2": 14,
+    "CPI_FEATURE_BRANCH_SCHEDULE_3": 4983,
+    "ORIGINAL_FROZEN_NATIVE": 3
+  }
+}
