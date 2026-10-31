@@ -1,0 +1,46 @@
+{
+  "run_id": "cctv-partial-20261031T1800Z",
+  "created_utc": "2026-10-31T17:38:02.566211+00:00",
+  "declared_folder_count": 100,
+  "actual_population": 90,
+  "day_night": {
+    "day": 48,
+    "night": 42
+  },
+  "image_geometry": {
+    "[1080, 1920]": 87,
+    "[720, 1280]": 1,
+    "[1520, 2688]": 2
+  },
+  "GT_people_with_annotated_parts": 127,
+  "GT_native_pixel_support": [
+    187928065,
+    0,
+    246971,
+    0,
+    0,
+    892697,
+    0,
+    0,
+    0,
+    374543,
+    0,
+    0,
+    0,
+    54044,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "GT_Human_extent": "Union of annotated target parts, not complete person silhouette",
+  "source_annotations": "90 canonical LabelMe polygon JSONs and corresponding integer PNGs; semantic accuracy/exhaustiveness not certified by file checks",
+  "user_confirmations": {
+    "annotation_scope": "Selected people or parts",
+    "Dress": "No established rule"
+  },
+  "allowed_claim": "Annotation-conditioned target recall and cross-class confusion, not whole-image IoU/FP/instance accuracy or overall deployment winner",
+  "existing_results": "Separate exploratory scripts collapse OTHER toBG/use unconditioned routes and retain no sufficient native packet evidence; preserved, not canonical here"
+}

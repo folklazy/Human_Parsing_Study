@@ -1,0 +1,105 @@
+{
+  "work_unit": "cctv-partial-20261031-prelaunch",
+  "base_commit": "c7895e704f1f6654b16615a603a4da84cbf2aa92",
+  "scope": "CCTV partial-annotation benchmark code/protocol/aggregate audit only; no CCTV identifiers/images/labels/masks/logs; existing CIHP results unchanged",
+  "files": [
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/.gitignore",
+      "public_path": "CCTV_Human_Parsing_Benchmark/.gitignore",
+      "sha256": "069b50318c39563bd997c9bd5756bebf1f9880850cef7246bc1529171ee8dfea",
+      "before_sha256": null,
+      "bytes": 44
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/PROTOCOL.md",
+      "public_path": "CCTV_Human_Parsing_Benchmark/PROTOCOL.md",
+      "sha256": "ade446012b7c81d0ea6c1cd2536ade04b259b4b45f0fdd7ea70c7ee68e97a399",
+      "before_sha256": null,
+      "bytes": 8367
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/README.md",
+      "public_path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "sha256": "26c135329cafce2bf566bca42f4742109f70639188896a595128e78b475336c7",
+      "before_sha256": null,
+      "bytes": 2835
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
+      "public_path": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
+      "sha256": "3081b5dea50c47b6b39a0c419897d21a1b2d688ec5700270bca782e9aede56e5",
+      "before_sha256": null,
+      "bytes": 118
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/reports/DATASET_AUDIT.json",
+      "public_path": "CCTV_Human_Parsing_Benchmark/reports/DATASET_AUDIT.json",
+      "sha256": "f311b6d876647aa968b7bc1c4ae93b5ef190fd9bd26a439f05da2b85d6a2b9d2",
+      "before_sha256": null,
+      "bytes": 1245
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json",
+      "public_path": "CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json",
+      "sha256": "90d3a1ec9781977c0ff1a9a252f1e8442e213860ec5957d822c9bc6a15e0820f",
+      "before_sha256": null,
+      "bytes": 352
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/tests/test_protocol.py",
+      "public_path": "CCTV_Human_Parsing_Benchmark/tests/test_protocol.py",
+      "sha256": "0c80f1b054874fac09729e7e3fcef1736d4d5440eede9db5ef321d0a25500dc2",
+      "before_sha256": null,
+      "bytes": 3323
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json",
+      "public_path": "CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json",
+      "sha256": "a499eb0862e280324711bd5565a3c12043fe8e05fa64262fdaf898bdba3ad09d",
+      "before_sha256": null,
+      "bytes": 765
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
+      "public_path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
+      "sha256": "fb7156d2419c82b22eee49220700c90dabf08dd99feef5580dab252243d46e9e",
+      "before_sha256": null,
+      "bytes": 11782
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py",
+      "public_path": "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py",
+      "sha256": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+      "before_sha256": null,
+      "bytes": 23643
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/README.md",
+      "public_path": "Human_Parsing_Benchmark/README.md",
+      "sha256": "a7861a90e7b404dc032a0084f4cac6ec1f66d94f90e3ae3aede6049225af9309",
+      "before_sha256": "ea58f3483e99adda88aa8a96a2dec5120235638e6b8a83cf6b263c18e2407bfe",
+      "bytes": 11496
+    },
+    {
+      "source_workspace_relative": "Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "ad460199ef63181a0799c4cfa311d533070ea3e22f5ff75fec7c7c03aca7c07a",
+      "before_sha256": "def0e4c128a4c2108972ea75b806d69a4c229dfc9ced191e4bc5d612fb9821f2",
+      "bytes": 2722
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "public_path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "sha256": "7156a8887058520b89b1d8033f71fb3f49822b96b3488584c41142171c396e94",
+      "before_sha256": null,
+      "bytes": 613
+    },
+    {
+      "source_workspace_relative": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "public_path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "sha256": "714ce9d4d3d61fd9366287b7724cf1e4a9a354631070f9691262716e59bf1ef9",
+      "before_sha256": null,
+      "bytes": 741
+    }
+  ]
+}

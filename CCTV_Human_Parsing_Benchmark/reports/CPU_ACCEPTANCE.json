@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "independent_cases": 6,
+  "tests": "tests/test_protocol.py",
+  "model_calls": 0,
+  "scope": [
+    "unknown not background",
+    "wrong-class/OTHER recall",
+    "absent classes/null",
+    "compose before project/unknown IDs",
+    "asymmetric RGB/BGR",
+    "actual atomic packet to scorer to JSON"
+  ],
+  "not_full_GT_QA": true
+}

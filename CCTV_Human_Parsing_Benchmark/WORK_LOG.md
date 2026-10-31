@@ -1,0 +1,5 @@
+# CCTV Human Parsing — work log
+
+## 2026-10-31T17:41:18.925644+00:00 UTC — setup/GT-scope/protocol closure
+
+Userrequestsfairall9CCTVtest,confirmsselectedpeople/partsandnoDressrule,delegatespolicy. Actual90/48day42night/127annotatedpeople;HumanIDsmatchpartunionnotfullperson. OldrootexploratoryscriptsBGcollapse/noYOLOownership/insufficientpacketprovenancepreservednotcanonical. EstablishednewrootexperimentperAGENTS,sharedsource/assetsreused;positive-onlydomain/recall4andconfusion,fullIoU/personF1null. CPU6handcounted/channel/atomicpacket/readback/nullcasesPASS. NoGPUtestyet. ExistingGPUappPID1011579~4.7GiBuntouched;modelbudgets/guardsmayblockCPIwhileothersrun. Nextsource/publicprivacyreviewthenfreezeGitidentity/detachscopedbatch.

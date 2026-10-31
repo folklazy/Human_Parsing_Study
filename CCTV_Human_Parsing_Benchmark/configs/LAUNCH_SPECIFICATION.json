@@ -1,0 +1,234 @@
+{
+  "run_id": "cctv-partial-20261031T1800Z",
+  "dataset_root": "datasets/CCTV_100_Evaluation",
+  "artifact_root": "CCTV_Human_Parsing_Benchmark/outputs/cctv-partial-20261031T1800Z",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "family": "QANet",
+      "checkpoint": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes": 277950114,
+      "source": "third_party/human_parsing/QANet",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ROI",
+      "native_reference": false,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 277950114,
+        "mtime_ns": 1604249613000000000
+      }
+    },
+    "M2FP_R101_CIHP": {
+      "model_id": "M2FP_R101_CIHP",
+      "family": "M2FP",
+      "checkpoint": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "checkpoint_bytes": 757764792,
+      "source": "third_party/human_parsing/M2FP",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "native_config": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "native_config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 757764792,
+        "mtime_ns": 1674098713000000000
+      }
+    },
+    "D2FP_R101_CIHP": {
+      "model_id": "D2FP_R101_CIHP",
+      "family": "D2FP",
+      "checkpoint": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "checkpoint_bytes": 958247405,
+      "source": "third_party/human_parsing/D2FP",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "native_config": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "native_config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 958247405,
+        "mtime_ns": 1791793193709682172
+      }
+    },
+    "RPR_CIHP": {
+      "model_id": "RPR_CIHP",
+      "family": "RP-R-CNN",
+      "checkpoint": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "checkpoint_bytes": 234931960,
+      "source": "third_party/human_parsing/RP-R-CNN",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "native_config": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "native_config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 234931960,
+        "mtime_ns": 1596877946000000000
+      }
+    },
+    "CPI_R50_CIHP": {
+      "model_id": "CPI_R50_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "checkpoint_bytes": 571901148,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 571901148,
+        "mtime_ns": 1667635140000000000
+      }
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "checkpoint_bytes": 1301413296,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 1301413296,
+        "mtime_ns": 1667619434000000000
+      }
+    },
+    "Sapiens2_0.4b": {
+      "model_id": "Sapiens2_0.4b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 1626451404,
+        "mtime_ns": 1791799814805138982
+      }
+    },
+    "Sapiens2_0.8b": {
+      "model_id": "Sapiens2_0.8b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 3310187452,
+        "mtime_ns": 1791799862520192990
+      }
+    },
+    "Sapiens2_1b": {
+      "model_id": "Sapiens2_1b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 5883353380,
+        "mtime_ns": 1791799963596790372
+      }
+    }
+  },
+  "protocol": "CCTV_PARTIAL_TARGET_RECALL_V1",
+  "projection": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "projection_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "user_annotation_scope": "SELECTED_PEOPLE_OR_PARTS",
+  "dress_policy": "UNSPECIFIED_BY_SOURCE; upper/lower label agreement only, no verified non-Dress claim",
+  "valid_domain": "GT Category_ids in {2,5,9,13}; GT0 UNKNOWN and excluded for all models",
+  "no_GT_in_prediction": true,
+  "YOLO": {
+    "checkpoint": "models/yolo26x-seg.pt",
+    "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 200,
+    "retina_masks": true
+  },
+  "precision": "FP32",
+  "seed": 20261028,
+  "automatic_retry": 0,
+  "fallback": false,
+  "minimum_free_gib": 50,
+  "max_model_gib": 80,
+  "max_model_hours": 24,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY; sequential one worker, no cost ranking; preserve other processes",
+  "required_free_MiB": {
+    "YOLO26X": 2048,
+    "QANet_CIHP_HRNetW48_512x384": 2560,
+    "M2FP_R101_CIHP": 8192,
+    "D2FP_R101_CIHP": 9216,
+    "RPR_CIHP": 6144,
+    "CPI_R50_CIHP": 14500,
+    "CPI_ConvNeXtB_CIHP": 13500,
+    "Sapiens2_0.4b": 4608,
+    "Sapiens2_0.8b": 6656,
+    "Sapiens2_1b": 9600
+  },
+  "warmup": "CIHP TRAIN0000930 once per parser process, excluded from CCTV score",
+  "dataset_mutation_forbidden": true,
+  "publication": "No CCTV filenames/images/annotations/per-person metadata/masks in public Git",
+  "private_population_manifest": "outputs/<run>/CONFIG.json (local only; contains private source identifiers)",
+  "population_count": 90,
+  "private_config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f"
+  }
+}

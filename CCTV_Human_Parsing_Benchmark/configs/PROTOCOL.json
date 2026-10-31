@@ -1,0 +1,13 @@
+{
+  "protocol": "CCTV_PARTIAL_TARGET_RECALL_V1",
+  "projection": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "projection_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "user_annotation_scope": "SELECTED_PEOPLE_OR_PARTS",
+  "dress_policy": "UNSPECIFIED_BY_SOURCE; upper/lower label agreement only, no verified non-Dress claim",
+  "valid_domain": "GT Category_ids in {2,5,9,13}; GT0 UNKNOWN and excluded for all models",
+  "precision": "FP32",
+  "automatic_retry": 0,
+  "fallback": false,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY; sequential one worker, no cost ranking; preserve other processes",
+  "publication": "No CCTV filenames/images/annotations/per-person metadata/masks in public Git"
+}

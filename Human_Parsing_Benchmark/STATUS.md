@@ -1,3 +1,5 @@
+> **New CCTV work is separate:** [CCTV_Human_Parsing_Benchmark](../CCTV_Human_Parsing_Benchmark/README.md) uses partial-annotation recall diagnostics on90images. CIHP results below remain frozen. No full-image CCTV IoU/instanceF1/overallwinner claim.
+
 # Human Parsing Benchmark — current status
 
 Updated: 2026-10-30T11:11:02.869193+07:00 (Asia/Bangkok)
