@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-31T17:48:07.367119+00:00",
+  "detector_exact_population": 90,
+  "QANet_exact_population": 90,
+  "readback_examples": [
+    {
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "atomic_member_hashes": "PASS",
+      "input_geometry_model_bindings": "PASS",
+      "no_GT_in_prediction": true
+    },
+    {
+      "original_wh": [
+        1280,
+        720
+      ],
+      "atomic_member_hashes": "PASS",
+      "input_geometry_model_bindings": "PASS",
+      "no_GT_in_prediction": true
+    }
+  ],
+  "controller_pid": 1148369,
+  "detached_PPID1": true,
+  "launch_commit": "102875ad9794af6c279f6126c25bbf7c8604291b",
+  "source_config_unchanged": true
+}

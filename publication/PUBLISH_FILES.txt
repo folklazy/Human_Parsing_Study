@@ -10,8 +10,12 @@ CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json
 CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json
 CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json
 CCTV_Human_Parsing_Benchmark/reports/DATASET_AUDIT.json
+CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md
+CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json
 CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md
 CCTV_Human_Parsing_Benchmark/scripts/benchmark.py
+CCTV_Human_Parsing_Benchmark/scripts/finalize.py
+CCTV_Human_Parsing_Benchmark/scripts/progress.py
 CCTV_Human_Parsing_Benchmark/tests/test_protocol.py
 DATASET_DETAILS.md
 DATA_SCHEMA.md
@@ -941,6 +945,7 @@ provenance/STAGE0_BLOCKER_REVIEW_20261008T082918Z.json
 provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
+publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json
 publication/CIHP_CONTINUATION_LAUNCH_20261028.json
 publication/CIHP_CONTROLLED_CONTINUATION_READY_20261028.json

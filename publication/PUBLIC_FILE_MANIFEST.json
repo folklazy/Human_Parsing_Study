@@ -30,18 +30,18 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/README.md",
-      "bytes": 2835,
-      "sha256": "26c135329cafce2bf566bca42f4742109f70639188896a595128e78b475336c7"
+      "bytes": 3514,
+      "sha256": "3de7a5f2adf1444f77f24307002dbb4489456ddb25bcfd80a42fde812ffec5e4"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "sha256": "7156a8887058520b89b1d8033f71fb3f49822b96b3488584c41142171c396e94",
-      "bytes": 613
+      "bytes": 517,
+      "sha256": "09ceb71c55ac105ba7f8049f23af07a5fe1eb09b027d88f4f46c4b93a1bf7a06"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "sha256": "714ce9d4d3d61fd9366287b7724cf1e4a9a354631070f9691262716e59bf1ef9",
-      "bytes": 741
+      "bytes": 1352,
+      "sha256": "73fccae295ef493fd3beed108f5ca32b922b629c8143ba7c5ff8d93b95b41dbc"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
@@ -64,14 +64,34 @@
       "sha256": "f311b6d876647aa968b7bc1c4ae93b5ef190fd9bd26a439f05da2b85d6a2b9d2"
     },
     {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md",
+      "bytes": 9007,
+      "sha256": "c18fa61b6d39d9c930ea7bf1a88b9563f0236fe19f6f61e7211bf0d30b2ef90d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json",
+      "bytes": 686,
+      "sha256": "c2879f4d7149db75300a165eb37c8bb3b1a82cdafd39d254c06a1b7d7142e1ca"
+    },
+    {
       "path": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
-      "bytes": 118,
-      "sha256": "3081b5dea50c47b6b39a0c419897d21a1b2d688ec5700270bca782e9aede56e5"
+      "bytes": 3013,
+      "sha256": "856df09571e342c3060d767ec58e9e2c4dec91a6e45d7c120906c1825dade959"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py",
       "bytes": 23643,
       "sha256": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/finalize.py",
+      "bytes": 8264,
+      "sha256": "8f6ba014443dd909d92f6bdf4ecf121c6c52f4c13b74e174d479f17612039e29"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/progress.py",
+      "bytes": 1179,
+      "sha256": "46906948a9985a828c4a7d3a1bd884197245242e3589f583b3f356116ebb0f29"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_protocol.py",
@@ -4484,6 +4504,11 @@
       "sha256": "9ac1c55e57364c4a9e13ec22cb05a865e797eb00fd71ad5169c842a310cd6df7"
     },
     {
+      "path": "publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json",
+      "bytes": 2998,
+      "sha256": "e703b8553569890f2cdcfabc13d7327f6710248e63866be6687af8207fdeb87f"
+    },
+    {
       "path": "publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json",
       "sha256": "f6c5f975ad722586c7955497763cd5071de6b82aab727bd119b0a7533d9e0298",
       "bytes": 4621
@@ -6319,6 +6344,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-31T17:43:31.464416+00:00",
+  "updated_utc": "2026-10-31T17:50:01.904720+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }
