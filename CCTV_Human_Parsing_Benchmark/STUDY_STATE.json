@@ -1,0 +1,61 @@
+{
+  "scope": "CCTV_PARTIAL_TARGET_RECALL_V1",
+  "run_id": "cctv-partial-20261031T1800Z",
+  "status": "PARTIAL_BENCHMARK_COMPLETE",
+  "complete_models": 9,
+  "expected_models": 9,
+  "population": 90,
+  "updated_utc": "2026-10-31T18:28:26.066687+00:00",
+  "full_benchmark_ready": false,
+  "reason": "Selected people/parts only; unknown negatives; no Dress rule or full-person silhouettes",
+  "no_overall_deployment_winner": true,
+  "new_experiment_started": false,
+  "evidence": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "5cb8b1c208868c5f0e33a9b6fc8b629e1a5623baae6a59cbdc67306a550ee82d",
+      "metrics_sha256": "d8c4047dfcaaf67dcdd0b994058c6fbc45966c2979e9db10369d4e6e280cbb3e"
+    },
+    "M2FP_R101_CIHP": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "513e54e56e2737557b7f09bd773eb79e76f330e54100a368df3dc1c387b3ff47",
+      "metrics_sha256": "cde50a6f4bbcb24683290566cfb4b22c471e6d5e38e51f71cbd6fec536826be4"
+    },
+    "D2FP_R101_CIHP": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "9f7ce27e48bdef4d03c3a85a241d9f21e230e01a7c9d80d0a2c51718b46f8846",
+      "metrics_sha256": "f85ebe53a74cfe10466538fbc4e39d2e0d9b27475b0e0f5113bcbe51877aca46"
+    },
+    "RPR_CIHP": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "bdf6031823655e533f70021788b6f15ac34219e9368bfbe4b7bd7ff13e300b06",
+      "metrics_sha256": "7fd6bc6663ef30f89774c687816a39197017a98d4011103ad2ebed55ccdcad05"
+    },
+    "CPI_R50_CIHP": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "469b25ee04893c442b92d1e891d5d8449f84d14dbb51a6162ed4fdd5ae9fb84f",
+      "metrics_sha256": "8609e576b8d551b0d011f159d2d45d570ee45a718dd59a3dfec89080fa2f3a8d"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "743adae263aab5ed802372c3d05954c6aea4233c75c109b953e1ba1e1886d5dc",
+      "metrics_sha256": "6f32e64477e78d173590715f1263ee6365aceff2f524c2ab7baa2ccd72214e42"
+    },
+    "Sapiens2_0.4b": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "3086c745023aeafd0b822b3cdbf4431c4207b469afd219aac21855f347cfd8ab",
+      "metrics_sha256": "75c39751d8ad479734801bdfec7dd14d5df7437421aa402c7376d0cf530cd010"
+    },
+    "Sapiens2_0.8b": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "42c72a43ed0eeafaa345aa308768ee735a781644b401cc4f0873bbcec07ddc44",
+      "metrics_sha256": "c3d66dd53ae530872bbbdb76c5c45874ecaf41f7913c97cdf3ccf24cba5faa7e"
+    },
+    "Sapiens2_1b": {
+      "exact_unique_membership": 90,
+      "ledger_sha256": "c7878eebd0bc1ce59b921d922d526516bba963d6745c02ffd0a69c5c5101c96b",
+      "metrics_sha256": "1857ef0fd4f720da4bcf46552e6a4c05b33a28ba463b3eb2f0d6148515c17025"
+    }
+  },
+  "config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf"
+}

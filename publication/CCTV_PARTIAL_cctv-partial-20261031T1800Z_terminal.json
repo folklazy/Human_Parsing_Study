@@ -1,0 +1,31 @@
+{
+  "scope": "Aggregate private-CCTV partial benchmark only; no CCTV source identifiers/assets",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 507,
+      "sha256": "fddadec1891899ee21036db9bfceca3a3716f93c662005b672f33e59b778fcd2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 1905,
+      "sha256": "7956d31bde34b9f23e79352390d9f20e93962b617ff4a4433dadc1e76ee6d449"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
+      "bytes": 3567,
+      "sha256": "a3495bea8a65af87a9fa852eff13c0958991f74570842090697fe9ac7a48ccf5"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/PARTIAL_RECALL.csv",
+      "bytes": 6067,
+      "sha256": "2018661d675fc9f0e6e221ae324f40fce811127b2a7fc011a5b3bc8ed9762039"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 2825,
+      "sha256": "49aeed8c2a759bd39f2bcc72e6e8938330bb1939b7a6ee020561650fb7761f45"
+    }
+  ],
+  "run_id": "cctv-partial-20261031T1800Z"
+}

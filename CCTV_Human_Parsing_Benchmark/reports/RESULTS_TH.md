@@ -6,13 +6,13 @@
 |---|---|---:|---:|---:|---:|---:|---:|
 |QANet_CIHP_HRNetW48_512x384|COMPLETE|90/90|81.238|84.847|87.832|74.962|82.220|
 |M2FP_R101_CIHP|COMPLETE|90/90|76.073|81.629|80.933|70.529|77.291|
-|D2FP_R101_CIHP|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|RPR_CIHP|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|CPI_R50_CIHP|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|CPI_ConvNeXtB_CIHP|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|Sapiens2_0.4b|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|Sapiens2_0.8b|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
-|Sapiens2_1b|NOT_STARTED|0/90|N/A|N/A|N/A|N/A|N/A|
+|D2FP_R101_CIHP|COMPLETE|90/90|62.307|73.393|75.614|69.042|70.089|
+|RPR_CIHP|COMPLETE|90/90|77.801|78.290|81.794|68.389|76.569|
+|CPI_R50_CIHP|COMPLETE|90/90|75.451|78.938|75.220|68.914|74.631|
+|CPI_ConvNeXtB_CIHP|COMPLETE|90/90|79.924|85.844|83.528|73.927|80.806|
+|Sapiens2_0.4b|COMPLETE|90/90|86.052|88.209|82.852|66.503|80.904|
+|Sapiens2_0.8b|COMPLETE|90/90|82.721|85.609|75.714|67.048|77.773|
+|Sapiens2_1b|COMPLETE|90/90|78.947|82.505|73.050|67.291|75.448|
 
 ทุกระบบใช้inputpopulationเดียวกัน, frozenYOLOcheckpoint/settings/cacheเดียวกัน, nativeFP32settings/threshold/TTA/map-backเดิม. QANetYOLOROI, Sapiensfull-frame+YOLOmaskownership, nativeinstanceparsers+YOLOassociationเป็นapplicationconfigurationcomparison ไม่ใช่architecture-onlytest. ไม่มีGTช่วยinference.
 
@@ -21,3 +21,7 @@ Face_Neckเป็นproxy; Upper/Lowerคือagreementกับannotationช�
 STRICT_COMPLETE: primaryเฉพาะระบบที่ครบexactpopulation; failed/blockedไม่เอาsubsetมาแทน. Model/OOMretry0 ไม่มีprecision/resolutionfallback. เก็บpackets/hash/metadata/attemptlogsในprivateoutputs; ไม่เผยแพร่CCTVassets/filenamesบนGit. รอบเดิมในdataset/resultsเป็นexploratoryคนละroute/scoring ไม่ใช้รวมคะแนน.
 
 ก่อนทำfullbenchmarkสำหรับเลือกผู้ชนะ ต้องมีsharednegative/ignore/complete-targetannotationpolicy, DressguidelineและQA/GTที่freezeแล้ว และfull-personextentsหากต้องการinstanceF1. การตั้งค่าประเมินไม่สร้างGTส่วนที่ขาดขึ้นมา.
+
+## ตรวจปิดรอบอัตโนมัติ
+
+9/9ระบบครบexact90IDs; [CSV day/night/overall](../metrics/PARTIAL_RECALL.csv) / [machine state](../STUDY_STATE.json). ระบบไม่ครบprimarynull; full-imageIoU/precision/personF1คงnullเพราะGTไม่รองรับ ไม่ใช่0. ไม่มีoveralldeploymentwinnerหรือinference/retryใหม่จากตัวตรวจนี้.

@@ -35,13 +35,18 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 517,
-      "sha256": "09ceb71c55ac105ba7f8049f23af07a5fe1eb09b027d88f4f46c4b93a1bf7a06"
+      "sha256": "fddadec1891899ee21036db9bfceca3a3716f93c662005b672f33e59b778fcd2",
+      "bytes": 507
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "sha256": "49aeed8c2a759bd39f2bcc72e6e8938330bb1939b7a6ee020561650fb7761f45",
+      "bytes": 2825
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 1352,
-      "sha256": "73fccae295ef493fd3beed108f5ca32b922b629c8143ba7c5ff8d93b95b41dbc"
+      "sha256": "7956d31bde34b9f23e79352390d9f20e93962b617ff4a4433dadc1e76ee6d449",
+      "bytes": 1905
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
@@ -52,6 +57,11 @@
       "path": "CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json",
       "bytes": 765,
       "sha256": "a499eb0862e280324711bd5565a3c12043fe8e05fa64262fdaf898bdba3ad09d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/PARTIAL_RECALL.csv",
+      "sha256": "2018661d675fc9f0e6e221ae324f40fce811127b2a7fc011a5b3bc8ed9762039",
+      "bytes": 6067
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json",
@@ -75,8 +85,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
-      "bytes": 3013,
-      "sha256": "856df09571e342c3060d767ec58e9e2c4dec91a6e45d7c120906c1825dade959"
+      "sha256": "a3495bea8a65af87a9fa852eff13c0958991f74570842090697fe9ac7a48ccf5",
+      "bytes": 3567
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py",
@@ -4514,6 +4524,11 @@
       "bytes": 4621
     },
     {
+      "path": "publication/CCTV_PARTIAL_cctv-partial-20261031T1800Z_terminal.json",
+      "sha256": "1c2a1184f4068503c96f690b46f01576946fb3a81062782944b5ef864e7616a7",
+      "bytes": 1060
+    },
+    {
       "path": "publication/CIHP_CONTINUATION_LAUNCH_20261028.json",
       "bytes": 1345,
       "sha256": "061a40755c67208ede48d6fe1eac053f2ab1185f06ab0be16873be0f7309aebe"
@@ -6344,6 +6359,6 @@
       "sha256": "3688db8c60d71e436b0eb4bc58bde03af7fbaddb2bbc00c5edbb91420b808e78"
     }
   ],
-  "updated_utc": "2026-10-31T17:50:01.904720+00:00",
+  "updated_utc": "2026-10-31T18:28:26.066687+00:00",
   "revision_reason": "Native CIHP firstsix source/config freeze after actual CPU and TRAIN readiness; before validation"
 }

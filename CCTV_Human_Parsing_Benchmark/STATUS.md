@@ -1,6 +1,6 @@
 # Current CCTV partial benchmark
 
-Updated 2026-10-31T17:49:31.984623+00:00 UTC. **2/9 COMPLETE**; active worker D2FP_R101_CIHP.
+Updated 2026-10-31T18:28:18.826756+00:00 UTC. **9/9 COMPLETE**; active worker none.
 
 Blocked resource: none. No automatic model/OOM retries.
 
