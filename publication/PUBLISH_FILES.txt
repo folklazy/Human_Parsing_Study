@@ -9,12 +9,17 @@ CCTV_Human_Parsing_Benchmark/STUDY_STATE.json
 CCTV_Human_Parsing_Benchmark/WORK_LOG.md
 CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json
 CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json
+CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_DIAGNOSTICS.csv
+CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_PER_TARGET.csv
 CCTV_Human_Parsing_Benchmark/metrics/PARTIAL_RECALL.csv
+CCTV_Human_Parsing_Benchmark/reports/CCTV_METRIC_AUDIT_TH.md
 CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json
 CCTV_Human_Parsing_Benchmark/reports/DATASET_AUDIT.json
 CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md
 CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json
+CCTV_Human_Parsing_Benchmark/reports/METRIC_AUDIT_EVIDENCE.json
 CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md
+CCTV_Human_Parsing_Benchmark/scripts/audit_saved_metrics.py
 CCTV_Human_Parsing_Benchmark/scripts/benchmark.py
 CCTV_Human_Parsing_Benchmark/scripts/finalize.py
 CCTV_Human_Parsing_Benchmark/scripts/progress.py
@@ -947,6 +952,7 @@ provenance/STAGE0_BLOCKER_REVIEW_20261008T082918Z.json
 provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
+publication/CCTV_METRIC_AUDIT_20261101.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031T1800Z_terminal.json

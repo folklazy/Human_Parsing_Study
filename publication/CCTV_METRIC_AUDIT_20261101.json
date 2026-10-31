@@ -1,0 +1,54 @@
+{
+  "scope": "Sanitized CCTV90 metric/source audit and explicitly positive-domain-only diagnostics; no new inference or canonical protocol/score changes",
+  "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
+  "run_id": "cctv-partial-20261031T1800Z",
+  "created_utc": "2026-10-31T21:18:45.175886+00:00",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 3988,
+      "sha256": "e03ba2338ff6ed8b0d996309fce7da78714bf3ed357fc150ef27007c596f51d8"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 916,
+      "sha256": "c46368d13c9ea370441ad04aed5fa3c138baa6aeff7aa22cb94c9892f1dca58c"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 3198,
+      "sha256": "56dc11674d2057460a3d051fd9fc63cf539cf5d2e55607ead7a5babb33a7808c"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 3285,
+      "sha256": "227118ec4c69b208a4fc2dde795d6ff8cb0206483e89840a6366135a0b953bee"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CCTV_METRIC_AUDIT_TH.md",
+      "bytes": 22643,
+      "sha256": "a76daadda6d31f26101efada0b62cb066dc1d9c1f1e04338abd7534f0c99172a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/METRIC_AUDIT_EVIDENCE.json",
+      "bytes": 6878,
+      "sha256": "67fb4a1440b0ae82ec835b1d658e667040219e217bc6cae2e31ab103d5677c8f"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_DIAGNOSTICS.csv",
+      "bytes": 3281,
+      "sha256": "6c679e279af8c4a1db16c41521f8d305df1a421c6d196f2bde7da1aa95b6d19b"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_PER_TARGET.csv",
+      "bytes": 15272,
+      "sha256": "ea028eb0fd24e4db7395fff0f4f6c1be967fabd7e320558b522d66412809d930"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/audit_saved_metrics.py",
+      "bytes": 10566,
+      "sha256": "51360eb67efc4372c968edc6d51bc0629672f00374ee927b5cf3bff7ba38cb7e"
+    }
+  ],
+  "private_assets_or_image_identifiers_published": false
+}

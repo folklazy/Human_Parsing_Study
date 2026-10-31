@@ -57,5 +57,15 @@
       "metrics_sha256": "1857ef0fd4f720da4bcf46552e6a4c05b33a28ba463b3eb2f0d6148515c17025"
     }
   },
-  "config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf"
+  "config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "metric_audit": {
+    "status": "AUDIT_PASS_WITH_GT_SCOPE_LIMITATION",
+    "report": "reports/CCTV_METRIC_AUDIT_TH.md",
+    "evidence": "reports/METRIC_AUDIT_EVIDENCE.json",
+    "diagnostics": "metrics/KNOWN_DOMAIN_DIAGNOSTICS.csv",
+    "post_hoc": true,
+    "original_primary_unchanged": true,
+    "new_model_calls": 0,
+    "full_image_metrics_identifiable": false
+  }
 }

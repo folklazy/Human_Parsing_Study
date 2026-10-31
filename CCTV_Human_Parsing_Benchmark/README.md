@@ -31,3 +31,7 @@ python3 CCTV_Human_Parsing_Benchmark/scripts/progress.py --watch
 ```
 
 กด Ctrl+C ปิดเฉพาะviewer ไม่หยุดcontroller. PID/สถานะล่าสุดอ่านจากprivateJSONจริง; publicGitเป็นsnapshotตอนsync ไม่ใช่liveสถานะ
+
+## Metric audit — 1 November2026
+
+[เหตุผลที่ไม่มี full-image IoU และผล IoU บน known annotation domain](reports/CCTV_METRIC_AUDIT_TH.md) ตรวจจาก canonical source/GT/ledgers/scoring artifacts เดิม ไม่มี inference ใหม่. ตัวเลขที่เพิ่มเป็น post-hoc diagnostics ไม่แทน primary recall4 หรือยืนยัน full-scene/deployment winner.

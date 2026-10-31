@@ -15,3 +15,9 @@ Automatic private state/report updated. Read currentSTATUS/BATCH_STATUS; no auto
 ## 2026-10-31T18:28:26.066687+00:00 UTC — aggregate terminal verification
 
 9/9 exactpopulationcomplete. DerivedCSV/statefromsavedmetrics/ledgers,norescore/inference. Privateidentifiers/images/masks/logsnotpublished. NextreviewpartialdiagnosticsandclosefullannotationQArequirements.
+
+## 2026-10-31T21:17:42.237491+00:00 UTC — CCTV90 metric audit
+
+User asks why CCTV90 lacksIoU/standardmetrics. Inspected frozenprotocol/source/GTconversion/legacyexploratoryscripts and canonicalconfig/state; workers/controller terminal, no new launches. Verified acceptedconfig/source bindings,360GT/annotationfilehashes, exact90IDsper9models and810atomicmetadata/scoringhashes; per-packetconfusionssumtoallcanonicaloverall/day/nightmatrices. Replayed firstfrozenmember onQANet/CPIConv/Sapiens04(3NPZs) throughsavedmasks→compose→projection→partialscorer; exactagreement, no bulkNPZrehash or fullrescore.
+
+Derived standard-formulaIoU/Dice/P/R only ontheunchangedknownpositiveannotationdomain, explicitlypost-hocdiagnostic. Sourcecounts1568255known/189496320totalpixels;0.827591%isarea,notannotationcompletionpercentage. FullimageFP/IoU/instanceF1stillunidentifiablewithoutverifiednegative/scopeGT. FoundlegacyfullimageIoUusedGT0asbackground; twolegacySapiensJSONsinvalidescape; preservedall. Separateparsingvscolorclaims. Added audit report/evidence/aggregateCSV and repeatableCPU-onlyauditutility; noGT/source scientificconfig/canonicalmetricmutation,inference,retry,training,download orenvironmentchange. Report9tablerows/27grouprows/linksverified. NextpublishonlysanitizedaggregatefilesviaexistingHumanParsingpublicationsync; noCCTVidentifiers/assets/per-personrecords.

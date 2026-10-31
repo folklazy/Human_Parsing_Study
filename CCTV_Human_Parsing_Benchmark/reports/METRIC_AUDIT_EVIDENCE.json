@@ -1,0 +1,138 @@
+{
+  "status": "AUDIT_PASS_WITH_GT_SCOPE_LIMITATION",
+  "created_utc": "2026-10-31T21:13:30.350926+00:00",
+  "run_id": "cctv-partial-20261031T1800Z",
+  "original_protocol": "CCTV_PARTIAL_TARGET_RECALL_V1",
+  "derived_metric_scope": "POST_HOC_ON_UNCHANGED_POSITIVE_ONLY_DOMAIN_NOT_NEW_FULL_BENCHMARK",
+  "config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "audit_script_sha256": "51360eb67efc4372c968edc6d51bc0629672f00374ee927b5cf3bff7ba38cb7e",
+  "protocol_sha256": "ade446012b7c81d0ea6c1cd2536ade04b259b4b45f0fdd7ea70c7ee68e97a399",
+  "projection_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "original_source_hashes_verified": {
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": true,
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": true,
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": true,
+    "Human_Parsing_Benchmark/src/common_view/core.py": true,
+    "Human_Parsing_Benchmark/src/common_view/packets.py": true,
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": true,
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": true,
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": true,
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": true
+  },
+  "GT_reference_files_hash_verified": 360,
+  "membership_per_model": 90,
+  "models_complete": 9,
+  "total_image_pixels": 189496320,
+  "known_annotated_pixels": 1568255,
+  "known_fraction": 0.008275912693185809,
+  "unknown_pixels": 187928065,
+  "GT_people_with_annotated_parts": 127,
+  "evidence": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "d8c4047dfcaaf67dcdd0b994058c6fbc45966c2979e9db10369d4e6e280cbb3e",
+      "accepted_ledger_sha256": "5cb8b1c208868c5f0e33a9b6fc8b629e1a5623baae6a59cbdc67306a550ee82d",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "M2FP_R101_CIHP": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "cde50a6f4bbcb24683290566cfb4b22c471e6d5e38e51f71cbd6fec536826be4",
+      "accepted_ledger_sha256": "513e54e56e2737557b7f09bd773eb79e76f330e54100a368df3dc1c387b3ff47",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "D2FP_R101_CIHP": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "f85ebe53a74cfe10466538fbc4e39d2e0d9b27475b0e0f5113bcbe51877aca46",
+      "accepted_ledger_sha256": "9f7ce27e48bdef4d03c3a85a241d9f21e230e01a7c9d80d0a2c51718b46f8846",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "RPR_CIHP": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "7fd6bc6663ef30f89774c687816a39197017a98d4011103ad2ebed55ccdcad05",
+      "accepted_ledger_sha256": "bdf6031823655e533f70021788b6f15ac34219e9368bfbe4b7bd7ff13e300b06",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "CPI_R50_CIHP": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "8609e576b8d551b0d011f159d2d45d570ee45a718dd59a3dfec89080fa2f3a8d",
+      "accepted_ledger_sha256": "469b25ee04893c442b92d1e891d5d8449f84d14dbb51a6162ed4fdd5ae9fb84f",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "6f32e64477e78d173590715f1263ee6365aceff2f524c2ab7baa2ccd72214e42",
+      "accepted_ledger_sha256": "743adae263aab5ed802372c3d05954c6aea4233c75c109b953e1ba1e1886d5dc",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "Sapiens2_0.4b": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "75c39751d8ad479734801bdfec7dd14d5df7437421aa402c7376d0cf530cd010",
+      "accepted_ledger_sha256": "3086c745023aeafd0b822b3cdbf4431c4207b469afd219aac21855f347cfd8ab",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "Sapiens2_0.8b": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "c3d66dd53ae530872bbbdb76c5c45874ecaf41f7913c97cdf3ccf24cba5faa7e",
+      "accepted_ledger_sha256": "42c72a43ed0eeafaa345aa308768ee735a781644b401cc4f0873bbcec07ddc44",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    },
+    "Sapiens2_1b": {
+      "exact_ids": 90,
+      "atomic_score_and_metadata_hashes_checked": 90,
+      "accepted_metrics_sha256": "1857ef0fd4f720da4bcf46552e6a4c05b33a28ba463b3eb2f0d6148515c17025",
+      "accepted_ledger_sha256": "c7878eebd0bc1ce59b921d922d526516bba963d6745c02ffd0a69c5c5101c96b",
+      "per_packet_histograms_reconcile_groups": true,
+      "full_NPZ_rehash": "NOT_REPEATED; prior packet acceptance reused, bounded replay below"
+    }
+  },
+  "bounded_packet_replay": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "packets_replayed": 1,
+      "NPZ_and_atomic_hashes": "PASS",
+      "geometry_and_saved_confusion": "PASS"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "packets_replayed": 1,
+      "NPZ_and_atomic_hashes": "PASS",
+      "geometry_and_saved_confusion": "PASS"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "packets_replayed": 1,
+      "NPZ_and_atomic_hashes": "PASS",
+      "geometry_and_saved_confusion": "PASS"
+    }
+  ],
+  "hand_counted_fixture": "PASS",
+  "bulk_NPZ_rehash_or_full_rescore": false,
+  "model_calls": 0,
+  "GT_modified": false,
+  "canonical_metrics_modified": false,
+  "full_image_IoU_identifiable": false,
+  "person_extent_F1_identifiable": false,
+  "limitations": [
+    "Outside annotated pixels unknown: false positives there are unmeasured",
+    "Human_ids are part unions, not full person silhouettes",
+    "Face_Neck proxy and Dress policy unresolved",
+    "Global semantics does not prove correct per-person ownership",
+    "Diagnostic formula/domain cannot establish overall deployment winner"
+  ]
+}
