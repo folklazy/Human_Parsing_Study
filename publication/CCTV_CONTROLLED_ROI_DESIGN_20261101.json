@@ -1,0 +1,49 @@
+{
+  "scope": "Document-only controlledROI and FaceNeck design; no new execution or result mutation",
+  "updated_utc": "2026-11-01T11:29:26.993958+00:00",
+  "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md",
+      "bytes": 38943,
+      "sha256": "f700be6449601bda77cca1a25779f92375bb007d74d62b8fa1bd56a6599858eb"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_DESIGN_REVIEW.json",
+      "bytes": 12142,
+      "sha256": "515e542ce2a292637feb0aa9b708ae329cdb1267c6b6c31483eeafc2534ec0c2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 7273,
+      "sha256": "2bd1a442e637ec9ad1eaa02e70fa2842ebfdf6f1a85338ea674e53168a82f76f"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 6448,
+      "sha256": "867493d6f847f30fef386e8e5e8349c3ce7617060525e5320f2f3d8525fddcf1"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 14020,
+      "sha256": "49e825d65c9a5413a46fe0ee9e69d0445747bb379378cd64b11d9569842596ad"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 6395,
+      "sha256": "cff32ef5164ba7eeab0041af177c0442887577034a3715dc5f1844db621d67ce"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 11804,
+      "sha256": "df4c40afdf0f34be38e50a0d78c9c6b568b4925689a85e19f3e3e7aa190af337"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13039,
+      "sha256": "658c2187feac5a1c75fe311510caedf1c597efed7fafda601cfe66c4475cfedf"
+    }
+  ],
+  "new_model_calls": 0,
+  "public_CCTV_assets_or_identifiers": false
+}

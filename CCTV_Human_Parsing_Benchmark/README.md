@@ -1,8 +1,12 @@
 # CCTV Human Parsing Benchmark
 
-> **อัปเดต 2026-11-01T10:16:54.165252+07:00: GT_OWNER_REVIEW_REQUIRED.** พบsourceownerlabelsรวมส่วนจากคนละคนอย่างน้อย2ภาพ พักการใช้ตาราง90ภาพเพื่อตัดสินเลือกโมเดล;ค่าผลเดิมเก็บเป็นhistoricalagreementกับGTที่ให้มา. [ผลตรวจและfreshSapiensทั้ง3ขนาด](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md).
+**สถานะปัจจุบัน: GT_OWNER_REVIEW_REQUIRED / PROPOSED_NOT_FROZEN.** อ่าน [ข้อเสนอ controlled person-ROI และ Face/Neck](CONTROLLED_ROI_PROTOCOL_TH.md) → [STATUS](STATUS.md) → [หลักฐาน design review](reports/CONTROLLED_ROI_DESIGN_REVIEW.json). ผู้ใช้มอบหมายให้กำหนดวิธีประเมินที่เหมาะสม; ยังไม่มี inference รอบใหม่หรือการอนุมัติ batch เพิ่มจากการออกแบบนี้.
 
-**ผลล่าสุด: [รายงาน selected annotated-part IoU/Dice ครบ 9 ระบบ](reports/CCTV_SELECTED_PART_RESULTS_TH.md)** — QANet สูงสุดตามเกณฑ์นี้: IoU4 61.773%, Dice4 69.203%. ใช้ saved masks เดิม ไม่มี inference ใหม่. Primary 315 ส่วน; รายงาน sensitivity ครบ 324 ส่วนด้วย. เป็นผลบนคน/ส่วนที่ annotate หลัง agent-assisted visual screen ไม่ใช่ full-scene IoU หรือ independent expert certification.
+ข้อเสนอใช้ crop/context/YOLO ownership เดียวกันทั้ง9 checkpoints และ GT revision ที่แยก Face/Neck: headline Hair/Face-on-neck-excluded-domain/Upper/Lower เท่ากัน25%, พร้อม Face+Neck delivery แยก. ต้องปิด GT owner/contour QA และ adapter/scorer readiness ก่อน; Face view ไม่รับรอง strict face-only capability.
+
+**ผลเก่าที่เก็บไว้:** [selected annotated-part IoU/Dice](reports/CCTV_SELECTED_PART_RESULTS_TH.md),9/9×90ภาพ และ [fresh Sapiens6ภาพ×3ขนาด](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md). ค่าจาก GT เดิมเป็น historical agreement; ไม่ใช้รับรองผู้ชนะจน owner correction/GT requirements พร้อม. input ต่างกันตาม route จริง: QANet ROI, Sapiens full frame, native instance parsers full frame+association.
+
+## Historical protocols and completed evidence
 
 อ่าน [STATUS](STATUS.md) → [selected-part protocol](SELECTED_PART_PROTOCOL.md) → [ตารางเต็ม](metrics/SELECTED_PART_PER_TARGET.csv). เนื้อหา positive-domain benchmark ด้านล่างเก็บเป็นบริบทของรอบเดิม; ผลและ GT เดิมไม่เปลี่ยน.
 

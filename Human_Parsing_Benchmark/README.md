@@ -1,3 +1,5 @@
+> **Current CCTV design:** [controlled person-ROI and Face/Neck proposal](../CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), PROPOSED_NOT_FROZEN. Derived GT/scorer/route readiness precede any new batch; CIHP frozen results are unchanged.
+
 > **CCTV status: GT_OWNER_REVIEW_REQUIRED.** [Sapiens measurement review](../CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) confirms source-owner conflicts and reports bounded fresh0.4/0.8/1B ROI diagnostics. Nine-system CCTV selection is on hold; CIHP results below remain frozen.
 
 > **Current: common C4-P revision2 COMPLETE 9/9 checkpoints, 5,000 CIHP VAL IDs each.** [รายงานผลและ shortlist](reports/CIHP_COMMON_NINE_RESULTS_TH.md) → [STATUS](STATUS.md) → [normalized canonical result index](manifests/CIHP_COMMON_RESULT_INDEX.json). Native20 results preserved; CPI added by saved-only CPU scoring, no model inference.

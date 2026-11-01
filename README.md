@@ -1,5 +1,7 @@
 # Human Parsing Study
 
+**Current CCTV evaluation proposal:** [controlled person-ROI and explicit Face/Neck views](CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), **PROPOSED_NOT_FROZEN**. Same predicted crop/ownership across nine checkpoints; shared neck-excluded Face domain plus separate Face+Neck delivery, equal four-target weights. GT revision and route/scorer readiness precede a new batch. No new inference or old-result changes in this design work.
+
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
 
 **Current CCTV validity status: GT_OWNER_REVIEW_REQUIRED.** [Measurement review and fresh Sapiens0.4/0.8/1B results](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) found source labels merging parts from different people in at least2images. Earlier90-image numbers remain historical supplied-GT agreement; final configuration selection is on hold pending owner QA. Bounded fresh ROI diagnostics completed6images×3sizes/51modelcalls; no full90ROI benchmark.

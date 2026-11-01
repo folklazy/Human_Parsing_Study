@@ -5,7 +5,7 @@
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T03:16:54.165225+00:00",
+  "updated_utc": "2026-11-01T11:27:25.122054+00:00",
   "full_benchmark_ready": false,
   "reason": "At least2 source images contain cross-person owner labels; supplied-GT scores remain recorded but final personwise model selection is on hold",
   "no_overall_deployment_winner": true,
@@ -85,7 +85,7 @@
     "selection_use": "HOLD_PENDING_GT_OWNER_QA",
     "GT_reference_validity": "KNOWN_SOURCE_OWNER_CONFLICTS"
   },
-  "current_evaluation": "Sapiens_measurement_review",
+  "current_evaluation": "Controlled_ROI_design",
   "current_result_report": "reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
   "preprocessing_review": {
     "status": "INPUT_PREPROCESSING_PARITY_PASS_ON_BOUNDED_CPU_CASES",
@@ -130,5 +130,18 @@
     "report": "reports/GT_OWNER_BINDING_REVIEW.json",
     "source_GT_modified": false,
     "historical_scores_unchanged": true
+  },
+  "current_design_document": "CONTROLLED_ROI_PROTOCOL_TH.md",
+  "controlled_ROI_design": {
+    "document_id": "CCTV_CONTROLLED_ROI_DESIGN_V1",
+    "status": "PROPOSED_NOT_FROZEN",
+    "launch_ready": false,
+    "model_calls_this_work_unit": 0,
+    "new_benchmark_authorization": false,
+    "report": "CONTROLLED_ROI_PROTOCOL_TH.md",
+    "evidence": "reports/CONTROLLED_ROI_DESIGN_REVIEW.json",
+    "next_action": "Versioned derived GT and CPU scorer acceptance; then bounded adapter/resource-readiness proposal before a new batch approval",
+    "stage": "GT_REVISION_AND_ROI_READINESS_PENDING",
+    "user_method_choice_delegated": true
   }
 }

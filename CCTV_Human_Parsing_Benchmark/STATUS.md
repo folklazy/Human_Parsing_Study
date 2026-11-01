@@ -1,5 +1,18 @@
 # CCTV parsing — current status
 
+Updated 2026-11-01T18:27:25.122054+07:00 (Asia/Bangkok).
+
+**GT_OWNER_REVIEW_REQUIRED / GT_REVISION_AND_ROI_READINESS_PENDING**. วิธีประเมินรอบใหม่จัดทำครบเป็น **PROPOSED_NOT_FROZEN**: [controlled ROI / Face-Neck protocol](CONTROLLED_ROI_PROTOCOL_TH.md). ยังไม่ใช่ launch approval หรือ execution acceptance.
+
+- รอบ CCTV90 เก่า: QANet รับ YOLO ROI; Sapiens รับ full frame ก่อน YOLO ownership; อีกห้าระบบรับ full frame แล้ว associate. ผลเก็บครบ9/9 แต่พัก final selection เพราะ source owner conflicts และข้อจำกัด taxonomy/input.
+- ข้อเสนอใหม่: same predicted crop/context/ownership สำหรับ9checkpoints; GT แยก Face/Neck; headline Hair/Face-on-neck-excluded-domain/Upper/Lower เท่ากัน25%; Face+Neck delivery แยกพร้อมข้อจำกัด strict Face-only.
+- Cache metadata:90images/130opportunities/8zero-detection images. Proposed1,170ROIjobs; potential Sapiens reuse45 → new1,125เมื่อ bindings ผ่าน. ยังไม่มี inference/scoring jobs ของรอบใหม่นี้เปิดทำงาน.
+- Next: derived GT owner/contour/Neck revision และ CPU acceptance; จากนั้นเสนอ adapter/resource-readiness scope และ batch approval. ไม่มี model calls, full rescore หรือ active code/config/GT changes ใน work unit ออกแบบนี้.
+
+[หลักฐานการตรวจเฉพาะจุด](reports/CONTROLLED_ROI_DESIGN_REVIEW.json) / [ผล fresh6ภาพเดิม](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) / [WORK_LOG](WORK_LOG.md). Authoritative working copy: `CCTV_Human_Parsing_Benchmark/`; public copy แยกที่ `Human_Parsing_Study_Public/`.
+
+## Historical milestones — snapshots below, not current launch authorization
+
 > **อัปเดต 2026-11-01T10:16:54.165252+07:00: GT_OWNER_REVIEW_REQUIRED.** พบsourceownerlabelsรวมส่วนจากคนละคนอย่างน้อย2ภาพ พักการใช้ตาราง90ภาพเพื่อตัดสินเลือกโมเดล;ค่าผลเดิมเก็บเป็นhistoricalagreementกับGTที่ให้มา. [ผลตรวจและfreshSapiensทั้ง3ขนาด](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md).
 
 Updated 2026-11-01T10:16:54.165252+07:00 (Asia/Bangkok). **SELECTED_PART_EVALUATION_COMPLETE —9/9×90IDs**, no active model worker or CPU scorer.

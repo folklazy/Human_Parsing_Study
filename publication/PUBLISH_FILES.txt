@@ -2,6 +2,7 @@
 AGENTS.md
 ARTIFACTS.md
 CCTV_Human_Parsing_Benchmark/.gitignore
+CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md
 CCTV_Human_Parsing_Benchmark/PROTOCOL.md
 CCTV_Human_Parsing_Benchmark/README.md
 CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md
@@ -28,6 +29,7 @@ CCTV_Human_Parsing_Benchmark/metrics/SELECTED_PART_PER_TARGET.csv
 CCTV_Human_Parsing_Benchmark/metrics/SELECTED_PART_SUMMARY.csv
 CCTV_Human_Parsing_Benchmark/reports/CCTV_METRIC_AUDIT_TH.md
 CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md
+CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_DESIGN_REVIEW.json
 CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json
 CCTV_Human_Parsing_Benchmark/reports/DATASET_AUDIT.json
 CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md
@@ -985,6 +987,7 @@ provenance/STAGE0_BLOCKER_REVIEW_20261008T082918Z.json
 provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
+publication/CCTV_CONTROLLED_ROI_DESIGN_20261101.json
 publication/CCTV_METRIC_AUDIT_20261101.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json

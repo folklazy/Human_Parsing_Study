@@ -1,0 +1,260 @@
+{
+  "document_id": "CCTV_CONTROLLED_ROI_DESIGN_V1",
+  "status": "PROPOSED_NOT_FROZEN",
+  "recommendation_complete": true,
+  "launch_ready": false,
+  "created_utc": "2026-11-01T11:27:25.122054+00:00",
+  "created_Asia_Bangkok": "2026-11-01T18:27:25.122054+07:00",
+  "source_publication_commit": "3eec4bb526cc944f2d99ac2cf714c7e86aaf7d75",
+  "scope": "Read-only route/binding review and future evaluation design; no implementation or inference",
+  "user_design_delegation": "User requested the best defensible measurable method, rather than selecting Face/Neck options themselves",
+  "source_run": "cctv-partial-20261031T1800Z",
+  "source_config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "small_frozen_source_hash_checks": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py",
+      "expected_sha256": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+      "observed_sha256": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py",
+      "expected_sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+      "observed_sha256": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/data.py",
+      "expected_sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+      "observed_sha256": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/common_view/core.py",
+      "expected_sha256": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+      "observed_sha256": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/common_view/packets.py",
+      "expected_sha256": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+      "observed_sha256": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/common_view/sapiens_route.py",
+      "expected_sha256": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+      "observed_sha256": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py",
+      "expected_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "observed_sha256": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py",
+      "expected_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "observed_sha256": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "match": true
+    },
+    {
+      "path": "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py",
+      "expected_sha256": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+      "observed_sha256": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+      "match": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "old_route": "YOLO_ROI",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "native_config": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "native_config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "old_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "native_config": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "native_config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "old_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "native_config": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "native_config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "old_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "CPI_R50_CIHP",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "old_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "old_route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "old_route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "old_route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "old_route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "proposed_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "new_route_readiness": "NOT_ACCEPTED"
+    }
+  ],
+  "workload": {
+    "population_images": 90,
+    "ROI_jobs_per_checkpoint": 130,
+    "zero_detection_images": 8,
+    "nine_configuration_jobs": 1170,
+    "potential_reused_Sapiens_ROI_jobs": 45,
+    "potential_new_ROI_jobs": 1125,
+    "source_config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+    "detector_commit_count": 90,
+    "packet_array_revalidation_repeated": false,
+    "quality_job_unit": "logical detector opportunity per checkpoint; not a guaranteed raw network-forward count",
+    "detector_commit_records_sha256": "4ed32d999dfbbe94f896f846ab6d38bb193a463df431e4ab295cc0c3ca177693",
+    "detector_commit_digest_encoding": "sha256(UTF8(json.dumps(private_records, sort_keys=True, separators=(comma,colon))))",
+    "new_jobs_if_reuse_all_pass": 1125,
+    "new_jobs_if_reuse_none": 1170,
+    "warmup_and_readiness_calls": "NOT_YET_FROZEN",
+    "NPZ_bulk_array_revalidation_this_work_unit": false
+  },
+  "recommended_targets": {
+    "mandatory_evaluation": [
+      "Hair",
+      "Face_on_shared_neck_excluded_domain",
+      "Upper_non_one_piece",
+      "Lower_non_one_piece"
+    ],
+    "primary_equal_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "supplementary_required_reporting": [
+      "Face_Neck_delivery",
+      "Neck_coverage_by_candidate_mask",
+      "native_output_capability"
+    ],
+    "Neck_mandatory_deployment_requirement": "NOT_ASSUMED",
+    "Face_view_domain": "original grid minus this GT persons reviewed Neck and fixed GT uncertainty; identical per-person domain across checkpoints",
+    "strict_face_only_claim": false,
+    "original_annotation_pixel_equivalence": "NOT_VERIFIED"
+  },
+  "illustrative_expected_cases_for_future_acceptance": [
+    {
+      "GT_face_pixels": 100,
+      "GT_neck_pixels": 25,
+      "prediction": "Face_only_100",
+      "old_fullgrid_face_IoU": 1.0,
+      "Face_domain_IoU": 1.0,
+      "Face_Neck_delivery_IoU": 0.8
+    },
+    {
+      "GT_face_pixels": 100,
+      "GT_neck_pixels": 25,
+      "prediction": "Face_Neck_125",
+      "old_fullgrid_face_IoU": 0.8,
+      "Face_domain_IoU": 1.0,
+      "Face_Neck_delivery_IoU": 1.0
+    },
+    {
+      "GT_face_pixels": 100,
+      "GT_neck_pixels": 25,
+      "prediction": "Face_Neck_125_plus_outside_neck_torso_25",
+      "Face_domain_TP": 100,
+      "Face_domain_FP": 25,
+      "Face_domain_FN": 0,
+      "Face_domain_IoU": 0.8
+    }
+  ],
+  "GT_readiness": {
+    "status": "GT_OWNER_REVIEW_REQUIRED",
+    "confirmed_source_owner_conflict_images": 2,
+    "source_annotations_changed": false,
+    "new_Neck_annotations_created": false,
+    "new_eligible_counts": "NOT_MATERIALIZED"
+  },
+  "process_inspection": {
+    "no_active_model_worker_found": true,
+    "tmux_shells_present": true,
+    "existing_background_git_push_loop_present": true,
+    "existing_processes_changed": false,
+    "GPU_probe_required_for_document_design": false
+  },
+  "actions_not_performed": [
+    "model inference",
+    "CPU full rescore",
+    "new execution/scorer implementation",
+    "active config edits",
+    "source GT edits",
+    "dataset or checkpoint rehash",
+    "GPU readiness or model retry"
+  ],
+  "model_calls_this_work_unit": 0,
+  "new_benchmark_authorization": false,
+  "post_hoc_design": true,
+  "private_identifiers_or_images_in_this_record": false,
+  "next_action": "Versioned derived GT and CPU scorer acceptance; then bounded adapter/resource-readiness proposal before a new batch approval",
+  "primary_document": "CONTROLLED_ROI_PROTOCOL_TH.md",
+  "document_consistency_checks": {
+    "JSON_parse": "PASS",
+    "nine_unique_checkpoint_bindings": "PASS",
+    "ninety_frames_130_opportunities_and1170_jobs": "PASS",
+    "potential_reuse45_and_new1125_arithmetic": "PASS",
+    "four_equal_weights_sum_to_one": "PASS",
+    "current_status_and_evidence_proposal_state": "PASS",
+    "new_markdown_relative_links": "PASS",
+    "explicit_public_files_secrets_source_stems_oversize_symlink_review": "PASS",
+    "acceptance_scope": "DOCUMENT_CONSISTENCY_ONLY_NOT_EXECUTION_ACCEPTANCE"
+  }
+}
