@@ -1,6 +1,6 @@
 # CCTV Human Parsing Benchmark
 
-**Current authorized work:** [CCTV90 controlled person-ROI batch](reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints, same frozen YOLO crop/ownership. CPU acceptance passed; per-model GPU gates precede continuation. [Live status](STATUS.md). New headline scores remain null until reviewed Face/Neck GT is ready.
+**Current status: predictions complete9/9; scoring pending GT.** [Completion report](reports/CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Eachcheckpoint:90images/130ROIs;controllersstopped. NewheadlineIoU/Dice remainnull pending reviewedFace/NeckGT,remainingowner/contourQA and finalscorerbinding. No inference rerun is needed just to update GT.
 
 ## Previous proposal and historical results
 

@@ -1,5 +1,31 @@
 # CCTV90 controlled person-ROI — การเตรียมและสถานะรอบใหม่
 
+## Current completion — checked 2026-11-01T20:38:12.849866+07:00
+
+**PREDICTIONS_COMPLETE_9_OF_9_SCORING_PENDING_GT**. Inference/assembled predictions ครบทั้งเก้า checkpoints ตัวละ90 unique images และ130 ROI jobs รวม810 final frame packets/1,170 logical ROIs. ชุดสุดท้ายจบ 2026-11-01T19:37:40.125828+07:00 (Asia/Bangkok). Parent และ continuation controllers/workers ออกจาก process แล้ว; GPU ตอนตรวจใช้0MiB/free14,912MiB.
+
+| Checkpoint | Images | ROIs | Final missing / duplicate / failed / invalid | Scoring |
+|---|---:|---:|---|---|
+| QANet_CIHP_HRNetW48_512x384 | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| M2FP_R101_CIHP | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| D2FP_R101_CIHP | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| RPR_CIHP | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| CPI_R50_CIHP | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| CPI_ConvNeXtB_CIHP | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| Sapiens2_0.4b | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| Sapiens2_0.8b | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+| Sapiens2_1b | 90/90 | 130/130 | 0 / 0 / 0 / 0 | null: GT pending |
+
+ค่า final failed0 หมายถึง accepted assembled membership; ไม่ได้แปลว่าไม่เคยล้มเหลว. Parent RP-R-CNN KeyError และ CPI resource-guard stops ยังคงครบ. ตรวจ actual RP-R-CNN ROI ที่เคยหยุดแล้ว: native persons0/candidates0, empty semantic mask และ atomic readback ผ่านใน revisionใหม่;ไม่ใช่การสร้างfilledbboxหรือignoreGT. CPI-R50 continuation มี74observationsที่physicaldevicefreeต่ำ1GiBแต่มีownreusablepoolพอ และรันจบโดยไม่เปลี่ยนprecision/resolution/allocator;ConvNeXt-B continuationผ่านโดยไม่มีobservationประเภทนี้ จึงไม่อ้างว่าได้ทดสอบlow-devicefreecaseเหมือนR50.
+
+API accounting ทุกsegmentsตรง1,138calls =1,125successful unique newROIobservations+12TRAINwarmups+1retainedfailedRPRlearnedcall. Prior Sapiensdiagnostic45ROIsreuseแยกจากnewcalls;parent56acceptedROIsของสามระบบที่continueไม่inferenceซ้ำ. ไม่มีnewmodelcalls/fullrescore/bulkNPZrehashในการตรวจปิดครั้งนี้.
+
+ตรวจ actual final frame-directory IDs/requiredNPZ+packetJSON+COMMIT files ครบตาม90-ID manifestทุกระบบ และอ้างcanonical completion/atomic-readback evidenceเดิม. [Sanitized completion evidence](CONTROLLED_ROI_COMPLETION.json). Private assembled indexอยู่parentrun `ASSEMBLED_PREDICTION_INDEX.json`;ชี้finalpacketrootsของparent6ระบบและcontinuation3ระบบ ไม่ใช้parentpartialviewเป็นผลสุดท้าย.
+
+**การประเมินยังไม่เสร็จ:** GTNeckยังไม่annotateแยก และremainingowner/contourQA/finalscorerbindingยังไม่ครบ. HeadlineIoU/Diceใหม่ยังnullทุกระบบ;ยังไม่มีwinnerใหม่. ขั้นถัดไปเป็นGT/scorerclosureและCPUevaluationจากsavednative masks ซึ่งไม่ต้องเปิดinferenceซ้ำเพื่อแก้GT. ไม่มีGPUjobที่รอannotationแล้วจะทำงานต่ออัตโนมัติ;คิวinferenceนี้หยุดแล้ว.
+
+## Preparation and launch history — dated snapshots
+
 อัปเดต 2026-11-01T19:01:06.078883+07:00 (Asia/Bangkok). **RUNNING_PREDICTION_COLLECTION / SCORING_PENDING_GT**; ยังไม่อ้างว่า GPU readiness ผ่านทั้งเก้าระบบ. ผู้ใช้สั่ง “ได้รันใหม่เลย” ต่อจาก [ข้อเสนอหลัก](../CONTROLLED_ROI_PROTOCOL_TH.md). Run `cctv-controlled-roi-20261101T115653Z` ใช้ภาพCCTVเดิม90ภาพ/130frozenYOLOopportunitiesต่อcheckpoint ไม่ใช่ CIHPvalidation5,000.
 
 ## ขอบเขตที่ตรึงและเหตุผล

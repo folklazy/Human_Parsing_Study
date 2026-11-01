@@ -1,7 +1,7 @@
 {
   "run_id": "cctv-roi-continuation-20261101T121138Z",
   "parent_run": "cctv-controlled-roi-20261101T115653Z",
-  "status": "QUEUED_UNTIL_PARENT_TERMINAL",
+  "status": "STOPPED_AFTER_SCOPED_CONTINUATION",
   "created_utc": "2026-11-01T12:11:39.080892+00:00",
   "config_sha256": "c336a36aea63370162ce650bc5af3ae7419e581f8f9a17c123dff6437775baa9",
   "models": [
@@ -45,6 +45,9 @@
   "session_id": 1357726,
   "verified_PPID": 1,
   "launched_utc": "2026-11-01T12:15:41.216729+00:00",
-  "snapshot_Asia_Bangkok": "2026-11-01T19:19:06.725818+07:00",
-  "GPU_correction_acceptance": "PENDING_ACTUAL_CONTINUATION_OUTPUT"
+  "snapshot_Asia_Bangkok": "2026-11-01T20:38:12.849866+07:00",
+  "GPU_correction_acceptance": "CHECKED_ACTUAL_RPR_EMPTY_OUTPUT_AND_ALL_THREE_CANONICAL_COMPLETIONS",
+  "accepted_final_images_per_model": 90,
+  "accepted_final_ROIs_per_model": 130,
+  "completion_evidence": "CONTROLLED_ROI_COMPLETION.json"
 }

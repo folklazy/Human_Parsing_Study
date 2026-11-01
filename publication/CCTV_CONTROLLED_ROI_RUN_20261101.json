@@ -1,6 +1,6 @@
 {
   "scope": "User-authorized controlledROI prediction collection; reviewedGT remains separate scoring gate",
-  "updated_utc": "2026-11-01T12:19:06.830960+00:00",
+  "updated_utc": "2026-11-01T13:42:12.783609+00:00",
   "files": [
     {
       "path": "CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md",
@@ -9,23 +9,23 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/README.md",
-      "bytes": 7632,
-      "sha256": "3a706768f709d634fdb3ae56ca085328b368dbbd0c795345342c0481e243264f"
+      "bytes": 7669,
+      "sha256": "8cd7b9bda3648bdb2670e97ab5168f50e2439b1cab6ae5f87e4710daba7c44fe"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 8815,
-      "sha256": "71ab7b86fb286ff922414fe9e6584c40d8c5a575dc5995b6f718ba64515344c9"
+      "bytes": 10234,
+      "sha256": "8a7ea55a3b14eec2d30bb4cfbad5ca5bb52918f9f63115d35b38610cb59cd7be"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
-      "bytes": 10512,
-      "sha256": "46d9a42aa1a79b6a0329eeaa6e4b8651bc4a7236f579796d0c4f7aeecf00b95e"
+      "bytes": 14090,
+      "sha256": "c7a93ed4d621cc2818d348f0ddf5506ac3e24821a4589ab71c2c9b515c0475d2"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 17938,
-      "sha256": "3a1c210fa444b1332adec727f8d3176f0dfea43de96c1c666897527a1f0e253d"
+      "bytes": 18993,
+      "sha256": "26b2a5e1c2888c2fe9f2e0f5608aaa815da4f8268c5935826f4bfedeb9c9ff0e"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_SCOPE.json",
@@ -39,8 +39,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md",
-      "bytes": 13947,
-      "sha256": "f492e19f9034531aac1c1da197a37d48e74fb3e78825b884eb1ddbb09360b5d0"
+      "bytes": 17829,
+      "sha256": "c3e4290e691dfdbab4890a981df2e3801b1e795e3c45e6cd7e55607a4d2e2e43"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_LAUNCH.json",
@@ -89,18 +89,23 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_CONTINUATION.json",
-      "bytes": 1977,
-      "sha256": "885c6f6c36c5d802e60137743f22ebe0229abe8de88b1b72e03a6f85c4f2234b"
+      "bytes": 2155,
+      "sha256": "a8a2de8f8de947f77947f3af94bc8bf8c3bb75d095a46cccc9e1a3cd916c9e09"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_COMPLETION.json",
+      "bytes": 7624,
+      "sha256": "43c56b8db689d1a68325fb6acc3806ff5d3ddfe288257c8ccc9e436686cac33c"
     },
     {
       "path": "README.md",
-      "bytes": 13450,
-      "sha256": "8fd347598692a1b0f11fff0023a046ed3341663bf648b5bc4a347869792d4c32"
+      "bytes": 13915,
+      "sha256": "acc573b621009c7615bdf024ef6ecde1906f2d781d46e0266144d03db191b403"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 12419,
-      "sha256": "11fce448e32c9755593bdd16cef83e665be4cf00f707020081a63594f189cd42"
+      "bytes": 13111,
+      "sha256": "121713a0a3c03b57dfa43704b8cb98335f13c56f5e810a57b447e4364909cad1"
     }
   ],
   "public_CCTV_assets_or_identifiers": false

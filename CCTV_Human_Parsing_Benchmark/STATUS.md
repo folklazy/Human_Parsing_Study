@@ -1,5 +1,21 @@
 # CCTV parsing — current status
 
+Updated 2026-11-01T20:38:12.849866+07:00 (Asia/Bangkok). **PREDICTIONS_COMPLETE_9_OF_9_SCORING_PENDING_GT**.
+
+- ทั้ง9checkpointsมีacceptedassembledpredictionsครบตัวละ90images/130ROIs; finalmissing/duplicate/failed/invalid0 ตามcanonicalcompletion.
+- จบ 2026-11-01T19:37:40.125828+07:00; controllers/workersหยุดแล้ว,GPUว่างตอนตรวจ. Parentpartialfailuresเก็บครบและไม่ใช้เป็นfinalview.
+- [รายงานปิดpredictioncollection](reports/CONTROLLED_ROI_RUN_TH.md) / [completionevidence](reports/CONTROLLED_ROI_COMPLETION.json). Parent`cctv-controlled-roi-20261101T115653Z`;continuation`cctv-roi-continuation-20261101T121138Z`.
+- **คะแนนใหม่ยังnull**:GTNeck/remainingowner/contourQAและfinalscorerbindingยังไม่ครบ. Inferencecompleteไม่เท่ากับevaluationcompleteหรือผ่านdeployment.
+- Next:ปิดGT/scorerแล้วCPUscoreจากsavedmasks ไม่ต้องinferenceใหม่เพียงเพื่อแก้GT. ไม่มีคิวGPUรอทำต่ออัตโนมัติ.
+
+Read-onlyviewerยังใช้ตรวจterminalstateได้:
+
+```bash
+python3 CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_progress.py
+```
+
+## Earlier launch/design history — snapshots below
+
 Updated 2026-11-01T19:01:06.078883+07:00 (Asia/Bangkok). **RUNNING_PREDICTION_COLLECTION / SCORING_PENDING_GT**.
 
 Userสั่งรันpersonROIใหม่เก้าระบบ. [รายงานรอบใหม่](reports/CONTROLLED_ROI_RUN_TH.md) → [ขอบเขตที่ตรึง](configs/CONTROLLED_ROI_SCOPE.json). Run `cctv-controlled-roi-20261101T115653Z`,90images/130ROIsต่อmodel,45Sapiensreused/1125pendingROIAPIcalls+9TRAINwarmups. CPU12casesPASS; QANetGPUgate+90frames/130ROIsครบแล้ว. ระบบอื่นใช้per-modelGPUgatesก่อนดำเนินต่อ.

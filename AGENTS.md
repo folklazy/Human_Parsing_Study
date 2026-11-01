@@ -1,3 +1,7 @@
+# Current CCTV terminal status — predictions complete, scoring pending GT
+
+The authorized CCTV90 controlledROI parent/continuation have both stopped. Accepted assembled predictions are9/9 checkpoints x90images/130ROIs each. Read CCTV_Human_Parsing_Benchmark/STATUS.md and reports/CONTROLLED_ROI_RUN_TH.md; never relaunch old workers/controllers from consumed run flags. Preserve all failures and source/configs. New primary scores remainnull until Neck/remainingowner/contourQA and scorerbindings are ready; GT/scoring work uses savedoutputs, no inference rerun just forGT. Public checkout is separate from canonical working copy. Earlier authorization/status blocks below are historical.
+
 # Current authorized CCTV controlled ROI work
 
 User authorized the new CCTV90/nine-checkpoint controlled person-ROI batch after its design review. Read CCTV_Human_Parsing_Benchmark/STATUS.md and reports/CONTROLLED_ROI_RUN_TH.md; use the read-only progress viewer/private CURRENT_CONTROLLED_ROI pointer before any action. Existing inference uses frozen source hashes and isolated outputs. Never duplicate/retry workers, edit their source/config mid-run, or infer new authorization from historical flags. GT owner fixes live only in derived copies; new scores remain null pending reviewed Neck/owner/contour bindings. No new YOLO/CIHP5000/training/color work. This session authorization supersedes the older milestones below for this run only; publication checkout remains separate from canonical workspace.
