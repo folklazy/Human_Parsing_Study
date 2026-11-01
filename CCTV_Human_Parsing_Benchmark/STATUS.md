@@ -21,3 +21,7 @@ Input diagnostic revision2: parent raw-logit allclose gate stopped after3calls; 
 ## Latest outcome — input diagnostic closed 2026-11-01T09:34:27.498729+07:00
 
 **INPUT_DIAGNOSTIC_COMPLETE_WITH_RAW_LOGIT_CONTROL_LIMITATION**. [Main Thai diagnostic report](reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md). Sapiens0.4B,6images/31parts: FFstretch37.447%,FFletterbox29.913%,ROIletterbox59.575%meanpartIoU4. Combined25modelcalls,allworkers exited; nofull90/othermodelstart. ParentrawlogitallcloseFAILretained;originalgridmaskcontrolmatchedofficial/savedoutput. Old9-systemresultsunchanged. NextreviewandseparateROI90imageevaluationdecision.
+
+## Current scope — Sapiens measurement review
+
+SAVED_SCORE_RECONCILIATION_PASS / FRESH_ROI_REVIEW_PREPARED. [Specification](configs/SAPIENS_MEASUREMENT_REVIEW.json). User authorizes fresh inference to investigate;3sizes/6fixedimages,17calls permodel/51totalcap, sequentialFP32 and same ROIroute/scorer. No full90/5000benchmark or othermodels. Private progress under CURRENT_SAPIENS_REVIEW pointer and permodelSTATE. Oldscores unchanged.

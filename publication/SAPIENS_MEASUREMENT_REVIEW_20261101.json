@@ -1,0 +1,38 @@
+{
+  "scope": "Independent saved-mask measurement reconciliation and bounded fresh3-sizeROI diagnostic; no full benchmark or native-score changes",
+  "updated_utc": "2026-11-01T02:59:14.120199+00:00",
+  "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 3470,
+      "sha256": "2839075476b0d863de6ad4f0323fbc886ed12d2476032a863598f1bc970343d9"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 10424,
+      "sha256": "7f7c81869e1c541ea34d03d6fe19bc4963e73e797690fee534da3370c142acf8"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_MEASUREMENT_REVIEW.json",
+      "bytes": 4220,
+      "sha256": "4bcde19a2c523af6bf47fa094d507045d2aa7721e1b43c370d980c605a31a9b1"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/review_saved_sapiens.py",
+      "bytes": 9998,
+      "sha256": "eb1fb235f937dcbe20ec7b6ecdd0bda9ac2f6620cfedfd9d9261ba3aa4d25ac5"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_roi_review.py",
+      "bytes": 13869,
+      "sha256": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_measurement.py",
+      "bytes": 1120,
+      "sha256": "79c9dcd913ea6cb5ab3f349206fe3a3f94d18cef4ed4efd1894846715f031094"
+    }
+  ],
+  "CCTV_assets_or_identifiers_published": false
+}

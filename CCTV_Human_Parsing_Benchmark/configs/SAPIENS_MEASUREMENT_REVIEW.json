@@ -1,0 +1,90 @@
+{
+  "protocol": "SAPIENS_MEASUREMENT_REVIEW_V1",
+  "status": "FROZEN_BEFORE_FRESH_REINFERENCE",
+  "created_utc": "2026-11-01T02:58:55.075071+00:00",
+  "post_hoc_diagnostic": true,
+  "run_id": "sapiens-roi-remeasurement-20261101T025855Z",
+  "private_config_sha256": "1da91727a47f1ef5cf317a800c30865f14b063c29abf88c47811cbd95220c267",
+  "source_run": "cctv-partial-20261031T1800Z",
+  "models": [
+    {
+      "model_id": "Sapiens2_0.4b",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4"
+    }
+  ],
+  "population_images": 6,
+  "GT_parts": 31,
+  "GT_target_parts": {
+    "Face": 3,
+    "Hair": 8,
+    "Upper": 10,
+    "Lower": 10
+  },
+  "image_selection": "same six frozen input-diagnostic images; no new model-score-based choice",
+  "ROI_route": "same YOLO predicted boxes +10%context and frozen extents; mean-zero letterbox768W1024H; bilinearlogitrestore before argmax; original-gridownership",
+  "FP32": true,
+  "batch_size": 1,
+  "AMP": false,
+  "TF32": false,
+  "extra_TTA": false,
+  "model_call_budget": {
+    "per_model": 17,
+    "TRAIN_warmups": 3,
+    "full_frame_control": 3,
+    "ROI_forwards": 45,
+    "total_max": 51
+  },
+  "baseline_control_max_disagreement_fraction": 0.0001,
+  "control_guard_meaning": "Engineering reproduction-drift guard only, not quality pass threshold or claim of bitwise parity",
+  "mapping_and_GT_unchanged": true,
+  "GT_binding_sha256": "f1c97fa313f068bf363974f0a9a30b1bb0473439795df30a1ee3b43602820fdd",
+  "projection_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "CPU_review": {
+    "images": 90,
+    "models": 3,
+    "primary_parts": 315,
+    "new_model_calls": 0,
+    "independent_2x2_counts": true,
+    "canonical_metrics_rewritten": false
+  },
+  "resources": {
+    "preload_free_VRAM_MiB": {
+      "Sapiens2_0.4b": 4608,
+      "Sapiens2_0.8b": 6656,
+      "Sapiens2_1b": 9600
+    },
+    "min_forward_free_VRAM_MiB": 1024,
+    "min_free_disk_GiB": 50,
+    "max_review_disk_GiB": 5,
+    "max_hours_per_model": 1,
+    "sequential": true,
+    "automatic_retries": 0,
+    "CPU_fallback": false
+  },
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_roi_review.py": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9",
+    "CCTV_Human_Parsing_Benchmark/scripts/review_saved_sapiens.py": "eb1fb235f937dcbe20ec7b6ecdd0bda9ac2f6620cfedfd9d9261ba3aa4d25ac5",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e"
+  },
+  "full90_or5000_benchmark": false
+}

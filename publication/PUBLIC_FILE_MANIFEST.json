@@ -40,8 +40,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 3030,
-      "sha256": "d9ac3487a7da9daf94bf45a1553cb8887a3d037df09de130bf57a3f3536b6301"
+      "bytes": 3470,
+      "sha256": "2839075476b0d863de6ad4f0323fbc886ed12d2476032a863598f1bc970343d9"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
@@ -50,8 +50,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 9408,
-      "sha256": "a1ae743c8cb5d39e43379ff3ef1e3986bcebd14f676c7076f94c3158bc8bcc92"
+      "bytes": 10424,
+      "sha256": "7f7c81869e1c541ea34d03d6fe19bc4963e73e797690fee534da3370c142acf8"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
@@ -67,6 +67,11 @@
       "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_INPUT_DIAGNOSTIC.json",
       "bytes": 5535,
       "sha256": "b97b62b59e731d5bdd4d7028700f2fa54e2d8774e222317d4ada82a980a907d1"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_MEASUREMENT_REVIEW.json",
+      "bytes": 4220,
+      "sha256": "4bcde19a2c523af6bf47fa094d507045d2aa7721e1b43c370d980c605a31a9b1"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/SELECTED_PART_PROTOCOL.json",
@@ -204,9 +209,19 @@
       "sha256": "46906948a9985a828c4a7d3a1bd884197245242e3589f583b3f356116ebb0f29"
     },
     {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/review_saved_sapiens.py",
+      "bytes": 9998,
+      "sha256": "eb1fb235f937dcbe20ec7b6ecdd0bda9ac2f6620cfedfd9d9261ba3aa4d25ac5"
+    },
+    {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_input_diagnostic.py",
       "bytes": 18965,
       "sha256": "765bf2bcb64bcc7d56887bc65b0d0bb8894b5800bc2279ff3ddda5f2edc8b959"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_roi_review.py",
+      "bytes": 13869,
+      "sha256": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py",
@@ -227,6 +242,11 @@
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_input_variants.py",
       "bytes": 3034,
       "sha256": "5db74a61f054494f2eac34455691f5a6b027b9980e43f78a76b2106e82494c34"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_measurement.py",
+      "bytes": 1120,
+      "sha256": "79c9dcd913ea6cb5ab3f349206fe3a3f94d18cef4ed4efd1894846715f031094"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_selected_parts.py",
@@ -5079,6 +5099,11 @@
       "sha256": "7a905d790f46b36583585dee30435d3fdbd33bf7c9f197d069c37ad05d1861c4"
     },
     {
+      "path": "publication/SAPIENS_MEASUREMENT_REVIEW_20261101.json",
+      "bytes": 1485,
+      "sha256": "ee0c26b2adc436f2e15f453d9d823bafdf308efc9a25bccb3b962037f17f9ae0"
+    },
+    {
       "path": "publication/SAPIENS_PREPROCESSING_AUDIT_20261101.json",
       "bytes": 1824,
       "sha256": "0f609a93dac1bc6311bd5e97703dd2d1a043835fde1afedeb90132644834f1b4"
@@ -6506,5 +6531,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T02:35:57.616726+00:00"
+  "last_updated_utc": "2026-11-01T02:59:14.126938+00:00"
 }
