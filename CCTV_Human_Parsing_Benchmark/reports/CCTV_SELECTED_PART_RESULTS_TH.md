@@ -1,5 +1,7 @@
 # ผลสรุป CCTV90: selected annotated-part IoU/Dice ของ parsing 9 ระบบ
 
+> **อัปเดต 2026-11-01T10:16:54.165252+07:00: GT_OWNER_REVIEW_REQUIRED.** พบsourceownerlabelsรวมส่วนจากคนละคนอย่างน้อย2ภาพ พักการใช้ตาราง90ภาพเพื่อตัดสินเลือกโมเดล;ค่าผลเดิมเก็บเป็นhistoricalagreementกับGTที่ให้มา. [ผลตรวจและfreshSapiensทั้ง3ขนาด](SAPIENS2_MEASUREMENT_REVIEW_TH.md).
+
 ปิดการคำนวณและตรวจผล 2026-11-01T08:50:54.244052+07:00 (Asia/Bangkok, UTC+07:00). สถานะ **COMPLETE 9/9 ระบบ × exact90ภาพ**, failed/invalid/missing0 ใน derived evaluation. ใช้ predictions เดิมทั้งหมด **model inference ใหม่0ครั้ง**.
 
 **ข้อเสนอจากผลรอบนี้: เลือก QANet_CIHP_HRNetW48_512x384 เป็น configuration หลักสำหรับงาน selected-part task นี้**: macro mean selected-part IoU4 **61.773%**, mean-part Dice4 **69.203%**. สูงสุดทั้ง4targetsตาม primary ที่กำหนดก่อนคำนวณคะแนนชุดใหม่; นำอันดับถัดไป CPI_ConvNeXtB_CIHP 14.196 percentage points. เป็น observed leader ของ checkpoint+application configuration บน reference ชุดนี้ ไม่ใช่คำรับรอง full-scene CCTV/deployment accuracy หรือ statistical significance.

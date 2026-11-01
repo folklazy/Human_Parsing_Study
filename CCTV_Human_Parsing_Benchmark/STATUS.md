@@ -1,6 +1,8 @@
 # CCTV parsing — current status
 
-Updated 2026-11-01T09:35:57.490404+07:00 (Asia/Bangkok). **SELECTED_PART_EVALUATION_COMPLETE —9/9×90IDs**, no active model worker or CPU scorer.
+> **อัปเดต 2026-11-01T10:16:54.165252+07:00: GT_OWNER_REVIEW_REQUIRED.** พบsourceownerlabelsรวมส่วนจากคนละคนอย่างน้อย2ภาพ พักการใช้ตาราง90ภาพเพื่อตัดสินเลือกโมเดล;ค่าผลเดิมเก็บเป็นhistoricalagreementกับGTที่ให้มา. [ผลตรวจและfreshSapiensทั้ง3ขนาด](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md).
+
+Updated 2026-11-01T10:16:54.165252+07:00 (Asia/Bangkok). **SELECTED_PART_EVALUATION_COMPLETE —9/9×90IDs**, no active model worker or CPU scorer.
 
 [Final Thai report](reports/CCTV_SELECTED_PART_RESULTS_TH.md) → [Protocol](SELECTED_PART_PROTOCOL.md) → [Evidence](reports/SELECTED_PART_EVALUATION_EVIDENCE.json). Observed selected-task leader: **QANet**, macro mean selected-part IoU4 61.773%, Dice4 69.203%. Primary315parts; all324 sensitivity reported. GT-only agent screening is not independent expert certification; no full-scene/deployment claim.
 
@@ -25,3 +27,7 @@ Input diagnostic revision2: parent raw-logit allclose gate stopped after3calls; 
 ## Current scope — Sapiens measurement review
 
 SAVED_SCORE_RECONCILIATION_PASS / FRESH_ROI_REVIEW_PREPARED. [Specification](configs/SAPIENS_MEASUREMENT_REVIEW.json). User authorizes fresh inference to investigate;3sizes/6fixedimages,17calls permodel/51totalcap, sequentialFP32 and same ROIroute/scorer. No full90/5000benchmark or othermodels. Private progress under CURRENT_SAPIENS_REVIEW pointer and permodelSTATE. Oldscores unchanged.
+
+## Latest outcome — measurement review closed
+
+**MEASUREMENT_RECONCILED_FRESH_ROI_COMPLETE_GT_OWNER_REVIEW_REQUIRED**. [Thai report](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md). Saved90×3independentcountsauditPASS;freshROI6×3complete,51calls,controllerstopped. Originalscoresunchanged;newresultsdiagnostic-only,not90imagebenchmark. NextreviewGT/aggregation/inputfindingsanddecidefull90ROIseparately.

@@ -1,5 +1,7 @@
 # CCTV Human Parsing Benchmark
 
+> **อัปเดต 2026-11-01T10:16:54.165252+07:00: GT_OWNER_REVIEW_REQUIRED.** พบsourceownerlabelsรวมส่วนจากคนละคนอย่างน้อย2ภาพ พักการใช้ตาราง90ภาพเพื่อตัดสินเลือกโมเดล;ค่าผลเดิมเก็บเป็นhistoricalagreementกับGTที่ให้มา. [ผลตรวจและfreshSapiensทั้ง3ขนาด](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md).
+
 **ผลล่าสุด: [รายงาน selected annotated-part IoU/Dice ครบ 9 ระบบ](reports/CCTV_SELECTED_PART_RESULTS_TH.md)** — QANet สูงสุดตามเกณฑ์นี้: IoU4 61.773%, Dice4 69.203%. ใช้ saved masks เดิม ไม่มี inference ใหม่. Primary 315 ส่วน; รายงาน sensitivity ครบ 324 ส่วนด้วย. เป็นผลบนคน/ส่วนที่ annotate หลัง agent-assisted visual screen ไม่ใช่ full-scene IoU หรือ independent expert certification.
 
 อ่าน [STATUS](STATUS.md) → [selected-part protocol](SELECTED_PART_PROTOCOL.md) → [ตารางเต็ม](metrics/SELECTED_PART_PER_TARGET.csv). เนื้อหา positive-domain benchmark ด้านล่างเก็บเป็นบริบทของรอบเดิม; ผลและ GT เดิมไม่เปลี่ยน.
@@ -47,3 +49,7 @@ python3 CCTV_Human_Parsing_Benchmark/scripts/progress.py --watch
 ## Latest Sapiens input experiment
 
 [Input diagnostic report](reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md):0.4B/6images/31parts, mean selected-partIoU4: full-frame37.447%,full-frameletterbox29.913%,YOLOROIletterbox59.575%. Input-routeeffectobserved; notfull90reranking/architectureclaim.25callscompleted; numericalcontrolgatehistoryretained. Noadditionalexperimentstartedautomatically.
+
+## Latest Sapiens measurement review
+
+[Independent scoring review and fresh three-size ROI results](reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md):90-image saved score audit plus6-image fresh0.4/0.8/1Bdiagnostic. Bothaggregation/YOLO/nativeerrorsandinputeffectsreported; nofull90ROIbenchmarkstarted.

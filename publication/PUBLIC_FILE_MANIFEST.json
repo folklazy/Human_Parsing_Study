@@ -30,8 +30,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/README.md",
-      "bytes": 5913,
-      "sha256": "ccd76e70c69e85c717128bcb50f93fbd7059b98f3c9bf03083b22e132cc2553e"
+      "bytes": 6740,
+      "sha256": "3fd4a8f552ae33acc8baff3242abbbeee209cb30c6fe1ba9faf242055f0fd5fc"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md",
@@ -40,18 +40,18 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 3470,
-      "sha256": "2839075476b0d863de6ad4f0323fbc886ed12d2476032a863598f1bc970343d9"
+      "bytes": 4404,
+      "sha256": "1313fcdbe6476a3b694c33cfd60654722ddfa3476cecac97347571bd75627ab5"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
-      "bytes": 4886,
-      "sha256": "2bc45042a3b6f7e1318b3a42b0e55a7b3d3bcf0506758c3810d94d46f61acee2"
+      "bytes": 5759,
+      "sha256": "cb5c41d32ae3eeab0dd9a0a270ef5db1f7b8e182fe33d56efa929ac89d9ccdba"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 10424,
-      "sha256": "7f7c81869e1c541ea34d03d6fe19bc4963e73e797690fee534da3370c142acf8"
+      "bytes": 12033,
+      "sha256": "fe8f182abbac78eaa9212cd85eac37a1b0d580f078a1b42a34f092060d05b96b"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
@@ -94,6 +94,16 @@
       "bytes": 6067
     },
     {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_FRESH_ROI_COMPARISON.csv",
+      "bytes": 429,
+      "sha256": "62b1054583936c5ec0b690edcf0441ff28bb682d381d58cb62abf42b132600b2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_FRESH_ROI_PER_TARGET.csv",
+      "bytes": 1717,
+      "sha256": "e14d2ddb0cdcb43ce7109af40c2773c70d7d2f77ce45538aeb91120519c5c7b4"
+    },
+    {
       "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_INPUT_DIAGNOSTIC_PER_TARGET.csv",
       "bytes": 6190,
       "sha256": "a5c80e5578383ec1caf5dece6dca056e8302510b21fc2e4299b8eb83367164c2"
@@ -102,6 +112,26 @@
       "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_INPUT_DIAGNOSTIC_SUMMARY.csv",
       "bytes": 691,
       "sha256": "1264fb8d76a1731e6eaf627da61731df17653b8c335d64736749fa213cbdddeb"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_GT_SIZE_BINS.csv",
+      "bytes": 2496,
+      "sha256": "53666b891698f27eb93a20ea5b6ef601c445b2df9ecb9981ade6f41283b1d050"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_NATIVE_GT_DISAGREEMENT.csv",
+      "bytes": 16931,
+      "sha256": "9a9ffb674c3c8ec199db1a1177f5cea5510f16cf853fabfda9894e34de42ef07"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_PER_TARGET.csv",
+      "bytes": 2621,
+      "sha256": "9cb6da399fa69cff1ae0542be123694be08bbe824e70b65a849aa6350eb0036a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_SUMMARY.csv",
+      "bytes": 395,
+      "sha256": "55e2d532c64224540e638ea643da50e64fb6ab6ea293e50191c765c82680cf58"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/metrics/SELECTED_PART_PER_TARGET.csv",
@@ -120,8 +150,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md",
-      "bytes": 19133,
-      "sha256": "4bd60971abd6f03dace570bc0ffdfa6ffcd7836ab031454bd503fb27fd2b4600"
+      "bytes": 19655,
+      "sha256": "7284d82962cdfa671ef1c57fd1a0eb40d14f9be9ba4417e8618170c2a421c703"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json",
@@ -137,6 +167,11 @@
       "path": "CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md",
       "bytes": 9007,
       "sha256": "c18fa61b6d39d9c930ea7bf1a88b9563f0236fe19f6f61e7211bf0d30b2ef90d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/GT_OWNER_BINDING_REVIEW.json",
+      "bytes": 1314,
+      "sha256": "f65f095471f37bc97b2ba4a67da2ecc0fd27fe63ca39cc8afc0c35d084fcd315"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json",
@@ -162,6 +197,16 @@
       "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md",
       "bytes": 14299,
       "sha256": "5eb05740450bd46501ae0a7b7bfed42a1f921722b77a9f0824d2cb82e585be81"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_EVIDENCE.json",
+      "bytes": 7879,
+      "sha256": "f7fe871b9195630983b2d42210db5565b928af488e3bacbf8d3058f699013a7d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
+      "bytes": 17876,
+      "sha256": "92bd8b7ceda72c509148eeac2a2272b572edb98be0e5f643a0f011f476086d27"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_PREPROCESSING_AUDIT_EVIDENCE.json",
@@ -290,8 +335,8 @@
     },
     {
       "path": "Human_Parsing_Benchmark/README.md",
-      "bytes": 11652,
-      "sha256": "a6544e5a79815e04b3306b2c0adcff015aba431581776540a571f0ca85c598f1"
+      "bytes": 11552,
+      "sha256": "4002e79149329c99ffe48edcd7ef6f43cc863e2c3a67702e83c18c71edac6812"
     },
     {
       "path": "Human_Parsing_Benchmark/STATUS.md",
@@ -2085,8 +2130,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12109,
-      "sha256": "8d77b2b4adf44a0472442cf6b0076372b3f73abc5bc05fc0c8c3892b44937786"
+      "bytes": 12592,
+      "sha256": "e0c568069ddbebfd6a8608f55b5cff6e6967db2fb975456c425c00769cf80cca"
     },
     {
       "path": "REFERENCES.md",
@@ -5100,8 +5145,8 @@
     },
     {
       "path": "publication/SAPIENS_MEASUREMENT_REVIEW_20261101.json",
-      "bytes": 1485,
-      "sha256": "ee0c26b2adc436f2e15f453d9d823bafdf308efc9a25bccb3b962037f17f9ae0"
+      "bytes": 4222,
+      "sha256": "cb903c92b5e51e7ec32038f056789b1e50bd18e6479e74d8306a432135ddd88e"
     },
     {
       "path": "publication/SAPIENS_PREPROCESSING_AUDIT_20261101.json",
@@ -6531,5 +6576,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T02:59:14.126938+00:00"
+  "last_updated_utc": "2026-11-01T03:16:54.309557+00:00"
 }

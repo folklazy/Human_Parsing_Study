@@ -1,17 +1,17 @@
 {
   "scope": "Independent saved-mask measurement reconciliation and bounded fresh3-sizeROI diagnostic; no full benchmark or native-score changes",
-  "updated_utc": "2026-11-01T02:59:14.120199+00:00",
+  "updated_utc": "2026-11-01T03:16:54.296858+00:00",
   "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
   "files": [
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 3470,
-      "sha256": "2839075476b0d863de6ad4f0323fbc886ed12d2476032a863598f1bc970343d9"
+      "bytes": 4404,
+      "sha256": "1313fcdbe6476a3b694c33cfd60654722ddfa3476cecac97347571bd75627ab5"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 10424,
-      "sha256": "7f7c81869e1c541ea34d03d6fe19bc4963e73e797690fee534da3370c142acf8"
+      "bytes": 12033,
+      "sha256": "fe8f182abbac78eaa9212cd85eac37a1b0d580f078a1b42a34f092060d05b96b"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_MEASUREMENT_REVIEW.json",
@@ -32,6 +32,76 @@
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_measurement.py",
       "bytes": 1120,
       "sha256": "79c9dcd913ea6cb5ab3f349206fe3a3f94d18cef4ed4efd1894846715f031094"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 6740,
+      "sha256": "3fd4a8f552ae33acc8baff3242abbbeee209cb30c6fe1ba9faf242055f0fd5fc"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 5759,
+      "sha256": "cb5c41d32ae3eeab0dd9a0a270ef5db1f7b8e182fe33d56efa929ac89d9ccdba"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
+      "bytes": 17876,
+      "sha256": "92bd8b7ceda72c509148eeac2a2272b572edb98be0e5f643a0f011f476086d27"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_EVIDENCE.json",
+      "bytes": 7879,
+      "sha256": "f7fe871b9195630983b2d42210db5565b928af488e3bacbf8d3058f699013a7d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/GT_OWNER_BINDING_REVIEW.json",
+      "bytes": 1314,
+      "sha256": "f65f095471f37bc97b2ba4a67da2ecc0fd27fe63ca39cc8afc0c35d084fcd315"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+      "bytes": 19655,
+      "sha256": "7284d82962cdfa671ef1c57fd1a0eb40d14f9be9ba4417e8618170c2a421c703"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_SUMMARY.csv",
+      "bytes": 395,
+      "sha256": "55e2d532c64224540e638ea643da50e64fb6ab6ea293e50191c765c82680cf58"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_PER_TARGET.csv",
+      "bytes": 2621,
+      "sha256": "9cb6da399fa69cff1ae0542be123694be08bbe824e70b65a849aa6350eb0036a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_GT_SIZE_BINS.csv",
+      "bytes": 2496,
+      "sha256": "53666b891698f27eb93a20ea5b6ef601c445b2df9ecb9981ade6f41283b1d050"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_SAVED_REVIEW_NATIVE_GT_DISAGREEMENT.csv",
+      "bytes": 16931,
+      "sha256": "9a9ffb674c3c8ec199db1a1177f5cea5510f16cf853fabfda9894e34de42ef07"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_FRESH_ROI_COMPARISON.csv",
+      "bytes": 429,
+      "sha256": "62b1054583936c5ec0b690edcf0441ff28bb682d381d58cb62abf42b132600b2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_FRESH_ROI_PER_TARGET.csv",
+      "bytes": 1717,
+      "sha256": "e14d2ddb0cdcb43ce7109af40c2773c70d7d2f77ce45538aeb91120519c5c7b4"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 11552,
+      "sha256": "4002e79149329c99ffe48edcd7ef6f43cc863e2c3a67702e83c18c71edac6812"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12592,
+      "sha256": "e0c568069ddbebfd6a8608f55b5cff6e6967db2fb975456c425c00769cf80cca"
     }
   ],
   "CCTV_assets_or_identifiers_published": false

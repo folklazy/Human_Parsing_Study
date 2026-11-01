@@ -1,13 +1,13 @@
 {
   "scope": "CCTV_PARTIAL_TARGET_RECALL_V1",
   "run_id": "cctv-partial-20261031T1800Z",
-  "status": "PARTIAL_BENCHMARK_COMPLETE",
+  "status": "GT_OWNER_REVIEW_REQUIRED",
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T02:34:27.498689+00:00",
+  "updated_utc": "2026-11-01T03:16:54.165225+00:00",
   "full_benchmark_ready": false,
-  "reason": "Selected people/parts only; unknown negatives; no Dress rule or full-person silhouettes",
+  "reason": "At least2 source images contain cross-person owner labels; supplied-GT scores remain recorded but final personwise model selection is on hold",
   "no_overall_deployment_winner": true,
   "new_experiment_started": false,
   "evidence": {
@@ -81,10 +81,12 @@
     "evidence": "reports/SELECTED_PART_EVALUATION_EVIDENCE.json",
     "model_calls": 0,
     "expert_GT_certification": false,
-    "full_scene_or_deployment_acceptance": false
+    "full_scene_or_deployment_acceptance": false,
+    "selection_use": "HOLD_PENDING_GT_OWNER_QA",
+    "GT_reference_validity": "KNOWN_SOURCE_OWNER_CONFLICTS"
   },
-  "current_evaluation": "selected_part_evaluation",
-  "current_result_report": "reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+  "current_evaluation": "Sapiens_measurement_review",
+  "current_result_report": "reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
   "preprocessing_review": {
     "status": "INPUT_PREPROCESSING_PARITY_PASS_ON_BOUNDED_CPU_CASES",
     "cases": 12,
@@ -108,5 +110,25 @@
     "full_frame_letterbox_IoU4": 0.2991297227458501,
     "full90_evaluation": false,
     "parent_raw_logit_gate_pass": false
+  },
+  "Sapiens_measurement_review": {
+    "status": "MEASUREMENT_RECONCILED_FRESH_ROI_COMPLETE_GT_OWNER_REVIEW_REQUIRED",
+    "saved_images": 90,
+    "saved_models": 3,
+    "fresh_images": 6,
+    "fresh_models": 3,
+    "new_model_calls": 51,
+    "report": "reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
+    "source_scores_unchanged": true,
+    "full_population_benchmark": false,
+    "GT_owner_review_required": true,
+    "confirmed_GT_owner_conflict_images": 2
+  },
+  "GT_owner_review": {
+    "status": "CONFIRMED_CONFLICTS_REQUIRING_DERIVED_GT_REVIEW",
+    "confirmed_images": 2,
+    "report": "reports/GT_OWNER_BINDING_REVIEW.json",
+    "source_GT_modified": false,
+    "historical_scores_unchanged": true
   }
 }

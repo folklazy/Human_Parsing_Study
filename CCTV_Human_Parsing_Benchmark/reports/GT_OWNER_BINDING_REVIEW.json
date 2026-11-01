@@ -1,0 +1,26 @@
+{
+  "status": "GT_OWNER_BINDING_REVIEW_REQUIRED",
+  "confirmed_source_images": 2,
+  "confirmed_wrong_owner_polygons": 2,
+  "issue_types": {
+    "face_polygons_of_different_people_share_one_owner": 1,
+    "lower_polygons_of_different_people_share_one_owner": 1
+  },
+  "source_canonical_labels_confirmed": true,
+  "visual_reviewer": "Codex visual assistant, not independent expert certification",
+  "GT_only_distant_same_label_polygon_triage": {
+    "candidates": 3,
+    "RGB_source_reviewed": 3,
+    "confirmed_owner_conflicts": 2,
+    "legitimate_same_person_fragments": 1
+  },
+  "proposed_corrections_applied": false,
+  "original_GT_modified": false,
+  "canonical_scores_rewritten": false,
+  "private_issue_manifest_sha256": "3076b5db0c65014b342aab411d857c41354585ec568ecfa3f64f311f5a2fe6ac",
+  "private_issue_details": "outputs/sapiens-saved-measurement-review-20261101/GT_OWNER_ISSUES_PRIVATE.json",
+  "known_conflicts_in_frozen_six_diagnostic_images": 0,
+  "remaining_annotation_owners_certified": false,
+  "selection_status": "HOLD_CURRENT_NINE_SYSTEM_PERSONWISE_SELECTION_PENDING_GT_OWNER_QA",
+  "next_action": "Review source polygon-owner corrections in a versioned derived GT binding, verify annotations and rerun CPU scoring from existing packets; no model inference required to correct GT bookkeeping"
+}

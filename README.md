@@ -2,6 +2,8 @@
 
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
 
+**Current CCTV validity status: GT_OWNER_REVIEW_REQUIRED.** [Measurement review and fresh Sapiens0.4/0.8/1B results](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) found source labels merging parts from different people in at least2images. Earlier90-image numbers remain historical supplied-GT agreement; final configuration selection is on hold pending owner QA. Bounded fresh ROI diagnostics completed6images×3sizes/51modelcalls; no full90ROI benchmark.
+
 **Latest input diagnostic:** [Sapiens2 0.4B input-route comparison](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md), six fixed CCTV images/31 annotated parts: mean selected-part IoU4 **37.447% full-frame stretch /29.913% full-frame letterbox /59.575% YOLO ROI letterbox**. Exploratory diagnostic only; does not replace the90-image results or rank architectures.25modelcalls completed, parent numerical-control limitation retained; no automatic full-run extension.
 
 **Latest CCTV result:** [CCTV90 selected annotated-part IoU/Dice — nine configurations complete](CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md). QANet is the observed task leader (macro mean selected-part IoU4 **61.773%**, Dice4 **69.203%**). Uses existing saved masks, 315 screened parts plus all324 sensitivity; no new model inference. Screening was agent-assisted, not independent expert certification. This is not full-scene IoU or deployment acceptance. [CCTV status](CCTV_Human_Parsing_Benchmark/STATUS.md) / [protocol](CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md).
