@@ -5,7 +5,7 @@
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T02:14:13.866613+00:00",
+  "updated_utc": "2026-11-01T02:34:27.498689+00:00",
   "full_benchmark_ready": false,
   "reason": "Selected people/parts only; unknown negatives; no Dress rule or full-person silhouettes",
   "no_overall_deployment_winner": true,
@@ -94,5 +94,19 @@
     "existing_scores_unchanged": true,
     "causal_performance_explanation": "NOT_ESTABLISHED",
     "reviewed_utc": "2026-11-01T02:14:13.866613+00:00"
+  },
+  "input_diagnostic": {
+    "status": "INPUT_DIAGNOSTIC_COMPLETE_WITH_RAW_LOGIT_CONTROL_LIMITATION",
+    "model": "Sapiens2_0.4b",
+    "frames": 6,
+    "GT_parts": 31,
+    "model_calls_total": 25,
+    "report": "reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md",
+    "evidence": "reports/SAPIENS2_INPUT_DIAGNOSTIC_EVIDENCE.json",
+    "baseline_IoU4": 0.3744699663822581,
+    "ROI_letterbox_IoU4": 0.5957474816949444,
+    "full_frame_letterbox_IoU4": 0.2991297227458501,
+    "full90_evaluation": false,
+    "parent_raw_logit_gate_pass": false
   }
 }

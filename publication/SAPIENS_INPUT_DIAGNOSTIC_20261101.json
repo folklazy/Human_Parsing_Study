@@ -1,22 +1,22 @@
 {
   "scope": "User-authorized bounded Sapiens04 input-route diagnostic only; no full population or other model",
-  "updated_utc": "2026-11-01T02:28:56.839302+00:00",
+  "updated_utc": "2026-11-01T02:35:57.612223+00:00",
   "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
   "files": [
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 2481,
-      "sha256": "76d29b1625e7d579704f698a028ea7229b3bf2b24c4324a31d9489b840867eec"
+      "bytes": 3030,
+      "sha256": "d9ac3487a7da9daf94bf45a1553cb8887a3d037df09de130bf57a3f3536b6301"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 8159,
-      "sha256": "61fb8a0c4408b35826952eed4a0cfc5c83835733c740f904493abdfcf321c010"
+      "bytes": 9408,
+      "sha256": "a1ae743c8cb5d39e43379ff3ef1e3986bcebd14f676c7076f94c3158bc8bcc92"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_INPUT_DIAGNOSTIC.json",
-      "bytes": 5241,
-      "sha256": "47f250075516bf67f9f7d00a52ad65b848bed773e6d784d29423df1d1fa8474e"
+      "bytes": 5535,
+      "sha256": "b97b62b59e731d5bdd4d7028700f2fa54e2d8774e222317d4ada82a980a907d1"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py",
@@ -32,6 +32,41 @@
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_input_variants.py",
       "bytes": 3034,
       "sha256": "5db74a61f054494f2eac34455691f5a6b027b9980e43f78a76b2106e82494c34"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 5913,
+      "sha256": "ccd76e70c69e85c717128bcb50f93fbd7059b98f3c9bf03083b22e132cc2553e"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 4886,
+      "sha256": "2bc45042a3b6f7e1318b3a42b0e55a7b3d3bcf0506758c3810d94d46f61acee2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md",
+      "bytes": 14299,
+      "sha256": "5eb05740450bd46501ae0a7b7bfed42a1f921722b77a9f0824d2cb82e585be81"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_EVIDENCE.json",
+      "bytes": 6383,
+      "sha256": "085e8c2d03a587b12cf5641daa793f7e03a523df24d078ab6bba26835316cdd7"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_INPUT_DIAGNOSTIC_SUMMARY.csv",
+      "bytes": 691,
+      "sha256": "1264fb8d76a1731e6eaf627da61731df17653b8c335d64736749fa213cbdddeb"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SAPIENS_INPUT_DIAGNOSTIC_PER_TARGET.csv",
+      "bytes": 6190,
+      "sha256": "a5c80e5578383ec1caf5dece6dca056e8302510b21fc2e4299b8eb83367164c2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12109,
+      "sha256": "8d77b2b4adf44a0472442cf6b0076372b3f73abc5bc05fc0c8c3892b44937786"
     }
   ],
   "CCTV_assets_or_identifiers_published": false

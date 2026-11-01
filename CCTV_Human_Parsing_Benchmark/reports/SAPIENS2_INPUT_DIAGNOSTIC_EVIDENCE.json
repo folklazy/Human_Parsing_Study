@@ -1,0 +1,131 @@
+{
+  "status": "INPUT_DIAGNOSTIC_COMPLETE_WITH_RAW_LOGIT_CONTROL_LIMITATION",
+  "created_utc": "2026-11-01T02:34:27.498689+00:00",
+  "model_id": "Sapiens2_0.4b",
+  "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+  "official_source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+  "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+  "config_sha256": "ccb431bae48331ae795e166a6075de306e75d0287598d5f829925d12ac25fe29",
+  "launch_commit": "59df24390bb3105916c3a870f147e550aee2d47e",
+  "parent_launch_commit": "2bbec368b113af65f145b4b0ac96dafd2e4785fe",
+  "diagnostic_run": "sapiens-input-variants-20261101T022856Z",
+  "parent_attempt": "sapiens-input-diagnostic-20261101T022347Z",
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_input_diagnostic.py": "765bf2bcb64bcc7d56887bc65b0d0bb8894b5800bc2279ff3ddda5f2edc8b959",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "CCTV_Human_Parsing_Benchmark/scripts/selected_part_evaluation.py": "6aa453702c923712cac3879e2ce3b92d16d8a3680daad9d97a19adfb166f3d16",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a"
+  },
+  "primary_GT_parts": {
+    "Face": 3,
+    "Hair": 8,
+    "Upper": 10,
+    "Lower": 10
+  },
+  "model_calls": {
+    "initial_control": 3,
+    "variant_phase": 22,
+    "total": 25,
+    "upper_bound": 29,
+    "TRAIN_warmup_total": 2,
+    "official_forward": 1,
+    "fresh_wrapper_forward": 1,
+    "full_frame_letterbox": 6,
+    "person_ROI_letterbox": 15
+  },
+  "parent_control_status": "STOPPED_DIAGNOSTIC_INCOMPLETE",
+  "parent_control": {
+    "input_equal": true,
+    "logits_max_abs_error": 0.000244140625,
+    "logits_allclose": false,
+    "native_mask_equal": true,
+    "saved_native_mask_agreement": 1.0
+  },
+  "parent_numeric": {
+    "parent_run": "sapiens-input-diagnostic-20261101T022347Z",
+    "absolute_max": 0.000244140625,
+    "reference_abs_max": 981.0673828125,
+    "relative_L2": 3.53160885424586e-07,
+    "fraction_exceeding_original_allclose_tolerance": 3.9462385506465517e-07,
+    "native_network_grid_argmax_equal": false,
+    "original_grid_mask_equal": true,
+    "inference_retry": false,
+    "old_parity_gate_status": "FAILED_PRESERVED_NOT_RELABELED_PASS"
+  },
+  "original_gate_failure_preserved": true,
+  "raw_logit_equivalence_certified": false,
+  "output_mask_compatibility_on_one_reference": true,
+  "baseline_packets_reused": 6,
+  "accepted_baseline_per_part_scores_match": true,
+  "CPU_literal_cases": 5,
+  "actual_official_normalizer_zero_padding_probe": "PASS",
+  "artifact_verification": {
+    "FULL_FRAME_STRETCH": {
+      "exact_unique_images": 6,
+      "atomic_packet_hash_readbacks": 6,
+      "GT_parts": 31,
+      "GT_persons": 11,
+      "detector_miss_parts": 2,
+      "extent_score_identity": "EXACT_FROZEN_YOLO",
+      "independent_fraction_arithmetic": "PASS"
+    },
+    "FULL_FRAME_LETTERBOX": {
+      "exact_unique_images": 6,
+      "atomic_packet_hash_readbacks": 6,
+      "GT_parts": 31,
+      "GT_persons": 11,
+      "detector_miss_parts": 2,
+      "extent_score_identity": "EXACT_FROZEN_YOLO",
+      "independent_fraction_arithmetic": "PASS"
+    },
+    "YOLO_ROI_LETTERBOX": {
+      "exact_unique_images": 6,
+      "atomic_packet_hash_readbacks": 6,
+      "GT_parts": 31,
+      "GT_persons": 11,
+      "detector_miss_parts": 2,
+      "extent_score_identity": "EXACT_FROZEN_YOLO",
+      "independent_fraction_arithmetic": "PASS"
+    }
+  },
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "GPU": "Tesla T4",
+    "OpenCV": "5.0.0",
+    "numpy": "2.5.4",
+    "parameters": 406601693,
+    "model_training": false,
+    "AMP": false,
+    "TF32": false,
+    "batch_size": 1,
+    "automatic_retries": 0,
+    "CPU_fallback": false,
+    "CUDA_VISIBLE_DEVICES": "0",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false
+  },
+  "peak_forward_allocated_MiB": 2157.23779296875,
+  "peak_forward_reserved_MiB": 2836.0,
+  "timing_or_VRAM_ranking": false,
+  "old_scientific_source_scores_and_GT_modified": false,
+  "private_gallery_manifest_sha256": "efd77e2785a95644d629a3742961979946305ec337adfd58af1f50a2fa74fc55",
+  "summary_sha256": "1264fb8d76a1731e6eaf627da61731df17653b8c335d64736749fa213cbdddeb",
+  "per_target_sha256": "a5c80e5578383ec1caf5dece6dca056e8302510b21fc2e4299b8eb83367164c2",
+  "parent_attempt_evidence": {
+    "CCTV_Human_Parsing_Benchmark/outputs/sapiens-input-diagnostic-20261101T022347Z/CONFIG.json": "f5b28b6240f8b907ecbb89f5d6db2b93658f4057bf4c345ca50044a3bb2e215d",
+    "CCTV_Human_Parsing_Benchmark/outputs/sapiens-input-diagnostic-20261101T022347Z/STATE.json": "d3f2e29112d87c86d2bafea6b8dc523e89c16ecd5ff15d5723555be39d006f06",
+    "CCTV_Human_Parsing_Benchmark/outputs/sapiens-input-diagnostic-20261101T022347Z/FORWARD_PARITY.json": "8a42db5960eee46fe69d92ffeb42d55607c3d2b6cde52b65ae3d83ba05e6ba4d",
+    "CCTV_Human_Parsing_Benchmark/outputs/sapiens-input-diagnostic-20261101T022347Z/NUMERIC_DIAGNOSTIC.json": "f5f2862948b7ce22bd8ed0ca58792dfd281348d47ed7458af090dfbfbd904637",
+    "CCTV_Human_Parsing_Benchmark/outputs/sapiens-input-diagnostic-20261101T022347Z/SOURCE_SNAPSHOT_RUNNER.py": "6746ebdaac9b4ddae963a23747b8f874b0e12164bcfe15f12e7fb9e2fc496aa1"
+  },
+  "child_state_sha256": "8db25c0b38ec1e0f3e7631d4d688fbc772d53a1c7f7aca49b9f83f57069b1fe9",
+  "source_packet_manifest_sha256": "72b22e2ce692ea37cf91d522a0d6f5a9a1faef98c37608c90de2fe76e4cedfdc",
+  "launch_specification_sha256": "47f250075516bf67f9f7d00a52ad65b848bed773e6d784d29423df1d1fa8474e",
+  "current_specification_sha256": "b97b62b59e731d5bdd4d7028700f2fa54e2d8774e222317d4ada82a980a907d1",
+  "specification_clarification": "Inherited parity-gate fields explicitly scoped to the stopped initial attempt; execution/scoring unchanged"
+}

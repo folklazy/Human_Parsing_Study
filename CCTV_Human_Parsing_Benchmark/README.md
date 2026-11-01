@@ -43,3 +43,7 @@ python3 CCTV_Human_Parsing_Benchmark/scripts/progress.py --watch
 ## Sapiens2 input audit
 
 [ตรวจ preprocessing](reports/SAPIENS2_PREPROCESSING_AUDIT_TH.md): CPU12casesตรงofficialinputทุกค่า; ยังไม่พบchannel/normalizationbug. Full-frame stretchเปลี่ยนสัดส่วนคนอย่างมากและต่างจากROIroute จึงยังไม่อ้างสาเหตุarchitectureหรือความด้อยของSapiensทุกรูปแบบ. ไม่มีlearnedforwardใหม่หรือคะแนนเปลี่ยน.
+
+## Latest Sapiens input experiment
+
+[Input diagnostic report](reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md):0.4B/6images/31parts, mean selected-partIoU4: full-frame37.447%,full-frameletterbox29.913%,YOLOROIletterbox59.575%. Input-routeeffectobserved; notfull90reranking/architectureclaim.25callscompleted; numericalcontrolgatehistoryretained. Noadditionalexperimentstartedautomatically.

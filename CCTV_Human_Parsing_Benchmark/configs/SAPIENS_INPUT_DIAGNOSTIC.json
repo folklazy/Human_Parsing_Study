@@ -65,7 +65,8 @@
     "logits_rtol": 1e-05,
     "native_mask": "exact equality on GPU map-back",
     "fresh_baseline_vs_saved_mask": "exact equality on each six-image baseline",
-    "original_allclose_gate": "FAILED_PRESERVED; not relaxed or relabeled; input-variant phase uses accepted hard-mask baseline compatibility only"
+    "original_allclose_gate": "FAILED_PRESERVED; not relaxed or relabeled; input-variant phase uses accepted hard-mask baseline compatibility only",
+    "applies_to": "Initial parent attempt only; raw allclose gate remains failed. Current variant phase reuses six accepted baseline packets; it does not certify six fresh baseline forwards."
   },
   "scoring": "same fixed selected-part GT/matching/projection; primary315 membership intersect selected6; missing detector retains zero",
   "resource_guards": {
@@ -102,5 +103,6 @@
     "old_attempt_preserved": true,
     "no_raw_logit_equivalence_claim": true
   },
-  "orchestration_amendment": "Original raw-logit gate remains failed; tensor and original-grid masks match. Continue independent input-route diagnostic with source accepted baseline reuse; no repeat of official/wrapper control. Additional process warmup1, new variants21; combined total25 <= initial29call bound."
+  "orchestration_amendment": "Original raw-logit gate remains failed; tensor and original-grid masks match. Continue independent input-route diagnostic with source accepted baseline reuse; no repeat of official/wrapper control. Additional process warmup1, new variants21; combined total25 <= initial29call bound.",
+  "launch_specification_sha256": "47f250075516bf67f9f7d00a52ad65b848bed773e6d784d29423df1d1fa8474e"
 }
