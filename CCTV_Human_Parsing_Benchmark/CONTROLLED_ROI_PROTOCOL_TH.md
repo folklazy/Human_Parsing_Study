@@ -1,5 +1,7 @@
 # ข้อเสนอ CCTV: เปรียบเทียบด้วย person ROI เดียวกันและแยก Face/Neck ให้ถูกงาน
 
+> **Operational update — 2026-11-01:** ผู้ใช้อนุมัติรันใหม่แล้ว. [Frozen prediction scope/launch report](reports/CONTROLLED_ROI_RUN_TH.md) แยก GT-independent ROI prediction collection ออกจาก final scoring; headline ยัง null จน GT Face/Neck และ QA ผ่าน. เนื้อหาข้อเสนอเดิมด้านล่างเก็บเป็น design rationale ไม่ใช่สถานะยังรออนุมัติ run.
+
 สถานะ **PROPOSED_NOT_FROZEN — DESIGN_RECOMMENDATION_COMPLETE / GT_REVISION_AND_ROI_READINESS_PENDING**. จัดทำ 1 พฤศจิกายน 2026 หลังเห็นผลเก้าระบบและ Sapiens ROI diagnostics แล้ว จึงเป็น exploratory redesign ไม่ใช่ preregistration หรือ independent confirmation. ผู้ใช้มอบหมายให้ออกแบบวิธีที่เหมาะสม; การมอบหมายนี้ไม่ใช่การอนุมัติ inference หรือ full benchmark รอบใหม่. รอบจัดทำเอกสารนี้มี model calls **0** และไม่แก้ active execution config/source, GT หรือคะแนนเก่า.
 
 ## ข้อเสนอหลัก

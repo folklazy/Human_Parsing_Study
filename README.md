@@ -1,5 +1,7 @@
 # Human Parsing Study
 
+**Current authorized CCTV run:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.
+
 **Current CCTV evaluation proposal:** [controlled person-ROI and explicit Face/Neck views](CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), **PROPOSED_NOT_FROZEN**. Same predicted crop/ownership across nine checkpoints; shared neck-excluded Face domain plus separate Face+Neck delivery, equal four-target weights. GT revision and route/scorer readiness precede a new batch. No new inference or old-result changes in this design work.
 
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.

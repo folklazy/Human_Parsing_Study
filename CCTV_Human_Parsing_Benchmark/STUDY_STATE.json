@@ -1,11 +1,11 @@
 {
   "scope": "CCTV_PARTIAL_TARGET_RECALL_V1",
   "run_id": "cctv-partial-20261031T1800Z",
-  "status": "GT_OWNER_REVIEW_REQUIRED",
+  "status": "CONTROLLED_ROI_PREPARED",
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T11:27:25.122054+00:00",
+  "updated_utc": "2026-11-01T11:51:56.965730+00:00",
   "full_benchmark_ready": false,
   "reason": "At least2 source images contain cross-person owner labels; supplied-GT scores remain recorded but final personwise model selection is on hold",
   "no_overall_deployment_winner": true,
@@ -85,7 +85,7 @@
     "selection_use": "HOLD_PENDING_GT_OWNER_QA",
     "GT_reference_validity": "KNOWN_SOURCE_OWNER_CONFLICTS"
   },
-  "current_evaluation": "Controlled_ROI_design",
+  "current_evaluation": "Controlled_ROI_prediction_collection",
   "current_result_report": "reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md",
   "preprocessing_review": {
     "status": "INPUT_PREPROCESSING_PARITY_PASS_ON_BOUNDED_CPU_CASES",
@@ -143,5 +143,17 @@
     "next_action": "Versioned derived GT and CPU scorer acceptance; then bounded adapter/resource-readiness proposal before a new batch approval",
     "stage": "GT_REVISION_AND_ROI_READINESS_PENDING",
     "user_method_choice_delegated": true
+  },
+  "controlled_ROI_run": {
+    "run_id": "cctv-controlled-roi-20261101T115653Z",
+    "status": "PREPARED_NOT_YET_LAUNCHED",
+    "report": "reports/CONTROLLED_ROI_RUN_TH.md",
+    "scope": "configs/CONTROLLED_ROI_SCOPE.json",
+    "user_authorized": true,
+    "reused_ROIs": 45,
+    "pending_ROIs": 1125,
+    "CPU_acceptance_cases": 12,
+    "primary": null,
+    "GT_gate": "NECK_AND_REMAINING_OWNER_CONTOUR_QA_PENDING"
   }
 }

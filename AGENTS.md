@@ -1,3 +1,7 @@
+# Current authorized CCTV controlled ROI work
+
+User authorized the new CCTV90/nine-checkpoint controlled person-ROI batch after its design review. Read CCTV_Human_Parsing_Benchmark/STATUS.md and reports/CONTROLLED_ROI_RUN_TH.md; use the read-only progress viewer/private CURRENT_CONTROLLED_ROI pointer before any action. Existing inference uses frozen source hashes and isolated outputs. Never duplicate/retry workers, edit their source/config mid-run, or infer new authorization from historical flags. GT owner fixes live only in derived copies; new scores remain null pending reviewed Neck/owner/contour bindings. No new YOLO/CIHP5000/training/color work. This session authorization supersedes the older milestones below for this run only; publication checkout remains separate from canonical workspace.
+
 # Latest terminal scope — C4-P 0.4B pilot closed, seven-call budget consumed
 
 Read Human_Parsing_Benchmark/reports/CIHP_SAPIENS_04B_PILOT_TH.md and STATUS. PilotPASS6/6+warmup1,total7calls;firstsetupinvalid0callsretained/losslessbinaryreaderfixed. Workerexited/queuestopped. Noautomaticrestart/0.8B/1B/fullcommonscoring/CPIretry/YOLOnewinference/training/color/CCTV. Nativefrozenconfig/source/resultsimmutable. Currentconfig/protocolauthorizationflagsareconsumedhistoricalpermission,notpermissiontoexecuteagain. Fullqualityscopecanbeproposedonly;requiresseparateuserapproval/launchconfig.

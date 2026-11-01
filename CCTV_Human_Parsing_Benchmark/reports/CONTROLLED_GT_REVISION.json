@@ -1,0 +1,20 @@
+{
+  "status": "TWO_OWNER_CORRECTIONS_APPLIED_NECK_QA_PENDING",
+  "derived_revision": "controlled-gt-owner-20261101",
+  "confirmed_owner_corrections": 2,
+  "changed_owner_pixels": 7870,
+  "semantic_pixels_changed": 0,
+  "native_grouped_part_counts_after_owner_correction": {
+    "hair": 69,
+    "upper": 120,
+    "lower": 102,
+    "face": 35
+  },
+  "eligible_primary_counts": null,
+  "source_annotations_modified": false,
+  "source_masks_modified": false,
+  "Neck_annotations_available": false,
+  "scoring_ready": false,
+  "expert_certified": false,
+  "private_revision_sha256": "c5f41b3e6157e4eb976e53500d1530eae2c21aa2347354f76e73cca602ba23ee"
+}

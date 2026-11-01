@@ -1,5 +1,9 @@
 # CCTV Human Parsing Benchmark
 
+**Current authorized work:** [CCTV90 controlled person-ROI batch](reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints, same frozen YOLO crop/ownership. CPU acceptance passed; per-model GPU gates precede continuation. [Live status](STATUS.md). New headline scores remain null until reviewed Face/Neck GT is ready.
+
+## Previous proposal and historical results
+
 **สถานะปัจจุบัน: GT_OWNER_REVIEW_REQUIRED / PROPOSED_NOT_FROZEN.** อ่าน [ข้อเสนอ controlled person-ROI และ Face/Neck](CONTROLLED_ROI_PROTOCOL_TH.md) → [STATUS](STATUS.md) → [หลักฐาน design review](reports/CONTROLLED_ROI_DESIGN_REVIEW.json). ผู้ใช้มอบหมายให้กำหนดวิธีประเมินที่เหมาะสม; ยังไม่มี inference รอบใหม่หรือการอนุมัติ batch เพิ่มจากการออกแบบนี้.
 
 ข้อเสนอใช้ crop/context/YOLO ownership เดียวกันทั้ง9 checkpoints และ GT revision ที่แยก Face/Neck: headline Hair/Face-on-neck-excluded-domain/Upper/Lower เท่ากัน25%, พร้อม Face+Neck delivery แยก. ต้องปิด GT owner/contour QA และ adapter/scorer readiness ก่อน; Face view ไม่รับรอง strict face-only capability.

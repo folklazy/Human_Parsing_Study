@@ -1,5 +1,21 @@
 # CCTV parsing — current status
 
+Updated 2026-11-01T18:51:56.965730+07:00 (Asia/Bangkok). **USER_AUTHORIZED / CONTROLLED_ROI_PREPARED**.
+
+Userสั่งรันpersonROIใหม่เก้าระบบ. [รายงานรอบใหม่](reports/CONTROLLED_ROI_RUN_TH.md) → [ขอบเขตที่ตรึง](configs/CONTROLLED_ROI_SCOPE.json). Run `cctv-controlled-roi-20261101T115653Z`,90images/130ROIsต่อmodel,45Sapiensreused/1125pendingROIAPIcalls+9TRAINwarmups. CPU12casesPASS;GPUper-modelgatesยังต้องทำ.
+
+Predictioncollectionแยกจากscoring:GTowner2กรณีแก้ในderivedcopyแล้ว,sourcecontoursไม่เปลี่ยน;Neck/remainingQAยังไม่ครบ. **Headlineใหม่nullจนGT/scorerพร้อม**. ไม่ใช้GTสร้างpredictionและไม่ใช้predictionวาดGT.
+
+Live:
+
+```bash
+python3 CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_progress.py --watch
+```
+
+Private`outputs/cctv-controlled-roi-20261101T115653Z/`เก็บcontroller/workerSTATE/logs/atomicpackets. คิวหยุดหลัง9checkpoints;ไม่มีmodelretry/fallback/YOLOreinference/CIHP5000/training/colorเพิ่ม.
+
+## Earlier design and completed evidence — historical snapshots
+
 Updated 2026-11-01T18:27:25.122054+07:00 (Asia/Bangkok).
 
 **GT_OWNER_REVIEW_REQUIRED / GT_REVISION_AND_ROI_READINESS_PENDING**. วิธีประเมินรอบใหม่จัดทำครบเป็น **PROPOSED_NOT_FROZEN**: [controlled ROI / Face-Neck protocol](CONTROLLED_ROI_PROTOCOL_TH.md). ยังไม่ใช่ launch approval หรือ execution acceptance.
