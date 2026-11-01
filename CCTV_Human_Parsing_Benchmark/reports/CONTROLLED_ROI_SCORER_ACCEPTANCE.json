@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Nine targeted synthetic CPU cases and accepted non-Face packet-to-scorer-to-reporter integration. Face/Neck GT and final Face packet integration remain unaccepted.",
+  "environment": ".venvs/sapiens2-pilot",
+  "command": ".venvs/sapiens2-pilot/bin/python -m unittest discover -s CCTV_Human_Parsing_Benchmark/tests -p test_controlled_roi_evaluation.py -v",
+  "tests": 9,
+  "failed": 0,
+  "model_calls": 0,
+  "initial_attempts": [
+    {
+      "kind": "environment_setup",
+      "python": "system python3",
+      "outcome": "numpy not installed in system interpreter; switched to existing compatible environment without installation"
+    },
+    {
+      "kind": "CLI_integration",
+      "outcome": "relative-path normalization failed before GT binding or scoring was written; fixed in new scorer only; original empty attempt directory retained"
+    },
+    {
+      "kind": "CPU_scorer_binding",
+      "outcome": "Initial scorer assumed continuation models were a dict, but continuation stores a model-ID list and hash-bound parent. Preserved failed-to-score records; fixed new scorer; reused six COMPLETE results and scored only three remaining systems. No model failure or new model call."
+    }
+  ],
+  "source_sha256": "cadd3efc25de1bcce9f0874d3da5554239343531f95dcdc106d5c4f4faa8a5b6",
+  "test_sha256": "823f1e1dc936359905c5b23cb91cb92c8f8d2a3733664a9a0ef3955176676adc",
+  "protocol_sha256": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+  "Face_Neck_GT_acceptance": false,
+  "frozen_inference_source_files_checked": 14,
+  "frozen_inference_source_mismatches": 0,
+  "actual_saved_frame_packets_scored": 810,
+  "complete_models": 9,
+  "source_of_truth": "reports/CONTROLLED_ROI_DIAGNOSTIC_INDEX.json",
+  "frame_record_and_scalar_reconciliation": "PASS; exact90 IDs and269 eligible non-Face parts/model; stored JSON hashes, per-target aggregates and GT bindings reconciled without reopening NPZs",
+  "assembly_source_sha256": "35ab0299b0921e8efd78b0dc7596cf0b3b9261f253d0086aac7b8a9e69253cab",
+  "accepted_predecessor_scorer_sha256": "cf3372f1ee9e3c0589f402ae8c7a0fd4b587b8e9e74ccecf6fd083fbedb2e62b",
+  "clean_staged_checkout_cpu_verification": {
+    "status": "PASS",
+    "tests": 9,
+    "scope": "portable synthetic CPU cases from staged public tree; existing compatible Python, no dataset/model assets/inference",
+    "source_and_test_hashes_match_report": true
+  }
+}

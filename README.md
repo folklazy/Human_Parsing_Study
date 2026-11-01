@@ -1,6 +1,6 @@
 # Human Parsing Study
 
-**Current CCTV result: ROI predictions complete9/9; evaluation scores pending GT.** [Completion report](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md):90images/130ROIs percheckpoint,allcontrollersstopped. NewheadlineIoU/Dice remainnull pending reviewedFace/NeckGT and finalscorerbinding. Savedmasksareavailable;nonewinferenceisneededjusttofixGT.
+**Current CCTV result: Hair/Upper/Lower diagnostics complete9/9; Face/Neck GT pending.** [รายงานผลและ GT review](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) / [ตาราง](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_PART_DIAGNOSTICS.csv). ControlledROI predictionsครบ90images/130ROIsต่อcheckpoint. CPU evaluationใช้savedmasksและGT-only subsetเดียวกัน; Face-domain/macro4ยังnull. ไม่มีoverallwinnerหรือGPUrerunเพื่อแก้GT. [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md).
 
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 

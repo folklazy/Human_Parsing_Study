@@ -1,0 +1,102 @@
+{
+  "scope": "Read-only GT/source review plus CPU saved-ROI non-Face diagnostics; final Face/Neck evaluation remains pending",
+  "updated_utc": "2026-11-01T14:42:05.289682+00:00",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 7943,
+      "sha256": "2ba47db42cb4ef93248268f526b6303e5f9c3e114a06c54e302b9d02a0bf5929"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 11807,
+      "sha256": "52c79b142155472cae0a6041f5f4761f40bcb3c37bb7e425793f9299e7409028"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 21880,
+      "sha256": "7eaca6b9fceee7bbf98f4db00cd27735093d5bb9fa265fb3a9533cd22cf51f30"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 2147,
+      "sha256": "87cc270b9a7864f8af085b2cc801349f3814fd95f1e637b655f703ad6e6e7d2d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md",
+      "bytes": 39795,
+      "sha256": "1bf4143221360a98ae094ef28d9a6cf999cc19582080e5dc75da014d7b0f0d03"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/requirements-cpu.txt",
+      "bytes": 182,
+      "sha256": "8c76ed76697ed4b9dc5877dd995404e7c9928ce6870414e810d998c122b57c6a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_SCORING_PROTOCOL.json",
+      "bytes": 2890,
+      "sha256": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_evaluation.py",
+      "bytes": 20229,
+      "sha256": "cadd3efc25de1bcce9f0874d3da5554239343531f95dcdc106d5c4f4faa8a5b6"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/assemble_controlled_roi_scores.py",
+      "bytes": 6199,
+      "sha256": "35ab0299b0921e8efd78b0dc7596cf0b3b9261f253d0086aac7b8a9e69253cab"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/prepare_gt_neck_review.py",
+      "bytes": 4820,
+      "sha256": "bc0c9a703ecb6515d1fdb90758f35d4e4f2f9b1a77f85fe1e647c114a32816ff"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/tests/test_controlled_roi_evaluation.py",
+      "bytes": 6857,
+      "sha256": "823f1e1dc936359905c5b23cb91cb92c8f8d2a3733664a9a0ef3955176676adc"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_GT_SCREEN_SUMMARY.json",
+      "bytes": 1704,
+      "sha256": "608cc621c2d1caf4c5539f2705ac52e226afc7b2e9b2194c359a3c8aba58b1b4"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_SCORER_ACCEPTANCE.json",
+      "bytes": 2424,
+      "sha256": "fe01c0f89d13e38ea93f6ba8afad0e9582c0b5f8906d335421187b5b51983aac"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_DIAGNOSTIC_INDEX.json",
+      "bytes": 33723,
+      "sha256": "a7cb15b710a45876f100a2da060875f6ff314d4580f6bf1e6c1bc7c34318eddc"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md",
+      "bytes": 15552,
+      "sha256": "c65720b1955a219fa6ca74ef285a67c5bb665c8179a286e05f6708a01d5fe9b3"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_PART_DIAGNOSTICS.csv",
+      "bytes": 35780,
+      "sha256": "324f2a6d7fb0541aaa0c614afedf8e3bd8f0412105be27e5dbf4a2f96c838def"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14174,
+      "sha256": "170369513578039075a491479d4ac0781ec9b21318f68d83f5b34bd8fda2942d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 14096,
+      "sha256": "f8396a244de8fccb3db1ad82b33b87e5d8e4aa625057efadd61db56a390d8315"
+    }
+  ],
+  "canonical_working_copy": "CCTV_Human_Parsing_Benchmark",
+  "publication_checkout": "Human_Parsing_Study_Public",
+  "sync": "explicit approved paths only; no automatic sync or asset relocation",
+  "new_model_calls": 0,
+  "public_CCTV_assets_or_person_identifiers": false,
+  "first_party_license_changed": false
+}

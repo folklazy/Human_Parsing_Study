@@ -1,0 +1,5 @@
+# Observed CPU evaluation environment: Python 3.12.3
+# No package installation was performed. These are not model environment requirements.
+numpy==2.5.4
+Pillow==12.3.0
+scipy==1.18.1

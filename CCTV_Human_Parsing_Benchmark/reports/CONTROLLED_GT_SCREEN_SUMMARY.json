@@ -1,0 +1,46 @@
+{
+  "status": "NON_FACE_DIAGNOSTIC_BINDING_FROZEN_FACE_GT_PENDING",
+  "created_utc": "2026-11-01T14:21:24.238034+00:00",
+  "GT_binding_sha256": "693b8910f8d9cbe3597f05fa72c73d7221131dac071f0eec74205c2a796544fe",
+  "protocol_sha256": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+  "source_parts": {
+    "Hair": 69,
+    "Upper": 120,
+    "Lower": 102,
+    "Face": 35
+  },
+  "expected_eligible_parts": {
+    "Hair": 61,
+    "FaceDomain": 0,
+    "Upper": 112,
+    "Lower": 96
+  },
+  "owner_corrections": 2,
+  "reviewed_persons": 127,
+  "source_parts_total": 326,
+  "GT_only_excluded_non_Face_parts": 22,
+  "pending_Face_parts": 35,
+  "detector_missed_person_records": 20,
+  "ambiguous_assignments": 1,
+  "Face_Neck_GT_complete": false,
+  "Neck_annotations_created": 0,
+  "expert_certified": false,
+  "source_modified": false,
+  "parser_predictions_used_for_GT": false,
+  "model_calls": 0,
+  "primary": null,
+  "reviewed_person_pages": 32,
+  "reviewed_Face_closeups": 35,
+  "Face_review_queue_status_counts": {
+    "NEEDS_AMBIGUITY_ADJUDICATION": 24,
+    "NEEDS_MANUAL_CONTOUR_ANNOTATION": 11
+  },
+  "reviewer": "Codex visual assistant; not independent human expert",
+  "post_hoc": true,
+  "new_ROI_quality_scores_read_before_GT_freeze": false,
+  "source_images_or_person_records_published": false,
+  "private_review_queue_sha256": "c2c66df8e5f664acf71e2a1f21c570feec999363ba74f3e4128088e61faca8f9",
+  "private_review_manifest_sha256": "ba7074d8f4d88bee9712137cce2747357f5054a6ea43d9dae0b07c4567d1961b",
+  "private_GT_location": "outputs/controlled-gt-screen-20261101-bound/GT_BINDING.json",
+  "private_RGB_GT_review_location": "outputs/gt-neck-review-20261101-inspection/index.html"
+}

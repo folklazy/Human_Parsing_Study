@@ -1,5 +1,17 @@
 # CCTV parsing — current status
 
+Updated 2026-11-01T21:34:07.412255+07:00 (Asia/Bangkok). **NON_FACE_DIAGNOSTICS_COMPLETE_9_OF_9_FACE_GT_PENDING**.
+
+- Predictions ครบ9/9 checkpoints ×90images/130ROIs; controllers/workersหยุดแล้ว. [Prediction collection](reports/CONTROLLED_ROI_RUN_TH.md).
+- [รายงานปัจจุบัน: GT review และผลที่วัดได้](reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md): CPU Hair/Upper/Lower ครบ9/9 จาก saved masks; GT-only subset269parts, matchingร่วมทุกระบบ. **Face-domain/macro4ยังnull**.
+- Face35recordsยังไม่มี reviewed Neck annotation; source maskไม่ถูกแก้. RGB/GT-only screen127persons/32pagesและ35closeupsเสร็จแล้ว; ownercorrections2จุดอยู่ในderivedcopy. Reviewนี้ไม่ใช่independentexpertcertification.
+- [Derived result index](reports/CONTROLLED_ROI_DIAGNOSTIC_INDEX.json) / [GT screen](reports/CONTROLLED_GT_SCREEN_SUMMARY.json) / [CPU acceptance](reports/CONTROLLED_ROI_SCORER_ACCEPTANCE.json). Non-Face outputsไม่ใช่final four-target selection.
+- Next: Face/Neck annotation/adjudicationจากprivate`outputs/gt-neck-review-20261101-inspection/index.html` →newGTbinding→targetedFaceintegration→CPUscoreจากpredictionsเดิม. ไม่มีinferenceใหม่ในworkunitนี้ และไม่ต้องGPUrerunเพื่อแก้GT.
+
+## Earlier status — historical snapshots below
+
+# CCTV parsing — current status
+
 Updated 2026-11-01T20:38:12.849866+07:00 (Asia/Bangkok). **PREDICTIONS_COMPLETE_9_OF_9_SCORING_PENDING_GT**.
 
 - ทั้ง9checkpointsมีacceptedassembledpredictionsครบตัวละ90images/130ROIs; finalmissing/duplicate/failed/invalid0 ตามcanonicalcompletion.

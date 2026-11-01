@@ -1,6 +1,7 @@
 # CCTV Human Parsing Benchmark
 
-**Current status: predictions complete9/9; scoring pending GT.** [Completion report](reports/CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Eachcheckpoint:90images/130ROIs;controllersstopped. NewheadlineIoU/Dice remainnull pending reviewedFace/NeckGT,remainingowner/contourQA and finalscorerbinding. No inference rerun is needed just to update GT.
+**Current status: non-Face diagnostics complete9/9; Face/Neck GT pending.** [รายงานปัจจุบัน](reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) / [STATUS](STATUS.md) / [ตาราง](metrics/CONTROLLED_ROI_PART_DIAGNOSTICS.csv). ROI predictionsครบ90images/130ROIsต่อcheckpointแล้ว; CPU Hair/Upper/Lowerคำนวณจากsavedmasksครบเก้าระบบ. Face-domainและmacro4ยังnull. ไม่มีผู้ชนะรวมจนGT Face/Neckและintegrationครบ; ไม่ต้องinferenceใหม่เพื่อแก้GT.
+
 
 ## Previous proposal and historical results
 
