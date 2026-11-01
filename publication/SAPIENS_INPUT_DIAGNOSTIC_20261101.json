@@ -1,0 +1,38 @@
+{
+  "scope": "User-authorized bounded Sapiens04 input-route diagnostic only; no full population or other model",
+  "updated_utc": "2026-11-01T02:24:13.539610+00:00",
+  "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 2097,
+      "sha256": "a041f498c6cbc46212e22c0de6efc91cb13a23b1ab7159457774b9bb11e09484"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 7166,
+      "sha256": "8d33b0e22f638889268dbf2b271efbabb15fe95cd79968c2408b38411d293e5d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_INPUT_DIAGNOSTIC.json",
+      "bytes": 4079,
+      "sha256": "ec4e6d592728e68e8869e1e8be18401848e647eecf012be4e8f198224a3645b0"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py",
+      "bytes": 3456,
+      "sha256": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_input_diagnostic.py",
+      "bytes": 17668,
+      "sha256": "6746ebdaac9b4ddae963a23747b8f874b0e12164bcfe15f12e7fb9e2fc496aa1"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/tests/test_sapiens_input_variants.py",
+      "bytes": 3034,
+      "sha256": "5db74a61f054494f2eac34455691f5a6b027b9980e43f78a76b2106e82494c34"
+    }
+  ],
+  "CCTV_assets_or_identifiers_published": false
+}
