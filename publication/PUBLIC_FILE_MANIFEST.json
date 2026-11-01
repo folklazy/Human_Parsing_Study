@@ -40,8 +40,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 2097,
-      "sha256": "a041f498c6cbc46212e22c0de6efc91cb13a23b1ab7159457774b9bb11e09484"
+      "bytes": 2481,
+      "sha256": "76d29b1625e7d579704f698a028ea7229b3bf2b24c4324a31d9489b840867eec"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
@@ -50,8 +50,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 7166,
-      "sha256": "8d33b0e22f638889268dbf2b271efbabb15fe95cd79968c2408b38411d293e5d"
+      "bytes": 8159,
+      "sha256": "61fb8a0c4408b35826952eed4a0cfc5c83835733c740f904493abdfcf321c010"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json",
@@ -65,8 +65,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/SAPIENS_INPUT_DIAGNOSTIC.json",
-      "bytes": 4079,
-      "sha256": "ec4e6d592728e68e8869e1e8be18401848e647eecf012be4e8f198224a3645b0"
+      "bytes": 5241,
+      "sha256": "47f250075516bf67f9f7d00a52ad65b848bed773e6d784d29423df1d1fa8474e"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/SELECTED_PART_PROTOCOL.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/run_sapiens_input_diagnostic.py",
-      "bytes": 17668,
-      "sha256": "6746ebdaac9b4ddae963a23747b8f874b0e12164bcfe15f12e7fb9e2fc496aa1"
+      "bytes": 18965,
+      "sha256": "765bf2bcb64bcc7d56887bc65b0d0bb8894b5800bc2279ff3ddda5f2edc8b959"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py",
@@ -5056,7 +5056,7 @@
     {
       "path": "publication/SAPIENS_INPUT_DIAGNOSTIC_20261101.json",
       "bytes": 1459,
-      "sha256": "e966c2578b7d6c91c010ff9d2b587a44a5605211841c8f8b022365feb8866f19"
+      "sha256": "0850b977c040d9f9cd0593dcbc923c43be25f9858ac4a186c842515502e65607"
     },
     {
       "path": "publication/SAPIENS_PREPROCESSING_AUDIT_20261101.json",
@@ -6486,5 +6486,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T02:24:13.546077+00:00"
+  "last_updated_utc": "2026-11-01T02:28:56.843822+00:00"
 }

@@ -121,6 +121,14 @@ def execute(cp):
         warm = W / 'datasets/CIHP/Training/Images/0000930.jpg'
         rgb = np.array(Image.open(warm).convert('RGB')); tensor, _ = prepare_rgb(rgb, model.pipeline, model.data_preprocessor)
         output = forward(tensor, 'TRAIN_WARMUP', 'TRAIN0000930'); del output, tensor
+        if c.get('reuse_accepted_full_frame_baselines'):
+            for path, digest in c['parent_attempt_evidence'].items():
+                if sha_file(W / path) != digest:
+                    raise RuntimeError('PARENT_ATTEMPT_EVIDENCE_CHANGED')
+            parent_parity = read(W / c['parent_parity_path'])
+            if not parent_parity['input_equal'] or not parent_parity['native_mask_equal'] or parent_parity['saved_native_mask_agreement'] != 1.:
+                raise RuntimeError('PARENT_MASK_LEVEL_COMPATIBILITY_NOT_ESTABLISHED')
+            atomic_json(root / 'REFERENCE_GATE_EVIDENCE.json', dict(raw_logit_allclose_pass=False, mask_level_compatibility=True, parent_evidence=c['parent_attempt_evidence']))
         binding = read(W / c['GT_binding']); spec = load_spec(W / parent['projection'])
         matches = {(r['image_id'], r['person_id']): r['YOLO_opportunity_id'] for r in binding['matches']}
         gt_records = defaultdict(list)
@@ -150,37 +158,41 @@ def execute(cp):
             # GT is used only for scoring after each independent prediction export.
             category, human = np.array(Image.open(category_path)), np.array(Image.open(human_path))
             lookup = {op['id']: j for j, op in enumerate(opportunities)}
-            tensor, geometry = prepare_rgb(rgb, model.pipeline, model.data_preprocessor)
-            if index == 0:
-                official = model.data_preprocessor(model.pipeline(dict(img=cv2.imread(str(image)))))['inputs']
-                assert torch.equal(tensor, official)
-                reference_output = forward(official, 'OFFICIAL_FORWARD_REFERENCE', iid)
-                reference_native = logits_to_native(reference_output, (h, w))
-                reference_logits = reference_output.detach().cpu()
-                del reference_output
-                np.save(root / 'REFERENCE_INPUT.npy', official.detach().cpu().numpy())
-                np.save(root / 'REFERENCE_LOGITS.npy', reference_logits.numpy())
-                del official
-            logits = forward(tensor, ROUTES[0], iid)
-            native = logits_to_native(logits, (h, w))
-            baseline_agreement = float(np.mean(native == old_arrays['native_full_frame_semantic_mask']))
-            if index == 0:
-                current = logits.detach().cpu()
-                parity = dict(input_equal=True, logits_max_abs_error=float((current - reference_logits).abs().max()),
-                    logits_allclose=bool(torch.allclose(current, reference_logits, atol=1e-5, rtol=1e-5)),
-                    native_mask_equal=bool(np.array_equal(native, reference_native)),
-                    saved_native_mask_agreement=baseline_agreement)
-                atomic_json(root / 'FORWARD_PARITY.json', parity)
-                np.save(root / 'WRAPPER_LOGITS.npy', current.numpy())
-                if not parity['logits_allclose'] or not parity['native_mask_equal']:
-                    raise RuntimeError('OFFICIAL_WRAPPER_FORWARD_PARITY_FAILED')
-                del current, reference_logits, reference_native
-            if baseline_agreement != 1.:
-                atomic_json(root / 'BASELINE_DISAGREEMENT.json', dict(image_id=iid, agreement=baseline_agreement,
-                    source_packet_sha256=old_meta['packet_sha256']))
-                raise RuntimeError('FRESH_BASELINE_DIFFERS_FROM_SAVED_NATIVE_MASK')
-            del logits, tensor
-            predictions = {ROUTES[0]: (ownership_planes(native, extents, detector_scores), geometry)}
+            if c.get('reuse_accepted_full_frame_baselines', False):
+                baseline_agreement = None
+                predictions = {ROUTES[0]: (old_arrays, old_meta['geometry'])}
+            else:
+                tensor, geometry = prepare_rgb(rgb, model.pipeline, model.data_preprocessor)
+                if index == 0:
+                    official = model.data_preprocessor(model.pipeline(dict(img=cv2.imread(str(image)))))['inputs']
+                    assert torch.equal(tensor, official)
+                    reference_output = forward(official, 'OFFICIAL_FORWARD_REFERENCE', iid)
+                    reference_native = logits_to_native(reference_output, (h, w))
+                    reference_logits = reference_output.detach().cpu()
+                    del reference_output
+                    np.save(root / 'REFERENCE_INPUT.npy', official.detach().cpu().numpy())
+                    np.save(root / 'REFERENCE_LOGITS.npy', reference_logits.numpy())
+                    del official
+                logits = forward(tensor, ROUTES[0], iid)
+                native = logits_to_native(logits, (h, w))
+                baseline_agreement = float(np.mean(native == old_arrays['native_full_frame_semantic_mask']))
+                if index == 0:
+                    current = logits.detach().cpu()
+                    parity = dict(input_equal=True, logits_max_abs_error=float((current - reference_logits).abs().max()),
+                        logits_allclose=bool(torch.allclose(current, reference_logits, atol=1e-5, rtol=1e-5)),
+                        native_mask_equal=bool(np.array_equal(native, reference_native)),
+                        saved_native_mask_agreement=baseline_agreement)
+                    atomic_json(root / 'FORWARD_PARITY.json', parity)
+                    np.save(root / 'WRAPPER_LOGITS.npy', current.numpy())
+                    if not parity['logits_allclose'] or not parity['native_mask_equal']:
+                        raise RuntimeError('OFFICIAL_WRAPPER_FORWARD_PARITY_FAILED')
+                    del current, reference_logits, reference_native
+                if baseline_agreement != 1.:
+                    atomic_json(root / 'BASELINE_DISAGREEMENT.json', dict(image_id=iid, agreement=baseline_agreement,
+                        source_packet_sha256=old_meta['packet_sha256']))
+                    raise RuntimeError('FRESH_BASELINE_DIFFERS_FROM_SAVED_NATIVE_MASK')
+                del logits, tensor
+                predictions = {ROUTES[0]: (ownership_planes(native, extents, detector_scores), geometry)}
             tensor, geom, preview = letterbox(rgb, model.data_preprocessor)
             logits = forward(tensor, ROUTES[1], iid); native = restore_letterbox(logits, geom)
             predictions[ROUTES[1]] = (ownership_planes(native, extents, detector_scores), geom)
@@ -211,6 +223,7 @@ def execute(cp):
                     native_config_sha256=m['native_config_sha256'], source_commit=m['source_commit'],
                     source_packet_sha256=old_meta['packet_sha256'], detector_sha256=dm['artifact_sha256'],
                     diagnostic_config_sha256=sha_file(cp), projection_sha256=parent['projection_sha256'],
+                    prediction_disposition='REUSED_ACCEPTED_NATIVE_PACKET' if route == ROUTES[0] and c.get('reuse_accepted_full_frame_baselines') else 'NEW_DIAGNOSTIC_INFERENCE',
                     geometry=geom, precision='FP32', GT_used_in_prediction=False, resource_policy='SHARED_GPU_QUALITY_ONLY')
                 packet = write_packet(root / route / 'packets', iid, arrays, metadata, {})
                 _, again = read_packet(packet)
@@ -226,7 +239,7 @@ def execute(cp):
                         TP=tp, FP=fp, FN=fn, GT_pixels=int(gt.sum()), detector_miss=j is None, **measures(tp, fp, fn)))
                 atomic_json(packet / 'DIAGNOSTIC_SCORES.json', dict(parts=rows, original_GT_sha256=sample['GT_sha256']))
                 scores_by_route[route].extend(rows)
-            source_packets.append(dict(image_id=iid, source_packet_sha256=old_meta['packet_sha256'], baseline_saved_agreement=baseline_agreement))
+            source_packets.append(dict(image_id=iid, source_packet_sha256=old_meta['packet_sha256'], baseline_saved_agreement=baseline_agreement, baseline_reused=bool(c.get('reuse_accepted_full_frame_baselines'))))
             state['completed_frames'] += 1; state['status'] = 'FRAME_COMMITTED'; save_state()
             event(dict(event='FRAME_COMMITTED', image_id=iid, routes=ROUTES))
             del predictions, old_arrays, roi_arrays
