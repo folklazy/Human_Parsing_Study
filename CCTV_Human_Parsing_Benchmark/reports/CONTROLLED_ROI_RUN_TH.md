@@ -1,6 +1,6 @@
 # CCTV90 controlled person-ROI — การเตรียมและสถานะรอบใหม่
 
-อัปเดต 2026-11-01T18:51:56.965730+07:00 (Asia/Bangkok). **USER_AUTHORIZED / PREDICTION_COLLECTION_PREPARED**; ยังไม่อ้างว่า GPU readiness ผ่านทั้งเก้าระบบ. ผู้ใช้สั่ง “ได้รันใหม่เลย” ต่อจาก [ข้อเสนอหลัก](../CONTROLLED_ROI_PROTOCOL_TH.md). Run `cctv-controlled-roi-20261101T115653Z` ใช้ภาพCCTVเดิม90ภาพ/130frozenYOLOopportunitiesต่อcheckpoint ไม่ใช่ CIHPvalidation5,000.
+อัปเดต 2026-11-01T19:01:06.078883+07:00 (Asia/Bangkok). **RUNNING_PREDICTION_COLLECTION / SCORING_PENDING_GT**; ยังไม่อ้างว่า GPU readiness ผ่านทั้งเก้าระบบ. ผู้ใช้สั่ง “ได้รันใหม่เลย” ต่อจาก [ข้อเสนอหลัก](../CONTROLLED_ROI_PROTOCOL_TH.md). Run `cctv-controlled-roi-20261101T115653Z` ใช้ภาพCCTVเดิม90ภาพ/130frozenYOLOopportunitiesต่อcheckpoint ไม่ใช่ CIHPvalidation5,000.
 
 ## ขอบเขตที่ตรึงและเหตุผล
 
@@ -48,3 +48,23 @@ Privateartifacts:`CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261
 [STATUS](../STATUS.md) / [WORK_LOG](../WORK_LOG.md). Publiccloneไม่มีprivateCCTV/assets/environment จึงreproduceGPUทั้งงานจากcloneอย่างเดียวไม่ได้.
 
 Prelaunch correction: พบ native CPI exporter ใช้ชื่อ`input.png-index.png`เมื่อรับPNG. Adapterใหม่อ่านชื่อตามactualsourceโดยตรง คงPNGdecodedpixelsเดิม;เพิ่มCPUfilename/config-preservationcases รวม12PASS. Preparedparentเก็บครบและมีGPUcalls0;childrunเชื่อมmanifest/cropsเดิมและตรึงsourcehashesใหม่ก่อนlaunch ไม่แก้configเดิมย้อนหลัง.
+
+## Launch acceptance — 2026-11-01T19:01:06.078883+07:00
+
+ControllerPID1353092,SID1353092,PPID1ตรวจแล้ว;workerทำงานแยกและไม่ต้องค้างCodexturn. Launchcommit`12ef1185e7def76d2a1091bf2dcc5d1e972fb5af`เป็นsourcecommitที่รันจริง;commitรายงานภายหลังเป็นdocumentationupdate ไม่ใช่launchrevision. ตรวจatomicoriginal-gridpacketของQANetผ่านnativeIDs/shape/readback/YOLOownership/environmenthash/GT-not-used. QANetครบ90frames/130ROIs,failed0/invalid0ตามcanonicalcompletion. Queueกำลังทำระบบถัดไป ไม่ใช้ผลpartialมาจัดอันดับ. [Sanitized launch snapshot](CONTROLLED_ROI_LAUNCH.json).
+
+Snapshotตารางขณะบันทึก (ไม่ใช่live):
+
+|Checkpoint|Frame packets /90|ROI packets /130|Status|
+|---|---:|---:|---|
+|QANet_CIHP_HRNetW48_512x384|90|130|PREDICTIONS_COMPLETE_SCORING_PENDING_GT|
+|M2FP_R101_CIHP|90|130|PREDICTIONS_COMPLETE_SCORING_PENDING_GT|
+|D2FP_R101_CIHP|43|74|ROI_INFERENCE|
+|RPR_CIHP|0|0|NOT_STARTED|
+|CPI_R50_CIHP|0|0|NOT_STARTED|
+|CPI_ConvNeXtB_CIHP|0|0|NOT_STARTED|
+|Sapiens2_0.4b|0|0|NOT_STARTED|
+|Sapiens2_0.8b|0|0|NOT_STARTED|
+|Sapiens2_1b|0|0|NOT_STARTED|
+
+ดูviewer/privateJSONสำหรับสถานะหลังtimestampนี้;publicGitและMarkdownเป็นdatedsnapshots. HeadlineยังnullเพราะGTgate ไม่ใช่ศูนย์หรือผลคุณภาพของโมเดล.

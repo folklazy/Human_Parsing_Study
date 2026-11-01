@@ -1,15 +1,15 @@
 {
   "scope": "CCTV_PARTIAL_TARGET_RECALL_V1",
   "run_id": "cctv-partial-20261031T1800Z",
-  "status": "CONTROLLED_ROI_PREPARED",
+  "status": "RUNNING_PREDICTION_COLLECTION_SCORING_PENDING_GT",
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T11:51:56.965730+00:00",
+  "updated_utc": "2026-11-01T12:01:06.078883+00:00",
   "full_benchmark_ready": false,
   "reason": "At least2 source images contain cross-person owner labels; supplied-GT scores remain recorded but final personwise model selection is on hold",
   "no_overall_deployment_winner": true,
-  "new_experiment_started": false,
+  "new_experiment_started": true,
   "evidence": {
     "QANet_CIHP_HRNetW48_512x384": {
       "exact_unique_membership": 90,
@@ -146,7 +146,7 @@
   },
   "controlled_ROI_run": {
     "run_id": "cctv-controlled-roi-20261101T115653Z",
-    "status": "PREPARED_NOT_YET_LAUNCHED",
+    "status": "RUNNING",
     "report": "reports/CONTROLLED_ROI_RUN_TH.md",
     "scope": "configs/CONTROLLED_ROI_SCOPE.json",
     "user_authorized": true,
@@ -154,6 +154,120 @@
     "pending_ROIs": 1125,
     "CPU_acceptance_cases": 12,
     "primary": null,
-    "GT_gate": "NECK_AND_REMAINING_OWNER_CONTOUR_QA_PENDING"
-  }
+    "GT_gate": "NECK_AND_REMAINING_OWNER_CONTOUR_QA_PENDING",
+    "launch_commit": "12ef1185e7def76d2a1091bf2dcc5d1e972fb5af",
+    "controller_pid": 1353092,
+    "launch_snapshot": "reports/CONTROLLED_ROI_LAUNCH.json",
+    "models_snapshot": [
+      {
+        "complete_frames": 90,
+        "complete_ROIs": 130,
+        "reused_ROIs": 0,
+        "new_ROIs": 130,
+        "model_ROI_API_calls": 131,
+        "GPU_readiness": "PASS_OUTPUT_CONTRACT_NOT_QUALITY",
+        "failed": 0,
+        "invalid": 0,
+        "model_id": "QANet_CIHP_HRNetW48_512x384",
+        "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+      },
+      {
+        "complete_frames": 90,
+        "complete_ROIs": 130,
+        "reused_ROIs": 0,
+        "new_ROIs": 130,
+        "model_ROI_API_calls": 131,
+        "GPU_readiness": "PASS_OUTPUT_CONTRACT_NOT_QUALITY",
+        "failed": 0,
+        "invalid": 0,
+        "model_id": "M2FP_R101_CIHP",
+        "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+      },
+      {
+        "complete_frames": 43,
+        "complete_ROIs": 74,
+        "reused_ROIs": 0,
+        "new_ROIs": 74,
+        "model_ROI_API_calls": 76,
+        "GPU_readiness": "PASS_OUTPUT_CONTRACT_NOT_QUALITY",
+        "failed": null,
+        "invalid": null,
+        "model_id": "D2FP_R101_CIHP",
+        "status": "ROI_INFERENCE"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "RPR_CIHP",
+        "status": "NOT_STARTED"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "CPI_R50_CIHP",
+        "status": "NOT_STARTED"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "CPI_ConvNeXtB_CIHP",
+        "status": "NOT_STARTED"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "Sapiens2_0.4b",
+        "status": "NOT_STARTED"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "Sapiens2_0.8b",
+        "status": "NOT_STARTED"
+      },
+      {
+        "complete_frames": null,
+        "complete_ROIs": null,
+        "reused_ROIs": null,
+        "new_ROIs": null,
+        "model_ROI_API_calls": null,
+        "GPU_readiness": null,
+        "failed": null,
+        "invalid": null,
+        "model_id": "Sapiens2_1b",
+        "status": "NOT_STARTED"
+      }
+    ]
+  },
+  "original_cohort_counts_are_historical": true
 }
