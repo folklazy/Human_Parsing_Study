@@ -1,0 +1,65 @@
+{
+  "scope": "Private image-detail viewer using existing saved CCTV predictions; public visualization source/docs/aggregate only",
+  "updated_utc": "2026-11-01T18:24:26.556688+00:00",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 9989,
+      "sha256": "a03f03cdb823454b1c64c7b8d3997a7b7f5b62e89f12672ffa161eb75f7e6f79"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 15151,
+      "sha256": "52471a41e53507b64135e94a303258565814dca776b7ab2f13f536d57ddef432"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 28606,
+      "sha256": "ecba6cc63f51f9bcaeeeaf7d1f1ba134c58c8b328612e3c37989805264d75416"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 2386,
+      "sha256": "7ae8c37d53fcb3468d2b25fa7155e844d7c504a6f79fd46d30f2606d2157a055"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "bytes": 24795,
+      "sha256": "88803a66bb1333d063b8d4c5a5078960f971c42907ed5cde6d613f9abc82cea6"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/MODEL_IMAGE_GALLERY.json",
+      "bytes": 2278,
+      "sha256": "1649f83c3c5f6d69111cf7ca888d89b6a06305cea332892893b036745b86f832"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/build_model_detail_gallery.py",
+      "bytes": 14387,
+      "sha256": "9f7c5a69926d19988b00ad2fd708567bf305fad96ff50bb7b09a516fa07a438d"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/visualization/model_details.html",
+      "bytes": 4895,
+      "sha256": "9baca49eec4d3eedf5c2ad3f9096b1238b455796ee8e77aab810f8a4792dae09"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/visualization/model_details.css",
+      "bytes": 1935,
+      "sha256": "6db3b21782b9be45e35dffa86da492d2c69a743ad75e9b903c7f682aff1928bd"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/visualization/model_details.js",
+      "bytes": 4638,
+      "sha256": "0ceec6e9ac0ce2bf77a7dd5525ad39545ba5524049250df499588bf9b57a4eb8"
+    }
+  ],
+  "canonical_working_copy": "CCTV_Human_Parsing_Benchmark",
+  "publication_checkout": "Human_Parsing_Study_Public",
+  "sync": "explicit source/document/metadata paths only; private outputs remain in canonical working copy",
+  "private_RGB_GT_masks_gallery_and_ZIP_excluded": true,
+  "new_model_calls": 0,
+  "rescoring": false,
+  "scientific_artifacts_unchanged": true,
+  "browser_interaction_tested": false,
+  "first_party_license_changed": false
+}

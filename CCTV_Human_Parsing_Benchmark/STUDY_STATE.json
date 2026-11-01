@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-01T17:48:08.405168+00:00",
+  "updated_utc": "2026-11-01T18:21:23.575402+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -50,5 +50,15 @@
     "record": "reports/MODEL_RECOMMENDATION.json",
     "deployment_accepted": false,
     "new_inference_authorized": false
+  },
+  "private_image_gallery": {
+    "viewer": "outputs/model-detail-gallery-20261102/index.html",
+    "bundle": "outputs/model-detail-gallery-20261102.zip",
+    "summary": "reports/MODEL_IMAGE_GALLERY.json",
+    "fixed_images": 6,
+    "detected_ROIs": 15,
+    "models": 9,
+    "model_calls": 0,
+    "public_images": false
   }
 }

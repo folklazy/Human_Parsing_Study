@@ -1,0 +1,55 @@
+{
+  "status": "PRIVATE_MODEL_DETAIL_GALLERY_COMPLETE",
+  "created_utc": "2026-11-01T18:21:23.575402+00:00",
+  "fixed_frames": 6,
+  "detected_ROIs": 15,
+  "models": 9,
+  "model_ROI_panels": 135,
+  "output_modes": [
+    "owned_used_for_scoring",
+    "raw_before_YOLO_clip_diagnostic"
+  ],
+  "palettes": [
+    "shared_four_targets",
+    "native_CIHP20_or_SAPIENS29"
+  ],
+  "viewer": "outputs/model-detail-gallery-20261102/index.html",
+  "per_model_pages": "outputs/model-detail-gallery-20261102/by_model/",
+  "private_bundle": "outputs/model-detail-gallery-20261102.zip",
+  "bundle_bytes": 15074609,
+  "bundle_sha256": "d5f0ae3cc1f35bfbc322e752419b7437ebe1cfd77c53c758dc675d7649f2790e",
+  "private_manifest_sha256": "469650b582c0aa011953f03e9687023fceb710f1d901fe2a44acd0c50939c659",
+  "source_fixed_gallery_sha256": "84be02cfd565ffbeb2b8300e8bd4e17db5098942f2b9949cf8f6814914114b25",
+  "Face_GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
+  "native_catalog_sizes": {
+    "CIHP20": 20,
+    "SAPIENS29": 29
+  },
+  "native_label_sources": {
+    "CIHP20": {
+      "path": "Human_Parsing_Benchmark/protocol/NATIVE_LABEL_MAPPING_DRAFT.csv",
+      "sha256": "8d72c9e8ac78e62d3e08e6b64b2b74d14858e9b34070a3c5f38e403ce6b894c0"
+    },
+    "SAPIENS29": {
+      "path": "third_party/human_parsing/sapiens2/sapiens/dense/src/datasets/seg/seg_utils.py",
+      "sha256": "6864218890e8aa15a8a6bc5d1ddc6658dd6a591a963936ab38abc18d49f3ba11"
+    }
+  },
+  "validation": {
+    "native_integer_PNG_roundtrips": 270,
+    "overlay_mask_dimensions_checked": 810,
+    "shared_RGB_GT_shapes": "PASS",
+    "relative_asset_links": "PASS",
+    "archive_CRC": "PASS",
+    "builder_Python_compile": "PASS",
+    "JavaScript_syntax_node_check": "PASS",
+    "visual_contact_figures_checked": 2,
+    "browser_interaction_tested": false
+  },
+  "model_calls": 0,
+  "rescoring": false,
+  "scientific_artifacts_unchanged": true,
+  "public_CCTV_assets": false,
+  "selection": "same6fixedframes/all15detectedROIs,no score selection; unmatched GT visible in scene overviews, not invented as predicted ROIs",
+  "interpretation": "GT is partial,uncolored not scene background;SapiensFacecandidate includesNeck;native palettes are family-specific;zoom enlarges existing pixels only"
+}

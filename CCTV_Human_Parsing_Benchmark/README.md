@@ -12,6 +12,10 @@
 การคำนวณจบ9/9 จาก90ภาพ/130ROIsต่อระบบ. ใช้ Hair61 / Face21 / Upper112 / Lower96 parts โดย Face14/35รายการกันออกเหมือนกันทุกโมเดล; Neck deliveryมี3รายการ. GTเป็นagent-assisted reference ไม่ใช่expertgold และส่วนต่างยังไม่ผ่านstatistical-significance study. คำแนะนำนี้สำหรับ checkpoint+controlled YOLO person-ROI configuration ไม่ใช่ production acceptance. ไม่มีการรันใหม่หรือเปลี่ยน config จากงานสรุปนี้.
 
 
+## ภาพรายละเอียดรายโมเดล (private)
+
+เปิด `outputs/model-detail-gallery-20261102/index.html` เพื่อเลือกดูทั้ง9โมเดลจาก6ภาพเดิม/15ROIs: RGBเทียบGTและprediction, ซูม,ปรับopacity และสลับnativeclasses/สี่เป้าหมายร่วม. ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกเปิดindex.htmlได้โดยไม่ตั้งserver. Images/GT/masks/ZIPไม่ขึ้นpublicGit; [สรุปartifactsและการตรวจ](reports/MODEL_IMAGE_GALLERY.json) มีcounts/hashesและข้อจำกัด. ใช้ผลเดิม ไม่มีinference/rescore.
+
 ## Previous proposal and historical results
 
 **สถานะในข้อเสนอเดิม: GT_OWNER_REVIEW_REQUIRED / PROPOSED_NOT_FROZEN.** อ่าน [ข้อเสนอ controlled person-ROI และ Face/Neck](CONTROLLED_ROI_PROTOCOL_TH.md) → [STATUS](STATUS.md) → [หลักฐาน design review](reports/CONTROLLED_ROI_DESIGN_REVIEW.json). ผู้ใช้มอบหมายให้กำหนดวิธีประเมินที่เหมาะสม; ยังไม่มี inference รอบใหม่หรือการอนุมัติ batch เพิ่มจากการออกแบบนี้.

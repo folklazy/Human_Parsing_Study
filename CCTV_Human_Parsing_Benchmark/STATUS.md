@@ -13,6 +13,10 @@ Updated 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok). **FOUR_TARGET_EVALUATIO
 
 [MODEL_RECOMMENDATION](reports/MODEL_RECOMMENDATION.json): แนะนำ **Sapiens2_1b + CONTROLLED_YOLO_PERSON_ROI** เป็นตัวหลักด้านคุณภาพรวม Macro4 65.430%; QANet64.533%เป็นทางเลือกด้านFace/Upper. เหตุผล รุ่น/parameter/checkpoint/preprocessing และข้อจำกัดอยู่ใน [รายงานหลัก](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md). สถานะคำแนะนำ `RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK`; deployment/inferenceใหม่ยังไม่ได้อนุมัติจากงานสรุปนี้. Numeric results/protocol/GTเดิมไม่เปลี่ยน.
 
+## Image detail delivery — 2026-11-02T01:21:23.575402+07:00
+
+Privateviewerพร้อม: `outputs/model-detail-gallery-20261102/index.html`, ZIPชื่อเดียวกัน,9โมเดล×15frozenROIsจาก6ภาพเดิม. [Artifactsummary](reports/MODEL_IMAGE_GALLERY.json). Owned/rawและcommon/nativepaletteแยกชัด; source masks/metrics/GT/protocolไม่เปลี่ยน. Modelcalls0; browserinteractionยังไม่ได้ทดสอบบนเครื่องนี้, ตรวจJSsyntax/assets/PNGroundtrip/geometry/ZIPและภาพcontactจริงแล้ว.
+
 ## Earlier status — historical snapshots below
 
 # CCTV parsing — current status

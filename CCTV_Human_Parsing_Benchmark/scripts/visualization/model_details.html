@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCTV parsing — ภาพรายละเอียดรายโมเดล</title><link rel="stylesheet" href="viewer.css"></head>
+<body><main>
+<header><p class="eyebrow">PRIVATE CCTV · SAVED PREDICTIONS · NO NEW INFERENCE</p>
+<h1>ภาพรายละเอียด Human Parsing</h1><p>ชุด 6 ภาพเดิม · 15 frozen YOLO person ROIs · 9 โมเดล</p></header>
+<section class="controls" aria-label="ตัวเลือกภาพ">
+<label>ภาพ<select id="image"></select></label><label>คน / ROI<select id="roi"></select></label>
+<label>โมเดล<select id="model"></select></label>
+<label>สีที่แสดง<select id="palette"><option value="common">4 เป้าหมายร่วม + OTHER</option><option value="native">Native classes ทั้งหมด</option></select></label>
+<label>ชนิด output<select id="ownership"><option value="owned">หลัง YOLO mask — ใช้คิดคะแนน</option><option value="raw">ก่อน YOLO clip — diagnostic</option></select></label>
+<label>ความทึบสี <span id="alphaValue"></span><input id="alpha" type="range" min="0" max="100" value="65"></label>
+<label>ซูม <span id="zoomValue"></span><input id="zoom" type="range" min="100" max="500" step="25" value="100"></label>
+<button id="previous">← ROI ก่อนหน้า</button><button id="next">ROI ถัดไป →</button>
+</section>
+<div class="info" id="info"></div><p class="notice" id="warning"></p>
+<section class="panels">
+<article><h2>RGB ต้นฉบับที่เข้า ROI</h2><div class="viewport"><div class="stack"><img id="rgb0" alt="RGB person crop"></div></div></article>
+<article><h2>GT ที่ใช้ประเมิน</h2><div class="viewport"><div class="stack"><img id="rgb1" alt="RGB under GT"><img class="mask" id="gt" alt="Evaluated GT overlay"></div></div></article>
+<article><h2 id="predictionTitle">Prediction</h2><div class="viewport"><div class="stack"><img id="rgb2" alt="RGB under prediction"><img class="mask" id="prediction" alt="Prediction overlay"></div></div></article>
+</section>
+<p class="hint">เลื่อนภาพในช่องใดช่องหนึ่งเพื่อดูตำแหน่งเดียวกันทั้งสามช่อง · การซูมขยาย pixels เดิม ไม่สร้างรายละเอียดภาพใหม่</p>
+<nav class="downloads"><a id="nativeDownload" download>ดาวน์โหลด native integer mask ของ output ที่เลือก</a><a id="caseContact">ภาพเทียบทั้ง 9 โมเดลของ ROI นี้</a><a id="sceneOverview">ภาพรวมฉาก / GT ที่อาจตรวจพลาด</a></nav>
+<section class="legendSection"><h2>คำอธิบายสี prediction</h2><div id="legend" class="legend"></div>
+<p>GT: ใช้สีของสี่ targets เดียวกัน · น้ำเงิน = known Neck · ส้ม = uncertainty · ชมพูเข้ม = known occluder · เทา = source part ที่ไม่อยู่ใน eligible task</p></section>
+<section class="notes"><h2>อ่านภาพอย่างไร</h2><ul>
+<li>โหมด “หลัง YOLO mask” คือ output ที่ผูกกับคะแนน; โหมดก่อน clip แสดง saved raw plane เพื่อดูผลของ ownership โดยไม่เปลี่ยนผลทดลอง</li>
+<li>Face candidate ของ Sapiens รวม Face_Neck และ mouth subparts; ภาพ prediction ไม่ถูกตัดคอด้วย GT</li>
+<li>GT เป็นบางคน/บางส่วน พื้นที่ GT ไม่มีสีไม่ได้หมายถึง background ทั้งฉาก; uncertainty และ eligibility เหมือนกันทุกโมเดล</li>
+<li>Native palette มี taxonomy ต่างกันระหว่าง CIHP20 กับ Sapiens29 ใช้โหมดสี่เป้าหมายร่วมสำหรับเทียบสี</li>
+<li>หน้า ROI นี้แสดงโอกาสที่ YOLO ตรวจพบ คนที่ GT ไม่จับคู่ไม่มี predicted ROI ให้เปิด; ดูภาพรวมและ missed counts ประกอบ</li>
+<li>ภาพและ masks นี้เป็น private artifacts ไม่อัปโหลดขึ้น PUBLIC GitHub</li>
+</ul></section>
+</main><script>window.GALLERY_DATA=__DATA_JSON__;</script><script src="viewer.js"></script></body></html>

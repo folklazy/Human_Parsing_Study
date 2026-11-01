@@ -131,6 +131,9 @@ Scientificbindingsตรึงด้วยfilehashesก่อนFaceCPUscoring; 
 
 Privatepathsที่เปิดได้ในworkspace:
 
+- **หน้าดูรายละเอียดรายโมเดล:** `CCTV_Human_Parsing_Benchmark/outputs/model-detail-gallery-20261102/index.html` — เลือกภาพ/ROI/โมเดล, ซูมและปรับ opacity, เทียบ RGB/GT/prediction, สลับ shared4-target/native20หรือ29 classes และ owned/raw output. Owned คือ mask ที่ใช้คิดคะแนน; raw ก่อน YOLO clip เป็น diagnostic. ทุกภาพใช้ saved masks เดิม ไม่มี inference หรือ rescoring.
+- **เปิดนอก server:** ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกและเปิด `index.html`; bundle รวม assets ไว้แล้ว ไม่ต้องตั้งเว็บหรือใช้ network. มี `by_model/<model_id>.html` สำหรับเปิดแต่ละโมเดลโดยตรง และภาพเทียบทั้งเก้าตัวต่อROI. หน้าROIมี15opportunitiesจาก6ภาพเดิม; คนที่GTไม่จับคู่ไม่มีpredictedROI ให้ดูภาพรวมฉากและmissedcountsประกอบ.
+
 - `CCTV_Human_Parsing_Benchmark/outputs/face-neck-comparison-gallery-20261101/index.html` — fixed6framesเดิม,RGB/GT/เก้าระบบ, paletteเดียวกัน; ไม่เลือกภาพตามคะแนน. Gallerycomposition/downsamplingใช้แสดงผลเท่านั้น ขณะที่scorerใช้per-personfullgrid. SapiensFacecandidateในภาพรวมNeckด้วย.
 - `outputs/face-neck-gt-reviewed-20261101/GT_ONLY_CONTACT/page_01.png` ถึง`page_06.png` — 21eligibleFaceGT overlaysที่ตรวจจริง (RGBเทียบFace/knownNeck/U/occluder). Directoryเก็บmaskdraft/GT-only reviewก่อนfinalfreeze; frozenbindingอยู่pathถัดไป.
 - `outputs/face-neck-gt-frozen-20261101/index.html` — GT auditindexทั้ง35dispositionsและ21eligibleoverlays; `FACE_NECK_GT_BINDING.json`และ21original-gridGTNPZsอยู่directoryเดียวกัน. ตรวจarraysเท่ากับชุดที่เปิดดูจริงก่อนfreeze.
