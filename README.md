@@ -1,6 +1,6 @@
 # Human Parsing Study
 
-**Current CCTV result: Hair/Upper/Lower diagnostics complete9/9; Face/Neck GT pending.** [รายงานผลและ GT review](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) / [ตาราง](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_PART_DIAGNOSTICS.csv). ControlledROI predictionsครบ90images/130ROIsต่อcheckpoint. CPU evaluationใช้savedmasksและGT-only subsetเดียวกัน; Face-domain/macro4ยังnull. ไม่มีoverallwinnerหรือGPUrerunเพื่อแก้GT. [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md).
+**Current CCTV result: four-target evaluation complete9/9 on reviewed GT domain.** [รายงานจบรอบ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) / [CSV](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md). Sapiens2 1B:Macro4 65.430%;QANet64.533%และสูงสุดFace-domain/Upper. Faceใช้21/35items,uncertain/excludedGTร่วมทุกระบบ,Neckdeliveryn3;ไม่ใช่expertgoldหรือdeploymentacceptance. No new model inference.
 
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 

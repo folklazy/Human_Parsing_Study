@@ -1,0 +1,112 @@
+{
+  "scope": "CCTV CPU four-target selected-part closure:21reviewedFace/14excluded/3knownNeck;no new inference",
+  "updated_utc": "2026-11-01T16:40:20.215564+00:00",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 8023,
+      "sha256": "f36bc6877b2c0eb82285cdc09b71b81fce82223b60072a0b3d6f24e8866e6548"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 13680,
+      "sha256": "a9c03a5930fd86ca021ea1bdb2164b3746c915ceb29bea5212f62d2611b24825"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 24713,
+      "sha256": "eb11b7c2082b3a9604103c7053e435c43d7b7af4788cf6ce787e1851d5456ee8"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 1755,
+      "sha256": "c6d765030036b0315d7ba8e3037aee20c03ed0dd80b3b1e169a1110806acbea3"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/requirements-cpu.txt",
+      "bytes": 206,
+      "sha256": "12631664a87ce9883043a22a7cea25821e4c9ffafc8505380937cf9431a42f03"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json",
+      "bytes": 3030,
+      "sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/face_neck_gt.py",
+      "bytes": 10735,
+      "sha256": "7eff504653c11e540738795819bfd711e2beefff7980b9a68a49a369700dae15"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/face_neck_evaluation.py",
+      "bytes": 14377,
+      "sha256": "70f4782b7c865c9878e68ef9a0c7d4a537a2f00dc5837b5bbd075d4a00fc7fef"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/face_neck_gallery.py",
+      "bytes": 6281,
+      "sha256": "03d65ba063e970b434b5f930e7ff25348c92f62b437c940d926e13054a8fe27a"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/tests/test_face_neck_evaluation.py",
+      "bytes": 7105,
+      "sha256": "0fc0e509d665df3c0f61e4263a58864a091c73f757f9f19ce16f9da1075f8e61"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/FACE_NECK_GT_SUMMARY.json",
+      "bytes": 1221,
+      "sha256": "a511f9900fcb4e59b613a6bfb591d15e8b045dd7eb4dcac596d6f49cc5e2926c"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/FACE_NECK_ACCEPTANCE.json",
+      "bytes": 5130,
+      "sha256": "234ba66772d7a00144d4e116116982f15f5af195c44bff0be5bcc1dec6c976b7"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
+      "bytes": 33329,
+      "sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_OBSERVED_LEADERS.json",
+      "bytes": 1330,
+      "sha256": "0e21ed993db36b10cadea516e652de81a96b7b71272d009d14dcfce519ec12c3"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "bytes": 17492,
+      "sha256": "711aaf75d3dd5dc77c847badfac350a9f8bf696dfb91ae4d1de80f253c7b6a9c"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv",
+      "bytes": 2240,
+      "sha256": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_PER_TARGET.csv",
+      "bytes": 15797,
+      "sha256": "19066d26c165263532f40e36187558a74c9f1b0f3a3611bc7f8c7ae4e08a8e25"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FACE_VIEWS.csv",
+      "bytes": 9235,
+      "sha256": "516a40ee2ed829414b0d1cadf50ee1f7a7730d9fe8776e3aef884d4ec66f9548"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14152,
+      "sha256": "6bc3482eaaae24b4472d22e63af979d640e18ae0fe0e56e5e3f1da8a3e866e91"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 15145,
+      "sha256": "ea095bb40d58eef9b40a2153bbff86cb8822772d38137e39bd4fc0fe0a2554af"
+    }
+  ],
+  "canonical_working_copy": "CCTV_Human_Parsing_Benchmark",
+  "publication_checkout": "Human_Parsing_Study_Public",
+  "sync": "explicit approved source/config/aggregate paths only; private GT/images/predictions excluded",
+  "new_model_calls": 0,
+  "public_CCTV_assets_or_person_identifiers": false,
+  "first_party_license_changed": false
+}

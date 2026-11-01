@@ -1,0 +1,39 @@
+{
+  "status": "GT_REVIEW_RESOLVED_FOR_DECLARED_PARTIAL_DOMAIN",
+  "source_Face_parts": 35,
+  "Face_domain_eligible_parts": 21,
+  "excluded_Face_parts": 14,
+  "disposition_counts": {
+    "ELIGIBLE": 21,
+    "INELIGIBLE_RGB_AMBIGUITY": 6,
+    "INELIGIBLE_SOURCE_CONTOUR": 8
+  },
+  "Neck_status_counts": {
+    "REGION_UNCERTAIN": 18,
+    "NOT_EVALUABLE": 14,
+    "VISIBLE_ANNOTATED": 3
+  },
+  "FaceNeck_delivery_parts": 3,
+  "known_Neck_positive_parts": 3,
+  "known_Neck_pixels": 10190,
+  "retained_Face_pixels": 36743,
+  "eligible_source_Face_pixels": 45453,
+  "retained_source_Face_pixel_fraction": 0.8083734846984797,
+  "Face_parts_by_condition": {
+    "day": 9,
+    "night": 12
+  },
+  "Neck_delivery_parts_by_condition": {
+    "day": 1,
+    "night": 2
+  },
+  "detector_unmatched_Face_parts": 2,
+  "Face_GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
+  "manual_annotation_sha256": "02791720faf5e30882079adf7029befed0feb84cb3c6a5c38700b57759bec3b0",
+  "expert_certified": false,
+  "post_hoc": true,
+  "source_dataset_modified": false,
+  "known_occluders_are_valid_negative": true,
+  "GT_only_annotations_frozen_before_new_Face_scores": true,
+  "unknown_Neck_is_not_absent": true
+}

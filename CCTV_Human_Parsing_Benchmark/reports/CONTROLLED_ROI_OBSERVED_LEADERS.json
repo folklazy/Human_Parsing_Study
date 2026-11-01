@@ -1,0 +1,40 @@
+{
+  "scope": "Observed mean selected-part IoU within reviewed CCTV domain; not uncertainty-tested or deployment acceptance",
+  "leaders": {
+    "Hair": {
+      "model": "Sapiens2_1b",
+      "score": 0.6715189191194156,
+      "runner_up": "Sapiens2_0.4b",
+      "runner_up_score": 0.657456740219953,
+      "difference_percentage_points": 1.4062178899462596
+    },
+    "Face-domain": {
+      "model": "QANet_CIHP_HRNetW48_512x384",
+      "score": 0.7143419237379279,
+      "runner_up": "Sapiens2_1b",
+      "runner_up_score": 0.6960683622784805,
+      "difference_percentage_points": 1.8273561459447474
+    },
+    "Upper": {
+      "model": "QANet_CIHP_HRNetW48_512x384",
+      "score": 0.6874610669979766,
+      "runner_up": "Sapiens2_1b",
+      "runner_up_score": 0.6604441120161156,
+      "difference_percentage_points": 2.7016954981860963
+    },
+    "Lower": {
+      "model": "Sapiens2_1b",
+      "score": 0.5891871589881612,
+      "runner_up": "QANet_CIHP_HRNetW48_512x384",
+      "runner_up_score": 0.571338139034235,
+      "difference_percentage_points": 1.7849019953926182
+    },
+    "Macro4": {
+      "model": "Sapiens2_1b",
+      "score": 0.6543046381005433,
+      "runner_up": "QANet_CIHP_HRNetW48_512x384",
+      "runner_up_score": 0.6453279495171149,
+      "difference_percentage_points": 0.8976688583428372
+    }
+  }
+}

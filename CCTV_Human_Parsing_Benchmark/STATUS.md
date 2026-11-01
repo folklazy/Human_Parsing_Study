@@ -1,5 +1,18 @@
 # CCTV parsing — current status
 
+Updated 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok). **FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT — 9/9**.
+
+- [รายงานจบรอบสี่targets](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) / [CSVหลัก](metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [canonicalindex](reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json).
+- Savedpredictions90images/130ROIsต่อcheckpointครบอยู่เดิม; CPUFace21itemsครบทุกระบบแล้ว รวมHair61/Upper112/Lower96จากacceptedstatisticsเดิม. Macro4พร้อมทั้ง9 ไม่มีinferenceใหม่.
+- ObservedMacro4leader:Sapiens2 1B65.430%;QANet64.533%. Face-domainและUpperสูงสุดQANet;Hair/LowerสูงสุดSapiens2 1B. ไม่ใช่statisticalsignificance/deploymentacceptance.
+- FaceGTreview35recordsปิดด้วย21eligible/14ineligibleที่ใช้ร่วมทุกโมเดล. UnknownNeck18มีGT-onlyuncertainty ไม่สมมติabsent; delivery/knownNeckviewมี3items. GTไม่ใช่independentexpertgold. [Coverage](reports/FACE_NECK_GT_SUMMARY.json).
+- [CPUและactual-packetacceptance](reports/FACE_NECK_ACCEPTANCE.json). Privatefixed6/ninemodelgallery:`outputs/face-neck-comparison-gallery-20261101/index.html`. ไม่มีCCTVassetsขึ้นpublicGit.
+- Next:พิจารณารายงาน/ข้อเสนอใช้Sapiens2 1BหรือQANetตามrequirements. ไม่มีFace-scorejobหรือGPUqueueค้าง; independentGT/deploymentvalidationเป็นงานเพิ่มหากต้องการคำอ้างที่เข้มกว่า ไม่เริ่มอัตโนมัติ.
+
+## Earlier status — historical snapshots below
+
+# CCTV parsing — current status
+
 Updated 2026-11-01T21:34:07.412255+07:00 (Asia/Bangkok). **NON_FACE_DIAGNOSTICS_COMPLETE_9_OF_9_FACE_GT_PENDING**.
 
 - Predictions ครบ9/9 checkpoints ×90images/130ROIs; controllers/workersหยุดแล้ว. [Prediction collection](reports/CONTROLLED_ROI_RUN_TH.md).

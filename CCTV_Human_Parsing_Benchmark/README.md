@@ -1,6 +1,6 @@
 # CCTV Human Parsing Benchmark
 
-**Current status: non-Face diagnostics complete9/9; Face/Neck GT pending.** [รายงานปัจจุบัน](reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) / [STATUS](STATUS.md) / [ตาราง](metrics/CONTROLLED_ROI_PART_DIAGNOSTICS.csv). ROI predictionsครบ90images/130ROIsต่อcheckpointแล้ว; CPU Hair/Upper/Lowerคำนวณจากsavedmasksครบเก้าระบบ. Face-domainและmacro4ยังnull. ไม่มีผู้ชนะรวมจนGT Face/Neckและintegrationครบ; ไม่ต้องinferenceใหม่เพื่อแก้GT.
+**Current status: four-target evaluation complete9/9 on reviewed GT domain.** [รายงานจบรอบ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) / [CSVหลัก](metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [STATUS](STATUS.md). Sapiens2 1Bได้Macro4สูงสุด65.430%;QANet64.533%และสูงสุดFace-domain/Upper. ใช้Face21จาก35items,Hair61/Upper112/Lower96;14Faceambiguitiesกันออกร่วมทุกโมเดล,Neckdeliveryn3. GTเป็นagent-assistedreference ไม่ใช่expertgoldหรือdeploymentacceptance. CPUscoringจบ ไม่มีinferenceใหม่หรือคิวรันต่อ.
 
 
 ## Previous proposal and historical results

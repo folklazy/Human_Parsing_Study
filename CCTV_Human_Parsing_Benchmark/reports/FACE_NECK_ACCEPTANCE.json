@@ -1,0 +1,123 @@
+{
+  "status": "CPU_ACCEPTANCE_PASS_BEFORE_FACE_SCORING",
+  "tests": 9,
+  "failures": 0,
+  "model_calls": 0,
+  "command": ".venvs/sapiens2-pilot/bin/python -m unittest discover -s CCTV_Human_Parsing_Benchmark/tests -p test_face_neck_evaluation.py -v",
+  "environment": ".venvs/sapiens2-pilot",
+  "versions": {
+    "numpy": "2.5.4",
+    "Pillow": "12.3.0",
+    "scipy": "1.18.1",
+    "opencv-python": "5.0.0.93"
+  },
+  "scorer_sha256": "70f4782b7c865c9878e68ef9a0c7d4a537a2f00dc5837b5bbd075d4a00fc7fef",
+  "GT_materializer_sha256": "7eff504653c11e540738795819bfd711e2beefff7980b9a68a49a369700dae15",
+  "tests_sha256": "0fc0e509d665df3c0f61e4263a58864a091c73f757f9f19ce16f9da1075f8e61",
+  "GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
+  "manual_annotations_sha256": "02791720faf5e30882079adf7029befed0feb84cb3c6a5c38700b57759bec3b0",
+  "protocol_sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+  "known_GT_overlay_bug": "Foreground plant included in draft Neck; corrected from original RGB to known-negative occluder core with uncertain edge bands before new Face scores; draft retained",
+  "GT_only_full_references_viewed": 35,
+  "GT_only_overlay_contact_pages_viewed": 6,
+  "manual_polygon_proper_crossings": 0,
+  "independent_expert_GT_certification": false,
+  "actual_packet_to_scorer_to_report": "PASS",
+  "actual_source_frame_packets_read": 171,
+  "actual_Face_tasks_scored": 189,
+  "FaceNeck_delivery_tasks_scored": 27,
+  "per_model_checks": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "1c013bdc4e383fc20de85804ad082879e830583213e43ddc6e73754971e95d91"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "f2c14938732cb8d14f509f76e4ad3d017e971112e9ed5618bb18ddfbb2d0c962"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "9d612e44c096d56df9637c54d6888f4dbd44c079cf73c843a55549127fe9c741"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "26a0113fbbed7a064c100d9758671860437453d54e277c121c269604e821a189"
+    },
+    {
+      "model_id": "CPI_R50_CIHP",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "85893dcd5ba1f2f9d667ff0906d8e26337062c1c6ba658d9dca3e4d024965d53"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "54011dc94b2d403c4b2860109de3e763c527202d6c85c0869f506223f655ac5d"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "68210138c7e9c20efa83082ebac2df54fda1e453428bc934fa52aee282fbdbc2"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "ec193ef5b766971fd1efbb643a2e5e92f531add1cb345c978dcd264aa3c1cadb"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "Face_image_records": 19,
+      "Face_parts": 21,
+      "non_Face_statistics_reused_unchanged": true,
+      "arithmetic_and_membership": "PASS",
+      "metrics_sha256": "db921e781553f62ad8ef140da91008fd38553e1a8f2492329f1cd31cff187636"
+    }
+  ],
+  "public_arithmetic_checks": "PASS; exact membership, per-frame record hashes, counts/support/IoU/means and equal4-target aggregation",
+  "non_Face_rescoring": false,
+  "new_model_calls": 0,
+  "frozen_GT_arrays_equal_visually_reviewed_arrays": true,
+  "protected_inference_source_files_checked": 14,
+  "protected_inference_source_mismatches": 0,
+  "gallery_fixed_frames": 6,
+  "gallery_model_panels_each": 9,
+  "gallery_visual_examples_checked": 2,
+  "private_gallery_manifest_sha256": "84be02cfd565ffbeb2b8300e8bd4e17db5098942f2b9949cf8f6814914114b25",
+  "clean_staged_public_checkout_cpu": {
+    "status": "PASS",
+    "tests": 9,
+    "scope": "new synthetic Face/Neck CPU cases; no private assets/model loading/inference"
+  },
+  "publication_numeric_tolerance": {
+    "absolute_tolerance": 1e-14,
+    "purpose": "floating-point summation order only; canonical CSV values equal stored JSON values exactly",
+    "largest_observed_macro_recompute_delta": 5.551115123125783e-17
+  }
+}
