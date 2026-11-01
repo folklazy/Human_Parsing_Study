@@ -1,0 +1,340 @@
+{
+  "status": "INPUT_PREPROCESSING_PARITY_PASS_ON_BOUNDED_CPU_CASES",
+  "created_utc": "2026-11-01T02:09:34.307529+00:00",
+  "model_forward_calls": 0,
+  "model_or_checkpoint_loaded": false,
+  "CUDA_initialized": false,
+  "source_run": "cctv-partial-20261031T1800Z",
+  "source_config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "wrapper_sha256": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+  "audit_script_sha256": "57134d6ca6c3ca07923078af4cb2d976b698bee9bacbceb997894ecdb964829f",
+  "reference_revision": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+  "official_demo": "sapiens/dense/tools/vis/vis_seg.py",
+  "cases": [
+    {
+      "model_id": "Sapiens2_0.4b",
+      "case": "asymmetric_quadrants",
+      "input_wh": [
+        12,
+        8
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "ea880b3534dd02106a880b6aa3de43e0ef762d8539bd829d3ec183ced4acd89b"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "case": "asymmetric_gradient",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1007792949676514,
+      "tensor_max": 2.587712526321411,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "506a1e0445401c0b5452bd8e025d20f4dc045bda4c7da078a5932a37512c3f67"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "case": "fixed_day_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "a3981d84828977297c12a55178fd2790c7bbf2b247ad0631772b40623e085120"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "case": "fixed_night_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "f61bdc92a9ca30c7c9ab288459f2f2472195eaab0917f3536b395d88585fcc07"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "case": "asymmetric_quadrants",
+      "input_wh": [
+        12,
+        8
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "ea880b3534dd02106a880b6aa3de43e0ef762d8539bd829d3ec183ced4acd89b"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "case": "asymmetric_gradient",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1007792949676514,
+      "tensor_max": 2.587712526321411,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "506a1e0445401c0b5452bd8e025d20f4dc045bda4c7da078a5932a37512c3f67"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "case": "fixed_day_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "a3981d84828977297c12a55178fd2790c7bbf2b247ad0631772b40623e085120"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "case": "fixed_night_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "f61bdc92a9ca30c7c9ab288459f2f2472195eaab0917f3536b395d88585fcc07"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "case": "asymmetric_quadrants",
+      "input_wh": [
+        12,
+        8
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "ea880b3534dd02106a880b6aa3de43e0ef762d8539bd829d3ec183ced4acd89b"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "case": "asymmetric_gradient",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1007792949676514,
+      "tensor_max": 2.587712526321411,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "506a1e0445401c0b5452bd8e025d20f4dc045bda4c7da078a5932a37512c3f67"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "case": "fixed_day_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "a3981d84828977297c12a55178fd2790c7bbf2b247ad0631772b40623e085120"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "case": "fixed_night_CCTV",
+      "input_wh": [
+        1920,
+        1080
+      ],
+      "tensor_shape": [
+        1,
+        3,
+        1024,
+        768
+      ],
+      "tensor_dtype": "torch.float32",
+      "tensor_min": -2.1179039478302,
+      "tensor_max": 2.640000104904175,
+      "manual_RGB_normalization_max_abs_error": 0.0,
+      "official_demo_tensor_max_abs_error": 0.0,
+      "PIL_RGB_equals_OpenCV_BGR_reversed": true,
+      "input_array_unmodified": true,
+      "inverse_normalized_preview_equals_resized_RGB": true,
+      "tensor_sha256": "f61bdc92a9ca30c7c9ab288459f2f2472195eaab0917f3536b395d88585fcc07"
+    }
+  ],
+  "asymmetric_logits_original_grid_test": "PASS_WITH_SYNTHETIC_LOGITS_ONLY",
+  "limitations": [
+    "CPU reconstruction from bound source/input/environment; historical GPU input tensors were not saved",
+    "No learned model forward, checkpoint-output parity or alternative route tested",
+    "Full-frame stretch and small-person resolution are retained scientific configuration choices, not a proven channel bug",
+    "Scores cannot establish that the implementation is bug-free"
+  ],
+  "reference_file_sha256": {
+    "sapiens/dense/tools/vis/vis_seg.py": "ec4829a1737998c90d8dfb337c49801da6ee2e595d1b18ae4adfe65af3b51bf9",
+    "sapiens/dense/src/models/init_model.py": "5cd24cbea03c2f7381b853067fc8d9ed82ff6218a87a0ff8da711644a4d77331",
+    "sapiens/dense/src/models/core/seg_estimator.py": "fe36b9b810fc26851fe22fd1c54eca49ea3bba58263842e3789b3b8a94a99b40",
+    "sapiens/dense/src/datasets/transforms/seg_transforms.py": "5a3bbff03d31574ec186dcc37a2d456c90a8a321e935ddaf7eb9cf02489d979b",
+    "sapiens/engine/datasets/data_preprocessors/image_preprocessor.py": "0fecebc7ac0cbd9d116251b42d07f59840ce070419726535b3f2d6836999dc4d",
+    "sapiens/engine/models/base_model.py": "76520693e7c67402d5e87246101591a197b72147589a8b0da1481d1d9efbad49"
+  },
+  "checkpoint_and_config_bindings": [
+    {
+      "model_id": "Sapiens2_0.4b",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "weights_reloaded_in_this_audit": false
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "weights_reloaded_in_this_audit": false
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "weights_reloaded_in_this_audit": false
+    }
+  ],
+  "CPU_runtime": {
+    "torch": "2.14.0+cu130",
+    "OpenCV": "5.0.0"
+  },
+  "preview_images_inspected": 2,
+  "preview_images_public": false,
+  "existing_scores_modified": false,
+  "private_input_manifest_sha256": "a7558156fa002fb2b11e7260b42271dee3c75683d9798b9abc8892c2d7f8673b"
+}

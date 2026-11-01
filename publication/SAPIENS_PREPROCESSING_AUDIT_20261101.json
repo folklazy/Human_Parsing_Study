@@ -1,0 +1,48 @@
+{
+  "scope": "Bounded CPU preprocessing parity audit only; no parser forwards or result changes",
+  "updated_utc": "2026-11-01T02:13:44.194949+00:00",
+  "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 5530,
+      "sha256": "1143941364bf08a12aa9707dd3b3d779fb40d0e0b8027cdd5564d563a1e92167"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 1655,
+      "sha256": "cb8d7f551058c868297b078c3d8d99b2d72e9857b575924c7d0a6496e76d8c4b"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 4348,
+      "sha256": "4e2aefa5f09d37cde977be067b9be371c19945a72cf42c694d3f242d78a28ecb"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 6318,
+      "sha256": "f65d4a1468f2fe7423f61958e004e2ac895ed394e4ede3e413d20ec4277b98f4"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+      "bytes": 19133,
+      "sha256": "4bd60971abd6f03dace570bc0ffdfa6ffcd7836ab031454bd503fb27fd2b4600"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_PREPROCESSING_AUDIT_TH.md",
+      "bytes": 12735,
+      "sha256": "b353e300f41e7e2610cc77e012eaf44080204b1528659fe5028a2e98867c3e26"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_PREPROCESSING_AUDIT_EVIDENCE.json",
+      "bytes": 11903,
+      "sha256": "cfd1a9643ef432a2286c34f7d9bbbc3a5461dd23579ae8b38a6deb21c7d9c677"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/scripts/audit_sapiens_preprocessing.py",
+      "bytes": 7815,
+      "sha256": "57134d6ca6c3ca07923078af4cb2d976b698bee9bacbceb997894ecdb964829f"
+    }
+  ],
+  "CCTV_assets_or_identifiers_published": false
+}

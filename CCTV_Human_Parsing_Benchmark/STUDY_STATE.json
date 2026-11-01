@@ -5,7 +5,7 @@
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-11-01T01:50:54.244026+00:00",
+  "updated_utc": "2026-11-01T02:14:13.866613+00:00",
   "full_benchmark_ready": false,
   "reason": "Selected people/parts only; unknown negatives; no Dress rule or full-person silhouettes",
   "no_overall_deployment_winner": true,
@@ -84,5 +84,15 @@
     "full_scene_or_deployment_acceptance": false
   },
   "current_evaluation": "selected_part_evaluation",
-  "current_result_report": "reports/CCTV_SELECTED_PART_RESULTS_TH.md"
+  "current_result_report": "reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+  "preprocessing_review": {
+    "status": "INPUT_PREPROCESSING_PARITY_PASS_ON_BOUNDED_CPU_CASES",
+    "cases": 12,
+    "model_forward_calls": 0,
+    "report": "reports/SAPIENS2_PREPROCESSING_AUDIT_TH.md",
+    "evidence": "reports/SAPIENS2_PREPROCESSING_AUDIT_EVIDENCE.json",
+    "existing_scores_unchanged": true,
+    "causal_performance_explanation": "NOT_ESTABLISHED",
+    "reviewed_utc": "2026-11-01T02:14:13.866613+00:00"
+  }
 }

@@ -115,3 +115,7 @@ Private comparison gallery: `CCTV_Human_Parsing_Benchmark/outputs/selected-part-
 ขั้นถัดไปสำหรับผู้ใช้: ใช้QANet configurationเป็นข้อเสนอหลักจากชุดนี้และส่งรายงาน/ตารางให้ตรวจ; หากต้องยกระดับคำอ้างเป็นfull-sceneหรือproduction ให้เริ่มannotationQA/negative-scopeและindependentconfirmationเป็นงานแยก. ไม่รันโมเดลหรือการทดลองเพิ่มโดยอัตโนมัติ.
 
 แหล่งสูตร/เครื่องมือ: [scikit-learn Jaccard](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html), [SciPy assignment](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html). ไม่ใช้แหล่งเหล่านี้เป็นการรับรองGTหรือcustomprotocol.
+
+## Sapiens2 input audit — ข้อจำกัดเพิ่มเติม
+
+[ตรวจ preprocessing](SAPIENS2_PREPROCESSING_AUDIT_TH.md): CPU12casesตรงofficialinputทุกค่า; ยังไม่พบchannel/normalizationbug. Full-frame stretchเปลี่ยนสัดส่วนคนอย่างมากและต่างจากROIroute จึงยังไม่อ้างสาเหตุarchitectureหรือความด้อยของSapiensทุกรูปแบบ. ไม่มีlearnedforwardใหม่หรือคะแนนเปลี่ยน.
