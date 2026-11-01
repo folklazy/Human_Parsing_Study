@@ -68,3 +68,15 @@ Snapshotตารางขณะบันทึก (ไม่ใช่live):
 |Sapiens2_1b|0|0|NOT_STARTED|
 
 ดูviewer/privateJSONสำหรับสถานะหลังtimestampนี้;publicGitและMarkdownเป็นdatedsnapshots. HeadlineยังnullเพราะGTgate ไม่ใช่ศูนย์หรือผลคุณภาพของโมเดล.
+
+## Controlled engineering continuation — 2026-11-01T19:14:01.121882+07:00
+
+Parentเก็บacceptedRP-R-CNN1ROI/CPI-R5028ROIs/CPI-ConvNeXt-B27ROIsครบ;ไม่ทิ้งหรือinferenceซ้ำ. RP-R-CNNadapterเก่าขอfieldparsingก่อนตรวจempty-native-result จึงKeyError;ยังต้องตรวจactualemptybranchในrevisionใหม่ ไม่อ้างว่าเป็นOOM. CPIสองตัวหยุด`PRE_FORWARD_HEADROOM_GUARD`ก่อนforward ไม่ใช่CUDA-OOMtraceback. Lastobservedpeakreserved/allocatedต่างกัน จึงแก้accountingให้รวมownreusablepoolแทนดูเฉพาะdevicefree. ไม่เปลี่ยนallocator/GPUconfiguration ไม่ลดheadroom1GiB และไม่ได้รับประกันcontiguousallocationหรือภาพต่อไปไม่OOM.
+
+Newsegment`cctv-roi-continuation-20261101T121138Z`เชื่อมparentและรันเฉพาะpendingRP-R-CNN129/CPI-R50102/CPI-ConvNeXt-B103 รวม334ROIs+TRAINwarmup3. Parentaccepted56ROIsตรวจpacket/metadata/COMMIThashes/checkpoint/input/config/geometryแล้วreuse. Sameweights/FP32/nativepreprocessing/resolution/thresholds/YOLOownership/scoringproposal;newsourceแยก ไม่แก้parentfrozencode/configกลางrun. Genuine model/OOM retriesยัง0. จำกัดengineeringretestหนึ่งcontinuationattemptต่อสามระบบนี้ ไม่มีวนretry.
+
+APIbudgetเปิดเผยปรับจาก1134เป็น**1138สูงสุด**:1125unique-new-ROIobservations+12processTRAINwarmups+1retainedRPRfailedlearnedcall. เพิ่ม4จากwarmupสามprocessใหม่และfailedRPRattempt;ไม่ใช่เพิ่มโมเดล/populationหรือลบfailure. Per-checkpointtime24hและstream80GiBคิดรวมparent+continuation;queuewaitแยก. CPUสามcasesใหม่ผ่าน:validemptyไม่ขอfield,nonemptymissingfieldยังfailure,owncachedmemoryaccounting. เป็นtargetedsoftwarefixacceptance ไม่ใช่qualitytuning.
+
+Continuationจะรอparentคิวเก้าระบบจบก่อน จึงไม่ชนGPUworkers;parentinterruptionหรือqueueเกิน24hต้องหยุด/reconcile. หลังจบสร้าง`ASSEMBLED_PREDICTION_INDEX.json`ชี้packetrootของทั้งเก้าระบบ โดยfinalframepacketsของสามระบบที่continueประกอบจากparent+newROIs. ภาพบางส่วนอาจกลับมาแสดงframecount0ขณะกำลังassemblesegmentใหม่ แต่ROIcountรวมparentreuseแล้ว ไม่ใช่สูญเสียผล/inferenceซ้ำ. [Sanitized continuation record](CONTROLLED_ROI_CONTINUATION.json).
+
+HeadlineยังnullจนGTNeck/remainingowner/contourQAและscorerclosureผ่าน. Historyfailuresคงเดิมแม้assembledacceptedmembershipครบในภายหลัง. Timingยังเป็นsharedGPUdiagnostics ไม่ใช้ranking.

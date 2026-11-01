@@ -16,6 +16,10 @@ Private`outputs/cctv-controlled-roi-20261101T115653Z/`เก็บcontroller/wor
 
 Launch PID1353092/SID1353092,PPID1;sourcecommit`12ef1185e7def76d2a1091bf2dcc5d1e972fb5af`. [Launch snapshot](reports/CONTROLLED_ROI_LAUNCH.json). ข้อมูลนี้เป็นsnapshot;viewerอ่านliveprivateJSONและ`BATCH_COMPLETION.json`บอกคิวจบ.
 
+## Controlled continuation
+
+Segment`cctv-roi-continuation-20261101T121138Z`เตรียมแก้เฉพาะRPRempty-outputhandlingและCPIdevicefree-versus-ownpoolaccounting. ReuseRP1/R5028/Conv27;pending129/102/103ROIs. [รายละเอียด/ขอบเขต](reports/CONTROLLED_ROI_CONTINUATION.json). ไม่แก้parentfrozen source/config ไม่รันcheckpointที่ครบซ้ำ. Extraengineeringbudgetสูงสุด4APIcallsประกาศในรายงาน;genuineOOM/modelretries0;scoregateเดิม. Viewerแสดงcontinuationและassembledindexด้วย.
+
 ## Earlier design and completed evidence — historical snapshots
 
 Updated 2026-11-01T18:27:25.122054+07:00 (Asia/Bangkok).

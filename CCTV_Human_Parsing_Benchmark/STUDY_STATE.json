@@ -267,7 +267,16 @@
         "model_id": "Sapiens2_1b",
         "status": "NOT_STARTED"
       }
-    ]
+    ],
+    "continuation": {
+      "run_id": "cctv-roi-continuation-20261101T121138Z",
+      "status": "PREPARED",
+      "report": "reports/CONTROLLED_ROI_CONTINUATION.json",
+      "pending_ROIs": 334,
+      "parent_reused_ROIs": 56,
+      "additional_engineering_call_cap": 4,
+      "primary": null
+    }
   },
   "original_cohort_counts_are_historical": true
 }
