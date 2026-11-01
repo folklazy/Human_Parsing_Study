@@ -1,0 +1,85 @@
+{
+  "status": "V1_END_TO_END_VERIFIED_ON_T4",
+  "verified_utc": "2026-11-01T19:23:46.057008+00:00",
+  "verified_bangkok": "2026-11-02T02:23:46.057008+07:00",
+  "frontend": "React/TypeScript/Vite; actual Chromium tested",
+  "backend": "FastAPI",
+  "database": "PostgreSQL15 app-specific Docker volume",
+  "queue": "separate durable PostgreSQL worker with lease reconciliation",
+  "configured_parser": "Sapiens2_1b",
+  "route": "CONTROLLED_YOLO_PERSON_ROI",
+  "color": "T4_MLP_62_64_32_12_v1 with category agreement; separate observed LAB/HSV palette",
+  "hardware_actual": "Tesla T4",
+  "new_inference": {
+    "initial_files": 4,
+    "initial_frames": 6,
+    "initial_person_ROIs": 10,
+    "final_source_files": 2,
+    "final_source_frames": 2,
+    "final_source_person_ROIs": 4,
+    "operational_retry_blank_frames": 1,
+    "saved_prediction_reuse": false,
+    "UI_blank_frames": 1
+  },
+  "checks": {
+    "CPU_security_media_lease": "8 PASS",
+    "frontend_build": "PASS",
+    "Chromium_login_preview_result_selection_search_refresh": "PASS",
+    "Chromium_video_frame_seek": "PASS",
+    "AND_person_search_links": 3,
+    "no_person": "SUCCEEDED with 0 people",
+    "occluded_regions": "explicit unknowns; not forced black",
+    "video_actual_PTS_seconds": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "invalid_file": 422,
+    "unsupported_extension": 415,
+    "anonymous_file": 401,
+    "all_actual_person_geometry_crop_readbacks": 14,
+    "selected_execution_source_binding": "PASS",
+    "resident_detector_parser_reuse": true,
+    "API_worker_PostgreSQL_restart_preserves_person_records": 10,
+    "queued_cancel_without_model_call": true,
+    "real_missing_file_failure_and_manual_retry": {
+      "attempts": 2,
+      "current_frames": 1,
+      "old_failure_retained": true
+    },
+    "delete_database_and_assets": true,
+    "authenticated_video_byte_range_206": true,
+    "actual_browser_upload_pipeline": "PASS",
+    "frontend_corrupt_preview_rejected": "PASS"
+  },
+  "evidence_hashes": {
+    "RESULTS.json": "e5d3fd635bef3eae6d4e560ee50d7f556812fa8a0cf771e7bff7238fb201bf21",
+    "OPERATIONS.json": "1b1a558f70971bf5e1a3b9dd6eb1b7f28c3c15d0aa7de107cbaddbcdac3a56a7",
+    "FINAL_SOURCE.json": "2d7170c6d6a4a7f1595e91007304f37c14dca0ac786830e5d4f355eff93cc14e",
+    "BROWSER_UPLOAD.json": "d0526dd17461811ae4f4a1bf5b881e59c592c408d6b4bf449b88c4276050b44f"
+  },
+  "execution_source_hashes": {
+    "scripts/inference_host.py": "b6363c0992f76c1b9ce83beed083bb1f9d4321b3702a601c8698b2c049c2e1ce",
+    "scripts/color_contract.py": "91c9ca7ff7a2b30bdc1e75130943de29ad13d5ca5e07d2c5f8aaf23b89e1d074",
+    "configs/MODEL_BINDINGS.json": "cbf69525c80b237fbbadb1b647853f5ed05a700a8ae06e63e66788029899a70e",
+    "backend/app/worker.py": "0b1df601980feecb63f2c9e70b654c86f4f4bd111769d05212ba6147a875ed9e",
+    "backend/app/media.py": "01919e23a1ad2aa8e9484c2336128dc48c723c5b649a14c933884149c5253516"
+  },
+  "release": {
+    "assets_private": true,
+    "first_party_license_unchanged": true,
+    "model_weights_not_published": true,
+    "scientific_benchmark_results_unchanged": true,
+    "public_hosting_created": false,
+    "authentication_required": true
+  },
+  "limitations": [
+    "bounded functional QA, not deployment accuracy certification",
+    "fitted color CCIHP12 labels differ from familiar-name palette",
+    "Sapiens generic garment category ambiguity and Face_Neck retained",
+    "no tracking/ReID/facial identity",
+    "no clean latency/FPS/VRAM ranking",
+    "full CPU/Sapiens path not tested",
+    "Sapiens usage restrictions remain applicable"
+  ]
+}

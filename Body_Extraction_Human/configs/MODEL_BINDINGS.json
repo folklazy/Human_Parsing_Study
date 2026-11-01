@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "origin": "Existing accepted model registry; extracted model identities only, no image memberships",
+  "origin_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "YOLO": {
+    "checkpoint": "models/yolo26x-seg.pt",
+    "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 200,
+    "retina_masks": true
+  },
+  "models": {
+    "Sapiens2_1b": {
+      "model_id": "Sapiens2_1b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 5883353380,
+        "mtime_ns": 1791799963596790372
+      }
+    },
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "family": "QANet",
+      "checkpoint": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes": 277950114,
+      "source": "third_party/human_parsing/QANet",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ROI",
+      "native_reference": false,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 277950114,
+        "mtime_ns": 1604249613000000000
+      }
+    }
+  }
+}

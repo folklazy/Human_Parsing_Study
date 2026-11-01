@@ -1,0 +1,235 @@
+{
+  "scope": "Post-development application snapshot after actual T4 file/DB/browser verification",
+  "updated_utc": "2026-11-01T19:30:00.509065+00:00",
+  "files": [
+    {
+      "path": "Body_Extraction_Human/README.md",
+      "bytes": 7919,
+      "sha256": "9dab0896f8bc54ca4e4a5f388b4bc41861c900b6d478620bc518250adfe09fa9"
+    },
+    {
+      "path": "Body_Extraction_Human/STATUS.md",
+      "bytes": 2315,
+      "sha256": "6443f5533346649b49eee70b3a7fd1f9fef7c8fefb38cf2715915db5e97a34af"
+    },
+    {
+      "path": "Body_Extraction_Human/WORK_LOG.md",
+      "bytes": 4183,
+      "sha256": "491d2e1b5aa44b7a1da6ec94c7ca772f4c48273b0d7a6b3f157cc81112039e81"
+    },
+    {
+      "path": "Body_Extraction_Human/AGENTS.md",
+      "bytes": 1782,
+      "sha256": "a02874a1659d1985afedb75f0545266ca3828d284376256d3e7c37b1ed3e04b6"
+    },
+    {
+      "path": "Body_Extraction_Human/requirements.txt",
+      "bytes": 192,
+      "sha256": "3d3de286fba5690ae228a7b67299d386580a67ed06d19070a5cfadb6b4a71606"
+    },
+    {
+      "path": "Body_Extraction_Human/requirements.lock.txt",
+      "bytes": 544,
+      "sha256": "44425f809fb0d36955f6d8f56220139c8c119a6370c17d27d9f916b70857117e"
+    },
+    {
+      "path": "Body_Extraction_Human/compose.yaml",
+      "bytes": 482,
+      "sha256": "897b4dd198862e4cf5aacf809ec1df7b792600282b34ead6b788ab3574b10c6e"
+    },
+    {
+      "path": "Body_Extraction_Human/.env.example",
+      "bytes": 610,
+      "sha256": "1e9fb0274631dc0857f82988213137b436d16dc323d64d0f5954597434948262"
+    },
+    {
+      "path": "Body_Extraction_Human/.gitignore",
+      "bytes": 126,
+      "sha256": "3e0a393be55bf2a8d2d20fc0d13b6835fee3fee3d748a2a5022b000f834795bc"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/worker.py",
+      "bytes": 15360,
+      "sha256": "0b1df601980feecb63f2c9e70b654c86f4f4bd111769d05212ba6147a875ed9e"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/db.py",
+      "bytes": 476,
+      "sha256": "31b8307ff94a089a789cd232b59ce0968bd493e5137db22dfd8fa3d0eda4f10c"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/media.py",
+      "bytes": 4558,
+      "sha256": "01919e23a1ad2aa8e9484c2336128dc48c723c5b649a14c933884149c5253516"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/settings.py",
+      "bytes": 3046,
+      "sha256": "bcd292d291b6cbc231511aeb57c7707d5995e151383789240ab5da8caeab2427"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/app/api.py",
+      "bytes": 18171,
+      "sha256": "3ee07ed8a11ec11dfcbc8a6d815b3a344b18d5a956065b3699c141f50221cc2e"
+    },
+    {
+      "path": "Body_Extraction_Human/backend/migrations/001_initial.sql",
+      "bytes": 2670,
+      "sha256": "67d90695ced11914cb220c6abfc79647ccebf91c0aaebef5634c731b6ea0fbc2"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/color_contract.py",
+      "bytes": 1488,
+      "sha256": "91c9ca7ff7a2b30bdc1e75130943de29ad13d5ca5e07d2c5f8aaf23b89e1d074"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/verify_operations.py",
+      "bytes": 5330,
+      "sha256": "393d647bf50f119a8aa2627c0afc61f088abf425ac218db3bcda628eb5c7be5c"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/verify_runtime_cache.py",
+      "bytes": 2955,
+      "sha256": "431a66a69ea058574240eb65ec27a87d129d3ad2d9fd9b749b4d9e3bc6fe7387"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/services.py",
+      "bytes": 3203,
+      "sha256": "6c55d67f26b30fc0ebf7ac9157c435a6a2dfd1e60ee4f80f386f7d671458d422"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/inference_host.py",
+      "bytes": 15494,
+      "sha256": "b6363c0992f76c1b9ce83beed083bb1f9d4321b3702a601c8698b2c049c2e1ce"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/bootstrap.py",
+      "bytes": 962,
+      "sha256": "5d35a4e0915f88cf5d857d89f06561070302989f2d2b9fc165784b7318fe4567"
+    },
+    {
+      "path": "Body_Extraction_Human/scripts/verify_e2e.py",
+      "bytes": 6457,
+      "sha256": "7305c7abd11c398a2e608c4a5eb2f49fa3a69ce75b166c3534b2a982846a2d68"
+    },
+    {
+      "path": "Body_Extraction_Human/tests/browser_result_check.py",
+      "bytes": 3550,
+      "sha256": "916cfe64f9fcc17d83332b82509fb0d38e513249930f6d84c286faabb7efc3cb"
+    },
+    {
+      "path": "Body_Extraction_Human/tests/browser_check.py",
+      "bytes": 2106,
+      "sha256": "e886fdb1ec9feeb102df7a4e7bf1d85697e49ec4c435b9127c9c54505f1fbcc0"
+    },
+    {
+      "path": "Body_Extraction_Human/tests/browser_upload_check.py",
+      "bytes": 2351,
+      "sha256": "edf9bcd63af6cd79417478ba5e1f12e10def004937650c4716bd39a2aa10e56f"
+    },
+    {
+      "path": "Body_Extraction_Human/tests/test_contracts.py",
+      "bytes": 6289,
+      "sha256": "e27f30cb6bca273ea1b9a0506fed655b024f677ba45199e9c7ed360cf54b2181"
+    },
+    {
+      "path": "Body_Extraction_Human/docs/SETUP.md",
+      "bytes": 3265,
+      "sha256": "b137cc01a037ffe5782ab578e0ce869353ff7e9e9b32651b801d31e1569e57c2"
+    },
+    {
+      "path": "Body_Extraction_Human/docs/VERIFICATION.json",
+      "bytes": 3562,
+      "sha256": "e989c62465239935219f7d003607ac4339f3e0294b3c5423206814ed27e02af7"
+    },
+    {
+      "path": "Body_Extraction_Human/docs/API.md",
+      "bytes": 2551,
+      "sha256": "fd6de0fbab379b3d9cc1497d67dd22d8797b7aa5850f749f8a2cf685811b9d27"
+    },
+    {
+      "path": "Body_Extraction_Human/docs/IMPLEMENTATION.md",
+      "bytes": 8922,
+      "sha256": "3ea7e091875ae5881474f7870c76b21400b7c89d2839197d19be907f2deabd11"
+    },
+    {
+      "path": "Body_Extraction_Human/docs/VERIFICATION_TH.md",
+      "bytes": 11380,
+      "sha256": "c1148b2442afdbd863994d0d491639985f0d9a1aecd8837600dd6fd266cdd775"
+    },
+    {
+      "path": "Body_Extraction_Human/configs/MODEL_BINDINGS.json",
+      "bytes": 2408,
+      "sha256": "cbf69525c80b237fbbadb1b647853f5ed05a700a8ae06e63e66788029899a70e"
+    },
+    {
+      "path": "Body_Extraction_Human/configs/README.md",
+      "bytes": 1315,
+      "sha256": "dc6a529ed8d2c5e4a103eec26dbe83ba6a44f864218c8938cef9b393a74569ac"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/src/main.tsx",
+      "bytes": 50426,
+      "sha256": "5b084083b4ad03208b774bdec0c86cec24c7cbce3246a88ef3c99fe97a6f50ce"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/src/style.css",
+      "bytes": 18469,
+      "sha256": "da469851d5216fbd347872cd924c208839b86865cdbd146ed8f6723d0e8d1411"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/public/OFL-Noto-Sans-Thai.txt",
+      "bytes": 4378,
+      "sha256": "bd85ada3eef71267263e0fd24a40ae20380015c7cf1afa0c27a4340b03431320"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/package.json",
+      "bytes": 600,
+      "sha256": "0c312a167a1108cf7215be840d1b2dfd9c46a426b3710f5678950b422edc25ec"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/package-lock.json",
+      "bytes": 63191,
+      "sha256": "7185662528f4509b87c382134fea256276775a809dc825cab19d47cafa5ce0d7"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/tsconfig.json",
+      "bytes": 389,
+      "sha256": "f7039ecf027e9e720e76feb6f2fa35120370c1ba644ceeec62fb48025eb9b88a"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/vite.config.ts",
+      "bytes": 193,
+      "sha256": "baff666df919b118110e09056929d75d8f4af8362b049f801fd737d9f5018add"
+    },
+    {
+      "path": "Body_Extraction_Human/frontend/index.html",
+      "bytes": 357,
+      "sha256": "0ee4cd304f12799ce2ba8ddc4fe22072170a483de5766dedae916a7819bf69d9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15976,
+      "sha256": "ca121215d20ba3567020cdef5b2123bd2beeebc7986df92203db9f1f4e537a7b"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 16072,
+      "sha256": "6cb98fd51b241b0b36798a16d058e531f62ed5315de8f08d128b2db9d5f453c7"
+    }
+  ],
+  "canonical_working_copy": "Body_Extraction_Human",
+  "publication_checkout": "Human_Parsing_Study_Public",
+  "sync": "explicit source/config/docs/aggregate only",
+  "private_assets_excluded": true,
+  "external_weights_and_environments": true,
+  "first_party_license_unchanged": true,
+  "model_terms_not_overridden": true,
+  "scientific_results_unchanged": true,
+  "post_verification_snapshot_not_launch_commit": true
+}
