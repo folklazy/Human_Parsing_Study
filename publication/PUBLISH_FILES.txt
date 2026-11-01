@@ -57,6 +57,7 @@ CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md
 CCTV_Human_Parsing_Benchmark/reports/GT_OWNER_BINDING_REVIEW.json
 CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json
 CCTV_Human_Parsing_Benchmark/reports/METRIC_AUDIT_EVIDENCE.json
+CCTV_Human_Parsing_Benchmark/reports/MODEL_RECOMMENDATION.json
 CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md
 CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_EVIDENCE.json
 CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md
@@ -1030,6 +1031,7 @@ publication/CCTV_CONTROLLED_ROI_DESIGN_20261101.json
 publication/CCTV_CONTROLLED_ROI_RUN_20261101.json
 publication/CCTV_FACE_DOMAIN_CLOSURE_20261101.json
 publication/CCTV_METRIC_AUDIT_20261101.json
+publication/CCTV_MODEL_RECOMMENDATION_20261101.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031T1800Z_terminal.json

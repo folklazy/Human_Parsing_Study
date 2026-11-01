@@ -1,0 +1,138 @@
+{
+  "recommendation_id": "CCTV_ROI_QUALITY_RECOMMENDATION_20261101",
+  "status": "RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK",
+  "updated_utc": "2026-11-01T17:48:08.405168+00:00",
+  "recommended_configuration": "Sapiens2_1b",
+  "scope": "Completed CCTV controlled-ROI comparison, equal-weight Hair/Face-domain/Upper/Lower; not a combined CIHP+CCTV score or architecture-only ranking",
+  "selection_rule": "Highest complete macro mean selected-part IoU4; four existing target weights0.25, no new composite or thresholds",
+  "primary": 0.6543046381005433,
+  "runner_up": "QANet_CIHP_HRNetW48_512x384",
+  "runner_up_primary": 0.6453279495171149,
+  "difference_percentage_points": 0.8976688583428372,
+  "comparison": {
+    "Hair": {
+      "Sapiens2_1b": 0.6715189191194156,
+      "QANet": 0.6081706682983202,
+      "Sapiens_minus_QANet_pp": 6.334825082109541
+    },
+    "Face-domain": {
+      "Sapiens2_1b": 0.6960683622784805,
+      "QANet": 0.7143419237379279,
+      "Sapiens_minus_QANet_pp": -1.8273561459447474
+    },
+    "Upper": {
+      "Sapiens2_1b": 0.6604441120161156,
+      "QANet": 0.6874610669979766,
+      "Sapiens_minus_QANet_pp": -2.7016954981860963
+    },
+    "Lower": {
+      "Sapiens2_1b": 0.5891871589881612,
+      "QANet": 0.571338139034235,
+      "Sapiens_minus_QANet_pp": 1.7849019953926182
+    },
+    "Macro4": {
+      "Sapiens2_1b": 0.6543046381005433,
+      "QANet": 0.6453279495171149,
+      "Sapiens_minus_QANet_pp": 0.8976688583428372
+    }
+  },
+  "secondary_alternative_reason": "QANet leads Face-domain and Upper in the same completed task",
+  "parameter_count_from_accepted_run": 1470819805,
+  "parameter_count_scope": "All segmentation-module parameters recorded at model readiness;1B is the variant name, count was not repeated for this documentation task",
+  "checkpoint": {
+    "path": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+    "sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+    "bytes": 5883353380,
+    "identity_evidence": "Frozen model registry/config and accepted packets; no new model load or large-checkpoint rehash in this work unit"
+  },
+  "native_config": {
+    "path": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+    "sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d"
+  },
+  "upstream_source_revision": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+  "effective_route": "CONTROLLED_YOLO_PERSON_ROI",
+  "effective_route_note": "Accepted packet route from the controlled cohort; inherited registry route field SAPIENS_FRAME_YOLO_MASK_OWNERSHIP describes an earlier route and is not this recommendation",
+  "input": {
+    "detector": "Frozen YOLO26x-Seg boxes/masks/scores/opportunity IDs",
+    "crop": "10percent width/height per side, floor/ceil/clamp and expand to contain frozen mask; shared lossless RGB crop",
+    "tensor_HW": [
+      1024,
+      768
+    ],
+    "resize": "aspect-preserving letterbox with mean padding",
+    "normalization": "accepted official preprocessor/channel conversion once; reuse existing adapter rather than hand-normalize",
+    "map_back": "unpad and bilinear logits map-back before argmax; original image coordinates",
+    "ownership": "clip with same frozen YOLO mask/identity"
+  },
+  "runtime": {
+    "precision": "FP32",
+    "batch_size": 1,
+    "eval_inference_mode": true,
+    "AMP": false,
+    "TF32": false,
+    "external_TTA": false,
+    "GPU_from_run": "Tesla T4",
+    "environment": ".venvs/sapiens2-pilot",
+    "python_from_run": "3.12.3",
+    "torch_from_run": "2.14.0+cu130",
+    "CUDA_runtime_from_run": "13.0",
+    "model_details_sha256": "44b99743fce46896d49c73258d3f55d639be907b29d8a97622306b3ef9646bf1",
+    "environment_sha256": "413462520eb5074601a9d22893172043a43475261c9f6472b7de1e44f7f76d7a",
+    "timing_or_VRAM_ranking": false
+  },
+  "outputs": {
+    "native_classes": 29,
+    "Hair_native_IDs": [
+      4
+    ],
+    "Face_candidate_native_IDs": [
+      3,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "Upper_native_IDs": [
+      23
+    ],
+    "Lower_native_IDs": [
+      13
+    ],
+    "Face_candidate_note": "Includes Face_Neck; no strict Face-only/Neck-only separation from these hard labels",
+    "Apparel_native_ID1": "OTHER in evaluated non-Dress garment view; no heuristic split",
+    "person_identity": "provided by frozen YOLO, not native Sapiens instance IDs"
+  },
+  "GT_scope": {
+    "images": 90,
+    "ROI_opportunities_per_model": 130,
+    "eligible_parts": {
+      "Hair": 61,
+      "FaceDomain": 21,
+      "Upper": 112,
+      "Lower": 96
+    },
+    "source_Face_records": 35,
+    "excluded_Face_records": 14,
+    "uncertain_Neck_Face_items": 18,
+    "FaceNeck_delivery_items": 3,
+    "agent_assisted": true,
+    "expert_certified": false,
+    "post_hoc": true
+  },
+  "evidence": {
+    "result_commit": "11df5278c2f17569dea64bf71332c8398be49203",
+    "canonical_index": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
+    "canonical_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+    "canonical_CSV": "metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv",
+    "canonical_CSV_sha256": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6",
+    "protocol": "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json",
+    "protocol_sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+    "accepted_prediction_config_sha256": "ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae"
+  },
+  "deployment_accepted": false,
+  "new_inference_authorized": false,
+  "new_model_calls": 0,
+  "weights_or_assets_published": false,
+  "first_party_license_changed": false
+}

@@ -36,7 +36,46 @@ Face-domain ใช้ได้ **21จาก35 source Face records** หลั�
 | Lower | Sapiens2_1b | 58.919 | QANet_CIHP_HRNetW48_512x384 | 1.785 |
 | Macro4 | Sapiens2_1b | 65.430 | QANet_CIHP_HRNetW48_512x384 | 0.898 |
 
-เมื่อให้น้ำหนักสี่targetsเท่ากันตามที่กำหนด **เสนอ Sapiens2 1B เป็นตัวเลือกหลักสำหรับขั้นต่อไป** จากผลรอบนี้ และเก็บ **QANetเป็นทางเลือกเมื่อเน้น Face-reference/Upper**. ยังไม่อ้างว่า1Bดีกว่าทุกtarget, เป็นoverall winnerของทุกสภาพCCTV หรือแม่นพอในงานจริง. ส่วนต่างMacro4เล็กและยังไม่ได้ประเมินuncertainty; ไม่ตั้งpractical-tie thresholdหรือคะแนนผสมใหม่หลังเห็นผล. ไม่มีการทดสอบensemble/fusionและไม่เสนอผลรวมหลายโมเดลว่าเกิดขึ้นแล้ว.
+**ข้อสรุปการเลือก: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักสำหรับขั้นถัดไป เมื่อเป้าหมายคือคุณภาพรวม Hair / Face-domain / Upper / Lower และใช้เกณฑ์ที่กำหนดไว้เดิม**. คะแนน Macro4 เท่ากับ **65.430%** สูงสุดจากเก้าระบบที่รันครบ ส่วน QANet ได้64.533% ห่าง **0.898 percentage points**. คำแนะนำนี้อิง CCTV reference-domain รอบนี้ ไม่ได้นำคะแนน CIHP คนละ protocol มารวมกัน.
+
+เหตุผลที่เลือก1Bแม้ QANet จะชนะสองส่วน: Hair ของ1Bสูงกว่า6.335pp และ Lowerสูงกว่า1.785pp ซึ่งชดเชย Face-domainที่ต่ำกว่า1.827pp และ Upperที่ต่ำกว่า2.702pp เมื่อเฉลี่ยทั้งสี่ส่วนด้วยน้ำหนักเท่ากัน. ไม่ได้เปลี่ยนน้ำหนักให้1Bชนะหลังเห็นผล.
+
+| Metric | Sapiens2 1B (%) | QANet (%) | 1B − QANet (pp) |
+|---|---:|---:|---:|
+| Hair | 67.152 | 60.817 | +6.335 |
+| Face-domain | 69.607 | 71.434 | -1.827 |
+| Upper | 66.044 | 68.746 | -2.702 |
+| Lower | 58.919 | 57.134 | +1.785 |
+| Macro4 | 65.430 | 64.533 | +0.898 |
+
+**QANet เป็นทางเลือกที่มีหลักฐานรองรับหากงานให้น้ำหนักกับ Face-reference และ Upper มากขึ้น**. การเปลี่ยนความสำคัญของเป้าหมายในอนาคตต้องระบุแยกจากคะแนน Macro4 ปัจจุบัน. ผล Neck coverage ประกอบมี Sapiens2 0.4B สูงสุด แต่มีเพียง3รายการและเป็น recall ไม่ได้นำมาแทนเกณฑ์หลักสี่ส่วน.
+
+### รุ่นและ configuration ที่แนะนำจริง
+
+| รายการ | ค่าที่ผูกกับผลรัน |
+|---|---|
+| Exact model ID | `Sapiens2_1b`, task segmentation, native29 labels |
+| จำนวนพารามิเตอร์ | **1,470,819,805** รวม segmentation module ตาม `MODEL_DETAILS.json` ของรอบรัน; 1B เป็นชื่อ variant และรอบเขียนสรุปนี้ไม่ได้โหลดโมเดลเพื่อนับใหม่ |
+| Checkpoint | `sapiens2_1b_seg.safetensors`, 5,883,353,380 bytes; เก็บภายนอก Git |
+| Effective route | `CONTROLLED_YOLO_PERSON_ROI`: frozen YOLO person crop → parser → original-grid map-back → frozen YOLO mask ownership |
+| Input | lossless RGB crop เดียวกับทุกระบบ, context10% แต่ละข้าง, preserve aspect ratio, letterbox **1024H × 768W**, mean padding |
+| Precision / execution | FP32, batch1, eval/inference mode, AMP/TF32/extra TTA ปิด |
+| Preprocessing / map-back | ใช้ official preprocessor/channel conversion เพียงครั้งเดียวตาม adapter ที่ตรวจแล้ว; ถอด padding แล้ว map logits กลับก่อน argmax |
+| Environment ที่ใช้จริง | Python3.12.3, PyTorch2.14.0+cu130, CUDA runtime13.0, GPUTesla T4; ไม่ได้ติดตั้งหรือแก้ environment ในงานสรุปนี้ |
+| Outputs ที่ใช้ | native29 integer masks, original-grid person masks, frozen YOLO identity/extents และ geometry; ไม่ใช่ native Sapiens person-instance IDs |
+| Native target projection | Hair4; Face candidate3+24–28; Upper23; Lower13. Face candidate รวมคอ และ Apparel1 เป็น OTHER ใน non-Dress garment view |
+
+Route ข้างต้นคือ **person ROI ที่รันจริงใน controlled cohort นี้**. ฟิลด์ `SAPIENS_FRAME_YOLO_MASK_OWNERSHIP` ที่ติดมากับ registry เดิมเป็นชื่อ route รอบเก่า; ไม่ใช่ route ของผล65.430%นี้. การเลือก1Bจึงหมายถึง **checkpointพร้อม application configuration นี้** ไม่ใช่ทุกวิธีป้อน input ให้1B.
+
+Checkpoint SHA256: `4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4`. Native config SHA256: `d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d`. Upstream source revision: `7e5bae88456ac418ff0e58e74106c9fe192055d4`. ตำแหน่ง local assets, environment/model-details hashes และ source result hashes อยู่ใน [machine-readable recommendation](MODEL_RECOMMENDATION.json). Hashes อ้าง frozen records/accepted packets เดิม; รอบนี้ไม่ rehash weights หรือเริ่ม inference เพิ่ม.
+
+### ขอบเขตของข้อสรุป
+
+- เหมาะเป็น **ข้อเสนอเลือก configuration เพื่อทำงานต่อจากหลักฐานคุณภาพชุดนี้**. ค่าเฉลี่ยสูงสุดยังไม่ใช่ absolute pass threshold หรือ production acceptance.
+- Face ใช้21/35รายการ และมี uncertainty; Neck deliveryใช้3รายการ. GTเป็น agent-assisted reference ที่สืบทอด source contours ไม่ใช่ independent expert gold. ส่วนต่าง0.898ppยังไม่มี uncertainty/statistical-significance study.
+- รายงานความเร็ว/VRAM เดิมมีขอบเขตและสภาพ shared GPU ต่างกัน จึงไม่สรุปว่า1Bเร็วที่สุด เบาที่สุด หรือคุ้มทรัพยากรที่สุด. ขนาด checkpoint/parameter count ไม่ใช่ค่า peak VRAM ที่วัดแล้ว.
+- Native Face_Neck hard labels ยังแยก strict Face-only/Neck-only ไม่ได้. ผลนี้ยังไม่รับรองการแยกชุด Dress, สี, attributes หรือทุกคน/ทุกส่วนของฉาก.
+- ไม่มีการรวมโมเดลเป็น ensemble/fusion, เปลี่ยน execution config, อนุมัติ deployment หรือเริ่มการทดลองถัดไปจากการบันทึกคำแนะนำนี้.
 
 ## GT Face/Neck และความหมายของคะแนน
 

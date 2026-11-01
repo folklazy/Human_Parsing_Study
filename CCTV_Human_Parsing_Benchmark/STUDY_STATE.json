@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-01T16:26:54.611649+00:00",
+  "updated_utc": "2026-11-01T17:48:08.405168+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -37,10 +37,18 @@
   "Face_GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
   "protocol_sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
   "active_execution": false,
-  "next_action": "Review completed reference-domain results and configuration proposal; no automatic new experiment",
+  "next_action": "Use documented quality recommendation when deciding the next scoped task; no automatic new experiment",
   "historical_references": [
     "reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md",
     "reports/CONTROLLED_ROI_RUN_TH.md",
     "reports/CCTV_SELECTED_PART_RESULTS_TH.md"
-  ]
+  ],
+  "recommendation": {
+    "model_id": "Sapiens2_1b",
+    "effective_route": "CONTROLLED_YOLO_PERSON_ROI",
+    "status": "RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK",
+    "record": "reports/MODEL_RECOMMENDATION.json",
+    "deployment_accepted": false,
+    "new_inference_authorized": false
+  }
 }

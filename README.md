@@ -1,20 +1,29 @@
 # Human Parsing Study
 
-**Current CCTV result: four-target evaluation complete9/9 on reviewed GT domain.** [รายงานจบรอบ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) / [CSV](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md). Sapiens2 1B:Macro4 65.430%;QANet64.533%และสูงสุดFace-domain/Upper. Faceใช้21/35items,uncertain/excludedGTร่วมทุกระบบ,Neckdeliveryn3;ไม่ใช่expertgoldหรือdeploymentacceptance. No new model inference.
+**ข้อสรุป CCTV: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักด้านคุณภาพรวม** ตามเกณฑ์สี่ targets ที่กำหนดไว้และประเมินครบ9ระบบแล้ว.
+
+| Configuration | Macro mean selected-part IoU4 | จุดเด่นจากผลรอบนี้ |
+|---|---:|---|
+| **Sapiens2 1B + controlled YOLO person ROI** | **65.430%** | Hair / Lower สูงสุด |
+| QANet + controlled YOLO person ROI | 64.533% | Face-domain / Upper สูงสุด |
+
+[รายงานฉบับเต็ม: เหตุผลเลือก รุ่น/checkpoint/config และข้อจำกัด](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) · [CSVทั้งเก้าระบบ](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) · [Recommendation JSON](CCTV_Human_Parsing_Benchmark/reports/MODEL_RECOMMENDATION.json) · [สถานะ](CCTV_Human_Parsing_Benchmark/STATUS.md)
+
+ส่วนต่างรวม0.898percentage points;ยังไม่ทดสอบนัยสำคัญทางสถิติ. Faceใช้21/35items และNeckdeliveryมี3items; GTเป็นagent-assisted reference. ผลนี้รองรับคำแนะนำสำหรับcheckpoint+configurationที่รันจริง ยังไม่ใช่productionacceptance/คำอ้างเร็วที่สุดหรือเบาที่สุด. ไม่มีmodel inferenceใหม่จากงานสรุปนี้.
 
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 
-**Current authorized CCTV run:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.
+**Historical controlled-ROI prediction collection:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.
 
-**Current CCTV evaluation proposal:** [controlled person-ROI and explicit Face/Neck views](CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), **PROPOSED_NOT_FROZEN**. Same predicted crop/ownership across nine checkpoints; shared neck-excluded Face domain plus separate Face+Neck delivery, equal four-target weights. GT revision and route/scorer readiness precede a new batch. No new inference or old-result changes in this design work.
+**Earlier CCTV design proposal:** [controlled person-ROI and explicit Face/Neck views](CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), **PROPOSED_NOT_FROZEN**. Same predicted crop/ownership across nine checkpoints; shared neck-excluded Face domain plus separate Face+Neck delivery, equal four-target weights. GT revision and route/scorer readiness precede a new batch. No new inference or old-result changes in this design work.
 
-Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
+Independent noncommercial student research on pretrained body/clothing parsing configurations, including public CIHP and private CCTV reference-domain evaluations with frozen YOLO26x. The recommendation above applies to the completed CCTV controlled-ROI comparison.
 
-**Current CCTV validity status: GT_OWNER_REVIEW_REQUIRED.** [Measurement review and fresh Sapiens0.4/0.8/1B results](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) found source labels merging parts from different people in at least2images. Earlier90-image numbers remain historical supplied-GT agreement; final configuration selection is on hold pending owner QA. Bounded fresh ROI diagnostics completed6images×3sizes/51modelcalls; no full90ROI benchmark.
+**Historical GT validity finding before derived corrections: GT_OWNER_REVIEW_REQUIRED.** [Measurement review and fresh Sapiens0.4/0.8/1B results](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) found source labels merging parts from different people in at least2images. Earlier90-image numbers remain historical supplied-GT agreement; final configuration selection is on hold pending owner QA. Bounded fresh ROI diagnostics completed6images×3sizes/51modelcalls; no full90ROI benchmark.
 
-**Latest input diagnostic:** [Sapiens2 0.4B input-route comparison](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md), six fixed CCTV images/31 annotated parts: mean selected-part IoU4 **37.447% full-frame stretch /29.913% full-frame letterbox /59.575% YOLO ROI letterbox**. Exploratory diagnostic only; does not replace the90-image results or rank architectures.25modelcalls completed, parent numerical-control limitation retained; no automatic full-run extension.
+**Earlier Sapiens input diagnostic:** [Sapiens2 0.4B input-route comparison](CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_INPUT_DIAGNOSTIC_TH.md), six fixed CCTV images/31 annotated parts: mean selected-part IoU4 **37.447% full-frame stretch /29.913% full-frame letterbox /59.575% YOLO ROI letterbox**. Exploratory diagnostic only; does not replace the90-image results or rank architectures.25modelcalls completed, parent numerical-control limitation retained; no automatic full-run extension.
 
-**Latest CCTV result:** [CCTV90 selected annotated-part IoU/Dice — nine configurations complete](CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md). QANet is the observed task leader (macro mean selected-part IoU4 **61.773%**, Dice4 **69.203%**). Uses existing saved masks, 315 screened parts plus all324 sensitivity; no new model inference. Screening was agent-assisted, not independent expert certification. This is not full-scene IoU or deployment acceptance. [CCTV status](CCTV_Human_Parsing_Benchmark/STATUS.md) / [protocol](CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md).
+**Historical result under the previous GT/protocol:** [CCTV90 selected annotated-part IoU/Dice — nine configurations complete](CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md). QANet is the observed task leader (macro mean selected-part IoU4 **61.773%**, Dice4 **69.203%**). Uses existing saved masks, 315 screened parts plus all324 sensitivity; no new model inference. Screening was agent-assisted, not independent expert certification. This is not full-scene IoU or deployment acceptance. [CCTV status](CCTV_Human_Parsing_Benchmark/STATUS.md) / [protocol](CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md).
 
 The CIHP pilot paragraph below is an earlier milestone; current CIHP status remains in its linked STATUS, separately from the CCTV experiment.
 

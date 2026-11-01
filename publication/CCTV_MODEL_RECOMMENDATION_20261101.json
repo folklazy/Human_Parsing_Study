@@ -1,0 +1,52 @@
+{
+  "scope": "Document quality recommendation from completed CCTV evaluation; no numeric/protocol/GT/source changes or new execution",
+  "updated_utc": "2026-11-01T17:53:02.768136+00:00",
+  "files": [
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/README.md",
+      "bytes": 9172,
+      "sha256": "95a930ade35e7087d52af17cc20a3c221bc4d63e00c2540e4ed9ec3db2bfe3b7"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
+      "bytes": 14512,
+      "sha256": "9614086a3934eb89ffab3b5dbe6c39ff0c326509be6385446e30a86300d1c2de"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 2062,
+      "sha256": "1234d2f9026706821f30f8b5751af9a2e7a4030c79ad75277d17b4e2d848f3d2"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
+      "bytes": 26716,
+      "sha256": "7102f469a828b25c4c2897442a40e3dbaf1e381e1addd390642af56fdd0a3574"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "bytes": 23498,
+      "sha256": "c64f846de8f0149923381468dbb2638dc39569c3a1a4dac39b5b5636f52499b9"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/MODEL_RECOMMENDATION.json",
+      "bytes": 5733,
+      "sha256": "8921ea5912fb80049eb4a0f094e09cc0114023cdb68fea5921ac84f38c33f3a7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15418,
+      "sha256": "ed378f71de599e6dd0779d0fdadd078c2f4d481fcbd815aba1551d6d36f3332a"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 15387,
+      "sha256": "e1ce622d1ca49bd238853bfebb3629dc2dde2c5085da115d792b3810391ef0c3"
+    }
+  ],
+  "canonical_working_copy": "CCTV_Human_Parsing_Benchmark",
+  "publication_checkout": "Human_Parsing_Study_Public",
+  "sync": "explicit document/metadata paths only",
+  "new_model_calls": 0,
+  "private_assets_published": false,
+  "first_party_license_changed": false
+}

@@ -9,6 +9,10 @@ Updated 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok). **FOUR_TARGET_EVALUATIO
 - [CPUและactual-packetacceptance](reports/FACE_NECK_ACCEPTANCE.json). Privatefixed6/ninemodelgallery:`outputs/face-neck-comparison-gallery-20261101/index.html`. ไม่มีCCTVassetsขึ้นpublicGit.
 - Next:พิจารณารายงาน/ข้อเสนอใช้Sapiens2 1BหรือQANetตามrequirements. ไม่มีFace-scorejobหรือGPUqueueค้าง; independentGT/deploymentvalidationเป็นงานเพิ่มหากต้องการคำอ้างที่เข้มกว่า ไม่เริ่มอัตโนมัติ.
 
+## Recommendation update — 2026-11-02T00:48:08.405168+07:00
+
+[MODEL_RECOMMENDATION](reports/MODEL_RECOMMENDATION.json): แนะนำ **Sapiens2_1b + CONTROLLED_YOLO_PERSON_ROI** เป็นตัวหลักด้านคุณภาพรวม Macro4 65.430%; QANet64.533%เป็นทางเลือกด้านFace/Upper. เหตุผล รุ่น/parameter/checkpoint/preprocessing และข้อจำกัดอยู่ใน [รายงานหลัก](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md). สถานะคำแนะนำ `RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK`; deployment/inferenceใหม่ยังไม่ได้อนุมัติจากงานสรุปนี้. Numeric results/protocol/GTเดิมไม่เปลี่ยน.
+
 ## Earlier status — historical snapshots below
 
 # CCTV parsing — current status

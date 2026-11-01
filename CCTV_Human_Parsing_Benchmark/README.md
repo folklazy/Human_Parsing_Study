@@ -1,11 +1,20 @@
 # CCTV Human Parsing Benchmark
 
-**Current status: four-target evaluation complete9/9 on reviewed GT domain.** [รายงานจบรอบ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) / [CSVหลัก](metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [STATUS](STATUS.md). Sapiens2 1Bได้Macro4สูงสุด65.430%;QANet64.533%และสูงสุดFace-domain/Upper. ใช้Face21จาก35items,Hair61/Upper112/Lower96;14Faceambiguitiesกันออกร่วมทุกโมเดล,Neckdeliveryn3. GTเป็นagent-assistedreference ไม่ใช่expertgoldหรือdeploymentacceptance. CPUscoringจบ ไม่มีinferenceใหม่หรือคิวรันต่อ.
+**ตัวหลักที่แนะนำ: Sapiens2 segmentation 1B** สำหรับคุณภาพรวมสี่เป้าหมายบน CCTV reference-domain ที่ประเมินแล้ว. คะแนน Macro4 **65.430%** สูงสุดจาก9ระบบ; QANet **64.533%** ตามหลัง0.898pp และเป็นทางเลือกเมื่อเน้น Face-domain/Upper.
+
+| ตัวเลือก | Macro4 | ส่วนที่ได้คะแนนสูงสุด |
+|---|---:|---|
+| **Sapiens2 1B — ตัวหลักตามเกณฑ์รวม** | **65.430%** | Hair / Lower |
+| QANet — ทางเลือกด้าน Face/Upper | 64.533% | Face-domain / Upper |
+
+[รายละเอียดการเลือก รุ่น และ configuration ที่รันจริง](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) · [ตารางเก้าระบบ](metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) · [Recommendation JSON](reports/MODEL_RECOMMENDATION.json) · [STATUS](STATUS.md)
+
+การคำนวณจบ9/9 จาก90ภาพ/130ROIsต่อระบบ. ใช้ Hair61 / Face21 / Upper112 / Lower96 parts โดย Face14/35รายการกันออกเหมือนกันทุกโมเดล; Neck deliveryมี3รายการ. GTเป็นagent-assisted reference ไม่ใช่expertgold และส่วนต่างยังไม่ผ่านstatistical-significance study. คำแนะนำนี้สำหรับ checkpoint+controlled YOLO person-ROI configuration ไม่ใช่ production acceptance. ไม่มีการรันใหม่หรือเปลี่ยน config จากงานสรุปนี้.
 
 
 ## Previous proposal and historical results
 
-**สถานะปัจจุบัน: GT_OWNER_REVIEW_REQUIRED / PROPOSED_NOT_FROZEN.** อ่าน [ข้อเสนอ controlled person-ROI และ Face/Neck](CONTROLLED_ROI_PROTOCOL_TH.md) → [STATUS](STATUS.md) → [หลักฐาน design review](reports/CONTROLLED_ROI_DESIGN_REVIEW.json). ผู้ใช้มอบหมายให้กำหนดวิธีประเมินที่เหมาะสม; ยังไม่มี inference รอบใหม่หรือการอนุมัติ batch เพิ่มจากการออกแบบนี้.
+**สถานะในข้อเสนอเดิม: GT_OWNER_REVIEW_REQUIRED / PROPOSED_NOT_FROZEN.** อ่าน [ข้อเสนอ controlled person-ROI และ Face/Neck](CONTROLLED_ROI_PROTOCOL_TH.md) → [STATUS](STATUS.md) → [หลักฐาน design review](reports/CONTROLLED_ROI_DESIGN_REVIEW.json). ผู้ใช้มอบหมายให้กำหนดวิธีประเมินที่เหมาะสม; ยังไม่มี inference รอบใหม่หรือการอนุมัติ batch เพิ่มจากการออกแบบนี้.
 
 ข้อเสนอใช้ crop/context/YOLO ownership เดียวกันทั้ง9 checkpoints และ GT revision ที่แยก Face/Neck: headline Hair/Face-on-neck-excluded-domain/Upper/Lower เท่ากัน25%, พร้อม Face+Neck delivery แยก. ต้องปิด GT owner/contour QA และ adapter/scorer readiness ก่อน; Face view ไม่รับรอง strict face-only capability.
 
