@@ -2,7 +2,11 @@
 
 Independent noncommercial student research on pretrained body/clothing parsing configurations. Current focus: native CIHP application pipelines with frozen YOLO26x.
 
-**Current outcome: Sapiens2 0.4B C4-P pilot PASS, 6/6 diagnostic images +1warmup, all7modelcalls consumed.** CPU23oraclecases, GT-onlybindings5,000, savedmask/atomicexport/QANetextentparityverified. This is not a full5,000commonbenchmark; no furtherinferenceauthorized. NativefourresultsandbothpausedCPIhistoriesunchanged.
+**Latest CCTV result:** [CCTV90 selected annotated-part IoU/Dice — nine configurations complete](CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md). QANet is the observed task leader (macro mean selected-part IoU4 **61.773%**, Dice4 **69.203%**). Uses existing saved masks, 315 screened parts plus all324 sensitivity; no new model inference. Screening was agent-assisted, not independent expert certification. This is not full-scene IoU or deployment acceptance. [CCTV status](CCTV_Human_Parsing_Benchmark/STATUS.md) / [protocol](CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md).
+
+The CIHP pilot paragraph below is an earlier milestone; current CIHP status remains in its linked STATUS, separately from the CCTV experiment.
+
+**Earlier CIHP milestone: Sapiens2 0.4B C4-P pilot PASS, 6/6 diagnostic images +1warmup, all7modelcalls consumed.** CPU23oraclecases, GT-onlybindings5,000, savedmask/atomicexport/QANetextentparityverified. This is not a full5,000commonbenchmark; no furtherinferenceauthorized. NativefourresultsandbothpausedCPIhistoriesunchanged.
 
 | Start here | Purpose |
 |---|---|

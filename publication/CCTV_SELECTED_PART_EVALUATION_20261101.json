@@ -1,23 +1,23 @@
 {
   "scope": "Selected-annotated-part CPU evaluation; public aggregate records only; original GT/native packets immutable",
   "source_workspace": "Human-Body-Extraction/CCTV_Human_Parsing_Benchmark",
-  "updated_utc": "2026-11-01T01:46:23.568887+00:00",
+  "updated_utc": "2026-11-01T01:53:21.618441+00:00",
   "CCTV_assets_or_per_person_identifiers_published": false,
   "files": [
     {
       "path": "CCTV_Human_Parsing_Benchmark/README.md",
-      "bytes": 4443,
-      "sha256": "99745b55b4d25c2679acaf04ffe7fa04e459d12fe79b22831c4886fc075bb2c9"
+      "bytes": 4958,
+      "sha256": "4c6ec4fc286c16c47cf36311e5a6d981bb0efe42ad40b31e4b060bd4333f892a"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 660,
-      "sha256": "51dbcaab8aec979b3c17ea1954f85d5a3743b3a27b4436c66579f4998caae117"
+      "bytes": 1164,
+      "sha256": "d0dc7875e28b277a99a7390ba66ee2437d0176c04ad390b39198febd35594279"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 4209,
-      "sha256": "8f2e8aa141ff89b8ff7a1ed66fbd2904b6a35b4830cbfdae39e126f60c3dc370"
+      "bytes": 5316,
+      "sha256": "4315f7b1d7203f0300821c06abf9c4efe4b1d3d10b65965335859c0ae6fea222"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md",
@@ -43,6 +43,46 @@
       "path": "CCTV_Human_Parsing_Benchmark/tests/test_selected_parts.py",
       "bytes": 5268,
       "sha256": "321624e33759c454917a707c4400d807e2109f3139eb777bbbf116e81b3606bf"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+      "bytes": 18513,
+      "sha256": "23a9a5563dad502bb4add04d7f9393761e1f077fae59c2f26c3add1ce2daec47"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/SELECTED_PART_EVALUATION_EVIDENCE.json",
+      "bytes": 7627,
+      "sha256": "ef9d996f644d0bceb8c7f06564a68cf343eaae9a0baa708702b138f4859bf3b4"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SELECTED_PART_SUMMARY.csv",
+      "bytes": 5491,
+      "sha256": "5e3eddffd6c514b3fc3107e32c5d1b58c1c2f11795c024073e91c58c15e83afa"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/metrics/SELECTED_PART_PER_TARGET.csv",
+      "bytes": 44915,
+      "sha256": "72bedb67dd4ce57165ac8063ae99713b3d142b93301b47570512f0d509538234"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
+      "bytes": 3917,
+      "sha256": "6a60cb9772283a325b84c3d5a6afc643fa14fc8ad51458ddf04659a89e2e9fe3"
+    },
+    {
+      "path": "CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md",
+      "bytes": 4069,
+      "sha256": "c4bbadbaca4f792cdb4bfae179147d6779408006b14a7a1b73add1046d6954e6"
+    },
+    {
+      "path": "Human_Parsing_Benchmark/README.md",
+      "bytes": 11652,
+      "sha256": "a6544e5a79815e04b3306b2c0adcff015aba431581776540a571f0ca85c598f1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11622,
+      "sha256": "66b21a45041851fb87eb309e6bf1d188c470b0559f6de4945c7d4b95a86bdfdf"
     }
   ]
 }

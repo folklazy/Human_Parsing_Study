@@ -1,6 +1,8 @@
 # CCTV Human Parsing Benchmark
 
-งานปัจจุบัน: [selected annotated-part IoU/Dice protocol](SELECTED_PART_PROTOCOL.md) → [STATUS](STATUS.md). ใช้ saved masks เดิมเพื่อวัดส่วนที่ขาดและทายล้นของคนที่ annotate; แยกจาก positive-domain results ด้านล่าง. ไม่ใช้ GT0 เป็น full-scene background และไม่แก้ native inference.
+**ผลล่าสุด: [รายงาน selected annotated-part IoU/Dice ครบ 9 ระบบ](reports/CCTV_SELECTED_PART_RESULTS_TH.md)** — QANet สูงสุดตามเกณฑ์นี้: IoU4 61.773%, Dice4 69.203%. ใช้ saved masks เดิม ไม่มี inference ใหม่. Primary 315 ส่วน; รายงาน sensitivity ครบ 324 ส่วนด้วย. เป็นผลบนคน/ส่วนที่ annotate หลัง agent-assisted visual screen ไม่ใช่ full-scene IoU หรือ independent expert certification.
+
+อ่าน [STATUS](STATUS.md) → [selected-part protocol](SELECTED_PART_PROTOCOL.md) → [ตารางเต็ม](metrics/SELECTED_PART_PER_TARGET.csv). เนื้อหา positive-domain benchmark ด้านล่างเก็บเป็นบริบทของรอบเดิม; ผลและ GT เดิมไม่เปลี่ยน.
 
 ทดสอบ pretrained parsing 9 checkpoints เดิมกับ CCTV partial annotations โดยเก็บภาพและ artifacts ภายใน workspace เท่านั้น เริ่มอ่าน [PROTOCOL.md](PROTOCOL.md) → [STATUS.md](STATUS.md) → [ผลจริง](reports/RESULTS_TH.md)
 

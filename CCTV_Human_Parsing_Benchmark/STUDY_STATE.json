@@ -5,7 +5,7 @@
   "complete_models": 9,
   "expected_models": 9,
   "population": 90,
-  "updated_utc": "2026-10-31T18:28:26.066687+00:00",
+  "updated_utc": "2026-11-01T01:50:54.244026+00:00",
   "full_benchmark_ready": false,
   "reason": "Selected people/parts only; unknown negatives; no Dress rule or full-person silhouettes",
   "no_overall_deployment_winner": true,
@@ -67,5 +67,22 @@
     "original_primary_unchanged": true,
     "new_model_calls": 0,
     "full_image_metrics_identifiable": false
-  }
+  },
+  "selected_part_evaluation": {
+    "status": "COMPLETE_9_OF_9",
+    "protocol": "CCTV_SELECTED_ANNOTATED_PARTS_V1",
+    "derived_run": "selected-part-scores-20261101",
+    "population": 90,
+    "source_parts": 324,
+    "primary_parts": 315,
+    "observed_task_leader": "QANet_CIHP_HRNetW48_512x384",
+    "macro_mean_selected_part_IoU4": 0.6177262742410371,
+    "report": "reports/CCTV_SELECTED_PART_RESULTS_TH.md",
+    "evidence": "reports/SELECTED_PART_EVALUATION_EVIDENCE.json",
+    "model_calls": 0,
+    "expert_GT_certification": false,
+    "full_scene_or_deployment_acceptance": false
+  },
+  "current_evaluation": "selected_part_evaluation",
+  "current_result_report": "reports/CCTV_SELECTED_PART_RESULTS_TH.md"
 }

@@ -1,5 +1,7 @@
 # CCTV partial-annotation benchmark — สถานะและผลจริง
 
+> Historical protocol-v1 result: recall บน known-positive pixels. ผลต่อยอดล่าสุดที่ใช้ whole-person masks เพื่อนับ FP/IoU/Dice อยู่ที่ [CCTV_SELECTED_PART_RESULTS_TH.md](CCTV_SELECTED_PART_RESULTS_TH.md). เก็บค่ารอบนี้ไว้ตามเดิม ไม่ใช้ข้อความ “ยังไม่มีคะแนน IoU” เป็นสถานะงานปัจจุบัน.
+
 ชุดนี้มี 90 ภาพ ไม่ใช่100; annotateเฉพาะบางคน/บางส่วน และยังไม่มีกติกาDress. พื้นที่GT0เป็นUNKNOWNไม่ใช่negative. คะแนนหลักคือmacro recall4เฉพาะพิกเซลที่มีlabel; ไม่ใช่full-imageIoU/precision/personF1หรือคำรับรองผู้ชนะโดยรวม.
 
 |Model|Status|Complete|Face recall %|Hair recall %|Upper recall %|Lower recall %|Macro recall %|

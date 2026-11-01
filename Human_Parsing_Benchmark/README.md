@@ -1,4 +1,4 @@
-> **New CCTV work is separate:** [CCTV_Human_Parsing_Benchmark](../CCTV_Human_Parsing_Benchmark/README.md) uses partial-annotation recall diagnostics on90images. CIHP results below remain frozen. No full-image CCTV IoU/instanceF1/overallwinner claim.
+> **CCTV work is separate:** [CCTV selected-part final report](../CCTV_Human_Parsing_Benchmark/reports/CCTV_SELECTED_PART_RESULTS_TH.md) evaluates all9 saved configurations on90images with whole-person-mask IoU/Dice for selected annotated parts (315 primary /324 sensitivity). QANet is the observed task leader. CIHP results below remain frozen; no full-scene IoU/instanceF1 or deployment acceptance claim.
 
 > **Current: common C4-P revision2 COMPLETE 9/9 checkpoints, 5,000 CIHP VAL IDs each.** [รายงานผลและ shortlist](reports/CIHP_COMMON_NINE_RESULTS_TH.md) → [STATUS](STATUS.md) → [normalized canonical result index](manifests/CIHP_COMMON_RESULT_INDEX.json). Native20 results preserved; CPI added by saved-only CPU scoring, no model inference.
 
