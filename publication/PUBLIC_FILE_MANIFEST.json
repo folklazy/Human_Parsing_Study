@@ -35,18 +35,18 @@
     },
     {
       "path": "Body_Extraction_Human/README.md",
-      "bytes": 7919,
-      "sha256": "9dab0896f8bc54ca4e4a5f388b4bc41861c900b6d478620bc518250adfe09fa9"
+      "bytes": 9752,
+      "sha256": "8ff5cd0f80b26c5d37a1ebb3fe5b1e1bdad0060a0d05cff49bc3ff505494947b"
     },
     {
       "path": "Body_Extraction_Human/STATUS.md",
-      "bytes": 2315,
-      "sha256": "6443f5533346649b49eee70b3a7fd1f9fef7c8fefb38cf2715915db5e97a34af"
+      "bytes": 2705,
+      "sha256": "2cb7e22a685c760c7c7bfca0f945a2b886a1640a20fbbe4150942b3c3fc6390d"
     },
     {
       "path": "Body_Extraction_Human/WORK_LOG.md",
-      "bytes": 4183,
-      "sha256": "491d2e1b5aa44b7a1da6ec94c7ca772f4c48273b0d7a6b3f157cc81112039e81"
+      "bytes": 5309,
+      "sha256": "bd88c06250efbdfeb89332173e7f89a1038f707c03e66e714a36878946307590"
     },
     {
       "path": "Body_Extraction_Human/backend/app/__init__.py",
@@ -55,8 +55,8 @@
     },
     {
       "path": "Body_Extraction_Human/backend/app/api.py",
-      "bytes": 18171,
-      "sha256": "3ee07ed8a11ec11dfcbc8a6d815b3a344b18d5a956065b3699c141f50221cc2e"
+      "bytes": 20972,
+      "sha256": "098f6a9e5aa5d96a91a09aae6d9c95bb36f1e5b1e69215fcd78eb4f11256de2c"
     },
     {
       "path": "Body_Extraction_Human/backend/app/db.py",
@@ -100,8 +100,8 @@
     },
     {
       "path": "Body_Extraction_Human/docs/API.md",
-      "bytes": 2551,
-      "sha256": "fd6de0fbab379b3d9cc1497d67dd22d8797b7aa5850f749f8a2cf685811b9d27"
+      "bytes": 3698,
+      "sha256": "c6fdff13b63818f8dc041b93e483cbc353586934c73758184c2b447fb00e0e6f"
     },
     {
       "path": "Body_Extraction_Human/docs/IMPLEMENTATION.md",
@@ -115,13 +115,13 @@
     },
     {
       "path": "Body_Extraction_Human/docs/VERIFICATION.json",
-      "bytes": 3562,
-      "sha256": "e989c62465239935219f7d003607ac4339f3e0294b3c5423206814ed27e02af7"
+      "bytes": 4335,
+      "sha256": "9285e4bc9c9d089d250f4072b6ded823f7e0401f8885d688c13bc8a54ab9eeb0"
     },
     {
       "path": "Body_Extraction_Human/docs/VERIFICATION_TH.md",
-      "bytes": 11380,
-      "sha256": "c1148b2442afdbd863994d0d491639985f0d9a1aecd8837600dd6fd266cdd775"
+      "bytes": 13444,
+      "sha256": "cac06952546785a54e11181e6ede67cea7339352ed67785ee36c09cc1c0d6608"
     },
     {
       "path": "Body_Extraction_Human/frontend/index.html",
@@ -145,13 +145,13 @@
     },
     {
       "path": "Body_Extraction_Human/frontend/src/main.tsx",
-      "bytes": 50426,
-      "sha256": "5b084083b4ad03208b774bdec0c86cec24c7cbce3246a88ef3c99fe97a6f50ce"
+      "bytes": 59416,
+      "sha256": "ccf250eb879831d6e67283ef25de2345d6e4a208d6e649e725fd4cb396e35bcd"
     },
     {
       "path": "Body_Extraction_Human/frontend/src/style.css",
-      "bytes": 18469,
-      "sha256": "da469851d5216fbd347872cd924c208839b86865cdbd146ed8f6723d0e8d1411"
+      "bytes": 19790,
+      "sha256": "da20432c31114a00ea6034b02499e4324ce6ce3ed33035cf3304bf7468f14440"
     },
     {
       "path": "Body_Extraction_Human/frontend/tsconfig.json",
@@ -224,9 +224,19 @@
       "sha256": "edf9bcd63af6cd79417478ba5e1f12e10def004937650c4716bd39a2aa10e56f"
     },
     {
+      "path": "Body_Extraction_Human/tests/browser_video_search_check.py",
+      "bytes": 3672,
+      "sha256": "0e69d59d1742b696710324b95ab65a43326ba48b928921f53f5be667882aac23"
+    },
+    {
       "path": "Body_Extraction_Human/tests/test_contracts.py",
       "bytes": 6289,
       "sha256": "e27f30cb6bca273ea1b9a0506fed655b024f677ba45199e9c7ed360cf54b2181"
+    },
+    {
+      "path": "Body_Extraction_Human/tests/test_video_search.py",
+      "bytes": 4116,
+      "sha256": "eb7d51e5d09f53631533bfc15d8ef8db612281a6b6fbfd150a59bee3be18f03b"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/.gitignore",
@@ -5149,6 +5159,11 @@
       "sha256": "6b5a5b3084d3a69d8b68592775970910bfc6849fc3711324b7fbc18c09ee4e45"
     },
     {
+      "path": "publication/BODY_VIDEO_SEARCH_20261101.json",
+      "bytes": 2592,
+      "sha256": "a64dd984d908b715a8fa5f7baeff7cd6fd527426cae246789b02141081d18451"
+    },
+    {
       "path": "publication/CCTV_CONTROLLED_GT_DIAGNOSTICS_20261101.json",
       "bytes": 3940,
       "sha256": "56eaa4fa6bce72763e156b7d0858cf8b5fd908f698ee3de454dd3b8705fb6cd2"
@@ -7051,5 +7066,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T19:30:00.517058+00:00"
+  "last_updated_utc": "2026-11-01T20:02:19.480816+00:00"
 }

@@ -402,6 +402,28 @@ def delete_media(mid: str, user=Depends(authenticated)):
     return {"deleted": True}
 
 
+@app.get("/api/video-jobs")
+def video_jobs(
+    q: str = "",
+    page: int = Query(1, ge=1),
+    page_size: int = Query(50, ge=1, le=100),
+    user=Depends(authenticated),
+):
+    base = " FROM jobs j JOIN media m ON m.id=j.media_id WHERE m.kind='video' AND j.status='SUCCEEDED' AND (m.filename ILIKE %s OR m.source ILIKE %s)"
+    args = ("%" + q + "%", "%" + q + "%")
+    return dict(
+        items=db.all_rows(
+            "SELECT j.id job_id,j.media_id,j.sampling_seconds,j.completed_frames,j.created_at,m.filename,m.source,m.metadata,m.event_start"
+            + base
+            + " ORDER BY j.created_at DESC,j.id LIMIT %s OFFSET %s",
+            args + (page_size, (page - 1) * page_size),
+        ),
+        total=db.one("SELECT count(*) n" + base, args)["n"],
+        page=page,
+        page_size=page_size,
+    )
+
+
 @app.get("/api/search")
 def search(
     upper: str | None = None,
@@ -409,6 +431,12 @@ def search(
     garment: str | None = None,
     kind: str | None = None,
     q: str | None = None,
+    job_id: str | None = None,
+    time_from_seconds: float | None = Query(None, ge=0),
+    time_to_seconds: float | None = Query(None, ge=0),
+    include_moments: bool = False,
+    moment_page: int = Query(1, ge=1),
+    moment_page_size: int = Query(12, ge=1, le=60),
     uploaded_from: datetime | None = None,
     uploaded_to: datetime | None = None,
     event_from: datetime | None = None,
@@ -419,6 +447,21 @@ def search(
 ):
     where = ["j.status='SUCCEEDED'", "f.attempt=j.attempt"]
     args = []
+    if (
+        time_from_seconds is not None
+        and time_to_seconds is not None
+        and time_from_seconds > time_to_seconds
+    ):
+        raise HTTPException(422, "เวลาเริ่มในคลิปต้องไม่มากกว่าเวลาสิ้นสุด")
+    if job_id:
+        where.append("j.id=%s")
+        args.append(job_id)
+    if time_from_seconds is not None or time_to_seconds is not None:
+        where.append("m.kind='video'")
+    for value, op in [(time_from_seconds, ">="), (time_to_seconds, "<=")]:
+        if value is not None:
+            where.append("f.timestamp_seconds" + op + "%s")
+            args.append(value)
     for value, column in [
         (upper, "p.upper_colors"),
         (lower, "p.lower_colors"),
@@ -455,11 +498,29 @@ def search(
         + " ORDER BY j.created_at DESC,f.sample_index,p.ordinal LIMIT %s OFFSET %s",
         tuple(args + [page_size, (page - 1) * page_size]),
     )
+    moments = None
+    total_moments = None
+    if include_moments:
+        video_base = base + " AND m.kind='video'"
+        total_moments = db.one(
+            "SELECT count(DISTINCT f.id) n" + video_base, tuple(args)
+        )["n"]
+        moments = db.all_rows(
+            "SELECT j.id job_id,m.id media_id,f.id frame_id,f.timestamp_seconds,m.filename,m.source,m.event_start,j.sampling_seconds,count(*) matching_observations,jsonb_agg(jsonb_build_object('id',p.id,'ordinal',p.ordinal) ORDER BY p.ordinal) persons"
+            + video_base
+            + " GROUP BY j.id,m.id,f.id ORDER BY j.created_at DESC,f.timestamp_seconds,f.id LIMIT %s OFFSET %s",
+            tuple(args + [moment_page_size, (moment_page - 1) * moment_page_size]),
+        )
     return dict(
         items=rows,
         total=total,
         page=page,
         page_size=page_size,
+        moments=moments,
+        total_moments=total_moments,
+        moment_page=moment_page,
+        moment_page_size=moment_page_size,
+        timeline_semantics="actual sampled frame timestamps with matching observations; not person tracks or continuous presence intervals",
         search_scope="completed current attempts; colors on same person; observed dominant/secondary palette labels",
     )
 

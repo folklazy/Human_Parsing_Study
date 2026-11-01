@@ -186,6 +186,9 @@ function App() {
       new URLSearchParams(location.hash.slice(1)).get("person") || "",
     );
   const [toast, setToast] = useState("");
+  const [searchScope, setSearchScope] = useState(
+    new URLSearchParams(location.hash.slice(1)).get("video_job") || "",
+  );
   useEffect(() => {
     api("/me")
       .then(setSession)
@@ -202,10 +205,13 @@ function App() {
     setJobId(job);
     setWantedFrame(frame);
     setWantedPerson(person);
+    setSearchScope(next === "search" ? job : "");
     location.hash =
       next === "result"
         ? new URLSearchParams({ job, frame, person }).toString()
-        : next;
+        : next === "search" && job
+          ? "search&video_job=" + encodeURIComponent(job)
+          : next;
   }
   useEffect(() => {
     const f = () => {
@@ -215,7 +221,10 @@ function App() {
         setJobId(p.get("job")!);
         setWantedFrame(p.get("frame") || "");
         setWantedPerson(p.get("person") || "");
-      } else setPage(location.hash === "#search" ? "search" : "upload");
+      } else {
+        setPage(location.hash.startsWith("#search") ? "search" : "upload");
+        setSearchScope(p.get("video_job") || "");
+      }
     };
     window.addEventListener("hashchange", f);
     return () => window.removeEventListener("hashchange", f);
@@ -364,13 +373,20 @@ function App() {
           {page === "upload" ? (
             <UploadPage ready={ready} open={navigate} error={setToast} />
           ) : page === "search" ? (
-            <SearchPage ready={ready} open={navigate} error={setToast} />
+            <SearchPage
+              key={searchScope || "all"}
+              initialVideoJob={searchScope}
+              ready={ready}
+              open={navigate}
+              error={setToast}
+            />
           ) : (
             <ResultPage
               id={jobId}
               wantedFrame={wantedFrame}
               wantedPerson={wantedPerson}
               error={setToast}
+              searchVideo={(id: string) => navigate("search", id)}
             />
           )}
         </div>
@@ -810,11 +826,13 @@ function ResultPage({
   wantedFrame,
   wantedPerson,
   error,
+  searchVideo,
 }: {
   id: string;
   wantedFrame: string;
   wantedPerson: string;
   error: (s: string) => void;
+  searchVideo: (id: string) => void;
 }) {
   const [job, setJob] = useState<Row>(),
     [frame, setFrame] = useState<Row>(),
@@ -926,6 +944,7 @@ function ResultPage({
           <label>
             เฟรมที่วิเคราะห์
             <select
+              aria-label="เฟรมที่วิเคราะห์"
               value={fid}
               onChange={(e) => {
                 setFid(e.target.value);
@@ -954,6 +973,10 @@ function ResultPage({
           >
             <Play size={16} />
             เปิดคลิป ณ เวลาที่พบ
+          </button>
+          <button className="secondary" onClick={() => searchVideo(job.id)}>
+            <Search size={16} />
+            ค้นหาบุคคลในคลิปนี้
           </button>
         </div>
       )}
@@ -1230,10 +1253,12 @@ function SearchPage({
   ready,
   open,
   error,
+  initialVideoJob = "",
 }: {
   ready?: Row;
   open: Function;
   error: (s: string) => void;
+  initialVideoJob?: string;
 }) {
   const [filter, setFilter] = useState<Row>({
       upper: "",
@@ -1245,43 +1270,96 @@ function SearchPage({
       uploaded_to: "",
       event_from: "",
       event_to: "",
+      job_id: initialVideoJob,
+      time_from_seconds: "",
+      time_to_seconds: "",
     }),
     [items, setItems] = useState<Row[]>([]),
     [page, setPage] = useState(1),
     [total, setTotal] = useState(0),
     [busy, setBusy] = useState(false),
-    [submitted, setSubmitted] = useState<Row>({});
+    [submitted, setSubmitted] = useState<Row>(
+      initialVideoJob ? { job_id: initialVideoJob } : {},
+    ),
+    [moments, setMoments] = useState<Row[]>([]),
+    [momentTotal, setMomentTotal] = useState(0),
+    [momentPage, setMomentPage] = useState(1),
+    [videos, setVideos] = useState<Row[]>([]),
+    [videoPage, setVideoPage] = useState(1),
+    [videoTotal, setVideoTotal] = useState(0),
+    [videoQuery, setVideoQuery] = useState(""),
+    [chosenVideo, setChosenVideo] = useState<Row>();
+  const requestSeq = useRef(0);
+  useEffect(() => {
+    let active = true;
+    const timer = setTimeout(
+      () =>
+        api(
+          "/video-jobs?" +
+            new URLSearchParams({ page: String(videoPage), q: videoQuery }),
+        )
+          .then((r) => {
+            if (active) {
+              setVideos(r.items);
+              setVideoTotal(r.total);
+            }
+          })
+          .catch((e) => {
+            if (active) error(e.message);
+          }),
+      250,
+    );
+    return () => {
+      active = false;
+      clearTimeout(timer);
+    };
+  }, [videoPage, videoQuery]);
+  useEffect(() => {
+    if (initialVideoJob)
+      api("/jobs/" + initialVideoJob)
+        .then((j) => setChosenVideo({ ...j, job_id: j.id }))
+        .catch((e) => error(e.message));
+  }, [initialVideoJob]);
   function field(k: string, v: string) {
     setFilter({ ...filter, [k]: v });
   }
   async function search() {
+    const sequence = ++requestSeq.current;
     setBusy(true);
     try {
       const params = new URLSearchParams({
         page: String(page),
         page_size: "18",
+        include_moments: "true",
+        moment_page: String(momentPage),
+        moment_page_size: "12",
       });
       Object.entries(submitted).forEach(([k, v]) => {
         if (v)
           params.set(
             k,
-            k.includes("_from") || k.includes("_to")
+            ["uploaded_from", "uploaded_to", "event_from", "event_to"].includes(
+              k,
+            )
               ? new Date(v).toISOString()
               : v,
           );
       });
       const r = await api("/search?" + params);
+      if (sequence !== requestSeq.current) return;
       setItems(r.items);
       setTotal(r.total);
+      setMoments(r.moments || []);
+      setMomentTotal(r.total_moments || 0);
     } catch (e) {
-      error((e as Error).message);
+      if (sequence === requestSeq.current) error((e as Error).message);
     } finally {
-      setBusy(false);
+      if (sequence === requestSeq.current) setBusy(false);
     }
   }
   useEffect(() => {
     search();
-  }, [page, submitted]);
+  }, [page, momentPage, submitted]);
   return (
     <>
       <div className="page-heading">
@@ -1300,9 +1378,66 @@ function SearchPage({
         onSubmit={(e) => {
           e.preventDefault();
           setPage(1);
+          setMomentPage(1);
           setSubmitted({ ...filter });
         }}
       >
+        <div className="video-search-scope">
+          <div className="form-row">
+            <label>
+              ค้นชื่อวิดีโอที่วิเคราะห์แล้ว
+              <input
+                value={videoQuery}
+                placeholder="พิมพ์ชื่อคลิปหรือแหล่งข้อมูล"
+                onChange={(e) => {
+                  setVideoQuery(e.target.value);
+                  setVideoPage(1);
+                }}
+              />
+            </label>
+            <label>
+              ขอบเขตวิดีโอ
+              <select
+                aria-label="ขอบเขตวิดีโอ"
+                value={filter.job_id}
+                onChange={(e) => {
+                  const id = e.target.value;
+                  field("job_id", id);
+                  setChosenVideo(videos.find((v) => v.job_id === id));
+                }}
+              >
+                <option value="">ทุกไฟล์ที่วิเคราะห์สำเร็จ</option>
+                {Array.from(
+                  new Map(
+                    [...videos, ...(chosenVideo ? [chosenVideo] : [])].map(
+                      (v) => [v.job_id, v],
+                    ),
+                  ).values(),
+                ).map((v) => (
+                  <option value={v.job_id} key={v.job_id}>
+                    {v.filename} · {v.source || "ไม่ระบุแหล่งข้อมูล"} · #
+                    {v.job_id.slice(0, 8)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          {videoTotal > 50 && (
+            <Pagination
+              page={videoPage}
+              total={videoTotal}
+              size={50}
+              change={setVideoPage}
+            />
+          )}
+          {filter.job_id && chosenVideo && (
+            <p className="subtle">
+              งาน #{filter.job_id.slice(0, 8)} · สุ่มเฟรมทุก{" "}
+              {chosenVideo.sampling_seconds} วินาที · วิเคราะห์แล้ว{" "}
+              {chosenVideo.completed_frames} เฟรม
+            </p>
+          )}
+        </div>
         <div className="search-primary">
           {[
             ["upper", "สีเสื้อผ้าส่วนบน"],
@@ -1311,6 +1446,7 @@ function SearchPage({
             <label key={key}>
               {label}
               <select
+                aria-label={label}
                 value={filter[key]}
                 onChange={(e) => field(key, e.target.value)}
               >
@@ -1344,8 +1480,31 @@ function SearchPage({
           <summary>ตัวกรองเพิ่มเติม</summary>
           <div className="search-extra">
             <label>
+              เวลาในคลิป ตั้งแต่ (วินาที)
+              <input
+                type="number"
+                min="0"
+                step="0.001"
+                placeholder="เช่น 30"
+                value={filter.time_from_seconds}
+                onChange={(e) => field("time_from_seconds", e.target.value)}
+              />
+            </label>
+            <label>
+              เวลาในคลิป ถึง (วินาที)
+              <input
+                type="number"
+                min="0"
+                step="0.001"
+                placeholder="เช่น 90"
+                value={filter.time_to_seconds}
+                onChange={(e) => field("time_to_seconds", e.target.value)}
+              />
+            </label>
+            <label>
               ประเภทเสื้อผ้า
               <select
+                aria-label="ประเภทเสื้อผ้า"
                 value={filter.garment}
                 onChange={(e) => field("garment", e.target.value)}
               >
@@ -1366,6 +1525,7 @@ function SearchPage({
             <label>
               ประเภทไฟล์
               <select
+                aria-label="ประเภทไฟล์"
                 value={filter.kind}
                 onChange={(e) => field("kind", e.target.value)}
               >
@@ -1396,6 +1556,75 @@ function SearchPage({
           ค้นสีหลัก/รองที่มีพื้นที่อย่างน้อย 15% · แสดงเฉพาะงานสำเร็จ
         </p>
       </form>
+      {(momentTotal > 0 || submitted.job_id) && (
+        <section className="card found-moments">
+          <div className="section-heading">
+            <h2>
+              เวลาที่พบในวิดีโอ{" "}
+              <span className="count">{momentTotal} เฟรมที่ตรงเงื่อนไข</span>
+            </h2>
+            <Clock size={18} />
+          </div>
+          <p className="subtle">
+            แต่ละเวลาเป็นเฟรมที่วิเคราะห์จริง อาจมีคนลักษณะคล้ายกันหลายคน
+            ไม่ใช่ช่วงปรากฏตัวต่อเนื่องหรือการยืนยันตัวตน
+          </p>
+          <div className="moment-list">
+            {moments.map((m) => (
+              <article className="moment" key={m.frame_id}>
+                <button
+                  className="moment-time"
+                  onClick={() =>
+                    open("result", m.job_id, m.frame_id, m.persons[0].id)
+                  }
+                >
+                  <Play size={15} />
+                  {stamp(m.timestamp_seconds)}
+                </button>
+                <div>
+                  <strong>{m.filename}</strong>
+                  <p>
+                    {m.source || "ไม่ระบุแหล่งข้อมูล"} · ตรงเงื่อนไข{" "}
+                    {m.matching_observations} รายการ · สุ่มทุก{" "}
+                    {m.sampling_seconds}s
+                  </p>
+                  {m.event_start && (
+                    <small>
+                      เวลาอ้างอิงจากผู้ใช้:{" "}
+                      {new Date(
+                        new Date(m.event_start).getTime() +
+                          m.timestamp_seconds * 1000,
+                      ).toLocaleString("th-TH")}
+                    </small>
+                  )}
+                </div>
+                <div className="moment-persons">
+                  {m.persons.map((p: Row) => (
+                    <button
+                      key={p.id}
+                      onClick={() => open("result", m.job_id, m.frame_id, p.id)}
+                    >
+                      บุคคล #{p.ordinal}
+                      <ChevronRight size={13} />
+                    </button>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+          {!moments.length && (
+            <p className="muted">
+              ไม่มีเฟรมวิดีโอที่ตรงเงื่อนไขในงานที่สำเร็จแล้ว
+            </p>
+          )}
+          <Pagination
+            page={momentPage}
+            total={momentTotal}
+            size={12}
+            change={setMomentPage}
+          />
+        </section>
+      )}
       <div className="section-heading">
         <h2>พบ {total} รายการบุคคล</h2>
         <span className="muted">

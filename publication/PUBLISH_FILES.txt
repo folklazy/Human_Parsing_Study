@@ -42,7 +42,9 @@ Body_Extraction_Human/scripts/verify_runtime_cache.py
 Body_Extraction_Human/tests/browser_check.py
 Body_Extraction_Human/tests/browser_result_check.py
 Body_Extraction_Human/tests/browser_upload_check.py
+Body_Extraction_Human/tests/browser_video_search_check.py
 Body_Extraction_Human/tests/test_contracts.py
+Body_Extraction_Human/tests/test_video_search.py
 CCTV_Human_Parsing_Benchmark/.gitignore
 CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md
 CCTV_Human_Parsing_Benchmark/PROTOCOL.md
@@ -1074,6 +1076,7 @@ provenance/STAGE0_VALIDATION.json
 provenance/WORK_PRESERVATION_20261021.json
 publication/ARCHIVED_REPORT_INDEX.json
 publication/BODY_EXTRACTION_APP_20261101.json
+publication/BODY_VIDEO_SEARCH_20261101.json
 publication/CCTV_CONTROLLED_GT_DIAGNOSTICS_20261101.json
 publication/CCTV_CONTROLLED_ROI_DESIGN_20261101.json
 publication/CCTV_CONTROLLED_ROI_RUN_20261101.json

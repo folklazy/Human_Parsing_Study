@@ -104,3 +104,22 @@ public Git เก็บ source/config/schema/docs/aggregate evidence เท่�
 ส่งมอบเป็น snapshot หลังพัฒนาและตรวจ ไม่ใช่ commitที่มีอยู่ตอนเริ่มทดสอบ;
 execution source hashes ในแต่ละ attempt เป็นหลักฐานโค้ดที่ผูกกับงานนั้น.
 ผล benchmark เดิม/weights/GT/datasetsไม่เปลี่ยน และไม่มี benchmark/trainingใหม่.
+
+## Video appearance search
+
+เพิ่มการค้นหาเฉพาะ completed video job, ตัวกรองช่วงวินาทีแบบ inclusive และ
+ตารางเวลาที่พบรายเฟรม พร้อมจำนวน observations/ปุ่มเปิดบุคคลโดยตรง. ใช้เงื่อนไข
+AND ชุดเดียวกับ person cards และเฉพาะ current successful attempt. จำนวน
+เวลาที่พบคือจำนวนเฟรมที่มีผลตรง ไม่ใช่จำนวนคนไม่ซ้ำหรือช่วงติดตามต่อเนื่อง.
+
+ตรวจเฉพาะส่วนเพิ่มด้วย saved QA video outputs เดิม:3 integration tests PASS
+ครอบคลุม exact clip scope, moment pagination, matching-person AND filters,
+inclusive zero-time/range validation และ authentication. Chromium จริงผ่าน
+result→ค้นหาในคลิป→เลือกสี→เวลาที่พบ→exact person/frame→video seek, ไม่มีJSerror.
+เปิดดู screenshot timeline จริงแล้ว. พบรอบแรกว่า accessible label ของ select
+รวมข้อความ options จึงเพิ่ม aria-label ให้ชัด แล้วตรวจ browser ผ่าน.
+
+รอบนี้ไม่มี upload/model inference ใหม่, ไม่มีการเปลี่ยน worker/weights/
+preprocessing/color/scientific configs และไม่รีสตาร์ต worker. รีสตาร์ตเฉพาะAPI
+เพื่อโหลด endpoints ใหม่; native benchmark/results และงานที่บันทึกแล้วคงเดิม.
+ภาพ/ผลรายคน/รายละเอียดคลิปจากการตรวจอยู่ใน private .runtime/ เท่านั้น.

@@ -81,5 +81,29 @@
     "no clean latency/FPS/VRAM ranking",
     "full CPU/Sapiens path not tested",
     "Sapiens usage restrictions remain applicable"
-  ]
+  ],
+  "video_search_extension": {
+    "updated_utc": "2026-11-01T20:01:22.920518+00:00",
+    "status": "PASS",
+    "new_inference": false,
+    "CPU_saved_output_integration": "3 PASS",
+    "actual_browser": {
+      "video_scope": true,
+      "same_person_AND_filters": true,
+      "moments": 1,
+      "exact_frame_person_link": true,
+      "actual_video_seek": true,
+      "JS_errors": [],
+      "new_inference": false
+    },
+    "worker_restarted": false,
+    "features": [
+      "exact video analysis scope",
+      "same-person clothing AND",
+      "inclusive time window",
+      "paginated observed frame timestamps",
+      "exact frame/person links and video seek"
+    ],
+    "claim": "matching observations at sampled timestamps, not tracking or continuous presence"
+  }
 }

@@ -3,6 +3,12 @@
 **V1_END_TO_END_VERIFIED_ON_T4** — local server application, not public hosting or
 an independent accuracy/deployment certification.
 
+Current extension: **VIDEO_APPEARANCE_SEARCH_WITH_OBSERVED_TIMESTAMPS**.
+Select an exact completed video analysis, filter same-person clothing colors,
+inspect paginated matching frame timestamps and open exact person/frame/video
+position. No tracking/continuous-interval claim. Three read-only integration
+checks and real-browser verification use saved QA video outputs; no new inference.
+
 - Real pipeline: YOLO26x-Seg → controlled Sapiens2 1B person ROI/native29 → owned
   garment masks → selected T4 MLP + separately named observed RGB palette.
 - React/TypeScript frontend, authenticated FastAPI, separate durable PostgreSQL

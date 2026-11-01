@@ -909,6 +909,82 @@ footer {
 .search-form {
   padding: 22px;
 }
+.video-search-scope {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e4ecef;
+}
+.video-search-scope .form-row {
+  margin-top: 0;
+  grid-template-columns: 1fr 1.7fr;
+}
+.found-moments {
+  margin-top: 24px;
+  padding: 22px;
+}
+.found-moments .section-heading {
+  margin: 0 0 9px;
+}
+.moment-list {
+  margin-top: 16px;
+}
+.moment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #edf1f4;
+  padding: 15px 0;
+}
+.moment-time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 119px;
+  padding: 9px 12px;
+  background: #eaf6f3;
+  color: #157d72;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 12px;
+}
+.moment strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.moment p,
+.moment small {
+  font-size: 10px;
+  color: #8799a6;
+  margin-top: 4px;
+}
+.moment-persons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-left: auto;
+}
+.moment-persons button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #dce8e6;
+  padding: 5px 8px;
+  font-size: 10px;
+  color: #4d7d75;
+  background: #fbfdfc;
+}
+@media (max-width: 850px) {
+  .video-search-scope .form-row {
+    grid-template-columns: 1fr;
+  }
+  .moment {
+    flex-wrap: wrap;
+  }
+  .moment-persons {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .search-primary {
   display: grid;
   grid-template-columns: 1fr 1fr 1.4fr auto;
