@@ -80,3 +80,5 @@ APIbudgetเปิดเผยปรับจาก1134เป็น**1138สู�
 Continuationจะรอparentคิวเก้าระบบจบก่อน จึงไม่ชนGPUworkers;parentinterruptionหรือqueueเกิน24hต้องหยุด/reconcile. หลังจบสร้าง`ASSEMBLED_PREDICTION_INDEX.json`ชี้packetrootของทั้งเก้าระบบ โดยfinalframepacketsของสามระบบที่continueประกอบจากparent+newROIs. ภาพบางส่วนอาจกลับมาแสดงframecount0ขณะกำลังassemblesegmentใหม่ แต่ROIcountรวมparentreuseแล้ว ไม่ใช่สูญเสียผล/inferenceซ้ำ. [Sanitized continuation record](CONTROLLED_ROI_CONTINUATION.json).
 
 HeadlineยังnullจนGTNeck/remainingowner/contourQAและscorerclosureผ่าน. Historyfailuresคงเดิมแม้assembledacceptedmembershipครบในภายหลัง. Timingยังเป็นsharedGPUdiagnostics ไม่ใช้ranking.
+
+Continuation launch snapshot 2026-11-01T19:19:06.725818+07:00: PID1357726/SID1357726/PPID1,sourcecommit`1e00fc68b059f1e7c7ccb805154fba46f3874b41`;status`QUEUED_UNTIL_PARENT_TERMINAL`. ถ้ายังQUEUEDห้ามเรียกว่ามีrepairedGPUoutputแล้ว. CPUcontractcasesผ่าน แต่GPUcorrectionacceptanceต้องอ่านactualnewpacketsภายหลัง. Autonomousqueueไม่ต้องค้างCodexturn.

@@ -270,12 +270,14 @@
     ],
     "continuation": {
       "run_id": "cctv-roi-continuation-20261101T121138Z",
-      "status": "PREPARED",
+      "status": "QUEUED_UNTIL_PARENT_TERMINAL",
       "report": "reports/CONTROLLED_ROI_CONTINUATION.json",
       "pending_ROIs": 334,
       "parent_reused_ROIs": 56,
       "additional_engineering_call_cap": 4,
-      "primary": null
+      "primary": null,
+      "controller_pid": 1357726,
+      "launch_commit": "1e00fc68b059f1e7c7ccb805154fba46f3874b41"
     }
   },
   "original_cohort_counts_are_historical": true

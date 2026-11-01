@@ -45,18 +45,18 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STATUS.md",
-      "bytes": 8771,
-      "sha256": "9742441703c2cb3d2af5c747354913b79ae68f9b27330a37baa357b6370e4cb5"
+      "bytes": 8815,
+      "sha256": "71ab7b86fb286ff922414fe9e6584c40d8c5a575dc5995b6f718ba64515344c9"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/STUDY_STATE.json",
-      "bytes": 10392,
-      "sha256": "e8a47882cb6e0e47d90bb21b2a84166fd44d0a018a6838d423540ffd6067f7bd"
+      "bytes": 10512,
+      "sha256": "46d9a42aa1a79b6a0329eeaa6e4b8651bc4a7236f579796d0c4f7aeecf00b95e"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/WORK_LOG.md",
-      "bytes": 17566,
-      "sha256": "c5b9ac0165796443ffc06faa21ad68debc71399fd20d0ec0b748e6cb3eb4973c"
+      "bytes": 17938,
+      "sha256": "3a1c210fa444b1332adec727f8d3176f0dfea43de96c1c666897527a1f0e253d"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_SCOPE.json",
@@ -170,8 +170,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_CONTINUATION.json",
-      "bytes": 1632,
-      "sha256": "57cd87aecbdcf776742215c27b2c54dcb9e2269e2e3f323a8a399dd7d7194d9e"
+      "bytes": 1977,
+      "sha256": "885c6f6c36c5d802e60137743f22ebe0229abe8de88b1b72e03a6f85c4f2234b"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_DESIGN_REVIEW.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md",
-      "bytes": 13482,
-      "sha256": "d9cd11da17ebb68260071ac93c4c5b3cc740919d1cc7034b2ae9ff6436c9de63"
+      "bytes": 13947,
+      "sha256": "f492e19f9034531aac1c1da197a37d48e74fb3e78825b884eb1ddbb09360b5d0"
     },
     {
       "path": "CCTV_Human_Parsing_Benchmark/reports/CPU_ACCEPTANCE.json",
@@ -4786,7 +4786,7 @@
     {
       "path": "publication/CCTV_CONTROLLED_ROI_RUN_20261101.json",
       "bytes": 3984,
-      "sha256": "bac9fc51db6a44c64063a1f96d490cdcc96dfc9add75d565cf0cef7384ed76a4"
+      "sha256": "ec01de280c99bcf45cf37c002441fddf7d9ac6b7ff8e42db4324be7194d0113c"
     },
     {
       "path": "publication/CCTV_METRIC_AUDIT_20261101.json",
@@ -6661,5 +6661,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T12:14:52.084875+00:00"
+  "last_updated_utc": "2026-11-01T12:19:06.834599+00:00"
 }
