@@ -1,0 +1,44 @@
+{
+  "protocol": "CCTV_SELECTED_ANNOTATED_PARTS_V1",
+  "status": "FROZEN_BEFORE_NEW_SELECTED_PART_SCORES",
+  "created_utc": "2026-11-01T01:45:46.079324+00:00",
+  "post_hoc": true,
+  "source_run": "cctv-partial-20261031T1800Z",
+  "population": 90,
+  "models": 9,
+  "GT_binding_local_reference": "outputs/selected-part-bindings-20261101/GT_BINDING.json",
+  "GT_binding_sha256": "f1c97fa313f068bf363974f0a9a30b1bb0473439795df30a1ee3b43602820fdd",
+  "GT_visual_review_sha256": "842764a0bd191815217cd86d2c657a11c41dc2c635e8de562b8a50df7b248b36",
+  "projection_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "source_config_sha256": "5dac602e0c01343748d7febc06fc8a3c9eef777b88f7437c56fa099d3dc49eaf",
+  "primary": "macro_mean_selected_part_IoU4",
+  "primary_parts": 315,
+  "all_source_parts_sensitivity": 324,
+  "targets": [
+    "Face",
+    "Hair",
+    "Upper",
+    "Lower"
+  ],
+  "assignment": {
+    "GT_geometry": "union of all source annotated parts per person",
+    "candidate_min_bbox_coverage": 0.5,
+    "objective": [
+      "maximum cardinality",
+      "maximum sum GT-union bbox coverage"
+    ],
+    "equal_objective_tie": [
+      "detector confidence descending",
+      "bbox coordinates",
+      "stable opportunity ID"
+    ],
+    "no_parser_semantics": true,
+    "missed_GT_part_score": 0
+  },
+  "prediction_scope": "entire original-grid final person target plane associated with fixed YOLO opportunity; no GT clipping",
+  "selection_rule": "highest QA_PRIMARY overall macro_mean_selected_part_IoU4 among STRICT_COMPLETE systems; report all-source sensitivity and per-target tradeoffs; observed task leader only",
+  "source_code_sha256": "6aa453702c923712cac3879e2ce3b92d16d8a3680daad9d97a19adfb166f3d16",
+  "model_calls": 0,
+  "human_expert_QA": false,
+  "full_scene_claim": false
+}

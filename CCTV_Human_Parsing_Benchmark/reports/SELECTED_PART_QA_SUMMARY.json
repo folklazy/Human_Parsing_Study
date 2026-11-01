@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-01T01:45:46.079324+00:00",
+  "status": "GT_ONLY_SCREEN_FROZEN_BEFORE_NEW_SCORES",
+  "reviewer": "Codex visual assistant; not an independent human expert or inter-rater study",
+  "review_method": "All16GT-onlypages/127personrecords,10detailedzooms; parser semantic outputs hidden",
+  "source_images": 90,
+  "source_person_records": 127,
+  "source_parts": 324,
+  "primary_parts": 315,
+  "primary_target_counts": {
+    "Hair": 69,
+    "Upper": 115,
+    "Lower": 97,
+    "Face": 34
+  },
+  "excluded_part_counts": {
+    "VISIBLE_UPPER_CONTOUR_NOT_CONFIDENTLY_COMPLETE": 1,
+    "GARMENT_VS_OBJECT_OR_UPPER_REGION_UNRESOLVED": 1,
+    "UPPER_REGION_INCLUDES_EXPOSED_TORSO": 1,
+    "GARMENT_BOUNDARY_UNRESOLVED": 1,
+    "ONE_PIECE_SPLIT_WITHOUT_GUIDELINE": 2,
+    "VISIBLE_LOWER_CONTOUR_NOT_CONFIDENTLY_COMPLETE": 1,
+    "INTERIOR_REGION_ONLY": 1,
+    "GARMENT_VS_CARRIED_EQUIPMENT_UNRESOLVED": 1
+  },
+  "shared_detector_missed_person_records": 21,
+  "equal_assignment_person_records": 1,
+  "review_binding_sha256": "f1c97fa313f068bf363974f0a9a30b1bb0473439795df30a1ee3b43602820fdd",
+  "protocol_sha256": "d0b0446f64b26b8b7b3ad9c99980db17c621b3abefb8708847afb6ee856c1f4b",
+  "CCTV_assets_or_per_person_records_public": false,
+  "claims": [
+    "Agent-assisted visual screening, not expert certification or independent inter-rater agreement",
+    "Original GT bytes and native packets remain unchanged",
+    "All-source sensitivity retains the nine excluded part records"
+  ]
+}

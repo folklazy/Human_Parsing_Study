@@ -4,11 +4,13 @@ ARTIFACTS.md
 CCTV_Human_Parsing_Benchmark/.gitignore
 CCTV_Human_Parsing_Benchmark/PROTOCOL.md
 CCTV_Human_Parsing_Benchmark/README.md
+CCTV_Human_Parsing_Benchmark/SELECTED_PART_PROTOCOL.md
 CCTV_Human_Parsing_Benchmark/STATUS.md
 CCTV_Human_Parsing_Benchmark/STUDY_STATE.json
 CCTV_Human_Parsing_Benchmark/WORK_LOG.md
 CCTV_Human_Parsing_Benchmark/configs/LAUNCH_SPECIFICATION.json
 CCTV_Human_Parsing_Benchmark/configs/PROTOCOL.json
+CCTV_Human_Parsing_Benchmark/configs/SELECTED_PART_PROTOCOL.json
 CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_DIAGNOSTICS.csv
 CCTV_Human_Parsing_Benchmark/metrics/KNOWN_DOMAIN_PER_TARGET.csv
 CCTV_Human_Parsing_Benchmark/metrics/PARTIAL_RECALL.csv
@@ -19,11 +21,14 @@ CCTV_Human_Parsing_Benchmark/reports/FULL_BENCHMARK_ACCEPTANCE_TH.md
 CCTV_Human_Parsing_Benchmark/reports/LAUNCH_VERIFICATION.json
 CCTV_Human_Parsing_Benchmark/reports/METRIC_AUDIT_EVIDENCE.json
 CCTV_Human_Parsing_Benchmark/reports/RESULTS_TH.md
+CCTV_Human_Parsing_Benchmark/reports/SELECTED_PART_QA_SUMMARY.json
 CCTV_Human_Parsing_Benchmark/scripts/audit_saved_metrics.py
 CCTV_Human_Parsing_Benchmark/scripts/benchmark.py
 CCTV_Human_Parsing_Benchmark/scripts/finalize.py
 CCTV_Human_Parsing_Benchmark/scripts/progress.py
+CCTV_Human_Parsing_Benchmark/scripts/selected_part_evaluation.py
 CCTV_Human_Parsing_Benchmark/tests/test_protocol.py
+CCTV_Human_Parsing_Benchmark/tests/test_selected_parts.py
 DATASET_DETAILS.md
 DATA_SCHEMA.md
 EXPERIMENT_PROTOCOL.md
@@ -956,6 +961,7 @@ publication/CCTV_METRIC_AUDIT_20261101.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-launch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031-prelaunch.json
 publication/CCTV_PARTIAL_cctv-partial-20261031T1800Z_terminal.json
+publication/CCTV_SELECTED_PART_EVALUATION_20261101.json
 publication/CIHP_CONTINUATION_LAUNCH_20261028.json
 publication/CIHP_CONTROLLED_CONTINUATION_READY_20261028.json
 publication/CIHP_INTAKE_20261028T030159730335Z.json

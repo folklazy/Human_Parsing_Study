@@ -1,5 +1,7 @@
 # CCTV Human Parsing Benchmark
 
+งานปัจจุบัน: [selected annotated-part IoU/Dice protocol](SELECTED_PART_PROTOCOL.md) → [STATUS](STATUS.md). ใช้ saved masks เดิมเพื่อวัดส่วนที่ขาดและทายล้นของคนที่ annotate; แยกจาก positive-domain results ด้านล่าง. ไม่ใช้ GT0 เป็น full-scene background และไม่แก้ native inference.
+
 ทดสอบ pretrained parsing 9 checkpoints เดิมกับ CCTV partial annotations โดยเก็บภาพและ artifacts ภายใน workspace เท่านั้น เริ่มอ่าน [PROTOCOL.md](PROTOCOL.md) → [STATUS.md](STATUS.md) → [ผลจริง](reports/RESULTS_TH.md)
 
 นี่เป็น experiment แยกที่ workspace root ตาม AGENTS.md ใช้ shared code จาก `../Human_Parsing_Benchmark/src/`, weights `../models/`, environments `../.venvs/` และ dataset `../datasets/CCTV_100_Evaluation/` ไม่มีการย้ายหรือลบงานเดิม ไม่มี nested Git ข้อมูล CIHP/native/common results เดิมคงเดิม
