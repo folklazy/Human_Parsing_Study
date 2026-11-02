@@ -269,3 +269,68 @@ Faceยังเป็น21/35referencecontoursที่ผ่านagent-assist
 
 สร้างซ้ำจาก private accepted scoring artifacts ที่ตรวจรับแล้วได้ด้วย environment เดิมที่มี matplotlib (ไม่โหลดโมเดล): `python CCTV_Human_Parsing_Benchmark/scripts/report_target_confusion.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` คำสั่งสร้างเฉพาะภาพ/CSV/ส่วน diagnostics ในรายงานนี้ และเก็บ verification ใน private outputs; public clone ไม่มี private inputs จึงยังสร้างซ้ำไม่ได้จนกว่าจะจัดเตรียม artifacts ที่มีสิทธิ์เข้าถึง
 <!-- TARGET_CONFUSION_END -->
+
+<!-- RUNTIME_DIAGNOSTICS_START -->
+## ความเร็วและเวลาประมวลผลจาก log เดิม
+
+**เป็น historical shared-GPU adapter diagnostics บน Tesla T4 ที่บันทึกไว้ ไม่ใช่ clean parser-only หรือ end-to-end speed benchmark** ไม่มีการรันโมเดลใหม่เพื่อเพิ่มตารางนี้ หน่วยหลักเป็นหนึ่ง shared person ROI ไม่ใช่หนึ่งภาพ; 90 ภาพมี 130 YOLO opportunities และ 8 ภาพไม่มี detection แต่ละ call คืนทุก native class ร่วมกัน จึงไม่มีเวลาราย Hair/Face/Upper/Lower แยกต่างหาก
+
+### A. เวลา adapter จาก monotonic timer — parent segment
+
+| Model | ROI ที่มี timer / 130 | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวมเวลาที่จับ s |
+|---|---:|---:|---:|---:|---:|
+| QANet | 130/130 | 76.325 | 75.173 | 91.062 | 9.922 |
+| M2FP | 130/130 | 220.187 | 224.719 | 264.329 | 28.624 |
+| D2FP | 130/130 | 694.885 | 702.347 | 858.098 | 90.335 |
+| RP-R-CNN | 1/130 | 351.633 | 351.633 | 351.633 | 0.352 |
+| CPI R50 | 28/130 | 2806.344 | 2551.307 | 5762.779 | 78.578 |
+| CPI ConvNeXt-B | 27/130 | 485.599 | 502.240 | 710.526 | 13.111 |
+| Sapiens2 0.4B | 115/130 | 1410.127 | 1435.509 | 1450.973 | 162.165 |
+| Sapiens2 0.8B | 115/130 | 2922.120 | 2944.655 | 3021.344 | 336.044 |
+| Sapiens2 1B | 115/130 | 4143.146 | 4187.459 | 4307.980 | 476.462 |
+
+นับ ROI_READINESS ที่เป็นสมาชิกจริงด้วย ไม่มี inference ซ้ำเฉพาะ timing และไม่คัดจากคะแนน แยก TRAIN warmup ออกทั้งหมด RP-R-CNN มี timer เพียง 1 ROI; CPI เป็น parent subset 28/27 ROI จึงใช้เป็นตัวแทนเต็มชุดไม่ได้ Sapiens แต่ละขนาดมี 115 ROI; อีก 15 เป็น prior diagnostic predictions ที่ reuse จึงไม่มี timer ของรอบนี้ ไม่เติมศูนย์หรือรวม timer คนละขอบเขตจาก pilot
+
+### B. Continuation — ช่วงเวลาระหว่าง UTC events
+
+| Model | ROI ที่มี start–end | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวม interval s |
+|---|---:|---:|---:|---:|---:|
+| RP-R-CNN | 129 | 225.817 | 220.679 | 307.976 | 29.130 |
+| CPI R50 | 102 | 3046.172 | 3372.932 | 5982.932 | 310.710 |
+| CPI ConvNeXt-B | 103 | 491.921 | 456.155 | 809.974 | 50.668 |
+
+Continuation ไม่ได้เก็บ adapter_elapsed_seconds จึงใช้ FORWARD_END.utc − FORWARD_START.utc เป็น **event interval** ที่มี pre-synchronization และการบันทึก resource JSON/flush/fsync เพิ่มด้วย ไม่เท่ากับ monotonic adapter timer ของ A และอาจได้รับผลจากการปรับ system clock จึงไม่เฉลี่ยสองตารางเข้าด้วยกัน ไม่ทิ้ง historical failed call: RP-R-CNN มี start ที่ไม่มี end 1 ครั้ง เก็บประวัติไว้แต่ไม่มี duration ที่วัดจบสำหรับ sample นั้น ส่วน CPI parent หยุดที่ pre-forward headroom guard ไม่ใช่หลักฐาน CUDA OOM ในรอบนี้
+
+### C. เวลา worker ที่ผ่านไปจริง — บัญชีการทำงาน
+
+| Model | จำนวน attempts/segments | Parent s | Continuation s | รวม worker elapsed s |
+|---|---:|---:|---:|---:|
+| QANet | 1 | 52.864 | — | 52.864 |
+| M2FP | 1 | 72.627 | — | 72.627 |
+| D2FP | 1 | 132.674 | — | 132.674 |
+| RP-R-CNN | 2 | 10.704 | 65.200 | 75.904 |
+| CPI R50 | 2 | 99.918 | 386.909 | 486.827 |
+| CPI ConvNeXt-B | 2 | 39.048 | 100.763 | 139.811 |
+| Sapiens2 0.4B | 1 | 237.995 | — | 237.995 |
+| Sapiens2 0.8B | 1 | 468.761 | — | 468.761 |
+| Sapiens2 1B | 1 | 698.234 | — | 698.234 |
+
+Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loading, binding/hash checks, warmup, failed-attempt work, packet readback/assembly/I/O และงานบันทึกสถานะที่เกิดใน worker แต่ไม่รวม controller queue/gap ระหว่าง attempts, prior diagnostic run, YOLO cache preparation, GT review หรือ CPU scoring ภายหลัง เป็นเวลาที่ใช้ทำงานในรอบที่ระบุ ไม่ใช่เวลาทำนายใหม่ครบ 90 ภาพจากศูนย์ และไม่ใช่ผลรวม GPU kernel time
+
+### ขอบเขตที่รวมและไม่รวม
+
+| ขั้นตอน | อยู่ใน A/B หรือไม่ |
+|---|---|
+| Frozen YOLO26x segmentation, สร้าง crop และอ่าน/ตรวจ crop PNG รอบนอก | ไม่รวม; เกิดก่อนเข้า forward timer จึงใช้สร้าง end-to-end FPS ไม่ได้ |
+| Preprocessing ภายใน adapter, CPU→GPU, parser, GPU→CPU, restore labels สู่ crop grid และ native-instance selection | รวมตาม implementation ของแต่ละ adapter |
+| Internal proposals/detector ของ native instance parsers | รวมเมื่อโมเดลนั้นมีอยู่; QANet/Sapiens ไม่ได้ทำงานส่วนเดียวกัน |
+| CPI native file I/O | รวมการเปิด crop ผ่าน MMCV, native PNG export/readback และ selected-instance decoding ภายใน infer; จึงไม่ใช่เวลา forward ล้วน |
+| Final placement บน original image, YOLO mask clipping/ownership และ atomic packet write/readback | ไม่รวม A; B รวม resource JSON ก่อน event end แต่ยังไม่รวม final packet write/placement เหล่านี้ |
+| Model loading, TRAIN warmup, GT scorer, color extraction | ไม่รวมในค่าเฉลี่ย A/B; worker C รวม loading/warmup แต่ไม่รวม GT scoring/color |
+
+ขอบเขตตรวจจาก [parent forward timer](../scripts/controlled_roi.py), [continuation event boundaries](../scripts/controlled_roi_continuation.py) และ [crop adapters](../scripts/controlled_roi_models.py) ใช้ [time.monotonic](https://docs.python.org/3/library/time.html#time.monotonic) และ [torch.cuda.synchronize](https://docs.pytorch.org/docs/stable/generated/torch.cuda.synchronize.html) รอบ inference ตาม source จริง Mean = Σt/n; Median คือค่ากลาง; P95 เรียง t แล้ว interpolate ตำแหน่ง 0.95×(n−1) แบบ linear ทุกค่าใช้ successful accepted ROI observations รวม valid empty predictions ไม่เลือกภาพตามคุณภาพ
+
+**ข้อสรุปที่ใช้ได้:** ตารางบอกเวลาที่สังเกตได้ของ configuration และสภาพเครื่องในรอบนั้น รวมทั้งจำนวนตัวอย่างที่มีเวลาจริง ไม่เพียงพอจัดอันดับความเร็ว/FPS/VRAM efficiency ข้ามระบบ เพราะมี shared-GPU policy, adapter work, input resolution, PyTorch/CUDA environments และ clock/coverage ต่างกัน การแยกสี่ targets ใช้ forward เดียวกัน ไม่ควรเอาเวลาไปหารสี่เพื่ออ้าง latency ต่อคลาส คะแนนคุณภาพและคำแนะนำเดิมไม่เปลี่ยน
+
+Provenance และค่าก่อนปัดเศษ: [STUDY_STATE.json](../STUDY_STATE.json) → runtime_reporting รวม run IDs, sample counts, environments, segment elapsed และ input-hash digest; raw ATTEMPTS.jsonl / RESOURCE_OBSERVATIONS.json / STATE.json อยู่ใน private outputs ของ parent/continuation สร้างซ้ำเฉพาะส่วนนี้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_runtime.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` โดยไม่อ่านภาพ/masks/weights และไม่เริ่ม inference
+<!-- RUNTIME_DIAGNOSTICS_END -->

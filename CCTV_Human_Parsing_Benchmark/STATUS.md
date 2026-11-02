@@ -1,3 +1,13 @@
+# Current timing update — 2026-11-02T14:57:13.879230+07:00 (Asia/Bangkok)
+
+**HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE — 9 models.** เพิ่ม [สถิติเวลาจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) ในรายงานผลเดิม: monotonic adapter timers 791 ROI และ continuation UTC event intervals 334 ROI แยกตาราง พร้อม Mean/Median/P95 และ worker elapsed; อีก 45 ROI reuse ไม่มี timer ของรอบนี้ แยก TRAIN warmup 12 calls และ failed forward ที่ไม่มี end 1 call ออก ไม่เติมเวลาเป็นศูนย์
+
+Historical Tesla T4 / SHARED_GPU_QUALITY_ONLY; ไม่ใช่ clean parser-only/end-to-end speed ranking เวลาราย ROI ยังไม่รวม YOLO, final ownership/packet I/O หรือ GT scoring; CPI มี native file I/O และ internal detector อยู่ใน adapter ตาม source ขอบเขตต่างกันราย configuration ไม่แปลงเป็น FPS ทั้งระบบ
+
+ตรวจ log/accepted membership/source timer bindings และ CPU reporting checks 8/8 ผ่าน โดยไม่มี inference หรือเปลี่ยน quality/GT/mapping/native results [ค่าก่อนปัดเศษและ provenance](STUDY_STATE.json) → runtime_reporting Next: ใช้รายงานคุณภาพและ timing diagnostics ตามขอบเขตที่ระบุ ไม่มีคิวรันทดลองใหม่
+
+## Earlier current-state snapshots — historical records below
+
 # Current reporting update — 2026-11-02T13:50:26.324719+07:00 (Asia/Bangkok)
 
 **TARGET_CONFUSION_REPORTING_COMPLETE — 9/9 models, 4 targets.** เพิ่ม diagnostics ใน [รายงานสี่เป้าหมายเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน): [ภาพเดียวรวม 36 binary matrices](reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) และ [CSV 36 แถว](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) มี Recall/พลาด/Precision และส่วนที่ไม่ทับ GT พร้อมสูตร ตัวหาร และที่มา

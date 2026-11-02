@@ -18,6 +18,8 @@
 
 Hair / Face-domain / Upper / Lower ใช้ binary 2×2 ต่อคลาส รวม 36 matrices ในภาพเดียว แสดง TP/FP/FN/TN, Recall, พิกเซลที่พลาด และ Precision พร้อมจำนวนส่วนที่ไม่ทับ GT เลย ไม่เปลี่ยนคะแนนหลัก Mean-part IoU / Macro4 เดิม ตัวเลขเป็น selected-person part tasks บน 90 ภาพ ไม่ใช่ full-scene accuracy; Face มี 21 eligible parts และ TN เป็นส่วนเติมเต็มของ task domain
 
+[สถิติความเร็วจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม): Mean/Median/P95 ต่อ ROI และ worker elapsed ทั้ง 9 โมเดล แยก monotonic adapter timer กับ continuation UTC intervals พร้อมจำนวนตัวอย่างและขอบเขต; เป็น shared-GPU diagnostics ยังไม่ใช่ end-to-end FPS ranking
+
 ## ภาพรายละเอียดรายโมเดล (private)
 
 เปิด `outputs/model-detail-gallery-20261102/index.html` เพื่อเลือกดูทั้ง9โมเดลจาก6ภาพเดิม/15ROIs: RGBเทียบGTและprediction, ซูม,ปรับopacity และสลับnativeclasses/สี่เป้าหมายร่วม. ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกเปิดindex.htmlได้โดยไม่ตั้งserver. Images/GT/masks/ZIPไม่ขึ้นpublicGit; [สรุปartifactsและการตรวจ](reports/MODEL_IMAGE_GALLERY.json) มีcounts/hashesและข้อจำกัด. ใช้ผลเดิม ไม่มีinference/rescore.
