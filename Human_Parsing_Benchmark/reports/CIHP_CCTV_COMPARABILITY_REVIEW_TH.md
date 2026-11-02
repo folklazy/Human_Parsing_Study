@@ -103,3 +103,7 @@ IoU/mIoU, Precision/Recall, Dice/F1 เป็นสูตรมาตรฐา�
 ตรวจ9modelIDs/order, CIHPacceptedcompletion5000และexact-membership flagsจากindexเดิม, canonicalMETRICShashes9ไฟล์, protocolhashes3ไฟล์, CCTV90/130acceptedcompleteness, targetrowunique36, sharedGTsupport/domains, nonnegativeTP/FP/FN/TN, IoU/F1จากintegercounts, mean4ตรงsummaryทั้งสองชุด และimmutabilityของ16inputsที่อ่าน. ไม่อ้างว่าเป็นpacket/fullGTauditใหม่หรือmodel execution acceptance. CSVมี36targets+9macro rows; outputevidenceระบุhashesและขอบเขตชัดเจน
 
 ผลauditนี้ไม่รับรองว่าGTถูกทุกpixel, checkpointทั้งหมดใช้bestsettings, หรือpaperreproductionผ่าน. ขั้นต่อไปที่ตรงเป้าหมายคือ bind/ตรวจcontrolledCIHPROIreadinessตามข้อ5 แล้วจึงรันconfigurationใหม่เมื่อผ่าน โดยยังเก็บตารางเดิมเป็นhistoricalreferenceครบ
+
+## การปรับขอบเขตคิวและความเร็วหลังทบทวน
+
+ผู้ใช้ยืนยัน sequential automatic queue และการเก็บเวลาทั้งpipelineตามแนวทางงานYOLO. รายละเอียดอยู่ใน [PLAN ส่วนคิวและเวลา](../PLAN.md#คิวอัตโนมัติและการเก็บเวลาแยกขั้นสำหรับ-controlled-cihp). Qualityใช้cachedYOLOพร้อมstage diagnostics ส่วนliveend-to-end timingต้องใช้frozenYOLOจริงบนfixedsampleพร้อมjointresidencyและcleanmeasurementgates. สถานะinstrumentationและcontrolledCIHPreadinessยังpending

@@ -6,6 +6,72 @@
 
 > **Current scope supersedes prior full-evaluation-pending statements:** approved full C4-P revision2 on official CIHP5000; saved-only four systems + Sapiens2 0.4B. [Full config](configs/cihp_sapiens_c4p_full.json) / [report](reports/CIHP_SAPIENS_C4P_FULL_RESULTS_TH.md). Stop after this batch.
 
+## คิวอัตโนมัติและการเก็บเวลาแยกขั้นสำหรับ controlled CIHP
+
+อัปเดต 2026-11-02T18:51:46.168259+07:00 (Asia/Bangkok). ผู้ใช้ยืนยันให้เก็บเวลาแต่ละขั้นและ pipeline สำหรับวิเคราะห์ภายหลัง พร้อมกำหนดให้วิเคราะห์อันดับหลัง batch ปิด. สถานะ **QUEUE_AND_TIMING_REQUIREMENTS_DEFINED / IMPLEMENTATION_AND_READINESS_PENDING**. หัวข้อนี้เป็นข้อกำหนดของรอบใหม่ การตรวจ source พบ runner CCTV ปัจจุบันมีเพียง synchronized `adapter_elapsed_seconds` ซึ่งครอบ CPI native file I/O จึงต้องเพิ่ม instrumentation ใน execution revision ใหม่ก่อน launch
+
+### การเดินคิวและจุดหยุด
+
+รันหนึ่ง GPU worker และหนึ่ง checkpoint ในแต่ละครั้งตาม frozen roster QANet → M2FP → D2FP → RP-R-CNN → CPI R50 → CPI ConvNeXt-B → Sapiens0.4B → 0.8B → 1B. เมื่อ checkpoint จบ ให้ reconcile expected/accepted/missing/duplicate/failed/invalid และ atomic outputs จากนั้นปิด process/release model memory ตรวจ resource gate ใหม่แล้วเปิด checkpoint ถัดไปอัตโนมัติ. ขั้นตอนปกติเดินต่อได้ด้วย detached controller โดยผู้ใช้ดู progress ได้ตลอด
+
+| เหตุการณ์ | การดำเนินการของ controller |
+|---|---|
+| ครบ5,000 unique IDs และ artifact checksผ่าน | ปิดผล checkpoint แล้วตรวจทรัพยากรเพื่อเริ่มตัวถัดไป |
+| Model-local OOM/CUDA failure | บันทึก failed attempt/partial outputs ปิด process ของ checkpointนั้น และคง primary null. checkpointอิสระถัดไปเริ่มได้เมื่อ GPU health และ bindingsผ่าน หากสาเหตุยังจัดประเภทไม่ได้ให้หยุดคิว |
+| Shared source/GT/cache drift, scorerผิด, atomic corruptionที่กระทบส่วนกลาง | หยุดคิวพร้อมหลักฐานและรอการแก้ที่มี revision ชัดเจน |
+| Resource guard เช่น disk/freeVRAM/timecap ไม่ผ่าน | บันทึก QUEUED_RESOURCE หรือ STOPPED_RESOURCE ตามขอบเขต wait/timecapที่ freeze. เวลาเข้าคิวแยกจากexecution การเปิดต่อใช้ resource gateที่ผ่านแล้ว |
+| External interruption | เก็บ immutable attempt history และเข้าสู่ reconciliation ก่อน continuation |
+| โมเดลสุดท้ายเข้าสู่ terminal state | ปิดbatch สร้างcompletion report แล้ววิเคราะห์คุณภาพรวม |
+
+Automatic model/OOM retries=0. การเริ่ม checkpointถัดไปอาศัยcompleteness/integrity/resources ไม่อาศัยคะแนนสูงต่ำ. ระหว่างrunตรวจhealth, progress, geometry/nativeIDs, ledgerและdisk/VRAM; เก็บscore statisticsที่protocolกำหนดได้ การอ่านrank/วิเคราะห์เปรียบเทียบทำหลังbatchterminal. ผู้ใช้สามารถขอสถานะได้โดยไม่มีผลต่อ scientific settings
+
+Sequential executionลดการแข่งขันระหว่างcheckpointของเรา. งานอื่นบนGPU, CPU/I/O contention, cache, thermal stateและลำดับrunยังส่งผลต่อlatency. Shared GPU quality observationsต้องผูกtelemetryและfailure history. ไม่มีข้อสรุปzero biasจากการเรียงคิวเพียงอย่างเดียว. CPU scoringที่กินmemory/I/Oมากต้องอยู่นอกclean timing windows
+
+### ขอบเขตเวลาที่ต้องเก็บ
+
+| Field/กลุ่ม | จุดเริ่มและจบที่ต้องระบุ | หน่วย |
+|---|---|---|
+| `queue_wait`, `model_load`, `warmup`, `closure` | แยกแต่ละช่วงจากเวลาที่ประมวลผลภาพ | s ต่อattempt |
+| `decode_read` | ก่อนอ่านไฟล์จนได้decodedRGB | ms/ภาพ |
+| `yolo_preprocess`, `yolo_transfer`, `yolo_forward`, `yolo_postprocess` | YOLOจริงด้วย frozenweights/settings และmaskคืนพิกัด | ms/ภาพในlive timing pass |
+| `detector_cache_read` | อ่าน/ตรวจcacheที่ใช้ในqualityroute | ms/ภาพในcached pass |
+| `crop_prepare` | สร้างcrop/context/ข้อมูลgeometryของopportunities | ms/ภาพและROI |
+| `parser_preprocess`, `parser_transfer` | resize/padding/normalize แล้วส่งinputเข้าGPU | ms/ROI |
+| `parser_forward` | model executionตามnativecontract รวมinternaldetector/branchesที่โมเดลใช้ | ms/ROI |
+| `parser_decode_mapback` | decoder/postprocess, unpadding/resizeและargmaxที่อยู่นอกforward, ส่งผลกลับCPU | ms/ROI |
+| `association_ownership` | เลือกdesignatedinstance/clipYOLOmask/compose | ms/ROIและภาพ |
+| `export_commit` | serialize/hash/write/atomiccommitตามdurabilitycontract | ms/ภาพ |
+| `evaluation` | อ่านGTและคำนวณmetric | ms/ภาพแยกจากproductionpipeline |
+| `cached_route_wall` | อ่านภาพ/cache → crop/parser → atomicoutputcommit | ms/ภาพจากwalltimerจริง |
+| `live_route_wall` | อ่านภาพ → YOLOจริง → crop/parser → atomicoutputcommit | ms/ภาพจากwalltimerจริง |
+| `batch_wall`, `active_work`, `downtime` | run/attempttimeline ครอบsuccess/failure/recoveryและwaitingแยก | s ทั้งชุด |
+
+ทุกช่วงใช้monotonic high-resolution wall clockและกำหนดCUDA synchronizationที่boundaryเพื่อครอบงานasync. OptionalCUDAeventsเป็นdevice diagnosticแยกจากwall latency. ระบุexclusiveหรือinclusiveและparent stageต่อtimer. Composite APIที่แบ่งไม่ได้ให้เก็บinclusiveชื่อชัด พร้อมsubstage=nullและเหตุผล. CPIมีnativefileI/Oภายใน API ต้อง instrumentขอบเขตจริงก่อนอ้างforward-only. Closureตรวจผลรวมexclusive stagesกับmeasuredtotalพร้อมunattributedoverheadและnested spans จึงป้องกันdouble count. การsynchronizeหลายจุดมีoverhead ต้องเก็บinstrumentationmodeเดียวกันในcomparisonและรายงานขอบเขตนี้
+
+Parserคำนวณnativeclassesทั้งหมดในforwardครั้งนั้นแล้วprojectเป็น4targets. เก็บprojectionเวลาแยกได้ ส่วนforward timeรายclassไม่สามารถแยกจากsharednetworkด้วยการหาร4. Per-imageใช้เวลาwallที่จับจริงและจำนวนROIของภาพนั้น พร้อมผลรวมROIworkเป็นอีกคอลัมน์. กรณีzeroROIมีparserwork=0แต่decode/detector/exportยังมีเวลา กรณีreuseที่ไม่มีtimerให้missing/nullตามหลักฐาน
+
+### Quality pass และ clean timing pass
+
+Quality5000ใช้YOLOcacheเดิมและบันทึกstage timingsพร้อมresourceobservations. ผลที่ใช้งานGPUร่วมอยู่ในกลุ่มdiagnostic. การทำlatencyrankingต้องมีclean timing passที่ workload, precision/settings, instrumentation, residencyและI/Oscopeตรงกันทุกระบบ
+
+reuseรูปแบบที่ตรวจจากงาน YOLO จริงใน workspace. ตัวอย่างอ้างอิง `YOLO_Large_Seg_MOTS20_Benchmark/src/benchmark.py` ฟังก์ชัน `timing` และ `src/report.py` มี100ภาพ×3รอบ,10warmups,stage timings,Mean/P50/P95และcontamination flags. `src/repeat_clean_timing.py` เก็บ original pass พร้อมprovenance. อ่านเพื่อยืมหลักการเท่านั้น การออกแบบคิวใหม่ต้องมีbounded waiting ตามpolicyปัจจุบัน
+
+ข้อเสนอ bounded timing workloadของรอบใหม่ใช้100CIHPframesที่เลือกด้วยhash-orderจากexact5000ก่อนดูquality/runtimeผลใหม่ seedและIDsต้องfreezeในmanifest. รวมโอกาสzero/multipleROIผ่านการรายงานcoverageจากYOLOcache. หากเปลี่ยนเป็นstratifiedsampleต้องประกาศsamplingweightsและclaimของsampleก่อนrun. วัด3รอบโดยใช้cyclic model-order offsets0/3/6เพื่อให้แต่ละmodelกระจายตำแหน่งในสามช่วงของคิว และใช้frameorderเดียวกันทุกmodelในแต่ละรอบ. Qualitypassยังคงrosterorderเดิม
+
+สำหรับprocessใหม่กำหนดwarmupไม่เกิน10framesจากprefixของfixedtimingsampleและเก็บactualROI/modelcallcount. จำนวน100×3และwarmupเป็นข้อเสนอtimingแยกจากqualitybudget. ต้องคำนวณจำนวนROIcalls/disk/timecapและfreezeconfigก่อนlaunch. ไม่ใช้งานtimingเติมcanonicalqualitypredictionsหรือเลือกattemptที่คะแนนดีที่สุด
+
+Live timingpassต้องรัน frozenYOLOกับ parserในrouteเดียวกันบนsampleจริง เก็บYOLO/parserjoint-residencyVRAM. กำหนดresidentสองmodelเป็นcontractเริ่มต้นและตรวจreadinessแต่ละคู่. คู่ที่resourceไม่ผ่านมีสถานะblockedตามจริง การเสนอload/unloadrouteเป็นconfigurationอีกแบบต้องระบุlifecyclecostครบก่อนใช้เทียบ. ห้ามนำcachedYOLOreadtimeหรือYOLObenchmarkคนละdatasetมาทดแทนliveYOLOtime. Timingpacketsอยู่freshprivateoutputแยกจากcanonicalqualityและbudgetคิดค่าliveYOLOcallsด้วย
+
+หากมีexternalGPUactivityหรือcontaminationตามgateที่freeze ให้รอบนั้นเก็บเป็นdiagnostic. ถ้ายังไม่มีcleanroundsที่ครบเงื่อนไขให้cleanranking=unavailable. ไม่เลือกช่วงที่เร็วที่สุดมาแทนทั้งรอบ และไม่ปล่อยautomaticrerunไม่จำกัด. Freezeเวลารอคิวและจำนวนattemptก่อนexecute resourcepolicyใช้sharedqualityได้ขณะclean timingรอresourceที่เหมาะสม
+
+### ข้อมูลสำหรับวิเคราะห์ภายหลังและการตรวจรับ
+
+เก็บหนึ่งledgerที่มีrun/segment/attempt/model/checkpoint/source/config/protocol/environmenthashes, imageID/ROIopportunityID, reused/new, purpose, image/crop/tensorgeometry, nativeclasscount, status, UTCtimestampและmonotonicdurations. เก็บtimerboundary/inclusive-parent, decoder/device/precision/TTA, ROIcountและartifactbytes. Telemetryเก็บGPUUUID/PID, externalprocessmemoryตามสิทธิ์ที่อ่านได้,utilization/temperature/clocks, freeVRAM, allocated/reserved/deviceusage, CPU/RAM/disk/I/O observationsและsamplinginterval. ข้อมูลallocatorกับwholedeviceusageมีคอลัมน์แยก
+
+สรุปรายstage/ROI/ภาพ/ทั้งชุดด้วยcount, coverage, sum, mean, median/P50, P95,stdและmin/max พร้อมsampledefinition. FPSของscopeหนึ่งใช้จำนวนframeที่ประมวลผลหารเวลารวมของscopeเดียวกัน. รายงานfailedattemptcostและqueue/model-load/warmupแยก คงrawrecordsทุกattempt. Stage timingไม่ใช่latencyรายtargetclass. PeakVRAMของlive routeรวมYOLO+parserresidencyและoverlappingbuffersที่วัดได้จริง
+
+Acceptanceก่อนlaunchต้องผ่าน timerboundaries, exclusive/inclusiveaccounting, asynccompletion, zeroROI, multiROI, emptysemantic, reusedmissingtime, exceptionflushing, atomicledger/continuation และguardที่sourcebindingตรง. ตรวจoutputequivalenceของinstrumentedadapterกับacceptedadapterบนboundedreadinesscasesโดยไม่แก้expectedvaluesตามผล. Reportต้องย้อนกลับถึงactualrecordและคำนวณtotal/coverageได้ พร้อมnormalentrypointprogressและautomaticqueueclosure. สถานะปัจจุบันเป็นข้อกำหนดที่บันทึกแล้ว ส่วนinstrumentation/controller/liveYOLOjointreadinessและnewrunยังpending
+
 # Human Parsing Benchmark — current plan
 
 **CIHP_NATIVE_SIX_READINESS** · 28 October2026 UTC. User explicitly adopts [CIHP native Parsing9 plan](proposals/CIHP_NATIVE_PARSING9_CODEX_PLAN_TH_20261028.md); it supersedes conflicting CCIHP-selection/7-checkpoint design provisions. Historical configs/results remain immutable and available in Git history and legacy study. This change authorizes preparation, implementation and first-six execution when readiness passes; it does not authorize Sapiens before matrix, color work or model training.

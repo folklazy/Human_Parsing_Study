@@ -397,3 +397,13 @@ CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/
 ## 2026-11-02T18:03:20.041685+07:00 — CIHP_CCTV_COMPARABILITY_AUDIT
 
 ผู้ใช้ขอทบทวนความเป็นมาตรฐานและความเทียบกันได้ อนุญาตรันใหม่เมื่อจำเป็น. ตรวจ source/config/canonical indices และ primary-source documentation; พบ route/ownership/Face domain/matching/aggregation ต่างกัน ไม่พบ arithmetic mismatch ในขอบเขตที่ตรวจ. Added read-only audit script, derived 36-target + 9-summary sensitivity CSV and evidence JSON; canonical metrics hashes9ไฟล์ตรง, protocolhashes3ตรง, support/domain/counts/formulasผ่าน, inputsไม่เปลี่ยน. No model calls/mask rescores. [รายงาน](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). Current scientific results preserved. Blockers for stronger claims: independent Face/Neck GT and controlled-CIHP execution bindings/readiness not completed. Next: validate shared-ROI CIHP contract/resources before a fresh authorized run; do not relaunch old controllers.
+
+## 2026-11-02T18:51:46.168259+07:00 — QUEUE_AND_TIMING_REQUIREMENTS
+
+ผู้ใช้ต้องการคิวอัตโนมัติและความเร็วแต่ละขั้น/ทั้งpipelineสำหรับใช้ต่อ. ตรวจYOLOtimingrunner/reportจริง พบ100frames×3rounds/warmup10และcontaminationhandling; ตรวจCCTVadapterพบinclusiveAPI timer/CPIinternalI/O. อัปเดตPLAN/report/STATUS ระบุsequentialquality,terminalfailurepolicy,stageexclusive/inclusivecoverage,liveYOLOtimingและjointresidency,cleanfixedsampleproposalและboundedresourcegates. Verificationเป็นsource/documentreviewและlinks ไม่มีexecutionacceptance. Next implementationของinstrumentationและCIHPbindings/readiness. อ่านsourcehashesดังนี้
+
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/benchmark.py` SHA256 `4c2db4ba2261f3880ce38017f21c5e0ee764d21e2dffc5aebb9310f48fce69dd`
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/report.py` SHA256 `91690e8e025c1d8bf9ba268b50a885e52aa3d88592651ee8492265c2760faa7e`
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/repeat_clean_timing.py` SHA256 `c5e14ebf6836d5987c2103b9f4120db10fa4b8de564ea88e43f986bc6cee71ff`
+- `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py` SHA256 `80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158`
+- `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py` SHA256 `0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c`
