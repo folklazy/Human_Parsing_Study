@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-02T08:57:24.562485+00:00",
+  "updated_utc": "2026-11-02T09:35:57.399792+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -146,7 +146,7 @@
     ],
     "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00",
     "generation_snapshot_commit": "900744d0ddae504333179feb27df4c511f8c73ef",
-    "derived_hash_scope": "Hashes describe generation snapshot900744d. Current PRF CSV/generator hashes are in per_class_prf_reporting; current report hash is in per_image_timing_reporting."
+    "derived_hash_scope": "Hashes describe generation snapshot900744d. Current PRF CSV/generator hashes are in per_class_prf_reporting; current report/runtime generator hashes are in report_formatting."
   },
   "runtime_reporting": {
     "status": "HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE",
@@ -870,8 +870,9 @@
       "per_class_quality_metrics_available": true,
       "rounding": "sum full precision before display rounding"
     },
-    "report_sha256_scope": "Current report after per-image grouping; no change to historical observations or inference. Earlier report snapshots remain in Git.",
-    "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244"
+    "report_sha256_scope": "Runtime generation snapshot at2a28d29 before formatting-only table repair; current report/generator hashes are in report_formatting.",
+    "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244",
+    "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12"
   },
   "per_class_prf_reporting": {
     "status": "PER_CLASS_PIXEL_PRF_COMPLETE",
@@ -920,7 +921,7 @@
     "private_verification": "outputs/per-class-prf-report-20261102/VERIFICATION.json",
     "public_copy_reproduction": "PASS; aggregate-only public-copy execution reproduced byte-identical CSV/report without private GT/predictions",
     "report_hash_snapshot_commit": "509cacb6807c9a29794692a5ff1645afbd9d92c4",
-    "report_sha256_scope": "PRF generation snapshot before per-image timing section; current report hash is in per_image_timing_reporting. All F1/precision/recall/counts unchanged."
+    "report_sha256_scope": "PRF generation snapshot at509cacb before later reporting changes; current report hash is in report_formatting. All PRF counts/scores unchanged."
   },
   "per_image_timing_reporting": {
     "status": "PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS",
@@ -951,6 +952,28 @@
     "prior_diagnostic_timer_source": "scripts/run_sapiens_roi_review.py",
     "prior_diagnostic_timer_source_sha256": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9",
     "end_to_end_latency": false,
-    "speed_ranking_eligible": false
+    "speed_ranking_eligible": false,
+    "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12",
+    "report_sha256_scope": "Per-image generation snapshot before formatting-only repair; values and private CSV unchanged. Current report hash is in report_formatting."
+  },
+  "report_formatting": {
+    "status": "TABLE_E_RENDERING_FIXED",
+    "updated_utc": "2026-11-02T09:35:57.399792+00:00",
+    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "report_sha256": "4a66b0ee2e7d82e276e2e312878cc917f11a3173c4894f8bac08dd5660330f79",
+    "runtime_generator_sha256": "20aeb350a169ec6ce13049d05a416978a07a24559b839d3a55cc0ca16857cb23",
+    "header_columns": 6,
+    "old_separator_columns": 7,
+    "fixed_separator_columns": 6,
+    "GitHub_GFM_before_Model_table": false,
+    "GitHub_GFM_after_Model_table": true,
+    "Chromium_rows": 9,
+    "Chromium_columns": 6,
+    "Chromium_data_cells": 54,
+    "Thai_preview_visually_inspected": true,
+    "numeric_content_unchanged": true,
+    "new_model_calls": 0,
+    "data_recomputed": false,
+    "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json"
   }
 }

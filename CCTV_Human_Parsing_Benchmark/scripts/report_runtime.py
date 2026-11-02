@@ -245,7 +245,7 @@ def image_section(rows):
     lines = ['### E. เวลาต่อหนึ่งภาพ และรวมทั้ง 90 ภาพ', '',
         '**เวลาต่อภาพในตารางนี้ = ผลบวกเวลาของทุก person ROI ที่อยู่ในภาพนั้นจริง ๆ** เช่น ROI ในภาพเดียวมี 70 และ 90 ms จะได้งาน parsing รวม160ms; ไม่ใช้ mean ms/ROI คูณจำนวนคนแทน log ของภาพนั้น เป็น derived parsing-work time ไม่ใช่เวลาตั้งแต่เปิดภาพจนบันทึกผลครบ pipeline', '',
         '| Model | ภาพที่เวลาครบ / 90 | Mean ms/ภาพ เฉพาะภาพเวลาครบ | Mean ms/ภาพ ครบประชากร90 | รวม parsing ครบ90ภาพ s | ผลรวม log ที่มี s |',
-        '|---|---:|---:|---:|---:|---:|---:|']
+        '|---|---:|---:|---:|---:|---:|']
     for row in rows:
         s = row['per_image_summary']
         lines.append(f"| {SHORT[row['model_id']]} | {s['images_with_complete_timing']}/90 | {number(s['complete_images_statistics']['mean_ms'])} | {number(s['full_population_mean_ms_per_image'])} | {number(s['full_population_parsing_work_seconds'])} | {number(s['recorded_interval_sum_seconds'])} |")

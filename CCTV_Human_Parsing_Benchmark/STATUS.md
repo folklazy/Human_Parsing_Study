@@ -1,3 +1,11 @@
+# Current report formatting update — 2026-11-02T16:35:57.399792+07:00 (Asia/Bangkok)
+
+**TABLE_E_RENDERING_FIXED**. แก้เฉพาะ Markdown ของตารางE:หัวตาราง6คอลัมน์แต่separator7 ทำให้แสดงเป็นplain text แก้เป็น6ทั้งรายงานเดิมและreport_runtime.pyแล้ว GitHubGFMrenderมี9model rows×6columns,ChromiumDOM54cellsและpreviewภาษาไทยตรวจผ่าน
+
+ตัวเลข/ตัวหาร/CSVรายภาพ/PRF/timingเดิมไม่เปลี่ยน ไม่อ่านlogsซ้ำหรือทำinference/rescore และไม่เพิ่มtest suiteสำหรับformattingfixนี้ Reporthashปัจจุบันอยู่ในSTUDY_STATE.json→report_formatting;เดิมเป็นhashsnapshotตามcommitที่ระบุ Next:เปิดรายงานrevisionล่าสุด ไม่ใช้snapshotcommitเก่าที่immutable
+
+## Earlier current-state snapshots — historical records below
+
 # Current per-image timing update — 2026-11-02T15:57:24.562485+07:00 (Asia/Bangkok)
 
 **PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS — 9 models×90 images.** เพิ่ม [ตารางE:ต่อภาพและรวม90ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) จากการบวกROIlogsของแต่ละภาพจริง ไม่ใช้meanROI×จำนวนคน Private `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี810model-image rows พร้อมชื่อภาพ/status/ROIcounts/เวลารวม ข้อมูลรายภาพไม่ขึ้นpublicGit
