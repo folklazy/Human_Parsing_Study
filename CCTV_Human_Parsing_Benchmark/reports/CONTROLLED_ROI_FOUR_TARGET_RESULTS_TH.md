@@ -317,6 +317,42 @@ Continuation ไม่ได้เก็บ adapter_elapsed_seconds จึงใ
 
 Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loading, binding/hash checks, warmup, failed-attempt work, packet readback/assembly/I/O และงานบันทึกสถานะที่เกิดใน worker แต่ไม่รวม controller queue/gap ระหว่าง attempts, prior diagnostic run, YOLO cache preparation, GT review หรือ CPU scoring ภายหลัง เป็นเวลาที่ใช้ทำงานในรอบที่ระบุ ไม่ใช่เวลาทำนายใหม่ครบ 90 ภาพจากศูนย์ และไม่ใช่ผลรวม GPU kernel time
 
+### D. ตารางสรุปรวม — บวกค่าที่มี log แล้ว
+
+**ไม่มีเวลารายคลาส:** หนึ่ง forward ทำนาย native classes ทั้งหมดร่วมกัน (CIHP 20 / Sapiens 29) แล้วใช้ Hair/Face/Upper/Lower จาก output นั้น การ map/ให้คะแนนสี่ targets เป็นงานภายหลัง ไม่ได้จับเวลาแยกรายคลาส จึงแบ่งเวลารวมออกเป็น 4 ค่าไม่ได้ ส่วน IoU/Recall/Precision/Dice รายคลาสยังอยู่ในตารางคุณภาพและ confusion matrix ข้างต้น
+
+| Model | ROI มีเวลา / 130 | A รวม s | B รวม s | A+B ช่วงเวลาที่มี log รวม s | C รวม worker s |
+|---|---:|---:|---:|---:|---:|
+| QANet | 130/130 | 9.922 | — | 9.922 | 52.864 |
+| M2FP | 130/130 | 28.624 | — | 28.624 | 72.627 |
+| D2FP | 130/130 | 90.335 | — | 90.335 | 132.674 |
+| RP-R-CNN | 130/130 | 0.352 | 29.130 | 29.482 | 75.904 |
+| CPI R50 | 130/130 | 78.578 | 310.710 | 389.287 | 486.827 |
+| CPI ConvNeXt-B | 130/130 | 13.111 | 50.668 | 63.779 | 139.811 |
+| Sapiens2 0.4B | 115/130 | 162.165 | — | 162.165 | 237.995 |
+| Sapiens2 0.8B | 115/130 | 336.044 | — | 336.044 | 468.761 |
+| Sapiens2 1B | 115/130 | 476.462 | — | 476.462 | 698.234 |
+| **รวมบัญชี 9 ระบบ** | **1125/1170** | **1195.592** | **390.508** | **1586.100** | **2365.697** |
+
+**A+B เป็นผลบวกเชิงบัญชีของคนละ ROI ที่สำเร็จและไม่ซ้ำกัน** แต่ clock/ขอบเขตต่างกันตาม A/B จึงไม่ใช่ latency มาตรฐานเดียวกัน และไม่ใช่เวลา parsing ทั้ง 130 ROI ของ Sapiens ที่มี timer เพียง 115 ROI เครื่องหมาย — หมายถึงไม่มี continuation intervals ให้รวม ไม่ใช่ทำนายโดยใช้เวลาเป็นศูนย์ ไม่ประมาณเวลาอีก 15 ROI ของแต่ละ Sapiens จากค่าเฉลี่ยหรือแทนด้วยศูนย์ ยอดรวมคำนวณจาก full precision ก่อนปัดเศษ จึงอาจต่างจากการบวกเลข 3 ตำแหน่งที่แสดงเล็กน้อย
+
+**ห้ามบวก A+B+C:** C ครอบช่วงทำงาน A/B อยู่แล้ว จึงจะนับเวลาซ้ำ หากถามเวลารวมของ worker ให้ใช้ C ที่บวก parent+continuation แล้วโดยตรง ส่วนผลรวม 9 ระบบคือบัญชีเวลาของงานทั้งเก้า ไม่ใช่ latency ของหนึ่งภาพ ไม่ใช่ elapsed ของ batch ตั้งแต่ต้นถึงจบรวมช่วงรอ และไม่ใช่เวลา YOLO→parsing→สี→ฐานข้อมูล
+
+### นิยาม metrics ของเวลาและจำนวนตัวอย่าง
+
+| Metric / ค่าที่แสดง | สูตรและหน่วย | บอกอะไร / ข้อจำกัด | ที่มา |
+|---|---|---|---|
+| A: Monotonic adapter duration | t_after_sync − t_before_infer; วินาทีต่อ ROI | preprocess/transfer/model/native decode ภายใน adapter ไม่ใช่ model forward ล้วน; ขอบเขตต่างรายโมเดล | [parent forward](../scripts/controlled_roi.py) → adapter_elapsed_seconds |
+| B: UTC event interval | FORWARD_END.utc − FORWARD_START.utc; วินาทีต่อ ROI | รวม synchronization และ log/resource-writing overhead เพิ่ม; เป็น system-clock interval | [continuation forward/events](../scripts/controlled_roi_continuation.py) |
+| Mean ms/ROI | 1,000 × Σt/n แยกใน A หรือ B | เวลาต่อ ROI โดยเฉลี่ยเฉพาะกลุ่มที่มี timer; แม้ถ่วง n ก็ยังไม่แก้ขอบเขต A/B ที่ต่างกัน จึงไม่รวมเป็น latency มาตรฐานเดียว | [describe_seconds](../scripts/report_runtime.py) จาก accepted observations |
+| Median ms/ROI | ค่ากลางของ sorted t × 1,000 | เวลาของ sample กลาง; ไวต่อค่าสุดขั้วน้อยกว่า mean | สถิติเชิงพรรณนาของแต่ละกลุ่ม log |
+| P95 ms/ROI | linear percentile ตำแหน่ง 0.95×(n−1) × 1,000 | ประมาณค่าช่วงช้าของ sample ที่วัด ไม่ใช่ confidence interval หรือรับประกัน 95% ของภาพใหม่ | [describe_seconds](../scripts/report_runtime.py); n=1 ให้ค่าเดียวกับ sample นั้น |
+| ผลรวม A+B | Σt_A + Σt_B; วินาที | รวมช่วงเวลาที่มี log ไม่ซ้ำ ROI; เป็น derived accounting ไม่ใช่ pure-parsing/end-to-end metric | [time_accounting](../scripts/report_runtime.py); ไม่แก้ clock ให้เป็นชนิดเดียวกัน |
+| C: รวม worker elapsed | Σ_segments(STATE.ended_utc − STATE.started_utc); วินาที | รวม loading/warmup/checks/export และ failed work ภายในแต่ละ attempt; ไม่รวม queue gap และงานนอก worker | STATE.json ของ parent/continuation; ตาราง C |
+| Timing coverage | (n_A+n_B)/130; ROI และ % | มี duration กี่ ROI ในประชากรที่มีผล; ไม่ใช่ prediction completeness, detection recall หรือความแม่นยำ | จับคู่ accepted ROI membership กับ log; Sapiens 115/130=88.462% แต่ predictions ครบ130 |
+
+สูตร Mean/Median/P95 เป็นสถิติเชิงพรรณนาของเวลาที่บันทึก ไม่ใช่ metric การแยกส่วนภาพ มาตรวัดคุณภาพ IoU/Recall/Precision/Dice มีสูตร ตัวหาร และแหล่งอ้างอิงแยกอยู่ในส่วน confusion matrix ไม่มีการสร้างคะแนนผสม quality×speed หรือเลือกผู้ชนะใหม่จากตารางเวลานี้
+
 ### ขอบเขตที่รวมและไม่รวม
 
 | ขั้นตอน | อยู่ใน A/B หรือไม่ |

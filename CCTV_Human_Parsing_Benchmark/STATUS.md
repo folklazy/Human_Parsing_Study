@@ -1,3 +1,13 @@
+# Current timing accounting update — 2026-11-02T15:14:46.443883+07:00 (Asia/Bangkok)
+
+**TIMING_ACCOUNTING_SUMMARY_COMPLETE — 9 models.** เพิ่ม [ตาราง D และ metric definitions ในรายงานเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): บวก A+B เป็นบัญชีช่วงเวลาที่มี log และแยก C เป็นผลรวม worker เพื่อไม่ให้นับซ้ำ ROI timing coverage 1125/1170; อีก45 reuse ไม่มี timer รอบนี้ ไม่เติมเวลาศูนย์
+
+เวลารายคลาสไม่มี เพราะ forward คืน native classes ร่วมกัน; quality IoU/Recall/Precision/Dice ราย Hair/Face/Upper/Lower มีอยู่เดิม ยอดรวม log1586.100s และ worker2365.697s เป็นบัญชีเก้าระบบ ไม่ใช่ latency ต่อภาพหรือ pipeline YOLO→parsing→สี→DB และยังไม่ใช้จัดอันดับความเร็ว
+
+Original A/B/C statistics และ quality/canonical results คงเดิม CPU reporting checks 11/11 ผ่าน; ไม่มี inference/rescore/แก้ frozen configs Next: อ่านตารางรวมพร้อมขอบเขตและตัวหาร ไม่มีคิวทดลองเพิ่ม
+
+## Earlier current-state snapshots — historical records below
+
 # Current timing update — 2026-11-02T14:57:13.879230+07:00 (Asia/Bangkok)
 
 **HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE — 9 models.** เพิ่ม [สถิติเวลาจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) ในรายงานผลเดิม: monotonic adapter timers 791 ROI และ continuation UTC event intervals 334 ROI แยกตาราง พร้อม Mean/Median/P95 และ worker elapsed; อีก 45 ROI reuse ไม่มี timer ของรอบนี้ แยก TRAIN warmup 12 calls และ failed forward ที่ไม่มี end 1 call ออก ไม่เติมเวลาเป็นศูนย์

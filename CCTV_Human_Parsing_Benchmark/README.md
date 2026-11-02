@@ -20,6 +20,8 @@ Hair / Face-domain / Upper / Lower ใช้ binary 2×2 ต่อคลาส �
 
 [สถิติความเร็วจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม): Mean/Median/P95 ต่อ ROI และ worker elapsed ทั้ง 9 โมเดล แยก monotonic adapter timer กับ continuation UTC intervals พร้อมจำนวนตัวอย่างและขอบเขต; เป็น shared-GPU diagnostics ยังไม่ใช่ end-to-end FPS ranking
 
+[ตารางสรุปเวลาที่บวกค่าแล้ว และ metric definitions](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): แยก A+B จาก C เพื่อไม่ให้นับซ้ำ มี timing coverage และข้อจำกัดเวลารายคลาส
+
 ## ภาพรายละเอียดรายโมเดล (private)
 
 เปิด `outputs/model-detail-gallery-20261102/index.html` เพื่อเลือกดูทั้ง9โมเดลจาก6ภาพเดิม/15ROIs: RGBเทียบGTและprediction, ซูม,ปรับopacity และสลับnativeclasses/สี่เป้าหมายร่วม. ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกเปิดindex.htmlได้โดยไม่ตั้งserver. Images/GT/masks/ZIPไม่ขึ้นpublicGit; [สรุปartifactsและการตรวจ](reports/MODEL_IMAGE_GALLERY.json) มีcounts/hashesและข้อจำกัด. ใช้ผลเดิม ไม่มีinference/rescore.

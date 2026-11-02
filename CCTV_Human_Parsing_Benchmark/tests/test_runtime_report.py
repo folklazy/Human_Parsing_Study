@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from report_runtime import describe_seconds, forward_pairs
+from report_runtime import describe_seconds, forward_pairs, time_accounting
 
 
 def test_mean_median_and_linear_percentile():
@@ -45,3 +45,34 @@ def test_invalid_or_duplicate_events_rejected(events):
 def test_invalid_durations_rejected(duration):
     with pytest.raises(ValueError):
         describe_seconds([duration])
+
+
+def test_add_disjoint_logs_without_double_counting_worker_time():
+    row = dict(monotonic_adapter=dict(n=2, total_seconds=1.),
+               UTC_event_interval=dict(n=3, total_seconds=2.), ROI_population=5,
+               segments=[dict(worker_elapsed_seconds=4.), dict(worker_elapsed_seconds=6.)])
+    result = time_accounting(row)
+    assert result['logged_interval_sum_seconds'] == 3
+    assert result['worker_elapsed_sum_seconds'] == 10  # Not 3+10 or a sum of means.
+    assert result['timed_ROIs'] == 5 and result['untimed_ROIs'] == 0
+    assert result['timing_coverage'] == 1
+    assert result['homogeneous_latency_metric'] is False
+
+
+def test_untimed_ROI_does_not_become_zero_duration_or_full_coverage():
+    row = dict(monotonic_adapter=dict(n=2, total_seconds=1.),
+               UTC_event_interval=dict(n=0, total_seconds=None), ROI_population=3,
+               segments=[dict(worker_elapsed_seconds=7.)])
+    result = time_accounting(row)
+    assert result['timed_ROIs'] == 2 and result['untimed_ROIs'] == 1
+    assert result['timing_coverage'] == pytest.approx(2/3)
+    assert result['logged_interval_sum_seconds'] == 1
+    assert result['end_to_end'] is False
+
+
+def test_time_coverage_cannot_exceed_population():
+    row = dict(monotonic_adapter=dict(n=3, total_seconds=1.),
+               UTC_event_interval=dict(n=2, total_seconds=2.), ROI_population=4,
+               segments=[dict(worker_elapsed_seconds=7.)])
+    with pytest.raises(ValueError):
+        time_accounting(row)

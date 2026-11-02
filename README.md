@@ -15,6 +15,8 @@
 
 [ความเร็วจาก log เดิม: Mean/Median/P95 ต่อ ROI และ worker elapsed](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) — แยก clock/coverage ของ parent และ continuation; shared-GPU diagnostics ไม่ใช่ end-to-end FPS ranking
 
+[ตารางรวมเวลาที่บวกแล้ว พร้อมสูตรและความหมาย metrics](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว) — แยกยอด A+B จาก worker C เพื่อไม่ให้นับซ้ำ เวลารายคลาสไม่มี แต่คุณภาพรายคลาสมีอยู่เดิม
+
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 
 **Historical controlled-ROI prediction collection:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.
