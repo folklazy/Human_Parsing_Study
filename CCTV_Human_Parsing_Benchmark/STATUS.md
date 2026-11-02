@@ -1,3 +1,13 @@
+# Current per-class metrics update — 2026-11-02T15:28:03.173159+07:00 (Asia/Bangkok)
+
+**PER_CLASS_PIXEL_PRF_COMPLETE — 9 models ×4 targets =36 F1 scores.** เพิ่ม [ตาราง F1 รายโมเดล/สี่คลาส](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล) ในรายงานเดิม และ F1 ในตาราง Precision/Recall ของทุกคลาส [CSV เดิม](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) เพิ่ม pooled_F1 เพียงคอลัมน์เดียว; original columns/values เดิมครบ
+
+เป็น pooled binary pixel F1 =2TP/(2TP+FP+FN), เท่ากับ pooled Dice บน counts/domain เดียวกัน ไม่ใช่ person-detection F1 หรือ mean-part Dice ใช้ Hair61/Face-domain21/Upper112/Lower96 ตามเดิม ไม่มี mapping/GT/ตัวหารใหม่ และไม่เปลี่ยน mean-part IoU/Macro4 หรือตารางเวลา
+
+ตรวจ 36 pairs กับ canonical target counts/Dice และ CPU reporting10/10PASS ไม่มี inference, mask/GT reads, rescore หรือ figure regeneration Next: ใช้ตารางรายคลาสพร้อมสูตร/aggregation; ไม่มี benchmark เพิ่มหรือคิว GPU
+
+## Earlier current-state snapshots — historical records below
+
 # Current timing accounting update — 2026-11-02T15:14:46.443883+07:00 (Asia/Bangkok)
 
 **TIMING_ACCOUNTING_SUMMARY_COMPLETE — 9 models.** เพิ่ม [ตาราง D และ metric definitions ในรายงานเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): บวก A+B เป็นบัญชีช่วงเวลาที่มี log และแยก C เป็นผลรวม worker เพื่อไม่ให้นับซ้ำ ROI timing coverage 1125/1170; อีก45 reuse ไม่มี timer รอบนี้ ไม่เติมเวลาศูนย์

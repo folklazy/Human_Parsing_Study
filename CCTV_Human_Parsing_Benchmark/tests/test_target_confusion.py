@@ -24,6 +24,8 @@ def test_binary_counts_and_metric_denominators():
     assert result['pooled_precision'] == 0.6
     assert result['pooled_IoU'] == 0.5
     assert result['pooled_Dice'] == pytest.approx(2 / 3)
+    assert result['pooled_F1'] == pytest.approx(2 / 3)
+    assert result['pooled_F1'] == result['pooled_Dice']
 
 
 def test_part_counts_are_not_pixel_coverage_or_exact_correctness():
@@ -38,6 +40,7 @@ def test_part_counts_are_not_pixel_coverage_or_exact_correctness():
     assert result['mean_part_IoU'] == 0.25
     assert result['pooled_IoU'] == pytest.approx(1 / 101)
     assert result['pooled_recall'] == 0.01
+    assert result['pooled_F1'] == pytest.approx(1 / 51)  # Not mean-part Dice 1/3.
     assert result['zero_overlap_parts'] == 1
     assert result['empty_prediction_parts'] == 1
     assert result['full_GT_coverage_parts'] == 1
@@ -55,6 +58,7 @@ def test_empty_prediction_has_null_precision_and_all_gt_missed():
     assert result['pooled_recall'] == 0
     assert result['missed_GT_fraction'] == 1
     assert result['pooled_IoU'] == 0
+    assert result['pooled_F1'] == 0
     assert result['zero_overlap_parts'] == result['empty_prediction_parts'] == 1
     assert result['unmatched_parts'] == 0
 
@@ -83,3 +87,16 @@ def test_inconsistent_counts_fail_instead_of_filling_a_matrix(change):
     row.update(change)
     with pytest.raises(ValueError):
         module.summarize([row])
+
+
+def test_binary_f1_perfect_missed_spurious_and_absent_support():
+    assert module.binary_f1(5, 0, 0) == 1
+    assert module.binary_f1(0, 0, 5) == 0
+    assert module.binary_f1(0, 5, 0) == 0
+    assert module.binary_f1(0, 0, 0) is None
+
+
+def test_binary_f1_rejects_invalid_counts():
+    for counts in [(-1, 0, 0), (1.0, 0, 0), (True, 0, 0)]:
+        with pytest.raises(ValueError):
+            module.binary_f1(*counts)

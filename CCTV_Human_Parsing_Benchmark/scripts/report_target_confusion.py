@@ -30,6 +30,12 @@ def read(path):return json.loads(Path(path).read_text())
 def ratio(a,b):return a/b if b else None
 
 
+def binary_f1(tp,fp,fn):
+    if any(type(value) is not int or value<0 for value in (tp,fp,fn)):
+        raise ValueError('F1 requires nonnegative integer pixel counts')
+    return ratio(2*tp,2*tp+fp+fn)
+
+
 def face_domain_pixels(area, record):
     # REGION_UNCERTAIN carries Neck_pixels=null as an epistemic state. The
     # frozen scorer uses an empty *known-Neck mask* plus explicit uncertainty;
@@ -62,7 +68,7 @@ def summarize(rows):
         raise ValueError('Score support inconsistent')
     return dict(GT_parts=len(rows),GT_pixels=tp+fn,prediction_pixels=tp+fp,TP=tp,FP=fp,FN=fn,TN=tn,valid_pixels=area,
         pooled_recall=ratio(tp,tp+fn),missed_GT_fraction=ratio(fn,tp+fn),pooled_precision=ratio(tp,tp+fp),
-        pooled_IoU=ratio(tp,tp+fp+fn),pooled_Dice=ratio(2*tp,2*tp+fp+fn),
+        pooled_IoU=ratio(tp,tp+fp+fn),pooled_Dice=ratio(2*tp,2*tp+fp+fn),pooled_F1=binary_f1(tp,fp,fn),
         mean_part_IoU=sum(r['IoU'] for r in rows)/len(rows),
         zero_overlap_parts=sum(r['TP']==0 for r in rows),
         empty_prediction_parts=sum(r['prediction_pixels']==0 for r in rows),
@@ -179,6 +185,27 @@ def plot(rows,path):
     path.parent.mkdir(exist_ok=True,parents=True);figure.savefig(path,dpi=150);plt.close(figure)
 
 
+def f1_section(rows):
+    lookup={(r['model_id'],r['target']):r for r in rows}
+    lines=['### F1 score แยก 4 คลาสต่อโมเดล','','**หนึ่งโมเดลมี F1 สี่ค่า**: Hair / Face-domain / Upper / Lower หน่วย % ตารางนี้เป็น **pixel-level pooled binary F1 ต่อ target** รวม TP/FP/FN จาก eligible person-part tasks ของ target นั้นก่อนคำนวณ ไม่ใช่ person-detection F1 หรือการเฉลี่ย F1 รายคน','',
+        '| Model | Hair F1 % | Face-domain F1 % | Upper F1 % | Lower F1 % |',
+        '|---|---:|---:|---:|---:|']
+    for model in SHORT:
+        scores=[lookup[model,t]['pooled_F1'] for t in TARGETS]
+        lines.append('| '+SHORT[model]+' | '+' | '.join('null' if x is None else f'{100*x:.3f}' for x in scores)+' |')
+    lines += ['', '| Metric ต่อคลาส | สูตรจาก pooled counts | ตอบคำถามอะไร |',
+        '|---|---|---|',
+        '| Precision | TP/(TP+FP) | พิกเซลที่โมเดลระบุว่าเป็นคลาสนี้ถูกต้องเท่าไร; ลงโทษการทำนายเกิน |',
+        '| Recall | TP/(TP+FN) | เก็บพิกเซล GT ของคลาสนี้ได้เท่าไร; ลงโทษส่วนที่หายไป |',
+        '| F1 | 2TP/(2TP+FP+FN) | สมดุล Precision กับ Recall; เท่ากับ harmonic mean 2PR/(P+R) เมื่อ P/R และตัวหารนิยามได้ |', '',
+        'ใช้ [นิยาม F1 มาตรฐาน](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) คำนวณจาก integer counts ก่อนปัดเศษ ไม่คำนวณจาก P/R ที่ปัดเศษแล้ว สำหรับ binary masks ที่มี domain/aggregation เดียวกัน **F1 เท่ากับ pooled Dice ที่มีอยู่เดิม** จึงเพิ่มชื่อ pooled_F1 ใน CSV ให้ค้นได้ตรงคำถาม ไม่ใช่หลักฐานคุณภาพอีกชุดที่เป็นอิสระ และไม่เท่ากับ mean-part Dice หรือ mean-part IoU/Macro4 ในตารางหลัก', '',
+        'ถ้ามี GT แต่ไม่มี target prediction: Recall=0, F1=0 ส่วน Precision=null เพราะไม่มี predicted support หากไม่มีทั้ง GT และ prediction จะให้ F1=null ตาม zero-denominator policy เดิม ซึ่งเป็นตัวเลือกของ protocol ไม่ใช่ค่า default ของ sklearn ชุดจริงนี้ทั้ง 36 model-target pairs มี GT และ prediction support จึงไม่มี null', '',
+        'ตัวหาร GT parts คงเดิม: Hair61 / Face-domain21 / Upper112 / Lower96 เท่ากันข้ามโมเดล เก็บ missed/unmatched parts เป็น FN ตามเดิม ไม่มี model-specific ignore เพิ่ม Face ยังคงเป็น neck-excluded reference domain และ Upper/Lower ใช้ mapping เดิม การรวม counts ให้น้ำหนักตามขนาดส่วน จึงไม่ใช้ตาราง pooled F1 นี้แทนอันดับ mean-part IoU/Macro4 เดิม', '',
+        'Precision และ Recall พร้อม F1 ของทุก model-target pair อยู่ในตารางรายคลาสถัดไป และ [CSV เดิม](../metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv): pooled_precision / pooled_recall / pooled_F1 คอลัมน์ตัวเลขเป็นสัดส่วน 0–1 ส่วนตาราง Markdown แสดง %', '',
+        'สร้างเฉพาะส่วน F1/P/R ซ้ำจาก aggregate CSV และ canonical index ที่อยู่บน public clone ได้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_target_confusion.py --f1-only --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` ไม่ต้องมี weights, ภาพ หรือ prediction packets และไม่เปิด inference', '']
+    return lines
+
+
 def report_section(rows):
     section=['<!-- TARGET_CONFUSION_START -->','## Confusion matrix และการเก็บส่วนที่ต้องการครบแค่ไหน','',
         'อัปเดตจาก **สถิติที่ตรวจรับแล้ว** ของ CCTV ชุดล่าสุด 90 ภาพเท่านั้น ไม่มี inference หรือ rescore และไม่แก้ GT, mapping หรือคะแนนหลักเดิม ใช้ภาพเดียวรวม 36 binary matrices (9 โมเดล × 4 targets) และ CSV เดียวรวม 36 แถวพร้อมตัวหารและค่าก่อนปัดเศษ','',
@@ -205,13 +232,14 @@ def report_section(rows):
         'นิยาม matrix อิง [official confusion-matrix reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) โดยเรียง labels [target, not-target] จึงเป็น [[TP,FN],[FP,TN]] คำนวณจาก canonical integer counts โดยตรง ไม่ได้เรียก sklearn มา rescore หากตัวหารเป็นศูนย์จะให้ null เพราะไม่มี support (CSV ใช้คำว่า null) ไม่แทนด้วยศูนย์อัตโนมัติ; ชุดนี้ทุก target มี positive GT การรวม native classes ใช้ union ตาม mapping เดิมแล้วจึงนับพิกเซล ไม่เฉลี่ย IoU ของคลาสย่อย','',
         '### รายโมเดลและรายคลาส: เก็บได้/พลาด/เกิน','',
         'ร้อยละในตารางเป็น **pooled pixels** จากทุก eligible part ของ target จึงมีน้ำหนักตามขนาดส่วน ต่างจาก mean-part IoU ในตารางหลัก “ไม่ทับเลย” คือ TP=0 รวมกรณี empty/wrong-place และ unmatched GT ซึ่งไม่ใช่ execution failure ส่วน “เก็บ GT ครบ” คือ FN=0 เท่านั้น CSV มี empty-prediction, exact-mask, unmatched counts และ TN เพิ่มเติม','']
+    section += f1_section(rows)
     for target in TARGETS:
         chosen=[r for r in rows if r['target']==target];n=chosen[0]['GT_parts'];support=chosen[0]['GT_pixels']
         section += [f"#### {target}: n={n} parts, GT support={support:,} pixels",'',
-            '| Model | Recall % | พลาด % | Precision % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |',
-            '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+            '| Model | Recall % | พลาด % | Precision % | F1 % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |',
+            '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
         for r in chosen:
-            section.append(f"| {SHORT[r['model_id']]} | {r['pooled_recall']*100:.3f} | {r['missed_GT_fraction']*100:.3f} | {r['pooled_precision']*100:.3f} | {r['TP']:,} | {r['FN']:,} | {r['FP']:,} | {r['zero_overlap_parts']}/{n} | {r['full_GT_coverage_parts']}/{n} |")
+            section.append(f"| {SHORT[r['model_id']]} | {r['pooled_recall']*100:.3f} | {r['missed_GT_fraction']*100:.3f} | {r['pooled_precision']*100:.3f} | {r['pooled_F1']*100:.3f} | {r['TP']:,} | {r['FN']:,} | {r['FP']:,} | {r['zero_overlap_parts']}/{n} | {r['full_GT_coverage_parts']}/{n} |")
         section.append('')
     section += ['### สรุปสิ่งที่ตอบได้จาก diagnostics','']
     for target in TARGETS:
@@ -227,6 +255,67 @@ def report_section(rows):
     return '\n'.join(section)+'\n'
 
 
+def update_report(rows):
+    report=P/'reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md'
+    text=report.read_text();start='<!-- TARGET_CONFUSION_START -->';end='<!-- TARGET_CONFUSION_END -->'
+    section=report_section(rows)
+    if start in text:
+        before,tail=text.split(start,1);_,after=tail.split(end,1)
+        text=before+section.rstrip('\n')+after
+    else:text=text.rstrip()+'\n\n'+section
+    report.write_text(text)
+    return report
+
+
+def f1_only(audit_dir):
+    """Use published sufficient statistics, not raw predictions or GT masks."""
+    audit_dir.mkdir(parents=True,exist_ok=False)
+    source=P/'metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv'
+    index_path=P/'reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json'
+    index=read(index_path);state=read(P/'STUDY_STATE.json')
+    if sha(index_path)!=state['target_confusion_reporting']['source_index_sha256']:
+        raise ValueError('Canonical source index changed')
+    protected=[index_path,P/'reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png',
+        P/'metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv',P/'metrics/CONTROLLED_ROI_PER_TARGET.csv',
+        P/'metrics/CONTROLLED_ROI_FACE_VIEWS.csv',P/'reports/MODEL_RECOMMENDATION.json',
+        P/'configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json',P/'configs/CONTROLLED_ROI_SCORING_PROTOCOL.json']
+    before={str(path.relative_to(W)):sha(path) for path in protected};source_sha=sha(source)
+    with source.open(newline='') as file:
+        reader=csv.DictReader(file);fields=list(reader.fieldnames);original=list(reader)
+    if [(r['model_id'],r['target']) for r in original]!=[(m,t) for m in SHORT for t in TARGETS]:
+        raise ValueError('Expected nine models x four targets in frozen order')
+    integer_fields={'GT_parts','GT_pixels','prediction_pixels','TP','FP','FN','TN','valid_pixels',
+        'zero_overlap_parts','empty_prediction_parts','full_GT_coverage_parts','exact_mask_parts','unmatched_parts'}
+    typed=[];output=[]
+    for raw in original:
+        row={k:(v if k in ('model_id','target') else int(v) if k in integer_fields else None if v=='null' else float(v)) for k,v in raw.items()}
+        accepted=index['models'][row['model_id']]
+        if accepted['status']!='COMPLETE_ON_REVIEWED_GT':raise ValueError('Incomplete accepted model')
+        canonical=accepted['FaceDomain'] if row['target']=='FaceDomain' else accepted['non_Face_targets'][row['target']]
+        for key in ['GT_parts','GT_pixels','prediction_pixels','TP','FP','FN']:
+            if row[key]!=canonical[key]:raise ValueError('Counts differ from canonical target statistics')
+        for key in ['pooled_Dice','pooled_IoU','mean_part_IoU']:
+            if not math.isclose(row[key],canonical[key],rel_tol=0,abs_tol=1e-14):raise ValueError('Canonical metric changed')
+        tp,fp,fn=(row[k] for k in ['TP','FP','FN']);score=binary_f1(tp,fp,fn)
+        if not math.isclose(score,row['pooled_Dice'],rel_tol=0,abs_tol=1e-14):raise ValueError('Binary F1/Dice mismatch')
+        for key,value in [('pooled_precision',ratio(tp,tp+fp)),('pooled_recall',ratio(tp,tp+fn))]:
+            if row[key]!=value:raise ValueError('Stored precision/recall mismatch')
+        if 'pooled_F1' in row and row['pooled_F1']!=score:raise ValueError('Existing F1 changed')
+        row['pooled_F1']=score;typed.append(row);output.append(dict(raw,pooled_F1='null' if score is None else repr(score)))
+    if 'pooled_F1' not in fields:fields.append('pooled_F1')
+    with source.open('w',newline='') as file:
+        writer=csv.DictWriter(file,fieldnames=fields,lineterminator='\n');writer.writeheader();writer.writerows(output)
+    report=update_report(typed)
+    if not all(sha(W/path)==digest for path,digest in before.items()):raise ValueError('Protected artifact changed')
+    audit=dict(status='PER_CLASS_PIXEL_PRF_COMPLETE',created_utc=datetime.now(timezone.utc).isoformat(),
+        model_count=9,targets=list(TARGETS),model_target_pairs=36,model_calls=0,prediction_masks_read=0,
+        source_index_sha256=sha(index_path),previous_CSV_sha256=source_sha,CSV_sha256=sha(source),
+        original_columns_preserved=True,protected_hashes=before,report_sha256=sha(report),script_sha256=sha(__file__),
+        pooled_F1_equals_existing_pooled_Dice=True,undefined_F1_count=sum(r['pooled_F1'] is None for r in typed))
+    (audit_dir/'VERIFICATION.json').write_text(json.dumps(audit,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in audit.items() if k!='protected_hashes'},indent=2))
+
+
 def main(audit_dir):
     audit_dir.mkdir(parents=True,exist_ok=False)
     rows,audit=collect()
@@ -235,14 +324,7 @@ def main(audit_dir):
         writer=csv.DictWriter(file,fieldnames=list(rows[0]),lineterminator='\n');writer.writeheader()
         writer.writerows({k:('null' if v is None else v) for k,v in row.items()} for row in rows)
     figure=P/'reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png';plot(rows,figure)
-    report=P/'reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md'
-    text=report.read_text();start='<!-- TARGET_CONFUSION_START -->';end='<!-- TARGET_CONFUSION_END -->'
-    section=report_section(rows)
-    if start in text:
-        before,tail=text.split(start,1);_,after=tail.split(end,1)
-        text=before+section+after.lstrip('\n')
-    else:text=text.rstrip()+'\n\n'+section
-    report.write_text(text)
+    update_report(rows)
     for name,digest in audit['protected_hashes'].items():
         if sha(W/name)!=digest:raise ValueError('Protected canonical artifact changed')
     audit.update(created_utc=datetime.now(timezone.utc).isoformat(),CSV_sha256=sha(output),figure_sha256=sha(figure),
@@ -254,4 +336,6 @@ def main(audit_dir):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--audit-dir',type=Path,required=True)
-    main(parser.parse_args().audit_dir)
+    parser.add_argument('--f1-only',action='store_true',help='Use aggregate CSV/index only; preserve the existing figure')
+    args=parser.parse_args()
+    (f1_only if args.f1_only else main)(args.audit_dir)
