@@ -407,3 +407,7 @@ CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/
 - `YOLO_Large_Seg_MOTS20_Benchmark/src/repeat_clean_timing.py` SHA256 `c5e14ebf6836d5987c2103b9f4120db10fa4b8de564ea88e43f986bc6cee71ff`
 - `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py` SHA256 `80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158`
 - `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py` SHA256 `0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c`
+
+## 2026-11-02T19:05:31.621985+07:00 — CONTROLLED_CIHP_IMPLEMENTATION_CPU_ACCEPTANCE
+
+ผู้ใช้ถามเริ่มได้หรือยัง ดำเนินimplementation/readinessตามscopeที่ยืนยันไว้. Addedseparatecontroller/scorer/measurementwrappersโดยreuseCCTVadapters. Frozenqualityconfig/manifestcihp-controlled-roi-20261102T120403Z:5000exactIDs,24062ROIs/model,9models,source19bindings,GTbindingsG_loc17520/G_sem17454. CPU13casesPASSในสองenvรวมactualsavedpacket/hand-countedcases. ประเมินrawarrays106.05GiBรวม9ก่อนcandidates/temp;freeguard50GiB/stream80GiB/24hคงเดิม. GPUcurrentlyidleT4;TRAINbaseline/timedparityสองcalls/modelเป็นruntimegate. ไม่มีVALcallsณcommitนี้. Livecleanend-to-endtimingและisolatednativeinternalstagespending. Nextcommitแล้วlaunchdetachedและตรวจfirstpacket. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)

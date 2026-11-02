@@ -1,0 +1,18 @@
+{
+  "run_id": "cihp-controlled-roi-20261102T120403Z",
+  "status": "PREPARED_CPU_ACCEPTED_GPU_TRAIN_PENDING",
+  "config": "Human_Parsing_Benchmark/configs/controlled_cihp_quality.json",
+  "config_sha256": "ab672069027497384e9d7713933bf7dd74f7aad9c2f97c747125532103ac6eaa",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z",
+  "manifest_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/INPUTS.json",
+  "manifest_sha256": "e77b5ad81ce6be8e0e6ebd88bfcec470fb4a7a69fb53cddbbd49103b6df16424",
+  "CPU_acceptance_sha256": "cdc37b0433be94e8914c4102b2bc752e82adbb7eb8dc664be022462c5ed7c842",
+  "expected_images_per_model": 5000,
+  "ROI_count_per_model": 24062,
+  "checkpoints": 9,
+  "warmup_call_budget_per_model": 2,
+  "new_VAL_ROI_call_budget_all_models": 216558,
+  "aggregate_model_call_budget": 216576,
+  "automatic_retry": 0,
+  "full_speed_phase": "PENDING_SEPARATE_INSTRUMENTATION_AND_LIVE_YOLO_READINESS"
+}
