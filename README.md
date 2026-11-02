@@ -15,11 +15,11 @@
 
 [ความเร็วจาก log เดิม: Mean/Median/P95 ต่อ ROI และ worker elapsed](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) — แยก clock/coverage ของ parent และ continuation; shared-GPU diagnostics ไม่ใช่ end-to-end FPS ranking
 
-[ตารางรวมเวลาที่บวกแล้ว พร้อมสูตรและความหมาย metrics](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว) — แยกยอด A+B จาก worker C เพื่อไม่ให้นับซ้ำ เวลารายคลาสไม่มี แต่คุณภาพรายคลาสมีอยู่เดิม
+[สรุปเวลาที่บันทึกได้และเวลารวมของ worker พร้อมนิยามตัวชี้วัด](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว) — แยกยอด A+B จาก worker C เพื่อไม่ให้นับซ้ำ เวลารายคลาสไม่มี แต่คุณภาพรายคลาสมีอยู่เดิม
 
 [F1 / Precision / Recall รายสี่คลาสครบเก้าโมเดล](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล) — โมเดลละ 4 F1 scores จาก pooled binary pixel counts เดิม พร้อมสูตร/ตัวหาร; ไม่เปลี่ยน primary Macro4
 
-[เวลาต่อหนึ่งภาพและรวมทั้ง90ภาพ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) — บวกROIlogsจริงตามภาพ; หกโมเดลครบ90 ส่วนSapiens84/90พร้อมnullของเวลาที่ขาด ตารางรายภาพพร้อมชื่อไฟล์เก็บprivate ตามนโยบายCCTV
+[เวลาต่อภาพและเวลารวมทั้งชุด 90 ภาพ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) — รวมเวลาของ ROI จริงตามภาพ หกโมเดลมีข้อมูลเวลาครบ 90 ภาพ ส่วน Sapiens ครบ 84/90 ภาพและคง null สำหรับข้อมูลที่ขาด ตารางรายภาพพร้อมชื่อไฟล์เก็บเป็นส่วนตัวตามนโยบาย CCTV
 
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 

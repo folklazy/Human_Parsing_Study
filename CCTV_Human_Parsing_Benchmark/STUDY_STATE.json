@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-02T09:35:57.399792+00:00",
+  "updated_utc": "2026-11-02T09:54:52.799096+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -146,7 +146,7 @@
     ],
     "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00",
     "generation_snapshot_commit": "900744d0ddae504333179feb27df4c511f8c73ef",
-    "derived_hash_scope": "Hashes describe generation snapshot900744d. Current PRF CSV/generator hashes are in per_class_prf_reporting; current report/runtime generator hashes are in report_formatting."
+    "derived_hash_scope": "Generation snapshot900744d; current PRF CSV hash in per_class_prf_reporting, current report and presentation-generator hashes in report_language_review."
   },
   "runtime_reporting": {
     "status": "HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE",
@@ -870,7 +870,7 @@
       "per_class_quality_metrics_available": true,
       "rounding": "sum full precision before display rounding"
     },
-    "report_sha256_scope": "Runtime generation snapshot at2a28d29 before formatting-only table repair; current report/generator hashes are in report_formatting.",
+    "report_sha256_scope": "Runtime snapshot at2a28d29 before formatting/wording edits; current report/runtime generator hashes in report_language_review. Statistics unchanged.",
     "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244",
     "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12"
   },
@@ -921,7 +921,7 @@
     "private_verification": "outputs/per-class-prf-report-20261102/VERIFICATION.json",
     "public_copy_reproduction": "PASS; aggregate-only public-copy execution reproduced byte-identical CSV/report without private GT/predictions",
     "report_hash_snapshot_commit": "509cacb6807c9a29794692a5ff1645afbd9d92c4",
-    "report_sha256_scope": "PRF generation snapshot at509cacb before later reporting changes; current report hash is in report_formatting. All PRF counts/scores unchanged."
+    "report_sha256_scope": "PRF generation at509cacb; current report and presentation-generator hashes in report_language_review. PRF CSV/counts unchanged."
   },
   "per_image_timing_reporting": {
     "status": "PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS",
@@ -954,7 +954,7 @@
     "end_to_end_latency": false,
     "speed_ranking_eligible": false,
     "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12",
-    "report_sha256_scope": "Per-image generation snapshot before formatting-only repair; values and private CSV unchanged. Current report hash is in report_formatting."
+    "report_sha256_scope": "Per-image snapshot at2a28d29; current report hash in report_language_review. Private CSV and all statistics unchanged."
   },
   "report_formatting": {
     "status": "TABLE_E_RENDERING_FIXED",
@@ -974,6 +974,35 @@
     "numeric_content_unchanged": true,
     "new_model_calls": 0,
     "data_recomputed": false,
-    "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json"
+    "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json",
+    "report_hash_snapshot_commit": "dac48c359e596b8c6c6c65d5de22afb09668f11f",
+    "hash_scope": "Formatting snapshot before wording review; current report/generator hashes are in report_language_review"
+  },
+  "report_language_review": {
+    "status": "THAI_WORDING_REVIEWED",
+    "updated_utc": "2026-11-02T09:54:52.799096+00:00",
+    "updated_Asia_Bangkok": "2026-11-02T16:54:52.799096+07:00",
+    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "report_sha256": "cb251fddde31bc84c2acb9c423294778994b09197370070afecc99deb3f346e6",
+    "generator_hashes": {
+      "report_runtime.py": "8875032c2304ac6aa9b8b21513a36b57520eadbb536339208f4208700b7e419a",
+      "report_target_confusion.py": "bd7f860380cd752cd9422f426baf3ab4e59dc7ad3cd6b7d26c4d5563eb73335e"
+    },
+    "scope": "Thai prose, headings, metric explanations, units and table headers; no numeric/statistical/scientific changes",
+    "model_data_rows_unchanged": 113,
+    "protected_files_verified_unchanged": 9,
+    "calculation_functions_AST_unchanged": true,
+    "generator_sections_match_report": true,
+    "GitHub_GFM_tables": 21,
+    "Chromium_table_E": {
+      "header_columns": 6,
+      "model_rows": 9
+    },
+    "Thai_preview_visually_inspected": true,
+    "legacy_D_anchor_preserved": true,
+    "new_model_calls": 0,
+    "data_recomputed": false,
+    "new_public_files": 0,
+    "private_verification": "outputs/report-language-review-20261102/VERIFICATION.json"
   }
 }

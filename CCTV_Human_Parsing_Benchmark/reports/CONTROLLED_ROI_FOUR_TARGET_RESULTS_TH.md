@@ -1,16 +1,20 @@
-# CCTV controlled ROI — ผลประเมินสี่เป้าหมายครบเก้าระบบบน GT domain ที่ตรวจได้
+# ผลประเมิน Human Parsing บนภาพ CCTV: 9 โมเดลและ 4 ส่วนเป้าหมาย
 
-ตรวจปิด 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok). สถานะ **FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT — 9/9**. รอบนี้ model inference ใหม่ **0**; ใช้ predictions ที่ครบ90ภาพ/130frozen YOLO opportunities ต่อ checkpoint และเก็บผล/attempts เดิมครบ.
+ตรวจปิดผลคุณภาพเมื่อ 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok) สถานะ **FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT — 9/9** รายงานใช้ผลทำนายเดิมที่ครบ 90 ภาพ/130 ROIs ต่อ checkpoint ไม่มี inference ใหม่เพื่อจัดทำสรุป และยังเก็บผลกับประวัติการรันเดิมครบ
 
-**Sapiens2 1B ได้ค่าเฉลี่ยหลักสี่ targets สูงสุดที่65.430%** ตาม reference/domain นี้; QANet64.533% ตามมา ห่าง0.898percentage points. QANetได้ Face-domainและUpperสูงสุด; Sapiens2 1Bได้HairและLowerสูงสุด. เป็น observed point estimates ไม่ใช่ statistical significance หรือการรับรองพร้อม deployment.
+**Sapiens2 1B ได้คะแนนเฉลี่ยหลักของสี่ส่วนสูงสุดที่ 65.430%** ตาม GT และพื้นที่ประเมินที่กำหนด QANet ได้ 64.533% ต่างกัน 0.898 จุดเปอร์เซ็นต์ โดย QANet ได้คะแนนใบหน้าและเสื้อผ้าส่วนบนสูงสุด ส่วน Sapiens2 1B ได้คะแนนผมและเสื้อผ้าส่วนล่างสูงสุด ผลนี้เป็นค่าที่สังเกตได้ ยังไม่ได้ยืนยันนัยสำคัญทางสถิติหรือความพร้อมใช้งานจริง
 
-Face-domain ใช้ได้ **21จาก35 source Face records** หลัง GT-only review; อีก14รายการมีปัญหา reference/contour หรือ RGBยืนยันไม่ได้และกันออกเท่ากันทุกโมเดล. ใน21รายการนั้น18มี Neckที่ไม่ทราบขอบแน่ชัดและมี explicit uncertainty; Face+Neck delivery ใช้ได้เพียง3รายการ. **การคำนวณรอบนี้จบแล้วบน domain ที่ประกาศ ไม่ได้หมายความว่า GTทั้ง35รายการเป็น anatomical gold หรือให้คะแนน Face/Neckครบทุกกรณีแล้ว.**
+การประเมินใบหน้าใช้ GT ได้ **21 จาก 35 รายการ** หลังตรวจ GT โดยไม่อาศัยผลทำนาย อีก 14 รายการมีปัญหาขอบเขตอ้างอิงหรือยืนยันจากภาพ RGB ไม่ได้ จึงกันออกเหมือนกันทุกโมเดล ใน 21 รายการที่ใช้ได้ มี 18 รายการที่ขอบคอไม่แน่ชัดและได้ระบุพื้นที่ไม่แน่นอนไว้ การประเมินใบหน้ารวมคอจึงใช้ได้เพียง 3 รายการ **ผลคุณภาพคำนวณครบตามขอบเขตนี้ ไม่ได้หมายความว่า GT ทั้ง 35 รายการถูกต้องทางกายวิภาคทุกพิกเซล หรือวัดใบหน้า/คอได้ครบทุกกรณี**
+
+คำที่ใช้ในรายงาน: **GT** คือ mask อ้างอิง, **ROI** คือภาพย่อยรอบบุคคลที่ YOLO ตรวจพบ, **Hair / Face-domain / Upper / Lower** คือผม / ใบหน้าบนพื้นที่ประเมินที่ตัดคอและบริเวณไม่แน่นอนออก / เสื้อผ้าส่วนบน / เสื้อผ้าส่วนล่าง ส่วน **native classes** หมายถึงคลาสเดิมทั้งหมดที่โมเดลทำนายก่อนแปลงเป็นสี่ส่วนนี้
 
 ## ตารางหลัก
 
-หน่วยเป็นpercentของ **mean per-GT-part IoUภายในแต่ละtarget** แล้วเฉลี่ยtargetละ25%. ไม่ใช่ global full-image mIoU, official native parser benchmark หรือคะแนนCIHPเดิม. Frozen roster order:
+คะแนนแสดงเป็นเปอร์เซ็นต์ โดยคำนวณ **IoU ของแต่ละส่วนที่มี GT แล้วเฉลี่ยภายในคลาส** (mean-part IoU) จากนั้นเฉลี่ยสี่คลาสด้วยน้ำหนักคลาสละ 25% เป็น Macro4 ไม่ใช่ mIoU ของภาพเต็ม การทำซ้ำ benchmark ทางการของแต่ละโมเดล หรือคะแนน CIHP เดิม ตารางเรียงตามรายชื่อที่กำหนดไว้ก่อนประเมิน
 
-| Checkpoint | Prediction frames | Hair n61 | Face-domain n21 | Upper n112 | Lower n96 | Macro4 |
+`n` คือจำนวนส่วน GT ที่ใช้คำนวณในคลาสนั้น ไม่ใช่จำนวนภาพหรือจำนวนบุคคลที่ไม่ซ้ำ ส่วน `pp` ที่พบในข้อมูลประกอบหมายถึงจุดเปอร์เซ็นต์ ซึ่งใช้แสดงผลต่างระหว่างคะแนนเปอร์เซ็นต์สองค่า
+
+| Checkpoint | ภาพที่มีผลทำนาย | Hair (n=61) | Face-domain (n=21) | Upper (n=112) | Lower (n=96) | Macro4 |
 |---|---:|---:|---:|---:|---:|---:|
 | QANet_CIHP_HRNetW48_512x384 | 90/90 | 60.817 | 71.434 | 68.746 | 57.134 | 64.533 |
 | M2FP_R101_CIHP | 90/90 | 48.990 | 54.790 | 56.264 | 46.032 | 51.519 |
@@ -22,13 +26,13 @@ Face-domain ใช้ได้ **21จาก35 source Face records** หลั�
 | Sapiens2_0.8b | 90/90 | 60.770 | 65.665 | 60.281 | 55.198 | 60.479 |
 | Sapiens2_1b | 90/90 | 67.152 | 69.607 | 66.044 | 58.919 | 65.430 |
 
-ใช้ **290 eligible parts**: Hair61 + Face21 + Upper112 + Lower96. Sourceหลังแก้ownerมี326groupedparts; non-Face exclusions22และFace exclusions14เก็บเหตุผล/private recordsไว้ครบ. ไม่เติมคะแนนของGTที่ไม่รองรับเป็น0 และไม่ตีความGT exclusionเป็นmodel failure.
+ใช้ GT ที่ผ่านเกณฑ์ **290 ส่วน**: Hair 61 + Face 21 + Upper 112 + Lower 96 จาก 326 ส่วนหลังแก้ข้อมูลเจ้าของส่วนร่างกายแล้ว กันส่วนที่ไม่ใช่ใบหน้าออก 22 รายการและใบหน้าออก 14 รายการ โดยเก็บเหตุผลไว้ในข้อมูลส่วนตัวครบ ไม่แทนรายการ GT ที่ใช้ไม่ได้ด้วยคะแนน 0 และไม่ถือว่าการกัน GT ออกเป็นความล้มเหลวของโมเดล
 
-[CSVหลักพร้อมfull precision](../metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [per-target overall/day/night](../metrics/CONTROLLED_ROI_PER_TARGET.csv) / [Face views](../metrics/CONTROLLED_ROI_FACE_VIEWS.csv) / [canonical derived index](CONTROLLED_ROI_FOUR_TARGET_INDEX.json).
+[CSV หลัก: ค่าก่อนปัดเศษ](../metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) / [ผลรายคลาส: รวม/กลางวัน/กลางคืน](../metrics/CONTROLLED_ROI_PER_TARGET.csv) / [ผลใบหน้าและคอ](../metrics/CONTROLLED_ROI_FACE_VIEWS.csv) / [ดัชนีผลที่ใช้อ้างอิง](CONTROLLED_ROI_FOUR_TARGET_INDEX.json)
 
 ## สูงสุดรายเป้าหมายและข้อเสนอเลือกใช้ต่อ
 
-| Target | Observed leader | IoU % | อันดับถัดไป | ส่วนต่าง pp |
+| ส่วนที่ประเมิน | โมเดลที่ได้คะแนนสูงสุด | IoU (%) | อันดับถัดไป | ส่วนต่าง (จุดเปอร์เซ็นต์) |
 |---|---|---:|---|---:|
 | Hair | Sapiens2_1b | 67.152 | Sapiens2_0.4b | 1.406 |
 | Face-domain | QANet_CIHP_HRNetW48_512x384 | 71.434 | Sapiens2_1b | 1.827 |
@@ -36,11 +40,11 @@ Face-domain ใช้ได้ **21จาก35 source Face records** หลั�
 | Lower | Sapiens2_1b | 58.919 | QANet_CIHP_HRNetW48_512x384 | 1.785 |
 | Macro4 | Sapiens2_1b | 65.430 | QANet_CIHP_HRNetW48_512x384 | 0.898 |
 
-**ข้อสรุปการเลือก: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักสำหรับขั้นถัดไป เมื่อเป้าหมายคือคุณภาพรวม Hair / Face-domain / Upper / Lower และใช้เกณฑ์ที่กำหนดไว้เดิม**. คะแนน Macro4 เท่ากับ **65.430%** สูงสุดจากเก้าระบบที่รันครบ ส่วน QANet ได้64.533% ห่าง **0.898 percentage points**. คำแนะนำนี้อิง CCTV reference-domain รอบนี้ ไม่ได้นำคะแนน CIHP คนละ protocol มารวมกัน.
+**แนะนำ Sapiens2 segmentation 1B สำหรับขั้นถัดไป หากให้น้ำหนักคุณภาพรวม Hair / Face-domain / Upper / Lower เท่ากันตามเกณฑ์เดิม** ได้ Macro4 **65.430%** สูงสุดจากเก้าระบบที่มีผลครบ ส่วน QANet ได้ 64.533% ต่างกัน **0.898 จุดเปอร์เซ็นต์** คำแนะนำอิงผล CCTV ชุดนี้ ไม่รวมคะแนน CIHP ที่ใช้ protocol ต่างกัน
 
-เหตุผลที่เลือก1Bแม้ QANet จะชนะสองส่วน: Hair ของ1Bสูงกว่า6.335pp และ Lowerสูงกว่า1.785pp ซึ่งชดเชย Face-domainที่ต่ำกว่า1.827pp และ Upperที่ต่ำกว่า2.702pp เมื่อเฉลี่ยทั้งสี่ส่วนด้วยน้ำหนักเท่ากัน. ไม่ได้เปลี่ยนน้ำหนักให้1Bชนะหลังเห็นผล.
+เหตุผลที่แนะนำ 1B แม้ QANet ได้คะแนนสูงกว่าสองส่วน: Hair ของ 1B สูงกว่า 6.335 จุดเปอร์เซ็นต์ และ Lower สูงกว่า 1.785 จุดเปอร์เซ็นต์ จึงชดเชย Face-domain ที่ต่ำกว่า 1.827 จุดเปอร์เซ็นต์ และ Upper ที่ต่ำกว่า 2.702 จุดเปอร์เซ็นต์ เมื่อเฉลี่ยสี่ส่วนด้วยน้ำหนักเท่ากัน ไม่ได้เปลี่ยนน้ำหนักหลังเห็นผลเพื่อให้ 1B ชนะ
 
-| Metric | Sapiens2 1B (%) | QANet (%) | 1B − QANet (pp) |
+| ส่วนที่ประเมิน/คะแนนรวม | Sapiens2 1B (%) | QANet (%) | 1B − QANet (จุดเปอร์เซ็นต์) |
 |---|---:|---:|---:|
 | Hair | 67.152 | 60.817 | +6.335 |
 | Face-domain | 69.607 | 71.434 | -1.827 |
@@ -48,53 +52,53 @@ Face-domain ใช้ได้ **21จาก35 source Face records** หลั�
 | Lower | 58.919 | 57.134 | +1.785 |
 | Macro4 | 65.430 | 64.533 | +0.898 |
 
-**QANet เป็นทางเลือกที่มีหลักฐานรองรับหากงานให้น้ำหนักกับ Face-reference และ Upper มากขึ้น**. การเปลี่ยนความสำคัญของเป้าหมายในอนาคตต้องระบุแยกจากคะแนน Macro4 ปัจจุบัน. ผล Neck coverage ประกอบมี Sapiens2 0.4B สูงสุด แต่มีเพียง3รายการและเป็น recall ไม่ได้นำมาแทนเกณฑ์หลักสี่ส่วน.
+**QANet เป็นทางเลือกเมื่อให้ความสำคัญกับใบหน้าและเสื้อผ้าส่วนบนมากกว่า** หากเปลี่ยนความสำคัญของเป้าหมายในอนาคต ต้องแยกจากผล Macro4 ปัจจุบัน ส่วนผลการครอบคลุมคอที่ Sapiens2 0.4B ได้สูงสุดนั้นเป็น Recall จากเพียง 3 รายการ จึงใช้ประกอบการอธิบาย ไม่แทนเกณฑ์หลักสี่ส่วน
 
-### รุ่นและ configuration ที่แนะนำจริง
+### รุ่นและการตั้งค่าที่ใช้ในผลประเมินนี้
 
-| รายการ | ค่าที่ผูกกับผลรัน |
+| รายการ | รุ่นและค่าที่ใช้ประเมินจริง |
 |---|---|
-| Exact model ID | `Sapiens2_1b`, task segmentation, native29 labels |
+| รหัสโมเดล | `Sapiens2_1b`, งาน segmentation, ทำนาย 29 คลาสเดิมของโมเดล |
 | จำนวนพารามิเตอร์ | **1,470,819,805** รวม segmentation module ตาม `MODEL_DETAILS.json` ของรอบรัน; 1B เป็นชื่อ variant และรอบเขียนสรุปนี้ไม่ได้โหลดโมเดลเพื่อนับใหม่ |
 | Checkpoint | `sapiens2_1b_seg.safetensors`, 5,883,353,380 bytes; เก็บภายนอก Git |
-| Effective route | `CONTROLLED_YOLO_PERSON_ROI`: frozen YOLO person crop → parser → original-grid map-back → frozen YOLO mask ownership |
-| Input | lossless RGB crop เดียวกับทุกระบบ, context10% แต่ละข้าง, preserve aspect ratio, letterbox **1024H × 768W**, mean padding |
-| Precision / execution | FP32, batch1, eval/inference mode, AMP/TF32/extra TTA ปิด |
+| เส้นทางประมวลผล | `CONTROLLED_YOLO_PERSON_ROI`: ใช้ YOLO crop บุคคล → parser → แปลงกลับพิกัดภาพต้นฉบับ → กำหนดเจ้าของส่วนด้วย YOLO mask ที่ตรึงไว้ |
+| Input | RGB crop ที่เก็บแบบ lossless ร่วมกับทุกระบบ เพิ่มบริบทด้านละ 10% รักษาสัดส่วนภาพ และทำ letterbox **1024H × 768W** โดยเติมขอบด้วยค่าสีเฉลี่ย |
+| รูปแบบคำนวณ | FP32, batch 1, eval/inference mode; ปิด AMP/TF32 และไม่มี TTA เพิ่ม |
 | Preprocessing / map-back | ใช้ official preprocessor/channel conversion เพียงครั้งเดียวตาม adapter ที่ตรวจแล้ว; ถอด padding แล้ว map logits กลับก่อน argmax |
-| Environment ที่ใช้จริง | Python3.12.3, PyTorch2.14.0+cu130, CUDA runtime13.0, GPUTesla T4; ไม่ได้ติดตั้งหรือแก้ environment ในงานสรุปนี้ |
-| Outputs ที่ใช้ | native29 integer masks, original-grid person masks, frozen YOLO identity/extents และ geometry; ไม่ใช่ native Sapiens person-instance IDs |
-| Native target projection | Hair4; Face candidate3+24–28; Upper23; Lower13. Face candidate รวมคอ และ Apparel1 เป็น OTHER ใน non-Dress garment view |
+| Environment ที่ใช้จริง | Python 3.12.3, PyTorch 2.14.0+cu130, CUDA runtime 13.0, GPU Tesla T4; ไม่ติดตั้งหรือแก้ environment เพื่อจัดทำรายงานนี้ |
+| ผลที่ใช้ประเมิน | Integer masks ครบ 29 คลาสเดิม, person masks บนพิกัดภาพต้นฉบับ, ข้อมูลบุคคล/ขอบเขตจาก YOLO และ geometry; ไม่ใช่ person-instance IDs ที่ Sapiens ทำนายเอง |
+| การแปลงคลาสเดิมเป็นส่วนที่ประเมิน | Hair 4; Face candidate 3+24–28; Upper 23; Lower 13 โดย Face candidate รวมคอ และ Apparel 1 เป็น OTHER ตามกติกาเสื้อผ้าที่ไม่รวม Dress |
 
-Route ข้างต้นคือ **person ROI ที่รันจริงใน controlled cohort นี้**. ฟิลด์ `SAPIENS_FRAME_YOLO_MASK_OWNERSHIP` ที่ติดมากับ registry เดิมเป็นชื่อ route รอบเก่า; ไม่ใช่ route ของผล65.430%นี้. การเลือก1Bจึงหมายถึง **checkpointพร้อม application configuration นี้** ไม่ใช่ทุกวิธีป้อน input ให้1B.
+เส้นทางข้างต้นใช้ **ภาพย่อยของบุคคลตาม ROI ที่รันจริงในชุดนี้** ฟิลด์ `SAPIENS_FRAME_YOLO_MASK_OWNERSHIP` ใน registry เดิมเป็นชื่อเส้นทางของรอบเก่า ไม่ใช่เส้นทางที่ให้คะแนน 65.430% นี้ การแนะนำ 1B จึงหมายถึง **checkpoint พร้อมการตั้งค่าและวิธีประมวลผลนี้** ไม่ได้ครอบคลุมทุกวิธีป้อน input ให้ 1B
 
 Checkpoint SHA256: `4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4`. Native config SHA256: `d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d`. Upstream source revision: `7e5bae88456ac418ff0e58e74106c9fe192055d4`. ตำแหน่ง local assets, environment/model-details hashes และ source result hashes อยู่ใน [machine-readable recommendation](MODEL_RECOMMENDATION.json). Hashes อ้าง frozen records/accepted packets เดิม; รอบนี้ไม่ rehash weights หรือเริ่ม inference เพิ่ม.
 
 ### ขอบเขตของข้อสรุป
 
 - เหมาะเป็น **ข้อเสนอเลือก configuration เพื่อทำงานต่อจากหลักฐานคุณภาพชุดนี้**. ค่าเฉลี่ยสูงสุดยังไม่ใช่ absolute pass threshold หรือ production acceptance.
-- Face ใช้21/35รายการ และมี uncertainty; Neck deliveryใช้3รายการ. GTเป็น agent-assisted reference ที่สืบทอด source contours ไม่ใช่ independent expert gold. ส่วนต่าง0.898ppยังไม่มี uncertainty/statistical-significance study.
+- Face ใช้ 21/35 รายการและมีพื้นที่ไม่แน่นอน ส่วน Face+Neck ใช้ 3 รายการ GT ผ่านการตรวจโดยผู้ช่วยและยังสืบทอดขอบเขตจากต้นทาง ไม่ใช่ GT ที่ผู้เชี่ยวชาญอิสระรับรอง ส่วนต่าง 0.898 จุดเปอร์เซ็นต์ยังไม่ได้ประเมินช่วงความไม่แน่นอนหรือนัยสำคัญทางสถิติ
 - รายงานความเร็ว/VRAM เดิมมีขอบเขตและสภาพ shared GPU ต่างกัน จึงไม่สรุปว่า1Bเร็วที่สุด เบาที่สุด หรือคุ้มทรัพยากรที่สุด. ขนาด checkpoint/parameter count ไม่ใช่ค่า peak VRAM ที่วัดแล้ว.
 - Native Face_Neck hard labels ยังแยก strict Face-only/Neck-only ไม่ได้. ผลนี้ยังไม่รับรองการแยกชุด Dress, สี, attributes หรือทุกคน/ทุกส่วนของฉาก.
 - ไม่มีการรวมโมเดลเป็น ensemble/fusion, เปลี่ยน execution config, อนุมัติ deployment หรือเริ่มการทดลองถัดไปจากการบันทึกคำแนะนำนี้.
 
 ## GT Face/Neck และความหมายของคะแนน
 
-1. ตรวจRGB/source GT35รายการใหม่ในcoordinate references และGT-only overlaysหกcontact pages. Sourceannotations/masksไม่เปลี่ยน; owner correctionsสองจุดเดิมคงอยู่ในderivedcopy. ผู้ตรวจคือCodex visual assistant ไม่ใช่independent expert.
-2. Face referenceคือ **source Face contour ลบ known Neck, uncertainty และ known opaque occluder**. Contourส่วนอื่นยังสืบทอดsource annotation จึงไม่รับรองpixel-perfect anatomical Faceหรือแก้ข้อผิดพลาดGTทุกชนิดหมดแล้ว.
-3. Known Neckวาดเป็นvisible polygons3กรณี. อีก18กรณีใช้ `REGION_UNCERTAIN`: manually boundบริเวณown-neck/jaw/collarที่ระบุไม่ได้จากRGB. Unknown Neckยังเป็นunknown ไม่ใช่zero-Neck truth. Face-domainใช้พื้นที่ที่เหลือร่วมทุกโมเดล; Face+Neck/NeckCoverageเป็นnullสำหรับกรณีเหล่านี้.
-4. Face valid domain `V_i = original grid − known Neck_i − GT-only uncertainty_i`. ใช้Neck/UของGTคนที่ประเมินเท่านั้น ไม่ignoreคอคนอื่นทั้งภาพ. Known opaque occluder coresเป็นvalidnegative; ไม่เติมamodalNeckหลังวัตถุ. พบplantเข้าdraftNeckแล้วแก้จากRGBก่อนเปิดคะแนนFace; draftเก็บไว้.
-5. Mappingเดิมไม่เปลี่ยน: CIHPFace13; SapiensFace_Neck3+mouth subparts24–28. ไม่ใช้Torso-skinแทนNeck ไม่แบ่งpredictionด้วยGTหรือgeometry. Sapiensoutputยังเป็นFace+Neckcandidate ไม่กลายเป็นstrictFace-only output.
-6. ตรึงmanualannotations/GT masks/eligibility/domain hashesและprotocol **ก่อนคำนวณคะแนนFaceใหม่นี้**. รู้historical/non-Face resultsมาก่อน จึงเป็นpost-hoc exploratory revision ไม่ใช่preregistered/blinded confirmation. ไม่มีการปรับGT/mappingจากFace scoresรอบนี้.
+1. ตรวจภาพ RGB และ GT ต้นทาง 35 รายการ เทียบพิกัดและภาพซ้อน GT หกหน้า ไม่แก้ annotations/masks ต้นฉบับ ส่วนการแก้เจ้าของ mask สองจุดก่อนหน้ายังคงอยู่ในสำเนาสำหรับประเมิน ผู้ตรวจคือผู้ช่วย Codex ไม่ใช่ผู้เชี่ยวชาญอิสระ
+2. GT ใบหน้าที่ใช้คือ **ขอบเขต Face ต้นทาง ลบคอที่ระบุได้ พื้นที่ไม่แน่นอน และแกนของวัตถุทึบที่บังหน้า** ขอบเขตส่วนอื่นยังอ้างอิง annotation ต้นทาง จึงไม่ได้รับรองว่าถูกต้องทางกายวิภาคทุกพิกเซลหรือแก้ข้อผิดพลาดของ GT ทั้งหมดแล้ว
+3. วาด polygon คอที่มองเห็นและระบุได้ 3 กรณี อีก 18 กรณีใช้สถานะ `REGION_UNCERTAIN` โดยกำหนดบริเวณรอยต่อคอ/กราม/คอเสื้อที่ภาพ RGB บอกขอบไม่ได้แน่ชัด สถานะไม่ทราบยังคงเป็นไม่ทราบ ไม่ได้ถือว่าคอหายไปจริง ทุกโมเดลประเมิน Face บนพื้นที่ที่เหลือเดียวกัน ส่วน Face+Neck/NeckCoverage เป็น null สำหรับกรณีเหล่านี้
+4. พื้นที่ประเมิน Face คือ `V_i = original grid − known Neck_i − GT-only uncertainty_i` ใช้คอและพื้นที่ไม่แน่นอนของบุคคลที่ประเมินเท่านั้น ไม่ตัดคอคนอื่นออกทั้งภาพ แกนของวัตถุทึบที่บังหน้าเป็น valid negative และไม่เติมคอที่ซ่อนหลังวัตถุ เคยพบส่วนของต้นไม้หลุดเข้า draft คอ จึงแก้จาก RGB ก่อนเปิดคะแนน Face และเก็บ draft เดิมไว้
+5. ใช้ mapping เดิม: CIHP Face 13; Sapiens Face_Neck 3 รวมรายละเอียดปาก 24–28 ไม่ใช้ผิวลำตัวแทนคอและไม่แบ่งผลทำนายโดยอาศัย GT หรือเส้นตัดทางเรขาคณิต ผลของ Sapiens จึงยังเป็น Face+Neck candidate ไม่ใช่ Face-only ที่แยกคอออกได้จริง
+6. ตรึง annotations, GT masks, รายการที่ผ่านเกณฑ์, พื้นที่ประเมินและ protocol ด้วย hashes **ก่อนคำนวณคะแนน Face รอบนี้** แต่ทราบผลเก่าและผลส่วนที่ไม่ใช่ใบหน้ามาก่อน จึงเป็นการปรับเพื่อสำรวจภายหลังเห็นผล ไม่ใช่การยืนยันแบบปกปิดผลหรือการลงทะเบียนล่วงหน้า ไม่ได้ปรับ GT/mapping ตามคะแนน Face รอบนี้
 
-GTcoverage: Face21/35 (day9/night12), validFacepositive36,743pixels จากsourceFaceของ21items45,453pixels เหลือ80.837%. ส่วนที่ถูกกัน/เปลี่ยนบทบาทรายitemอยู่ในprivatebinding. สัดส่วนนี้ไม่ใช่annotationaccuracyหรือความสมบูรณ์ทั้งdataset.
+GT ใบหน้าที่ใช้ได้มี 21/35 รายการ (กลางวัน 9/กลางคืน 12) มีพิกเซลบวกที่ใช้ประเมิน 36,743 พิกเซล จาก Face ต้นทางของ 21 รายการรวม 45,453 พิกเซล หรือเหลือ 80.837% รายละเอียดที่กันออกหรือเปลี่ยนบทบาทเก็บไว้ใน bindings ส่วนตัว สัดส่วนนี้ไม่ใช่ความแม่นยำของ annotation หรือความครบถ้วนของทั้ง dataset
 
-[Protocol revisionR2](../configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json) / [GTcoverageและstates](FACE_NECK_GT_SUMMARY.json) / [CPU+actual-packet acceptance](FACE_NECK_ACCEPTANCE.json). Historical [non-Face report](CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) และR1indexยังคงnullFaceตามสถานะตอนนั้น ไม่ได้แก้ย้อนหลัง.
+[Protocol รุ่น R2](../configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json) / [ความครอบคลุมของ GT และสถานะ](FACE_NECK_GT_SUMMARY.json) / [ผลตรวจ CPU และ prediction packets](FACE_NECK_ACCEPTANCE.json) ส่วน [รายงานก่อนหน้า](CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md) และดัชนี R1 ยังคงค่า Face เป็น null ตามสถานะในเวลานั้น ไม่แก้ประวัติย้อนหลัง
 
 ## Face+Neck delivery และ known-Neck coverage — supplementary n3
 
-หน่วยpercent. Face+Neckใช้mean per-part IoUบนvaliddomainที่ตัดGTuncertainty; Neckcoverageคือmean recallของcandidateบนknownNeck. **ไม่ใช่Neck-only IoU/precision** และไม่รวมซ้ำในprimaryMacro4.
+แสดงเป็นเปอร์เซ็นต์ Face+Neck ใช้ค่าเฉลี่ย IoU รายส่วนบนพื้นที่ที่ตัด GT uncertainty ออก ส่วนการครอบคลุมคอคือค่าเฉลี่ย Recall ของ candidate บนคอที่ระบุได้ **ไม่ใช่ IoU หรือ Precision ของ Neck-only** และไม่นำมารวมซ้ำใน Macro4
 
-| Checkpoint | Face+Neck IoU n3 | Known-Neck coverage n3 |
+| Checkpoint | Face+Neck IoU (n=3) | Recall บนคอที่ระบุได้ (n=3) |
 |---|---:|---:|
 | QANet_CIHP_HRNetW48_512x384 | 62.288 | 5.949 |
 | M2FP_R101_CIHP | 39.632 | 3.668 |
@@ -106,33 +110,33 @@ GTcoverage: Face21/35 (day9/night12), validFacepositive36,743pixels จากsou
 | Sapiens2_0.8b | 84.240 | 57.126 |
 | Sapiens2_1b | 86.614 | 66.336 |
 
-KnownNecksupportรวม10,190pixels; n3น้อยและขนาดไม่สมดุล จึงใช้เป็นdiagnostic ไม่สรุปNeckcapabilityทั่วไป. ไม่รายงาน18unknownNeckเป็นbackground/score0หรือส่งผ่านว่าverifiedabsent. สถานะverified-not-visibleรองรับในscorerแต่ชุดGTนี้ไม่มีกรณีนั้น.
+คอที่ระบุได้มีพิกเซล GT รวม 10,190 พิกเซล มีเพียง 3 รายการและขนาดไม่เท่ากัน จึงใช้เป็นข้อมูลประกอบ ไม่สรุปความสามารถแยกคอทั่วไป อีก 18 รายการที่ไม่ทราบคอไม่ถูกนับเป็น background หรือคะแนน 0 และไม่ได้เปลี่ยนเป็นยืนยันว่าคอมองไม่เห็น Scorer รองรับสถานะ verified-not-visible แต่ GT ชุดนี้ไม่มีกรณีนั้น
 
-## Matching, metrics และ completeness
+## การจับคู่บุคคล ตัวชี้วัด และความครบถ้วนของผล
 
-คงmatchingจากowner-correctedsourceparts union→frozenYOLO bbox coverage≥0.50, maximumcardinalityก่อนsumcoverage และtie policyเดิม. NewNeck/Uไม่เปลี่ยนmatching, detectorcache, parserinstance selection หรือownership. เป็นpartial-person association ไม่ใช่maskAPหรือfull-personF1.
+คงการจับคู่เดิม: รวม source parts ของแต่ละคนหลังแก้เจ้าของ แล้วจับคู่กับ frozen YOLO bbox ที่มี coverage ≥0.50 เลือกจำนวนคู่ให้มากที่สุดก่อนผลรวม coverage และใช้กติกาตัดสิน tie เดิม คอ/พื้นที่ไม่แน่นอนที่เพิ่มไม่เปลี่ยน matching, YOLO cache, การเลือก parser instance หรือ ownership เป็นการจับคู่บุคคลจากส่วนที่ annotate ไว้ ไม่ใช่ mask AP หรือ F1 ของทุกคนในฉาก
 
-ต่อeligible partใช้whole original-grid person plane, ไม่clipด้วยGTbbox/polygon. `TP=|G∩P∩V|`, `FP=|P∩V−G|`, `FN=|G∩V−P|`; IoU=TP/(TP+FP+FN), Dice=2TP/(2TP+FP+FN). Meanของแต่ละpartภายในtargetก่อนmacro4; pooledIoU/Diceเป็นตารางประกอบ ไม่เฉลี่ยnative-classIoUแทนunion. Zero-supportgroupsเป็นnull.
+ประเมินแต่ละส่วนด้วย person plane บนพิกัดภาพต้นฉบับ ไม่ตัด prediction ด้วย GT bbox/polygon ใช้ `TP=|G∩P∩V|`, `FP=|P∩V−G|`, `FN=|G∩V−P|`; IoU=TP/(TP+FP+FN), Dice=2TP/(2TP+FP+FN) เฉลี่ยรายส่วนภายในคลาสก่อนรวม Macro4 ส่วน pooled IoU/Dice เป็นข้อมูลประกอบ คำนวณ union จริงก่อนนับ ไม่เฉลี่ย IoU ของคลาสเดิมแทน union กลุ่มที่ไม่มี support ให้ null
 
-GTpersonที่ไม่จับคู่ใช้emptycandidateและpositivepartsเป็นFN/IoU0. Faceมี **2unmatched partsคงอยู่ในn21**; Hair5/Upper15/Lower14ตามเดิม. `detector_unmatched`รวมกรณีไม่มีeligiblebboxหรือone-to-onecompetition ไม่พิสูจน์ว่าdetectorไม่เห็นคนในทุกกรณี. Validextentแต่semanticemptyคงเป็นemptytargetprediction ไม่ใช่executionfailure.
+บุคคลใน GT ที่จับคู่ไม่ได้ใช้ผลทำนายว่าง และส่วนที่มี GT บวกถูกนับเป็น FN/IoU 0 โดย Face มี **2 ส่วนที่จับคู่ไม่ได้และยังอยู่ในตัวหาร 21** ส่วน Hair 5 / Upper 15 / Lower 14 ตามเดิม สถานะ `detector_unmatched` ครอบคลุมทั้งกรณีไม่มี bbox ที่ผ่านเกณฑ์และกรณีแข่งขันจับคู่แบบหนึ่งต่อหนึ่ง จึงไม่ได้พิสูจน์ว่า detector มองไม่เห็นคนทุกกรณี หากมี extent ถูกต้องแต่ไม่มีพิกเซลของคลาสนั้น ยังคงเป็นผลทำนายว่าง ไม่ใช่การรันล้มเหลว
 
-STRICT_COMPLETEต่อระบบ: accepted90unique source framepackets + non-Face statisticsเดิมที่ครบ + Face21eligible tasks + delivery3tasksครบ. ผลจริงครบ9/9, missing/duplicate/scoringfailed0ในacceptedview. Historicalmodel/setup/controller/CPUerrorsยังเก็บครบ; finalfailed0ไม่ได้แปลว่าไม่เคยล้ม. SourceCCTVเป็นpartialselectedpeople/parts ไม่สร้างunlabeledpeopleเป็นfull-scenenegatives และไม่อ้างfull-sceneFP/AP.
+เกณฑ์ STRICT_COMPLETE ต่อระบบต้องมี packets ของภาพต้นทางครบ 90 ภาพไม่ซ้ำ สถิติส่วนที่ไม่ใช่ใบหน้าเดิมครบ Face 21 รายการครบ และ Face+Neck 3 รายการครบ ผลจริงครบ 9/9 ระบบ โดย accepted view มี missing/duplicate/scoring failed เท่ากับ 0 ยังเก็บประวัติ model/setup/controller/CPU errors ไว้ทั้งหมด จึงไม่ได้หมายความว่าไม่เคยล้มเหลว ชุด CCTV นี้ annotate บางคน/บางส่วนเท่านั้น ไม่สร้างคนที่ไม่มี annotation เป็น negative ของทั้งฉาก และไม่อ้าง full-scene FP/AP
 
-## ตรวจอะไรจริงและreuseอะไร
+## สิ่งที่ตรวจสอบและหลักฐานเดิมที่นำมาใช้
 
-- CPU9independent literal casesPASS: known/unknown/absentNeckต่างกัน, OTHER/invalidID, union, positiveFN/missedperson/wrongperson, knownoccluderFP, asymmetricgeometry, mean-part vs pooled, null/STRICT_COMPLETE, actualatomicpacket→scorer→JSON และsourceimmutability. ไม่รับรองGTจากtestcount.
-- ActualFacepacket→scorer→reportครบ **171 source framepackets /189Face tasks /27delivery tasks**. ReadbackNPZ/COMMIT/sourcepacket identity เทียบacceptednon-Faceframe, checkpoint/input/config/native-label/original-grid/YOLObindingsและmaskhashes. Per-frameledger/recordhashes,GTsupport/counts/means/Macro4reconciliationผ่าน.
-- ReuseHair/Upper/Lowerและexact90membership auditเดิม; ตรวจตัวเลขเหมือนเดิมแบบfullprecision ไม่rerun non-Facescoringหรือmodelinference. Sourceweights/environment identitiesใช้หลักฐานรับรองเดิม ไม่bulkrehashweights/datasetsใหม่เพื่อเขียนรายงาน.
-- Usage-limit interruptionเกิดระหว่างGTmaterialization; กลับมาตรวจprocessและfinalbindingพบเขียนเสร็จแล้ว จึงใช้ต่อ ไม่เปิดซ้ำ. CPUscoringรอบนี้เปิดครั้งเดียวและปิดครบ.
+- การตรวจ CPU 9 กรณีที่มี expected values อิสระผ่าน ครอบคลุมคอที่ทราบ/ไม่ทราบ/ไม่ปรากฏ, OTHER/invalid ID, union, FN และคนที่พลาด/ผิดคน, FP บนวัตถุบัง, geometry ไม่สมมาตร, mean-part กับ pooled, null/STRICT_COMPLETE, atomic packet → scorer → JSON และการคง source เดิม จำนวน tests ที่ผ่านไม่ใช่การรับรอง GT
+- เส้นทาง packet → scorer → report สำหรับ Face ครบ **171 source frame packets / 189 Face tasks / 27 Face+Neck tasks** ตรวจ NPZ/COMMIT และ identities เทียบกับ non-Face ที่รับรองแล้ว รวม checkpoint/input/config/คลาสเดิม/พิกัดภาพต้นฉบับ/YOLO และ hashes ของ masks ตรวจ ledger, record hashes, GT support, counts, ค่าเฉลี่ยและ Macro4 ตรงกัน
+- ใช้ผล Hair/Upper/Lower และ audit สมาชิก 90 ภาพเดิม ตรวจค่าก่อนปัดเศษตรงกัน ไม่รัน scorer ส่วนเหล่านี้หรือโมเดลซ้ำ ใช้ identities ของ weights/environment จากหลักฐานเดิม ไม่ hash weights หรือ datasets ทั้งชุดใหม่เพื่อเขียนรายงาน
+- ช่วง usage limit เกิดระหว่างสร้าง GT bindings เมื่อกลับมาตรวจ process และไฟล์สุดท้ายพบว่าเสร็จแล้ว จึงใช้ต่อโดยไม่เปิดซ้ำ ส่วน CPU scoring เปิดครั้งเดียวและปิดครบ
 
-Scientificbindingsตรึงด้วยfilehashesก่อนFaceCPUscoring; Gitcommitรอบส่งมอบเป็น **post-scoring publication snapshot** ไม่ใช่launchcommitของmodelinferenceหรือหลักฐานว่าsourceถูกcommitก่อนCPUlaunch. Sourcecurrent`CCTV_Human_Parsing_Benchmark/`; publicationcheckout`Human_Parsing_Study_Public/`แยกกัน.
+ตรึง scientific bindings ด้วย file hashes ก่อน Face CPU scoring ส่วน Git commit ที่ส่งมอบเป็น **snapshot หลังคำนวณคะแนน** ไม่ใช่ launch commit ของ inference หรือหลักฐานว่า source ถูก commit ก่อน CPU launch พื้นที่ทำงาน `CCTV_Human_Parsing_Benchmark/` แยกจาก publication checkout `Human_Parsing_Study_Public/`
 
-## ภาพและartifacts
+## ภาพประกอบและไฟล์ผลการทดลอง
 
-Privatepathsที่เปิดได้ในworkspace:
+ไฟล์ส่วนตัวที่เปิดได้ใน workspace:
 
 - **หน้าดูรายละเอียดรายโมเดล:** `CCTV_Human_Parsing_Benchmark/outputs/model-detail-gallery-20261102/index.html` — เลือกภาพ/ROI/โมเดล, ซูมและปรับ opacity, เทียบ RGB/GT/prediction, สลับ shared4-target/native20หรือ29 classes และ owned/raw output. Owned คือ mask ที่ใช้คิดคะแนน; raw ก่อน YOLO clip เป็น diagnostic. ทุกภาพใช้ saved masks เดิม ไม่มี inference หรือ rescoring.
-- **เปิดนอก server:** ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกและเปิด `index.html`; bundle รวม assets ไว้แล้ว ไม่ต้องตั้งเว็บหรือใช้ network. มี `by_model/<model_id>.html` สำหรับเปิดแต่ละโมเดลโดยตรง และภาพเทียบทั้งเก้าตัวต่อROI. หน้าROIมี15opportunitiesจาก6ภาพเดิม; คนที่GTไม่จับคู่ไม่มีpredictedROI ให้ดูภาพรวมฉากและmissedcountsประกอบ.
+- **เปิดนอก server:** ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แตกไฟล์แล้วเปิด `index.html` มีไฟล์ประกอบครบและไม่ต้องตั้งเว็บหรือเชื่อมเครือข่าย ใช้ `by_model/<model_id>.html` เปิดแต่ละโมเดลโดยตรงได้ และมีภาพเทียบทั้งเก้าโมเดลต่อ ROI หน้าดู ROI ครอบคลุม 15 ROIs จาก 6 ภาพเดิม ส่วนบุคคลใน GT ที่ไม่มี ROI จับคู่ ให้ดูภาพรวมฉากและจำนวนที่พลาดประกอบ
 
 - `CCTV_Human_Parsing_Benchmark/outputs/face-neck-comparison-gallery-20261101/index.html` — fixed6framesเดิม,RGB/GT/เก้าระบบ, paletteเดียวกัน; ไม่เลือกภาพตามคะแนน. Gallerycomposition/downsamplingใช้แสดงผลเท่านั้น ขณะที่scorerใช้per-personfullgrid. SapiensFacecandidateในภาพรวมNeckด้วย.
 - `outputs/face-neck-gt-reviewed-20261101/GT_ONLY_CONTACT/page_01.png` ถึง`page_06.png` — 21eligibleFaceGT overlaysที่ตรวจจริง (RGBเทียบFace/knownNeck/U/occluder). Directoryเก็บmaskdraft/GT-only reviewก่อนfinalfreeze; frozenbindingอยู่pathถัดไป.
@@ -140,15 +144,15 @@ Privatepathsที่เปิดได้ในworkspace:
 - `outputs/face-neck-manual-review-20261101/` — RGB/sourcecoordinates35items, frozenmanualvertices, ineligibleitemreasons, context/detailfigures.
 - `outputs/face-neck-evaluation-20261101/` — Faceper-personrecords,immutableledgers,FROZEN_INPUTS,canonicalMETRICS/RESULTS.
 
-ภาพCCTV,sourcefilenames,manualvertices/personrecords,GTmasks,predictions/logsอยู่privateoutputsเท่านั้น ไม่มีCCTVassetsขึ้นPUBLICGit. Publicrepoมีcode/tests/protocol/aggregateCSV/JSON/docs; cloneอย่างเดียวไม่พอทำซ้ำ ต้องมีrestrictedsourceassets,parentpredictionpacketsและGTbindingsตามhashes. [CPUrequirements](../requirements-cpu.txt)เป็นexistingenvironmentที่สังเกต ไม่ได้ติดตั้งหรือแก้modelenvironment.
+ภาพ CCTV, ชื่อไฟล์ต้นทาง, vertices, ข้อมูลรายบุคคล, GT masks, predictions และ raw logs อยู่ใน private outputs เท่านั้น ไม่ขึ้น public Git ส่วน public repo เก็บ code/tests/protocol และผลรวม CSV/JSON/เอกสาร การ clone อย่างเดียวจึงยังทำซ้ำไม่ได้ ต้องมีสิทธิ์เข้าถึง assets, prediction packets และ GT bindings ตาม hashes [CPU requirements](../requirements-cpu.txt) บันทึก environment ที่ใช้เดิม ไม่ได้ติดตั้งหรือแก้ model environment ในงานสรุปนี้
 
 ## ข้อจำกัดและสถานะจบ
 
-เปรียบเทียบ **checkpoint + controlledYOLO-ROI applicationconfiguration** บนCCTV90ชุดนี้: crop/context/ownershipร่วมกัน แต่native resolution,normalization,internaldetector/decoderต่างกัน. ไม่แยกarchitecture/training-data/adapter effects. NativeCIHP/commonCIHPresultsและfrozenYOLOคงเดิม.
+เปรียบเทียบ **checkpoint พร้อมการตั้งค่า application ที่ใช้ YOLO person ROI ร่วมกัน** บน CCTV 90 ภาพชุดนี้ แต่ละระบบใช้ crop/context/ownership เดียวกัน แต่ native resolution, normalization, internal detector และ decoder ต่างกัน จึงแยกผลของ architecture, training data และ adapter ออกจากกันไม่ได้ ผล native/common CIHP และ frozen YOLO เดิมคงอยู่
 
-GTยังเป็นagent-assistedreview ไม่ใช่independentexpertgold; Faceมีuncertaintydomainและ14excludeditems, Neckpositiveviewเพียง3items. คะแนนจึงรองรับการเลือกเบื้องต้นจากreference/domainนี้ ไม่รับรองstrictFace-only/Neck-only,ทุกคน/ทุกส่วนในฉาก,night/generalCCTVperformance,สี/attributes หรือproductionacceptance. Timing/VRAMของเดิมเป็นsharedGPUadapterdiagnostics ไม่ใช้จัดอันดับFPS/latency/VRAMefficiency.
+GT ผ่านการตรวจโดยผู้ช่วยจากภาพ ยังไม่ใช่ GT ที่ผู้เชี่ยวชาญอิสระรับรอง Face มีพื้นที่ไม่แน่นอนและกันออก 14 รายการ ส่วนคอที่ระบุได้มี 3 รายการ ผลจึงรองรับการเลือกเบื้องต้นตาม GT/พื้นที่ประเมินนี้ ไม่รับรอง Face-only/Neck-only ทุกคนหรือทุกส่วนในฉาก ประสิทธิภาพ CCTV ทั่วไปหรือกลางคืน สี/attributes หรือความพร้อมใช้งานจริง เวลาที่มีเป็นข้อมูลจาก adapter ภายใต้การใช้ GPU ร่วม จึงไม่ใช้จัดอันดับ FPS/latency/ประสิทธิภาพ VRAM
 
-**รอบประเมินสี่targetsปิดแล้วบนdeclaredeligibleGT ไม่เหลือFace-scorejobหรือGPUjobที่ต้องเปิดต่อเพื่อให้ได้ตารางนี้.** ขั้นถัดไปคือใช้รายงานนี้พิจารณาSapiens2 1B/QANetตามความต้องการ หรือจัดindependentGT/deploymentvalidationหากต้องการคำอ้างที่เข้มกว่า. ไม่เริ่มการฝึก สี CCTVinferenceเพิ่ม หรือexperimentอื่นอัตโนมัติ.
+**ประเมินครบสี่ส่วนตาม GT ที่กำหนดแล้ว ไม่มีงาน Face scoring หรือ GPU ที่ต้องเปิดต่อเพื่อให้ได้ตารางนี้** ขั้นถัดไปคือใช้หลักฐานพิจารณา Sapiens2 1B/QANet ตามความต้องการ หรือจัด GT อิสระและทดสอบการใช้งานจริงหากต้องการข้อสรุปที่เข้มกว่า ไม่มีการเริ่ม training สี inference บน CCTV เพิ่ม หรือการทดลองอื่นโดยอัตโนมัติ
 
 <!-- TARGET_CONFUSION_START -->
 ## Confusion matrix และการเก็บส่วนที่ต้องการครบแค่ไหน
@@ -161,10 +165,10 @@ GTยังเป็นagent-assistedreview ไม่ใช่independentexpertg
 
 ### อ่าน matrix และเข้าใจ domain
 
-| GT / Prediction | เป็น target ของคนที่ประเมิน | ไม่เป็น target ของคนนั้น |
+| GT / ผลทำนาย | ทำนายเป็นส่วนที่ประเมิน | ไม่ทำนายเป็นส่วนนั้น |
 |---|---:|---:|
-| GT เป็น target | TP: พิกเซลที่เก็บถูก | FN: พิกเซล GT ที่พลาด |
-| GT ไม่เป็นส่วนนี้ของคนที่ประเมิน ภายใน V | FP: พิกเซลที่ทำนายเกิน | TN: ส่วนเติมเต็มของ domain |
+| GT เป็นส่วนที่ประเมิน | TP: พิกเซลที่ทำนายถูก | FN: พิกเซล GT ที่พลาด |
+| GT ไม่ใช่ส่วนนั้นของคนที่ประเมิน ภายใน V | FP: พิกเซลที่ทำนายเกิน | TN: พิกเซลที่เหลือในพื้นที่ประเมิน |
 
 **เหตุผลที่ใช้ 2×2 ต่อคลาส:** Hair 61 / Face 21 / Upper 112 / Lower 96 ส่วน ใช้คนที่มีสิทธิ์และพื้นที่ประเมินต่างกันตาม selected-person part task เดิม สถิติ binary ไม่บอกว่า Hair ที่พลาดถูกทำนายเป็น Face, Upper, BG หรือ OTHER อย่างละเท่าไร จึงสร้างตาราง cross-class 4×4 จาก TP/FP/FN นี้ไม่ได้ การตอบคำถามนั้นต้องอ่าน native planes ภายใต้ joint-domain protocol เพิ่มเติม ซึ่งยังไม่ได้ทำในรอบนี้
 
@@ -176,28 +180,28 @@ Hair/Upper/Lower ใช้พิกัดภาพต้นฉบับทั้
 
 | ตัวชี้วัด | สูตร/ตัวหาร | ความหมายและข้อจำกัด | ที่มา |
 |---|---|---|---|
-| Recall / GT coverage | ΣTP/(ΣTP+ΣFN) | เก็บพิกเซล GTได้กี่%; ไม่ลงโทษการทำนายเกิน และไม่ใช่%คนที่ตรวจครบ | [นิยาม Recall](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html) |
-| Miss fraction | ΣFN/(ΣTP+ΣFN)=1−Recall | พิกเซลส่วนที่ต้องการซึ่งหายไป; ไม่ใช่จำนวน person misses | ComplementของRecallบนdomainเดียวกัน |
-| Precision | ΣTP/(ΣTP+ΣFP) | พิกเซลที่ทำนายว่าเป็นส่วนนี้ถูกจริงเท่าไร; จำกัด selected-person/GT-reference domain | [นิยาม Precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html) |
-| IoU / Jaccard | TP/(TP+FP+FN) ต่อpart | ลงโทษทั้งเก็บไม่ครบและทำนายเกิน | [นิยาม Jaccard](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html), [scorer counts](../scripts/controlled_roi_core.py) |
-| Dice / binary F1 | 2TP/(2TP+FP+FN) | overlapอีกสเกลหนึ่งจากcountsเดียวกัน; ไม่ใช่หลักฐานอิสระเพิ่ม และไม่เท่ากับperson-detectionF1 | [นิยาม F1](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) |
+| Recall / สัดส่วน GT ที่ทำนายได้ | ΣTP/(ΣTP+ΣFN) | ทำนายครอบคลุมพิกเซล GT กี่เปอร์เซ็นต์ ไม่ลงโทษการทำนายเกิน และไม่ใช่เปอร์เซ็นต์คนที่ตรวจครบ | [นิยาม Recall](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html) |
+| สัดส่วนพิกเซลที่พลาด | ΣFN/(ΣTP+ΣFN)=1−Recall | พิกเซลของส่วนที่ต้องการซึ่งโมเดลทำนายไม่ครอบคลุม ไม่ใช่จำนวนคนที่ตรวจไม่พบ | ค่าที่เหลือจาก Recall บนพื้นที่ประเมินเดียวกัน |
+| Precision | ΣTP/(ΣTP+ΣFP) | พิกเซลที่ทำนายเป็นส่วนนี้ถูกต้องตาม GT เท่าไร ภายใต้ขอบเขตของบุคคลและส่วนที่เลือกประเมิน | [นิยาม Precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html) |
+| IoU / Jaccard | TP/(TP+FP+FN) ต่อส่วน | ลงโทษทั้งการทำนายไม่ครบและการทำนายเกิน | [นิยาม Jaccard](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html), [การนับพิกเซลใน scorer](../scripts/controlled_roi_core.py) |
+| Dice / binary F1 | 2TP/(2TP+FP+FN) | วัดการซ้อนทับจาก counts เดียวกัน จึงไม่ใช่หลักฐานอิสระเพิ่ม และไม่ใช่ F1 ของการตรวจจับบุคคล | [นิยาม F1](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) |
 | Mean-part IoU / Macro4 เดิม | mean_i IoU_i ใน target แล้วเฉลี่ย 4 targets เท่ากัน 25% | แต่ละ part น้ำหนักเท่ากันก่อนรวม targets; **ยังเป็นเกณฑ์หลักเดิม** | [protocol R2](../configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json), [aggregate/macro source](../scripts/face_neck_evaluation.py) |
-| Pooled IoU / Dice | รวมintegercountsทุกpartก่อนratio | partใหญ่มีน้ำหนักมาก จึงต่างจากmean-part; ไม่เอาpooledRecall/IoUมาเปลี่ยนอันดับหลัก | CSVและformulaเดียวกัน |
-| Zero overlap / Full GT coverage | นับ TP_i=0 / FN_i=0 จาก eligible parts | ส่วนที่ไม่ทับ GT เลย / เก็บ GT pixels ครบ; **FN=0 ยังมี FP ได้** จึงไม่เท่ากับ mask ถูกทั้งหมด | Diagnostics จาก counts เดิม ไม่มีตั้ง threshold เพิ่มภายหลัง |
-| Empty prediction / Exact mask | นับ prediction_pixels_i=0 / (FP_i=0 และ FN_i=0) | ไม่มี target prediction / ทุกพิกเซลตรง reference; ไม่ใช่ execution failure หรือเกณฑ์ผ่านการใช้งาน | Diagnostics จาก counts เดิม |
-| Unmatched parts | นับ detector_miss หรือ detector_unmatched ของ accepted task rows | GT part ที่ไม่มี assigned candidate; อาจเกิดจากไม่มี detection หรือ assignment competition ไม่ใช่จำนวนคนทั้งฉากที่ detector พลาด | [non-Face scorer](../scripts/controlled_roi_evaluation.py), [Face scorer](../scripts/face_neck_evaluation.py) |
+| Pooled IoU / Dice | รวม integer counts ของทุกส่วนก่อนคำนวณอัตราส่วน | ส่วนที่มีพื้นที่มากมีน้ำหนักมากกว่า จึงต่างจาก mean-part; ไม่ใช้เปลี่ยนอันดับหลักเดิม | CSV และสูตรเดียวกัน |
+| ไม่ทับ GT เลย / ครอบคลุม GT ครบ | นับ TP_i=0 / FN_i=0 ในส่วนที่ใช้ประเมิน | จำนวนส่วนที่ไม่ทับ GT แม้แต่พิกเซลเดียว / ครอบคลุมทุกพิกเซล GT; **FN=0 ยังมี FP ได้** จึงไม่ได้หมายถึง mask ถูกทุกจุด | สรุปจาก counts เดิม ไม่ตั้ง threshold เพิ่ม |
+| ผลทำนายว่าง / Mask ตรง GT ทุกพิกเซล | นับ prediction_pixels_i=0 / (FP_i=0 และ FN_i=0) | ไม่มีพิกเซลของคลาสนั้น / ทุกพิกเซลตรงกับ GT อ้างอิง ไม่ใช่สถานะการรันล้มเหลวหรือเกณฑ์ผ่านใช้งานจริง | สรุปจาก counts เดิม |
+| ส่วนที่จับคู่บุคคลไม่ได้ (unmatched) | นับ detector_miss หรือ detector_unmatched ในรายการที่ตรวจรับแล้ว | GT ของส่วนที่ไม่มี predicted person จับคู่ได้ อาจมาจากไม่มี detection หรือการจับคู่แข่งขันกัน ไม่ใช่จำนวนคนทั้งฉากที่ YOLO มองไม่เห็น | [non-Face scorer](../scripts/controlled_roi_evaluation.py), [Face scorer](../scripts/face_neck_evaluation.py) |
 
 นิยาม matrix อิง [official confusion-matrix reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) โดยเรียง labels [target, not-target] จึงเป็น [[TP,FN],[FP,TN]] คำนวณจาก canonical integer counts โดยตรง ไม่ได้เรียก sklearn มา rescore หากตัวหารเป็นศูนย์จะให้ null เพราะไม่มี support (CSV ใช้คำว่า null) ไม่แทนด้วยศูนย์อัตโนมัติ; ชุดนี้ทุก target มี positive GT การรวม native classes ใช้ union ตาม mapping เดิมแล้วจึงนับพิกเซล ไม่เฉลี่ย IoU ของคลาสย่อย
 
 ### รายโมเดลและรายคลาส: เก็บได้/พลาด/เกิน
 
-ร้อยละในตารางเป็น **pooled pixels** จากทุก eligible part ของ target จึงมีน้ำหนักตามขนาดส่วน ต่างจาก mean-part IoU ในตารางหลัก “ไม่ทับเลย” คือ TP=0 รวมกรณี empty/wrong-place และ unmatched GT ซึ่งไม่ใช่ execution failure ส่วน “เก็บ GT ครบ” คือ FN=0 เท่านั้น CSV มี empty-prediction, exact-mask, unmatched counts และ TN เพิ่มเติม
+ร้อยละในตารางคำนวณจาก **ผลรวมพิกเซลของทุกส่วนที่ใช้ประเมินในคลาสนั้น** (pooled pixels) ส่วนที่มีพื้นที่มากจึงมีน้ำหนักมากกว่า ต่างจาก mean-part IoU ที่ให้แต่ละส่วนมีน้ำหนักเท่ากัน “ไม่ทับ GT เลย” หมายถึง TP=0 รวมผลทำนายว่าง ผิดตำแหน่ง หรือจับคู่บุคคลไม่ได้ ไม่ใช่แค่ขอบ mask ไม่เรียบ ส่วน “ครอบคลุม GT ครบ” หมายถึง FN=0 เท่านั้น CSV มีจำนวนผลทำนายว่าง mask ที่ตรง GT ทุกพิกเซล ส่วนที่จับคู่ไม่ได้ และ TN เพิ่มเติม
 
 ### F1 score แยก 4 คลาสต่อโมเดล
 
-**หนึ่งโมเดลมี F1 สี่ค่า**: Hair / Face-domain / Upper / Lower หน่วย % ตารางนี้เป็น **pixel-level pooled binary F1 ต่อ target** รวม TP/FP/FN จาก eligible person-part tasks ของ target นั้นก่อนคำนวณ ไม่ใช่ person-detection F1 หรือการเฉลี่ย F1 รายคน
+**หนึ่งโมเดลมี F1 สี่ค่า** ได้แก่ Hair / Face-domain / Upper / Lower แสดงเป็น % โดยรวม TP/FP/FN ของส่วนที่ใช้ประเมินในแต่ละคลาสก่อนคำนวณ เรียกว่า pooled binary pixel F1 ไม่ใช่ F1 ของการตรวจจับบุคคลหรือค่าเฉลี่ย F1 รายคน
 
-| Model | Hair F1 % | Face-domain F1 % | Upper F1 % | Lower F1 % |
+| โมเดล | Hair F1 (%) | Face-domain F1 (%) | Upper F1 (%) | Lower F1 (%) |
 |---|---:|---:|---:|---:|
 | QANet | 89.945 | 89.326 | 89.233 | 75.409 |
 | M2FP | 87.994 | 81.075 | 84.873 | 77.757 |
@@ -217,17 +221,17 @@ Hair/Upper/Lower ใช้พิกัดภาพต้นฉบับทั้
 
 ใช้ [นิยาม F1 มาตรฐาน](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) คำนวณจาก integer counts ก่อนปัดเศษ ไม่คำนวณจาก P/R ที่ปัดเศษแล้ว สำหรับ binary masks ที่มี domain/aggregation เดียวกัน **F1 เท่ากับ pooled Dice ที่มีอยู่เดิม** จึงเพิ่มชื่อ pooled_F1 ใน CSV ให้ค้นได้ตรงคำถาม ไม่ใช่หลักฐานคุณภาพอีกชุดที่เป็นอิสระ และไม่เท่ากับ mean-part Dice หรือ mean-part IoU/Macro4 ในตารางหลัก
 
-ถ้ามี GT แต่ไม่มี target prediction: Recall=0, F1=0 ส่วน Precision=null เพราะไม่มี predicted support หากไม่มีทั้ง GT และ prediction จะให้ F1=null ตาม zero-denominator policy เดิม ซึ่งเป็นตัวเลือกของ protocol ไม่ใช่ค่า default ของ sklearn ชุดจริงนี้ทั้ง 36 model-target pairs มี GT และ prediction support จึงไม่มี null
+ถ้ามี GT แต่ไม่มีพิกเซลทำนายของคลาสนั้น: Recall=0 และ F1=0 ส่วน Precision=null เพราะไม่มี predicted support หากไม่มีทั้ง GT และ prediction จะให้ F1=null ตามกติกาตัวหารเป็นศูนย์เดิม ซึ่งเป็นตัวเลือกของ protocol ไม่ใช่ค่า default ของ sklearn ชุดจริงทั้ง 36 คู่โมเดล–คลาสมี GT และ prediction support จึงไม่มี null
 
-ตัวหาร GT parts คงเดิม: Hair61 / Face-domain21 / Upper112 / Lower96 เท่ากันข้ามโมเดล เก็บ missed/unmatched parts เป็น FN ตามเดิม ไม่มี model-specific ignore เพิ่ม Face ยังคงเป็น neck-excluded reference domain และ Upper/Lower ใช้ mapping เดิม การรวม counts ให้น้ำหนักตามขนาดส่วน จึงไม่ใช้ตาราง pooled F1 นี้แทนอันดับ mean-part IoU/Macro4 เดิม
+จำนวนส่วน GT ที่ใช้ประเมินคงเดิม: Hair 61 / Face-domain 21 / Upper 112 / Lower 96 ใช้ชุดเดียวกันทุกโมเดล ส่วนที่จับคู่ไม่ได้ยังถูกนับเป็น FN ไม่มีพื้นที่ ignore เพิ่มเฉพาะโมเดล Face ยังคงตัดคอและบริเวณไม่แน่นอนออกจากพื้นที่ประเมิน ส่วน Upper/Lower ใช้ mapping เดิม การรวมพิกเซลให้น้ำหนักตามขนาดส่วน จึงไม่ใช้ตาราง pooled F1 แทนอันดับ mean-part IoU/Macro4 เดิม
 
-Precision และ Recall พร้อม F1 ของทุก model-target pair อยู่ในตารางรายคลาสถัดไป และ [CSV เดิม](../metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv): pooled_precision / pooled_recall / pooled_F1 คอลัมน์ตัวเลขเป็นสัดส่วน 0–1 ส่วนตาราง Markdown แสดง %
+Precision, Recall และ F1 ของทุกคู่โมเดล–คลาสอยู่ในตารางรายคลาสถัดไปและ [CSV เดิม](../metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) ใช้ชื่อคอลัมน์ pooled_precision / pooled_recall / pooled_F1 ตัวเลขใน CSV เป็นสัดส่วน 0–1 ส่วนตารางในรายงานแสดงเป็น %
 
 สร้างเฉพาะส่วน F1/P/R ซ้ำจาก aggregate CSV และ canonical index ที่อยู่บน public clone ได้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_target_confusion.py --f1-only --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` ไม่ต้องมี weights, ภาพ หรือ prediction packets และไม่เปิด inference
 
-#### Hair: n=61 parts, GT support=232,447 pixels
+#### Hair: GT 61 ส่วน รวม 232,447 พิกเซล
 
-| Model | Recall % | พลาด % | Precision % | F1 % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+| โมเดล | Recall (%) | พลาด (%) | Precision (%) | F1 (%) | TP (px) | FN (px) | FP (px) | ไม่ทับ GT เลย/ทั้งหมด | ครอบคลุม GT ครบ/ทั้งหมด |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | QANet | 86.031 | 13.969 | 94.232 | 89.945 | 199,977 | 32,470 | 12,241 | 7/61 | 1/61 |
 | M2FP | 80.648 | 19.352 | 96.811 | 87.994 | 187,465 | 44,982 | 6,176 | 20/61 | 0/61 |
@@ -239,9 +243,9 @@ Precision และ Recall พร้อม F1 ของทุก model-target pa
 | Sapiens2 0.8B | 89.113 | 10.887 | 95.197 | 92.055 | 207,141 | 25,306 | 10,450 | 11/61 | 0/61 |
 | Sapiens2 1B | 92.776 | 7.224 | 95.124 | 93.935 | 215,655 | 16,792 | 11,055 | 8/61 | 0/61 |
 
-#### FaceDomain: n=21 parts, GT support=36,743 pixels
+#### FaceDomain: GT 21 ส่วน รวม 36,743 พิกเซล
 
-| Model | Recall % | พลาด % | Precision % | F1 % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+| โมเดล | Recall (%) | พลาด (%) | Precision (%) | F1 (%) | TP (px) | FN (px) | FP (px) | ไม่ทับ GT เลย/ทั้งหมด | ครอบคลุม GT ครบ/ทั้งหมด |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | QANet | 84.680 | 15.320 | 94.511 | 89.326 | 31,114 | 5,629 | 1,807 | 2/21 | 0/21 |
 | M2FP | 71.992 | 28.008 | 92.781 | 81.075 | 26,452 | 10,291 | 2,058 | 5/21 | 0/21 |
@@ -253,9 +257,9 @@ Precision และ Recall พร้อม F1 ของทุก model-target pa
 | Sapiens2 0.8B | 90.757 | 9.243 | 84.161 | 87.335 | 33,347 | 3,396 | 6,276 | 2/21 | 0/21 |
 | Sapiens2 1B | 92.682 | 7.318 | 86.186 | 89.316 | 34,054 | 2,689 | 5,458 | 2/21 | 0/21 |
 
-#### Upper: n=112 parts, GT support=861,845 pixels
+#### Upper: GT 112 ส่วน รวม 861,845 พิกเซล
 
-| Model | Recall % | พลาด % | Precision % | F1 % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+| โมเดล | Recall (%) | พลาด (%) | Precision (%) | F1 (%) | TP (px) | FN (px) | FP (px) | ไม่ทับ GT เลย/ทั้งหมด | ครอบคลุม GT ครบ/ทั้งหมด |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | QANet | 87.278 | 12.722 | 91.277 | 89.233 | 752,203 | 109,642 | 71,883 | 17/112 | 0/112 |
 | M2FP | 78.629 | 21.371 | 92.194 | 84.873 | 677,661 | 184,184 | 57,374 | 34/112 | 0/112 |
@@ -267,9 +271,9 @@ Precision และ Recall พร้อม F1 ของทุก model-target pa
 | Sapiens2 0.8B | 86.319 | 13.681 | 87.356 | 86.835 | 743,940 | 117,905 | 107,679 | 18/112 | 0/112 |
 | Sapiens2 1B | 89.949 | 10.051 | 87.966 | 88.946 | 775,218 | 86,627 | 106,054 | 17/112 | 2/112 |
 
-#### Lower: n=96 parts, GT support=327,214 pixels
+#### Lower: GT 96 ส่วน รวม 327,214 พิกเซล
 
-| Model | Recall % | พลาด % | Precision % | F1 % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+| โมเดล | Recall (%) | พลาด (%) | Precision (%) | F1 (%) | TP (px) | FN (px) | FP (px) | ไม่ทับ GT เลย/ทั้งหมด | ครอบคลุม GT ครบ/ทั้งหมด |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | QANet | 64.743 | 35.257 | 90.283 | 75.409 | 211,849 | 115,365 | 22,800 | 19/96 | 0/96 |
 | M2FP | 67.049 | 32.951 | 92.535 | 77.757 | 219,395 | 107,819 | 17,699 | 36/96 | 0/96 |
@@ -281,21 +285,21 @@ Precision และ Recall พร้อม F1 ของทุก model-target pa
 | Sapiens2 0.8B | 79.867 | 20.133 | 86.687 | 83.137 | 261,336 | 65,878 | 40,134 | 24/96 | 0/96 |
 | Sapiens2 1B | 85.491 | 14.509 | 84.092 | 84.786 | 279,739 | 47,475 | 52,921 | 18/96 | 0/96 |
 
-### สรุปสิ่งที่ตอบได้จาก diagnostics
+### สรุปการทำนายครอบคลุมและการทำนายเกิน
 
-- **Hair:** pooled GT coverage สูงสุด Sapiens2 0.4B 93.979% (พลาด 13,996/232,447 px); pooled precision สูงสุด D2FP 96.855% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
-- **FaceDomain:** pooled GT coverage สูงสุด Sapiens2 1B 92.682% (พลาด 2,689/36,743 px); pooled precision สูงสุด QANet 94.511% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
-- **Upper:** pooled GT coverage สูงสุด Sapiens2 1B 89.949% (พลาด 86,627/861,845 px); pooled precision สูงสุด D2FP 92.821% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
-- **Lower:** pooled GT coverage สูงสุด Sapiens2 1B 85.491% (พลาด 47,475/327,214 px); pooled precision สูงสุด M2FP 92.535% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **Hair:** Recall จากผลรวมพิกเซลสูงสุดคือ Sapiens2 0.4B 93.979% (พลาด 13,996/232,447 px); Precision จากผลรวมพิกเซลสูงสุดคือ D2FP 96.855% ค่านี้อธิบายความครอบคลุมและการทำนายเกิน ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **FaceDomain:** Recall จากผลรวมพิกเซลสูงสุดคือ Sapiens2 1B 92.682% (พลาด 2,689/36,743 px); Precision จากผลรวมพิกเซลสูงสุดคือ QANet 94.511% ค่านี้อธิบายความครอบคลุมและการทำนายเกิน ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **Upper:** Recall จากผลรวมพิกเซลสูงสุดคือ Sapiens2 1B 89.949% (พลาด 86,627/861,845 px); Precision จากผลรวมพิกเซลสูงสุดคือ D2FP 92.821% ค่านี้อธิบายความครอบคลุมและการทำนายเกิน ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **Lower:** Recall จากผลรวมพิกเซลสูงสุดคือ Sapiens2 1B 85.491% (พลาด 47,475/327,214 px); Precision จากผลรวมพิกเซลสูงสุดคือ M2FP 92.535% ค่านี้อธิบายความครอบคลุมและการทำนายเกิน ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
 
-**ตัวอย่างอ่านผลผมของ Sapiens2 1B:** เก็บถูก 215,655/232,447 พิกเซล = Recall 92.776% พลาด 16,792 พิกเซล = 7.224% และทำนายเกิน 11,055 พิกเซล จึงได้ Precision 95.124% แต่ยังมี 8/61 ส่วนที่ไม่ทับ GT เลย (ในนั้นเป็น unmatched 5 ส่วน) ขณะที่ mean-part IoU = 67.152% คะแนน pooled ที่สูงไม่ใช่หลักฐานว่าเก็บผมครบทุกคน เพราะส่วนใหญ่มีน้ำหนักมากกว่าส่วนเล็กใน pooled metric และ Recall ไม่ลงโทษ FP
+**ตัวอย่างอ่านผลผมของ Sapiens2 1B:** เก็บถูก 215,655/232,447 พิกเซล = Recall 92.776% พลาด 16,792 พิกเซล = 7.224% และทำนายเกิน 11,055 พิกเซล จึงได้ Precision 95.124% แต่ยังมี 8/61 ส่วนที่ไม่ทับ GT เลย (ในจำนวนนี้จับคู่บุคคลไม่ได้ 5 ส่วน) ขณะที่ mean-part IoU = 67.152% คะแนน pooled ที่สูงไม่ได้หมายความว่าทำนายผมครบทุกคน เพราะส่วนที่มีพื้นที่มากมีน้ำหนักมากกว่าส่วนเล็ก และ Recall ไม่ลงโทษ FP
 
 
-Detector-unmatchedคงเดิมร่วมทุกระบบ: Hair5/61,Face2/21,Upper15/112,Lower14/96; GTเหล่านี้ยังอยู่ในdenominatorและถูกคิดFN ไม่ตัดภาพล้มเหลวเพื่อช่วยคะแนน. Zero-overlapที่มากกว่านี้ยังอาจเกิดจากsemanticempty/wrongpart/ownership ไม่ควรเรียกทุกกรณีว่าYOLOไม่เห็นคน.
+จำนวนส่วนที่จับคู่บุคคลไม่ได้เท่ากันทุกระบบ: Hair 5/61, Face 2/21, Upper 15/112, Lower 14/96 รายการเหล่านี้ยังอยู่ในตัวหารและถูกนับเป็น FN ไม่ตัดออกเพื่อช่วยคะแนน กรณีที่ไม่ทับ GT เลยนอกเหนือจากนี้อาจมาจากผลทำนายว่าง ผิดคลาส ผิดตำแหน่ง หรือการกำหนดเจ้าของ mask จึงไม่ควรเหมารวมว่า YOLO ตรวจคนไม่พบ
 
-คำตอบว่า “ทำผมครบไหม” จึงต้องอ่าน Recallคู่Precision/IoUและจำนวนส่วนที่ไม่ทับเลย; coverage100%อย่างเดียวอาจเป็นmaskใหญ่เกินจริง. ยังไม่มีเกณฑ์ผ่านแบบabsolute และไม่เปลี่ยนน้ำหนักเพื่อให้โมเดลใดชนะ. การไม่มีpartใดexact-maskไม่ได้หมายถึงทุกpartใช้งานไม่ได้—เกณฑ์exactคือทุกpixelตรงreference.
+การตอบว่า “แบ่งส่วนผมครบหรือไม่” ต้องดู Recall คู่กับ Precision/IoU และจำนวนส่วนที่ไม่ทับ GT เลย การครอบคลุม GT ได้ 100% เพียงอย่างเดียวอาจเกิดจาก mask ใหญ่เกินจริง ยังไม่มีเกณฑ์ผ่านแบบตายตัวสำหรับใช้งานจริง และไม่ได้เปลี่ยนน้ำหนักเพื่อให้โมเดลใดชนะ การไม่มี mask ที่ตรง GT ทุกพิกเซลก็ไม่ได้หมายความว่าทุกส่วนใช้งานไม่ได้ เพราะเกณฑ์นั้นเข้มถึงระดับทุกพิกเซล
 
-Faceยังเป็น21/35referencecontoursที่ผ่านagent-assistedreview ไม่ใช่expertgold; SapiensFace_Neckcandidateยังคงเดิมบนneck-excludeddomain. Diagnosticsไม่สร้างstrictFace-only/Dress/Neck-onlycapabilityขึ้นมา และไม่ใช้พิสูจน์training/architectureเพียงอย่างเดียว. Matrixเพิ่มหลังเห็นผลแล้ว เป็นpost-hoc reporting ไม่ใช่preregisteredconfirmatoryanalysis. ไม่เพิ่มGPU/CPUfullrescore/GTreview/mappingtuning.
+Face ใช้ขอบเขตอ้างอิง 21/35 รายการที่ผู้ช่วยตรวจจากภาพ ไม่ใช่ GT ที่ผู้เชี่ยวชาญอิสระรับรอง ผล Face_Neck ของ Sapiens ยังประเมินบนพื้นที่ที่ตัดคอออกตามกติกาเดิม จึงไม่ได้รับรองการแยก Face-only, Dress หรือ Neck-only และไม่อธิบายผลจาก architecture/training เพียงอย่างเดียว ตารางนี้เพิ่มหลังเห็นผลแล้ว เป็นการสรุปเพิ่มเติม ไม่ใช่การวิเคราะห์ยืนยันที่ลงทะเบียนล่วงหน้า ไม่มีการรันโมเดล ให้คะแนนจาก masks ใหม่ ตรวจ GT เพิ่ม หรือปรับ mapping
 
 หลักฐานการสร้างภาพ/CSV และการตรวจว่า canonical results คงเดิม: [STUDY_STATE.json](../STUDY_STATE.json) → target_confusion_reporting เก็บเฉพาะ aggregate counts บน public Git ไม่มีภาพ CCTV, person IDs, annotation vertices หรือ prediction packets
 
@@ -305,11 +309,11 @@ Faceยังเป็น21/35referencecontoursที่ผ่านagent-assist
 <!-- RUNTIME_DIAGNOSTICS_START -->
 ## ความเร็วและเวลาประมวลผลจาก log เดิม
 
-**เป็น historical shared-GPU adapter diagnostics บน Tesla T4 ที่บันทึกไว้ ไม่ใช่ clean parser-only หรือ end-to-end speed benchmark** ไม่มีการรันโมเดลใหม่เพื่อเพิ่มตารางนี้ หน่วยหลักเป็นหนึ่ง shared person ROI ไม่ใช่หนึ่งภาพ; 90 ภาพมี 130 YOLO opportunities และ 8 ภาพไม่มี detection แต่ละ call คืนทุก native class ร่วมกัน จึงไม่มีเวลาราย Hair/Face/Upper/Lower แยกต่างหาก
+**ตารางนี้สรุปเวลาจาก log เดิมบน Tesla T4 ภายใต้นโยบายใช้ GPU ร่วม** ไม่ใช่ benchmark ความเร็วของ model forward เพียงอย่างเดียวหรือ pipeline ทั้งระบบ ไม่มีการรันโมเดลเพิ่ม หน่วยหลักคือหนึ่ง ROI หรือภาพย่อยของบุคคลที่ YOLO ตรวจพบ ชุด 90 ภาพมี 130 ROIs และมี 8 ภาพที่ไม่มี detection แต่ละ call ทำนายทุกคลาสเดิมพร้อมกัน จึงไม่มีเวลาราย Hair / Face / Upper / Lower
 
 ### A. เวลา adapter จาก monotonic timer — parent segment
 
-| Model | ROI ที่มี timer / 130 | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวมเวลาที่จับ s |
+| โมเดล | ROI ที่มีข้อมูลเวลา / 130 | เฉลี่ย (ms/ROI) | มัธยฐาน (ms/ROI) | P95 (ms/ROI) | เวลารวมที่บันทึกได้ (s) |
 |---|---:|---:|---:|---:|---:|
 | QANet | 130/130 | 76.325 | 75.173 | 91.062 | 9.922 |
 | M2FP | 130/130 | 220.187 | 224.719 | 264.329 | 28.624 |
@@ -321,21 +325,21 @@ Faceยังเป็น21/35referencecontoursที่ผ่านagent-assist
 | Sapiens2 0.8B | 115/130 | 2922.120 | 2944.655 | 3021.344 | 336.044 |
 | Sapiens2 1B | 115/130 | 4143.146 | 4187.459 | 4307.980 | 476.462 |
 
-นับ ROI_READINESS ที่เป็นสมาชิกจริงด้วย ไม่มี inference ซ้ำเฉพาะ timing และไม่คัดจากคะแนน แยก TRAIN warmup ออกทั้งหมด RP-R-CNN มี timer เพียง 1 ROI; CPI เป็น parent subset 28/27 ROI จึงใช้เป็นตัวแทนเต็มชุดไม่ได้ Sapiens แต่ละขนาดมี 115 ROI; อีก 15 เป็น prior diagnostic predictions ที่ reuse จึงไม่มี timer ของรอบนี้ ไม่เติมศูนย์หรือรวม timer คนละขอบเขตจาก pilot
+รวม ROI_READINESS ที่อยู่ในชุดประเมินจริง แต่ไม่นับ TRAIN warmup ไม่มีการรันซ้ำเพื่อจับเวลาและไม่คัดภาพตามคะแนน RP-R-CNN มีเวลารอบหลักเพียง 1 ROI ส่วน CPI มี 28/27 ROIs จึงยังไม่แทนทั้งชุด Sapiens แต่ละขนาดมีเวลาของ 115 ROIs อีก 15 ROIs นำผลจากการทดลองเดิมมาใช้ จึงไม่มีเวลาของรอบนี้ ไม่เติมศูนย์หรือนำเวลาจาก pilot ที่จับคนละขอบเขตมารวม
 
 ### B. Continuation — ช่วงเวลาระหว่าง UTC events
 
-| Model | ROI ที่มี start–end | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวม interval s |
+| โมเดล | ROI ที่มีเวลาเริ่มและจบ | เฉลี่ย (ms/ROI) | มัธยฐาน (ms/ROI) | P95 (ms/ROI) | ผลรวมช่วงเวลา (s) |
 |---|---:|---:|---:|---:|---:|
 | RP-R-CNN | 129 | 225.817 | 220.679 | 307.976 | 29.130 |
 | CPI R50 | 102 | 3046.172 | 3372.932 | 5982.932 | 310.710 |
 | CPI ConvNeXt-B | 103 | 491.921 | 456.155 | 809.974 | 50.668 |
 
-Continuation ไม่ได้เก็บ adapter_elapsed_seconds จึงใช้ FORWARD_END.utc − FORWARD_START.utc เป็น **event interval** ที่มี pre-synchronization และการบันทึก resource JSON/flush/fsync เพิ่มด้วย ไม่เท่ากับ monotonic adapter timer ของ A และอาจได้รับผลจากการปรับ system clock จึงไม่เฉลี่ยสองตารางเข้าด้วยกัน ไม่ทิ้ง historical failed call: RP-R-CNN มี start ที่ไม่มี end 1 ครั้ง เก็บประวัติไว้แต่ไม่มี duration ที่วัดจบสำหรับ sample นั้น ส่วน CPI parent หยุดที่ pre-forward headroom guard ไม่ใช่หลักฐาน CUDA OOM ในรอบนี้
+รอบ continuation ไม่ได้บันทึก adapter_elapsed_seconds จึงคำนวณจาก FORWARD_END.utc − FORWARD_START.utc ช่วงนี้รวมการรอ GPU ก่อนเริ่มงานและการบันทึก resource JSON/flush/fsync ด้วย ต่างจาก timer ใน A และอาจได้รับผลจากการปรับนาฬิการะบบ จึงไม่เฉลี่ยสองตารางรวมเป็น latency เดียวกัน RP-R-CNN มี 1 call ที่บันทึกเวลาเริ่มแต่ไม่มีเวลาจบ ประวัติยังอยู่ครบและไม่สร้าง duration ขึ้นมาแทน ส่วน CPI ในรอบหลักหยุดที่ headroom guard ก่อน forward ไม่ใช่หลักฐานว่าเกิด CUDA OOM ในรอบนี้
 
 ### C. เวลา worker ที่ผ่านไปจริง — บัญชีการทำงาน
 
-| Model | จำนวน attempts/segments | Parent s | Continuation s | รวม worker elapsed s |
+| โมเดล | จำนวนรอบที่รัน | รอบหลัก (s) | รอบ continuation (s) | เวลารวมของ worker (s) |
 |---|---:|---:|---:|---:|
 | QANet | 1 | 52.864 | — | 52.864 |
 | M2FP | 1 | 72.627 | — | 72.627 |
@@ -347,13 +351,15 @@ Continuation ไม่ได้เก็บ adapter_elapsed_seconds จึงใ
 | Sapiens2 0.8B | 1 | 468.761 | — | 468.761 |
 | Sapiens2 1B | 1 | 698.234 | — | 698.234 |
 
-Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loading, binding/hash checks, warmup, failed-attempt work, packet readback/assembly/I/O และงานบันทึกสถานะที่เกิดใน worker แต่ไม่รวม controller queue/gap ระหว่าง attempts, prior diagnostic run, YOLO cache preparation, GT review หรือ CPU scoring ภายหลัง เป็นเวลาที่ใช้ทำงานในรอบที่ระบุ ไม่ใช่เวลาทำนายใหม่ครบ 90 ภาพจากศูนย์ และไม่ใช่ผลรวม GPU kernel time
+เวลาของ worker คำนวณจาก STATE.ended_utc − STATE.started_utc รวมการเตรียมงาน โหลดโมเดล ตรวจ bindings/hashes, warmup, งานใน attempt ที่ล้มเหลว การอ่านกลับ/ประกอบ/บันทึก packets และการบันทึกสถานะ แต่ไม่รวมช่วงรอระหว่าง attempts การทดลองเดิมที่นำผลมาใช้ การสร้าง YOLO cache การตรวจ GT หรือ CPU scoring ภายหลัง จึงไม่ใช่เวลารันใหม่ครบ 90 ภาพตั้งแต่ต้น และไม่ใช่ผลรวมเวลา GPU kernel
 
-### D. ตารางสรุปรวม — บวกค่าที่มี log แล้ว
+<a id="d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว"></a>
 
-**ไม่มีเวลารายคลาส:** หนึ่ง forward ทำนาย native classes ทั้งหมดร่วมกัน (CIHP 20 / Sapiens 29) แล้วใช้ Hair/Face/Upper/Lower จาก output นั้น การ map/ให้คะแนนสี่ targets เป็นงานภายหลัง ไม่ได้จับเวลาแยกรายคลาส จึงแบ่งเวลารวมออกเป็น 4 ค่าไม่ได้ ส่วน IoU/Recall/Precision/Dice รายคลาสยังอยู่ในตารางคุณภาพและ confusion matrix ข้างต้น
+### D. สรุปเวลาที่บันทึกได้และเวลารวมของ worker
 
-| Model | ROI มีเวลา / 130 | A รวม s | B รวม s | A+B ช่วงเวลาที่มี log รวม s | C รวม worker s |
+**ไม่ได้จับเวลาแยกรายคลาส:** โมเดลทำนายทุกคลาสเดิมพร้อมกันในหนึ่ง forward (CIHP 20 / Sapiens 29 คลาส) แล้วจึงแปลงผลเป็น Hair / Face / Upper / Lower เพื่อประเมินภายหลัง จึงแบ่งเวลารวมเป็นเวลาของแต่ละคลาสไม่ได้ ส่วน IoU/Recall/Precision/Dice รายคลาสดูได้ในตารางคุณภาพและ confusion matrix ข้างต้น
+
+| โมเดล | ROI ที่มีข้อมูลเวลา / 130 | รวม A (s) | รวม B (s) | รวมช่วงเวลาที่บันทึก A+B (s) | เวลารวมของ worker C (s) |
 |---|---:|---:|---:|---:|---:|
 | QANet | 130/130 | 9.922 | — | 9.922 | 52.864 |
 | M2FP | 130/130 | 28.624 | — | 28.624 | 72.627 |
@@ -364,32 +370,32 @@ Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loa
 | Sapiens2 0.4B | 115/130 | 162.165 | — | 162.165 | 237.995 |
 | Sapiens2 0.8B | 115/130 | 336.044 | — | 336.044 | 468.761 |
 | Sapiens2 1B | 115/130 | 476.462 | — | 476.462 | 698.234 |
-| **รวมบัญชี 9 ระบบ** | **1125/1170** | **1195.592** | **390.508** | **1586.100** | **2365.697** |
+| **รวม 9 ระบบ** | **1125/1170** | **1195.592** | **390.508** | **1586.100** | **2365.697** |
 
-**A+B เป็นผลบวกเชิงบัญชีของคนละ ROI ที่สำเร็จและไม่ซ้ำกัน** แต่ clock/ขอบเขตต่างกันตาม A/B จึงไม่ใช่ latency มาตรฐานเดียวกัน และไม่ใช่เวลา parsing ทั้ง 130 ROI ของ Sapiens ที่มี timer เพียง 115 ROI เครื่องหมาย — หมายถึงไม่มี continuation intervals ให้รวม ไม่ใช่ทำนายโดยใช้เวลาเป็นศูนย์ ไม่ประมาณเวลาอีก 15 ROI ของแต่ละ Sapiens จากค่าเฉลี่ยหรือแทนด้วยศูนย์ ยอดรวมคำนวณจาก full precision ก่อนปัดเศษ จึงอาจต่างจากการบวกเลข 3 ตำแหน่งที่แสดงเล็กน้อย
+**A+B รวมช่วงเวลาของ ROI ที่สำเร็จและไม่ซ้ำกัน** แต่ A/B ใช้นาฬิกาและขอบเขตการจับเวลาต่างกัน จึงไม่ใช่ latency ที่วัดด้วยวิธีเดียวกัน อีกทั้ง Sapiens มีเวลาบันทึกเพียง 115 จาก 130 ROIs เครื่องหมาย — หมายถึงไม่มีช่วงเวลาจาก continuation ให้รวม ไม่ใช่ประมวลผลโดยใช้เวลาเป็นศูนย์ ไม่ประมาณเวลาอีก 15 ROIs จากค่าเฉลี่ย ยอดรวมใช้ค่าก่อนปัดเศษ จึงอาจต่างจากผลบวกของเลข 3 ตำแหน่งที่แสดงเล็กน้อย
 
-**ห้ามบวก A+B+C:** C ครอบช่วงทำงาน A/B อยู่แล้ว จึงจะนับเวลาซ้ำ หากถามเวลารวมของ worker ให้ใช้ C ที่บวก parent+continuation แล้วโดยตรง ส่วนผลรวม 9 ระบบคือบัญชีเวลาของงานทั้งเก้า ไม่ใช่ latency ของหนึ่งภาพ ไม่ใช่ elapsed ของ batch ตั้งแต่ต้นถึงจบรวมช่วงรอ และไม่ใช่เวลา YOLO→parsing→สี→ฐานข้อมูล
+**ไม่บวก A+B+C เพราะจะนับเวลาซ้ำ:** C ครอบช่วง A/B อยู่แล้ว หากต้องการเวลารวมของ worker ให้ใช้ C ซึ่งบวกรอบหลักและรอบ continuation แล้ว ผลรวม 9 ระบบเป็นเวลารวมของงานทั้งเก้า ไม่ใช่เวลาต่อภาพ ระยะเวลาทั้ง batch ที่รวมช่วงรอ หรือเวลาเต็มเส้นทาง YOLO → parsing → สี → ฐานข้อมูล
 
-### นิยาม metrics ของเวลาและจำนวนตัวอย่าง
+### นิยามตัวชี้วัดเวลาและจำนวนตัวอย่าง
 
-| Metric / ค่าที่แสดง | สูตรและหน่วย | บอกอะไร / ข้อจำกัด | ที่มา |
+| ตัวชี้วัด | สูตรและหน่วย | ความหมายและข้อจำกัด | ที่มา |
 |---|---|---|---|
-| A: Monotonic adapter duration | t_after_sync − t_before_infer; วินาทีต่อ ROI | preprocess/transfer/model/native decode ภายใน adapter ไม่ใช่ model forward ล้วน; ขอบเขตต่างรายโมเดล | [parent forward](../scripts/controlled_roi.py) → adapter_elapsed_seconds |
-| B: UTC event interval | FORWARD_END.utc − FORWARD_START.utc; วินาทีต่อ ROI | รวม synchronization และ log/resource-writing overhead เพิ่ม; เป็น system-clock interval | [continuation forward/events](../scripts/controlled_roi_continuation.py) |
-| Mean ms/ROI | 1,000 × Σt/n แยกใน A หรือ B | เวลาต่อ ROI โดยเฉลี่ยเฉพาะกลุ่มที่มี timer; แม้ถ่วง n ก็ยังไม่แก้ขอบเขต A/B ที่ต่างกัน จึงไม่รวมเป็น latency มาตรฐานเดียว | [describe_seconds](../scripts/report_runtime.py) จาก accepted observations |
-| Median ms/ROI | ค่ากลางของ sorted t × 1,000 | เวลาของ sample กลาง; ไวต่อค่าสุดขั้วน้อยกว่า mean | สถิติเชิงพรรณนาของแต่ละกลุ่ม log |
-| P95 ms/ROI | linear percentile ตำแหน่ง 0.95×(n−1) × 1,000 | ประมาณค่าช่วงช้าของ sample ที่วัด ไม่ใช่ confidence interval หรือรับประกัน 95% ของภาพใหม่ | [describe_seconds](../scripts/report_runtime.py); n=1 ให้ค่าเดียวกับ sample นั้น |
-| ผลรวม A+B | Σt_A + Σt_B; วินาที | รวมช่วงเวลาที่มี log ไม่ซ้ำ ROI; เป็น derived accounting ไม่ใช่ pure-parsing/end-to-end metric | [time_accounting](../scripts/report_runtime.py); ไม่แก้ clock ให้เป็นชนิดเดียวกัน |
-| C: รวม worker elapsed | Σ_segments(STATE.ended_utc − STATE.started_utc); วินาที | รวม loading/warmup/checks/export และ failed work ภายในแต่ละ attempt; ไม่รวม queue gap และงานนอก worker | STATE.json ของ parent/continuation; ตาราง C |
-| Timing coverage | (n_A+n_B)/130; ROI และ % | มี duration กี่ ROI ในประชากรที่มีผล; ไม่ใช่ prediction completeness, detection recall หรือความแม่นยำ | จับคู่ accepted ROI membership กับ log; Sapiens 115/130=88.462% แต่ predictions ครบ130 |
+| A: เวลาของ adapter จาก monotonic timer | t_after_sync − t_before_infer; วินาทีต่อ ROI | รวม preprocessing การส่งข้อมูลเข้าออก GPU และการอ่านผลภายใน adapter จึงไม่ใช่เวลา model forward อย่างเดียว | [parent forward](../scripts/controlled_roi.py) → adapter_elapsed_seconds |
+| B: ช่วงเวลาจาก UTC events | FORWARD_END.utc − FORWARD_START.utc; วินาทีต่อ ROI | รวมการรอ GPU และการเขียน log/resource JSON เพิ่ม ใช้นาฬิการะบบ | [continuation forward/events](../scripts/controlled_roi_continuation.py) |
+| Mean: เวลาเฉลี่ย (ms/ROI) | 1,000 × Σt/n แยกใน A หรือ B | เฉลี่ยเฉพาะ ROI ที่มีข้อมูลเวลาในกลุ่มนั้น แม้ถ่วงจำนวน n ก็ยังทำให้ขอบเขต A/B เหมือนกันไม่ได้ | [describe_seconds](../scripts/report_runtime.py) จากข้อมูลที่ตรวจรับแล้ว |
+| Median: มัธยฐาน (ms/ROI) | ค่ากลางเมื่อเรียง t × 1,000 | แสดงเวลาของข้อมูลลำดับกลาง ได้รับผลจากค่าสุดขั้วน้อยกว่าค่าเฉลี่ย | สถิติเชิงพรรณนาของแต่ละกลุ่ม log |
+| P95: เปอร์เซ็นไทล์ที่ 95 (ms/ROI) | linear percentile ตำแหน่ง 0.95×(n−1) × 1,000 | แสดงค่าบริเวณปลายด้านช้าของข้อมูลที่วัด ไม่ใช่ช่วงความเชื่อมั่นหรือคำรับประกัน 95% ของภาพใหม่ | [describe_seconds](../scripts/report_runtime.py); เมื่อ n=1 จะได้ค่าเดียวกับตัวอย่างนั้น |
+| ผลรวม A+B | Σt_A + Σt_B; วินาที | รวมช่วงเวลาที่มี log ของ ROI ที่ไม่ซ้ำกัน โดยยังคงความต่างของวิธีจับเวลา ไม่ใช่เวลารวมทั้ง pipeline | [time_accounting](../scripts/report_runtime.py) |
+| C: เวลารวมของ worker | Σ_segments(STATE.ended_utc − STATE.started_utc); วินาที | รวมการโหลด warmup การตรวจไฟล์ การส่งออกผล และงานใน attempt ที่ล้มเหลว ไม่รวมช่วงรอระหว่าง attempts หรืองานนอก worker | STATE.json ของรอบหลัก/continuation; ตาราง C |
+| สัดส่วน ROI ที่มีข้อมูลเวลา | (n_A+n_B)/130; จำนวน ROI และ % | บอกว่ามีเวลาให้คำนวณกี่ ROI ไม่ใช่ความครบถ้วนของผลทำนายหรือความแม่นยำ | จับคู่ log กับ ROI ที่ตรวจรับแล้ว; Sapiens มีเวลา 115/130=88.462% แต่ผลทำนายครบ 130 ROIs |
 
-สูตร Mean/Median/P95 เป็นสถิติเชิงพรรณนาของเวลาที่บันทึก ไม่ใช่ metric การแยกส่วนภาพ มาตรวัดคุณภาพ IoU/Recall/Precision/Dice มีสูตร ตัวหาร และแหล่งอ้างอิงแยกอยู่ในส่วน confusion matrix ไม่มีการสร้างคะแนนผสม quality×speed หรือเลือกผู้ชนะใหม่จากตารางเวลานี้
+Mean/Median/P95 เป็นสถิติสรุปเวลา ส่วน IoU/Recall/Precision/Dice เป็นตัวชี้วัดคุณภาพการแบ่งส่วนภาพ ซึ่งอธิบายแยกไว้ในส่วน confusion matrix รายงานนี้ไม่รวมคุณภาพกับความเร็วเป็นคะแนนใหม่ และไม่ใช้ตารางเวลาเปลี่ยนผู้ชนะตามเกณฑ์คุณภาพเดิม
 
 ### E. เวลาต่อหนึ่งภาพ และรวมทั้ง 90 ภาพ
 
-**เวลาต่อภาพในตารางนี้ = ผลบวกเวลาของทุก person ROI ที่อยู่ในภาพนั้นจริง ๆ** เช่น ROI ในภาพเดียวมี 70 และ 90 ms จะได้งาน parsing รวม160ms; ไม่ใช้ mean ms/ROI คูณจำนวนคนแทน log ของภาพนั้น เป็น derived parsing-work time ไม่ใช่เวลาตั้งแต่เปิดภาพจนบันทึกผลครบ pipeline
+**เวลาประมวลผลต่อภาพในขั้น parsing คือผลรวมเวลาของทุก ROI ในภาพนั้น** โดย ROI คือภาพย่อยของบุคคลที่ได้จาก YOLO ตัวอย่างเช่น หากภาพหนึ่งมีสอง ROI ที่ใช้เวลา 70 และ 90 ms เวลารวมของภาพนั้นจะเท่ากับ 160 ms คำนวณจากเวลาที่บันทึกจริงของแต่ละ ROI ไม่ได้นำเวลาเฉลี่ยต่อ ROI มาคูณจำนวนคน และยังไม่รวมเวลาของ pipeline ทั้งหมด
 
-| Model | ภาพที่เวลาครบ / 90 | Mean ms/ภาพ เฉพาะภาพเวลาครบ | Mean ms/ภาพ ครบประชากร90 | รวม parsing ครบ90ภาพ s | ผลรวม log ที่มี s |
+| โมเดล | ภาพที่มีข้อมูลเวลาครบ / 90 | เฉลี่ยต่อภาพที่มีข้อมูลครบ (ms) | เฉลี่ยต่อภาพทั้งชุด 90 ภาพ (ms) | เวลารวมทั้งชุด 90 ภาพ (s) | ผลรวมเวลาที่บันทึกได้ (s) |
 |---|---:|---:|---:|---:|---:|
 | QANet | 90/90 | 110.247 | 110.247 | 9.922 | 9.922 |
 | M2FP | 90/90 | 318.049 | 318.049 | 28.624 | 28.624 |
@@ -401,38 +407,38 @@ Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loa
 | Sapiens2 0.8B | 84/90 | 4000.521 | null | null | 336.044 |
 | Sapiens2 1B | 84/90 | 5672.165 | null | null | 476.462 |
 
-รวมตารางรายภาพมี **810 model-image records =9โมเดล×90ภาพเดิม** ไม่ใช่ภาพอิสระ810ภาพ มี timing ครบ792/810 records; ผลรวมช่วงเวลาที่มีบันทึกยังเท่าเดิม1586.100s ไม่ใช่ยอดครบ90ภาพของทุกโมเดลหากบางช่องยังเป็นnull
+ตารางรายภาพมี **810 รายการ จาก 9 โมเดลที่ประเมินภาพชุดเดิม 90 ภาพ** มีข้อมูลเวลาครบ 792/810 รายการ ผลรวมเวลาที่บันทึกได้คือ 1586.100 s แต่ยังใช้แทนเวลารวมครบ 90 ภาพของทุกโมเดลไม่ได้ หากโมเดลนั้นมีช่อง null
 
-มี8ภาพที่ frozen YOLO ไม่ได้สร้าง ROI ทุกโมเดลจึงไม่มี parser call: งาน parsing ของภาพเหล่านี้เป็น0จริง แต่เวลาอ่านภาพ/YOLO/งานอื่นไม่ใช่0 ค่าเฉลี่ยในคอลัมน์ภาพเวลาครบรวม8ภาพนี้ด้วย ไม่คัดทิ้งเพื่อเปลี่ยนตัวหาร ส่วนภาพที่มี ROI แต่ขาด timer จะเป็นnull ไม่เติม0 และไม่ใช้ค่าเฉลี่ยทดแทน
+**null หมายถึงข้อมูลเวลาไม่เพียงพอ ไม่ใช่ใช้เวลาเป็นศูนย์** มี 8 ภาพที่ YOLO ไม่พบ ROI จึงไม่มีการเรียก parser และเวลาเฉพาะขั้น parsing เป็น 0 จริง ค่าเฉลี่ยรวมภาพเหล่านี้ด้วย แต่การอ่านภาพและการทำงานของ YOLO ยังมีต้นทุน ส่วนภาพที่มี ROI แต่ขาดข้อมูลเวลาจะคงเป็น null โดยไม่เติมศูนย์หรือประมาณจากภาพอื่น
 
-Sapiens แต่ละขนาด reuse15ROIs จาก6ภาพ จึงมีภาพที่เวลาของรอบนี้ครบเพียง84/90: ค่าเฉลี่ยภาพเวลาครบใช้84เป็นตัวหาร ส่วน mean/total ของประชากร90เป็นnull Predictions ยังคงครบ90ภาพ/130ROIs จึงไม่ใช่ inference failure หรือคะแนนคุณภาพไม่ครบ ตรวจ source ของ prior diagnostic แล้วพบว่าขอบเขตเวลาเป็น model-forward โดย preprocessing/map-back อยู่ข้างนอก จึงไม่นำมาปะปนเพื่อเติม adapter timer ที่ขาด
+Sapiens แต่ละขนาดนำผลเดิม 15 ROIs จาก 6 ภาพกลับมาใช้ จึงมีข้อมูลเวลาของรอบนี้ครบ 84/90 ภาพ คอลัมน์เฉลี่ยเฉพาะภาพที่มีข้อมูลครบใช้ตัวหาร 84 ส่วนค่าเฉลี่ยและเวลารวมของทั้งชุด 90 ภาพเป็น null ผลทำนายยังครบ 90 ภาพ/130 ROIs และคะแนนคุณภาพไม่ได้ขาดตามไปด้วย เวลาของการทดลองเดิมจับเฉพาะ model forward โดยไม่รวม preprocessing และ map-back จึงนำมาเติมช่วงเวลาของ adapter ที่ขาดไม่ได้
 
-รายภาพทุกโมเดลอยู่ใน private `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มี model_id, ชื่อภาพต้นทาง, จำนวนROIs, จำนวนที่มีเวลา, status, ผลรวมเวลาที่มี และเวลางาน parsing ของภาพนั้น หากไม่ครบจะเป็นnull ไฟล์รายภาพมี CCTV identifiers จึงไม่ขึ้น public Git; hash/count/location อยู่ใน STUDY_STATE.json → per_image_timing_reporting
+ดูเวลารายภาพได้จากไฟล์ส่วนตัว `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มีรหัสโมเดล ชื่อภาพต้นทาง จำนวน ROI จำนวน ROI ที่มีเวลา สถานะ และเวลารวมของภาพนั้น หากข้อมูลไม่ครบจะเป็น null ไฟล์นี้มีข้อมูลอ้างอิงภาพ CCTV จึงไม่เผยแพร่บน public Git ดูตำแหน่ง จำนวนรายการ และ hash ได้ใน STUDY_STATE.json → per_image_timing_reporting
 
-| Metric | สูตร / ตัวหาร | ความหมาย |
+| ตัวชี้วัด | สูตร / ตัวหาร | ความหมาย |
 |---|---|---|
-| image_parsing_work_ms | 1,000×ΣเวลาทุกROIของภาพ เมื่อครบทุกROI | เวลางาน parsing ที่รวมจาก logs ต่อภาพ; A/B มี clock boundary ต่างกันตามเดิม |
-| Mean ภาพเวลาครบ | Σimage_parsing_work_ms/N_complete | ใช้เฉพาะภาพที่ timer ครบ รวมภาพไม่มีparserROI; Sapiensใช้84 ภาพ โมเดลอื่น90 จึงไม่ใช่ matched-population speed ranking |
-| Mean ประชากร90 | Σimage_parsing_work_ms/90 เฉพาะเมื่อครบ90ภาพ | ถ้าภาพใดขาดtimer ค่าmeanนี้เป็นnull |
-| Total ประชากร90 | Σimage_parsing_work_ms/1,000 เฉพาะเมื่อครบ90ภาพ | ยอดรวม parsing-work ของทั้งชุด ไม่รวมYOLO/export/scorer/สี/DB |
-| Recorded interval sum | รวมเฉพาะช่วงเวลาที่มีlog | บัญชีเวลาที่ทราบ รวมส่วนที่บันทึกได้ของภาพที่อาจยังไม่ครบ; ไม่ใช้แทนfull-population total |
+| เวลาต่อภาพในขั้น parsing (image_parsing_work_ms) | 1,000 × Σเวลา ROI ของภาพ เมื่อมีข้อมูลครบทุก ROI | ผลรวมเวลาที่บันทึกของภาพนั้น หน่วย ms; ขอบเขตการจับเวลา A/B ยังต่างกันตามที่ระบุ |
+| เวลาเฉลี่ยต่อภาพที่มีข้อมูลครบ | Σimage_parsing_work_ms / N_complete | รวมเฉพาะภาพที่มีข้อมูลเวลาครบ รวมภาพที่ไม่มี ROI; Sapiens ใช้ 84 ภาพ โมเดลอื่นใช้ 90 ภาพ จึงไม่ใช้จัดอันดับความเร็วบนชุดภาพเดียวกัน |
+| เวลาเฉลี่ยต่อภาพทั้งชุด 90 ภาพ | Σimage_parsing_work_ms / 90 เมื่อมีข้อมูลครบ 90 ภาพ | หากภาพใดขาดข้อมูลเวลา ค่านี้จะเป็น null |
+| เวลารวมทั้งชุด 90 ภาพ | Σimage_parsing_work_ms / 1,000 เมื่อมีข้อมูลครบ 90 ภาพ | รวมเวลาเฉพาะขั้น parsing หน่วย s ไม่รวม YOLO การส่งออกไฟล์ scorer สี หรือฐานข้อมูล |
+| ผลรวมเวลาที่บันทึกได้ | รวมเฉพาะช่วงเวลาที่มี log | อาจรวมบาง ROI ของภาพที่ข้อมูลยังไม่ครบ จึงใช้แทนเวลารวมของทั้งชุดไม่ได้ |
 
-ตารางA–Dเดิมยังเป็นข้อมูลต่อROI/worker คอลัมน์Eเป็นการจัดกลุ่มใหม่ตาม input manifest ไม่ใช่การจับเวลา inference ใหม่ ไม่หารเวลาworkerด้วย90 และไม่เอาtimestamp FRAME_COMMITTED มาลบกัน เพราะงานอาจสลับภาพและมีsetup/assemblyคั่นอยู่ ไม่มีการเพิ่มinferenceเพื่อเติมช่องnull
+ส่วน A–D รายงานเวลาต่อ ROI และเวลาของ worker ส่วน E จัดกลุ่ม ROI ตามภาพใน input manifest เดิม ไม่ได้จับเวลา inference ใหม่ ไม่ใช้เวลา worker หาร 90 และไม่ลบ timestamp ของ FRAME_COMMITTED เพื่อแทนเวลาต่อภาพ เพราะการทำงานอาจสลับภาพและมีขั้นตอนเตรียมหรือประกอบผลคั่นอยู่ ไม่มีการรันเพิ่มเพื่อเติมช่อง null
 
 ### ขอบเขตที่รวมและไม่รวม
 
-| ขั้นตอน | อยู่ใน A/B หรือไม่ |
+| ขั้นตอน | รวมอยู่ในเวลา A/B หรือไม่ |
 |---|---|
-| Frozen YOLO26x segmentation, สร้าง crop และอ่าน/ตรวจ crop PNG รอบนอก | ไม่รวม; เกิดก่อนเข้า forward timer จึงใช้สร้าง end-to-end FPS ไม่ได้ |
-| Preprocessing ภายใน adapter, CPU→GPU, parser, GPU→CPU, restore labels สู่ crop grid และ native-instance selection | รวมตาม implementation ของแต่ละ adapter |
-| Internal proposals/detector ของ native instance parsers | รวมเมื่อโมเดลนั้นมีอยู่; QANet/Sapiens ไม่ได้ทำงานส่วนเดียวกัน |
-| CPI native file I/O | รวมการเปิด crop ผ่าน MMCV, native PNG export/readback และ selected-instance decoding ภายใน infer; จึงไม่ใช่เวลา forward ล้วน |
-| Final placement บน original image, YOLO mask clipping/ownership และ atomic packet write/readback | ไม่รวม A; B รวม resource JSON ก่อน event end แต่ยังไม่รวม final packet write/placement เหล่านี้ |
-| Model loading, TRAIN warmup, GT scorer, color extraction | ไม่รวมในค่าเฉลี่ย A/B; worker C รวม loading/warmup แต่ไม่รวม GT scoring/color |
+| YOLO26x แยกคน การสร้าง crop และการอ่าน/ตรวจ crop PNG ก่อนเข้า adapter | ไม่รวม จึงยังคำนวณ FPS ของ pipeline ทั้งหมดไม่ได้ |
+| Preprocessing ภายใน adapter, CPU→GPU, parser, GPU→CPU, การคืน labels สู่พิกัด crop และการเลือก native instance | รวมตามขั้นตอนที่แต่ละ adapter ใช้จริง |
+| Internal proposals/detector ของโมเดลที่ทำนาย instances | รวมเมื่อโมเดลนั้นมีขั้นตอนนี้; QANet/Sapiens ไม่ได้ทำงานส่วนเดียวกัน |
+| การอ่านและเขียนไฟล์ native ของ CPI | รวมการเปิด crop ผ่าน MMCV การส่งออก/อ่าน native PNG และการเลือก instance ภายใน infer จึงไม่ใช่เวลา forward อย่างเดียว |
+| การวางผลบนภาพต้นฉบับ การตัดด้วย YOLO mask/กำหนด ownership และการเขียน/อ่าน atomic packet | ไม่รวมใน A/B แม้ B จะรวมการเขียน resource JSON ก่อน event end |
+| การโหลดโมเดล TRAIN warmup การให้คะแนนกับ GT และการสกัดสี | ไม่รวมในค่าเฉลี่ย A/B; C รวมการโหลดและ warmup แต่ไม่รวม GT scoring หรือสี |
 
-ขอบเขตตรวจจาก [parent forward timer](../scripts/controlled_roi.py), [continuation event boundaries](../scripts/controlled_roi_continuation.py) และ [crop adapters](../scripts/controlled_roi_models.py) ใช้ [time.monotonic](https://docs.python.org/3/library/time.html#time.monotonic) และ [torch.cuda.synchronize](https://docs.pytorch.org/docs/stable/generated/torch.cuda.synchronize.html) รอบ inference ตาม source จริง Mean = Σt/n; Median คือค่ากลาง; P95 เรียง t แล้ว interpolate ตำแหน่ง 0.95×(n−1) แบบ linear ทุกค่าใช้ successful accepted ROI observations รวม valid empty predictions ไม่เลือกภาพตามคุณภาพ
+ตรวจขอบเขตจาก [ตัวจับเวลารอบหลัก](../scripts/controlled_roi.py), [events ในรอบ continuation](../scripts/controlled_roi_continuation.py) และ [crop adapters](../scripts/controlled_roi_models.py) ตาม source จริง โดยใช้ [time.monotonic](https://docs.python.org/3/library/time.html#time.monotonic) และรอ GPU ด้วย [torch.cuda.synchronize](https://docs.pytorch.org/docs/stable/generated/torch.cuda.synchronize.html) ค่า Mean = Σt/n; Median คือค่ากลาง; P95 เรียง t แล้ว interpolate แบบ linear ที่ตำแหน่ง 0.95×(n−1) รวม ROI ที่ประมวลผลสำเร็จและตรวจรับแล้ว แม้ผลทำนายว่างโดยถูกต้องตาม contract ไม่คัดภาพจากคะแนนคุณภาพ
 
-**ข้อสรุปที่ใช้ได้:** ตารางบอกเวลาที่สังเกตได้ของ configuration และสภาพเครื่องในรอบนั้น รวมทั้งจำนวนตัวอย่างที่มีเวลาจริง ไม่เพียงพอจัดอันดับความเร็ว/FPS/VRAM efficiency ข้ามระบบ เพราะมี shared-GPU policy, adapter work, input resolution, PyTorch/CUDA environments และ clock/coverage ต่างกัน การแยกสี่ targets ใช้ forward เดียวกัน ไม่ควรเอาเวลาไปหารสี่เพื่ออ้าง latency ต่อคลาส คะแนนคุณภาพและคำแนะนำเดิมไม่เปลี่ยน
+**ขอบเขตการตีความ:** ใช้อธิบายเวลาที่บันทึกได้ของแต่ละ configuration ในสภาพเครื่องรอบนั้น พร้อมจำนวนตัวอย่างที่มีข้อมูลเวลา ยังใช้จัดอันดับความเร็ว/FPS/ประสิทธิภาพ VRAM ข้ามระบบไม่ได้ เพราะการใช้ GPU ร่วม ขั้นตอนใน adapter ความละเอียด input รุ่น PyTorch/CUDA วิธีจับเวลา และความครบถ้วนของข้อมูลต่างกัน ทุกคลาสถูกทำนายใน forward เดียว จึงหารเวลาด้วยสี่เพื่ออ้างเวลารายคลาสไม่ได้ คะแนนคุณภาพและคำแนะนำเดิมคงอยู่
 
-Provenance และค่าก่อนปัดเศษ: [STUDY_STATE.json](../STUDY_STATE.json) → runtime_reporting รวม run IDs, sample counts, environments, segment elapsed และ input-hash digest; raw ATTEMPTS.jsonl / RESOURCE_OBSERVATIONS.json / STATE.json อยู่ใน private outputs ของ parent/continuation สร้างซ้ำเฉพาะส่วนนี้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_runtime.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` โดยไม่อ่านภาพ/masks/weights และไม่เริ่ม inference
+ค่าก่อนปัดเศษและหลักฐานอ้างอิงอยู่ใน [STUDY_STATE.json](../STUDY_STATE.json) → runtime_reporting ระบุ run IDs จำนวนตัวอย่าง environments เวลาของแต่ละ segment และ hash ของ inputs ส่วน raw ATTEMPTS.jsonl / RESOURCE_OBSERVATIONS.json / STATE.json เก็บใน private outputs ของรอบหลัก/continuation สร้างรายงานส่วนนี้ซ้ำได้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_runtime.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` โดยไม่อ่านภาพ masks หรือ weights และไม่เริ่ม inference
 <!-- RUNTIME_DIAGNOSTICS_END -->

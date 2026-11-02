@@ -22,9 +22,9 @@ Hair / Face-domain / Upper / Lower ใช้ binary 2×2 ต่อคลาส �
 
 [สถิติความเร็วจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม): Mean/Median/P95 ต่อ ROI และ worker elapsed ทั้ง 9 โมเดล แยก monotonic adapter timer กับ continuation UTC intervals พร้อมจำนวนตัวอย่างและขอบเขต; เป็น shared-GPU diagnostics ยังไม่ใช่ end-to-end FPS ranking
 
-[ตารางสรุปเวลาที่บวกค่าแล้ว และ metric definitions](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): แยก A+B จาก C เพื่อไม่ให้นับซ้ำ มี timing coverage และข้อจำกัดเวลารายคลาส
+[สรุปเวลาที่บันทึกได้และเวลารวมของ worker](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): แยก A+B จาก C เพื่อไม่ให้นับเวลาซ้ำ พร้อมสูตร ตัวหาร และสัดส่วน ROI ที่มีข้อมูลเวลา
 
-[เวลาต่อหนึ่งภาพและรวมทั้ง90ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ): บวกเวลาของROIในภาพนั้นจริง; private `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี9×90rowsพร้อมชื่อภาพ หกโมเดลมีtimingครบ90 ส่วนSapiensแต่ละขนาด84/90และคงnullสำหรับเวลาทั้ง90 ไม่ใช่end-to-end FPS
+[เวลาต่อภาพและเวลารวมทั้งชุด 90 ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ): รวมเวลา ROI ของภาพนั้นจาก log จริง ไฟล์ส่วนตัว `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี 9×90 รายการพร้อมชื่อภาพ หกโมเดลมีข้อมูลเวลาครบ 90 ภาพ ส่วน Sapiens แต่ละขนาดครบ 84/90 ภาพ จึงคงเวลารวมทั้งชุดเป็น null ไม่ใช้คำนวณ FPS ของ pipeline ทั้งหมด
 
 ## ภาพรายละเอียดรายโมเดล (private)
 

@@ -243,8 +243,8 @@ def image_section(rows):
     def number(value):
         return 'null' if value is None else f'{value:.3f}'
     lines = ['### E. เวลาต่อหนึ่งภาพ และรวมทั้ง 90 ภาพ', '',
-        '**เวลาต่อภาพในตารางนี้ = ผลบวกเวลาของทุก person ROI ที่อยู่ในภาพนั้นจริง ๆ** เช่น ROI ในภาพเดียวมี 70 และ 90 ms จะได้งาน parsing รวม160ms; ไม่ใช้ mean ms/ROI คูณจำนวนคนแทน log ของภาพนั้น เป็น derived parsing-work time ไม่ใช่เวลาตั้งแต่เปิดภาพจนบันทึกผลครบ pipeline', '',
-        '| Model | ภาพที่เวลาครบ / 90 | Mean ms/ภาพ เฉพาะภาพเวลาครบ | Mean ms/ภาพ ครบประชากร90 | รวม parsing ครบ90ภาพ s | ผลรวม log ที่มี s |',
+        '**เวลาประมวลผลต่อภาพในขั้น parsing คือผลรวมเวลาของทุก ROI ในภาพนั้น** โดย ROI คือภาพย่อยของบุคคลที่ได้จาก YOLO ตัวอย่างเช่น หากภาพหนึ่งมีสอง ROI ที่ใช้เวลา 70 และ 90 ms เวลารวมของภาพนั้นจะเท่ากับ 160 ms คำนวณจากเวลาที่บันทึกจริงของแต่ละ ROI ไม่ได้นำเวลาเฉลี่ยต่อ ROI มาคูณจำนวนคน และยังไม่รวมเวลาของ pipeline ทั้งหมด', '',
+        '| โมเดล | ภาพที่มีข้อมูลเวลาครบ / 90 | เฉลี่ยต่อภาพที่มีข้อมูลครบ (ms) | เฉลี่ยต่อภาพทั้งชุด 90 ภาพ (ms) | เวลารวมทั้งชุด 90 ภาพ (s) | ผลรวมเวลาที่บันทึกได้ (s) |',
         '|---|---:|---:|---:|---:|---:|']
     for row in rows:
         s = row['per_image_summary']
@@ -252,24 +252,25 @@ def image_section(rows):
     complete_pairs = sum(row['per_image_summary']['images_with_complete_timing'] for row in rows)
     population = sum(row['per_image_summary']['expected_images'] for row in rows)
     observed = math.fsum(row['per_image_summary']['recorded_interval_sum_seconds'] for row in rows)
-    lines += ['', f'รวมตารางรายภาพมี **{population} model-image records =9โมเดล×90ภาพเดิม** ไม่ใช่ภาพอิสระ810ภาพ มี timing ครบ{complete_pairs}/{population} records; ผลรวมช่วงเวลาที่มีบันทึกยังเท่าเดิม{observed:.3f}s ไม่ใช่ยอดครบ90ภาพของทุกโมเดลหากบางช่องยังเป็นnull', '',
-        'มี8ภาพที่ frozen YOLO ไม่ได้สร้าง ROI ทุกโมเดลจึงไม่มี parser call: งาน parsing ของภาพเหล่านี้เป็น0จริง แต่เวลาอ่านภาพ/YOLO/งานอื่นไม่ใช่0 ค่าเฉลี่ยในคอลัมน์ภาพเวลาครบรวม8ภาพนี้ด้วย ไม่คัดทิ้งเพื่อเปลี่ยนตัวหาร ส่วนภาพที่มี ROI แต่ขาด timer จะเป็นnull ไม่เติม0 และไม่ใช้ค่าเฉลี่ยทดแทน', '',
-        'Sapiens แต่ละขนาด reuse15ROIs จาก6ภาพ จึงมีภาพที่เวลาของรอบนี้ครบเพียง84/90: ค่าเฉลี่ยภาพเวลาครบใช้84เป็นตัวหาร ส่วน mean/total ของประชากร90เป็นnull Predictions ยังคงครบ90ภาพ/130ROIs จึงไม่ใช่ inference failure หรือคะแนนคุณภาพไม่ครบ ตรวจ source ของ prior diagnostic แล้วพบว่าขอบเขตเวลาเป็น model-forward โดย preprocessing/map-back อยู่ข้างนอก จึงไม่นำมาปะปนเพื่อเติม adapter timer ที่ขาด', '',
-        'รายภาพทุกโมเดลอยู่ใน private `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มี model_id, ชื่อภาพต้นทาง, จำนวนROIs, จำนวนที่มีเวลา, status, ผลรวมเวลาที่มี และเวลางาน parsing ของภาพนั้น หากไม่ครบจะเป็นnull ไฟล์รายภาพมี CCTV identifiers จึงไม่ขึ้น public Git; hash/count/location อยู่ใน STUDY_STATE.json → per_image_timing_reporting', '',
-        '| Metric | สูตร / ตัวหาร | ความหมาย |', '|---|---|---|',
-        '| image_parsing_work_ms | 1,000×ΣเวลาทุกROIของภาพ เมื่อครบทุกROI | เวลางาน parsing ที่รวมจาก logs ต่อภาพ; A/B มี clock boundary ต่างกันตามเดิม |',
-        '| Mean ภาพเวลาครบ | Σimage_parsing_work_ms/N_complete | ใช้เฉพาะภาพที่ timer ครบ รวมภาพไม่มีparserROI; Sapiensใช้84 ภาพ โมเดลอื่น90 จึงไม่ใช่ matched-population speed ranking |',
-        '| Mean ประชากร90 | Σimage_parsing_work_ms/90 เฉพาะเมื่อครบ90ภาพ | ถ้าภาพใดขาดtimer ค่าmeanนี้เป็นnull |',
-        '| Total ประชากร90 | Σimage_parsing_work_ms/1,000 เฉพาะเมื่อครบ90ภาพ | ยอดรวม parsing-work ของทั้งชุด ไม่รวมYOLO/export/scorer/สี/DB |',
-        '| Recorded interval sum | รวมเฉพาะช่วงเวลาที่มีlog | บัญชีเวลาที่ทราบ รวมส่วนที่บันทึกได้ของภาพที่อาจยังไม่ครบ; ไม่ใช้แทนfull-population total |', '',
-        'ตารางA–Dเดิมยังเป็นข้อมูลต่อROI/worker คอลัมน์Eเป็นการจัดกลุ่มใหม่ตาม input manifest ไม่ใช่การจับเวลา inference ใหม่ ไม่หารเวลาworkerด้วย90 และไม่เอาtimestamp FRAME_COMMITTED มาลบกัน เพราะงานอาจสลับภาพและมีsetup/assemblyคั่นอยู่ ไม่มีการเพิ่มinferenceเพื่อเติมช่องnull', '']
+    lines += ['', f'ตารางรายภาพมี **{population} รายการ จาก 9 โมเดลที่ประเมินภาพชุดเดิม 90 ภาพ** มีข้อมูลเวลาครบ {complete_pairs}/{population} รายการ ผลรวมเวลาที่บันทึกได้คือ {observed:.3f} s แต่ยังใช้แทนเวลารวมครบ 90 ภาพของทุกโมเดลไม่ได้ หากโมเดลนั้นมีช่อง null', '',
+        '**null หมายถึงข้อมูลเวลาไม่เพียงพอ ไม่ใช่ใช้เวลาเป็นศูนย์** มี 8 ภาพที่ YOLO ไม่พบ ROI จึงไม่มีการเรียก parser และเวลาเฉพาะขั้น parsing เป็น 0 จริง ค่าเฉลี่ยรวมภาพเหล่านี้ด้วย แต่การอ่านภาพและการทำงานของ YOLO ยังมีต้นทุน ส่วนภาพที่มี ROI แต่ขาดข้อมูลเวลาจะคงเป็น null โดยไม่เติมศูนย์หรือประมาณจากภาพอื่น', '',
+        'Sapiens แต่ละขนาดนำผลเดิม 15 ROIs จาก 6 ภาพกลับมาใช้ จึงมีข้อมูลเวลาของรอบนี้ครบ 84/90 ภาพ คอลัมน์เฉลี่ยเฉพาะภาพที่มีข้อมูลครบใช้ตัวหาร 84 ส่วนค่าเฉลี่ยและเวลารวมของทั้งชุด 90 ภาพเป็น null ผลทำนายยังครบ 90 ภาพ/130 ROIs และคะแนนคุณภาพไม่ได้ขาดตามไปด้วย เวลาของการทดลองเดิมจับเฉพาะ model forward โดยไม่รวม preprocessing และ map-back จึงนำมาเติมช่วงเวลาของ adapter ที่ขาดไม่ได้', '',
+        'ดูเวลารายภาพได้จากไฟล์ส่วนตัว `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มีรหัสโมเดล ชื่อภาพต้นทาง จำนวน ROI จำนวน ROI ที่มีเวลา สถานะ และเวลารวมของภาพนั้น หากข้อมูลไม่ครบจะเป็น null ไฟล์นี้มีข้อมูลอ้างอิงภาพ CCTV จึงไม่เผยแพร่บน public Git ดูตำแหน่ง จำนวนรายการ และ hash ได้ใน STUDY_STATE.json → per_image_timing_reporting', '',
+        '| ตัวชี้วัด | สูตร / ตัวหาร | ความหมาย |', '|---|---|---|',
+        '| เวลาต่อภาพในขั้น parsing (image_parsing_work_ms) | 1,000 × Σเวลา ROI ของภาพ เมื่อมีข้อมูลครบทุก ROI | ผลรวมเวลาที่บันทึกของภาพนั้น หน่วย ms; ขอบเขตการจับเวลา A/B ยังต่างกันตามที่ระบุ |',
+        '| เวลาเฉลี่ยต่อภาพที่มีข้อมูลครบ | Σimage_parsing_work_ms / N_complete | รวมเฉพาะภาพที่มีข้อมูลเวลาครบ รวมภาพที่ไม่มี ROI; Sapiens ใช้ 84 ภาพ โมเดลอื่นใช้ 90 ภาพ จึงไม่ใช้จัดอันดับความเร็วบนชุดภาพเดียวกัน |',
+        '| เวลาเฉลี่ยต่อภาพทั้งชุด 90 ภาพ | Σimage_parsing_work_ms / 90 เมื่อมีข้อมูลครบ 90 ภาพ | หากภาพใดขาดข้อมูลเวลา ค่านี้จะเป็น null |',
+        '| เวลารวมทั้งชุด 90 ภาพ | Σimage_parsing_work_ms / 1,000 เมื่อมีข้อมูลครบ 90 ภาพ | รวมเวลาเฉพาะขั้น parsing หน่วย s ไม่รวม YOLO การส่งออกไฟล์ scorer สี หรือฐานข้อมูล |',
+        '| ผลรวมเวลาที่บันทึกได้ | รวมเฉพาะช่วงเวลาที่มี log | อาจรวมบาง ROI ของภาพที่ข้อมูลยังไม่ครบ จึงใช้แทนเวลารวมของทั้งชุดไม่ได้ |', '',
+        'ส่วน A–D รายงานเวลาต่อ ROI และเวลาของ worker ส่วน E จัดกลุ่ม ROI ตามภาพใน input manifest เดิม ไม่ได้จับเวลา inference ใหม่ ไม่ใช้เวลา worker หาร 90 และไม่ลบ timestamp ของ FRAME_COMMITTED เพื่อแทนเวลาต่อภาพ เพราะการทำงานอาจสลับภาพและมีขั้นตอนเตรียมหรือประกอบผลคั่นอยู่ ไม่มีการรันเพิ่มเพื่อเติมช่อง null', '']
     return lines
 
 
 def accounting_section(rows):
-    lines = ['### D. ตารางสรุปรวม — บวกค่าที่มี log แล้ว', '',
-        '**ไม่มีเวลารายคลาส:** หนึ่ง forward ทำนาย native classes ทั้งหมดร่วมกัน (CIHP 20 / Sapiens 29) แล้วใช้ Hair/Face/Upper/Lower จาก output นั้น การ map/ให้คะแนนสี่ targets เป็นงานภายหลัง ไม่ได้จับเวลาแยกรายคลาส จึงแบ่งเวลารวมออกเป็น 4 ค่าไม่ได้ ส่วน IoU/Recall/Precision/Dice รายคลาสยังอยู่ในตารางคุณภาพและ confusion matrix ข้างต้น', '',
-        '| Model | ROI มีเวลา / 130 | A รวม s | B รวม s | A+B ช่วงเวลาที่มี log รวม s | C รวม worker s |',
+    lines = ['<a id="d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว"></a>', '',
+        '### D. สรุปเวลาที่บันทึกได้และเวลารวมของ worker', '',
+        '**ไม่ได้จับเวลาแยกรายคลาส:** โมเดลทำนายทุกคลาสเดิมพร้อมกันในหนึ่ง forward (CIHP 20 / Sapiens 29 คลาส) แล้วจึงแปลงผลเป็น Hair / Face / Upper / Lower เพื่อประเมินภายหลัง จึงแบ่งเวลารวมเป็นเวลาของแต่ละคลาสไม่ได้ ส่วน IoU/Recall/Precision/Dice รายคลาสดูได้ในตารางคุณภาพและ confusion matrix ข้างต้น', '',
+        '| โมเดล | ROI ที่มีข้อมูลเวลา / 130 | รวม A (s) | รวม B (s) | รวมช่วงเวลาที่บันทึก A+B (s) | เวลารวมของ worker C (s) |',
         '|---|---:|---:|---:|---:|---:|']
     for row in rows:
         a, b = row['monotonic_adapter'], row['UTC_event_interval']
@@ -282,63 +283,63 @@ def accounting_section(rows):
     population = sum(row['ROI_population'] for row in rows)
     combined = math.fsum(row['time_accounting']['logged_interval_sum_seconds'] for row in rows)
     workers = math.fsum(row['time_accounting']['worker_elapsed_sum_seconds'] for row in rows)
-    lines += [f'| **รวมบัญชี 9 ระบบ** | **{measured}/{population}** | **{sums[0]:.3f}** | **{sums[1]:.3f}** | **{combined:.3f}** | **{workers:.3f}** |', '',
-        '**A+B เป็นผลบวกเชิงบัญชีของคนละ ROI ที่สำเร็จและไม่ซ้ำกัน** แต่ clock/ขอบเขตต่างกันตาม A/B จึงไม่ใช่ latency มาตรฐานเดียวกัน และไม่ใช่เวลา parsing ทั้ง 130 ROI ของ Sapiens ที่มี timer เพียง 115 ROI เครื่องหมาย — หมายถึงไม่มี continuation intervals ให้รวม ไม่ใช่ทำนายโดยใช้เวลาเป็นศูนย์ ไม่ประมาณเวลาอีก 15 ROI ของแต่ละ Sapiens จากค่าเฉลี่ยหรือแทนด้วยศูนย์ ยอดรวมคำนวณจาก full precision ก่อนปัดเศษ จึงอาจต่างจากการบวกเลข 3 ตำแหน่งที่แสดงเล็กน้อย', '',
-        '**ห้ามบวก A+B+C:** C ครอบช่วงทำงาน A/B อยู่แล้ว จึงจะนับเวลาซ้ำ หากถามเวลารวมของ worker ให้ใช้ C ที่บวก parent+continuation แล้วโดยตรง ส่วนผลรวม 9 ระบบคือบัญชีเวลาของงานทั้งเก้า ไม่ใช่ latency ของหนึ่งภาพ ไม่ใช่ elapsed ของ batch ตั้งแต่ต้นถึงจบรวมช่วงรอ และไม่ใช่เวลา YOLO→parsing→สี→ฐานข้อมูล', '',
-        '### นิยาม metrics ของเวลาและจำนวนตัวอย่าง', '',
-        '| Metric / ค่าที่แสดง | สูตรและหน่วย | บอกอะไร / ข้อจำกัด | ที่มา |',
+    lines += [f'| **รวม 9 ระบบ** | **{measured}/{population}** | **{sums[0]:.3f}** | **{sums[1]:.3f}** | **{combined:.3f}** | **{workers:.3f}** |', '',
+        '**A+B รวมช่วงเวลาของ ROI ที่สำเร็จและไม่ซ้ำกัน** แต่ A/B ใช้นาฬิกาและขอบเขตการจับเวลาต่างกัน จึงไม่ใช่ latency ที่วัดด้วยวิธีเดียวกัน อีกทั้ง Sapiens มีเวลาบันทึกเพียง 115 จาก 130 ROIs เครื่องหมาย — หมายถึงไม่มีช่วงเวลาจาก continuation ให้รวม ไม่ใช่ประมวลผลโดยใช้เวลาเป็นศูนย์ ไม่ประมาณเวลาอีก 15 ROIs จากค่าเฉลี่ย ยอดรวมใช้ค่าก่อนปัดเศษ จึงอาจต่างจากผลบวกของเลข 3 ตำแหน่งที่แสดงเล็กน้อย', '',
+        '**ไม่บวก A+B+C เพราะจะนับเวลาซ้ำ:** C ครอบช่วง A/B อยู่แล้ว หากต้องการเวลารวมของ worker ให้ใช้ C ซึ่งบวกรอบหลักและรอบ continuation แล้ว ผลรวม 9 ระบบเป็นเวลารวมของงานทั้งเก้า ไม่ใช่เวลาต่อภาพ ระยะเวลาทั้ง batch ที่รวมช่วงรอ หรือเวลาเต็มเส้นทาง YOLO → parsing → สี → ฐานข้อมูล', '',
+        '### นิยามตัวชี้วัดเวลาและจำนวนตัวอย่าง', '',
+        '| ตัวชี้วัด | สูตรและหน่วย | ความหมายและข้อจำกัด | ที่มา |',
         '|---|---|---|---|',
-        '| A: Monotonic adapter duration | t_after_sync − t_before_infer; วินาทีต่อ ROI | preprocess/transfer/model/native decode ภายใน adapter ไม่ใช่ model forward ล้วน; ขอบเขตต่างรายโมเดล | [parent forward](../scripts/controlled_roi.py) → adapter_elapsed_seconds |',
-        '| B: UTC event interval | FORWARD_END.utc − FORWARD_START.utc; วินาทีต่อ ROI | รวม synchronization และ log/resource-writing overhead เพิ่ม; เป็น system-clock interval | [continuation forward/events](../scripts/controlled_roi_continuation.py) |',
-        '| Mean ms/ROI | 1,000 × Σt/n แยกใน A หรือ B | เวลาต่อ ROI โดยเฉลี่ยเฉพาะกลุ่มที่มี timer; แม้ถ่วง n ก็ยังไม่แก้ขอบเขต A/B ที่ต่างกัน จึงไม่รวมเป็น latency มาตรฐานเดียว | [describe_seconds](../scripts/report_runtime.py) จาก accepted observations |',
-        '| Median ms/ROI | ค่ากลางของ sorted t × 1,000 | เวลาของ sample กลาง; ไวต่อค่าสุดขั้วน้อยกว่า mean | สถิติเชิงพรรณนาของแต่ละกลุ่ม log |',
-        '| P95 ms/ROI | linear percentile ตำแหน่ง 0.95×(n−1) × 1,000 | ประมาณค่าช่วงช้าของ sample ที่วัด ไม่ใช่ confidence interval หรือรับประกัน 95% ของภาพใหม่ | [describe_seconds](../scripts/report_runtime.py); n=1 ให้ค่าเดียวกับ sample นั้น |',
-        '| ผลรวม A+B | Σt_A + Σt_B; วินาที | รวมช่วงเวลาที่มี log ไม่ซ้ำ ROI; เป็น derived accounting ไม่ใช่ pure-parsing/end-to-end metric | [time_accounting](../scripts/report_runtime.py); ไม่แก้ clock ให้เป็นชนิดเดียวกัน |',
-        '| C: รวม worker elapsed | Σ_segments(STATE.ended_utc − STATE.started_utc); วินาที | รวม loading/warmup/checks/export และ failed work ภายในแต่ละ attempt; ไม่รวม queue gap และงานนอก worker | STATE.json ของ parent/continuation; ตาราง C |',
-        '| Timing coverage | (n_A+n_B)/130; ROI และ % | มี duration กี่ ROI ในประชากรที่มีผล; ไม่ใช่ prediction completeness, detection recall หรือความแม่นยำ | จับคู่ accepted ROI membership กับ log; Sapiens 115/130=88.462% แต่ predictions ครบ130 |', '',
-        'สูตร Mean/Median/P95 เป็นสถิติเชิงพรรณนาของเวลาที่บันทึก ไม่ใช่ metric การแยกส่วนภาพ มาตรวัดคุณภาพ IoU/Recall/Precision/Dice มีสูตร ตัวหาร และแหล่งอ้างอิงแยกอยู่ในส่วน confusion matrix ไม่มีการสร้างคะแนนผสม quality×speed หรือเลือกผู้ชนะใหม่จากตารางเวลานี้', '']
+        '| A: เวลาของ adapter จาก monotonic timer | t_after_sync − t_before_infer; วินาทีต่อ ROI | รวม preprocessing การส่งข้อมูลเข้าออก GPU และการอ่านผลภายใน adapter จึงไม่ใช่เวลา model forward อย่างเดียว | [parent forward](../scripts/controlled_roi.py) → adapter_elapsed_seconds |',
+        '| B: ช่วงเวลาจาก UTC events | FORWARD_END.utc − FORWARD_START.utc; วินาทีต่อ ROI | รวมการรอ GPU และการเขียน log/resource JSON เพิ่ม ใช้นาฬิการะบบ | [continuation forward/events](../scripts/controlled_roi_continuation.py) |',
+        '| Mean: เวลาเฉลี่ย (ms/ROI) | 1,000 × Σt/n แยกใน A หรือ B | เฉลี่ยเฉพาะ ROI ที่มีข้อมูลเวลาในกลุ่มนั้น แม้ถ่วงจำนวน n ก็ยังทำให้ขอบเขต A/B เหมือนกันไม่ได้ | [describe_seconds](../scripts/report_runtime.py) จากข้อมูลที่ตรวจรับแล้ว |',
+        '| Median: มัธยฐาน (ms/ROI) | ค่ากลางเมื่อเรียง t × 1,000 | แสดงเวลาของข้อมูลลำดับกลาง ได้รับผลจากค่าสุดขั้วน้อยกว่าค่าเฉลี่ย | สถิติเชิงพรรณนาของแต่ละกลุ่ม log |',
+        '| P95: เปอร์เซ็นไทล์ที่ 95 (ms/ROI) | linear percentile ตำแหน่ง 0.95×(n−1) × 1,000 | แสดงค่าบริเวณปลายด้านช้าของข้อมูลที่วัด ไม่ใช่ช่วงความเชื่อมั่นหรือคำรับประกัน 95% ของภาพใหม่ | [describe_seconds](../scripts/report_runtime.py); เมื่อ n=1 จะได้ค่าเดียวกับตัวอย่างนั้น |',
+        '| ผลรวม A+B | Σt_A + Σt_B; วินาที | รวมช่วงเวลาที่มี log ของ ROI ที่ไม่ซ้ำกัน โดยยังคงความต่างของวิธีจับเวลา ไม่ใช่เวลารวมทั้ง pipeline | [time_accounting](../scripts/report_runtime.py) |',
+        '| C: เวลารวมของ worker | Σ_segments(STATE.ended_utc − STATE.started_utc); วินาที | รวมการโหลด warmup การตรวจไฟล์ การส่งออกผล และงานใน attempt ที่ล้มเหลว ไม่รวมช่วงรอระหว่าง attempts หรืองานนอก worker | STATE.json ของรอบหลัก/continuation; ตาราง C |',
+        '| สัดส่วน ROI ที่มีข้อมูลเวลา | (n_A+n_B)/130; จำนวน ROI และ % | บอกว่ามีเวลาให้คำนวณกี่ ROI ไม่ใช่ความครบถ้วนของผลทำนายหรือความแม่นยำ | จับคู่ log กับ ROI ที่ตรวจรับแล้ว; Sapiens มีเวลา 115/130=88.462% แต่ผลทำนายครบ 130 ROIs |', '',
+        'Mean/Median/P95 เป็นสถิติสรุปเวลา ส่วน IoU/Recall/Precision/Dice เป็นตัวชี้วัดคุณภาพการแบ่งส่วนภาพ ซึ่งอธิบายแยกไว้ในส่วน confusion matrix รายงานนี้ไม่รวมคุณภาพกับความเร็วเป็นคะแนนใหม่ และไม่ใช้ตารางเวลาเปลี่ยนผู้ชนะตามเกณฑ์คุณภาพเดิม', '']
     return lines
 
 
 def section(rows):
     lines = ['<!-- RUNTIME_DIAGNOSTICS_START -->', '## ความเร็วและเวลาประมวลผลจาก log เดิม', '',
-        '**เป็น historical shared-GPU adapter diagnostics บน Tesla T4 ที่บันทึกไว้ ไม่ใช่ clean parser-only หรือ end-to-end speed benchmark** ไม่มีการรันโมเดลใหม่เพื่อเพิ่มตารางนี้ หน่วยหลักเป็นหนึ่ง shared person ROI ไม่ใช่หนึ่งภาพ; 90 ภาพมี 130 YOLO opportunities และ 8 ภาพไม่มี detection แต่ละ call คืนทุก native class ร่วมกัน จึงไม่มีเวลาราย Hair/Face/Upper/Lower แยกต่างหาก', '',
+        '**ตารางนี้สรุปเวลาจาก log เดิมบน Tesla T4 ภายใต้นโยบายใช้ GPU ร่วม** ไม่ใช่ benchmark ความเร็วของ model forward เพียงอย่างเดียวหรือ pipeline ทั้งระบบ ไม่มีการรันโมเดลเพิ่ม หน่วยหลักคือหนึ่ง ROI หรือภาพย่อยของบุคคลที่ YOLO ตรวจพบ ชุด 90 ภาพมี 130 ROIs และมี 8 ภาพที่ไม่มี detection แต่ละ call ทำนายทุกคลาสเดิมพร้อมกัน จึงไม่มีเวลาราย Hair / Face / Upper / Lower', '',
         '### A. เวลา adapter จาก monotonic timer — parent segment', '',
-        '| Model | ROI ที่มี timer / 130 | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวมเวลาที่จับ s |',
+        '| โมเดล | ROI ที่มีข้อมูลเวลา / 130 | เฉลี่ย (ms/ROI) | มัธยฐาน (ms/ROI) | P95 (ms/ROI) | เวลารวมที่บันทึกได้ (s) |',
         '|---|---:|---:|---:|---:|---:|']
     for row in rows:
         s = row['monotonic_adapter']
         lines.append(f"| {SHORT[row['model_id']]} | {s['n']}/130 | {s['mean_ms']:.3f} | {s['median_ms']:.3f} | {s['p95_ms']:.3f} | {s['total_seconds']:.3f} |")
-    lines += ['', 'นับ ROI_READINESS ที่เป็นสมาชิกจริงด้วย ไม่มี inference ซ้ำเฉพาะ timing และไม่คัดจากคะแนน แยก TRAIN warmup ออกทั้งหมด RP-R-CNN มี timer เพียง 1 ROI; CPI เป็น parent subset 28/27 ROI จึงใช้เป็นตัวแทนเต็มชุดไม่ได้ Sapiens แต่ละขนาดมี 115 ROI; อีก 15 เป็น prior diagnostic predictions ที่ reuse จึงไม่มี timer ของรอบนี้ ไม่เติมศูนย์หรือรวม timer คนละขอบเขตจาก pilot', '',
+    lines += ['', 'รวม ROI_READINESS ที่อยู่ในชุดประเมินจริง แต่ไม่นับ TRAIN warmup ไม่มีการรันซ้ำเพื่อจับเวลาและไม่คัดภาพตามคะแนน RP-R-CNN มีเวลารอบหลักเพียง 1 ROI ส่วน CPI มี 28/27 ROIs จึงยังไม่แทนทั้งชุด Sapiens แต่ละขนาดมีเวลาของ 115 ROIs อีก 15 ROIs นำผลจากการทดลองเดิมมาใช้ จึงไม่มีเวลาของรอบนี้ ไม่เติมศูนย์หรือนำเวลาจาก pilot ที่จับคนละขอบเขตมารวม', '',
         '### B. Continuation — ช่วงเวลาระหว่าง UTC events', '',
-        '| Model | ROI ที่มี start–end | Mean ms/ROI | Median ms/ROI | P95 ms/ROI | ผลรวม interval s |',
+        '| โมเดล | ROI ที่มีเวลาเริ่มและจบ | เฉลี่ย (ms/ROI) | มัธยฐาน (ms/ROI) | P95 (ms/ROI) | ผลรวมช่วงเวลา (s) |',
         '|---|---:|---:|---:|---:|---:|']
     for row in rows:
         s = row['UTC_event_interval']
         if s['n']:
             lines.append(f"| {SHORT[row['model_id']]} | {s['n']} | {s['mean_ms']:.3f} | {s['median_ms']:.3f} | {s['p95_ms']:.3f} | {s['total_seconds']:.3f} |")
-    lines += ['', 'Continuation ไม่ได้เก็บ adapter_elapsed_seconds จึงใช้ FORWARD_END.utc − FORWARD_START.utc เป็น **event interval** ที่มี pre-synchronization และการบันทึก resource JSON/flush/fsync เพิ่มด้วย ไม่เท่ากับ monotonic adapter timer ของ A และอาจได้รับผลจากการปรับ system clock จึงไม่เฉลี่ยสองตารางเข้าด้วยกัน ไม่ทิ้ง historical failed call: RP-R-CNN มี start ที่ไม่มี end 1 ครั้ง เก็บประวัติไว้แต่ไม่มี duration ที่วัดจบสำหรับ sample นั้น ส่วน CPI parent หยุดที่ pre-forward headroom guard ไม่ใช่หลักฐาน CUDA OOM ในรอบนี้', '',
+    lines += ['', 'รอบ continuation ไม่ได้บันทึก adapter_elapsed_seconds จึงคำนวณจาก FORWARD_END.utc − FORWARD_START.utc ช่วงนี้รวมการรอ GPU ก่อนเริ่มงานและการบันทึก resource JSON/flush/fsync ด้วย ต่างจาก timer ใน A และอาจได้รับผลจากการปรับนาฬิการะบบ จึงไม่เฉลี่ยสองตารางรวมเป็น latency เดียวกัน RP-R-CNN มี 1 call ที่บันทึกเวลาเริ่มแต่ไม่มีเวลาจบ ประวัติยังอยู่ครบและไม่สร้าง duration ขึ้นมาแทน ส่วน CPI ในรอบหลักหยุดที่ headroom guard ก่อน forward ไม่ใช่หลักฐานว่าเกิด CUDA OOM ในรอบนี้', '',
         '### C. เวลา worker ที่ผ่านไปจริง — บัญชีการทำงาน', '',
-        '| Model | จำนวน attempts/segments | Parent s | Continuation s | รวม worker elapsed s |',
+        '| โมเดล | จำนวนรอบที่รัน | รอบหลัก (s) | รอบ continuation (s) | เวลารวมของ worker (s) |',
         '|---|---:|---:|---:|---:|']
     for row in rows:
         times = row['segments']
         cont = f"{times[1]['worker_elapsed_seconds']:.3f}" if len(times) == 2 else '—'
         lines.append(f"| {SHORT[row['model_id']]} | {len(times)} | {times[0]['worker_elapsed_seconds']:.3f} | {cont} | {row['worker_elapsed_seconds']:.3f} |")
-    lines += ['', 'Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loading, binding/hash checks, warmup, failed-attempt work, packet readback/assembly/I/O และงานบันทึกสถานะที่เกิดใน worker แต่ไม่รวม controller queue/gap ระหว่าง attempts, prior diagnostic run, YOLO cache preparation, GT review หรือ CPU scoring ภายหลัง เป็นเวลาที่ใช้ทำงานในรอบที่ระบุ ไม่ใช่เวลาทำนายใหม่ครบ 90 ภาพจากศูนย์ และไม่ใช่ผลรวม GPU kernel time', '']
+    lines += ['', 'เวลาของ worker คำนวณจาก STATE.ended_utc − STATE.started_utc รวมการเตรียมงาน โหลดโมเดล ตรวจ bindings/hashes, warmup, งานใน attempt ที่ล้มเหลว การอ่านกลับ/ประกอบ/บันทึก packets และการบันทึกสถานะ แต่ไม่รวมช่วงรอระหว่าง attempts การทดลองเดิมที่นำผลมาใช้ การสร้าง YOLO cache การตรวจ GT หรือ CPU scoring ภายหลัง จึงไม่ใช่เวลารันใหม่ครบ 90 ภาพตั้งแต่ต้น และไม่ใช่ผลรวมเวลา GPU kernel', '']
     lines += accounting_section(rows)
     lines += image_section(rows)
     lines += ['### ขอบเขตที่รวมและไม่รวม', '',
-        '| ขั้นตอน | อยู่ใน A/B หรือไม่ |', '|---|---|',
-        '| Frozen YOLO26x segmentation, สร้าง crop และอ่าน/ตรวจ crop PNG รอบนอก | ไม่รวม; เกิดก่อนเข้า forward timer จึงใช้สร้าง end-to-end FPS ไม่ได้ |',
-        '| Preprocessing ภายใน adapter, CPU→GPU, parser, GPU→CPU, restore labels สู่ crop grid และ native-instance selection | รวมตาม implementation ของแต่ละ adapter |',
-        '| Internal proposals/detector ของ native instance parsers | รวมเมื่อโมเดลนั้นมีอยู่; QANet/Sapiens ไม่ได้ทำงานส่วนเดียวกัน |',
-        '| CPI native file I/O | รวมการเปิด crop ผ่าน MMCV, native PNG export/readback และ selected-instance decoding ภายใน infer; จึงไม่ใช่เวลา forward ล้วน |',
-        '| Final placement บน original image, YOLO mask clipping/ownership และ atomic packet write/readback | ไม่รวม A; B รวม resource JSON ก่อน event end แต่ยังไม่รวม final packet write/placement เหล่านี้ |',
-        '| Model loading, TRAIN warmup, GT scorer, color extraction | ไม่รวมในค่าเฉลี่ย A/B; worker C รวม loading/warmup แต่ไม่รวม GT scoring/color |', '',
-        'ขอบเขตตรวจจาก [parent forward timer](../scripts/controlled_roi.py), [continuation event boundaries](../scripts/controlled_roi_continuation.py) และ [crop adapters](../scripts/controlled_roi_models.py) ใช้ [time.monotonic](https://docs.python.org/3/library/time.html#time.monotonic) และ [torch.cuda.synchronize](https://docs.pytorch.org/docs/stable/generated/torch.cuda.synchronize.html) รอบ inference ตาม source จริง Mean = Σt/n; Median คือค่ากลาง; P95 เรียง t แล้ว interpolate ตำแหน่ง 0.95×(n−1) แบบ linear ทุกค่าใช้ successful accepted ROI observations รวม valid empty predictions ไม่เลือกภาพตามคุณภาพ', '',
-        '**ข้อสรุปที่ใช้ได้:** ตารางบอกเวลาที่สังเกตได้ของ configuration และสภาพเครื่องในรอบนั้น รวมทั้งจำนวนตัวอย่างที่มีเวลาจริง ไม่เพียงพอจัดอันดับความเร็ว/FPS/VRAM efficiency ข้ามระบบ เพราะมี shared-GPU policy, adapter work, input resolution, PyTorch/CUDA environments และ clock/coverage ต่างกัน การแยกสี่ targets ใช้ forward เดียวกัน ไม่ควรเอาเวลาไปหารสี่เพื่ออ้าง latency ต่อคลาส คะแนนคุณภาพและคำแนะนำเดิมไม่เปลี่ยน', '',
-        'Provenance และค่าก่อนปัดเศษ: [STUDY_STATE.json](../STUDY_STATE.json) → runtime_reporting รวม run IDs, sample counts, environments, segment elapsed และ input-hash digest; raw ATTEMPTS.jsonl / RESOURCE_OBSERVATIONS.json / STATE.json อยู่ใน private outputs ของ parent/continuation สร้างซ้ำเฉพาะส่วนนี้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_runtime.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` โดยไม่อ่านภาพ/masks/weights และไม่เริ่ม inference', '<!-- RUNTIME_DIAGNOSTICS_END -->']
+        '| ขั้นตอน | รวมอยู่ในเวลา A/B หรือไม่ |', '|---|---|',
+        '| YOLO26x แยกคน การสร้าง crop และการอ่าน/ตรวจ crop PNG ก่อนเข้า adapter | ไม่รวม จึงยังคำนวณ FPS ของ pipeline ทั้งหมดไม่ได้ |',
+        '| Preprocessing ภายใน adapter, CPU→GPU, parser, GPU→CPU, การคืน labels สู่พิกัด crop และการเลือก native instance | รวมตามขั้นตอนที่แต่ละ adapter ใช้จริง |',
+        '| Internal proposals/detector ของโมเดลที่ทำนาย instances | รวมเมื่อโมเดลนั้นมีขั้นตอนนี้; QANet/Sapiens ไม่ได้ทำงานส่วนเดียวกัน |',
+        '| การอ่านและเขียนไฟล์ native ของ CPI | รวมการเปิด crop ผ่าน MMCV การส่งออก/อ่าน native PNG และการเลือก instance ภายใน infer จึงไม่ใช่เวลา forward อย่างเดียว |',
+        '| การวางผลบนภาพต้นฉบับ การตัดด้วย YOLO mask/กำหนด ownership และการเขียน/อ่าน atomic packet | ไม่รวมใน A/B แม้ B จะรวมการเขียน resource JSON ก่อน event end |',
+        '| การโหลดโมเดล TRAIN warmup การให้คะแนนกับ GT และการสกัดสี | ไม่รวมในค่าเฉลี่ย A/B; C รวมการโหลดและ warmup แต่ไม่รวม GT scoring หรือสี |', '',
+        'ตรวจขอบเขตจาก [ตัวจับเวลารอบหลัก](../scripts/controlled_roi.py), [events ในรอบ continuation](../scripts/controlled_roi_continuation.py) และ [crop adapters](../scripts/controlled_roi_models.py) ตาม source จริง โดยใช้ [time.monotonic](https://docs.python.org/3/library/time.html#time.monotonic) และรอ GPU ด้วย [torch.cuda.synchronize](https://docs.pytorch.org/docs/stable/generated/torch.cuda.synchronize.html) ค่า Mean = Σt/n; Median คือค่ากลาง; P95 เรียง t แล้ว interpolate แบบ linear ที่ตำแหน่ง 0.95×(n−1) รวม ROI ที่ประมวลผลสำเร็จและตรวจรับแล้ว แม้ผลทำนายว่างโดยถูกต้องตาม contract ไม่คัดภาพจากคะแนนคุณภาพ', '',
+        '**ขอบเขตการตีความ:** ใช้อธิบายเวลาที่บันทึกได้ของแต่ละ configuration ในสภาพเครื่องรอบนั้น พร้อมจำนวนตัวอย่างที่มีข้อมูลเวลา ยังใช้จัดอันดับความเร็ว/FPS/ประสิทธิภาพ VRAM ข้ามระบบไม่ได้ เพราะการใช้ GPU ร่วม ขั้นตอนใน adapter ความละเอียด input รุ่น PyTorch/CUDA วิธีจับเวลา และความครบถ้วนของข้อมูลต่างกัน ทุกคลาสถูกทำนายใน forward เดียว จึงหารเวลาด้วยสี่เพื่ออ้างเวลารายคลาสไม่ได้ คะแนนคุณภาพและคำแนะนำเดิมคงอยู่', '',
+        'ค่าก่อนปัดเศษและหลักฐานอ้างอิงอยู่ใน [STUDY_STATE.json](../STUDY_STATE.json) → runtime_reporting ระบุ run IDs จำนวนตัวอย่าง environments เวลาของแต่ละ segment และ hash ของ inputs ส่วน raw ATTEMPTS.jsonl / RESOURCE_OBSERVATIONS.json / STATE.json เก็บใน private outputs ของรอบหลัก/continuation สร้างรายงานส่วนนี้ซ้ำได้ด้วย `python CCTV_Human_Parsing_Benchmark/scripts/report_runtime.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` โดยไม่อ่านภาพ masks หรือ weights และไม่เริ่ม inference', '<!-- RUNTIME_DIAGNOSTICS_END -->']
     return '\n'.join(lines)+'\n'
 
 
