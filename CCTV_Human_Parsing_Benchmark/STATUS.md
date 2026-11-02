@@ -1,3 +1,13 @@
+# Current per-image timing update — 2026-11-02T15:57:24.562485+07:00 (Asia/Bangkok)
+
+**PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS — 9 models×90 images.** เพิ่ม [ตารางE:ต่อภาพและรวม90ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) จากการบวกROIlogsของแต่ละภาพจริง ไม่ใช้meanROI×จำนวนคน Private `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี810model-image rows พร้อมชื่อภาพ/status/ROIcounts/เวลารวม ข้อมูลรายภาพไม่ขึ้นpublicGit
+
+หกโมเดลCIHPมีเวลาครบ90/90 แต่ละSapiensครบ84/90 เพราะ6ภาพ/15ROIsreuseไม่มีadaptertimerของรอบนี้ ค่าmean/totalประชากร90ของSapiensเป็นnull; meanของ84ภาพแสดงแยกชัด มี8ภาพไม่มีYOLO ROIต่อโมเดลจึงไม่มีparsercallและparsing-work=0จริง ไม่ได้แปลว่าYOLO/end-to-endtime=0 Predictions/F1/qualityยังครบและไม่เปลี่ยน
+
+รวม timingครบ792/810model-image records จาก90ภาพเดียวกัน คงoldROI/log/worker totals,16targetedCPUcasesPASS ไม่มีinference/rescore/GTหรือnativeconfigเปลี่ยน Next:เปิดCSVprivateเพื่อดูรายภาพ และอ่านสรุปpublicที่ระบุขอบเขต ไม่มีคิวGPUเพิ่มเติม
+
+## Earlier current-state snapshots — historical records below
+
 # Current per-class metrics update — 2026-11-02T15:28:03.173159+07:00 (Asia/Bangkok)
 
 **PER_CLASS_PIXEL_PRF_COMPLETE — 9 models ×4 targets =36 F1 scores.** เพิ่ม [ตาราง F1 รายโมเดล/สี่คลาส](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล) ในรายงานเดิม และ F1 ในตาราง Precision/Recall ของทุกคลาส [CSV เดิม](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) เพิ่ม pooled_F1 เพียงคอลัมน์เดียว; original columns/values เดิมครบ

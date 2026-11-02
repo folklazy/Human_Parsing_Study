@@ -24,6 +24,8 @@ Hair / Face-domain / Upper / Lower ใช้ binary 2×2 ต่อคลาส �
 
 [ตารางสรุปเวลาที่บวกค่าแล้ว และ metric definitions](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): แยก A+B จาก C เพื่อไม่ให้นับซ้ำ มี timing coverage และข้อจำกัดเวลารายคลาส
 
+[เวลาต่อหนึ่งภาพและรวมทั้ง90ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ): บวกเวลาของROIในภาพนั้นจริง; private `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี9×90rowsพร้อมชื่อภาพ หกโมเดลมีtimingครบ90 ส่วนSapiensแต่ละขนาด84/90และคงnullสำหรับเวลาทั้ง90 ไม่ใช่end-to-end FPS
+
 ## ภาพรายละเอียดรายโมเดล (private)
 
 เปิด `outputs/model-detail-gallery-20261102/index.html` เพื่อเลือกดูทั้ง9โมเดลจาก6ภาพเดิม/15ROIs: RGBเทียบGTและprediction, ซูม,ปรับopacity และสลับnativeclasses/สี่เป้าหมายร่วม. ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกเปิดindex.htmlได้โดยไม่ตั้งserver. Images/GT/masks/ZIPไม่ขึ้นpublicGit; [สรุปartifactsและการตรวจ](reports/MODEL_IMAGE_GALLERY.json) มีcounts/hashesและข้อจำกัด. ใช้ผลเดิม ไม่มีinference/rescore.

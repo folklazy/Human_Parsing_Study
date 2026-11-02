@@ -4,10 +4,11 @@ Read small logs/metadata only. Never load a model, image, mask or checkpoint.
 Keep monotonic adapter timers separate from UTC event intervals.
 """
 import argparse
+import csv
 from datetime import datetime, timezone
-import hashlib
 import json
 import math
+from pathlib import Path
 from statistics import median
 
 from report_target_confusion import P, W, SHORT, read, sha
@@ -76,7 +77,57 @@ def forward_pairs(events):
     return complete, pending
 
 
-def collect():
+def group_image_times(frames, durations):
+    """Private per-image rows plus a public aggregate, never infer missing time."""
+    image_ids = [frame['image_id'] for frame in frames]
+    jobs = [job for frame in frames for job in frame['jobs']]
+    if len(set(image_ids)) != len(image_ids) or len(set(jobs)) != len(jobs):
+        raise ValueError('Duplicate frame/ROI membership')
+    if not set(durations) <= set(jobs):
+        raise ValueError('Timed ROI outside frozen image population')
+    output = []
+    for frame in frames:
+        expected = frame['jobs']
+        measured = [durations[job] for job in expected if job in durations]
+        if any(r['clock'] not in ('MONOTONIC', 'UTC_EVENT') or
+               not math.isfinite(r['seconds']) or r['seconds'] < 0 for r in measured):
+            raise ValueError('Invalid image timing observation')
+        count = len(measured)
+        if not expected:
+            status, total = 'NO_PARSER_ROIS', 0.
+        elif count == len(expected):
+            status, total = 'COMPLETE_TIMING', math.fsum(r['seconds'] for r in measured)
+        else:
+            status = 'PARTIAL_TIMING' if count else 'NO_CURRENT_TIMER'
+            total = None
+        clock_counts = {clock: sum(r['clock'] == clock for r in measured)
+                        for clock in ('MONOTONIC', 'UTC_EVENT')}
+        observed = math.fsum(r['seconds'] for r in measured) if measured else 0. if not expected else None
+        output.append(dict(image_id=frame['image_id'], ROI_count=len(expected),
+                           timed_ROIs=count, untimed_ROIs=len(expected)-count, status=status,
+                           monotonic_ROIs=clock_counts['MONOTONIC'], UTC_event_ROIs=clock_counts['UTC_EVENT'],
+                           observed_interval_ms=None if observed is None else observed*1000,
+                           image_parsing_work_ms=None if total is None else total*1000))
+    complete = [row for row in output if row['image_parsing_work_ms'] is not None]
+    nonempty = [row for row in complete if row['ROI_count']]
+    full = len(complete) == len(output)
+    known = math.fsum(row['observed_interval_ms']/1000 for row in output
+                     if row['observed_interval_ms'] is not None)
+    public = dict(expected_images=len(output), images_with_complete_timing=len(complete),
+                  no_parser_ROI_images=sum(row['ROI_count'] == 0 for row in output),
+                  complete_nonempty_images=len(nonempty),
+                  partial_timing_images=sum(row['status'] == 'PARTIAL_TIMING' for row in output),
+                  images_without_current_timer=sum(row['status'] == 'NO_CURRENT_TIMER' for row in output),
+                  full_population_timing_complete=full,
+                  full_population_parsing_work_seconds=known if full else None,
+                  full_population_mean_ms_per_image=known*1000/len(output) if full and output else None,
+                  complete_images_statistics=describe_seconds([row['image_parsing_work_ms']/1000 for row in complete]),
+                  complete_nonempty_statistics=describe_seconds([row['image_parsing_work_ms']/1000 for row in nonempty]),
+                  recorded_interval_sum_seconds=known, end_to_end_latency=False)
+    return output, public
+
+
+def collect(per_image_rows=None):
     inputs = {}
 
     def load(path, lines=False):
@@ -93,6 +144,10 @@ def collect():
     assert sha(parent/'CONFIG.json') == cont_config['parent_config_sha256']
     manifest = load(W/config['manifest'])
     assert sha(W/config['manifest']) == config['manifest_sha256']
+    source_config = load(W/config['parent_config'])
+    assert sha(W/config['parent_config']) == config['parent_config_sha256']
+    source_images = {member['id']: str(Path(source_config['dataset_root'])/'Images'/(member['stem']+'.jpg'))
+                     for member in source_config['members']}
     expected = {j['job_id'] for j in manifest['jobs']}
     assert len(expected) == len(manifest['jobs']) == 130
     assert len(manifest['frames']) == 90 and list(index['models']) == list(SHORT)
@@ -113,6 +168,7 @@ def collect():
         final = load(final_path)
         assert sha(final_path) == accepted['completion_sha256'] and final['strict_complete']
         mono, wall_events, committed, warmups, unfinished, segments = [], [], set(), 0, 0, []
+        durations = {}
         environment = None
         for root, clock in [(parent, 'MONOTONIC'), (continuation, 'UTC_EVENT')]:
             model_root = root/mid
@@ -148,10 +204,14 @@ def collect():
                 assert row['purpose'] in ('ROI_READINESS', 'ROI_INFERENCE')
                 if clock == 'MONOTONIC':
                     assert row['adapter_elapsed_seconds'] == pairs[key]['adapter_elapsed_seconds']
-                    mono.append(row['adapter_elapsed_seconds'])
+                    seconds = row['adapter_elapsed_seconds']
+                    mono.append(seconds)
                 else:
                     assert 'adapter_elapsed_seconds' not in row
-                    wall_events.append(pairs[key]['UTC_interval_seconds'])
+                    seconds = pairs[key]['UTC_interval_seconds']
+                    wall_events.append(seconds)
+                assert key not in durations
+                durations[key] = dict(seconds=seconds, clock=clock)
             assert all(r['purpose'] != 'TRAIN_WARMUP' for r in incomplete.values())
             unfinished += len(incomplete)
             elapsed = (datetime.fromisoformat(state['ended_utc']) - datetime.fromisoformat(state['started_utc'])).total_seconds()
@@ -159,18 +219,51 @@ def collect():
             segments.append(dict(run_id=root.name, worker_elapsed_seconds=elapsed, status=state['status']))
         reused = set(config['reuse'][mid])
         assert not committed & reused and committed | reused == expected
+        private_frames, image_summary = group_image_times(manifest['frames'], durations)
+        if per_image_rows is not None:
+            per_image_rows.extend(dict(model_id=mid, source_image=source_images[row['image_id']], **row)
+                                  for row in private_frames)
         result.append(dict(model_id=mid, frames=90, ROI_population=130,
                            monotonic_adapter=describe_seconds(mono), UTC_event_interval=describe_seconds(wall_events),
                            prior_diagnostic_ROIs_without_current_timing=len(reused), warmup_calls_excluded=warmups,
                            unfinished_forward_starts=unfinished, segments=segments,
                            worker_elapsed_seconds=sum(s['worker_elapsed_seconds'] for s in segments),
-                           parent_environment=environment))
+                           parent_environment=environment, per_image_summary=image_summary))
     assert sum(r['monotonic_adapter']['n'] + r['UTC_event_interval']['n'] for r in result) == closure['successful_new_unique_ROI_observations']
     assert sum(r['warmup_calls_excluded'] for r in result) == closure['TRAIN_warmup_calls']
     assert sum(r['unfinished_forward_starts'] for r in result) == closure['retained_failed_RPR_learned_calls']
     for row in result:
         row['time_accounting'] = time_accounting(row)
+        assert math.isclose(row['per_image_summary']['recorded_interval_sum_seconds'],
+                            row['time_accounting']['logged_interval_sum_seconds'], rel_tol=0, abs_tol=1e-10)
     return result, inputs
+
+
+def image_section(rows):
+    def number(value):
+        return 'null' if value is None else f'{value:.3f}'
+    lines = ['### E. เวลาต่อหนึ่งภาพ และรวมทั้ง 90 ภาพ', '',
+        '**เวลาต่อภาพในตารางนี้ = ผลบวกเวลาของทุก person ROI ที่อยู่ในภาพนั้นจริง ๆ** เช่น ROI ในภาพเดียวมี 70 และ 90 ms จะได้งาน parsing รวม160ms; ไม่ใช้ mean ms/ROI คูณจำนวนคนแทน log ของภาพนั้น เป็น derived parsing-work time ไม่ใช่เวลาตั้งแต่เปิดภาพจนบันทึกผลครบ pipeline', '',
+        '| Model | ภาพที่เวลาครบ / 90 | Mean ms/ภาพ เฉพาะภาพเวลาครบ | Mean ms/ภาพ ครบประชากร90 | รวม parsing ครบ90ภาพ s | ผลรวม log ที่มี s |',
+        '|---|---:|---:|---:|---:|---:|---:|']
+    for row in rows:
+        s = row['per_image_summary']
+        lines.append(f"| {SHORT[row['model_id']]} | {s['images_with_complete_timing']}/90 | {number(s['complete_images_statistics']['mean_ms'])} | {number(s['full_population_mean_ms_per_image'])} | {number(s['full_population_parsing_work_seconds'])} | {number(s['recorded_interval_sum_seconds'])} |")
+    complete_pairs = sum(row['per_image_summary']['images_with_complete_timing'] for row in rows)
+    population = sum(row['per_image_summary']['expected_images'] for row in rows)
+    observed = math.fsum(row['per_image_summary']['recorded_interval_sum_seconds'] for row in rows)
+    lines += ['', f'รวมตารางรายภาพมี **{population} model-image records =9โมเดล×90ภาพเดิม** ไม่ใช่ภาพอิสระ810ภาพ มี timing ครบ{complete_pairs}/{population} records; ผลรวมช่วงเวลาที่มีบันทึกยังเท่าเดิม{observed:.3f}s ไม่ใช่ยอดครบ90ภาพของทุกโมเดลหากบางช่องยังเป็นnull', '',
+        'มี8ภาพที่ frozen YOLO ไม่ได้สร้าง ROI ทุกโมเดลจึงไม่มี parser call: งาน parsing ของภาพเหล่านี้เป็น0จริง แต่เวลาอ่านภาพ/YOLO/งานอื่นไม่ใช่0 ค่าเฉลี่ยในคอลัมน์ภาพเวลาครบรวม8ภาพนี้ด้วย ไม่คัดทิ้งเพื่อเปลี่ยนตัวหาร ส่วนภาพที่มี ROI แต่ขาด timer จะเป็นnull ไม่เติม0 และไม่ใช้ค่าเฉลี่ยทดแทน', '',
+        'Sapiens แต่ละขนาด reuse15ROIs จาก6ภาพ จึงมีภาพที่เวลาของรอบนี้ครบเพียง84/90: ค่าเฉลี่ยภาพเวลาครบใช้84เป็นตัวหาร ส่วน mean/total ของประชากร90เป็นnull Predictions ยังคงครบ90ภาพ/130ROIs จึงไม่ใช่ inference failure หรือคะแนนคุณภาพไม่ครบ ตรวจ source ของ prior diagnostic แล้วพบว่าขอบเขตเวลาเป็น model-forward โดย preprocessing/map-back อยู่ข้างนอก จึงไม่นำมาปะปนเพื่อเติม adapter timer ที่ขาด', '',
+        'รายภาพทุกโมเดลอยู่ใน private `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มี model_id, ชื่อภาพต้นทาง, จำนวนROIs, จำนวนที่มีเวลา, status, ผลรวมเวลาที่มี และเวลางาน parsing ของภาพนั้น หากไม่ครบจะเป็นnull ไฟล์รายภาพมี CCTV identifiers จึงไม่ขึ้น public Git; hash/count/location อยู่ใน STUDY_STATE.json → per_image_timing_reporting', '',
+        '| Metric | สูตร / ตัวหาร | ความหมาย |', '|---|---|---|',
+        '| image_parsing_work_ms | 1,000×ΣเวลาทุกROIของภาพ เมื่อครบทุกROI | เวลางาน parsing ที่รวมจาก logs ต่อภาพ; A/B มี clock boundary ต่างกันตามเดิม |',
+        '| Mean ภาพเวลาครบ | Σimage_parsing_work_ms/N_complete | ใช้เฉพาะภาพที่ timer ครบ รวมภาพไม่มีparserROI; Sapiensใช้84 ภาพ โมเดลอื่น90 จึงไม่ใช่ matched-population speed ranking |',
+        '| Mean ประชากร90 | Σimage_parsing_work_ms/90 เฉพาะเมื่อครบ90ภาพ | ถ้าภาพใดขาดtimer ค่าmeanนี้เป็นnull |',
+        '| Total ประชากร90 | Σimage_parsing_work_ms/1,000 เฉพาะเมื่อครบ90ภาพ | ยอดรวม parsing-work ของทั้งชุด ไม่รวมYOLO/export/scorer/สี/DB |',
+        '| Recorded interval sum | รวมเฉพาะช่วงเวลาที่มีlog | บัญชีเวลาที่ทราบ รวมส่วนที่บันทึกได้ของภาพที่อาจยังไม่ครบ; ไม่ใช้แทนfull-population total |', '',
+        'ตารางA–Dเดิมยังเป็นข้อมูลต่อROI/worker คอลัมน์Eเป็นการจัดกลุ่มใหม่ตาม input manifest ไม่ใช่การจับเวลา inference ใหม่ ไม่หารเวลาworkerด้วย90 และไม่เอาtimestamp FRAME_COMMITTED มาลบกัน เพราะงานอาจสลับภาพและมีsetup/assemblyคั่นอยู่ ไม่มีการเพิ่มinferenceเพื่อเติมช่องnull', '']
+    return lines
 
 
 def accounting_section(rows):
@@ -234,6 +327,7 @@ def section(rows):
         lines.append(f"| {SHORT[row['model_id']]} | {len(times)} | {times[0]['worker_elapsed_seconds']:.3f} | {cont} | {row['worker_elapsed_seconds']:.3f} |")
     lines += ['', 'Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loading, binding/hash checks, warmup, failed-attempt work, packet readback/assembly/I/O และงานบันทึกสถานะที่เกิดใน worker แต่ไม่รวม controller queue/gap ระหว่าง attempts, prior diagnostic run, YOLO cache preparation, GT review หรือ CPU scoring ภายหลัง เป็นเวลาที่ใช้ทำงานในรอบที่ระบุ ไม่ใช่เวลาทำนายใหม่ครบ 90 ภาพจากศูนย์ และไม่ใช่ผลรวม GPU kernel time', '']
     lines += accounting_section(rows)
+    lines += image_section(rows)
     lines += ['### ขอบเขตที่รวมและไม่รวม', '',
         '| ขั้นตอน | อยู่ใน A/B หรือไม่ |', '|---|---|',
         '| Frozen YOLO26x segmentation, สร้าง crop และอ่าน/ตรวจ crop PNG รอบนอก | ไม่รวม; เกิดก่อนเข้า forward timer จึงใช้สร้าง end-to-end FPS ไม่ได้ |',
@@ -250,7 +344,13 @@ def section(rows):
 
 def main(audit_dir):
     audit_dir.mkdir(parents=True, exist_ok=False)
-    rows, inputs = collect()
+    private_rows = []
+    rows, inputs = collect(per_image_rows=private_rows)
+    private_csv = audit_dir/'PER_IMAGE_TIMING.csv'
+    with private_csv.open('w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=list(private_rows[0]), lineterminator='\n')
+        writer.writeheader()
+        writer.writerows({k: 'null' if value is None else value for k, value in row.items()} for row in private_rows)
     report = P/'reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md'
     start, end = '<!-- RUNTIME_DIAGNOSTICS_START -->', '<!-- RUNTIME_DIAGNOSTICS_END -->'
     previous = report.read_text()
@@ -264,7 +364,8 @@ def main(audit_dir):
     assert all(sha(W/path) == digest for path, digest in inputs.items())
     audit = dict(status='HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE', created_utc=datetime.now(timezone.utc).isoformat(),
                  model_calls=0, masks_read=0, quality_scores_changed=False, speed_ranking_eligible=False,
-                 models=rows, source_hashes=inputs, script_sha256=sha(__file__), report_sha256=sha(report))
+                 models=rows, source_hashes=inputs, script_sha256=sha(__file__), report_sha256=sha(report),
+                 private_per_image_CSV=dict(filename=private_csv.name, rows=len(private_rows), sha256=sha(private_csv)))
     (audit_dir/'VERIFICATION.json').write_text(json.dumps(audit, indent=2)+'\n')
     print(json.dumps(dict(status=audit['status'], models=len(rows),
                          monotonic_ROIs=sum(r['monotonic_adapter']['n'] for r in rows),
@@ -272,7 +373,6 @@ def main(audit_dir):
 
 
 if __name__ == '__main__':
-    from pathlib import Path
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--audit-dir', type=Path, required=True)
     main(parser.parse_args().audit_dir)

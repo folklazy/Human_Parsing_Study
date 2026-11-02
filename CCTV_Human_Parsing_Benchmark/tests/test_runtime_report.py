@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from report_runtime import describe_seconds, forward_pairs, time_accounting
+from report_runtime import describe_seconds, forward_pairs, time_accounting, group_image_times
 
 
 def test_mean_median_and_linear_percentile():
@@ -76,3 +76,43 @@ def test_time_coverage_cannot_exceed_population():
                segments=[dict(worker_elapsed_seconds=7.)])
     with pytest.raises(ValueError):
         time_accounting(row)
+
+
+def test_per_image_sum_and_true_no_parser_call_zero():
+    # Two-person image =70+90ms; no-person image has no parser call.
+    frames = [dict(image_id='first', jobs=['a', 'b']), dict(image_id='empty', jobs=[])]
+    durations = {'a': dict(seconds=.07, clock='MONOTONIC'),
+                 'b': dict(seconds=.09, clock='UTC_EVENT')}
+    rows, summary = group_image_times(frames, durations)
+    assert rows[0]['image_parsing_work_ms'] == 160
+    assert rows[1]['image_parsing_work_ms'] == 0
+    assert rows[1]['status'] == 'NO_PARSER_ROIS'
+    assert summary['full_population_timing_complete']
+    assert summary['full_population_mean_ms_per_image'] == 80
+    assert summary['full_population_parsing_work_seconds'] == .16
+    assert summary['complete_nonempty_statistics']['mean_ms'] == 160
+
+
+def test_missing_roi_and_reused_image_remain_null_not_zero():
+    frames = [dict(image_id='partial', jobs=['a', 'b']),
+              dict(image_id='reused', jobs=['c']), dict(image_id='empty', jobs=[])]
+    rows, summary = group_image_times(frames, {'a': dict(seconds=.07, clock='MONOTONIC')})
+    assert rows[0]['observed_interval_ms'] == 70
+    assert rows[0]['image_parsing_work_ms'] is None
+    assert rows[0]['status'] == 'PARTIAL_TIMING'
+    assert rows[1]['observed_interval_ms'] is None
+    assert rows[1]['status'] == 'NO_CURRENT_TIMER'
+    assert summary['full_population_mean_ms_per_image'] is None
+    assert summary['full_population_parsing_work_seconds'] is None
+    assert summary['recorded_interval_sum_seconds'] == .07
+    assert summary['images_with_complete_timing'] == 1
+
+
+@pytest.mark.parametrize('frames,durations', [
+    ([dict(image_id='a', jobs=['x']), dict(image_id='b', jobs=['x'])], {}),
+    ([dict(image_id='a', jobs=['x'])], {'other': dict(seconds=1., clock='MONOTONIC')}),
+    ([dict(image_id='a', jobs=['x'])], {'x': dict(seconds=-1., clock='MONOTONIC')}),
+])
+def test_per_image_membership_and_duration_contract(frames, durations):
+    with pytest.raises(ValueError):
+        group_image_times(frames, durations)

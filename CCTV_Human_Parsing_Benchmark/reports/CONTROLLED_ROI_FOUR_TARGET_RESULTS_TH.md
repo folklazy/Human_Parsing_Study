@@ -385,6 +385,40 @@ Worker elapsed = STATE.ended_utc − STATE.started_utc รวม setup/model loa
 
 สูตร Mean/Median/P95 เป็นสถิติเชิงพรรณนาของเวลาที่บันทึก ไม่ใช่ metric การแยกส่วนภาพ มาตรวัดคุณภาพ IoU/Recall/Precision/Dice มีสูตร ตัวหาร และแหล่งอ้างอิงแยกอยู่ในส่วน confusion matrix ไม่มีการสร้างคะแนนผสม quality×speed หรือเลือกผู้ชนะใหม่จากตารางเวลานี้
 
+### E. เวลาต่อหนึ่งภาพ และรวมทั้ง 90 ภาพ
+
+**เวลาต่อภาพในตารางนี้ = ผลบวกเวลาของทุก person ROI ที่อยู่ในภาพนั้นจริง ๆ** เช่น ROI ในภาพเดียวมี 70 และ 90 ms จะได้งาน parsing รวม160ms; ไม่ใช้ mean ms/ROI คูณจำนวนคนแทน log ของภาพนั้น เป็น derived parsing-work time ไม่ใช่เวลาตั้งแต่เปิดภาพจนบันทึกผลครบ pipeline
+
+| Model | ภาพที่เวลาครบ / 90 | Mean ms/ภาพ เฉพาะภาพเวลาครบ | Mean ms/ภาพ ครบประชากร90 | รวม parsing ครบ90ภาพ s | ผลรวม log ที่มี s |
+|---|---:|---:|---:|---:|---:|---:|
+| QANet | 90/90 | 110.247 | 110.247 | 9.922 | 9.922 |
+| M2FP | 90/90 | 318.049 | 318.049 | 28.624 | 28.624 |
+| D2FP | 90/90 | 1003.722 | 1003.722 | 90.335 | 90.335 |
+| RP-R-CNN | 90/90 | 327.577 | 327.577 | 29.482 | 29.482 |
+| CPI R50 | 90/90 | 4325.413 | 4325.413 | 389.287 | 389.287 |
+| CPI ConvNeXt-B | 90/90 | 708.656 | 708.656 | 63.779 | 63.779 |
+| Sapiens2 0.4B | 84/90 | 1930.530 | null | null | 162.165 |
+| Sapiens2 0.8B | 84/90 | 4000.521 | null | null | 336.044 |
+| Sapiens2 1B | 84/90 | 5672.165 | null | null | 476.462 |
+
+รวมตารางรายภาพมี **810 model-image records =9โมเดล×90ภาพเดิม** ไม่ใช่ภาพอิสระ810ภาพ มี timing ครบ792/810 records; ผลรวมช่วงเวลาที่มีบันทึกยังเท่าเดิม1586.100s ไม่ใช่ยอดครบ90ภาพของทุกโมเดลหากบางช่องยังเป็นnull
+
+มี8ภาพที่ frozen YOLO ไม่ได้สร้าง ROI ทุกโมเดลจึงไม่มี parser call: งาน parsing ของภาพเหล่านี้เป็น0จริง แต่เวลาอ่านภาพ/YOLO/งานอื่นไม่ใช่0 ค่าเฉลี่ยในคอลัมน์ภาพเวลาครบรวม8ภาพนี้ด้วย ไม่คัดทิ้งเพื่อเปลี่ยนตัวหาร ส่วนภาพที่มี ROI แต่ขาด timer จะเป็นnull ไม่เติม0 และไม่ใช้ค่าเฉลี่ยทดแทน
+
+Sapiens แต่ละขนาด reuse15ROIs จาก6ภาพ จึงมีภาพที่เวลาของรอบนี้ครบเพียง84/90: ค่าเฉลี่ยภาพเวลาครบใช้84เป็นตัวหาร ส่วน mean/total ของประชากร90เป็นnull Predictions ยังคงครบ90ภาพ/130ROIs จึงไม่ใช่ inference failure หรือคะแนนคุณภาพไม่ครบ ตรวจ source ของ prior diagnostic แล้วพบว่าขอบเขตเวลาเป็น model-forward โดย preprocessing/map-back อยู่ข้างนอก จึงไม่นำมาปะปนเพื่อเติม adapter timer ที่ขาด
+
+รายภาพทุกโมเดลอยู่ใน private `outputs/<runtime-report-id>/PER_IMAGE_TIMING.csv` ที่สร้างโดย report_runtime.py มี model_id, ชื่อภาพต้นทาง, จำนวนROIs, จำนวนที่มีเวลา, status, ผลรวมเวลาที่มี และเวลางาน parsing ของภาพนั้น หากไม่ครบจะเป็นnull ไฟล์รายภาพมี CCTV identifiers จึงไม่ขึ้น public Git; hash/count/location อยู่ใน STUDY_STATE.json → per_image_timing_reporting
+
+| Metric | สูตร / ตัวหาร | ความหมาย |
+|---|---|---|
+| image_parsing_work_ms | 1,000×ΣเวลาทุกROIของภาพ เมื่อครบทุกROI | เวลางาน parsing ที่รวมจาก logs ต่อภาพ; A/B มี clock boundary ต่างกันตามเดิม |
+| Mean ภาพเวลาครบ | Σimage_parsing_work_ms/N_complete | ใช้เฉพาะภาพที่ timer ครบ รวมภาพไม่มีparserROI; Sapiensใช้84 ภาพ โมเดลอื่น90 จึงไม่ใช่ matched-population speed ranking |
+| Mean ประชากร90 | Σimage_parsing_work_ms/90 เฉพาะเมื่อครบ90ภาพ | ถ้าภาพใดขาดtimer ค่าmeanนี้เป็นnull |
+| Total ประชากร90 | Σimage_parsing_work_ms/1,000 เฉพาะเมื่อครบ90ภาพ | ยอดรวม parsing-work ของทั้งชุด ไม่รวมYOLO/export/scorer/สี/DB |
+| Recorded interval sum | รวมเฉพาะช่วงเวลาที่มีlog | บัญชีเวลาที่ทราบ รวมส่วนที่บันทึกได้ของภาพที่อาจยังไม่ครบ; ไม่ใช้แทนfull-population total |
+
+ตารางA–Dเดิมยังเป็นข้อมูลต่อROI/worker คอลัมน์Eเป็นการจัดกลุ่มใหม่ตาม input manifest ไม่ใช่การจับเวลา inference ใหม่ ไม่หารเวลาworkerด้วย90 และไม่เอาtimestamp FRAME_COMMITTED มาลบกัน เพราะงานอาจสลับภาพและมีsetup/assemblyคั่นอยู่ ไม่มีการเพิ่มinferenceเพื่อเติมช่องnull
+
 ### ขอบเขตที่รวมและไม่รวม
 
 | ขั้นตอน | อยู่ใน A/B หรือไม่ |
