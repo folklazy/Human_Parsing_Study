@@ -1,3 +1,9 @@
+# Controlled CIHP quality batch กำลังทำงาน — 2026-11-02T19:13:53.625503+07:00
+
+**QUALITY_BATCH_RUNNING / QANET_TRAIN_GATE_PASS** — [รายงานรอบปัจจุบัน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Run `cihp-controlled-roi-20261102T120403Z` เปิดใน tmux แล้ว controller2144827 / QANetworker2144852. ตรวจเวลา19:13:14น.พบ521/5000ภาพ, failed0/invalid0, packetแรกผ่าน atomic/readback/nativeIDs/ownership/bindings และ source19รายการตรง. คิวโมเดลถัดไปอัตโนมัติหลัง closure/resource gates
+
+ใช้ `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/controlled_cihp.py progress` จากworkspace rootเพื่อดูจำนวนล่าสุด. snapshotในเอกสารมีเวลาอ้างอิง. Live/clean timingphaseยังpendingแยกจากquality. Next action:ปล่อยcontrollerเดิมเดินคิว ติดตามhealth/completenessและวิเคราะห์รวมหลังbatchterminal
+
 > **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue
 
 > **Queue/timing requirements — 2026-11-02T18:51:46.168259+07:00** กำหนดsequentialautomaticqueue,model-boundaryreconciliation,health-onlymonitoringและวิเคราะห์หลังbatchterminalแล้ว. [PLAN](PLAN.md#คิวอัตโนมัติและการเก็บเวลาแยกขั้นสำหรับ-controlled-cihp) มีstage-leveltiming,cached/livepipelineboundaries,clean timing proposalและacceptance. Implementation/readinessของcontrolledCIHPยังpending

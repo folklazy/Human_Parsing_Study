@@ -1,0 +1,70 @@
+{
+  "run_id": "cihp-controlled-roi-20261102T120403Z",
+  "checked_utc": "2026-11-02T12:13:14.247962+00:00",
+  "status": "DETACHED_VALIDATION_RUNNING_FIRST_PACKET_VERIFIED",
+  "model_id": "QANet_CIHP_HRNetW48_512x384",
+  "controller_pid": 2144827,
+  "worker_pid": 2144852,
+  "observed_completed_frames": 521,
+  "observed_ROI_calls": 2837,
+  "observed_failed": 0,
+  "observed_invalid": 0,
+  "config_sha256": "ab672069027497384e9d7713933bf7dd74f7aad9c2f97c747125532103ac6eaa",
+  "source_bindings_verified": 19,
+  "readiness": {
+    "status": "PASS",
+    "TRAIN_calls": 2,
+    "original_vs_instrumented_native_hard_masks": "IDENTICAL_ON_TRAIN_ROI",
+    "resource_observation": {
+      "utc": "2026-11-02T12:06:24.620698+00:00",
+      "GPU": "GPU-568de064-e614-a45c-96c3-dbd80b8db026, 1777, 13135, 27, 53, 735, 5000",
+      "compute_processes": "2144852, 1774",
+      "GPU_query_returncode": 0,
+      "process_query_returncode": 0,
+      "load_average": [
+        1.0205078125,
+        0.7451171875,
+        0.63720703125
+      ]
+    },
+    "projected_storage_bytes": 15963757163.75,
+    "estimate_limitation": "One TRAIN ROI, larger candidate sets remain guarded",
+    "native_classes": 20,
+    "model_details_sha256": "da581a32abea077b801dee92195be6c4d1c0585b0de5190c3516a9c95c5dda56"
+  },
+  "first_packet": {
+    "image_id": "0000001",
+    "packet_sha256": "7310d2e422c1cf9a0b2f7e5b54395af585bead640d37b638c1ba7143f106e319",
+    "original_wh": [
+      500,
+      375
+    ],
+    "array_shape": [
+      4,
+      375,
+      500
+    ],
+    "native_IDs": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "atomic_readback": true,
+    "ownership_consistent": true
+  },
+  "scientific_outputs_analysis": "DEFERRED_UNTIL_BATCH_TERMINAL",
+  "pipeline_timing_status": "QUALITY_CACHED_ROUTE_DIAGNOSTICS_ACTIVE_LIVE_CLEAN_TIMING_PENDING"
+}
