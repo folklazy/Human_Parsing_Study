@@ -1,0 +1,110 @@
+{
+  "status": "AGGREGATE_BINDINGS_AND_ARITHMETIC_PASS",
+  "created_utc": "2026-11-02T11:04:28.615377+00:00",
+  "models": 9,
+  "target_rows": 36,
+  "summary_rows": 9,
+  "model_calls": 0,
+  "mask_rescores": 0,
+  "inputs": {
+    "Human_Parsing_Benchmark/manifests/CIHP_COMMON_RESULT_INDEX.json": "8a7e63250af0a921b5dcb1376b3a531ae617d6cd6a4a123136bd3d3cd02775b2",
+    "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/COMMON_SUMMARY.csv": "f38d23fe070ad901abb823150a360ca9ed8e1ba5f964aad931771d9dcf9ed34e",
+    "Human_Parsing_Benchmark/metrics/cpi-common-c4p-20261030/PER_TARGET.csv": "603a2d413e9ca816361f46366a2d7b962f4540fb5b76800f0b384c1f59d51429",
+    "CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+    "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6",
+    "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
+    "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+    "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_SCORING_PROTOCOL.json": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+    "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py": "0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_evaluation.py": "cadd3efc25de1bcce9f0874d3da5554239343531f95dcdc106d5c4f4faa8a5b6",
+    "CCTV_Human_Parsing_Benchmark/scripts/face_neck_evaluation.py": "70f4782b7c865c9878e68ef9a0c7d4a537a2f00dc5837b5bbd075d4a00fc7fef",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_core.py": "15561c1c560f26d8d3a565d54f1a3a07be31ddbf927059443e6a826bf83a8cdd"
+  },
+  "canonical_CIHP_metrics": [
+    {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/QANet_CIHP_HRNetW48_512x384/METRICS.json",
+      "sha256": "52ab82c9126da5ef9eb0ba886a325fbf6ee1a900091c56ca15fa15aebc1282f7"
+    },
+    {
+      "model_id": "M2FP_R101_CIHP",
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/M2FP_R101_CIHP/METRICS.json",
+      "sha256": "129b7b0953b9d073c4006e1bb16c3b1669a6e4bb7fb192bdd632b93518ad9df9"
+    },
+    {
+      "model_id": "D2FP_R101_CIHP",
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/D2FP_R101_CIHP/METRICS.json",
+      "sha256": "dd20d07556fcd1b82903a616a5ade03469dad83860bd1b32439b06b8534a2d2e"
+    },
+    {
+      "model_id": "RPR_CIHP",
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/RPR_CIHP/METRICS.json",
+      "sha256": "457a0569edf02e4a5d62f7634ca2dcb2d3fa450530594c66d44ea8f51ff2a4bd"
+    },
+    {
+      "model_id": "CPI_R50_CIHP",
+      "path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_R50_CIHP/METRICS.json",
+      "sha256": "2a8da92e0958bae50648ee9fce4249b663d6f4d43c3ebe2b0e8933f6485508bd"
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "path": "Human_Parsing_Benchmark/runs/cpi-common-c4p-20261030/CPI_ConvNeXtB_CIHP/METRICS.json",
+      "sha256": "7acb2e97ff817904280485584778413cf2b362f4e9c50a9fbcf13f6bc26f4557"
+    },
+    {
+      "model_id": "Sapiens2_0.4b",
+      "path": "Human_Parsing_Benchmark/runs/common-c4p-full-20261029T063458522990Z/Sapiens2_0.4b/METRICS.json",
+      "sha256": "150ea776cd4c0cd345a2383201ad307875945cc95ed81403717ad03b4d259842"
+    },
+    {
+      "model_id": "Sapiens2_0.8b",
+      "path": "Human_Parsing_Benchmark/runs/sapiens08-c4p-20261029T081254180014Z/METRICS.json",
+      "sha256": "881d376917834c9041b0a3b6ed7ce58b706303005d41cbc844baa6ca8dd701b5"
+    },
+    {
+      "model_id": "Sapiens2_1b",
+      "path": "Human_Parsing_Benchmark/runs/sapiens1b-c4p-20261029T200113781375Z/METRICS.json",
+      "sha256": "4d24f91943d128fea8b8599130e16728c839860c17136423e3858414651aeea7"
+    }
+  ],
+  "shared_GT_supports": {
+    "Hair": [
+      61,
+      232447,
+      127349760
+    ],
+    "CIHP_Hair": 40760850,
+    "FaceDomain": [
+      21,
+      36743,
+      45526454
+    ],
+    "CIHP_FaceDomain": 37932488,
+    "Upper": [
+      112,
+      861845,
+      235115520
+    ],
+    "CIHP_Upper": 148199276,
+    "Lower": [
+      96,
+      327214,
+      201937920
+    ],
+    "CIHP_Lower": 38702345
+  },
+  "output": {
+    "path": "Human_Parsing_Benchmark/metrics/CIHP_CCTV_AGGREGATION_SENSITIVITY.csv",
+    "sha256": "000868bffba6a199252146025ab0cef0af916679e656c8bceb592ddd009dd8d1"
+  },
+  "limitations": [
+    "Accepted exact-membership audit reused, no fresh packet rehash",
+    "CCTV pooled counts are person-part tasks, not global semantic confusion",
+    "No attribution of cross-dataset difference to model architecture or one input factor",
+    "No new GPU readiness or controlled CIHP inference performed"
+  ]
+}

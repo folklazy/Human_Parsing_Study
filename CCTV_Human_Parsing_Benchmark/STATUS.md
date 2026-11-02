@@ -1,3 +1,7 @@
+# ตรวจความเทียบกันได้กับ CIHP — 2026-11-02T18:03:20.041685+07:00
+
+**COMPARABILITY_AUDIT_COMPLETE** — [รายงาน](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). ตรวจ aggregate bindings/arithmetic และคำนวณ pooled sensitivity ของ 36 target records แล้ว คงผลหลัก/GT/predictionsเดิม. CIHP กับ CCTV ล่าสุดต่าง input route, Face domain, matching และ aggregation; ไม่ใช่ direct cross-dataset model ranking. ไม่มี inference ใหม่. งานต่อคือ controlled CIHP ROI bindings/readiness และ independent GT review ตามข้อจำกัดที่ระบุ
+
 # ปรับภาษารายงาน — 2026-11-02T16:54:52.799096+07:00 (Asia/Bangkok)
 
 **THAI_WORDING_REVIEWED** — เกลาภาษาใน [รายงานผลเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) และตัวสร้างรายงานทั้งสองไฟล์ ให้ใช้คำไทยและหน่วยสม่ำเสมอ เปลี่ยน “ภาพที่เวลาครบ” เป็น “ภาพที่มีข้อมูลเวลาครบ” และ “ประชากร90” เป็น “ทั้งชุด 90 ภาพ” อธิบาย GT/ROI/คลาสเดิมของโมเดล การจับคู่ และความต่างระหว่างเวลาที่บันทึกได้กับเวลารวมของชุดภาพ พร้อมคงความหมาย null และข้อจำกัดเดิม

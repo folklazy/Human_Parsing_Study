@@ -1,3 +1,5 @@
+> **Comparability review — 2026-11-02T18:03:20.041685+07:00:** ตรวจ CIHP กับ CCTV90 และคำนวณ aggregation sensitivity แล้ว: input route, ownership, Face domain และหน่วยเฉลี่ยต่างกัน จึงไม่ใช่การวัดเงื่อนไขเดียวกันข้าม dataset. [รายงานตรวจละเอียด](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · audit 9 systems / 36 targets PASS; ผลเดิมคงเดิม. Controlled CIHP ROI ยังไม่รันและยังไม่ผ่าน readiness.
+
 > **Latest completed work (2026-10-30T11:11:02.869193+07:00):** Common C4-P revision2 **9/9 COMPLETE**. CPI saved-only scoring plus seven accepted results reused. [Authoritative result/analysis](reports/CIHP_COMMON_NINE_RESULTS_TH.md); [STATUS](STATUS.md). Earlier closures/scopes below are historical. No new inference or protocol change is authorized by completion.
 
 > **Current closure review (2026-10-30T10:44:14.373500+07:00):** Native20 6/6 COMPLETE and C4-P revision2 7/7 COMPLETE, 9 unique checkpoints. [Current handoff](reports/CIHP_EVALUATION_HANDOFF_TH.md) / [STATUS](STATUS.md). Earlier scope/outcome sections below are dated history; no new execution is authorized by this closure. CPI common-view scoring and final selection remain separate work.

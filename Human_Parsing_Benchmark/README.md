@@ -1,3 +1,5 @@
+> **Comparability review — 2026-11-02T18:03:20.041685+07:00:** ตรวจ CIHP กับ CCTV90 และคำนวณ aggregation sensitivity แล้ว: input route, ownership, Face domain และหน่วยเฉลี่ยต่างกัน จึงไม่ใช่การวัดเงื่อนไขเดียวกันข้าม dataset. [รายงานตรวจละเอียด](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · audit 9 systems / 36 targets PASS; ผลเดิมคงเดิม. Controlled CIHP ROI ยังไม่รันและยังไม่ผ่าน readiness.
+
 > **Current CCTV design:** [controlled person-ROI and Face/Neck proposal](../CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), PROPOSED_NOT_FROZEN. Derived GT/scorer/route readiness precede any new batch; CIHP frozen results are unchanged.
 
 > **CCTV status: GT_OWNER_REVIEW_REQUIRED.** [Sapiens measurement review](../CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) confirms source-owner conflicts and reports bounded fresh0.4/0.8/1B ROI diagnostics. Nine-system CCTV selection is on hold; CIHP results below remain frozen.

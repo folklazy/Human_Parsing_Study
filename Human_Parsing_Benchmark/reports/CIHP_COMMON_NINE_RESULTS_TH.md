@@ -1,5 +1,7 @@
 # ผล Human Parsing common C4-P ครบเก้า checkpoints — สรุปสำหรับตรวจต่อ
 
+> **ขอบเขตการใช้ผล (2 พ.ย. 2026):** ตารางนี้เป็น common-view application comparison ซึ่ง input routes ต่างกัน ไม่ใช่ official native-parser reproduction หรือ controlled-ROI comparison แบบ CCTV ล่าสุด. Q_GT เป็น supplementary metric ของโครงการ. ดู [การตรวจ CIHP เทียบ CCTV และ sensitivity ของวิธีเฉลี่ย](CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) ก่อนเปรียบเทียบอันดับข้ามชุดข้อมูล
+
 อัปเดต **2026-10-30T11:11:02.674074+07:00 (เวลาไทย UTC+07)** · **COMMON_C4P_COMPLETE_9_OF_9** · งานเพิ่มรอบนี้คือ saved-only CPI สองระบบ ไม่มี model inference ใหม่
 
 ## ผลที่ครบแล้วและคำตอบหลัก
