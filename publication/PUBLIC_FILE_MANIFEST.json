@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 16072,
-      "sha256": "6cb98fd51b241b0b36798a16d058e531f62ed5315de8f08d128b2db9d5f453c7"
+      "bytes": 16579,
+      "sha256": "e365be47095d366e5f2a8b2e9bbe135abe114342775299313426fb65a8965dd0"
     },
     {
       "path": "ARTIFACTS.md",
@@ -30,13 +30,13 @@
     },
     {
       "path": "Body_Extraction_Human/AGENTS.md",
-      "bytes": 1782,
-      "sha256": "a02874a1659d1985afedb75f0545266ca3828d284376256d3e7c37b1ed3e04b6"
+      "bytes": 2171,
+      "sha256": "db1b2a09f6efb61cd8ed9db7f670abcff97c2838bb69037acd7c80838df60986"
     },
     {
       "path": "Body_Extraction_Human/README.md",
-      "bytes": 9752,
-      "sha256": "8ff5cd0f80b26c5d37a1ebb3fe5b1e1bdad0060a0d05cff49bc3ff505494947b"
+      "bytes": 10141,
+      "sha256": "be9e8ed1bd60ce2975ca0757d7ef952c2b13fec17b5258dc5e425dd8e0e6f9c2"
     },
     {
       "path": "Body_Extraction_Human/STATUS.md",
@@ -2580,8 +2580,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15976,
-      "sha256": "ca121215d20ba3567020cdef5b2123bd2beeebc7986df92203db9f1f4e537a7b"
+      "bytes": 16365,
+      "sha256": "10cde4d8318b73427a699585e75c12c54a9262530d6f0f1a4583cf984ca47ecb"
     },
     {
       "path": "REFERENCES.md",
@@ -5154,6 +5154,11 @@
       "sha256": "9ac1c55e57364c4a9e13ec22cb05a865e797eb00fd71ad5169c842a310cd6df7"
     },
     {
+      "path": "publication/BODY_APP_REPOSITORY_SPLIT_20261102.json",
+      "bytes": 1077,
+      "sha256": "8386f91291f90fe4a3cac2d05179ca7768798fd3bf00145dff21681d6d191d89"
+    },
+    {
       "path": "publication/BODY_EXTRACTION_APP_20261101.json",
       "bytes": 8331,
       "sha256": "6b5a5b3084d3a69d8b68592775970910bfc6849fc3711324b7fbc18c09ee4e45"
@@ -7066,5 +7071,5 @@
   ],
   "updated_utc": "2026-10-31T21:18:45.179411+00:00",
   "revision_reason": "CCTV90 metric audit: explicit restricted-domain diagnostics; no asset/GT/canonical-result mutation",
-  "last_updated_utc": "2026-11-01T20:02:19.480816+00:00"
+  "last_updated_utc": "2026-11-02T03:07:18.123212+00:00"
 }

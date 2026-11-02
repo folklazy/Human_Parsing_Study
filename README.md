@@ -1,5 +1,7 @@
 # Human Parsing Study
 
+**Application repository moved to its own Git root:** [https://github.com/folklazy/Body-Extraction-Human](https://github.com/folklazy/Body-Extraction-Human) (Private). This study copy is the historical application snapshot from `8960cf3`; future application development belongs in the independent repository. The running source directory was retained, with no data/environment migration.
+
 **Body Extraction Human — เว็บแอปใช้งานจริง:** [คู่มือเริ่มใช้งาน](Body_Extraction_Human/README.md) · [สถานะ](Body_Extraction_Human/STATUS.md) · [ผลตรวจบน T4](Body_Extraction_Human/docs/VERIFICATION_TH.md). อัปโหลดภาพ/วิดีโอ → YOLO26x-Seg → selected Sapiens2 1B → original-RGB color → PostgreSQL → person-level AND search. Local authenticated server; no public CCTV assets, weights, secrets or hosted app deployment.
 
 **ข้อสรุป CCTV: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักด้านคุณภาพรวม** ตามเกณฑ์สี่ targets ที่กำหนดไว้และประเมินครบ9ระบบแล้ว.

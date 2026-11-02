@@ -1,3 +1,7 @@
+# Independent web-application repository
+
+Body Extraction Human now has its own private repository https://github.com/folklazy/Body-Extraction-Human. Develop the application there. This study checkout retains its8960cf3application snapshot and frozen research evidence; no automatic code synchronization or service migration. The canonical existing server application directory has its own Gitroot. Do not publish private uploads/weights/DB/secrets or infer new experiment authorization from old worklogs.
+
 # Current application delivery
 
 Body_Extraction_Human is a separate actual application. Read its README → STATUS → AGENTS and docs/VERIFICATION_TH.md. User authorized development and bounded new-file T4 testing with YOLO26x/Sapiens2_1b/selected color MLP. V1 functional verification is complete; private detached services are managed in the source workspace. Do not publish uploads/DB/credentials/screenshots or automatically run new benchmarks/training from this record. Existing frozen scientific results remain unchanged; model usage terms remain applicable. Source and public checkouts remain separate; this branch is a post-verification source snapshot, not a launch commit.

@@ -1,3 +1,5 @@
+**Application repository moved to its own Git root:** [https://github.com/folklazy/Body-Extraction-Human](https://github.com/folklazy/Body-Extraction-Human) (Private). This study copy is the historical application snapshot from `8960cf3`; future application development belongs in the independent repository. The running source directory was retained, with no data/environment migration.
+
 # Body Extraction Human
 
 เว็บแอปภาษาไทยสำหรับอัปโหลดภาพ/วิดีโอ → แยกคน → Human Parsing → อ่านสีเสื้อผ้า
