@@ -1,3 +1,13 @@
+# Current reporting update — 2026-11-02T13:50:26.324719+07:00 (Asia/Bangkok)
+
+**TARGET_CONFUSION_REPORTING_COMPLETE — 9/9 models, 4 targets.** เพิ่ม diagnostics ใน [รายงานสี่เป้าหมายเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน): [ภาพเดียวรวม 36 binary matrices](reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) และ [CSV 36 แถว](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) มี Recall/พลาด/Precision และส่วนที่ไม่ทับ GT พร้อมสูตร ตัวหาร และที่มา
+
+ตรวจ accepted score JSON 981 records / 2,610 person-part tasks จาก 9 ระบบ; TP/FP/FN/support/IoU ตรง canonical results, GT domains เท่ากันข้ามโมเดล และ protected artifacts 28 ไฟล์คงเดิม CPU reporting checks 8/8 ผ่าน ไม่มี inference, mask rescore, GT/mapping หรือ native benchmark เปลี่ยนแปลง
+
+ยังเป็น selected-part reference evaluation: Hair61 / Face21 / Upper112 / Lower96 ต่อโมเดล TN เป็น task-domain complement ไม่ใช่หลักฐาน full-scene accuracy คะแนนหลักและคำแนะนำ Sapiens2 1B / ทางเลือก QANet คงเดิม Next action: อ่านตาราง Recall คู่ Precision/IoU และเปิดภาพ matrix จากรายงาน ไม่มี experiment หรือ worker เปิดต่ออัตโนมัติ
+
+## Earlier current-state snapshots — historical records below
+
 # CCTV parsing — current status
 
 Updated 2026-11-01T23:26:54.611649+07:00 (Asia/Bangkok). **FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT — 9/9**.

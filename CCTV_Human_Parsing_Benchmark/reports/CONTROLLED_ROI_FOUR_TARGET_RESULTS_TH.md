@@ -149,3 +149,123 @@ Privatepathsที่เปิดได้ในworkspace:
 GTยังเป็นagent-assistedreview ไม่ใช่independentexpertgold; Faceมีuncertaintydomainและ14excludeditems, Neckpositiveviewเพียง3items. คะแนนจึงรองรับการเลือกเบื้องต้นจากreference/domainนี้ ไม่รับรองstrictFace-only/Neck-only,ทุกคน/ทุกส่วนในฉาก,night/generalCCTVperformance,สี/attributes หรือproductionacceptance. Timing/VRAMของเดิมเป็นsharedGPUadapterdiagnostics ไม่ใช้จัดอันดับFPS/latency/VRAMefficiency.
 
 **รอบประเมินสี่targetsปิดแล้วบนdeclaredeligibleGT ไม่เหลือFace-scorejobหรือGPUjobที่ต้องเปิดต่อเพื่อให้ได้ตารางนี้.** ขั้นถัดไปคือใช้รายงานนี้พิจารณาSapiens2 1B/QANetตามความต้องการ หรือจัดindependentGT/deploymentvalidationหากต้องการคำอ้างที่เข้มกว่า. ไม่เริ่มการฝึก สี CCTVinferenceเพิ่ม หรือexperimentอื่นอัตโนมัติ.
+
+<!-- TARGET_CONFUSION_START -->
+## Confusion matrix และการเก็บส่วนที่ต้องการครบแค่ไหน
+
+อัปเดตจาก **สถิติที่ตรวจรับแล้ว** ของ CCTV ชุดล่าสุด 90 ภาพเท่านั้น ไม่มี inference หรือ rescore และไม่แก้ GT, mapping หรือคะแนนหลักเดิม ใช้ภาพเดียวรวม 36 binary matrices (9 โมเดล × 4 targets) และ CSV เดียวรวม 36 แถวพร้อมตัวหารและค่าก่อนปัดเศษ
+
+[เปิดภาพ matrix ขนาดเต็ม](figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV ตัวเลข/ตัวหาร/ส่วนที่พลาด](../metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv)
+
+![36 binary confusion matrices](figures/CONTROLLED_ROI_TARGET_CONFUSION.png)
+
+### อ่าน matrix และเข้าใจ domain
+
+| GT / Prediction | เป็น target ของคนที่ประเมิน | ไม่เป็น target ของคนนั้น |
+|---|---:|---:|
+| GT เป็น target | TP: พิกเซลที่เก็บถูก | FN: พิกเซล GT ที่พลาด |
+| GT ไม่เป็นส่วนนี้ของคนที่ประเมิน ภายใน V | FP: พิกเซลที่ทำนายเกิน | TN: ส่วนเติมเต็มของ domain |
+
+**เหตุผลที่ใช้ 2×2 ต่อคลาส:** Hair 61 / Face 21 / Upper 112 / Lower 96 ส่วน ใช้คนที่มีสิทธิ์และพื้นที่ประเมินต่างกันตาม selected-person part task เดิม สถิติ binary ไม่บอกว่า Hair ที่พลาดถูกทำนายเป็น Face, Upper, BG หรือ OTHER อย่างละเท่าไร จึงสร้างตาราง cross-class 4×4 จาก TP/FP/FN นี้ไม่ได้ การตอบคำถามนั้นต้องอ่าน native planes ภายใต้ joint-domain protocol เพิ่มเติม ซึ่งยังไม่ได้ทำในรอบนี้
+
+Hair/Upper/Lower ใช้พิกัดภาพต้นฉบับทั้งกริดต่อ eligible part ตาม scorer เดิม ส่วน Face ใช้ V = original grid − known own Neck − GT-only uncertainty โดย known occluder ยังเป็น valid negative กรณี Neck ไม่ทราบ ใช้ uncertainty ที่ระบุไว้ ไม่ตีความ unknown ว่าไม่มีคอ **TN = |V| − TP − FP − FN** เป็นส่วนเติมเต็มทางคณิตศาสตร์จาก dimensions และ GT counts ที่ตรึงแล้ว ไม่ใช่ annotation ยืนยันว่าฉากที่เหลือเป็น background จึงไม่ใช้ accuracy/specificity หรือ TN จำนวนมากอ้างว่าแยกทุกคนถูกครบ Negative ในที่นี้หมายถึง “ไม่ใช่ส่วนนี้ของคนที่กำลังประเมิน” ไม่ใช่ full-scene GT และการรวม person-part tasks อาจนับพิกัดภาพเดียวกันซ้ำ
+
+สีในรูป normalize แยกแถว: แถว GT-target คือ Recall และ Miss fraction; แถว GT-not-this-part คือ FP/TN ต่อ negative-domain support แต่ละช่องแสดงจำนวนพิกเซลจริงด้วย ไม่ใช้สีแถวล่างหรือ pixel accuracy เลือกผู้ชนะ
+
+### Metric มาจากไหน คำนวณอย่างไร และตอบอะไร
+
+| ตัวชี้วัด | สูตร/ตัวหาร | ความหมายและข้อจำกัด | ที่มา |
+|---|---|---|---|
+| Recall / GT coverage | ΣTP/(ΣTP+ΣFN) | เก็บพิกเซล GTได้กี่%; ไม่ลงโทษการทำนายเกิน และไม่ใช่%คนที่ตรวจครบ | [นิยาม Recall](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html) |
+| Miss fraction | ΣFN/(ΣTP+ΣFN)=1−Recall | พิกเซลส่วนที่ต้องการซึ่งหายไป; ไม่ใช่จำนวน person misses | ComplementของRecallบนdomainเดียวกัน |
+| Precision | ΣTP/(ΣTP+ΣFP) | พิกเซลที่ทำนายว่าเป็นส่วนนี้ถูกจริงเท่าไร; จำกัด selected-person/GT-reference domain | [นิยาม Precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html) |
+| IoU / Jaccard | TP/(TP+FP+FN) ต่อpart | ลงโทษทั้งเก็บไม่ครบและทำนายเกิน | [นิยาม Jaccard](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html), [scorer counts](../scripts/controlled_roi_core.py) |
+| Dice / binary F1 | 2TP/(2TP+FP+FN) | overlapอีกสเกลหนึ่งจากcountsเดียวกัน; ไม่ใช่หลักฐานอิสระเพิ่ม และไม่เท่ากับperson-detectionF1 | [นิยาม F1](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) |
+| Mean-part IoU / Macro4 เดิม | mean_i IoU_i ใน target แล้วเฉลี่ย 4 targets เท่ากัน 25% | แต่ละ part น้ำหนักเท่ากันก่อนรวม targets; **ยังเป็นเกณฑ์หลักเดิม** | [protocol R2](../configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json), [aggregate/macro source](../scripts/face_neck_evaluation.py) |
+| Pooled IoU / Dice | รวมintegercountsทุกpartก่อนratio | partใหญ่มีน้ำหนักมาก จึงต่างจากmean-part; ไม่เอาpooledRecall/IoUมาเปลี่ยนอันดับหลัก | CSVและformulaเดียวกัน |
+| Zero overlap / Full GT coverage | นับ TP_i=0 / FN_i=0 จาก eligible parts | ส่วนที่ไม่ทับ GT เลย / เก็บ GT pixels ครบ; **FN=0 ยังมี FP ได้** จึงไม่เท่ากับ mask ถูกทั้งหมด | Diagnostics จาก counts เดิม ไม่มีตั้ง threshold เพิ่มภายหลัง |
+| Empty prediction / Exact mask | นับ prediction_pixels_i=0 / (FP_i=0 และ FN_i=0) | ไม่มี target prediction / ทุกพิกเซลตรง reference; ไม่ใช่ execution failure หรือเกณฑ์ผ่านการใช้งาน | Diagnostics จาก counts เดิม |
+| Unmatched parts | นับ detector_miss หรือ detector_unmatched ของ accepted task rows | GT part ที่ไม่มี assigned candidate; อาจเกิดจากไม่มี detection หรือ assignment competition ไม่ใช่จำนวนคนทั้งฉากที่ detector พลาด | [non-Face scorer](../scripts/controlled_roi_evaluation.py), [Face scorer](../scripts/face_neck_evaluation.py) |
+
+นิยาม matrix อิง [official confusion-matrix reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) โดยเรียง labels [target, not-target] จึงเป็น [[TP,FN],[FP,TN]] คำนวณจาก canonical integer counts โดยตรง ไม่ได้เรียก sklearn มา rescore หากตัวหารเป็นศูนย์จะให้ null เพราะไม่มี support (CSV ใช้คำว่า null) ไม่แทนด้วยศูนย์อัตโนมัติ; ชุดนี้ทุก target มี positive GT การรวม native classes ใช้ union ตาม mapping เดิมแล้วจึงนับพิกเซล ไม่เฉลี่ย IoU ของคลาสย่อย
+
+### รายโมเดลและรายคลาส: เก็บได้/พลาด/เกิน
+
+ร้อยละในตารางเป็น **pooled pixels** จากทุก eligible part ของ target จึงมีน้ำหนักตามขนาดส่วน ต่างจาก mean-part IoU ในตารางหลัก “ไม่ทับเลย” คือ TP=0 รวมกรณี empty/wrong-place และ unmatched GT ซึ่งไม่ใช่ execution failure ส่วน “เก็บ GT ครบ” คือ FN=0 เท่านั้น CSV มี empty-prediction, exact-mask, unmatched counts และ TN เพิ่มเติม
+
+#### Hair: n=61 parts, GT support=232,447 pixels
+
+| Model | Recall % | พลาด % | Precision % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 86.031 | 13.969 | 94.232 | 199,977 | 32,470 | 12,241 | 7/61 | 1/61 |
+| M2FP | 80.648 | 19.352 | 96.811 | 187,465 | 44,982 | 6,176 | 20/61 | 0/61 |
+| D2FP | 80.207 | 19.793 | 96.855 | 186,439 | 46,008 | 6,054 | 21/61 | 0/61 |
+| RP-R-CNN | 73.216 | 26.784 | 90.721 | 170,189 | 62,258 | 17,407 | 20/61 | 0/61 |
+| CPI R50 | 74.545 | 25.455 | 90.480 | 173,277 | 59,170 | 18,231 | 19/61 | 0/61 |
+| CPI ConvNeXt-B | 90.643 | 9.357 | 84.706 | 210,696 | 21,751 | 38,043 | 9/61 | 0/61 |
+| Sapiens2 0.4B | 93.979 | 6.021 | 93.030 | 218,451 | 13,996 | 16,368 | 8/61 | 1/61 |
+| Sapiens2 0.8B | 89.113 | 10.887 | 95.197 | 207,141 | 25,306 | 10,450 | 11/61 | 0/61 |
+| Sapiens2 1B | 92.776 | 7.224 | 95.124 | 215,655 | 16,792 | 11,055 | 8/61 | 0/61 |
+
+#### FaceDomain: n=21 parts, GT support=36,743 pixels
+
+| Model | Recall % | พลาด % | Precision % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 84.680 | 15.320 | 94.511 | 31,114 | 5,629 | 1,807 | 2/21 | 0/21 |
+| M2FP | 71.992 | 28.008 | 92.781 | 26,452 | 10,291 | 2,058 | 5/21 | 0/21 |
+| D2FP | 77.136 | 22.864 | 94.360 | 28,342 | 8,401 | 1,694 | 5/21 | 0/21 |
+| RP-R-CNN | 69.415 | 30.585 | 90.901 | 25,505 | 11,238 | 2,553 | 6/21 | 0/21 |
+| CPI R50 | 76.009 | 23.991 | 93.302 | 27,928 | 8,815 | 2,005 | 5/21 | 0/21 |
+| CPI ConvNeXt-B | 83.640 | 16.360 | 90.386 | 30,732 | 6,011 | 3,269 | 3/21 | 0/21 |
+| Sapiens2 0.4B | 88.441 | 11.559 | 85.968 | 32,496 | 4,247 | 5,304 | 2/21 | 0/21 |
+| Sapiens2 0.8B | 90.757 | 9.243 | 84.161 | 33,347 | 3,396 | 6,276 | 2/21 | 0/21 |
+| Sapiens2 1B | 92.682 | 7.318 | 86.186 | 34,054 | 2,689 | 5,458 | 2/21 | 0/21 |
+
+#### Upper: n=112 parts, GT support=861,845 pixels
+
+| Model | Recall % | พลาด % | Precision % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 87.278 | 12.722 | 91.277 | 752,203 | 109,642 | 71,883 | 17/112 | 0/112 |
+| M2FP | 78.629 | 21.371 | 92.194 | 677,661 | 184,184 | 57,374 | 34/112 | 0/112 |
+| D2FP | 75.091 | 24.909 | 92.821 | 647,170 | 214,675 | 50,054 | 40/112 | 0/112 |
+| RP-R-CNN | 70.768 | 29.232 | 90.399 | 609,911 | 251,934 | 64,774 | 31/112 | 0/112 |
+| CPI R50 | 67.565 | 32.435 | 91.634 | 582,302 | 279,543 | 53,164 | 34/112 | 0/112 |
+| CPI ConvNeXt-B | 80.041 | 19.959 | 90.251 | 689,831 | 172,014 | 74,516 | 28/112 | 0/112 |
+| Sapiens2 0.4B | 88.284 | 11.716 | 85.309 | 760,872 | 100,973 | 131,030 | 15/112 | 1/112 |
+| Sapiens2 0.8B | 86.319 | 13.681 | 87.356 | 743,940 | 117,905 | 107,679 | 18/112 | 0/112 |
+| Sapiens2 1B | 89.949 | 10.051 | 87.966 | 775,218 | 86,627 | 106,054 | 17/112 | 2/112 |
+
+#### Lower: n=96 parts, GT support=327,214 pixels
+
+| Model | Recall % | พลาด % | Precision % | TP px | FN px | FP px | ไม่ทับเลย/ทั้งหมด | เก็บ GT ครบ/ทั้งหมด |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 64.743 | 35.257 | 90.283 | 211,849 | 115,365 | 22,800 | 19/96 | 0/96 |
+| M2FP | 67.049 | 32.951 | 92.535 | 219,395 | 107,819 | 17,699 | 36/96 | 0/96 |
+| D2FP | 59.536 | 40.464 | 91.738 | 194,811 | 132,403 | 17,544 | 42/96 | 0/96 |
+| RP-R-CNN | 61.055 | 38.945 | 89.709 | 199,779 | 127,435 | 22,918 | 29/96 | 0/96 |
+| CPI R50 | 58.764 | 41.236 | 84.502 | 192,285 | 134,929 | 35,267 | 36/96 | 0/96 |
+| CPI ConvNeXt-B | 65.549 | 34.451 | 91.896 | 214,485 | 112,729 | 18,914 | 33/96 | 0/96 |
+| Sapiens2 0.4B | 79.386 | 20.614 | 83.911 | 259,763 | 67,451 | 49,808 | 22/96 | 0/96 |
+| Sapiens2 0.8B | 79.867 | 20.133 | 86.687 | 261,336 | 65,878 | 40,134 | 24/96 | 0/96 |
+| Sapiens2 1B | 85.491 | 14.509 | 84.092 | 279,739 | 47,475 | 52,921 | 18/96 | 0/96 |
+
+### สรุปสิ่งที่ตอบได้จาก diagnostics
+
+- **Hair:** pooled GT coverage สูงสุด Sapiens2 0.4B 93.979% (พลาด 13,996/232,447 px); pooled precision สูงสุด D2FP 96.855% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **FaceDomain:** pooled GT coverage สูงสุด Sapiens2 1B 92.682% (พลาด 2,689/36,743 px); pooled precision สูงสุด QANet 94.511% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **Upper:** pooled GT coverage สูงสุด Sapiens2 1B 89.949% (พลาด 86,627/861,845 px); pooled precision สูงสุด D2FP 92.821% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+- **Lower:** pooled GT coverage สูงสุด Sapiens2 1B 85.491% (พลาด 47,475/327,214 px); pooled precision สูงสุด M2FP 92.535% ค่านี้อธิบาย coverage/overprediction ไม่ได้เปลี่ยนอันดับ mean-part IoU เดิม
+
+**ตัวอย่างอ่านผลผมของ Sapiens2 1B:** เก็บถูก 215,655/232,447 พิกเซล = Recall 92.776% พลาด 16,792 พิกเซล = 7.224% และทำนายเกิน 11,055 พิกเซล จึงได้ Precision 95.124% แต่ยังมี 8/61 ส่วนที่ไม่ทับ GT เลย (ในนั้นเป็น unmatched 5 ส่วน) ขณะที่ mean-part IoU = 67.152% คะแนน pooled ที่สูงไม่ใช่หลักฐานว่าเก็บผมครบทุกคน เพราะส่วนใหญ่มีน้ำหนักมากกว่าส่วนเล็กใน pooled metric และ Recall ไม่ลงโทษ FP
+
+
+Detector-unmatchedคงเดิมร่วมทุกระบบ: Hair5/61,Face2/21,Upper15/112,Lower14/96; GTเหล่านี้ยังอยู่ในdenominatorและถูกคิดFN ไม่ตัดภาพล้มเหลวเพื่อช่วยคะแนน. Zero-overlapที่มากกว่านี้ยังอาจเกิดจากsemanticempty/wrongpart/ownership ไม่ควรเรียกทุกกรณีว่าYOLOไม่เห็นคน.
+
+คำตอบว่า “ทำผมครบไหม” จึงต้องอ่าน Recallคู่Precision/IoUและจำนวนส่วนที่ไม่ทับเลย; coverage100%อย่างเดียวอาจเป็นmaskใหญ่เกินจริง. ยังไม่มีเกณฑ์ผ่านแบบabsolute และไม่เปลี่ยนน้ำหนักเพื่อให้โมเดลใดชนะ. การไม่มีpartใดexact-maskไม่ได้หมายถึงทุกpartใช้งานไม่ได้—เกณฑ์exactคือทุกpixelตรงreference.
+
+Faceยังเป็น21/35referencecontoursที่ผ่านagent-assistedreview ไม่ใช่expertgold; SapiensFace_Neckcandidateยังคงเดิมบนneck-excludeddomain. Diagnosticsไม่สร้างstrictFace-only/Dress/Neck-onlycapabilityขึ้นมา และไม่ใช้พิสูจน์training/architectureเพียงอย่างเดียว. Matrixเพิ่มหลังเห็นผลแล้ว เป็นpost-hoc reporting ไม่ใช่preregisteredconfirmatoryanalysis. ไม่เพิ่มGPU/CPUfullrescore/GTreview/mappingtuning.
+
+หลักฐานการสร้างภาพ/CSV และการตรวจว่า canonical results คงเดิม: [STUDY_STATE.json](../STUDY_STATE.json) → target_confusion_reporting เก็บเฉพาะ aggregate counts บน public Git ไม่มีภาพ CCTV, person IDs, annotation vertices หรือ prediction packets
+
+สร้างซ้ำจาก private accepted scoring artifacts ที่ตรวจรับแล้วได้ด้วย environment เดิมที่มี matplotlib (ไม่โหลดโมเดล): `python CCTV_Human_Parsing_Benchmark/scripts/report_target_confusion.py --audit-dir CCTV_Human_Parsing_Benchmark/outputs/<fresh-audit-id>` คำสั่งสร้างเฉพาะภาพ/CSV/ส่วน diagnostics ในรายงานนี้ และเก็บ verification ใน private outputs; public clone ไม่มี private inputs จึงยังสร้างซ้ำไม่ได้จนกว่าจะจัดเตรียม artifacts ที่มีสิทธิ์เข้าถึง
+<!-- TARGET_CONFUSION_END -->

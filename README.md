@@ -11,6 +11,8 @@
 
 ส่วนต่างรวม0.898percentage points;ยังไม่ทดสอบนัยสำคัญทางสถิติ. Faceใช้21/35items และNeckdeliveryมี3items; GTเป็นagent-assisted reference. ผลนี้รองรับคำแนะนำสำหรับcheckpoint+configurationที่รันจริง ยังไม่ใช่productionacceptance/คำอ้างเร็วที่สุดหรือเบาที่สุด. ไม่มีmodel inferenceใหม่จากงานสรุปนี้.
 
+[Confusion matrix รายโมเดล/รายคลาส และคำอธิบาย metrics](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน) · [ภาพรวม 36 matrices](CCTV_Human_Parsing_Benchmark/reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV counts และส่วนที่พลาด](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) — สร้างจาก accepted CCTV90 statistics เดิม ไม่มี inference หรือเปลี่ยนคะแนนหลัก
+
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 
 **Historical controlled-ROI prediction collection:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.

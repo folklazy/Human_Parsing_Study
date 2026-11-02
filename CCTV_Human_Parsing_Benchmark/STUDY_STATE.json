@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-01T18:21:23.575402+00:00",
+  "updated_utc": "2026-11-02T06:50:26.324719+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -60,5 +60,90 @@
     "models": 9,
     "model_calls": 0,
     "public_images": false
+  },
+  "target_confusion_reporting": {
+    "status": "DERIVED_REPORTING_ONLY_COMPLETE",
+    "updated_utc": "2026-11-02T06:50:26.324719+00:00",
+    "updated_Asia_Bangkok": "2026-11-02T13:50:26.324719+07:00",
+    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "source_index": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
+    "source_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+    "matrix_order": {
+      "GT_rows": [
+        "target",
+        "not_this_person_part"
+      ],
+      "prediction_columns": [
+        "target",
+        "not_target"
+      ],
+      "cells": [
+        [
+          "TP",
+          "FN"
+        ],
+        [
+          "FP",
+          "TN"
+        ]
+      ]
+    },
+    "models": 9,
+    "targets": [
+      "Hair",
+      "FaceDomain",
+      "Upper",
+      "Lower"
+    ],
+    "aggregate_rows": 36,
+    "GT_parts_per_model": 290,
+    "scored_JSON_records_verified": 981,
+    "part_tasks_verified": 2610,
+    "score_records_digest": "d9c3986a38a388236c6ddda91f27f7e902409256bab2de300ff282b41a353b8a",
+    "protected_canonical_artifacts_verified_unchanged": 28,
+    "source_counts_match_canonical": true,
+    "GT_support_domain_equal_across_models": true,
+    "original_primary_scores_unchanged": true,
+    "model_calls": 0,
+    "prediction_masks_read": 0,
+    "rescoring": false,
+    "TN_interpretation": "selected-person part-task complement, not full-scene background truth",
+    "aggregation": "Pooled counts per target for diagnostic ratios; original equal-part IoU and equal-target Macro4 unchanged",
+    "CPU_acceptance": {
+      "command": "python -m pytest -q CCTV_Human_Parsing_Benchmark/tests/test_target_confusion.py",
+      "passed": 8,
+      "scope": "literal counts, pooled versus mean-part aggregation, coverage versus exact mask, null precision, explicit unknown-Neck domain, invalid counts"
+    },
+    "private_verification": "outputs/target-confusion-report-20261102-final/VERIFICATION.json",
+    "figure_visually_inspected": true,
+    "public_CCTV_images": false,
+    "derived_files": [
+      {
+        "path": "scripts/report_target_confusion.py",
+        "bytes": 28529,
+        "sha256": "31af12f0c96acb4c79aea3344f572098347d0745c269902865b37a3b89a63a1a"
+      },
+      {
+        "path": "tests/test_target_confusion.py",
+        "bytes": 3473,
+        "sha256": "c7553d0a3ce072009761392fd4585e64f0258d81a9e816a74a4c93fa6db4993b"
+      },
+      {
+        "path": "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv",
+        "bytes": 7580,
+        "sha256": "5d5bb2b60b20df5d96271765bf2f980c141dc1e4ddda04457f037951e21d7827"
+      },
+      {
+        "path": "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png",
+        "bytes": 911606,
+        "sha256": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
+      },
+      {
+        "path": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+        "bytes": 43373,
+        "sha256": "381a215807b6dbcbbc708a97d59063f1955226e72470040f0753cf3a455ae185"
+      }
+    ],
+    "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00"
   }
 }
