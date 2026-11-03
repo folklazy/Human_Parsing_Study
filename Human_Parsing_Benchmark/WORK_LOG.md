@@ -441,3 +441,13 @@ Launch13:24:57Thai/commit1a67a3a/sessioncihp_resources_20261103T062248Z,controll
 - Scope/history: แยกรายงาน CIHP เก้าระบบรอบก่อนจาก controlled ROI ปัจจุบันและ CCTV; ไม่วิเคราะห์ partial scores/แก้ frozen source/config/GT/weights/predictions ไม่รบกวน worker/controller เดิม
 - Git/publication: sync เฉพาะรายงาน, STATUS, WORK_LOG ไป publication checkout เดิมบน feat/cctv-target-confusion; commit identity อยู่ใน Git history และตรวจ remote หลัง push
 - Blockers: ไม่มีสำหรับงานคำอธิบาย; การรัน/clean timing/readiness อื่นคงสถานะเดิม Next: ส่งรายงานที่อธิบายสูตรแล้ว และปล่อย batch เดิมทำงานตาม protocol จน terminal ก่อนวิเคราะห์คุณภาพรวม
+
+## 2026-11-03T15:28:11+07:00 (Asia/Bangkok) — CIHP_METRIC_DETAILED_REVIEW_20261103
+
+- การกระทำ/เหตุผล: ผู้ใช้ขอตรวจว่ารายละเอียดเพียงพอนำไปอธิบายผลได้ครบหรือไม่ ตรวจ source จริงพบว่าคำอธิบายหลักตรง แต่ต้องแสดง domain/overlap/ties/empty-output/หน่วยนับให้ชัด จึงเติมส่วนรายละเอียดในรายงานเดิมและชี้ full.py ที่ aggregate คะแนน
+- Inputs: รายงาน CIHP เก้าระบบรอบก่อน, common_view/core.py และ full.py, protocol revision2, normalized result index, canonical METRICS9ไฟล์รวม90,954bytes, COMMON_SUMMARY/PER_TARGET/PERSON_METRICS.csv
+- Outputs: คำอธิบาย mapping พร้อม IDs, confusion6×6/TP-FP-FN, global vs person-valid domains, compose native ก่อน project, geometry-only tie policy/identical-geometry limitation, no-person vs semantic-empty vs unsupported vs invalid, duplicate/contamination/background leakage, support/union/person/image units, null/legacy-primary policy และขอบเขต CIHPเก่า/controlledใหม่/CCTV
+- Verification ที่ทำจริง: canonical metrics hash/protocol/membership records9ตรง; ตรวจ54target rows จาก confusion/support/union และ18person rows จาก TP/FP/FN/Q numerator/denominator เทียบ canonical; สูตรC4/C3 และค่าปัดเศษในตารางตรง full precision;117บรรทัดตารางเดิมไม่เปลี่ยน;8protected small input hashesเดิม; relative links39รายการใช้ได้ในsource/publication ทั้งคู่
+- ขอบเขต verification: reuse exact-membership evidenceเดิม ไม่ได้ enumerate raw5000 IDs/rehash packets/อ่านGT masks/รัน scorer ใหม่ ไม่ได้รัน tests, inference หรือ GPU diagnostics; งานนี้ยืนยัน arithmetic/คำอธิบายกับสิ่งที่บันทึก ไม่รับรอง GT/anatomy/taxonomy/input-route equivalence ทุกเงื่อนไข
+- Git/publication: sync เฉพาะรายงาน STATUS WORK_LOG ไป checkoutเดิม ตรวจ staged paths/whitespace แล้ว commit/push branchเดิม; commit identityอยู่Git history ตรวจremoteหลังpush ไม่มีassets/secrets/code/configในdiff
+- Blockers/next: ไม่มีสำหรับงานเอกสาร; clean speed/controlled batchคงสถานะเดิม ส่งรายงานพร้อมขอบเขตคำอ้าง ใช้คิวเดิมโดยไม่เปิดworkerหรือวิเคราะห์partial rankings

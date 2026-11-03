@@ -22,6 +22,8 @@ checkpoint ทั้งเก้าตัวมีคะแนน common C4-P re
 
 เพิ่มคำอธิบายเมื่อ **3 พฤศจิกายน 2026 เวลา 15:18 น. (Asia/Bangkok)** โดยตรวจเทียบ protocol และ scorer เดิม ไม่ได้คำนวณผลทดลองใหม่ **ตารางคะแนนในรายงานนี้เป็นผล CIHP รอบก่อนที่ครบเก้าโมเดลแล้ว** ส่วนรอบ controlled person-ROI ที่กำลังรันเป็นคนละรอบ ให้ติดตามจาก [รายงานรอบปัจจุบัน](CIHP_CONTROLLED_ROI_RUN_TH.md) ห้ามใช้ผลเก่าเติมแทนผลรอบใหม่
 
+ตรวจทานเพิ่มเติมเมื่อ **2026-11-03T15:28:11+07:00**: เทียบ canonical METRICS ขนาดเล็กเก้าระบบกับ CSV/ตาราง, สูตรจาก counts รายคลาส54รายการและ person metrics18รายการ, protocol hashes และหลักฐาน exact membership เดิมครบ คะแนนในตารางไม่เปลี่ยน ไม่มีการรันโมเดลหรืออ่าน masks เพื่อให้คะแนนใหม่
+
 **GT (Ground Truth)** คือ mask อ้างอิงที่ dataset ให้มา ส่วน prediction คือ mask ที่ระบบทำนาย คะแนนจึงบอกความสอดคล้องกับ GT ภายใต้นิยามนี้ ไม่ได้ยืนยันว่า GT ถูกต้องทางกายวิภาคทุกพิกเซล โดยเฉพาะ Face ของ CIHP กับ Face_Neck ของ Sapiens ที่ขอบเขตไม่เท่ากัน
 
 ### IoU รายคลาส: พื้นที่ตรงกันมากน้อยแค่ไหน
@@ -46,7 +48,7 @@ IoU เป็นสูตรมาตรฐานที่ใช้ในงา�
 
 ### Q_C4_GT: แบ่งส่วนถูกต้องต่อคนใน GT มากแค่ไหน
 
-**Q_C4_GT เป็นตัวชี้วัดเสริมที่โครงการนิยามเอง** เพื่อดูทั้งการพบบุคคลที่ควรพบและคุณภาพการแบ่งส่วนของคนนั้น ไม่ใช่ official CIHP metric, parsing AP, PQ หรือ Cityscapes iIoU แม้ใช้ IoU เป็นองค์ประกอบ ที่มาที่ตรวจสอบได้คือ [protocol revision2](../protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json) และ [ฟังก์ชัน score_packet ใน scorer](../src/common_view/core.py)
+**Q_C4_GT เป็นตัวชี้วัดเสริมที่โครงการนิยามเอง** เพื่อดูทั้งการพบบุคคลที่ควรพบและคุณภาพการแบ่งส่วนของคนนั้น ไม่ใช่ official CIHP metric, parsing AP, PQ หรือ Cityscapes iIoU แม้ใช้ IoU เป็นองค์ประกอบ ที่มาที่ตรวจสอบได้คือ [protocol revision2](../protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json), [ฟังก์ชัน score_packet ใน scorer](../src/common_view/core.py) และ [score_people/Accumulator ที่รวมผลทั้งชุด](../src/common_view/full.py)
 
 คำนวณตามลำดับดังนี้:
 
@@ -68,6 +70,28 @@ IoU เป็นสูตรมาตรฐานที่ใช้ในงา�
 ค่าเหล่านี้วัดการจับคู่ extent ไม่ได้ยืนยันว่า semantic ถูก: mask คนอาจจับคู่ได้แต่ Hair/Face ผิดทั้งหมด ซึ่งจะสะท้อนใน IoU/Q แทน ในรอบเก่านี้ extent ของ QANet/Sapiens มาจาก YOLO จึงไม่ใช้ F1 ที่เท่ากันอ้างว่าความสามารถแบ่ง instance ของ parser เท่ากัน และไม่เรียก F1 นี้ว่า parsing AP
 
 **อ่านร่วมกัน:** C4-P บอกคุณภาพพื้นที่รวม, C3 ช่วยดูผลสามคลาสโดยตัดคะแนน Face ออกจากค่าเฉลี่ย, Q_C4_GT ให้คนใน GT แต่ละคนมีน้ำหนักเท่ากัน, FP/F1 บอกคนที่เกินหรือขาด ไม่รวมทั้งสี่ชนิดเป็นคะแนนผสมใหม่ ส่วน CCTV ใช้การเฉลี่ยรายส่วนของบุคคลและ Face domain คนละนิยามกับ CIHP ดู [รายงานตรวจความเทียบกันได้](CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) ก่อนนำตัวเลขสองชุดมาเทียบ
+
+### รายละเอียดที่ต้องรู้ก่อนนำผลไปอธิบาย
+
+**การจัดสี่คลาสใช้ทั้ง GT และ prediction:** สำหรับ CIHP20: Hair=2, Face=13, Upper=5+7 (UpperClothes+Coat), Lower=9+12 (Pants+Skirt) สำหรับ Sapiens29: Hair=4, Face candidate=3+24–28 (Face_Neck และรายละเอียดปาก), Upper=23, Lower=13 เลขเดียวกันข้าม taxonomy อาจหมายถึงคนละส่วน ห้ามตีความจาก ID อย่างเดียว Dress ของ CIHP6 และ Apparel ของ Sapiens1 เป็น OTHER ไม่ได้เท่ากันโดยนิยามและไม่มีการแบ่งให้กลายเป็น Upper/Lower
+
+**Confusion matrix ที่ใช้คำนวณจริงมี 6×6 ช่อง:** แถวคือ GT คอลัมน์คือ prediction ตามลำดับ BG, Face, Hair, Upper, Lower, OTHER ช่องแนวทแยงคือทำนายตรง GT; TP ของคลาสหนึ่งคือช่องทแยง, FP คือผลรวมคอลัมน์นั้นลบ TP, FN คือผลรวมแถวนั้นลบ TP การทำนาย GT Hair เป็น Upper จะเป็น FN ของ Hair และ FP ของ Upper จึงไม่ตัด BG/OTHER ออกก่อนคำนวณเพื่อเหลือเพียงตาราง 4×4
+
+**พื้นที่ที่ให้คะแนนมีสองแบบและใช้เหมือนกันทุกโมเดล:** คะแนน global ใช้ GT Category IDs0–19 ทั้งหมด รวม BG/OTHER โดยไม่รวม GT255 ซึ่งเป็น VOID หรือพื้นที่ไม่ประเมิน ส่วน Q ใช้พื้นที่เดียวกันแต่กันพิกเซลที่ GT ระบุส่วนคนไว้โดยไม่ระบุเจ้าของ (Category>0 และ Human=0) ออก พื้นที่ background ที่ valid ยังคงอยู่ การคิด Q ใช้ semantic mask ของ predicted person ทั้งระนาบภาพบนพื้นที่ที่ valid นี้ ไม่ครอบ prediction ให้เหลือเฉพาะ GT mask/bbox ของคู่ เพื่อซ่อนส่วนที่ทำนายเกินหรือปนคนอื่น
+
+**รวมคนซ้อนกันก่อนรวมคลาส:** ในคะแนน global ให้ประกอบ masks ของคนบนพิกัดภาพต้นฉบับใน native labels ก่อน แล้วค่อย project เป็นหกกลุ่ม เมื่อ native foreground ทับกันใช้ score ที่บันทึกไว้สูงกว่าทับ; ถ้า score เท่ากัน packet index ต่ำกว่าชนะ native BG โปร่งใส แต่คลาสที่ภายหลังกลายเป็น OTHER ยังมีสิทธิ์ทับ จึงไม่ลบ Dress/Apparel/OTHER ก่อนจัดการ overlap สำหรับ Q ประเมิน mask แยกราย predicted person ไม่เอาภาพรวมที่ compose แล้วมาแทน
+
+**จับคู่คนจากพื้นที่ ไม่ใช่จากชื่อคนหรือคลาสเสื้อผ้า:** ใช้ mask IoU ของ extent โดยเลือกให้มีคู่ที่ผ่าน threshold มากที่สุดก่อน แล้วให้ผลรวม mask IoU มากที่สุด หากยังเสมอเรียงด้วย geometry ของ masks ตาม revision2 กรณี GT geometry ต่างกัน การเปลี่ยนหมายเลข GT IDs ไม่เปลี่ยนการจับคู่ แต่ถ้า GT geometry เหมือนกันจริงต้องใช้ stable ID เป็น fallback และอาจเปลี่ยน Q เมื่อเปลี่ยนชื่อ IDs ได้ จึงรายงาน matching ambiguity ไม่รับรอง ID-renaming invariance ทุกกรณี ไม่มีการใช้ semantic score ช่วยเลือกคู่
+
+**ไม่พบบุคคล กับพบบุคคลแต่ไม่มีสี่คลาส ไม่ใช่กรณีเดียวกัน:** ถ้าไม่มี predicted person ทั้งภาพ คนใน GT จะเป็น missed ตาม matching และมี Q=0 เมื่อมีสิทธิ์ แต่ถ้ามี valid extent/identity โดย semantics ว่างหรือเป็น OTHER ทั้งหมด ให้เก็บ extent ไว้ อาจจับคู่เป็น person TP ได้แต่ Q=0 เมื่อ GT มี target การทำนาย native Dress/Apparel ที่รู้จักเป็น valid output และอาจเกิด target FN ไม่ทำให้ run INCOMPLETE เพียงเพราะ map เป็นสี่ target ไม่ได้ ส่วน prediction ID255/ID นอก taxonomy, shape ผิดหรือ output ที่ผิด contract เป็น invalid execution และทำให้คะแนนหลัก null จนตรวจปิดตาม STRICT_COMPLETE
+
+**ทำนายคนซ้ำ กับ mask ของคนหนึ่งปนอีกคน ต้องอธิบายแยกกัน:** matching หนึ่งต่อหนึ่งทำให้รายการซ้ำที่ไม่มีคู่เป็น person FP ส่วนการจับคู่ได้แต่เอาผม/เสื้อผ้าของคนอื่นมาปนจะเพิ่ม semantic FP/FN ใน Q และตรวจเพิ่มได้จาก contamination = พิกเซล target ของ predicted person ที่ตกบน GT คนอื่น / พิกเซล target ทั้งหมดของคู่บุคคลที่จับได้บน person-valid domain ตัวชี้วัด background leakage ใช้พิกเซล target ที่ตกบน GT Human=0 ใน domain เดียวกันเป็นตัวตั้ง ตัวหารเป็นศูนย์ให้ null ไม่ใช่แปลว่าไม่มีการปนเปื้อน
+
+**support, union และคะแนนแต่ละชนิดใช้หน่วยต่างกัน:** GT support คือจำนวนพิกเซลบวกของ target ใน GT; prediction support คือจำนวนที่ระบบทำนาย; union=GT support+prediction support−TP เป็นตัวหาร IoU ส่วน G_loc/G_sem_C4 นับคน และ completeness นับภาพ ค่า IoU=0 ของ Hair หมายถึงไม่มีพื้นที่ทับกันบน domain นั้น แต่ยังสรุปไม่ได้ลำพังว่าไม่พบบุคคล ทำนายผิดคลาส หรือ geometry ผิด ต้องอ่าน packet/matching/diagnostics ประกอบ IoU เป็นการวัดพื้นที่ ไม่ใช่คะแนนขอบเขตแบบ Boundary IoU โดยตรง
+
+**null กับ 0 ต้องไม่สลับกัน:** 0 คือค่าที่นิยามแล้วคำนวณได้ว่าเป็นศูนย์ ส่วน null คือไม่มีตัวหารหรือผลยังไม่พร้อมใช้ บาง historical COMPLETION มี primary:null แต่ canonical METRICS มีผลครบแล้ว ให้ใช้ normalized result index และ exact membership ที่ประกาศในส่วน8 ไม่แทน null ด้วย0 และไม่ใช้คะแนน subset แทน 5,000 ภาพ
+
+**ผลนี้เปรียบเทียบอะไรได้:** เปรียบเทียบ checkpoint พร้อม application configuration ในรอบเก่าที่ระบุ route ไว้ ไม่ใช่ควบคุม architecture/training data ให้เหมือนกัน Face ของ Sapiens เป็น proxy; ไม่ได้แก้ neck จาก hard mask หรือยืนยัน taxonomy equivalent การรันครบ 5,000 ภาพไม่รับรองความพร้อม CCTV/color หรือความแม่นพอสำหรับ deployment และ timing ที่มีไม่ใช่ clean speed ranking คะแนนจากรอบ controlled ROI ที่กำลังรันต้องรายงานแยกเมื่อปิด batch แล้ว ไม่วิเคราะห์อันดับบางส่วนหรือเติมผลเก่าลงรอบใหม่
 
 ## 1. ตารางหลัก — frozen roster order
 
