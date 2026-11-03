@@ -431,3 +431,13 @@ Userrequestscontinue/status. Actual4modelsstrictcomplete;CPI4frames/34ROIsstoppe
 ## 2026-11-03T13:26:47.345448+07:00 — CPI_RESOURCE_CONTINUATION_LAUNCH_VERIFIED
 
 Launch13:24:57Thai/commit1a67a3a/sessioncihp_resources_20261103T062248Z,controller3034452/worker3034473verifiedalive. TRAIN2parityPASS,firstnewpacket0000027atomic/NPZ/config/ownershipPASS. Snapshot14completed/newVAL54,attemptfailures0. Parent4/34reused;4completecheckpointresultsretained. Currentfree/owncacheaccountingrecordedwithoutparenthistoricalinferenceclaim. [Evidence](runs/cihp-controlled-resources-20261103T062248Z/LAUNCH_VERIFICATION.json). Nextdetachedqueueprogress/closure;rankanalysisdeferred/livecleantimingpending
+
+## 2026-11-03T15:20:20+07:00 (Asia/Bangkok) — CIHP_METRIC_EXPLANATION_20261103T081802Z
+
+- การกระทำ/เหตุผล: ผู้ใช้ถามว่ามีคำอธิบายว่า metric คืออะไร มาจากไหน และคำนวณอย่างไรในภาษาง่ายหรือไม่ ตรวจพบรายงานเดิมมีนิยามแบบย่อ จึงขยายในไฟล์เดิมโดยไม่สร้างรายงานซ้ำ
+- Inputs: reports/CIHP_COMMON_NINE_RESULTS_TH.md, protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json, src/common_view/core.py::score_packet/semantic_metrics/gt_domains, manifests/CIHP_COMMON_RESULT_INDEX.json และคำอธิบายสูตร IoU อย่างเป็นทางการของ Cityscapes https://www.cityscapes-dataset.com/benchmarks/ (ตรวจอ่านครั้งนี้)
+- Outputs: ส่วนวิธีอ่านตัวชี้วัดในรายงานเดิม อธิบาย TP/FP/FN ระดับ pixel และ person, C4-P/C3 global aggregation, Q numerator/G_sem_C4 และ matching 0.50/0.75, ตัวอย่างสมมติ IoU=66.67%, C4-P=65%, C3=66.67%, Q=35%; Q เป็น metric เสริมของโครงการ ไม่ใช่ official CIHP/AP/PQ/iIoU และไม่ลงโทษ unmatched predictions โดยตรง
+- Verification: ตรวจนิยามกับ scorer เดิมโดยอ่าน source; ตรวจ 117 บรรทัดตารางผลเดิมไม่เปลี่ยน, canonical CSV/index/protocol/core/config ที่ผูกกับงานเดิมคง hashes; ตรวจตัวอย่างสูตรและ relative links แบบ bounded document checks ไม่มี inference, model calls, scoring/rescore, dataset audit หรือ test suite ใหม่ รายละเอียดการตรวจซ้ำได้จาก diff และ source references ไม่เรียกงานเอกสารนี้ว่า execution acceptance
+- Scope/history: แยกรายงาน CIHP เก้าระบบรอบก่อนจาก controlled ROI ปัจจุบันและ CCTV; ไม่วิเคราะห์ partial scores/แก้ frozen source/config/GT/weights/predictions ไม่รบกวน worker/controller เดิม
+- Git/publication: sync เฉพาะรายงาน, STATUS, WORK_LOG ไป publication checkout เดิมบน feat/cctv-target-confusion; commit identity อยู่ใน Git history และตรวจ remote หลัง push
+- Blockers: ไม่มีสำหรับงานคำอธิบาย; การรัน/clean timing/readiness อื่นคงสถานะเดิม Next: ส่งรายงานที่อธิบายสูตรแล้ว และปล่อย batch เดิมทำงานตาม protocol จน terminal ก่อนวิเคราะห์คุณภาพรวม

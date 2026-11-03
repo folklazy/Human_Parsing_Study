@@ -1,3 +1,11 @@
+# อธิบายตัวชี้วัด CIHP ในรายงานเดิม — 2026-11-03T15:20:20+07:00 (Asia/Bangkok)
+
+**METRIC_EXPLANATION_DOCUMENTED / DOCUMENTATION_ONLY**. เพิ่มคำอธิบายภาษาง่ายใน [รายงาน CIHP เก้าระบบรอบก่อน](reports/CIHP_COMMON_NINE_RESULTS_TH.md#วิธีอ่านตัวชี้วัด-ความหมาย-ที่มา-และตัวอย่างคำนวณ): IoU, C4-P/C3, Q_C4_GT, person TP/FP/FN/F1 พร้อมที่มา สูตร ตัวหาร ตัวอย่างสมมติ และข้อจำกัด Q ที่ต้องอ่าน FP/F1 ร่วม ระบุว่า IoU เป็นสูตรมาตรฐาน ส่วนชื่อกลุ่ม C4-P/C3 และ Q เป็นนิยามโครงการ; Q เฉลี่ยคลาสที่มีใน GT หรือ prediction ของแต่ละคู่ ไม่หารสี่ทุกคน
+
+งานนี้เป็นคำอธิบายผลเก่าที่ครบ 9/9 ไม่ใช่สรุปคะแนนรอบ controlled ROI ที่กำลังรัน ไม่ได้คำนวณคะแนนใหม่หรือแก้ execution/scorer/config/GT/predictions. คิวปัจจุบันอยู่ใน tmux `cihp_resources_20261103T062248Z`; ใช้ progress command ในสถานะการรันด้านล่างตรวจจำนวนล่าสุด ไม่ใช้ snapshot เก่ามาอ้างเป็นจำนวนปัจจุบัน ขั้นถัดไป: อ่านรายงานพร้อมนิยาม และปล่อยคิวเดิมทำงานตาม gates เดิม; วิเคราะห์คุณภาพรอบใหม่เมื่อ batch terminal
+
+## บันทึกสถานะการรันก่อนหน้างานเอกสาร
+
 # Controlled CIHP resource continuation กำลังทำงาน — 2026-11-03T13:26:47.345448+07:00
 
 **FOUR_COMPLETE / CPI_R50_RUNNING**. QANet/M2FP/D2FP/RPRครบ5000ต่อระบบและreuseเดิม. CPI R50parentหยุด4frames/34ROIsด้วยphysicalfreeguardก่อนforward ไม่มีOOMtraceback. Newsegment`cihp-controlled-resources-20261103T062248Z`ใช้ownreusablepoolaccountingพร้อมthreshold1GiBเดิม เปิด13:24:57Thai/controller3034452/worker3034473ในtmux. ตรวจsnapshot14/5000ภาพ,newROIcalls54,failed0/invalid0,TRAINparityและnewpacket0000027PASS. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
