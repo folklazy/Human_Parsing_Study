@@ -1,3 +1,13 @@
+# ทำไม CIHP/CCTV ยังใช้วิธีให้คะแนนต่างกัน — 2026-11-04T01:25:24+07:00 (Asia/Bangkok)
+
+**COMPARABILITY_REVIEW_COMPLETE / SHARED_PART_SCORING_PROPOSAL_NOT_FROZEN** — [ผลตรวจและข้อเสนอในรายงานเดิม](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). แยกความต่างที่เป็น design choice (global เทียบ mean-part) ออกจาก GT limitations (partial annotation/ไม่มี CIHP Neck-uncertainty binding) และ matching ที่ใช้คนละสูตร CIHP รอบ controlled มี mean-part/pooled part counts เป็น secondary อยู่แล้ว จึงใช้สูตรร่วมประกอบรายงานได้ แต่ไม่อ้าง GT/matching equivalent โดยอัตโนมัติ
+
+ข้อเสนอคือคงผล/primary/คิวเดิม และเมื่อมี shared-part scoring revision ที่ชัดเจนใช้ saved masks บน CPU ด้วย mapping/domain/eligibility/association ที่ประกาศร่วมกัน ส่วน Face แบบเดียวกันจริงต้องมีคู่มือและ GT หน้า/คอ/uncertainty ในทั้งสองชุด ไม่เพิ่ม per-model ignore/weight/GT-assisted prediction การตรวจนี้ไม่อนุมัติ reannotation ทั้งชุดหรือเปิด scoring/inference เพิ่ม
+
+ตรวจ17small source/config/protocol/result filesคงhashเดิม, ตัวอย่างสมมติ6ค่า, schema GT และลิงก์รายงานผ่าน โดยไม่ดูคะแนนpartial/อ่านGT arrays/รันmodel/scorer/ตรวจpopulationซ้ำ รายงาน2พฤศจิกายนที่เขียน controlled not run ติดป้าย historical ชัดแล้ว Next: ใช้ข้อสรุปนี้อธิบายเหตุผล; รักษา batch เดิมและวิเคราะห์ผลตาม frozen protocol เมื่อ terminal
+
+## บันทึกก่อนการทบทวนวิธีให้คะแนนร่วม
+
 # คำอธิบายคะแนนและเวลา CCTV ฉบับอ่านง่าย — 2026-11-03T16:03:18+07:00 (Asia/Bangkok)
 
 **REPORT_EXPLANATION_REVIEW_COMPLETE / DOCUMENTATION_ONLY** — ปรับ [รายงานผลเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#วิธีอ่านคะแนนชุด-cctv-นี้) และข้อความในตัวสร้างรายงานทั้งสองไฟล์ เพิ่มคำศัพท์ mapping สี่คลาส สูตร/ตัวอย่าง IoU/P/R/F1, Mean-part/Macro4 เทียบ pooled, partial-GT/Face-domain และวิธีอ่านเวลา A/B/C/D/E เปลี่ยนตัวแปรโค้ดที่อ่านยากเป็นคำอธิบายภาษาไทย มีจุดเริ่ม/จบ หน่วย s/ms ต่อ ROI/ภาพ ตัวอย่าง Mean/Median/P95 และบัญชีเวลา ไม่เพิ่ม Q_C4_GT/C3 ให้ CCTV หรือเปลี่ยนเกณฑ์เลือก

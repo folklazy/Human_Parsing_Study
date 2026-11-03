@@ -1,3 +1,13 @@
+# ทำไม CIHP/CCTV ยังใช้วิธีให้คะแนนต่างกัน — 2026-11-04T01:25:24+07:00 (Asia/Bangkok)
+
+**COMPARABILITY_REVIEW_COMPLETE / SHARED_PART_SCORING_PROPOSAL_NOT_FROZEN** — [ผลตรวจและข้อเสนอในรายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). แยกความต่างที่เป็น design choice (global เทียบ mean-part) ออกจาก GT limitations (partial annotation/ไม่มี CIHP Neck-uncertainty binding) และ matching ที่ใช้คนละสูตร CIHP รอบ controlled มี mean-part/pooled part counts เป็น secondary อยู่แล้ว จึงใช้สูตรร่วมประกอบรายงานได้ แต่ไม่อ้าง GT/matching equivalent โดยอัตโนมัติ
+
+ข้อเสนอคือคงผล/primary/คิวเดิม และเมื่อมี shared-part scoring revision ที่ชัดเจนใช้ saved masks บน CPU ด้วย mapping/domain/eligibility/association ที่ประกาศร่วมกัน ส่วน Face แบบเดียวกันจริงต้องมีคู่มือและ GT หน้า/คอ/uncertainty ในทั้งสองชุด ไม่เพิ่ม per-model ignore/weight/GT-assisted prediction การตรวจนี้ไม่อนุมัติ reannotation ทั้งชุดหรือเปิด scoring/inference เพิ่ม
+
+ตรวจ17small source/config/protocol/result filesคงhashเดิม, ตัวอย่างสมมติ6ค่า, schema GT และลิงก์รายงานผ่าน โดยไม่ดูคะแนนpartial/อ่านGT arrays/รันmodel/scorer/ตรวจpopulationซ้ำ รายงาน2พฤศจิกายนที่เขียน controlled not run ติดป้าย historical ชัดแล้ว Next: ใช้ข้อสรุปนี้อธิบายเหตุผล; รักษา batch เดิมและวิเคราะห์ผลตาม frozen protocol เมื่อ terminal
+
+## บันทึกก่อนการทบทวนวิธีให้คะแนนร่วม
+
 # อธิบายตัวชี้วัด CIHP ในรายงานเดิม — 2026-11-03T15:20:20+07:00 (Asia/Bangkok)
 
 **METRIC_EXPLANATION_VERIFIED / DOCUMENTATION_ONLY**. เพิ่มคำอธิบายภาษาง่ายใน [รายงาน CIHP เก้าระบบรอบก่อน](reports/CIHP_COMMON_NINE_RESULTS_TH.md#วิธีอ่านตัวชี้วัด-ความหมาย-ที่มา-และตัวอย่างคำนวณ): IoU, C4-P/C3, Q_C4_GT, person TP/FP/FN/F1 พร้อมที่มา สูตร ตัวหาร ตัวอย่างสมมติ และข้อจำกัด Q ที่ต้องอ่าน FP/F1 ร่วม ระบุว่า IoU เป็นสูตรมาตรฐาน ส่วนชื่อกลุ่ม C4-P/C3 และ Q เป็นนิยามโครงการ; Q เฉลี่ยคลาสที่มีใน GT หรือ prediction ของแต่ละคู่ ไม่หารสี่ทุกคน
