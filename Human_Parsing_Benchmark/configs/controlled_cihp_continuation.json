@@ -1,0 +1,1816 @@
+{
+  "run_id": "cihp-controlled-continuation-20261103T021021Z",
+  "created_utc": "2026-11-03T02:10:21.854985+00:00",
+  "status": "FROZEN_CONTROLLED_CONTINUATION",
+  "route": "CONTROLLED_YOLO_PERSON_ROI",
+  "protocol_id": "CIHP_CONTROLLED_ROI_C4P_R1",
+  "protocol": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py": "80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_core.py": "15561c1c560f26d8d3a565d54f1a3a07be31ddbf927059443e6a826bf83a8cdd",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py": "0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/__init__.py": "a0795bbdda98eb27324bb34d2d8d2601f133ef54139dc749529c89a3fbb15bc6",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/scoring.py": "3d0cd437ab3808289be0181094909d09a690f0a5f47a98d4cdb1cbacb55a77db",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/measurement.py": "4e6cc35c906cf356cd4c38765659ff7dfdd35fa77ec631c0a0867c827b796387",
+    "Human_Parsing_Benchmark/scripts/controlled_cihp.py": "583f65ee18e5d1e54d736287e7fdba625aa29d80314a7710c38e5329715f6160",
+    "Human_Parsing_Benchmark/src/common_view/detector_cache.py": "f1e1d94f8ca37fc4ef8834faa2f71bc12e9bab62d016c3979588286d651fa18b",
+    "Human_Parsing_Benchmark/src/common_view/full.py": "e917fdb37f0383e7755ffbde36629250093bf6d271827dea8f6d76535ad392ca",
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py": "d1707c4e3dc111f3948d8731675981c5e278d906bbb15eb5144a830ba8641f4e",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_continuation.py": "4b6b4307a7848ed8fec9ecac2b90a800be89b7e2c58a5cff37199b4bcef867b5"
+  },
+  "parent_config": "Human_Parsing_Benchmark/configs/controlled_cihp_quality.json",
+  "parent_config_sha256": "ab672069027497384e9d7713933bf7dd74f7aad9c2f97c747125532103ac6eaa",
+  "population": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "detector_ledger": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+  "detector_ledger_sha256": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+  "GT_expected_sums": {
+    "G_loc": 17520,
+    "G_sem_C4": 17454
+  },
+  "GT_expected_part_counts": {
+    "1": 16494,
+    "2": 15803,
+    "3": 15674,
+    "4": 10157
+  },
+  "GT_binding_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings",
+  "GT_binding_manifest_sha256": "1a6f635ffdd0da1b767a6d7279e0437130bdfdd47e510fbfdaeb9b047cc82cc0",
+  "manifest": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/INPUTS.json",
+  "manifest_sha256": "e77b5ad81ce6be8e0e6ebd88bfcec470fb4a7a69fb53cddbbd49103b6df16424",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "family": "QANet",
+      "checkpoint": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes": 277950114,
+      "source": "third_party/human_parsing/QANet",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ROI",
+      "native_reference": false,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 277950114,
+        "mtime_ns": 1604249613000000000
+      }
+    },
+    "M2FP_R101_CIHP": {
+      "model_id": "M2FP_R101_CIHP",
+      "family": "M2FP",
+      "checkpoint": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "checkpoint_bytes": 757764792,
+      "source": "third_party/human_parsing/M2FP",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "native_config": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "native_config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 757764792,
+        "mtime_ns": 1674098713000000000
+      }
+    },
+    "D2FP_R101_CIHP": {
+      "model_id": "D2FP_R101_CIHP",
+      "family": "D2FP",
+      "checkpoint": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "checkpoint_bytes": 958247405,
+      "source": "third_party/human_parsing/D2FP",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "native_config": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "native_config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 958247405,
+        "mtime_ns": 1791793193709682172
+      }
+    },
+    "RPR_CIHP": {
+      "model_id": "RPR_CIHP",
+      "family": "RP-R-CNN",
+      "checkpoint": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "checkpoint_bytes": 234931960,
+      "source": "third_party/human_parsing/RP-R-CNN",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "native_config": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "native_config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 234931960,
+        "mtime_ns": 1596877946000000000
+      }
+    },
+    "CPI_R50_CIHP": {
+      "model_id": "CPI_R50_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "checkpoint_bytes": 571901148,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 571901148,
+        "mtime_ns": 1667635140000000000
+      }
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "checkpoint_bytes": 1301413296,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 1301413296,
+        "mtime_ns": 1667619434000000000
+      }
+    },
+    "Sapiens2_0.4b": {
+      "model_id": "Sapiens2_0.4b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 1626451404,
+        "mtime_ns": 1791799814805138982
+      }
+    },
+    "Sapiens2_0.8b": {
+      "model_id": "Sapiens2_0.8b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 3310187452,
+        "mtime_ns": 1791799862520192990
+      }
+    },
+    "Sapiens2_1b": {
+      "model_id": "Sapiens2_1b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 5883353380,
+        "mtime_ns": 1791799963596790372
+      }
+    }
+  },
+  "model_order": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP",
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "warmup": {
+    "image": "CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261101T114925Z/TRAIN_WARMUP.png",
+    "png_sha256": "d7e0cc3096d3323247f33bd87ed60835d1ff95afa79db86a4e5a7f8c9c08c64d",
+    "source_image_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+    "source_detector_artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0000930.npz",
+    "crop_xyxy": [
+      201,
+      0,
+      378,
+      346
+    ],
+    "designated_box": [
+      15.454818725585938,
+      8.307385444641113,
+      161.79470825195312,
+      343.2044982910156
+    ]
+  },
+  "expected_images": 5000,
+  "ROI_count": 24062,
+  "seed": 20261028,
+  "FP32": true,
+  "AMP": false,
+  "TF32": false,
+  "external_TTA": false,
+  "batch_size": 1,
+  "context_each_side": 0.1,
+  "automatic_retry": 0,
+  "automatic_recovery": 0,
+  "fallback": false,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "minimum_free_gib": 50,
+  "max_stream_gib": 80,
+  "planning_envelope_gib": 200,
+  "max_hours": 24,
+  "required_free_MiB": {
+    "YOLO26X": 2048,
+    "QANet_CIHP_HRNetW48_512x384": 2560,
+    "M2FP_R101_CIHP": 8192,
+    "D2FP_R101_CIHP": 9216,
+    "RPR_CIHP": 6144,
+    "CPI_R50_CIHP": 14500,
+    "CPI_ConvNeXtB_CIHP": 13500,
+    "Sapiens2_0.4b": 4608,
+    "Sapiens2_0.8b": 6656,
+    "Sapiens2_1b": 9600
+  },
+  "min_forward_free_MiB": 1024,
+  "resource_queue_timeout_seconds": 600,
+  "warmup_calls_per_model": 2,
+  "warmup_purpose": "TRAIN baseline then timed equivalence, once each",
+  "model_call_limit_per_model": 24064,
+  "scoring": "C4P revision2, additional mean GT-person-part IoU at mask matching0.50",
+  "primary": "Global mIoU4; mean-part and Q_GT/person F1 secondary",
+  "analyze_only_after_batch_terminal": true,
+  "live_timing_status": "PENDING_SEPARATE_READINESS",
+  "no_score_based_retry_or_tuning": true,
+  "storage": {
+    "final_arrays_uncompressed_per_model_bytes": 12652500381,
+    "nine_model_uncompressed_bytes": 113872503429,
+    "temporary_and_candidate_peak": "MEASURE_TRAIN_BEFORE_VALIDATION",
+    "compression_ratio_assumed": null,
+    "total_storage_guaranteed": false
+  },
+  "completed_sources": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/QANet_CIHP_HRNetW48_512x384",
+      "completion_sha256": "aa4c3828ef108ac55e46b3a839c6713d08b2dfb8a8cb224bd14182731b4f8df4",
+      "metrics_sha256": "ebfd2f366c8c414a0682b41a2552a756089d0f493a737a027edeede7722d23b4"
+    },
+    "M2FP_R101_CIHP": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/M2FP_R101_CIHP",
+      "completion_sha256": "270e3fd6ec426d6de50e35d2b1ddff2ca53127d0e29d74c8e0e749d410165b8e",
+      "metrics_sha256": "322e05ad497f27a48e0592a4be76ca43330b778bc881ee4aeef542302a0462d9"
+    },
+    "D2FP_R101_CIHP": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/D2FP_R101_CIHP",
+      "completion_sha256": "8cb3fd638356e3f9ad9307acb9da8c8e3d5b3248223a7137dee3c1907e410641",
+      "metrics_sha256": "15f036415c908f27303998f276211c51298fea8d16be49d0eda9449866ca2069"
+    }
+  },
+  "reuse_frames": {
+    "RPR_CIHP": {
+      "0000001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000001",
+        "members": {
+          "prediction.npz": "5d050d401251fdd73883bcfdd7dc06d7aed726526e235c0545965634fcd46d6a",
+          "COMMIT.json": "46c33105f524acac712e09cb21c2256277d52aa8660dcfd7edcbd4251449fe91",
+          "packet.json": "f746c684c7735dfde631c7e552e796529fa3429b72426e39662b28330535ab24"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000001.json",
+        "score_sha256": "df3cceb6a0341c1738481263c38c85e24663ce34a613694dbb5ea2c76efce7b0"
+      },
+      "0000003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000003",
+        "members": {
+          "prediction.npz": "ce07d8d9d1195eb547cb21b54a9b9a33bc135d2057ef8d8bd38486db00e9d483",
+          "COMMIT.json": "2ddad7a6a29e17f799c971848fb563a357adb8681522bf7d4ab16ee30d371ec3",
+          "packet.json": "efe071c62a01b59a85f119151df4ac87f4fd2c9aabf2b0468a937705cbb72b1f"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000003.json",
+        "score_sha256": "6ff93ea11a942b80eb49d468f0cc3e9eeedcfcef769c2201d269d15edfb9fbb6"
+      },
+      "0000004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000004",
+        "members": {
+          "prediction.npz": "13384362f47599ebc64c6a397e388258a21b9092840824c2a1ddc6fa4ba8eb30",
+          "COMMIT.json": "55b94ea3cfe0061c1cc6f5214090a402d7aa585c646fbfe2f277045bb33f568a",
+          "packet.json": "1b53b1990978f742998fa737c28aada0f84440e0d21df84cb9f0695bb47c7daa"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000004.json",
+        "score_sha256": "07078f61aa022896bd6044bb9d9430ce887c3020fc28bbe38a05fd04d7e420a1"
+      },
+      "0000018": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000018",
+        "members": {
+          "prediction.npz": "429d2a60e7b10a1e2217382636588c073824fa81dff2f21557146d028bdc53a9",
+          "COMMIT.json": "28c9d5edc997e0e8f2979c9c36b307f35fb52efc1a27fcf0a13d2701233378ef",
+          "packet.json": "9e3f46301c9bfaa63ac78b8dd9e021210ec49edb5466a312deaa4c7a50d2e143"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000018.json",
+        "score_sha256": "3973be087966d4b44da56dc0adeff1783b9cda236416fab4dfb019728418b40e"
+      },
+      "0000027": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000027",
+        "members": {
+          "prediction.npz": "7939da0f3fa3baa420ad4b10d826af8c9b0c682a6c016bce200cfc513fe326de",
+          "COMMIT.json": "a2a3001d64b9bc130476ed516d288f2dd1b69bf6594ad996b1de3882f994db27",
+          "packet.json": "6327869d182763d474ff933b8298ec3bf0cbd037d0e85c007d189fcc64740095"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000027.json",
+        "score_sha256": "3211a0249b4fe1b1a34cf3c85a5ffdc4bdae02795b66677f6b8866d3ef639fed"
+      },
+      "0000038": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000038",
+        "members": {
+          "prediction.npz": "178ad2ed822172eb5e67853e70554f169517c215ec0420d3bee14e620a34394b",
+          "COMMIT.json": "941de1bcc40fb80488ccf232e45cea59bfb64b7c8dfeabcda170a5748b8400ac",
+          "packet.json": "09e165a63392cba1415d70e246aaea9dee09b78dd3818af25352ed8c9685ebb4"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000038.json",
+        "score_sha256": "cfbbdee2a8caa8193c37f484da6eecde3e4b2e82df9df619a799a3e7c8af25ca"
+      },
+      "0000039": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000039",
+        "members": {
+          "prediction.npz": "f396db04089a035b6ca62ae46d2c9cef488903e8dd52fa408a6da63fb6bbe294",
+          "COMMIT.json": "af5798774c3342e3e26c74b2db35809ca542aed5371c6873c5077940c7149d71",
+          "packet.json": "a755eaf7bf42f8d668d6e51ea5d05be414e7cbec91a5e188f6a6e71c049dcc44"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000039.json",
+        "score_sha256": "288903605fb17b3ad233571f0f579e40a83d30a5b1d43e96a0a34b24efe1297b"
+      },
+      "0000065": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000065",
+        "members": {
+          "prediction.npz": "6973f7ee86dcf7aace3154412a9882731f8258e7e0297c6067face48df2b028d",
+          "COMMIT.json": "c4eafab0cc5599b1a8f50431bde49de7480b67997393e216acebefdcfe4d8908",
+          "packet.json": "b83ecb0cf1ee72bb608f319c6f0d427fe12fcb1db06e10e2f87d3ee322d283e0"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000065.json",
+        "score_sha256": "fd71e5609af5ab15c6368c9fb2c990b438e277643b37b4b6e8584f1f3070daeb"
+      },
+      "0000084": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000084",
+        "members": {
+          "prediction.npz": "8788864308cc56e5b3a480197ae5e49dc43472050b4b22bce4a1db7a70275214",
+          "COMMIT.json": "00bf988958a5fb65f9c4ed2f8bb56f316006b2888ef0bdebcbf2cd2cebb88c14",
+          "packet.json": "0ef65dc3e763eabe0989bb365f13934c9a8e2faa25280a3cde13083d0b6a9315"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000084.json",
+        "score_sha256": "3f16078470c23b32e59bd2251d0fcb896235a000ac2c46d8d812ef87e4acbf29"
+      },
+      "0000099": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000099",
+        "members": {
+          "prediction.npz": "ded95d757b65cd29d324e4a5d85b297648d9c78ce754fc030917946113acbdea",
+          "COMMIT.json": "867fdede8433cbfc8985e4f4e2218960398255e263150a92829b5434247c3b34",
+          "packet.json": "2554b6fc67ecb8ed8b6f337d02c62adbfc9cf1eed93105c364d823083b28c426"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000099.json",
+        "score_sha256": "c676970dc2394e481a53e6d327b87268b4a38989d33c2420eaf2f4efd3e91682"
+      },
+      "0000122": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000122",
+        "members": {
+          "prediction.npz": "4b35494af5fe142608a48a33b34afe16ae9e89333c49346285463c2afe011583",
+          "COMMIT.json": "6a61a0615895bbb0cf8134949ac2dec235c15fcb5b686ae7e7ce77a393dddf16",
+          "packet.json": "68e529290b885b0b3535695dc672b412583e0c4e75fa9dfb8e3e1ee683af039c"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000122.json",
+        "score_sha256": "0968baa9afe1a28418d87872dbeac770e757c63e724f42a3bee70449802abf92"
+      },
+      "0000136": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000136",
+        "members": {
+          "prediction.npz": "ea920690e16863f21227c175b5bbf0ac4873502ff9552632f3dc8d29245313d5",
+          "COMMIT.json": "ac906e20e4792382651126442dc828babe686e57ab9e3f04ae071166081a3442",
+          "packet.json": "e7bfbbebfba492d0a78ea1c3e16675b1b2eb8303480240bf3c85554c06698d5f"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000136.json",
+        "score_sha256": "5708e1d5fb92fcf176561091695a32db077b1276ff84f82005388487247b778a"
+      },
+      "0000143": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000143",
+        "members": {
+          "prediction.npz": "fd1c3a99cc257049450ce2a644741c76c6d4d038841373e4f6077c5c3da4bb94",
+          "COMMIT.json": "1db3369d0ee4bf333d0dff325277473c5f37d92c0eadab82fe38debe91a1701f",
+          "packet.json": "a0ef5dcadd6dbfff8dde6b3a772ba0b8d1d24a2a23cc11fe5341c5161ecf3c53"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000143.json",
+        "score_sha256": "9b22c391ba4a76d8ddabb428c372593f1b830c3cce9e4600af7e0bd30655d908"
+      },
+      "0000146": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000146",
+        "members": {
+          "prediction.npz": "69f164c91d384ef6d706fa421706561a2e957f07c5216b1d5e5f38d487763d74",
+          "COMMIT.json": "c0e6bf147213e477e9d6b7ceab93076234fa8a71441ee9001d6ca1de4987c3c7",
+          "packet.json": "8943eb32d8d332dcba7bd6f0ab3597a4447b2fc31f105307fda5699e39d60cb5"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000146.json",
+        "score_sha256": "1eeebe5efada1bc29e8b918f1dc84547b274c9db5a6f3fa0f8b7e64ce8c4de29"
+      },
+      "0000219": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000219",
+        "members": {
+          "prediction.npz": "58ab1bf7ca9f02c02152607ec4cd61aefe8557cd50972dfd908d688efd414688",
+          "COMMIT.json": "e2ba052e5f029c5e832de5f4c51c29e2368c0e5bd169a60f0c2e2d52fba61797",
+          "packet.json": "157031da2c69f3c3a5278a505aa910986c35116e0311c54ce56af03726e3e385"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000219.json",
+        "score_sha256": "5eef3978f390573b1b17bbc5b2bea1e58f89346e81704af0beb49b744a927ee6"
+      },
+      "0000228": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000228",
+        "members": {
+          "prediction.npz": "4795ae33996bd6b21e384b332098effa2b12f87f1e9f1cd787b101a63f03e3e1",
+          "COMMIT.json": "e0108911684a8f1b1789685d2ac973d3475eff511d4f03ab0d7df156f111c5a4",
+          "packet.json": "89e091c2a8d089748abda293cef1dc50363d975c54cf1221b4a8d750edec2382"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000228.json",
+        "score_sha256": "b7afc826255e2a105d9644e802e7a7c9a2827289da144e948d08a74e99273a93"
+      },
+      "0000256": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000256",
+        "members": {
+          "prediction.npz": "0749da98ade46811b74da6cfeede6d5364b59b9fac744d3c13b4da44f59d730b",
+          "COMMIT.json": "5734637e400e8e7418b08f7ab7c1c7b0c12311ad38c6908ff64c8ac1bf53c0fa",
+          "packet.json": "3b2fdb69aad8e394067bff5e6ee2b3a6870c3df5632cbdbfda704593f8115297"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000256.json",
+        "score_sha256": "3a24cba54296cb86367040028f9877a349c68f8f096a3115e183fbcd1fc164a5"
+      },
+      "0000266": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000266",
+        "members": {
+          "prediction.npz": "7e9503532b576e1093cb8e81d5a5f099cc0bd3fa1ec86a79be43f6c28ffb7979",
+          "COMMIT.json": "23bf4339cd885c168a1891ea66eeb20077aa7a81e5bf2f4258efa055152c8316",
+          "packet.json": "5c85a3bb9d19b4104c913d8077c130fc263dff07bd59a35059406ac9ef529055"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000266.json",
+        "score_sha256": "6740d97865033f1d7cce8f896e5cd5014565aae8b3c09e171164c20db427561b"
+      },
+      "0000273": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000273",
+        "members": {
+          "prediction.npz": "ceb9db5a23a313a4d201be2a4b3f931faf7f748744f6ef5b1a64eba9da5688d1",
+          "COMMIT.json": "940fccf5d4d8de163d83ac490c2cb9f204677cbc90655c4007d21dd463ca9bfa",
+          "packet.json": "6cbd88facba989ef130a1abcab084d33e2d5511a42a0e781c7dcc4d43eb177a0"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000273.json",
+        "score_sha256": "2f18e17ee1ae8865b471434707446d02aa89a5183f113f4aa1ba067a66fc7dba"
+      },
+      "0000285": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000285",
+        "members": {
+          "prediction.npz": "4b12fdc6780f2b23ae8608856395bb3a55613945e3f61d620dc4cdb9dda90f1e",
+          "COMMIT.json": "26a5f201ab871945528a21c6d19ef7e4e2ca76cfbe3b2bda8a04b83d2c8f11b3",
+          "packet.json": "08e51412b38d5a5a59641fc79f7d64037bdcfd50e46c33920d4d2cd450e88f9a"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000285.json",
+        "score_sha256": "169eab80bf49a6b5b6c3e5b8dc06ec12990d34d1bee75562b528e31ab25cc4f8"
+      },
+      "0000293": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000293",
+        "members": {
+          "prediction.npz": "7d0fa36d624b696aa28fc5a74daf59e9e2beecfd6d1dec77b02b1279c4e45950",
+          "COMMIT.json": "43b3f7f4f2e5ff41df7f6ba9f877810a97676caa9cbb91a6eb76a81c0357e10a",
+          "packet.json": "2a90df6538d8cb636b8f314360481b997cb382d279152b628c6c56154f0bde56"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000293.json",
+        "score_sha256": "1f1e6c26d059c715f50a0198c44dfdafeccfbe84155989bdba172ec557a81ea2"
+      },
+      "0000311": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/packets/0000311",
+        "members": {
+          "prediction.npz": "794bc23d745b6dae4defb678e18db82ca9fa4d0098e7823119102de1c152c9f9",
+          "COMMIT.json": "a4bfb51542b5743ed1f3dd01059f8b842dbfaaede88406d26ff921be803771ee",
+          "packet.json": "c4b28644b452b21c23f06a52bfa89cb123ff72f7f0c3c4bf294a582111e2e024"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/scores/0000311.json",
+        "score_sha256": "a300d98f5722b85ab46d21f36332d0952b776f8faaf2447c907797423bbb934b"
+      }
+    }
+  },
+  "reuse_ROIs": {
+    "RPR_CIHP": {
+      "0000001_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000001_000",
+        "members": {
+          "prediction.npz": "257fe4a10f5b9d5d51e5e536f78ddf2a3bf740460116c0fb4da1a2c836938465",
+          "COMMIT.json": "35cc44e9bfb82d48e1c588b1b28d6fdb7494360172c80343b906ddaf83bb9863",
+          "packet.json": "a742c157388f851bef14df22670ef0b1fa9b87acfcee31eab35aa5c0d9cc43f0"
+        }
+      },
+      "0000001_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000001_001",
+        "members": {
+          "prediction.npz": "cce99f0ca9b5846ab9614a848c128c664bd021864cc03fd8ef1f476885fe59ac",
+          "COMMIT.json": "b8f00dbfb74cca6ea5d27535b8d375d1954281edc2b2ac5e8e59795cc172ac94",
+          "packet.json": "fe7cf918d04f3cac84ea3439963098400bf3cd7ac15989fbe9b54804104abb0a"
+        }
+      },
+      "0000001_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000001_002",
+        "members": {
+          "prediction.npz": "5d368baa4b9a16d341d13e06410481ac1c16f8338a65883775e7e0f3c63bd931",
+          "COMMIT.json": "fff0defc9d2766e37bf70503959cbce26d711ffd20cdf36a85f9c0a5eb62fc0e",
+          "packet.json": "cd78edf1167a4a5ebe8f20cc957e8c4cecf5491099551b6d7f037d9da51466f2"
+        }
+      },
+      "0000001_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000001_003",
+        "members": {
+          "prediction.npz": "6e407ba67d91abfd201fb1ac4311e9c1bd492d3fd38b061a6bfaa2206d085924",
+          "COMMIT.json": "49f5d2c69f49b90f47507a7067bf90447332d8328065a61dd1e14aed6acb15fe",
+          "packet.json": "e32b3b8c7514b66a72ac79273e0560578f7ada326e2fe610ff72ae53b6b5f1c9"
+        }
+      },
+      "0000003_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_000",
+        "members": {
+          "prediction.npz": "c0c52cfd4a5d5d2da03b3441dbc2d33d24f27aa463d8f3774b039b24260a8e2a",
+          "COMMIT.json": "46d714e8f4e4610531eda8d74be8fb902b8237484c14f57695827faf2488d3d6",
+          "packet.json": "273825d9dab875c19a99b361f34a62e1c53f92e8d18911ea9403d2f11ddbe5c7"
+        }
+      },
+      "0000003_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_001",
+        "members": {
+          "prediction.npz": "c116c8c9ed905c7fb43806b6157d84165f2321f1fe00653377b71f10e6cdadcd",
+          "COMMIT.json": "d7c47a3573b02ca45912469743f88261a9667fc59a4aad0ec0f59866333062e8",
+          "packet.json": "44b3c60314181a94153cbf7866d8b4488fd155efb83de74365c1fb059fff0536"
+        }
+      },
+      "0000003_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_002",
+        "members": {
+          "prediction.npz": "eede602de8888be074c3eafa77951bfed07abd0f8a0b8137f50b8d5bf0c2204a",
+          "COMMIT.json": "e62901a8c316bf4c780b3fb39f6db1352afb0147ae43f6726da35f6b722b6379",
+          "packet.json": "64fd0aa5038ff5512e51b2ffe7e8d8122b56b5df42b85e59694f6b2383588907"
+        }
+      },
+      "0000003_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_003",
+        "members": {
+          "prediction.npz": "85d1cc1050ca9c3a605a17e207663a8f19e5a3419e101209cf70e08fefc3287f",
+          "COMMIT.json": "5133e7dee907ce95aaac3fc2a35b3afdfb6176747ad36046c6cfaa58a902333b",
+          "packet.json": "e4de8812ad87b1f63155783eab6ba51479f493b510274e0bf182049956a32bb7"
+        }
+      },
+      "0000003_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_004",
+        "members": {
+          "prediction.npz": "3df8aa1ef44bc5432cf08b5ecb620a846480f286aa454f1ee1c59c70ba284a73",
+          "COMMIT.json": "2458f670231fa69a87b6a427823d8ed40ba18379b99e8f1f5c23e4941e59b19f",
+          "packet.json": "c66fc7e9d9419d1df43667be413bf87f5803a6e2150827be39c37ca113d8c154"
+        }
+      },
+      "0000003_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_005",
+        "members": {
+          "prediction.npz": "4d271cbcaf5c8374955dee01c5c42ac0db86853b0890da45fa070807b68fd719",
+          "COMMIT.json": "4230d385f24aff25e2e396ee4064e9d1187b22f4dd1779959ff708cedb83ff2b",
+          "packet.json": "f19c54c161a953e21ffc1dfd49127cb5fa864856b26e2628b0c5b65678b3b9c3"
+        }
+      },
+      "0000003_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_006",
+        "members": {
+          "prediction.npz": "6a59886f5053943540a3df07d0bc037bcb7d8edccaca329124b0c9ca54ddc76a",
+          "COMMIT.json": "a7ee5498fe9ec9d8ed675499864ed64ec3ab86d9977f5ea5aa0775077e6d23a3",
+          "packet.json": "159edef249c01d389cc5d0fac62d904abf3e9110d0a40a7fe72d25fa0883781a"
+        }
+      },
+      "0000003_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_007",
+        "members": {
+          "prediction.npz": "009cc9b7f9a4ad81909fa532684440332551f437e7d65bda6e037e30591902d3",
+          "COMMIT.json": "e9d5b2f8a7b4d3ae4cc9fedba0e7c75866add59d3c81c7b3afa4db4408530414",
+          "packet.json": "96b86c9e9792cf6b16006abfbcd8b67344693cf371082b5fbdbf471b17c865dd"
+        }
+      },
+      "0000003_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000003_008",
+        "members": {
+          "prediction.npz": "b57e9b45f37b93caa5b8fe438782147dc56a67395e292354693d4c9418cfa873",
+          "COMMIT.json": "ea0c571be4f01344997516fef42147ea4c2e78e4f022aa7ac6224de9d200b0b9",
+          "packet.json": "5db49ab0534c552715fe1b00c3ad1f5101b77d8a83487edf0fd3ab03d4d18975"
+        }
+      },
+      "0000004_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000004_000",
+        "members": {
+          "prediction.npz": "61c69ec584031110157667102c143ba01c0cd43478156cb1356a917ec8ce5322",
+          "COMMIT.json": "6cefe722b8d1fff1d77d263ef5ab8878b7e069883fbdcadc5baa8a48e03909d2",
+          "packet.json": "683720695ad5fe57d59d355cbf309c212d722b88b204d39139d93befcaf8c599"
+        }
+      },
+      "0000004_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000004_001",
+        "members": {
+          "prediction.npz": "b980566011ff0ad3f80f5354362daf8e96dfb3bfc9d3df456212d6231c116277",
+          "COMMIT.json": "fd3b7671c4ff304133b4c7442e0f56eda60b51746e6b1166c6ed854bddf2e39d",
+          "packet.json": "c4e83172cbfe61ca61103d58569b3f8146da78b6f38a322e741742f4d9faf7e0"
+        }
+      },
+      "0000004_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000004_002",
+        "members": {
+          "prediction.npz": "7b4811a1f4dbb6a6ee8b2783e6a50efc3c25689ad0a932709d471372b91ea431",
+          "COMMIT.json": "f7ef06cd0a0689dd1cb74b38b671e305f9f481ec23e9685cf038b5f2124ceb2f",
+          "packet.json": "367b08413de95015aa11a38c1044941b8d7a19e1c1fb73d924f16f8cc1c7ae0a"
+        }
+      },
+      "0000004_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000004_003",
+        "members": {
+          "prediction.npz": "fb78d821f36daa23e1cce0d6402c4563969935aae4c9a7ce969d47d62662b090",
+          "COMMIT.json": "73dd46e348e2969ce1a8a76c91f0c9a8463bb3f5037447511327f38fc30518b9",
+          "packet.json": "de2caf615b4f7b58ef79c5a6c21ea4fd40eac92ed99a4ab1e829fc200dab6940"
+        }
+      },
+      "0000018_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_000",
+        "members": {
+          "prediction.npz": "4ac56b7dc9b97095267626780f5bf211cd3335105c3bed5e905aac54db72a8d5",
+          "COMMIT.json": "8835e4ce8d0de325ccc64fd58ce530d4645db640fae0eeb6d30b7478a7ef1176",
+          "packet.json": "35fc0618338ac48b43cd4a66c6c319e6007b248687df59f844d283477004ff37"
+        }
+      },
+      "0000018_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_001",
+        "members": {
+          "prediction.npz": "a2f2ebb23aa152a0b5d3cd27398dded517f25715e0066946c62f8c8510879a90",
+          "COMMIT.json": "c82551c25cb2c465723f9210e99c0e34e8c84fed295f1c3c3488b4b99275e317",
+          "packet.json": "e335606ac59ceb1b71f482f49ce8e509d29a1833f437d6aaf0d60da336d86265"
+        }
+      },
+      "0000018_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_002",
+        "members": {
+          "prediction.npz": "16e8f4c90b7ea7c36fa9237e9e489521885824fb573ff900d0b2b5784d36a7c7",
+          "COMMIT.json": "33c4f4b67cdfbe1f97da690315e275d78d0d2471561a48ab2ef22de420813de1",
+          "packet.json": "af0c6f3ddafe5949fbe476105e9800b636b4f7145e40bfb42cc05f0c8b9d3204"
+        }
+      },
+      "0000018_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_003",
+        "members": {
+          "prediction.npz": "5e9fa9644c09fbe48b16927d192de08702ad1979bc7869ec7322f4f076f8071a",
+          "COMMIT.json": "7d880855493e03c34ed19bb0764f77d9087d5df4772eada9b56afb439863162f",
+          "packet.json": "64cc1d6b8124e50ee69a23bb066f3a43f3ee8894d3e1cd95a8ae703aa898618d"
+        }
+      },
+      "0000018_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_004",
+        "members": {
+          "prediction.npz": "3e6c61dc2f69e03eaf0be01fbdcb306909ede58a41d659a83c39c548bdbf42bf",
+          "COMMIT.json": "7bcce9f80ce006be2cbd7c10065f49433e98529c332831e7243c89f04d08420c",
+          "packet.json": "3de347ded7c1e64e8ae2049efeed136e6455d70e7e353dfbb42dc0cd2b590088"
+        }
+      },
+      "0000018_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_005",
+        "members": {
+          "prediction.npz": "b5f4d3f64009b919d721ebbd79829ad7a668237287c166a9b32258be2dbfa9ab",
+          "COMMIT.json": "0809722a1cd22c049ba601f6803ec08d6beeafadd30d55672edf538c39a9d2d9",
+          "packet.json": "d9ad33665d5f01db46fc6373bc42f60329cd8bbb1effa915686a1dc16419f364"
+        }
+      },
+      "0000018_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_006",
+        "members": {
+          "prediction.npz": "02d5cffbe8803164a43d6109ca35a9dbc2b4e5d46123a568ff65347df4d2fd19",
+          "COMMIT.json": "6ba75b9c6e9371cecfb005ec48137b6f9cd131fd4467ab868d4f3fd51d9bac5f",
+          "packet.json": "1960216ecccae652888fbe81e19354916b29998b30606cb8610f8c898b8bebd5"
+        }
+      },
+      "0000018_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_007",
+        "members": {
+          "prediction.npz": "f7b550fb403c31fe99516cbe6b1bc463cc3c75f21a3c3024d857acf0c5bfc5a2",
+          "COMMIT.json": "6af4138e7bee4a2cb1a0bba277acce57b0220e0e117454226a9ffd792b0c2739",
+          "packet.json": "a07b7c5fd2924907d2a64d6448f997a3f250c0635b63773ce1b6cc5474141145"
+        }
+      },
+      "0000018_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_008",
+        "members": {
+          "prediction.npz": "8a28ba8e11f99eb3e65e184ef12a7fe9efd6658838fe9b73d88227d3eedd4eb3",
+          "COMMIT.json": "f9c0d881ffba463923a46849f7156b99f5a53a10a1d65f71cfd3b07d243c62b4",
+          "packet.json": "b189ef8cf93cc8080991226de526c60cd3ac73db0c0c5c17215aef682a564665"
+        }
+      },
+      "0000018_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_009",
+        "members": {
+          "prediction.npz": "9d3142d890a9d947d0c7a3a93320e94aca163189bc4f922b5d3a23a354999a14",
+          "COMMIT.json": "2934ff26289384462a5ad8f82cfa3ff0ac6a70febe98008ddb7c66636f354d5d",
+          "packet.json": "ea0eb63af09af9c2fa3b61ea1bba42434c066e4e7e34b47b0f05f22ce364c4fc"
+        }
+      },
+      "0000018_010": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_010",
+        "members": {
+          "prediction.npz": "1be7a9bac4bd0598f2134b51835f245f9dc6565f6d9387058c821969d007ec82",
+          "COMMIT.json": "e576637fb8fcd99c83e2861db8208e87947ecffb4f84f6e2d2c5ffc865e2313e",
+          "packet.json": "ac16b3bcdf02875c17d94fdca6d77b730ed92cb8a74b738968f7b7bdee4a44ed"
+        }
+      },
+      "0000018_011": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_011",
+        "members": {
+          "prediction.npz": "c30ee3874f7cc3f66a72e80356fa721da0a929d812f0e00be69f08134b85b289",
+          "COMMIT.json": "084fab4deb739216c9aed83c6305224e7b84df00e7592f70d4238e2d5cbcd873",
+          "packet.json": "8c314406a2e371a5462c7e311fb355e50e27164a09433c2b9f100f3c27ed967d"
+        }
+      },
+      "0000018_012": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_012",
+        "members": {
+          "prediction.npz": "12ba5ba875ae9aac592e528418fea2489d72c5bb4447f78895919545d06b0b15",
+          "COMMIT.json": "dbdbff096fdfb6a9ab46a137a92c51a273da61c8d2eda4e1b3060bdd1aa2934a",
+          "packet.json": "e82dd633138b02d58c3a8d8eb4325ce6c3d09db28d865072e3ce1445743b821d"
+        }
+      },
+      "0000018_013": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000018_013",
+        "members": {
+          "prediction.npz": "dede181ef22bf73972111edd1b4dea26f41fa69e6bcc2fef95b420e5a7cf2aea",
+          "COMMIT.json": "784edae2ec790fed33d2e5a7dc06b58db9b1ee39ae162e577ffaa3e7d8b87205",
+          "packet.json": "fc048e7a5550e27ace989ebb26c2051cfde72ca434e9e16aaca3e81ddc821f83"
+        }
+      },
+      "0000027_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000027_000",
+        "members": {
+          "prediction.npz": "845b78d0663700f81721eca227f2f981138895770854d1e4fd4df1e2ffe3ed46",
+          "COMMIT.json": "b60e54b76cc4da7a552220d39a9a7fa2eb18025c8f17e429efd8bb16009aebaf",
+          "packet.json": "8ecab1faad721654f4cc9032845b480639155e35356aa0d391821fbc173b8090"
+        }
+      },
+      "0000027_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000027_001",
+        "members": {
+          "prediction.npz": "4b8165c404db6ada1c612944299ba2ddb7e3275ca7e6a687ef65ee3c7aa452c3",
+          "COMMIT.json": "e4a0b2842e42fb9d9959b496581b60baab5c9693f3ebb6f8fe9cf1fe7b9d8bc3",
+          "packet.json": "3a71db7264aec589888d74851f2ee27ca1801bb838d67c772b504b92a13c545e"
+        }
+      },
+      "0000027_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000027_002",
+        "members": {
+          "prediction.npz": "18abc1dec5057966dff131c8abf650da27711d0203b78111094bb041e3048609",
+          "COMMIT.json": "33e584b60c4fd0e44f171627b652269cbb4d5dcfd26ecd9ff4503d22a8031f62",
+          "packet.json": "dcaf41969c40b61951df84ce5814eed567634e7afba80e990c4d2b2d2ca960ad"
+        }
+      },
+      "0000027_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000027_003",
+        "members": {
+          "prediction.npz": "d577cc0375c0c272c84f904b3ed2d7bb8767d80c6e8a2ac8e12278c5ad482408",
+          "COMMIT.json": "3c8edb6e932834f0030ac9dc480c1a7647cd958f925718afed060f2e52e21990",
+          "packet.json": "eeb83e199bbc1d23ad262ea51400360da73e38967f75c23e202f8365786b5686"
+        }
+      },
+      "0000027_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000027_004",
+        "members": {
+          "prediction.npz": "1b88d3cc65cee446638a8e0defe53292ffd5790e94d67fdf598d76a49f4559f2",
+          "COMMIT.json": "ffb5ced5472af28a6c874fbe53f508d6809724689d0bd4e7501cfaa192215668",
+          "packet.json": "4f4e25070ff363fdf6cf6f6ff2f310e8c07272473c529782bd1f132242eb706a"
+        }
+      },
+      "0000038_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000038_000",
+        "members": {
+          "prediction.npz": "dada5464d3d5c02bf39241d0f659fdb6b2a796e9f0b7bd6ddf0a4a0de378814b",
+          "COMMIT.json": "1a79dbeb9c1ca8de1834d5dcfe42383700701d7315b2bb58234ec2b1245c241a",
+          "packet.json": "3ac11fb5c123504b0b389b9f5e10a723399def6c40fb2d791738e50d8429134c"
+        }
+      },
+      "0000038_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000038_001",
+        "members": {
+          "prediction.npz": "3972ee4b07358ae4a0148dc9da58badb2862000df519773bc9c744b66d487b07",
+          "COMMIT.json": "e45434690825f5908599c783b715da69e5beb4506fe3f7734c9190ba6ca03341",
+          "packet.json": "0ccf7545b8e6f1825929599f3fdcd128b8a77d250cdcde4a648c8f92c9e86207"
+        }
+      },
+      "0000038_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000038_002",
+        "members": {
+          "prediction.npz": "d9b1594962d01161c58bfb2b1bd2bccb175ce9e27e0a37e9d3c90dbd25f00b3d",
+          "COMMIT.json": "f46afe75ca437a374b4d9c6d0e2543a538b03c798e82eec66c4c2821b2b271e5",
+          "packet.json": "a8ff9861da83d6ed1640201f7e49fc791488fb1d9bb1762f73130b2f1614b804"
+        }
+      },
+      "0000038_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000038_003",
+        "members": {
+          "prediction.npz": "ccdda810539cd0951ddae0e1664fd2065ee766c6799ebc038613811b7815bea7",
+          "COMMIT.json": "a65e892d3bcddac9eb69af106ae085cbd4e44e725d7cbf3eb0edbe72adbf61fe",
+          "packet.json": "e25dd36c7d05b7afb55787bf426dc4835e4fbc32c157c4cab0034eb7694a53b1"
+        }
+      },
+      "0000038_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000038_004",
+        "members": {
+          "prediction.npz": "95bc35d93e36f7f5dea76f5ada66f8784373bb4263bf3d1c598afec102b7b5f6",
+          "COMMIT.json": "6e864ea197989d8db2c2a138b30acc4e3e8d622853ed9e69f3c5271cbffc57bb",
+          "packet.json": "af37c9b7255d29ccaf1c1909de56fd3a7ba5fa25bd4d2c1225ba53c19896e8a6"
+        }
+      },
+      "0000039_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_000",
+        "members": {
+          "prediction.npz": "2510fdea5bf4c0b8591470debd2bd25daa1e01bb2970a1e9df709a953cd447d9",
+          "COMMIT.json": "a92212cf67c3e1fcc47afb0e65ef4fe92dab2f73db34c2023097b7ced1b79b63",
+          "packet.json": "326f00529e57b2454cc91a36c06ab6c2df78adfbb99578e1cb2d3f079cb967b5"
+        }
+      },
+      "0000039_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_001",
+        "members": {
+          "prediction.npz": "89dce01ec255ed9028c1bccc896bd3f5ca91ea4d84ac02b6d984beb3ec42c060",
+          "COMMIT.json": "9ee4952cb385e57d2f9dbb6b8bde4c160e99eed8b753ded6301e7fd871d098c7",
+          "packet.json": "45e20c2ca60387a6764d59974a155804f56417f2d4d2d47714ba5b910c4249b7"
+        }
+      },
+      "0000039_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_002",
+        "members": {
+          "prediction.npz": "b71e3147dfbacfbb2c0550f62991a67842a7f611745683e7ac2923b2ec01fa4f",
+          "COMMIT.json": "b512c3346a5a1b994f501d85204941a51aebd9e29dbaa27e49def49b05489ebb",
+          "packet.json": "42ee72d117465bfddd781f555bc86f517bf7fdeb413196503ca5270ac0166d88"
+        }
+      },
+      "0000039_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_003",
+        "members": {
+          "prediction.npz": "b54ae7a6b3b84e5591ad4ef89df0dca698bd72fb7b8daf941aa0e2453f6f2498",
+          "COMMIT.json": "eedaa816982ea1af9232e196999d111b2b4e078a34b7d6b57b3feb2392d01420",
+          "packet.json": "eace81efd41a96e5ea6c651a108a84bd5e5b41f4cd68a273dca4960fdabf2c6b"
+        }
+      },
+      "0000039_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_004",
+        "members": {
+          "prediction.npz": "6e6adc3cd1cf7f88c9cd4906bf5b9c67253e8d8a1792e56fa4cdab14ebffd456",
+          "COMMIT.json": "5c3e7fa4e938fbc404a6d16df09db3b3e6f33f5ce67e0fe115717dd3a85107fd",
+          "packet.json": "88c30cbd7fc72f0b906c853cb331ce9a9dbe6e3eff35b01b748d2e27d90efb44"
+        }
+      },
+      "0000039_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000039_005",
+        "members": {
+          "prediction.npz": "b15aab0b8432585ca0380167834f933a308aaec90315aa00b76d5f8da386a4cd",
+          "COMMIT.json": "bee8984d581e1730ca0494bb3a42dba99a49a7da131fe14c0d3c0cd1ca00c1d5",
+          "packet.json": "7b6087483d1cc03fc7810df58810741ce47acc279969a2e7a75356063f3efa14"
+        }
+      },
+      "0000065_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_000",
+        "members": {
+          "prediction.npz": "23ed1d9a300b0f67850286dd21be8bed4580e2277166b9a47424b3b34778596c",
+          "COMMIT.json": "6dd71d64c3ca5bbca26369accecf7b79cd24db275580af2b4e7eea4b91501667",
+          "packet.json": "65253a5fffd9b4bda716dc4b8445e447c218262f792c57731ac30e4f1548a411"
+        }
+      },
+      "0000065_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_001",
+        "members": {
+          "prediction.npz": "babd32cd37913e59f9308a89709ef93e489617e906389b3d4cba257334eb063f",
+          "COMMIT.json": "531f5b9bd1f659c0b8af78dc5b5bfd7d08a337018eb2b0a8b6ddadc3b9d513a4",
+          "packet.json": "84ae12f115a0ea496de09dddb593aa804b8c20a849260714e64618e7b56f69be"
+        }
+      },
+      "0000065_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_002",
+        "members": {
+          "prediction.npz": "a06334799d6d85d083ac56dcfa27e37f80bbc7cc2b61ec517b53778b7ebd94cb",
+          "COMMIT.json": "c556702a2ebf68b8e17db9ec65b7b132657500172ff0fe63d9ecd43263eee975",
+          "packet.json": "1efec77a3245c9ed358bcb3f5de056d831b9a50984b39d9971f5f761d237dd90"
+        }
+      },
+      "0000065_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_003",
+        "members": {
+          "prediction.npz": "32df8b6d20c4277fa5842642a18fff1fe89595a8e11cd1ae3871525a677eb2a7",
+          "COMMIT.json": "d9d80147d18d62ac8467b4b62336c213a3607734b315b1ac8bb1966f11bb4a5a",
+          "packet.json": "971707e0edeac6ee1354b78a087a38022b02098b6a2ae8cf6752359eede1b909"
+        }
+      },
+      "0000065_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_004",
+        "members": {
+          "prediction.npz": "b3505d772a750cbfbffc7eeb01887df57bcb36e56eefd906cb23dab59b2d4a66",
+          "COMMIT.json": "259d4c8e2b0cfb9dabf64c04e9348a7816254e51cfc29f42dee6c64e47b85fe6",
+          "packet.json": "886d489f799c2c83c8021029d942a35db860fdbe0931fe00c3dcc96050ff43f4"
+        }
+      },
+      "0000065_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_005",
+        "members": {
+          "prediction.npz": "fdb5a7e8b7553e1ac2468928bb9129cf994170f3013b8b3e85e9f8b90d1240d3",
+          "COMMIT.json": "60dc88f101e2ee55ca785a27357f6327cc8d68f10dbe08e13e4de4cb062daeac",
+          "packet.json": "f9e69f141e6938159cd05fd742a97fa1d3f55277c2987a959ba534098384a1cd"
+        }
+      },
+      "0000065_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_006",
+        "members": {
+          "prediction.npz": "99e33ffb1bcb8c79b485e06184dcf2c8fe0da49771f931f53498c76d6f700a95",
+          "COMMIT.json": "139f6f4094c8f0e0cc034d7081b33bcee5eb17b79aafe4a9c86735da66d122ca",
+          "packet.json": "7caae54898c518844856035cdbbd56db514a914bf89a18825e7c04bf03cc6bd1"
+        }
+      },
+      "0000065_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_007",
+        "members": {
+          "prediction.npz": "91a1a2a0d44262e55b868eddaffb74b0ac5742631cfc598d6670a16e790f65cd",
+          "COMMIT.json": "7b5c9cea8a12b0260e342c88aaa078d8d33a62d6a87d9f41d3f13cb1a407a4e8",
+          "packet.json": "362671e53c81ca9c2cd835adce39c42e41a227e8bbb2afd5c785377ad30407cf"
+        }
+      },
+      "0000065_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000065_008",
+        "members": {
+          "prediction.npz": "4adde37c4c4900f02f18839a618268a765cb0c4995c6aca5eea60b22050d1ad8",
+          "COMMIT.json": "f03654e871d28568ad93e8feff31bec47330a31542e3125168f306ac5fdcda9f",
+          "packet.json": "dd7a1471f2eaa2f01d545c950c883f31ca00815bf287797587b7469dfa76e4d4"
+        }
+      },
+      "0000084_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000084_000",
+        "members": {
+          "prediction.npz": "2c80acaf9c9761c1a36057a8538e4699534aa5984e34fd0ab081dc1295f1d484",
+          "COMMIT.json": "e6d3ef8cee1146feeeda8aafea12ffe9f65d7f10700c8098af08c18b022da53c",
+          "packet.json": "0dca6e438239fbb0161248c2e196439a0b9c037e2802bce5a7183345fb835df4"
+        }
+      },
+      "0000084_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000084_001",
+        "members": {
+          "prediction.npz": "050a0b8c721d38f9152d0361d0a3d2206a782595ac040167695b67b7af753535",
+          "COMMIT.json": "7f3fa016f90a51296bc060c1a9c374a6378f922d2790f67a253b0acf470578f7",
+          "packet.json": "aa67ba42f0a1879cf273ebf700bce0df913143651e817316ee0c70a9a5a63dc7"
+        }
+      },
+      "0000099_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_000",
+        "members": {
+          "prediction.npz": "6a95833e8a6f9e324373ea1ea2855f502b14bdf5ea6e71287644c33a7bdade1b",
+          "COMMIT.json": "5eeac917f342520f6127865003dc440916ab5adeeea46fe878de6673a17c3821",
+          "packet.json": "f66c80fef8b05911063c77f7a84b6bf5c5eb9d79883cb1b03b273b694c388d7b"
+        }
+      },
+      "0000099_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_001",
+        "members": {
+          "prediction.npz": "7860e634a9cc2794c70c6b9f9e340cb75acefa57cf2143838bc8ac4708ce3619",
+          "COMMIT.json": "da22b6a07a05c2b0153032f9e8de8518c38a97abdb6081e6d91088ef371bc514",
+          "packet.json": "07d34cbff1a24a2f040eee10ed9b5e4d63c2fa522b5a86f73a11c239e6d02608"
+        }
+      },
+      "0000099_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_002",
+        "members": {
+          "prediction.npz": "9f29db3b843bf3d9a2d1ccf2ae92448d73d03db941e787f190e07a5ff3977ab7",
+          "COMMIT.json": "bb2ebc9d94e9c8de2366bfcce53dface7f9e8cc55873a1072f6c571fe37e0a72",
+          "packet.json": "d241b1b214e111ea9719afb54f3b10aeed76f4cb9b6d74190137f014e818fb68"
+        }
+      },
+      "0000099_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_003",
+        "members": {
+          "prediction.npz": "02e3267b46a90ba73f90e69c081ab78ec8725d0e189bf5f7263aa3b69360be0e",
+          "COMMIT.json": "5b427b8bc9b67e238df6f4b0b9088e19a300b161627f2083960e448f848b6512",
+          "packet.json": "dedbd7ebba422367d94551c21b2ca5555a36eb742e8e0d9d685aca3d0df66cf8"
+        }
+      },
+      "0000099_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_004",
+        "members": {
+          "prediction.npz": "d27c2a4f4cce06828af6b9eb490d25318adb382cab94121487c65793b0fc00d7",
+          "COMMIT.json": "9d015cc1fd3ba11e0e9473f002f5b84803f58809e91f20e06dbee1c9308ceca1",
+          "packet.json": "f08489251d4c1698e55677ce5b213f71aa42de3a74b94b0858a2c3470fc94723"
+        }
+      },
+      "0000099_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000099_005",
+        "members": {
+          "prediction.npz": "5531bbf3a028d9adf79c60a5c0493a802f7a5b552a4f9143a8260dd36bfd4874",
+          "COMMIT.json": "e09e31b416586cf51102e1af4e483116152398e2ccf783e1fc383f213c7ad65b",
+          "packet.json": "36becc77adb9910273b89928ffe1a47208b9560bbcbeff5f7a996341f0b9d08d"
+        }
+      },
+      "0000122_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000122_000",
+        "members": {
+          "prediction.npz": "04b8efdb4f995dd0cec97e147117b464a1b1b8d8bc46d875c4be22cb0750631a",
+          "COMMIT.json": "6b2eb016df4427eba4e83e1bc60f60dcd18e9c1c0b627e9f3a9fffbbd45f2e2f",
+          "packet.json": "93a2b582a302e0173024b009065a7a130504b4a3441e10d4d76cad25dee70003"
+        }
+      },
+      "0000122_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000122_001",
+        "members": {
+          "prediction.npz": "6a5464a8ab8be49583c4998be1fd7bb065671aeac34bf334fe298afe35ceb004",
+          "COMMIT.json": "9dbba96001bb4cfdbdd0b53aa8228cace32a52c86c4205018487496939c3df9a",
+          "packet.json": "654035b0d8e4feb4e10384931fe42568cecd32aa005f268b5f7e6448b7ae1208"
+        }
+      },
+      "0000122_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000122_002",
+        "members": {
+          "prediction.npz": "a8c3d7c0ba5b6f6e4927b6b8d351931d520b2a0ab71e952c344a09002b845023",
+          "COMMIT.json": "75ff766883fd9f08bed0ee5b7fd7538bf82c3cba5e6581872a5da46c1a4e234d",
+          "packet.json": "7b141b5e8fe6f200bf55b930fa6d196cc522da6848d956710bd8c6b29dfbdb14"
+        }
+      },
+      "0000122_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000122_003",
+        "members": {
+          "prediction.npz": "f76ee86dd8ada8c7da97185a1a524230faf9975712ea700f7ce2211e82456687",
+          "COMMIT.json": "1f817bb4c65ef40f8f9383df027a3beca4fd0a075861e38d4f93418125a57fbe",
+          "packet.json": "428d6715dd2079bf9020dd895208ddd6264b285db049635fec6bfaf756424c70"
+        }
+      },
+      "0000136_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_000",
+        "members": {
+          "prediction.npz": "0046f5091d7b5a48360725ce56244e6954c25f60df5bcccf3b2628938392cf75",
+          "COMMIT.json": "cba8d17b49bada955fa07cf689bce0a6b21f5380966f1b422e8d4db91457ce1f",
+          "packet.json": "557da2c79ebd9ae134a6bdbf922056d572379f7f8dc070c3e5058b2d0c4251b4"
+        }
+      },
+      "0000136_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_001",
+        "members": {
+          "prediction.npz": "2a519af19306c3f2a027779c342c49a505bf856a0dc4aee5c50270391a005202",
+          "COMMIT.json": "1226ab903f43c4ebce12d75fd59505baaf19aca92c7c2dae04440370b5565ab0",
+          "packet.json": "84b7271c40aaee21d0a54f268bd4ead609b5b28abb89c907938e03ec5ccf8b7b"
+        }
+      },
+      "0000136_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_002",
+        "members": {
+          "prediction.npz": "18ec47124fcffe1b70f18899ea7c9aef7b7eab16c37cdc3cd360f88ef3cb2cb9",
+          "COMMIT.json": "3a1da78f33f2ae43e459312e1c35c3d486e09fb5f48d1b9bab0be2507b689baf",
+          "packet.json": "786572fc14305a85409d95c7458988de3ca967f37836d772dbd3c405e4de4bb0"
+        }
+      },
+      "0000136_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_003",
+        "members": {
+          "prediction.npz": "e80abec557f537302737cc3249fb8046e70a1b02e21cd2e00081e068f0e917b8",
+          "COMMIT.json": "9e542e007cfcc6942836dd2fb5196908da1bf9587bf8f0936b1fe4eb8a8979d4",
+          "packet.json": "788312374d34655a65098926461ca12304f05b1195daa1d51b9082865faade2c"
+        }
+      },
+      "0000136_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_004",
+        "members": {
+          "prediction.npz": "ced9db8b96db50d9c9193f54f49a6cdc7b062dc73ef373dc004392bbce06175b",
+          "COMMIT.json": "74d3f68f5b556411bc9155368ea95ab87c2ab4742e2ed7c4687a0c57d02305ee",
+          "packet.json": "05be401b239578ce5f8e5c6f545d8fe2434338a120e1147741f86b73eea73995"
+        }
+      },
+      "0000136_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000136_005",
+        "members": {
+          "prediction.npz": "ed802a9624de1286162fa2a4a41703ac72e82de7edb86175803fc56c3e4bdd0b",
+          "COMMIT.json": "0ce27e85c5e9385c46bf7c3e06e132acac29a387c8b3459e191afe3164ced13e",
+          "packet.json": "88836403a9b088bbdf320e25be6b32ded834751a20f28a6aa6e2279ba5b8f64e"
+        }
+      },
+      "0000143_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000143_000",
+        "members": {
+          "prediction.npz": "f029ee72ed98a099167401dfebfcc6cbcfa6435f7b9ecbcf854b48e1c1271ec4",
+          "COMMIT.json": "4dff53e512c486565cb875732a4ceb07840dfaeffadadac6102f1af8848a57db",
+          "packet.json": "daed9c1d46e8bb77e01b288b7f413238040c236d097cc34d99fa6e370299c7bd"
+        }
+      },
+      "0000143_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000143_001",
+        "members": {
+          "prediction.npz": "33cc79a93472d5164275fef92f18e9999c25fbef59cdd0b1a5485586b07d2a2c",
+          "COMMIT.json": "4151d00a0cc6c7104b449f8727ad47cc2add53a91e4d9bb2d9c197d134363b79",
+          "packet.json": "99ed25588641c234bbecec36a3bc0c24cd6ab68ff17f81903dfdda3c7cfedbfa"
+        }
+      },
+      "0000146_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_000",
+        "members": {
+          "prediction.npz": "854a48cdc232354f1cf0d62d927206d473e1ff95d6319e128ee021ace9e346b7",
+          "COMMIT.json": "ade806973615d7c7d6d9e952180f191077af69ff80f9b4180c93c0cb266d45d9",
+          "packet.json": "ab80dc718cc117b39ea3072bb063278f2dc05b9e2bef658238aa9e4893f9bc1d"
+        }
+      },
+      "0000146_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_001",
+        "members": {
+          "prediction.npz": "8e5cc6b4b97313d9a18d1583d01df393ac113934c05d382267e3f02cbfee27df",
+          "COMMIT.json": "61b8cf7e34556492fddc82c991d4df9452a76f4b8940bb544f19cbce81166e8b",
+          "packet.json": "c03c3ec1f5a4ffde2c6ea89b98ac75a85da709cd77a0c1c8448feef7f91d6c59"
+        }
+      },
+      "0000146_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_002",
+        "members": {
+          "prediction.npz": "95abd5fae322f35c2606d40bb8a021967a0123cf7e63d0c2b88e661889bed223",
+          "COMMIT.json": "e266a48c8067e470ca94e4414df94b7b026889673dccf189dbabe579886fcc99",
+          "packet.json": "c4a5d71511efc90b54aca48ed0fc04358d9cacb955c5401b8b47b5fd9eedb7a8"
+        }
+      },
+      "0000146_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_003",
+        "members": {
+          "prediction.npz": "9dd21b857ff1c127b71c0b884d8d194e77b06992b123f1eab9e399da5e7bb1dc",
+          "COMMIT.json": "5768e4f954c60b0c3847daca67c4e34e3f404c5e17db75d9368cdada0f5b3047",
+          "packet.json": "fd936c011d40dbf9494c079db0e887fc52e4d6a7984d2cd8980a8e07cb43bd62"
+        }
+      },
+      "0000146_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_004",
+        "members": {
+          "prediction.npz": "52e41a926258f29cf79924cec3a6be4829b06c76cbb6f864d9a2496c6268d36d",
+          "COMMIT.json": "bdc490396e38bcb4c85eb4d74e322c194600981da8f922664aa79fc1d1389d5d",
+          "packet.json": "577079ade65c166a0ff722b07f26e7817ab416efbf03fb0fdd5289cee484db10"
+        }
+      },
+      "0000146_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_005",
+        "members": {
+          "prediction.npz": "a2b6f6b5c1e04b138555904954da358d479a4dd700986c4ba08e41a83806d4c1",
+          "COMMIT.json": "71da472caadbfaaa5b60a244ce2c265876b60c42276faf14c6ee979b009198fa",
+          "packet.json": "590e2330d8cb606e06829222e8ac454718b67de8ca3e7044ffdc22f1bb7120c2"
+        }
+      },
+      "0000146_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000146_006",
+        "members": {
+          "prediction.npz": "8df1d891af63655bbca8b08af7d54b5a2111af35b5735544b289beec60dfad84",
+          "COMMIT.json": "0b7e375d445503d4d13def5668b8c64e8c1c13c11ee03c576a01a9da82f05930",
+          "packet.json": "d6cce40b21d7fc9dc64d12a87a01db6fc18f235baf00dc28a8d9101bcfd3bd9c"
+        }
+      },
+      "0000219_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_000",
+        "members": {
+          "prediction.npz": "d293232f3455fabeed783701ddf2476ee3ac571bf28c42d073e52c3f5cf78e51",
+          "COMMIT.json": "2ec146eba90c41f7988ea785591843bb5aa3f886ce580f6f60e15e45ef1cb649",
+          "packet.json": "960feacf608058d133734b75e3160de129bc9b54e82948ddcb3d2ade1df3a694"
+        }
+      },
+      "0000219_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_001",
+        "members": {
+          "prediction.npz": "6f476ff85604d08451d7e882e679139943f4923c91460339695456b02dd1624c",
+          "COMMIT.json": "8e11e45633788b1deac382166322c059c0345b18b5d0fee73ec5f72a838f2dbc",
+          "packet.json": "63dd6c5eddde03090abb3deaf437bd00fdb73e5783ac395598cfc4148b13ac9d"
+        }
+      },
+      "0000219_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_002",
+        "members": {
+          "prediction.npz": "7e6aebe24bb70dfd8c9c0e7e099e545d47491985aa4ec6f43ca947833815781c",
+          "COMMIT.json": "b3d168a1da78e015cc5e5ec7f1afeee6906056957042ccb0c0abf35634c5ad30",
+          "packet.json": "ffcb1452bc768cbf34197706cb6439a6d1ea2188d31f3e9f2d57e3f9fe363878"
+        }
+      },
+      "0000219_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_003",
+        "members": {
+          "prediction.npz": "d5be5863244fd27f501e0d3ecd066519b70e4ce58abef58fcdf653833c616a42",
+          "COMMIT.json": "b827ae0dad6f45babc4e9077513612b4aecb89bc4dd09a15cabb9e008a1446b9",
+          "packet.json": "c0b4b377f642656e575d4dd0891b6c0be3b0c9764cbb1c6e733e40aeb669b160"
+        }
+      },
+      "0000219_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_004",
+        "members": {
+          "prediction.npz": "8c010d295c05a7abeb51a59cb06e093ab68a83ff9ab1ccc264e35b00f442518e",
+          "COMMIT.json": "1a2f50588590b83bf35968a4cf9b507b0e629184aac1e41d5291866b75dd89ae",
+          "packet.json": "52c7482d21f17c9b383098b6c18edfe85f7aa148ef998ef49f57cc2e809e76a5"
+        }
+      },
+      "0000219_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_005",
+        "members": {
+          "prediction.npz": "95f4b3e139d099735ceffaee4ca1dcb6fdd1a4f5345d5bd284f7e17855b10b71",
+          "COMMIT.json": "c945ce3123ee97085b253c3e9a666533ad203f597a4da0e55f8f4b59fee6d918",
+          "packet.json": "c3941e85181195dc63e5784f76df4a04326e7756a24f0848e498c266dabaac26"
+        }
+      },
+      "0000219_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_006",
+        "members": {
+          "prediction.npz": "b95b0d1c1d4d2ce3494b8f4d0fe527f6c88f04ceb44749b8066e76c1d618c13e",
+          "COMMIT.json": "ce1347847f9c179b0a538f7838af9e81caa4abbf03f78837ffee55958f004581",
+          "packet.json": "1ebb81fc51d8ca035ab2220951d50baa35cd9ed9634af93b016cd4e5710df0c5"
+        }
+      },
+      "0000219_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_007",
+        "members": {
+          "prediction.npz": "fcadad2a050efa9995f2caf4c29f8595173931b94ecc4adc49b79be1aaf60f31",
+          "COMMIT.json": "4e8597ddcbb6bfd7b82ee1e5ea7639a0fcd602b9dc9b306de1bd8dc54991e117",
+          "packet.json": "6a9119d62ffc19f661fe159ce517ebcc5c3860968a3d9003d579e38d52f02669"
+        }
+      },
+      "0000219_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_008",
+        "members": {
+          "prediction.npz": "b23724f95ad50b2c34704bdabe40e9d70852253491da726e24843f229e2c910f",
+          "COMMIT.json": "b736c69ae925abf67575d81c1636b26e90d08f8b507ff15e571efb2fd6b321ef",
+          "packet.json": "89c2ca88ca6bedadec761c06e834e36ffa9a79e950105b06c42532cb753443cc"
+        }
+      },
+      "0000219_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000219_009",
+        "members": {
+          "prediction.npz": "d9e6756ce39b0911dc91ce6684299e2b15b54b4acfa6d2e902c6c27864050ed4",
+          "COMMIT.json": "a5758c2e90f4f9b15608a7972f2c8f6333237a5850ce9896a5bd6761d69bf925",
+          "packet.json": "e193f1c7c59556ff0b13e4d0dd4681901d2be81ab1e580afe404184128751b42"
+        }
+      },
+      "0000228_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000228_000",
+        "members": {
+          "prediction.npz": "5c4648168094e82d91bc58e74f7fd7ae510607956d83dfd40e228bbb79cc978f",
+          "COMMIT.json": "9eb7216b9a2a6d998c47e1bc7e52511cf99a3c58c6c1c651d27fc7a93aeca0df",
+          "packet.json": "8c786ea01ae79c7a69767c38f13b545b0e09fa33ed242ebb32dad2699d244574"
+        }
+      },
+      "0000228_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000228_001",
+        "members": {
+          "prediction.npz": "3dc514b8e848020db9815d87f1d99b81989851cd548d5f9d8aa0c55e58efbb2f",
+          "COMMIT.json": "9d02657f6f73dfec76a568dc76ea556f3ead4bb190adfb650360ef9dcfd2be07",
+          "packet.json": "73f7da52aa8632e3e196842e6cd0194043abb7d09177e76e260fab625cf5fd75"
+        }
+      },
+      "0000228_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000228_002",
+        "members": {
+          "prediction.npz": "33f86eaff6979fdd43a33011d317ec8aa113b68160fd545cba649726b783885d",
+          "COMMIT.json": "ef07691719305f7811ac22216bb1e633f7a7bf55f1456ca5a0beb586f81bfee7",
+          "packet.json": "b2c924670a3b48d4eac81819b6b71d33b2b8ada819ddb3eab170a5df8687356f"
+        }
+      },
+      "0000256_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_000",
+        "members": {
+          "prediction.npz": "99a484d3f19b4c5552f9a3e7c9f7efda3c5a872263627c0b0eff360ef2444343",
+          "COMMIT.json": "523982f977b3276bfb073215776ed1762336859210c0efc4a9eac26f2a94ad38",
+          "packet.json": "a1cf93553cdc66b63105faa45104519f2da4e91db12e7182a0d4ec71549e0b5f"
+        }
+      },
+      "0000256_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_001",
+        "members": {
+          "prediction.npz": "58d182040dc1ea7561c9010addcc5598b6ccc65670adbc9cfec3f13ad94be6be",
+          "COMMIT.json": "a0c02b55c89e5eb809c8c9cbb69ba99d53ae0075ecf44d59b44e2907e859e199",
+          "packet.json": "e7e52d42531029417c092407c802ff034d274092c846c0b3c5aa072b1dda07d6"
+        }
+      },
+      "0000256_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_002",
+        "members": {
+          "prediction.npz": "036fb0fa32dfebd725a022ecb37195469d45a314a3b33c6ac4bde95c22e27641",
+          "COMMIT.json": "f8eb8909f26802bfd22f86cfe98ba2b8f4a39d5ccd9905715996a41cfc84ca60",
+          "packet.json": "ddd2bce314c0e007a36a4295c657a30906323eab8efee9d0ddaef305d8a73146"
+        }
+      },
+      "0000256_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_003",
+        "members": {
+          "prediction.npz": "4a88aec1e57a8a0b86bee457b1ec2408e2543482706386543989c466c6544bf4",
+          "COMMIT.json": "679052262f3518a7dd994b28588cc520b1451a7fc7c10136d989e705c5282577",
+          "packet.json": "3408c421349a370f0af6cf25b3e3935457d1adf9f63da3746c25dffc73c91b4f"
+        }
+      },
+      "0000256_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_004",
+        "members": {
+          "prediction.npz": "d481fea083391228d3bcb485bfc7a562459dd4fc187807ba9483c30d01b6e654",
+          "COMMIT.json": "dff9090c9dabeb1e73a8e3f575775452cb7e0f10181bc7715d7f5409c7788197",
+          "packet.json": "0a3d05a4c17cd9e54975ec69cb6201cfccce4fdace309601d064830c93d5273b"
+        }
+      },
+      "0000256_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_005",
+        "members": {
+          "prediction.npz": "b2f44e4932180a71a77b1e90435b2423472ff883384913d061a14ca1067ad719",
+          "COMMIT.json": "ac1c6df3d6995fc5d3d56d7d312652588824d5c878b3b59b270dcd9184cad0bb",
+          "packet.json": "c4910d008befcd049b9bcbbf5588eb18f1444cfd25d0f4c0b20c3f784cde1824"
+        }
+      },
+      "0000256_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_006",
+        "members": {
+          "prediction.npz": "47ddf33dce50b5b7456fee19c1ed87698a257eeb10b4c0f67446feae39137792",
+          "COMMIT.json": "e2f857fbb1fdb1d7d3254e4a660eba4aa4c9bc00b256a0a5a61ee958833d97ec",
+          "packet.json": "0e92bc71f8c7f53541712f00cf034d61406b57702a9d409145ef3f135c1a6bef"
+        }
+      },
+      "0000256_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_007",
+        "members": {
+          "prediction.npz": "99bda8be049ddb98b3042eea2463fe2bdf80d5aabe730737609a460cacf28999",
+          "COMMIT.json": "c2776d1e14c2eb5f777fea39f6c2907d38834add4163414451806622a68d0e9f",
+          "packet.json": "3deb6ca4b0b295b58988ac57eb521c64c45922fef184b350e342970812dc1911"
+        }
+      },
+      "0000256_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_008",
+        "members": {
+          "prediction.npz": "7621f827ad56278108ef4a1d6889a3646005e38b84a7bf1e022567e1fbd7c544",
+          "COMMIT.json": "449083a59f592c25b09993daea129460f1f005b2360fcef981d50548befb265b",
+          "packet.json": "0068355277775ccefa28cc179211dc2ef6a2caeed223b23edbe82bff941a5323"
+        }
+      },
+      "0000256_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000256_009",
+        "members": {
+          "prediction.npz": "523e86c3cb99e113fe426f1356b59af289a84836fa9e12a18bc7c41a1d18f897",
+          "COMMIT.json": "f70ee766b22e6ed26ba57f44679e359f3440d44b2ac84b1aeb71a87373bc4584",
+          "packet.json": "de3887a15bdaca4845cfdd68834e050edda56df5c41b846bfa06d39f8b077ad4"
+        }
+      },
+      "0000266_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_000",
+        "members": {
+          "prediction.npz": "b8745a2a27a0f0988797c85b8448403543729e046ca57f8022f38814c3245415",
+          "COMMIT.json": "e1581c25c8a20b029684baadb368677e57189014c63e3c7d2453df84b9a8879f",
+          "packet.json": "78b1100b41ba726e06b26dc8dc738f4081e3676da90ae2b13aebfa0679ced4a0"
+        }
+      },
+      "0000266_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_001",
+        "members": {
+          "prediction.npz": "0ccbd75a2f9975766ff7abebaa341e3fc7f995c8303e2b1d7a6100fa104be1a5",
+          "COMMIT.json": "909d2fbd2266af567bad069ff5ac8ea6e5e9bea83f610d543db751d1f046b2dd",
+          "packet.json": "c6daf4b29b13c99a23f44a8b6b9eb9669f19aeca90cfe647b715e1786643f727"
+        }
+      },
+      "0000266_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_002",
+        "members": {
+          "prediction.npz": "a1cd7e39ebd287721f84d37cafff86c208bed7b0076c49e925aac1b944ca7f8c",
+          "COMMIT.json": "59629b3e8e008f77c1c926db7ccce69246ccc06eff1a195b64b7cda3a2db996c",
+          "packet.json": "d434f3adf0db9d1365ce6d5d5c281262f8ce211a11ca8cc7ea261b88fe06d975"
+        }
+      },
+      "0000266_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_003",
+        "members": {
+          "prediction.npz": "b456d30b1c864fe000772dcff8552f75486df0c807501bd66938c49855318327",
+          "COMMIT.json": "d16613c17bb1f780dcfcd69fbf7dcac25baf7119716e57e63c7e2850973cb972",
+          "packet.json": "6bf920a054844966065cdbde9e1c043629df028bc14189688b9be079302a6eb2"
+        }
+      },
+      "0000266_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_004",
+        "members": {
+          "prediction.npz": "147fcb434aa78f02eec82e895331d07bdeea42f49409855f545328cf165c3284",
+          "COMMIT.json": "17658581bb1dc7733b385074c9a61647ef8579ec22d91dcc36fb9ae512a29f86",
+          "packet.json": "a7e457ad70a4d74ce945cf9d2a04e0f6093afdee26092e1898d6ada8b06eebc1"
+        }
+      },
+      "0000266_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_005",
+        "members": {
+          "prediction.npz": "987b5e7c66a7a1c079c5cbc0f16783a8c7af9c9604af83a0db4c433f46e79571",
+          "COMMIT.json": "73a8923a0bd1435f0f7ce8aefa132193348f6f172d4849c926503f5069512f71",
+          "packet.json": "a073c53ec9fd943bbeb5e783dc89491bbb0eee8aae81ec104e232421a3d37841"
+        }
+      },
+      "0000266_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_006",
+        "members": {
+          "prediction.npz": "aa4d9632aefa98575f095cb1be8b6409499a609681a73a544d6c7b6481d185b5",
+          "COMMIT.json": "6745fbe7effb4a00a0b3d80806adbb082c8c7f4574103992185c592663dba903",
+          "packet.json": "ab461192f72847071d603c1fed812cf79a17c9ecfcd8b60b1ee31f6514466271"
+        }
+      },
+      "0000266_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_007",
+        "members": {
+          "prediction.npz": "40522050033988d1ba36197f266f7f83c4267b4f9871d8f8169934e67cc3be7a",
+          "COMMIT.json": "c1db02599786c0b06c60b42b1b2d011ba9e5a46459b9911db42b3c306216892d",
+          "packet.json": "378ed8ccd2354469987aaa8b186f3ab5d6ac9eb62bbc4e3fda85bf11980c6601"
+        }
+      },
+      "0000266_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_008",
+        "members": {
+          "prediction.npz": "979d5bb2e542129aa11d3f4811c103d1d9c462f0bf003a09e89c000c8ea77835",
+          "COMMIT.json": "fbe637568f0d1f9b43915a44e81a06228742216c923684f402d1052fe650681b",
+          "packet.json": "bf89c0ce9debadb3fc7ed22cdfcdd143e814ece34d4b0f72fa0195d57a1a33c1"
+        }
+      },
+      "0000266_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000266_009",
+        "members": {
+          "prediction.npz": "40969e82e46f72d0692a7795945a5af6016bff7848c3ae20c5f6a3f78d06b402",
+          "COMMIT.json": "77af381daf0d2f666e10b4b315a3151a1a1bd6770afe42e667e39a0b539297bb",
+          "packet.json": "5e394bc26540f9a2a7b8c09ca04dfeacea2c734b2725921acd5678fc345749cd"
+        }
+      },
+      "0000273_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_000",
+        "members": {
+          "prediction.npz": "ae45fe00f2f1471cdde952db83cf33621e21f3ccc8d25e0df4d7a1837356bc02",
+          "COMMIT.json": "67ca9f004dbf13f02fcc96021057c7a174d90840ec8e9f0edfa22cd08d0896d3",
+          "packet.json": "a9646d555b511818c212a6753aa622c95fa8c3d81fb30a5e1803108961ca64c5"
+        }
+      },
+      "0000273_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_001",
+        "members": {
+          "prediction.npz": "248969b2ccbc405287814aaa7c3c851039e6eb9f915c0db8521285dacc6d259c",
+          "COMMIT.json": "09b1b0cc25d63b832cc20ff43ffbf8942a1131f7b773c9a5eae4fbd05d6c719e",
+          "packet.json": "0e7a59b5bad3c4af54e308f411c6d5064343d6bbaee8e63cf4fc54bfb18d5f3b"
+        }
+      },
+      "0000273_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_002",
+        "members": {
+          "prediction.npz": "dc74e31235ad802220dc54aca7223fea63c34113888a66a6f95eec6f40f09cdf",
+          "COMMIT.json": "f9c701cb66b1795ecdddfc0bfd569769224f3eceecb92ec2a312e6277c8e43ba",
+          "packet.json": "12b0aead2fd1a50564b8673e012dddc3454e62b523045b5ffc7d77c6633aecda"
+        }
+      },
+      "0000273_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_003",
+        "members": {
+          "prediction.npz": "9aa9e15fd699cc2aed53c8d5ff19d989adf9e1dce979d11aa4e615b5b256e10b",
+          "COMMIT.json": "233f901319fe32686636e2b11a436c9c28a25e9f5fbdb638b01e82ad4e1c4e02",
+          "packet.json": "abf88bca8d3542863e4e6c2fcfb112883fe033185663e07456decbd1bc3b19b0"
+        }
+      },
+      "0000273_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_004",
+        "members": {
+          "prediction.npz": "01450803e80d03d1f6d0913ed65a4d4507539fd66f9a3c8279ce006b1de52382",
+          "COMMIT.json": "555a0ac9ae6176a52d6419b32316bb002c1a6939d9b49f70c430571491a4e2cb",
+          "packet.json": "9faa98b02862f5134b124bccb9d86eb17db7336e2fd5f3fa8b5b78a9414d7483"
+        }
+      },
+      "0000273_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_005",
+        "members": {
+          "prediction.npz": "66c04cd1d9bf621d2e5b1cbcdf6d62719ccf5a1ec9139b425531a27f86f2975c",
+          "COMMIT.json": "615fd8e2f861d2abc23b8be75f78ad07d7d85aca1ae41fe5ce004b5379fd0b24",
+          "packet.json": "cd25ef231f9507cb75d24de718d6a821649118d01186d2b6535de74f4498445e"
+        }
+      },
+      "0000273_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_006",
+        "members": {
+          "prediction.npz": "3b643a7546002343683300f13080f9c2c0a82dac3ca4993c1c533806f05e0327",
+          "COMMIT.json": "d779f44cfd358a76c85d0b0314262fbdfb1fe4f0aa62b459b52a1a59060e5dc3",
+          "packet.json": "a2875b42e9ee564639bee5921d09362c23d4ea9a39f303544a0e8d7bb5c2f64d"
+        }
+      },
+      "0000273_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_007",
+        "members": {
+          "prediction.npz": "b147e99af3a54420cb616aecdf26c629d37364291cd2eafaa41ae55887f572ff",
+          "COMMIT.json": "7fba458d0035dcf4c7c8166bcfd1f732bbf9ed29906faa14f166da3f820e8b7b",
+          "packet.json": "f5b4821d02f9ffea8f457f681422dc9855aae2a7160e1052e381d7d425280ff6"
+        }
+      },
+      "0000273_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_008",
+        "members": {
+          "prediction.npz": "453a84c3cdb74c05bbd49d8f0792a7b3940ebdfe31cc158bd68b9a5cd9c6b2a8",
+          "COMMIT.json": "1e1e4511b9c492e207454e766525587b31b1ab657cfb631a4051c30e2a486e37",
+          "packet.json": "4b10e046dfce0ea555647508ebf205f7b7999479ad0f22be328b728bc2ff6c9b"
+        }
+      },
+      "0000273_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000273_009",
+        "members": {
+          "prediction.npz": "e7c7b8473518c20585ecef9bfddec9cea6377b8eb86da04ea20d95355f37494e",
+          "COMMIT.json": "5895293a320779489cace345f3d915030d71af5dd0ee60bbf2f39fd976edbcfb",
+          "packet.json": "830306a77dbbe1210c5a55776318f489f367e6f52dced8ba55b4e2a4ac8342be"
+        }
+      },
+      "0000285_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_000",
+        "members": {
+          "prediction.npz": "66dda870c3f3ba8db391f84fa1f11b85dec28ce92902c3eef0fdc23b4e6695cc",
+          "COMMIT.json": "b43fe5f5bb4bcf0cbfbfd4c1eb9e03d2f09d235fddf28686235b679a939a1e9d",
+          "packet.json": "32bee3d8dbf026cbe5bf155c9d26c83434c0d2ea4c5bdbae7ef22b41456b2624"
+        }
+      },
+      "0000285_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_001",
+        "members": {
+          "prediction.npz": "b1fac74fda79ac66b11e1b4a96fe53d1e5cb85640276c1d20fab3c5a61610a3b",
+          "COMMIT.json": "be923420a2df925af06a3b8e7d34992221b4b126c919469496a7796ce62dfd0a",
+          "packet.json": "5f72e5d7822762e9606700966b25f9c4673efae52a186429219b03cdd2580e19"
+        }
+      },
+      "0000285_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_002",
+        "members": {
+          "prediction.npz": "f0a5e1a06f1d126bbe71bdc974e6999ac040835c03fcdcc186006bc53c4f661d",
+          "COMMIT.json": "55b6ee577d5bcc4f1a019b551d807766fc35103f97be123aa5aa88237a0c0b12",
+          "packet.json": "d7a98c90753343e652084d1459194e418ba52f9f0340f1aae7b3c36652fd0447"
+        }
+      },
+      "0000285_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_003",
+        "members": {
+          "prediction.npz": "f8c9a1830abae0652d4dff281630401976a67b2108bf99fc54acb20d1f62c30d",
+          "COMMIT.json": "6c5e49fed4be56b9f1fa5dbbe35d865385bd97a3f08e575fa649270b9b2ee188",
+          "packet.json": "7fcd5fd06601576264a7602604b5f9c916c7b2c3bf9a1e6509fe3fabaf91de97"
+        }
+      },
+      "0000285_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_004",
+        "members": {
+          "prediction.npz": "f4a132fe37ed995ccb32f298695657d3c48e8708ccd2b8a295066a6f6a9059f7",
+          "COMMIT.json": "32e7f5de9fe3a6a1b21409d2a9402e2c3b91d23c6b73646a5bec51680ba536b0",
+          "packet.json": "14bc7b3f7d1f6d64f603112c92ed33384803500ca22c8b3888325a1a5e0cc816"
+        }
+      },
+      "0000285_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_005",
+        "members": {
+          "prediction.npz": "0baf5c8c653c0f81c8ec0565c88c515af5f733b93e36ac3a9eec651164be9877",
+          "COMMIT.json": "f861d0d140fa584ca97d081ac08127dde6b01982423cc7b9a8f829b5c32f53d1",
+          "packet.json": "e58ca5cd135761cd553c0588576c82c57aee1755afdb0da8f503cb5db5eef818"
+        }
+      },
+      "0000285_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_006",
+        "members": {
+          "prediction.npz": "a522ca90e1c911580300e5ecdd7b3497102b52db21d9433b1f4f309c7a7b0331",
+          "COMMIT.json": "5c8d54471abe1ffeca45a51738d09905f522fec4258b0ecc79b51f93b742d750",
+          "packet.json": "658090dc27f79f63301b1c896d45b5a1d2a65cba51387c16b2ed0fb53ec78c2f"
+        }
+      },
+      "0000285_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000285_007",
+        "members": {
+          "prediction.npz": "42672b7af89dba2403c4db5961441ae5bd77091fad6174b954eff1e4eb552288",
+          "COMMIT.json": "e19524b547638d78073873bdfdb07f0661fbcf3ed57bdb8123c605d7275eeb08",
+          "packet.json": "4fd92b7e9f4dfc6dbb46292e5b657bc4ee596d5637594c485189c3a5a0e13f03"
+        }
+      },
+      "0000293_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_000",
+        "members": {
+          "prediction.npz": "2300d20da20016563e5e09f377ac592a87b8e1d3ff18e377d4f87b66e1a78f93",
+          "COMMIT.json": "cea298eb6ba4412a968c3fa5917236348441a889dd43ef5a7f72d54bb87e1563",
+          "packet.json": "d754746de0d98da11ba3d259e2e1d50992f16c7c80276b0259c3c28be99669a1"
+        }
+      },
+      "0000293_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_001",
+        "members": {
+          "prediction.npz": "22ee3e36ffa4875c414a9795a5f60a03c9c8c3873aef245ae34b7986154f7483",
+          "COMMIT.json": "fb3847f799a19283e94f8398a9c5d5af0aa50382487932163b681109159c139b",
+          "packet.json": "54e9ab189ac9f505766cbbaaf3170a077339d52605fa500475db3ef2e710dc37"
+        }
+      },
+      "0000293_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_002",
+        "members": {
+          "prediction.npz": "4e51f5d4bbece10e9fd976b37b67ea2d746afddc108889f6dfb76c8611431df6",
+          "COMMIT.json": "fc4ffd9e4e8ca4c52d05f138e8a3c5ef0b42f05490571f0421bc918e2b9f5cf3",
+          "packet.json": "986e44405411c0711128ce951d0747f9b1cf802c790110b532682a976ace4e05"
+        }
+      },
+      "0000293_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_003",
+        "members": {
+          "prediction.npz": "d72789261b575b4be8336536fa03e3b8c45355152819ae2a84e924843e6c66f7",
+          "COMMIT.json": "1ab8724995a40bb311c772f0330cfbedd8f5b57b0c00bc0b4aff317ebca13d65",
+          "packet.json": "26b8973e1f613ad91589166faa28faaf59275f765e07f7e7dc11433312fb6355"
+        }
+      },
+      "0000293_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_004",
+        "members": {
+          "prediction.npz": "c061bd51b9fc3f051e3e785c6f5a1e111b187aa474a84697c514bf722757f9da",
+          "COMMIT.json": "a257165593a54ce1779b0eaa8470e148850578dd66a5b3ac53fbbbf73758bdca",
+          "packet.json": "612a0089b737c1d370ec03767c508bdf8f9903bc67154d0c07282bdc48b085cd"
+        }
+      },
+      "0000293_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_005",
+        "members": {
+          "prediction.npz": "0227af384b9dfdd76e0c95562491f92f025f5c05925622f2e67bff5dff4a6ade",
+          "COMMIT.json": "f8453189388ee6fd9787376ea6d9cc69ae9913fef9723c9c12ab7ddc23aea886",
+          "packet.json": "1858b430b9f9a2fbc08ec01e36163e2d4a59ccd9afddf394ecbec215da465541"
+        }
+      },
+      "0000293_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_006",
+        "members": {
+          "prediction.npz": "71730964cf3885d68a715943c3d5da783bfabf0f203b3b0bcf7fd956eb22e4f3",
+          "COMMIT.json": "6db4b9dbf2931dfb6a5598667548377ee34669009be0f4ad982c191990377613",
+          "packet.json": "0d470052fef716897822cdc71d743e70f3533a40855d883040a7166e31aea389"
+        }
+      },
+      "0000293_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_007",
+        "members": {
+          "prediction.npz": "f11508ae7eef12dc08dc8b10dfcb0f6bd41072a7ec27facabcb1f3e1bcfca19c",
+          "COMMIT.json": "931e02bd35bd412ee51e96255da712c59364060d1e91504737884911ccffbad0",
+          "packet.json": "ee1f2c3275e6e9a0fac19865eb80b0791b4b9544d22eb49881da99a9a7e9c15a"
+        }
+      },
+      "0000293_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_008",
+        "members": {
+          "prediction.npz": "8d2627b61cc62645b3f9e16ce113f34f2cf2264fbef9d0c1a8f541f673489420",
+          "COMMIT.json": "70643fdb9fcb9312289937ee1e0568252fe7630e20acbc9982fc188cc03d58ff",
+          "packet.json": "a98a9b7a3ffac9ce932ce647d3470d4ae4a121689b1b7327736fb9397062a8d8"
+        }
+      },
+      "0000293_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000293_009",
+        "members": {
+          "prediction.npz": "0f1d07a3acdcc75013d9a31ced8a3442dc06b96f1a9fdd817017605de9ab9304",
+          "COMMIT.json": "bb8420282e722a48c20295f6064f67c0daee3d22d8baaa38a132e720019bf3f9",
+          "packet.json": "c00cc6487ab27367ad7ea9bba6eff8bf4f1bb9c4e358062993748056910139dd"
+        }
+      },
+      "0000311_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000311_000",
+        "members": {
+          "prediction.npz": "7539152532683647fb3b4c445b9820cdfddc4effd987a82cd07100e374e797be",
+          "COMMIT.json": "9db79c1cac2268d7085cd0b14fc6621e1fc7bca75bf6a2cc6628fc5ea4570d26",
+          "packet.json": "28c52fa075f2dd06a0468ca1357d3471ecd2152e1ed40c5a68de194fcffebdfa"
+        }
+      },
+      "0000311_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000311_001",
+        "members": {
+          "prediction.npz": "6525a52d2815b80d7dede0f4570c278ef96c5ada7e4f596fbbf7e2dd8665ba57",
+          "COMMIT.json": "ce8b04b6b3feec020c534dc9d813432398b791b8e626be81a11456935dc8e749",
+          "packet.json": "1fecc949e91e523e418a1db6d2150f59e841390dfac6cd79b062da232b7fa775"
+        }
+      },
+      "0000311_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000311_002",
+        "members": {
+          "prediction.npz": "99f96a028ff9c446cd9b401fef16c962f18f35ceb4fbda3428f009cd4bd84641",
+          "COMMIT.json": "821578c10f922956a61ba3fbb3f5d36f94c450bebd8c866328e7a65b23e7eca1",
+          "packet.json": "c69035b322feb1345da1424de753bffcb205ad4348c3066a1770d15572b4f532"
+        }
+      },
+      "0000312_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000312_000",
+        "members": {
+          "prediction.npz": "e7b7631f813a32750a36c2a3f7d8db97b035efcbcbfdbe09f0868c55e0597770",
+          "COMMIT.json": "87fccdaf72479b4c998e62c039e16ed6a956d5298c3521e0a7b0aa8f09c14bbb",
+          "packet.json": "090dfab2638e64b273a93ac227cb7e8bf27af57d7139765294f11a96280ee31a"
+        }
+      },
+      "0000312_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/RPR_CIHP/roi_packets/0000312_001",
+        "members": {
+          "prediction.npz": "adc1305d804625f1cdd1ad727356f37d0e0470d5a22c6de1d2bea4a8c4cbd72e",
+          "COMMIT.json": "deb798df8c6efb57bd86063303f6b8d5987301d88d912c7c194bf6ad1b0dac6e",
+          "packet.json": "ab7b916d182da23a8cd3721ff654652eda926811c1abdcbcd354ccd776061006"
+        }
+      }
+    }
+  },
+  "prior_execution_seconds": {
+    "RPR_CIHP": 54.302896275999956
+  },
+  "prior_stream_bytes": {
+    "RPR_CIHP": 2312221
+  },
+  "pending_call_limits": {
+    "QANet_CIHP_HRNetW48_512x384": 24064,
+    "M2FP_R101_CIHP": 24064,
+    "D2FP_R101_CIHP": 24064,
+    "RPR_CIHP": 23915,
+    "CPI_R50_CIHP": 24064,
+    "CPI_ConvNeXtB_CIHP": 24064,
+    "Sapiens2_0.4b": 24064,
+    "Sapiens2_0.8b": 24064,
+    "Sapiens2_1b": 24064
+  },
+  "continuation_reason": "RPR zero-native-detection decoder repair; known CCTV implementation",
+  "parent_failure_sha256": "b1079fd968cb3c0b96641bfc9c7f11029bd572c9ecc8e2132a48e39fd12e030f",
+  "generated_worker": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/WORKER_REVISION2.py",
+  "generated_worker_sha256": "eccace1d143f8f261f112ba2a78cf5744b6df1616a29bd3b62c7965dd36180fe",
+  "source_substitutions": [
+    [
+      "    from controlled_roi_models import CropModel",
+      "    CropModel = model_factory"
+    ],
+    [
+      "if time.monotonic()-started > config['max_hours']*3600:",
+      "if time.monotonic()-started+config['prior_execution_seconds'].get(mid,0) > config['max_hours']*3600:"
+    ],
+    [
+      "if max(bytes_written, measured_storage[0]) > config['max_stream_gib']*2**30:",
+      "if max(bytes_written, measured_storage[0])+config['prior_stream_bytes'].get(mid,0) > config['max_stream_gib']*2**30:"
+    ],
+    [
+      "calls >= config['model_call_limit_per_model']:",
+      "calls >= config['pending_call_limits'][mid]:"
+    ],
+    [
+      "            result = model.infer(rgb, path, box)",
+      "            from controlled_roi_models import CropModel as OriginalModel\n            result = OriginalModel.infer(model, rgb, path, box)"
+    ],
+    [
+      "            m, d = frame['member'], frame['detector']\n            iid = m['id']",
+      "            m, d = frame['member'], frame['detector']\n            iid = m['id']\n            reused_frame = config['reuse_frames'].get(mid, {}).get(iid)\n            if reused_frame:\n                verify_reuse(reused_frame)\n                score_path = W/reused_frame['score_path']\n                if sha(score_path) != reused_frame['score_sha256']:\n                    raise ValueError('Parent saved scores changed')\n                evaluation = read(score_path)\n                accumulate(evaluation, iid, accumulator, part_sums)\n                state['completed'] += 1\n                state['reused_frames'] = state.get('reused_frames',0)+1\n                emit(ledger, event='PARENT_FRAME_REUSED', image_id=iid,\n                     parent_packet=reused_frame['packet'], parent_score_sha256=sha(score_path))\n                save()\n                continue"
+    ],
+    [
+      "                (native, candidates, details), timing = infer(crop, path, designated, 'VAL')",
+      "                key = iid+'_%03d'%j\n                reference = config['reuse_ROIs'].get(mid, {}).get(key)\n                if reference:\n                    reused_meta, reused_arrays = verify_reuse(reference)\n                    native = reused_arrays['native_crop_mask']\n                    candidates = reused_arrays['native_candidate_masks']\n                    details = dict(reused_meta['geometry'])\n                    details['parent_reuse_reference'] = reference['packet']\n                    timing = dict(reused_meta['timing'], origin='PARENT_OBSERVATION',\n                                  current_frame_wall_includes_this_forward=False)\n                    state['reused_partial_ROIs'] = state.get('reused_partial_ROIs',0)+1\n                else:\n                    (native, candidates, details), timing = infer(crop, path, designated, 'VAL')"
+    ],
+    [
+      "                roi = write_packet(output/'roi_packets', iid+'_%03d'%j,",
+      "                roi = (W/reference['packet']) if reference else write_packet(output/'roi_packets', iid+'_%03d'%j,"
+    ],
+    [
+      "                bytes_written += sum(p.stat().st_size for p in roi.iterdir() if p.is_file())",
+      "                if not reference:\n                    bytes_written += sum(p.stat().st_size for p in roi.iterdir() if p.is_file())"
+    ],
+    [
+      "        if actual_ids != set(manifest['expected_ids']) or state['ROI_calls'] != config['ROI_count']:",
+      "        actual_ids |= set(config['reuse_frames'].get(mid,{}))\n        reused_ROI_count = len(config['reuse_ROIs'].get(mid,{}))\n        if actual_ids != set(manifest['expected_ids']) or state['ROI_calls']+reused_ROI_count != config['ROI_count']:"
+    ],
+    [
+      "        state.update(status='COMPLETE', primary=result['primary'], ended_utc=utc())",
+      "        assembled = dict(parent_config=config['parent_config'], config_sha256=sha(cp),\n                         expected_ids=manifest['expected_ids'],\n                         parent_frames=config['reuse_frames'].get(mid,{}),\n                         new_packet_root=rel(output/'packets'),\n                         effective_implementation='RPR_ROI_EMPTY_OUTPUT_1' if mid=='RPR_CIHP' else 'PARENT_MODEL_BEHAVIOR',\n                         accepted_ROIs_by_revision={'PARENT':len(config['reuse_ROIs'].get(mid,{})),\n                                                    'CONTINUATION':state['ROI_calls']})\n        atomic(output/'ASSEMBLED_INDEX.json', assembled)\n        state.update(status='COMPLETE', primary=result['primary'], ended_utc=utc())"
+    ]
+  ],
+  "historical_attempt": {
+    "failed_image": "0000312",
+    "successful_frames": 22,
+    "successful_ROIs": 149,
+    "attempted_VAL_calls": 150,
+    "TRAIN_calls": 2,
+    "retained": true
+  }
+}

@@ -415,3 +415,7 @@ CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/
 ## 2026-11-02T19:13:53.625503+07:00 — CONTROLLED_CIHP_DETACHED_LAUNCH_VERIFIED
 
 ตรวจต่อหลังเครดิตหมด พบcontroller2144827/QANetworker2144852ยังรันในtmuxsessioncihp_controlled_20261102T120403Z. Launch19:06:08Thai/commit371910e; snapshot19:13:14มี521completedframes/2837ROIcalls,failed0/invalid0. TRAIN2callsparityPASS. ตรวจfirstVALpacket0000001atomicNPZ/memberhashes,geometry/native20IDs,ownershipและscientificbindingsผ่าน;frozen19sourcehashesตรง. ไม่มีworker/retryซ้ำและยังไม่อ่านrankหรือวิเคราะห์คะแนน. [Launch evidence](runs/cihp-controlled-roi-20261102T120403Z/LAUNCH_VERIFICATION.json). Remaining:batchquality5000×9ตามคิว; live/clean timingและบางinternalstagemeasurementpending. Next:controllerเดินคิวและกลับมาตรวจclosureจากartifactsเมื่อterminal.
+
+## 2026-11-03T09:11:08.068227+07:00 — CONTROLLED_CIHP_RPR_CONTINUATION_PREPARED
+
+ผู้ใช้สั่งแก้และรันต่อหลังหยุด. Rootcausezero-native-instancesreturnedwithoutparsingfield;reuseCCTVemptydecoderrevisionโดยไม่แตะfrozenrunner/config/source. Parent3modelsstrictcomplete5000reused;RPR22frames/149ROIshash/geometry/input/ownership/scoringauditedincludingpartial2ROIs. Pending23913. CPU5casesPASSทั้ง2env. Sourcegenerated11exactpatchesreviewable;time/storagebudgetsaggregateparent. NoGPUcallsในขั้นนี้. Freshsegmentcihp-controlled-continuation-20261103T021021Z;Nextcommit/launch/trainparity/canonicalfirstpacket. Mainnulluntilstrictcomplete;reportnoanalysisrank. [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)

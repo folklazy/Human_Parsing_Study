@@ -1,3 +1,7 @@
+# Controlled CIHP continuation พร้อมเปิดงาน — 2026-11-03T09:11:08.068227+07:00
+
+**THREE_COMPLETE / CONTINUATION_PREPARED_RPR_GATE_PENDING**. QANet/M2FP/D2FPครบ5000ต่อระบบ. ParentหยุดRPR22frames/149acceptedROIsที่KeyErrorparsing;zero-native-detectiondecoderfixเดิมจากCCTVนำมาใช้ต่อ. CPU5cases×2environmentsPASS,reconciliation149ROIs/22framesPASS,เหลือRPR23913ROIs. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Freshsegment `cihp-controlled-continuation-20261103T021021Z`. NextเปิดdetachedcontrollerตรวจTRAIN/packetแรก;ใช้ `continue_controlled_cihp.py progress` ดูสถานะใหม่. ประชากรยัง5000,historyคงครบ,livecleantimingpending
+
 # Controlled CIHP quality batch กำลังทำงาน — 2026-11-02T19:13:53.625503+07:00
 
 **QUALITY_BATCH_RUNNING / QANET_TRAIN_GATE_PASS** — [รายงานรอบปัจจุบัน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Run `cihp-controlled-roi-20261102T120403Z` เปิดใน tmux แล้ว controller2144827 / QANetworker2144852. ตรวจเวลา19:13:14น.พบ521/5000ภาพ, failed0/invalid0, packetแรกผ่าน atomic/readback/nativeIDs/ownership/bindings และ source19รายการตรง. คิวโมเดลถัดไปอัตโนมัติหลัง closure/resource gates

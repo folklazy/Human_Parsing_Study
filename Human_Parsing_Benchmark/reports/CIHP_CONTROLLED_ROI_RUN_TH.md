@@ -1,6 +1,6 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
-อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **QUALITY_BATCH_RUNNING / QANET_TRAIN_GATE_PASS**
+อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **CONTINUATION_PREPARED / THREE_SYSTEMS_COMPLETE / RPR_GATE_PENDING**
 
 ผู้ใช้อนุมัติให้เริ่มรอบเปรียบเทียบที่ควบคุมinput/ownership และตกลงให้รันcheckpointเดิมเก้าตัวตามคิว เก็บเวลาแยกขั้น และวิเคราะห์คุณภาพรวมเมื่อbatchเข้าสู่terminalstate. รอบนี้ใช้ officialCIHPvalidation5000 IDs กับ frozenYOLOcacheเดิม รวม **24,062 ROIs ต่อcheckpoint**. Run `cihp-controlled-roi-20261102T120403Z` แยกจากnative/commonเดิมและCCTV90
 
@@ -48,3 +48,37 @@ Private logsและpacketsอยู่ `Human_Parsing_Benchmark/outputs/cihp-c
 รอบคุณภาพกำลังบันทึก cached-route wall และ adapter spans. ขั้น liveYOLO joint-residency / clean timing100frames×3rounds และบางช่วง transfer/internal API ยังต้องพัฒนาและตรวจรับแยก. ข้อมูลเวลาใน quality pass มีขอบเขตตามที่ระบุใน metadata
 
 ขั้นถัดไปของ batch คือให้ QANet รันจนตรวจปิดผล แล้ว controller ตรวจทรัพยากรและเปิด M2FP ต่ออัตโนมัติ หากมี error ให้ใช้ terminal status และ FAILURE.json ประกอบการ reconciliation ตาม policy. รายงานคุณภาพ/อันดับรวมจัดทำหลัง batch terminal
+
+## Controlled continuation หลัง RP-R-CNN คืน native instances ว่าง
+
+อัปเดต 2026-11-03T09:11:08.068227+07:00. ผู้ใช้อนุมัติให้แก้และรันต่อ โดยยังประเมินประชากรเดิม **5,000 IDs ต่อโมเดล**. การสนทนาเรื่อง subset2,500 ยังเป็นทางเลือกและไม่ได้เปลี่ยน population
+
+Parent `cihp-controlled-roi-20261102T120403Z` หยุดตามpolicyที่ RP-R-CNN ภาพ0000312 หลังครบ22ภาพ/149ROIpacketsและattempted150VALcalls. Tracebackเป็นKeyError('parsing'). ตรวจupstream `rcnn/core/test.py` พบว่าทางเดินzero-native-detectionsคืนemptyBoxListได้โดยไม่มีfieldparsing. Frozenadapterพยายามอ่านfieldนั้น. เคยปิดปัญหาประเภทเดียวกันในCCTVแล้ว จึงreuse `continuation_model`/`empty_rpr_prediction` จาก `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_continuation.py` revision `RPR_ROI_EMPTY_OUTPUT_1`
+
+การแก้เปลี่ยนเฉพาะdecoderของemptyresult. หากnativecount0ส่งcandidatearrayว่างและnativecropmaskเป็นbackground โดยเก็บYOLOextent/identityเดิม. ValidGTtargetsที่ไม่มีpredictionยังเป็นFNและQcontribution0ตามscorer. Nativecountมากกว่า0แต่ขาดfieldparsingยังเป็นcontractfailure. Threshold/checkpoint/FP32/crop/context/TTA/ownership/GT/projection/matching/scorerคงเดิม
+
+Continuation `cihp-controlled-continuation-20261103T021021Z` ใช้freshconfig/outputและworker snapshotจาก11exactsource substitutionsบนfrozenrunner. [Config](../configs/controlled_cihp_continuation.json), [CPU acceptance](CONTROLLED_CIHP_CONTINUATION_ACCEPTANCE.json), [reconciliation](../runs/cihp-controlled-continuation-20261103T021021Z/RECONCILIATION.json), [reviewable worker](../runs/cihp-controlled-continuation-20261103T021021Z/WORKER_REVISION2.py)
+
+| รายการ | การนำกลับมาใช้ |
+|---|---|
+| QANet / M2FP / D2FP | canonicalcompletionครบ5,000ภาพต่อระบบ ตรวจstrictcompleteและmetricshashแล้ว ใช้ผลเดิม |
+| RP-R-CNN completeframes | 22ภาพ ตรวจatomicmembers/NPZ/input/config/checkpoint/YOLOextent/scores/scoreledgerhashesแล้ว |
+| RP-R-CNN acceptedROIpackets | 149รายการตรวจnativeIDs/geometry/decodedcroppixelhashและmetadata รวม2ROIsในpartialframe0000312 |
+| RP-R-CNN pending | 23,913ROIs;มีหนึ่งfailedattemptเดิมเก็บไว้ การแก้ครั้งนี้อนุญาตattemptใหม่หนึ่งครั้งต่อpendingROI |
+| CPIสองตัว/Sapiensสามตัว | ยังไม่เคยเริ่มcontrolledCIHPparent จึงเข้าคิวต่อหลังRP-R-CNNตามreadinessเดิม |
+
+CPU5regressioncasesผ่านในสองenvironments ครอบemptydecoder/nonemptymalformed/boundedpendingbudget/atomicimmutability/literal scoreaccumulation. GPUreadinessจะใช้TRAINสองcallsเพื่อเทียบnonemptybaselineกับfixedinstrumentedpathก่อนcanonicalpending. ภาพ0000312คงอยู่ตามpopulationและประเมินตามจริงเมื่อรันต่อผ่าน ยังไม่อ้างpopulation-widebitwiseforwardequivalenceจากTRAINตัวอย่างเดียว
+
+RP-R-CNN model-callaccountingรวมfailedattemptเดิม150VAL+2TRAIN, continuationสูงสุด23,913VAL+2TRAIN รวม24,067calls. เก็บimmutableattempthistoryทั้งparent/continuation. Guard24h/80GiBคิดรวมprioractiveexecution/streambytes ไม่รวมช่วงข้ามคืนที่controllerหยุด. Resourcequeue600s/50GiBfreeheadroomคงเดิม. Automaticretry0 ไม่มีการลดprecision/resolutionหรือเลือกattemptตามคะแนน
+
+Scorerรับacceptedparentframesและnewframesรวมexact5,000uniqueIDsผ่านaccumulatorเดิม พร้อมตรวจROIcount149+new23,913และGTdenominatorsจากbindings. `ASSEMBLED_INDEX.json`เชื่อมparent22framesกับnewpacketroot และระบุacceptedROIcountsต่อimplementationrevision. Mainmetricsยังnullหากไม่ครบหรือcontractไม่ผ่าน การใช้parent/currentimplementationผสมเปิดเผยในmanifest
+
+Timingของ22parentframesยังอ้างparentledger. ภาพpartialที่reuse2ROIsมีadapterspansจากparentกำกับorigin และcurrentframewallไม่รวมforwardเก่า ต้องแยกattemptwall/activeworkจากfulluninterruptedframelatencyในการรายงานภายหลัง. Live/clean timingphaseยังpendingตามแผนเดิม
+
+คำสั่งดูสถานะcontinuationจากworkspace root
+
+```bash
+.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress
+```
+
+งานถัดไปคือเปิดdetachedcontinuationหลังcommit ตรวจTRAIN/firstnewpacket แล้วให้controllerเดินคิวเดิม. ประเมินอันดับเมื่อbatchterminalตามที่ตกลง
