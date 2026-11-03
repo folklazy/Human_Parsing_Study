@@ -1,3 +1,9 @@
+# Controlled CIHP resource continuation กำลังทำงาน — 2026-11-03T13:26:47.345448+07:00
+
+**FOUR_COMPLETE / CPI_R50_RUNNING**. QANet/M2FP/D2FP/RPRครบ5000ต่อระบบและreuseเดิม. CPI R50parentหยุด4frames/34ROIsด้วยphysicalfreeguardก่อนforward ไม่มีOOMtraceback. Newsegment`cihp-controlled-resources-20261103T062248Z`ใช้ownreusablepoolaccountingพร้อมthreshold1GiBเดิม เปิด13:24:57Thai/controller3034452/worker3034473ในtmux. ตรวจsnapshot14/5000ภาพ,newROIcalls54,failed0/invalid0,TRAINparityและnewpacket0000027PASS. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+ดูสถานะ `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress`. เหลือ5โมเดลรวมCPIปัจจุบัน;controllerเดินคิว5000ตามgatesเดิม. Livecleantimingpendingและวิเคราะห์rankหลังbatchterminal
+
 # Controlled CIHP resource continuation เตรียมพร้อม — 2026-11-03T13:24:44.856361+07:00
 
 **FOUR_COMPLETE / CPI_RESOURCE_CONTINUATION_PREPARED**. QANet/M2FP/D2FP/RPRครบ5000/ระบบ. คิวหยุดCPI R50ที่4frames/34ROIsก่อนforwardเพราะphysicalfreeheadroomguard ไม่พบCUDA-OOMtraceback. ReconciliationPASS,preparedownreusablecacheaccountingตามCCTVเดิมและCPU4cases×2envPASS. Freshsegment `cihp-controlled-resources-20261103T062248Z`. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). NextlaunchTRAIN/newpacketแล้วคิวเดินต่อที่population5000เดิม. Livecleantimingpending

@@ -1,3 +1,5 @@
+> **Current queue after CPI resource amendment:** Four systems complete; CPI R50 continuing from accepted packets. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Current progress command from workspace root is `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress`.
+
 > **Current controlled CIHP continuation:** QANet/M2FP/D2FP complete; RP-R-CNN empty-native decoder repaired and fresh segment running. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress` from workspace root for the combined parent/continuation state.
 
 > **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue

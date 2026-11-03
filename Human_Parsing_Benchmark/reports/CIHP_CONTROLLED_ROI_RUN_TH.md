@@ -1,6 +1,6 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
-อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **FOUR_SYSTEMS_COMPLETE / CPI_RESOURCE_CONTINUATION_PREPARED**
+อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **FOUR_SYSTEMS_COMPLETE / CPI_RESOURCE_CONTINUATION_RUNNING**
 
 ผู้ใช้อนุมัติให้เริ่มรอบเปรียบเทียบที่ควบคุมinput/ownership และตกลงให้รันcheckpointเดิมเก้าตัวตามคิว เก็บเวลาแยกขั้น และวิเคราะห์คุณภาพรวมเมื่อbatchเข้าสู่terminalstate. รอบนี้ใช้ officialCIHPvalidation5000 IDs กับ frozenYOLOcacheเดิม รวม **24,062 ROIs ต่อcheckpoint**. Run `cihp-controlled-roi-20261102T120403Z` แยกจากnative/commonเดิมและCCTV90
 
@@ -118,3 +118,11 @@ CPU4cases×2envผ่าน ได้แก่owncacheincluded/liveallocatedexcl
 ```
 
 Nextcommitแล้วเปิดdetachedcontrollerและตรวจnewpacketของภาพ0000027 พร้อมcurrentmemoryguardobservations
+
+### Resource continuation เปิดและตรวจ packet ใหม่แล้ว
+
+Launch3พ.ย.2026 **13:24:57น.**(Asia/Bangkok), commit`1a67a3ac4d6280e05989f4c4e945834e017c947f`,tmux`cihp_resources_20261103T062248Z`,controllerPID**3034452**,CPI R50workerPID**3034473**. ตรวจเวลา2026-11-03T13:26:47.345448+07:00พบCPIรวม**14/5000ภาพ** (4parentreused),newVALROIcalls54,failed/invalid0ในattemptนี้. TRAIN2callsparityPASS. Packetใหม่0000027ที่parentเคยหยุดผ่านNPZ/memberhashes/config/ownershipreadback
+
+Currentguardobservationsที่ตรวจมีdevicefree818.8MiB,ownallocated180.6MiB,ownreserved12698.0MiB และeffectiveavailable13336.1MiB. ตัวเลขเป็นcurrentoperationalguardหนึ่งขณะ ไม่ใช่peakVRAMหรือหลักฐานว่าparentstopมีcacheเท่ากัน ไม่รับรองทุกROIถัดไปผ่าน. [Launch](../runs/cihp-controlled-resources-20261103T062248Z/LAUNCH.json) / [verification](../runs/cihp-controlled-resources-20261103T062248Z/LAUNCH_VERIFICATION.json)
+
+Controllerใช้ผล4โมเดลที่ครบแล้วตามreferencesและคิวเหลือCPI R50→ConvNeXt-B→Sapiens0.4/0.8/1Bตามresourceและreadinessgatesเดิม. ขั้นถัดไปปล่อยdetachedqueueทำงานและตรวจcompleteness/healthโดยวิเคราะห์rankเมื่อterminal. Live/clean timingpending
