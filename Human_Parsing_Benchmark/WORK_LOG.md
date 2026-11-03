@@ -423,3 +423,7 @@ CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/
 ## 2026-11-03T09:12:21.920742+07:00 — CONTROLLED_CIHP_CONTINUATION_LAUNCH_VERIFIED
 
 Launch09:11:17Thai/commit66c6a5bในtmuxcihp_cont_20261103T021021Z. Controller2760271/RPRworker2760310verifiedalive. TRAINparity2callsPASS. Actualfailedframe0000312/ROI002nowzero-native-output/background,atomicreadback/ownership/bindingsPASS. Snapshot09:12:04RPR42frames,22parentreuse,newVAL113,noattemptfailures. Parent22/149acceptedpreservedและhistoryfailed1retained. NoQ/M/Dreinference/noGTpolicychange/noqualityrankinganalysis. [Evidence](runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH_VERIFICATION.json). Nextallowdetachedqueuecomplete5000each; stop/reconcileonerror. Live/cleantimingpending
+
+## 2026-11-03T13:24:44.856361+07:00 — CPI_RESOURCE_CONTINUATION_PREPARED
+
+Userrequestscontinue/status. Actual4modelsstrictcomplete;CPI4frames/34ROIsstoppedbeforeforwardonphysicalfree1GiBguard,noCUDA-OOMtraceback. ReuseCCTVownreusablepoolaccounting(free+reserved-allocated)withsame1GiBthresholdandpreload/disk/timecaps. CPU4casesPASS2env;parentoutputs/scoring/crops/ownershiphashesaudited,pending24028. Currentguardmemorywillberecorded;parentpeakstatsdonotproveactualcacheatstop. Freshsegmentcihp-controlled-resources-20261103T062248Z;TRAIN2manualprocessreadiness;noautoOOMretryorqualitysettingschanges. Nextcommit/launch/verifyfailedimageproceeds;noqualityrankanalysis. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)

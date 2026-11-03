@@ -1,6 +1,6 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
-อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **CONTINUATION_RUNNING / THREE_SYSTEMS_COMPLETE / RPR_EMPTY_OUTPUT_VERIFIED**
+อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **FOUR_SYSTEMS_COMPLETE / CPI_RESOURCE_CONTINUATION_PREPARED**
 
 ผู้ใช้อนุมัติให้เริ่มรอบเปรียบเทียบที่ควบคุมinput/ownership และตกลงให้รันcheckpointเดิมเก้าตัวตามคิว เก็บเวลาแยกขั้น และวิเคราะห์คุณภาพรวมเมื่อbatchเข้าสู่terminalstate. รอบนี้ใช้ officialCIHPvalidation5000 IDs กับ frozenYOLOcacheเดิม รวม **24,062 ROIs ต่อcheckpoint**. Run `cihp-controlled-roi-20261102T120403Z` แยกจากnative/commonเดิมและCCTV90
 
@@ -90,3 +90,31 @@ Timingของ22parentframesยังอ้างparentledger. ภาพpartial
 TRAINสองcallsผ่านoriginal-vs-instrumented hard-mask/candidateparity. อ่านpacketใหม่ภาพ0000312และROI0000312_002กลับพร้อมhash/atomicmembers/ownershipผ่าน. ROIที่เคยล้มให้nativepersoncount0จริง, candidatecount0 และsemanticmaskว่าง โดยคงYOLOextentไว้และไม่ได้ใช้GTช่วยสร้างprediction. กรณีนี้จะถูกscorerคิดFN/Qตามนิยามเดิม ไม่เพิ่มignoreหรือแทนsilhouette
 
 [Launch](../runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH.json) / [verification](../runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH_VERIFICATION.json) เก็บbindingsและsnapshotที่ตรวจ. Nextให้controllerเดินRP-R-CNNและโมเดลที่ยังไม่เริ่มต่อ เฝ้าตรวจhealth/contract/completenessตามpolicyโดยไม่วิเคราะห์อันดับระหว่างรัน. Live/clean timingยังเป็นขั้นถัดไปตามแผน
+
+## Resource continuation หลัง CPI R50 headroom guard
+
+อัปเดต 2026-11-03T13:24:44.856361+07:00. Parentcontinuation `cihp-controlled-continuation-20261103T021021Z` ปิดRP-R-CNNครบ5000เมื่อ3พ.ย.11:19น. ต่อมาCPI R50หยุด11:20น.หลัง4completeframes/34acceptedROIpackets ด้วย `RESOURCE_VRAM_HEADROOM_GUARD` ก่อนเริ่มforwardถัดไปที่ภาพ0000027. ไม่มีCUDA-OOMtracebackในattemptนี้. Lastsuccessfulcallบันทึกpeakallocated10729.631MiB/peakreserved12794MiB ตัวเลขpeakสองค่านี้อาจเกิดต่างขณะ จึงห้ามนำมาลบเพื่ออ้างowncachedpoolณจุดguardเดิม; guardเดิมไม่ได้เก็บcurrentallocated/reserved/freeที่จุดหยุด จึงยังไม่ยืนยันcacheamountย้อนหลัง
+
+แก้เฉพาะresourceaccountingในfreshworker/config ใช้ฟังก์ชัน`reusable_memory`ที่ผ่านCCTVcontinuationเดิม: effectiveavailable=devicefree+ownreserved−ownallocated. ไม่รวมliveallocatedหรือcacheของprocessอื่น. เกณฑ์headroomยัง1024MiB,preloadguardsเดิม,FP32/batch1/resolution/TTA/threshold/crop/ownership/scorerเดิม. ไม่เรียกempty_cacheหรือเปลี่ยนallocator/systemsettings. บันทึกcurrentguardmemoryในSTATEเพื่อให้ตรวจoperationalamendmentรอบนี้ได้จริง ไม่รับประกันcontiguousallocationหรือว่าไม่OOMในภาพถัดไป
+
+[Resource config](../configs/controlled_cihp_resources.json), [CPU acceptance](CONTROLLED_CIHP_RESOURCE_ACCEPTANCE.json), [reconciliation](../runs/cihp-controlled-resources-20261103T062248Z/RECONCILIATION.json), [worker snapshot](../runs/cihp-controlled-resources-20261103T062248Z/WORKER_REVISION2.py). ใช้sourcegeneration12exactsubstitutionsโดยreusefrozenrunner/continuationเดิมและเพิ่มresourceguardหนึ่งจุด. Originalsource/config/attemptsคงครบ
+
+| รายการ | สถานะก่อนเปิด segment |
+|---|---|
+| QANet/M2FP/D2FP/RP-R-CNN | strictcomplete5000ต่อระบบ ใช้canonicalreferencesและcompletion/metricshashesเดิม |
+| CPI R50 accepted | 4frames/34ROIsตรวจatomicmembers/NPZ/nativeIDs/geometry/decodedpixelhash/YOLOownership/scoreledgerhashesแล้ว |
+| Partialframe0000027 | 3ROIsaccepted;restpending |
+| CPI R50 newpending | 24,028ROIs +2TRAINreadinesscallsสูงสุด |
+| อื่น | CPIConvNeXt-B/Sapiens0.4B/0.8B/1Bยังไม่เริ่ม เข้าqueueต่อเมื่อmodelgateผ่าน |
+
+CPIcallaccountingคิดparent34VAL+2TRAIN และsegmentใหม่สูงสุด24028VAL+2TRAIN รวม24066calls. Parentstopเป็นresourceguardก่อนforward ไม่มีการนับstopนั้นเป็นCUDA-OOMหรือsuccessfulprediction. Stream80GiB/active24hคิดรวมparent+continuation;free-disk50GiB/queue600sคงเดิม. การเพิ่มownreusablepoolเป็นoperationalresourceamendmentพร้อมหลักฐานก่อนlaunch. ไม่มีautomaticmodel/OOMretry/fallback
+
+CPU4cases×2envผ่าน ได้แก่owncacheincluded/liveallocatedexcluded/byte-unitthreshold/sourceguardcomposition. ModelscientificbehaviorคงเดิมและTRAINparityเป็นruntimegate. เป้าหมายยัง5000IDsต่อโมเดล,STRICT_COMPLETE/GTdenominatorchecksและการวิเคราะห์หลังbatchterminalคงเดิม. Live/cleantimingยังpendingแยก
+
+ดูสถานะ segment ปัจจุบันจากworkspace root
+
+```bash
+.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress
+```
+
+Nextcommitแล้วเปิดdetachedcontrollerและตรวจnewpacketของภาพ0000027 พร้อมcurrentmemoryguardobservations

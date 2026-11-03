@@ -1,3 +1,7 @@
+# Controlled CIHP resource continuation เตรียมพร้อม — 2026-11-03T13:24:44.856361+07:00
+
+**FOUR_COMPLETE / CPI_RESOURCE_CONTINUATION_PREPARED**. QANet/M2FP/D2FP/RPRครบ5000/ระบบ. คิวหยุดCPI R50ที่4frames/34ROIsก่อนforwardเพราะphysicalfreeheadroomguard ไม่พบCUDA-OOMtraceback. ReconciliationPASS,preparedownreusablecacheaccountingตามCCTVเดิมและCPU4cases×2envPASS. Freshsegment `cihp-controlled-resources-20261103T062248Z`. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). NextlaunchTRAIN/newpacketแล้วคิวเดินต่อที่population5000เดิม. Livecleantimingpending
+
 # Controlled CIHP continuation กำลังทำงาน — 2026-11-03T09:12:21.920742+07:00
 
 **CONTINUATION_RUNNING / RPR_EMPTY_OUTPUT_VERIFIED**. QANet/M2FP/D2FPครบ5000และreuseเดิม. Freshsegment `cihp-controlled-continuation-20261103T021021Z` controller2760271/worker2760310ในtmux. ตรวจ09:12:04น.RPR42/5000ภาพ(22parentreused),newVALROIcalls113,failed0/invalid0ในattemptนี้. TRAINparityPASSและภาพ0000312/emptyROI0000312_002ผ่านatomicreadback/label/ownershipแล้ว. Parentfailureคงอยู่. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
