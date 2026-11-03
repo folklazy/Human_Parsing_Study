@@ -419,3 +419,7 @@ CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/
 ## 2026-11-03T09:11:08.068227+07:00 — CONTROLLED_CIHP_RPR_CONTINUATION_PREPARED
 
 ผู้ใช้สั่งแก้และรันต่อหลังหยุด. Rootcausezero-native-instancesreturnedwithoutparsingfield;reuseCCTVemptydecoderrevisionโดยไม่แตะfrozenrunner/config/source. Parent3modelsstrictcomplete5000reused;RPR22frames/149ROIshash/geometry/input/ownership/scoringauditedincludingpartial2ROIs. Pending23913. CPU5casesPASSทั้ง2env. Sourcegenerated11exactpatchesreviewable;time/storagebudgetsaggregateparent. NoGPUcallsในขั้นนี้. Freshsegmentcihp-controlled-continuation-20261103T021021Z;Nextcommit/launch/trainparity/canonicalfirstpacket. Mainnulluntilstrictcomplete;reportnoanalysisrank. [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+## 2026-11-03T09:12:21.920742+07:00 — CONTROLLED_CIHP_CONTINUATION_LAUNCH_VERIFIED
+
+Launch09:11:17Thai/commit66c6a5bในtmuxcihp_cont_20261103T021021Z. Controller2760271/RPRworker2760310verifiedalive. TRAINparity2callsPASS. Actualfailedframe0000312/ROI002nowzero-native-output/background,atomicreadback/ownership/bindingsPASS. Snapshot09:12:04RPR42frames,22parentreuse,newVAL113,noattemptfailures. Parent22/149acceptedpreservedและhistoryfailed1retained. NoQ/M/Dreinference/noGTpolicychange/noqualityrankinganalysis. [Evidence](runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH_VERIFICATION.json). Nextallowdetachedqueuecomplete5000each; stop/reconcileonerror. Live/cleantimingpending

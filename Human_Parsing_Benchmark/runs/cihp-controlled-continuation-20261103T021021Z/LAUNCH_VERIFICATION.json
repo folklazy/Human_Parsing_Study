@@ -1,0 +1,51 @@
+{
+  "run_id": "cihp-controlled-continuation-20261103T021021Z",
+  "checked_utc": "2026-11-03T02:12:04.925283+00:00",
+  "status": "RUNNING_FAILED_IMAGE_RECOVERED",
+  "controller_pid": 2760271,
+  "worker_pid": 2760310,
+  "reused_frames": 22,
+  "reused_partial_ROIs": 2,
+  "observed_completed": 42,
+  "observed_new_VAL_ROI_calls": 113,
+  "observed_failed": 0,
+  "observed_invalid": 0,
+  "readiness": {
+    "status": "PASS",
+    "TRAIN_calls": 2,
+    "original_vs_instrumented_native_hard_masks": "IDENTICAL_ON_TRAIN_ROI",
+    "resource_observation": {
+      "utc": "2026-11-03T02:11:30.502316+00:00",
+      "GPU": "GPU-568de064-e614-a45c-96c3-dbd80b8db026, 2075, 12837, 37, 54, 1575, 5000",
+      "compute_processes": "2760310, 2072",
+      "GPU_query_returncode": 0,
+      "process_query_returncode": 0,
+      "load_average": [
+        1.015625,
+        0.83740234375,
+        0.49169921875
+      ]
+    },
+    "projected_storage_bytes": 15953590968.75,
+    "estimate_limitation": "One TRAIN ROI, larger candidate sets remain guarded",
+    "native_classes": 20,
+    "model_details_sha256": "a219dac9e43237e26080cce6b2fdf1fb35b33754512681b60a6c6f8cd03a1adb"
+  },
+  "first_new_frame": {
+    "image_id": "0000312",
+    "packet_sha256": "e53b33ea51cc5f27c2fa2b2318b65983f770da2c20ea62d6ed506dd508ec0f1d",
+    "atomic_readback": true,
+    "ownership_consistent": true
+  },
+  "original_failure_ROI": {
+    "job": "0000312_002",
+    "native_persons": 0,
+    "candidate_count": 0,
+    "semantic_mask_empty": true,
+    "YOLO_extent_retained": true,
+    "GT_used_in_prediction": false,
+    "packet_sha256": "6668644f8efe076ad3623f68ac8f41f593661e3ff04375805b130784f753616f"
+  },
+  "historical_parent_failure_retained": true,
+  "quality_rank_analysis": "DEFERRED_UNTIL_BATCH_TERMINAL"
+}

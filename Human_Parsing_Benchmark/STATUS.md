@@ -1,3 +1,9 @@
+# Controlled CIHP continuation กำลังทำงาน — 2026-11-03T09:12:21.920742+07:00
+
+**CONTINUATION_RUNNING / RPR_EMPTY_OUTPUT_VERIFIED**. QANet/M2FP/D2FPครบ5000และreuseเดิม. Freshsegment `cihp-controlled-continuation-20261103T021021Z` controller2760271/worker2760310ในtmux. ตรวจ09:12:04น.RPR42/5000ภาพ(22parentreused),newVALROIcalls113,failed0/invalid0ในattemptนี้. TRAINparityPASSและภาพ0000312/emptyROI0000312_002ผ่านatomicreadback/label/ownershipแล้ว. Parentfailureคงอยู่. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+ดูสถานะด้วย `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress`. Nextcontrollerเดินคิวเดิม5000ต่อโมเดลหลังclosure/resourcegate. วิเคราะห์คุณภาพเมื่อbatchterminal;clean/live timingpending
+
 # Controlled CIHP continuation พร้อมเปิดงาน — 2026-11-03T09:11:08.068227+07:00
 
 **THREE_COMPLETE / CONTINUATION_PREPARED_RPR_GATE_PENDING**. QANet/M2FP/D2FPครบ5000ต่อระบบ. ParentหยุดRPR22frames/149acceptedROIsที่KeyErrorparsing;zero-native-detectiondecoderfixเดิมจากCCTVนำมาใช้ต่อ. CPU5cases×2environmentsPASS,reconciliation149ROIs/22framesPASS,เหลือRPR23913ROIs. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Freshsegment `cihp-controlled-continuation-20261103T021021Z`. NextเปิดdetachedcontrollerตรวจTRAIN/packetแรก;ใช้ `continue_controlled_cihp.py progress` ดูสถานะใหม่. ประชากรยัง5000,historyคงครบ,livecleantimingpending

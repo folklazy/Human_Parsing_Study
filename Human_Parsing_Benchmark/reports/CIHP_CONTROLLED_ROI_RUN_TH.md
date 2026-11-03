@@ -1,6 +1,6 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
-อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **CONTINUATION_PREPARED / THREE_SYSTEMS_COMPLETE / RPR_GATE_PENDING**
+อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **CONTINUATION_RUNNING / THREE_SYSTEMS_COMPLETE / RPR_EMPTY_OUTPUT_VERIFIED**
 
 ผู้ใช้อนุมัติให้เริ่มรอบเปรียบเทียบที่ควบคุมinput/ownership และตกลงให้รันcheckpointเดิมเก้าตัวตามคิว เก็บเวลาแยกขั้น และวิเคราะห์คุณภาพรวมเมื่อbatchเข้าสู่terminalstate. รอบนี้ใช้ officialCIHPvalidation5000 IDs กับ frozenYOLOcacheเดิม รวม **24,062 ROIs ต่อcheckpoint**. Run `cihp-controlled-roi-20261102T120403Z` แยกจากnative/commonเดิมและCCTV90
 
@@ -82,3 +82,11 @@ Timingของ22parentframesยังอ้างparentledger. ภาพpartial
 ```
 
 งานถัดไปคือเปิดdetachedcontinuationหลังcommit ตรวจTRAIN/firstnewpacket แล้วให้controllerเดินคิวเดิม. ประเมินอันดับเมื่อbatchterminalตามที่ตกลง
+
+### ตรวจเปิด continuation แล้ว
+
+เปิด 3 พฤศจิกายน 2026 เวลา **09:11:17 น.** (Asia/Bangkok), launchcommit `66c6a5b05b3c926deb3cb276cb75e9eb8cf91ca1`, tmuxsession `cihp_cont_20261103T021021Z`. Controller PID **2760271**, RP-R-CNN worker PID **2760310**. ตรวจเวลา09:12:04น.พบรวม **42/5,000ภาพ** โดย22ภาพเป็นparentreused, newVALROIcalls113,failed/invalid0สำหรับattemptนี้. ประวัติparentfailedattemptยังอยู่
+
+TRAINสองcallsผ่านoriginal-vs-instrumented hard-mask/candidateparity. อ่านpacketใหม่ภาพ0000312และROI0000312_002กลับพร้อมhash/atomicmembers/ownershipผ่าน. ROIที่เคยล้มให้nativepersoncount0จริง, candidatecount0 และsemanticmaskว่าง โดยคงYOLOextentไว้และไม่ได้ใช้GTช่วยสร้างprediction. กรณีนี้จะถูกscorerคิดFN/Qตามนิยามเดิม ไม่เพิ่มignoreหรือแทนsilhouette
+
+[Launch](../runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH.json) / [verification](../runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH_VERIFICATION.json) เก็บbindingsและsnapshotที่ตรวจ. Nextให้controllerเดินRP-R-CNNและโมเดลที่ยังไม่เริ่มต่อ เฝ้าตรวจhealth/contract/completenessตามpolicyโดยไม่วิเคราะห์อันดับระหว่างรัน. Live/clean timingยังเป็นขั้นถัดไปตามแผน
