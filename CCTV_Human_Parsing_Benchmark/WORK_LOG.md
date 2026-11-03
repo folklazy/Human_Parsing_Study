@@ -210,3 +210,17 @@ UseonlyexistingaggregateCSV/state summaries torenderprose; no rawlogs/masks/imag
 ## 2026-11-02T18:03:20.041685+07:00 — CIHP_CCTV_COMPARABILITY_AUDIT
 
 ผู้ใช้ขอทบทวนความเป็นมาตรฐานและความเทียบกันได้ อนุญาตรันใหม่เมื่อจำเป็น. ตรวจ source/config/canonical indices และ primary-source documentation; พบ route/ownership/Face domain/matching/aggregation ต่างกัน ไม่พบ arithmetic mismatch ในขอบเขตที่ตรวจ. Added read-only audit script, derived 36-target + 9-summary sensitivity CSV and evidence JSON; canonical metrics hashes9ไฟล์ตรง, protocolhashes3ตรง, support/domain/counts/formulasผ่าน, inputsไม่เปลี่ยน. No model calls/mask rescores. [รายงาน](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). Current scientific results preserved. Blockers for stronger claims: independent Face/Neck GT and controlled-CIHP execution bindings/readiness not completed. Next: validate shared-ROI CIHP contract/resources before a fresh authorized run; do not relaunch old controllers.
+
+## 2026-11-03T16:03:18+07:00 (Asia/Bangkok) / 2026-11-03T09:03:18+00:00 UTC — CCTV_REPORT_EXPLANATION_20261103
+
+ผู้ใช้ขออ่านและปรับรายงาน CCTV ทุกส่วน โดยยกตัวอย่าง t_after_sync − t_before_infer ว่าอ่านยาก ต้องละเอียดเช่นรายงาน CIHP ตรวจ source/pub HEAD 94a550c และ working tree ก่อนงาน อ่านรายงาน/protocol/timer sources/ตัวสร้างรายงาน ใช้ผลและเวลาที่ตรวจรับแล้ว ไม่เปิด model inference/scorer หรืออ่าน raw masks/images/logs
+
+เพิ่มส่วนวิธีอ่านคะแนนในรายงานเดิม: GT/ROI/mask/adapter/native, IDs ที่รวมเป็นสี่คลาส, Face-domain/OTHER, สูตรและตัวอย่าง IoU/P/R/Dice-F1, mean-part/Macro4 เทียบ pooled และ null/0 การจับคู่ coverage50% อธิบายว่าไม่ใช่ mask-IoU matchingแบบCIHP ไม่เพิ่ม C3/Q_C4_GT ใน CCTV เปลี่ยนสูตรเวลาเป็นคำภาษาไทย ระบุจุดเริ่มหลัง/ก่อน synchronize ใน A/B, หน่วยวินาที/ms ต่อROI/ต่อภาพ, worker elapsed, ตัวอย่าง Mean/Median/P95 และการไม่นับ A+B+C ซ้ำ พร้อมเติมช่องว่างข้อความ provenance/gallery ที่ติดกัน อ้าง primary docs Jaccard/F1, Python monotonic และ CUDA synchronize ที่ตรวจอ่านครั้งนี้
+
+แก้เฉพาะข้อความใน report_runtime.py/report_target_confusion.py ให้ render ตรงรายงานอีกครั้งได้ ทั้งสองไฟล์มี AST ส่วนที่ไม่ใช่ข้อความตรง baselineทั้งหมด จึงคงสูตร เงื่อนไข การเลือกข้อมูล และการเรียก functions เดิม ไม่แตะ hash-bound execution sources/configs และตรวจว่าทั้งสอง reporter ไม่อยู่ใน active CIHP source_hashes
+
+Verification:113แถวผลตัวเลขตรงก่อนแก้ทุกช่อง;9protected aggregate/protocol/index/recommendation/matrix hashesเดิม; generated sectionsจาก36แถวaggregateและ9runtime summariesตรงรายงาน;ตัวอย่างสมมติ6ข้อและ30relative linksผ่าน;GitHub actual GFM renders22ตาราง;Chromiumฟอนต์ไทยจริงตรวจเวลา4คอลัมน์/8แถวและรายภาพ6คอลัมน์/9แถว ไม่มีชื่อ t_after_sync ตกค้าง และ legacy D anchorยังอยู่ เปิดดูภาพตารางเวลา/รายภาพ/สูตรคุณภาพแล้ว หลักฐานส่วนตัว outputs/report-explanation-review-20261103 ไม่มี persistent test suite ใหม่ ไม่มีภาพ CCTV ขึ้นGit
+
+อัปเดตREADME/STATUSและSTUDY_STATEให้ชี้คำอธิบาย ปกป้องผลและruntime recordsเดิม เก็บreport hashesเก่าเป็นhistorical snapshots เพราะมี comparability noticeแทรกหลังwording-reviewเดิมอยู่ก่อนงานนี้แล้ว ไม่แก้hashเก่าย้อนหลังให้ผ่าน เพิ่มcurrent_report_sha256และreport_explanation_reviewสำหรับฉบับปัจจุบัน Workunitนี้ไม่มีคำนวณคะแนนหรือเวลาจากrawใหม่และไม่มีmodelcalls
+
+Publication: sync7explicitexistingfilesเท่านั้น ตรวจ staged paths/privacy/whitespace แล้วcommit/pushบนbranchเดิม ตรวจremotecommit Git historyเก็บidentity ไม่มีnewpublicfiles Blockers:noneสำหรับงานเอกสาร ข้อจำกัดpartialGT/Face/Neck/sharedGPU/timercoverageคงเดิม Next:ส่งรายงานเดิมที่อ่านง่ายขึ้น ไม่เปิดการทดลองเพิ่มและไม่รบกวนCIHPworker

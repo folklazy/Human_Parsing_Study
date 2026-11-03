@@ -1,3 +1,13 @@
+# คำอธิบายคะแนนและเวลา CCTV ฉบับอ่านง่าย — 2026-11-03T16:03:18+07:00 (Asia/Bangkok)
+
+**REPORT_EXPLANATION_REVIEW_COMPLETE / DOCUMENTATION_ONLY** — ปรับ [รายงานผลเดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#วิธีอ่านคะแนนชุด-cctv-นี้) และข้อความในตัวสร้างรายงานทั้งสองไฟล์ เพิ่มคำศัพท์ mapping สี่คลาส สูตร/ตัวอย่าง IoU/P/R/F1, Mean-part/Macro4 เทียบ pooled, partial-GT/Face-domain และวิธีอ่านเวลา A/B/C/D/E เปลี่ยนตัวแปรโค้ดที่อ่านยากเป็นคำอธิบายภาษาไทย มีจุดเริ่ม/จบ หน่วย s/ms ต่อ ROI/ภาพ ตัวอย่าง Mean/Median/P95 และบัญชีเวลา ไม่เพิ่ม Q_C4_GT/C3 ให้ CCTV หรือเปลี่ยนเกณฑ์เลือก
+
+ตรวจ113แถวผลตัวเลขและ9ไฟล์ผล/protocol/ภาพmatrixคงเดิม; AST ส่วนคำนวณและควบคุมของสองตัวสร้างรายงานเหมือนเดิมทุกส่วนเมื่อไม่นับข้อความ; สร้างส่วนรายงานจาก aggregate เดิมได้ตรงกัน ตรวจ Markdown22ตารางและ Chromium พร้อมฟอนต์ไทย: ตารางนิยามเวลา4คอลัมน์/8แถว ตารางต่อภาพ6คอลัมน์/9โมเดล และลิงก์ D เดิมใช้ได้ ไม่มี inference/rescore หรืออ่าน raw images/masks/logs ใหม่
+
+ผลคุณภาพ CCTV ยังเป็น9/9บน90ภาพ/130ROIsต่อระบบและ290ส่วนที่เลือกประเมิน; Sapiens แต่ละขนาดมีเวลาครบ84/90ภาพตามเดิม ค่า null และข้อจำกัดไม่เปลี่ยน รอบ CIHP controlled ROI เป็นงานแยก [ติดตาม CIHP](../Human_Parsing_Benchmark/STATUS.md). Hashes เก่าเป็น snapshotsตามเวลา เก็บไว้ครบและบันทึก hashรายงานปัจจุบันใน STUDY_STATE.report_explanation_review ขั้นถัดไป: ใช้รายงานนี้อธิบายผลพร้อมขอบเขต; ไม่มีงานทดลองเพิ่มจากการแก้เอกสารนี้
+
+## บันทึกก่อนการปรับคำอธิบายครั้งนี้
+
 # ตรวจความเทียบกันได้กับ CIHP — 2026-11-02T18:03:20.041685+07:00
 
 **COMPARABILITY_AUDIT_COMPLETE** — [รายงาน](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). ตรวจ aggregate bindings/arithmetic และคำนวณ pooled sensitivity ของ 36 target records แล้ว คงผลหลัก/GT/predictionsเดิม. CIHP กับ CCTV ล่าสุดต่าง input route, Face domain, matching และ aggregation; ไม่ใช่ direct cross-dataset model ranking. ไม่มี inference ใหม่. งานต่อคือ controlled CIHP ROI bindings/readiness และ independent GT review ตามข้อจำกัดที่ระบุ

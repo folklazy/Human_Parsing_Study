@@ -1,7 +1,7 @@
 {
   "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
   "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-02T09:54:52.799096+00:00",
+  "updated_utc": "2026-11-03T09:03:18+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
@@ -146,7 +146,7 @@
     ],
     "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00",
     "generation_snapshot_commit": "900744d0ddae504333179feb27df4c511f8c73ef",
-    "derived_hash_scope": "Generation snapshot900744d; current PRF CSV hash in per_class_prf_reporting, current report and presentation-generator hashes in report_language_review."
+    "derived_hash_scope": "Historical matrix-generation snapshot; current PRF CSV identity remains in per_class_prf_reporting and current report/presentation-generator hashes are in report_explanation_review."
   },
   "runtime_reporting": {
     "status": "HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE",
@@ -870,7 +870,7 @@
       "per_class_quality_metrics_available": true,
       "rounding": "sum full precision before display rounding"
     },
-    "report_sha256_scope": "Runtime snapshot at2a28d29 before formatting/wording edits; current report/runtime generator hashes in report_language_review. Statistics unchanged.",
+    "report_sha256_scope": "Historical runtime-generation snapshot; current report/presentation-generator hashes are in report_explanation_review.",
     "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244",
     "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12"
   },
@@ -954,7 +954,7 @@
     "end_to_end_latency": false,
     "speed_ranking_eligible": false,
     "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12",
-    "report_sha256_scope": "Per-image snapshot at2a28d29; current report hash in report_language_review. Private CSV and all statistics unchanged."
+    "report_sha256_scope": "Historical per-image timing-generation snapshot; current report/presentation-generator hashes are in report_explanation_review."
   },
   "report_formatting": {
     "status": "TABLE_E_RENDERING_FIXED",
@@ -976,7 +976,7 @@
     "data_recomputed": false,
     "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json",
     "report_hash_snapshot_commit": "dac48c359e596b8c6c6c65d5de22afb09668f11f",
-    "hash_scope": "Formatting snapshot before wording review; current report/generator hashes are in report_language_review"
+    "hash_scope": "Historical formatting snapshot; current report/presentation-generator hashes are in report_explanation_review."
   },
   "report_language_review": {
     "status": "THAI_WORDING_REVIEWED",
@@ -1003,6 +1003,68 @@
     "new_model_calls": 0,
     "data_recomputed": false,
     "new_public_files": 0,
-    "private_verification": "outputs/report-language-review-20261102/VERIFICATION.json"
+    "private_verification": "outputs/report-language-review-20261102/VERIFICATION.json",
+    "hash_scope": "Historical wording-review snapshot; current report/presentation-generator hashes are in report_explanation_review."
+  },
+  "current_report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
+  "report_explanation_review": {
+    "status": "COMPLETE_DOCUMENTATION_ONLY",
+    "updated_utc": "2026-11-03T09:03:18+00:00",
+    "updated_Asia_Bangkok": "2026-11-03T16:03:18+07:00",
+    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
+    "previous_report_sha256": "f0cb3164889908219cf11eb4d286f6a418c4886f9fabe5ad5ba22e3bac1437e5",
+    "generator_hashes": {
+      "report_runtime.py": "588b586111962a40dd63bf8043ce3bae6bcd752c0ef925857c1f8558b7f38229",
+      "report_target_confusion.py": "d793326e5df63c1f0a406c9d41f4ddd3b6ffdc8246de6b241f4b3fb84678abb8"
+    },
+    "scope": "Thai metric/mapping/domain/aggregation explanations and readable timing formulas; same accepted results and computation.",
+    "numeric_result_rows_unchanged": 113,
+    "protected_files_verified_unchanged": {
+      "metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6",
+      "metrics/CONTROLLED_ROI_PER_TARGET.csv": "19066d26c165263532f40e36187558a74c9f1b0f3a3611bc7f8c7ae4e08a8e25",
+      "metrics/CONTROLLED_ROI_FACE_VIEWS.csv": "516a40ee2ed829414b0d1cadf50ee1f7a7730d9fe8776e3aef884d4ec66f9548",
+      "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
+      "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+      "reports/MODEL_RECOMMENDATION.json": "8921ea5912fb80049eb4a0f094e09cc0114023cdb68fea5921ac84f38c33f3a7",
+      "configs/CONTROLLED_ROI_SCORING_PROTOCOL.json": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+      "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+      "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
+    },
+    "calculation_and_control_flow_AST_unchanged": true,
+    "generator_sections_match_report": true,
+    "GitHub_GFM_tables": 22,
+    "Chromium_tables": {
+      "TIMING_DEFINITIONS": {
+        "headers": 4,
+        "rows": 8,
+        "width": 1240
+      },
+      "PER_IMAGE_TABLE": {
+        "headers": 6,
+        "rows": 9,
+        "width": 1240
+      },
+      "QUALITY_MAPPING": {
+        "headers": 3,
+        "rows": 4,
+        "width": 1240
+      },
+      "QUALITY_METRICS": {
+        "headers": 4,
+        "rows": 10,
+        "width": 1240
+      }
+    },
+    "Thai_font_loaded": true,
+    "hypothetical_example_checks": 6,
+    "relative_report_links_checked": 30,
+    "legacy_D_anchor_preserved": true,
+    "new_model_calls": 0,
+    "raw_images_masks_weights_logs_read": 0,
+    "data_rescored": false,
+    "new_public_files": 0,
+    "private_verification": "outputs/report-explanation-review-20261103/VERIFICATION.json",
+    "prior_report_hash_scope": "Older report_language_review/report_formatting values are historical snapshots, including revisions before the comparability notice. Keep their original hashes; current hash is current_report_sha256 and this entry."
   }
 }

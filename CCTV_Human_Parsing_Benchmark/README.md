@@ -12,6 +12,8 @@
 การคำนวณจบ9/9 จาก90ภาพ/130ROIsต่อระบบ. ใช้ Hair61 / Face21 / Upper112 / Lower96 parts โดย Face14/35รายการกันออกเหมือนกันทุกโมเดล; Neck deliveryมี3รายการ. GTเป็นagent-assisted reference ไม่ใช่expertgold และส่วนต่างยังไม่ผ่านstatistical-significance study. คำแนะนำนี้สำหรับ checkpoint+controlled YOLO person-ROI configuration ไม่ใช่ production acceptance. ไม่มีการรันใหม่หรือเปลี่ยน config จากงานสรุปนี้.
 
 
+[วิธีอ่านคะแนน CCTV แบบเข้าใจง่าย](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#วิธีอ่านคะแนนชุด-cctv-นี้) อธิบายคลาส สูตร ตัวหาร ตัวอย่าง Mean-part เทียบ pooled และวิธีอ่านเวลาต่อ ROI/ต่อภาพ พร้อมขอบเขตของแต่ละตาราง
+
 ## Confusion matrix และส่วนที่พลาด
 
 [รายงานเดิม: ตารางรายคลาส พร้อมสูตรและแหล่งอ้างอิงของ metrics](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน) · [ภาพ matrix ทั้งเก้าระบบ](reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV counts/ตัวหาร](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv)
