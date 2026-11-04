@@ -1,5 +1,25 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## สถานะล่าสุด: ConvNeXt-B OOM และคิวไป Sapiens2 0.4B — 2026-11-04T09:38:00+07:00
+
+**FIVE_COMPLETE / CONVNEXT_STOPPED_INCOMPLETE / SAPIENS04_RUNNING**. ตรวจ controller/PIDs/tmux, terminal records และ log ท้ายไฟล์จริง ไม่เปิด worker หรือ retry เพิ่ม [หลักฐานสรุป](../runs/cihp-controlled-resources-20261103T062248Z/CPI_CONVNEXT_OOM_REVIEW.json)
+
+| ระบบ | สิ่งที่ยืนยันได้ | เวลาไทย |
+|---|---|---|
+| CPI R50 | STRICT_COMPLETE 5,000/5,000; missing0/duplicate0; metrics hash ตรง completion | จบ 4 พ.ย. 2026 05:06:43 น. |
+| CPI ConvNeXt-B | CUDA OOM ภาพ0037051; ครบ4,335/5,000; ยังขาด665ภาพที่ complete; primary=null | หยุด 4 พ.ย. 2026 09:26:09 น. |
+| Sapiens2 0.4B | Worker151980ทำงานในtmuxเดิม; snapshot80/5,000, failed0/invalid0 | เริ่ม 4 พ.ย. 2026 09:26:15 น.; จำนวนเป็น snapshot ณเวลาตรวจด้านบน |
+
+OOM ยืนยันจาก `FAILURE.json` และ traceback ใน `cnt_part_parser`/ReLU ของ CPI parsing head: ขอ allocationเพิ่ม2.19GiB ขณะข้อความ error รายงานdevice free2.08GiB, PyTorch allocated9.77GiB/reserved11.12GiB ข้อความนี้ยืนยันว่า allocation ครั้งนั้นล้มเหลว แต่ไม่พิสูจน์ว่าเกิดจาก external process หรือ fragmentation อย่างเดียว ค่า own-reusable-pool ที่ guard ตรวจล่วงหน้าเป็น estimate และไม่ได้รับประกัน allocation ก้อนใหญ่ระหว่าง model peak; ห้ามอ้างว่าผ่านguardแล้วจะไม่OOM
+
+เหตุที่คิวเดินต่อเป็น **policy เดิม** ใน `continue_controlled_cihp.py::controller`: รอ worker เดิมออก ถ้า error_kind เป็น MODEL_OOM ให้เก็บ partial โดยไม่retry แล้วตรวจresourceก่อนcheckpointถัดไป หากเป็น unknown/contract failure จึงหยุดทั้งคิว การเริ่มSapiensไม่ได้แปลว่าConvNeXtเสร็จครบหรือยกเว้นภาพที่ล้มเหลว
+
+นับจากdirectoryที่เขียนเสร็จ: ConvNeXtมี4,335frame packets,4,335score records และ20,702ROI packets เทียบ20,703attemptedVALcalls ส่วนภาพที่ไม่ครบ/partial และfailure historyเก็บไว้เดิม ตัวเลขนี้เป็นการนับdirectoryและอ่านterminalrecords ไม่ใช่fullNPZ/hash/semantic auditใหม่ ไม่มีMETRICSครบชุดของConvNeXtในsegmentนี้และคะแนนหลักยังnullตามSTRICT_COMPLETE
+
+Next:ปล่อยSapiensคิวเดิมทำงาน ไม่ย้อนCPIหรือปรับconfigระหว่างรัน การทำConvNeXtต่อภายหลังต้องreconcile4335complete/partialROI/failed0037051แล้วกำหนดtargetedrepairหรือcontinuationแยก ไม่เริ่ม5000ใหม่และไม่ลดprecision/resolutionเพื่อให้ผ่าน ไม่มีการวิเคราะห์คะแนนจัดอันดับในงานตรวจนี้
+
+## บันทึกก่อนการตรวจครั้งนี้
+
 อัปเดต 2026-11-02T19:05:31.621985+07:00 (Asia/Bangkok) · **FOUR_SYSTEMS_COMPLETE / CPI_RESOURCE_CONTINUATION_RUNNING**
 
 ผู้ใช้อนุมัติให้เริ่มรอบเปรียบเทียบที่ควบคุมinput/ownership และตกลงให้รันcheckpointเดิมเก้าตัวตามคิว เก็บเวลาแยกขั้น และวิเคราะห์คุณภาพรวมเมื่อbatchเข้าสู่terminalstate. รอบนี้ใช้ officialCIHPvalidation5000 IDs กับ frozenYOLOcacheเดิม รวม **24,062 ROIs ต่อcheckpoint**. Run `cihp-controlled-roi-20261102T120403Z` แยกจากnative/commonเดิมและCCTV90

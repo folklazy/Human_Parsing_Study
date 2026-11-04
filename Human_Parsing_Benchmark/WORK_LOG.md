@@ -463,3 +463,11 @@ Inputs: reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md, configs/controlled_cihp_re
 Verification:17protectedsmallfiles(source/protocol/config/canonicalsummaryreports/index)hashunchanged, historicalreportbodyunchanged, relative links18รายการใช้ได้source/publication,6hypotheticalarithmeticcases Noimages/GTarrays/weights/predictionmasksอ่านเพิ่ม ไม่มีmodelcalls/newtests/fullscoring/rescore/bulkdatasetorpacketrehash ไม่อ้างexecutionacceptanceจากdocumentationreview หลักฐานprivate Human_Parsing_Benchmark/outputs/gt-scoring-comparison-review-20261103/VERIFICATION.json
 
 Scope/status:SHARED_SCORING_PROPOSAL_NOT_FROZEN; noactive-scientificchange ไม่มีlaunch/polling/rankinganalysis/score-drivenremapping คิวเดิมคงfrozenbounds เอกสารนี้ไม่อนุมัติannotateCIHP5000/CCTVทั้งหมดใหม่ Next:ส่งคำอธิบายและข้อเสนอชัดเจนที่ใช้savedoutputsได้;FaceGTต้องกำหนดpopulation/budget/versionก่อนงานannotationใหม่ Publication:5explicitexistingfilesตามdiff,commit/pushbranchเดิมและตรวจremote;Git historyเก็บcommitidentity
+
+## 2026-11-04T09:38:00+07:00 (Asia/Bangkok) — CPI_CONVNEXT_OOM_QUEUE_REVIEW_20261104
+
+ผู้ใช้ถามเหตุที่หยุดแล้วไปSapiens ตรวจprogress/process/tmux/controller/STATE/COMPLETION/FAILUREและtailConvNeXtlogจริง R50strict5000/metrics-hashตรง;ConvNeXtOOMในcnt_part_parser/ReLUภาพ0037051ที่4335complete(665missing-complete),20702ROIpackets/20703attemptedVALcalls,4335scores,primarynull;ไม่พบMETRICSครบชุด Controllerreturncode1แล้วเปิดSapiens04ตามMODEL_OOMcontinuepolicyที่มีอยู่ ไม่ใช่ถือว่าCPIcomplete Sapiensworker151980/controller3034452อยู่tmuxเดิม ณsnapshot80/5000failed0invalid0
+
+Errorขอเพิ่ม2.19GiBเมื่อdevicefree2.08GiB,allocated9.77/reserved11.12;poolguardไม่รับประกันallocation ไม่สรุปfragmentationหรือexternalPIDเป็นสาเหตุโดยไม่มีหลักฐาน ไม่มีGPUdiagnostic/modelcallsใหม่/scoreanalysis/testsuite/fullpacketrehash ตรวจเฉพาะterminalhashและdirectorycounts เก็บผลเดิมครบ
+
+Outputs:reports/CIHP_CONTROLLED_ROI_RUN_TH.md,STATUS,README,compactruns/cihp-controlled-resources-20261103T062248Z/CPI_CONVNEXT_OOM_REVIEW.json. Verification:9source/config/terminalartifact hashesคงเดิมหลังงานเอกสาร และR50METRICShashตรงcanonicalcompletion เผยแพร่เฉพาะ5relatedpaths. Next:คิวเดิมทำงาน;ConvNeXtคงINCOMPLETEจนreconciliation/targetedrepairต่อแยกโดยไม่discardหรือautomaticretry Gitcommit/pushbranchเดิมและตรวจremote

@@ -1,3 +1,13 @@
+# CPI ConvNeXt-B หยุดด้วย OOM; คิวเดิมรัน Sapiens2 0.4B — 2026-11-04T09:38:00+07:00
+
+**FIVE_COMPLETE / CONVNEXT_INCOMPLETE / SAPIENS04_RUNNING** — [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). CPI R50จบstrict5,000/5,000เมื่อ05:06:43ไทย ConvNeXtOOMภาพ0037051เมื่อ09:26:09ไทย คง4,335complete/665missing-complete/20,702committedROI packets; attemptedVAL20,703รวมfailed1,primarynull ห้ามนับว่าปิดรอบแล้ว
+
+Controller3034452รอConvNeXtออกแล้วไปSapiens0.4ตามMODEL_OOM→no-retry→next policyเดิม เริ่ม09:26:15ไทย Worker151980/tmuxcihp_resources_20261103T062248Z snapshot80/5,000ณเวลาตรวจ failed0/invalid0 ยอดปัจจุบันให้ใช้progress ไม่ใช้snapshotนี้ แก้เฉพาะรายงาน/สถานะและเพิ่มcompactevidence ไม่แตะexecution/config/resultsและไม่restart
+
+Next:คิวSapiensเดิมทำงาน; ConvNeXtต้องcontrolledreconciliation/targetedmemoryrepairแยกเมื่อดำเนินต่อ ไม่ทิ้งpartial/ไม่rerunระบบที่ครบ/ไม่ลดquality settings ไม่วิเคราะห์rankระหว่างbatch
+
+## บันทึกก่อนการตรวจOOMครั้งนี้
+
 # ทำไม CIHP/CCTV ยังใช้วิธีให้คะแนนต่างกัน — 2026-11-04T01:25:24+07:00 (Asia/Bangkok)
 
 **COMPARABILITY_REVIEW_COMPLETE / SHARED_PART_SCORING_PROPOSAL_NOT_FROZEN** — [ผลตรวจและข้อเสนอในรายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). แยกความต่างที่เป็น design choice (global เทียบ mean-part) ออกจาก GT limitations (partial annotation/ไม่มี CIHP Neck-uncertainty binding) และ matching ที่ใช้คนละสูตร CIHP รอบ controlled มี mean-part/pooled part counts เป็น secondary อยู่แล้ว จึงใช้สูตรร่วมประกอบรายงานได้ แต่ไม่อ้าง GT/matching equivalent โดยอัตโนมัติ

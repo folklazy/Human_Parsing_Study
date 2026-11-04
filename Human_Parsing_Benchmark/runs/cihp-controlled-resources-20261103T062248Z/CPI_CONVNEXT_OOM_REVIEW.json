@@ -1,0 +1,75 @@
+{
+  "work_id": "CPI_CONVNEXT_OOM_QUEUE_REVIEW_20261104",
+  "observed_utc": "2026-11-04T02:38:00+00:00",
+  "observed_Asia_Bangkok": "2026-11-04T09:38:00+07:00",
+  "run_id": "cihp-controlled-resources-20261103T062248Z",
+  "status": "FIVE_COMPLETE_CONVNEXT_INCOMPLETE_SAPIENS04_RUNNING",
+  "ConvNeXt": {
+    "completed": 4335,
+    "expected": 5000,
+    "missing_complete_frames": 665,
+    "failed_forward_attempts": 1,
+    "invalid": 0,
+    "VAL_ROI_calls_attempted": 20703,
+    "committed_ROI_packets": 20702,
+    "committed_frame_packets": 4335,
+    "scored_frames": 4335,
+    "artifact_directory_counts_only_not_packet_integrity_reaudit": true,
+    "failed_image": "0037051",
+    "stopped_utc": "2026-11-04T02:26:09.351403+00:00",
+    "primary": null,
+    "strict_complete": false,
+    "error_kind": "MODEL_OOM",
+    "error": "RuntimeError('CUDA out of memory. Tried to allocate 2.19 GiB (GPU 0; 14.56 GiB total capacity; 9.77 GiB already allocated; 2.08 GiB free; 11.12 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+    "traceback_site": "causal_parser_head.py:437 -> cnt_part_parser -> torch.relu",
+    "failure_sha256": "225ef45cc1103a1eb39d7a13cd53fce3c5dc0acda2c89d5c587785805f737006"
+  },
+  "R50": {
+    "completed": 5000,
+    "strict_complete": true,
+    "missing": 0,
+    "duplicate": 0,
+    "metrics_hash_matches_completion": true,
+    "completed_utc": "2026-11-03T22:06:43.433786+00:00"
+  },
+  "Sapiens04": {
+    "status": "VALIDATION_RUNNING",
+    "completed_snapshot": 80,
+    "VAL_ROI_calls_snapshot": 438,
+    "failed": 0,
+    "invalid": 0,
+    "started_utc": "2026-11-04T02:26:15.240291+00:00",
+    "worker_pid": 151980
+  },
+  "controller": {
+    "pid": 3034452,
+    "queue_stopped": false,
+    "policy": "MODEL_OOM:retain partial/no retry/continue next independent checkpoint; other errors stop for reconciliation",
+    "source": "Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py:controller"
+  },
+  "interpretation": {
+    "confirmed": "Allocation failure inside CPI parsing-head ReLU",
+    "allocation_requested_GiB": 2.19,
+    "device_free_at_error_GiB": 2.08,
+    "torch_allocated_at_error_GiB": 9.77,
+    "torch_reserved_at_error_GiB": 11.12,
+    "fragmentation_proven": false,
+    "external_process_cause_proven": false,
+    "pre_forward_pool_estimate_is_not_allocation_guarantee": true
+  },
+  "source_config_and_terminal_artifact_hashes": {
+    "Human_Parsing_Benchmark/configs/controlled_cihp_resources.json": "f7135ec6680bfb3e922e221d4cba53751c18991362cf5807a943a95b09d5605e",
+    "Human_Parsing_Benchmark/scripts/controlled_cihp.py": "583f65ee18e5d1e54d736287e7fdba625aa29d80314a7710c38e5329715f6160",
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py": "d1707c4e3dc111f3948d8731675981c5e278d906bbb15eb5144a830ba8641f4e",
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py": "0781167e38fd0c2beb8e708ef34bfa5919082213ce74cc1b1cb1a16bf949690e",
+    "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/WORKER_REVISION2.py": "1349986cdc9bcf044dabedfd036dd05aef1c67169db959f0b97976762ac66eac",
+    "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/CPI_ConvNeXtB_CIHP/FAILURE.json": "225ef45cc1103a1eb39d7a13cd53fce3c5dc0acda2c89d5c587785805f737006",
+    "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/CPI_ConvNeXtB_CIHP/COMPLETION.json": "bf1551af0548933419573a138a22ebf2e4111bbbff59d74f2d902f347a5f83c9",
+    "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/CPI_R50_CIHP/COMPLETION.json": "cc215e1fe99e10c246744eeceb12ef7cd29af5d647c0a612f16dc37f4ffac668",
+    "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/CPI_R50_CIHP/METRICS.json": "f4e698ccb74810283e97008cdd2565311820a681e9f0ba97e2f75f6b40abea75"
+  },
+  "new_model_calls": 0,
+  "worker_or_controller_modified": false,
+  "full_artifact_hash_scan": false,
+  "next_action": "Let existing Sapiens queue continue; preserve CPI partial data for explicit controlled reconciliation/targeted repair, no automatic retry."
+}
