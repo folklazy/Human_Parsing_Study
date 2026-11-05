@@ -1,5 +1,17 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## Sapiens interruption continuation เตรียมพร้อม — 2026-11-05T11:51:00+07:00
+
+**RECONCILIATION_PASS / PREPARED_FOR_TMUX**. ผู้ใช้สั่งรันต่อหลัง KeyboardInterrupt. Segment `cihp-sapiens-resume-20261105T044738Z` ต่อจาก `cihp-controlled-resources-20261103T062248Z`; parent controller/workerไม่มีprocessแล้วและtmuxเดิมไม่อยู่ ไม่วินิจฉัยว่าเป็นOOM. Reuse6ระบบที่strictcompleteรวมSapiens0.4และCPI_R50 โดยไม่inferenceซ้ำ;CPIConvNeXtยังพัก4,335/5,000/primarynull ไม่เพิ่มเข้าqueue
+
+Sapiens0.8ตรวจผ่าน4,182completeframes/19,907ROIpacketsพร้อมNPZ/COMMIT/memberhashes,geometry/cropRGB/input/checkpoint/config/YOLOownershipและscoreledger เหลือ818frames/4,155ROIs รวมกันexact5,000/24,062โดยไม่ซ้ำ ไม่มีacceptedROIของภาพที่interrupt0036736. Reuseคะแนนรายภาพเดิมผ่านaccumulatorเดิม จึงไม่ต้องrescore4,182ภาพและไม่inferenceใหม่ [compactconfig](../runs/cihp-sapiens-resume-20261105T044738Z/CONTINUATION_SUMMARY.json) / [reconciliation](../runs/cihp-sapiens-resume-20261105T044738Z/RECONCILIATION.json)
+
+Scientific generatedworkerมีhashตรงparentทุกbyte;wrapperใหม่เปลี่ยนเฉพาะinterruptionreconciliation/queueโดยพักConvNeXtและตรวจเฉพาะnative29สำหรับreuseSapiens ตัวตรวจprepจำกัดdecodedcacheหนึ่งภาพ ไม่มีแก้scorer/checkpoint/FP32/resolution/ownership/GT เริ่มprocessใหม่ทำTRAINbaseline/timedparity2callsตามเดิม ไม่มีautoOOMretry/fallback คงเวลา24hและ80GiBต่อstreamรวมparent:0.8ใช้parent16.401hและพื้นที่เดิมแล้ว ไม่resetbudgets
+
+คิวใหม่0.8ส่วนที่ขาด→1Bแล้วหยุด ไม่มีCPIretry. tmuxใช้หน้าต่างcontrollerแยกจากprogressที่เลือกไว้เพื่อดูความคืบหน้า ปิดSSH/detachไม่หยุดworker การกลับมาทำต่อครั้งหน้าอ่านconfig/source/attemptและparentmanifestก่อนเสมอ ไม่เรียกprepareหรือcontrollerซ้ำ. Fullconfig/reusefingerprintsอยู่privateoutputsเพื่อเลี่ยงcommitbulkmetadata;Gitเก็บcompactbindings/คำสั่งและรายงาน
+
+## บันทึกก่อน interruption continuation
+
 ## สถานะล่าสุด: ConvNeXt-B OOM และคิวไป Sapiens2 0.4B — 2026-11-04T09:38:00+07:00
 
 **FIVE_COMPLETE / CONVNEXT_STOPPED_INCOMPLETE / SAPIENS04_RUNNING**. ตรวจ controller/PIDs/tmux, terminal records และ log ท้ายไฟล์จริง ไม่เปิด worker หรือ retry เพิ่ม [หลักฐานสรุป](../runs/cihp-controlled-resources-20261103T062248Z/CPI_CONVNEXT_OOM_REVIEW.json)

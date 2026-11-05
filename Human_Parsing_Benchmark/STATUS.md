@@ -1,3 +1,11 @@
+# Sapiens0.8 interruption continuation — 2026-11-05T11:51:00+07:00
+
+**RECONCILIATION_PASS / PREPARED_FOR_TMUX**. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Newsegment`cihp-sapiens-resume-20261105T044738Z` reuse4,182frames/19,907ROIs;pending818frames/4,155ROIs. Reuse6completeระบบไม่inferenceซ้ำ;ConvNeXtพักincomplete. คิว0.8→1Bตามกติกาเดิม ใช้scientificworkerhashเดิมและคง24h/80GiBรวมparent ไม่มีauto-retry/fallback รอTRAINparity/packetใหม่เพื่อยืนยันlaunch
+
+Next:เปิดdetachedtmux controllerพร้อมprogresswindow แล้วตรวจpacketใหม่สั้น ๆ ผลเก่า/KeyboardInterrupthistoryคงเดิม รายละเอียดconfig/identityในruns/cihp-sapiens-resume-20261105T044738Z/CONTINUATION_SUMMARY.json
+
+## บันทึกก่อนการรันต่อครั้งนี้
+
 # CPI ConvNeXt-B หยุดด้วย OOM; คิวเดิมรัน Sapiens2 0.4B — 2026-11-04T09:38:00+07:00
 
 **FIVE_COMPLETE / CONVNEXT_INCOMPLETE / SAPIENS04_RUNNING** — [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). CPI R50จบstrict5,000/5,000เมื่อ05:06:43ไทย ConvNeXtOOMภาพ0037051เมื่อ09:26:09ไทย คง4,335complete/665missing-complete/20,702committedROI packets; attemptedVAL20,703รวมfailed1,primarynull ห้ามนับว่าปิดรอบแล้ว
