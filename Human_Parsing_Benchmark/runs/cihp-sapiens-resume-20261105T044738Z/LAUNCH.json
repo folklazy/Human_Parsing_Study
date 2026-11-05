@@ -1,0 +1,26 @@
+{
+  "run_id": "cihp-sapiens-resume-20261105T044738Z",
+  "launched_utc": "2026-11-05T04:51:36.194224+00:00",
+  "session": "cihp_resume_20261105T044738Z",
+  "launch_commit": "4cf655f111bbea0ecf0a8d97a86c26a2a5e6c2ba",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/resume_controlled_cihp_sapiens.py",
+    "controller",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONFIG.json"
+  ],
+  "controller_log": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/controller.log",
+  "config": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONFIG.json",
+  "reuse_frames": 4182,
+  "pending_frames": 818,
+  "reused_ROIs": 19907,
+  "pending_ROIs": 4155,
+  "queue": [
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "held": "CPI_ConvNeXtB_CIHP",
+  "terminal_file": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONTROLLER.json"
+}

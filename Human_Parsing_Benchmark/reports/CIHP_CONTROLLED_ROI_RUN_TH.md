@@ -1,5 +1,17 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## รันต่อสำเร็จ: Sapiens0.8ครบ และ1Bกำลังทำงาน — 2026-11-05T15:33:58+07:00
+
+**SEVEN_COMPLETE / SAPIENS1B_RUNNING / CONVNEXT_HELD_INCOMPLETE**. ต่อจากreconciliation4182ภาพ/19907ROIs เปิดtmuxเมื่อ5พ.ย.11:51:36ไทยด้วยlaunchcommit`4cf655f111bbea0ecf0a8d97a86c26a2a5e6c2ba` Controller2096828อยู่จริงในsession`cihp_resume_20261105T044738Z`. Sapiens0.8ทำเพิ่ม818ภาพ/4155ROIs จบ15:22:18ไทย ครบexact5000unique/24062ROIs missing0duplicate0 Strictcomplete/METRICShash/assemblyผ่าน;เก็บKeyboardInterrupthistoryเดิม ไม่inference4182ภาพซ้ำ เวลาทำงานรวมparent+segment=19.912ชั่วโมงยังอยู่ในcap24hเดิม
+
+คิวเดิมเริ่มSapiens1B15:22:22ไทย worker2375725;TRAIN2calls/parityPASSและpacketแรก0000001ผ่านNPZ/memberhash/label29/original-grid/ownership/config+checkpoint+protocol/scoring reference. Snapshot17/5000ภาพ ณเวลาตรวจด้านบน failed0invalid0 ไม่ใช่จำนวนล่าสุดตลอดเวลา ผล0.8recovered packet0036736อ่านกลับผ่านด้วย ไม่ตรวจbulk5000ซ้ำและไม่วิเคราะห์คะแนนจัดอันดับระหว่างคิว
+
+[Launch](../runs/cihp-sapiens-resume-20261105T044738Z/LAUNCH.json) · [verification](../runs/cihp-sapiens-resume-20261105T044738Z/LAUNCH_VERIFICATION.json) · [0.8 closure](../runs/cihp-sapiens-resume-20261105T044738Z/SAPIENS08_COMPLETION.json). Fullassembly/reusefingerprintsอยู่privateoutputs คงCPIConvNeXt4335/5000primarynullและOOMhistoryโดยไม่retry ไม่ถือcohort9ตัวcomplete
+
+ดูprogressจากworkspace: `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/resume_controlled_cihp_sapiens.py progress --config Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONFIG.json` หรือ `tmux attach -t cihp_resume_20261105T044738Z` ซึ่งเลือกwindowprogressไว้ `Ctrl+B`แล้ว`D`เพื่อdetach งานเดินต่อ. Logs: `outputs/cihp-sapiens-resume-20261105T044738Z/controller.log` และ `Sapiens2_1b.log`;terminalstatusอยู่CONTROLLER.json/MODEL COMPLETION. คิวหยุดหลัง1Bตามgatesเดิม ไม่มีautomaticCPIretry/ขยาย24h/precisionfallback. Next:ปล่อยworker1Bเดิมทำงานจนterminalแล้วตรวจclosureโดยreuseaudits ไม่เปิดซ้ำ
+
+## บันทึกก่อนการตรวจlaunch/closureครั้งนี้
+
 ## Sapiens interruption continuation เตรียมพร้อม — 2026-11-05T11:51:00+07:00
 
 **RECONCILIATION_PASS / PREPARED_FOR_TMUX**. ผู้ใช้สั่งรันต่อหลัง KeyboardInterrupt. Segment `cihp-sapiens-resume-20261105T044738Z` ต่อจาก `cihp-controlled-resources-20261103T062248Z`; parent controller/workerไม่มีprocessแล้วและtmuxเดิมไม่อยู่ ไม่วินิจฉัยว่าเป็นOOM. Reuse6ระบบที่strictcompleteรวมSapiens0.4และCPI_R50 โดยไม่inferenceซ้ำ;CPIConvNeXtยังพัก4,335/5,000/primarynull ไม่เพิ่มเข้าqueue

@@ -1,3 +1,13 @@
+# Sapiens0.8ครบ5,000; Sapiens1Bรันในtmux — 2026-11-05T15:33:58+07:00
+
+**SEVEN_COMPLETE / SAPIENS1B_RUNNING / CONVNEXT_HELD_INCOMPLETE** — [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Segment`cihp-sapiens-resume-20261105T044738Z` ต่อ0.8สำเร็จ:4182parent+818new=5000unique,19907parent+4155new=24062ROIs strictcomplete missing0duplicate0/METRICShashตรง จบ15:22:18ไทย ประวัติKeyboardInterruptคงเดิม
+
+Controller2096828/1Bworker2375725aliveในtmux`cihp_resume_20261105T044738Z`;1Bเริ่ม15:22:22ไทย TRAINparity2callsและpacketแรกPASS snapshot17/5000 ณเวลาตรวจ failed0invalid0 CPIConvNeXtพัก4335/null ไม่retry. ดูสถานะปัจจุบันจาก `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/resume_controlled_cihp_sapiens.py progress --config Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONFIG.json` หรือattachsessionนี้ ไม่ใช้viewerparentที่RUNNINGค้าง
+
+Next:ปล่อย1Bworkerเดิมทำงาน;จบแล้วหยุดตามqueue/capเดิม ตรวจclosureภายหลังโดยไม่inferenceซ้ำ ไม่มีการวิเคราะห์qualityrankingหรือเปิดงานอื่นในรอบนี้ [Verification](runs/cihp-sapiens-resume-20261105T044738Z/LAUNCH_VERIFICATION.json)
+
+## บันทึกก่อนการยืนยันรันต่อ
+
 # Sapiens0.8 interruption continuation — 2026-11-05T11:51:00+07:00
 
 **RECONCILIATION_PASS / PREPARED_FOR_TMUX**. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Newsegment`cihp-sapiens-resume-20261105T044738Z` reuse4,182frames/19,907ROIs;pending818frames/4,155ROIs. Reuse6completeระบบไม่inferenceซ้ำ;ConvNeXtพักincomplete. คิว0.8→1Bตามกติกาเดิม ใช้scientificworkerhashเดิมและคง24h/80GiBรวมparent ไม่มีauto-retry/fallback รอTRAINparity/packetใหม่เพื่อยืนยันlaunch
