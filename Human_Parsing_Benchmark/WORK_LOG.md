@@ -393,3 +393,93 @@ Prelaunch4adcfe4/sourceconfigbound. InitiallauncherresolvedvenvsymlinktosystemPy
 ## 2026-10-30T11:11:02.869193+07:00 — cpi-common-c4p-20261030: CPI common scoring closure and nine-checkpoint analysis
 
 CPI_R50_CIHP/ConvNeXtB both COMPLETE5000 exactIDs, no missing/duplicate/invalid/failed, sourceownershipunchanged; CPUstreamsended04:07:49Z/04:07:56Z. Globalconfusionprojectedfromaccepted20x20audits; pixel/samplechecks10permodelPASS. Per-personmetricsnewrevision2scoring, sevenacceptedcommonMETRICS reused/hashunchanged; nativeconfig/source/results/evidenceunchanged. Derivednormalizedindexdeclarescanonicalprimarypaths/hashes/exactmembership/legacycompletionnullwithoutmutation. Fullprecisionarithmetic/protocol/denominatorchecksPASS. M2FPgloballeaderall4/C4-P83.623, QANetGT-personQleaderbuthigherFP; CPIConvNeXt-Badditionalquality/FPconfigurationtrade-off. No weightedscore/significance/speed/CCTVclaim. MainThai report+CSV/native6table/discordance/history/provenancecomplete. Resume mechanismdocumentedbutnotforced-interruptiontested. Nextreviewstagedcompactfiles/sourceonly,push/verifypubliclinksandhand off; no newmodel calls or automaticexperiment.
+
+## 2026-11-02T18:03:20.041685+07:00 — CIHP_CCTV_COMPARABILITY_AUDIT
+
+ผู้ใช้ขอทบทวนความเป็นมาตรฐานและความเทียบกันได้ อนุญาตรันใหม่เมื่อจำเป็น. ตรวจ source/config/canonical indices และ primary-source documentation; พบ route/ownership/Face domain/matching/aggregation ต่างกัน ไม่พบ arithmetic mismatch ในขอบเขตที่ตรวจ. Added read-only audit script, derived 36-target + 9-summary sensitivity CSV and evidence JSON; canonical metrics hashes9ไฟล์ตรง, protocolhashes3ตรง, support/domain/counts/formulasผ่าน, inputsไม่เปลี่ยน. No model calls/mask rescores. [รายงาน](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). Current scientific results preserved. Blockers for stronger claims: independent Face/Neck GT and controlled-CIHP execution bindings/readiness not completed. Next: validate shared-ROI CIHP contract/resources before a fresh authorized run; do not relaunch old controllers.
+
+## 2026-11-02T18:51:46.168259+07:00 — QUEUE_AND_TIMING_REQUIREMENTS
+
+ผู้ใช้ต้องการคิวอัตโนมัติและความเร็วแต่ละขั้น/ทั้งpipelineสำหรับใช้ต่อ. ตรวจYOLOtimingrunner/reportจริง พบ100frames×3rounds/warmup10และcontaminationhandling; ตรวจCCTVadapterพบinclusiveAPI timer/CPIinternalI/O. อัปเดตPLAN/report/STATUS ระบุsequentialquality,terminalfailurepolicy,stageexclusive/inclusivecoverage,liveYOLOtimingและjointresidency,cleanfixedsampleproposalและboundedresourcegates. Verificationเป็นsource/documentreviewและlinks ไม่มีexecutionacceptance. Next implementationของinstrumentationและCIHPbindings/readiness. อ่านsourcehashesดังนี้
+
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/benchmark.py` SHA256 `4c2db4ba2261f3880ce38017f21c5e0ee764d21e2dffc5aebb9310f48fce69dd`
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/report.py` SHA256 `91690e8e025c1d8bf9ba268b50a885e52aa3d88592651ee8492265c2760faa7e`
+- `YOLO_Large_Seg_MOTS20_Benchmark/src/repeat_clean_timing.py` SHA256 `c5e14ebf6836d5987c2103b9f4120db10fa4b8de564ea88e43f986bc6cee71ff`
+- `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py` SHA256 `80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158`
+- `CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py` SHA256 `0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c`
+
+## 2026-11-02T19:05:31.621985+07:00 — CONTROLLED_CIHP_IMPLEMENTATION_CPU_ACCEPTANCE
+
+ผู้ใช้ถามเริ่มได้หรือยัง ดำเนินimplementation/readinessตามscopeที่ยืนยันไว้. Addedseparatecontroller/scorer/measurementwrappersโดยreuseCCTVadapters. Frozenqualityconfig/manifestcihp-controlled-roi-20261102T120403Z:5000exactIDs,24062ROIs/model,9models,source19bindings,GTbindingsG_loc17520/G_sem17454. CPU13casesPASSในสองenvรวมactualsavedpacket/hand-countedcases. ประเมินrawarrays106.05GiBรวม9ก่อนcandidates/temp;freeguard50GiB/stream80GiB/24hคงเดิม. GPUcurrentlyidleT4;TRAINbaseline/timedparityสองcalls/modelเป็นruntimegate. ไม่มีVALcallsณcommitนี้. Livecleanend-to-endtimingและisolatednativeinternalstagespending. Nextcommitแล้วlaunchdetachedและตรวจfirstpacket. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+## 2026-11-02T19:13:53.625503+07:00 — CONTROLLED_CIHP_DETACHED_LAUNCH_VERIFIED
+
+ตรวจต่อหลังเครดิตหมด พบcontroller2144827/QANetworker2144852ยังรันในtmuxsessioncihp_controlled_20261102T120403Z. Launch19:06:08Thai/commit371910e; snapshot19:13:14มี521completedframes/2837ROIcalls,failed0/invalid0. TRAIN2callsparityPASS. ตรวจfirstVALpacket0000001atomicNPZ/memberhashes,geometry/native20IDs,ownershipและscientificbindingsผ่าน;frozen19sourcehashesตรง. ไม่มีworker/retryซ้ำและยังไม่อ่านrankหรือวิเคราะห์คะแนน. [Launch evidence](runs/cihp-controlled-roi-20261102T120403Z/LAUNCH_VERIFICATION.json). Remaining:batchquality5000×9ตามคิว; live/clean timingและบางinternalstagemeasurementpending. Next:controllerเดินคิวและกลับมาตรวจclosureจากartifactsเมื่อterminal.
+
+## 2026-11-03T09:11:08.068227+07:00 — CONTROLLED_CIHP_RPR_CONTINUATION_PREPARED
+
+ผู้ใช้สั่งแก้และรันต่อหลังหยุด. Rootcausezero-native-instancesreturnedwithoutparsingfield;reuseCCTVemptydecoderrevisionโดยไม่แตะfrozenrunner/config/source. Parent3modelsstrictcomplete5000reused;RPR22frames/149ROIshash/geometry/input/ownership/scoringauditedincludingpartial2ROIs. Pending23913. CPU5casesPASSทั้ง2env. Sourcegenerated11exactpatchesreviewable;time/storagebudgetsaggregateparent. NoGPUcallsในขั้นนี้. Freshsegmentcihp-controlled-continuation-20261103T021021Z;Nextcommit/launch/trainparity/canonicalfirstpacket. Mainnulluntilstrictcomplete;reportnoanalysisrank. [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+## 2026-11-03T09:12:21.920742+07:00 — CONTROLLED_CIHP_CONTINUATION_LAUNCH_VERIFIED
+
+Launch09:11:17Thai/commit66c6a5bในtmuxcihp_cont_20261103T021021Z. Controller2760271/RPRworker2760310verifiedalive. TRAINparity2callsPASS. Actualfailedframe0000312/ROI002nowzero-native-output/background,atomicreadback/ownership/bindingsPASS. Snapshot09:12:04RPR42frames,22parentreuse,newVAL113,noattemptfailures. Parent22/149acceptedpreservedและhistoryfailed1retained. NoQ/M/Dreinference/noGTpolicychange/noqualityrankinganalysis. [Evidence](runs/cihp-controlled-continuation-20261103T021021Z/LAUNCH_VERIFICATION.json). Nextallowdetachedqueuecomplete5000each; stop/reconcileonerror. Live/cleantimingpending
+
+## 2026-11-03T13:24:44.856361+07:00 — CPI_RESOURCE_CONTINUATION_PREPARED
+
+Userrequestscontinue/status. Actual4modelsstrictcomplete;CPI4frames/34ROIsstoppedbeforeforwardonphysicalfree1GiBguard,noCUDA-OOMtraceback. ReuseCCTVownreusablepoolaccounting(free+reserved-allocated)withsame1GiBthresholdandpreload/disk/timecaps. CPU4casesPASS2env;parentoutputs/scoring/crops/ownershiphashesaudited,pending24028. Currentguardmemorywillberecorded;parentpeakstatsdonotproveactualcacheatstop. Freshsegmentcihp-controlled-resources-20261103T062248Z;TRAIN2manualprocessreadiness;noautoOOMretryorqualitysettingschanges. Nextcommit/launch/verifyfailedimageproceeds;noqualityrankanalysis. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+## 2026-11-03T13:26:47.345448+07:00 — CPI_RESOURCE_CONTINUATION_LAUNCH_VERIFIED
+
+Launch13:24:57Thai/commit1a67a3a/sessioncihp_resources_20261103T062248Z,controller3034452/worker3034473verifiedalive. TRAIN2parityPASS,firstnewpacket0000027atomic/NPZ/config/ownershipPASS. Snapshot14completed/newVAL54,attemptfailures0. Parent4/34reused;4completecheckpointresultsretained. Currentfree/owncacheaccountingrecordedwithoutparenthistoricalinferenceclaim. [Evidence](runs/cihp-controlled-resources-20261103T062248Z/LAUNCH_VERIFICATION.json). Nextdetachedqueueprogress/closure;rankanalysisdeferred/livecleantimingpending
+
+## 2026-11-03T15:20:20+07:00 (Asia/Bangkok) — CIHP_METRIC_EXPLANATION_20261103T081802Z
+
+- การกระทำ/เหตุผล: ผู้ใช้ถามว่ามีคำอธิบายว่า metric คืออะไร มาจากไหน และคำนวณอย่างไรในภาษาง่ายหรือไม่ ตรวจพบรายงานเดิมมีนิยามแบบย่อ จึงขยายในไฟล์เดิมโดยไม่สร้างรายงานซ้ำ
+- Inputs: reports/CIHP_COMMON_NINE_RESULTS_TH.md, protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json, src/common_view/core.py::score_packet/semantic_metrics/gt_domains, manifests/CIHP_COMMON_RESULT_INDEX.json และคำอธิบายสูตร IoU อย่างเป็นทางการของ Cityscapes https://www.cityscapes-dataset.com/benchmarks/ (ตรวจอ่านครั้งนี้)
+- Outputs: ส่วนวิธีอ่านตัวชี้วัดในรายงานเดิม อธิบาย TP/FP/FN ระดับ pixel และ person, C4-P/C3 global aggregation, Q numerator/G_sem_C4 และ matching 0.50/0.75, ตัวอย่างสมมติ IoU=66.67%, C4-P=65%, C3=66.67%, Q=35%; Q เป็น metric เสริมของโครงการ ไม่ใช่ official CIHP/AP/PQ/iIoU และไม่ลงโทษ unmatched predictions โดยตรง
+- Verification: ตรวจนิยามกับ scorer เดิมโดยอ่าน source; ตรวจ 117 บรรทัดตารางผลเดิมไม่เปลี่ยน, canonical CSV/index/protocol/core/config ที่ผูกกับงานเดิมคง hashes; ตรวจตัวอย่างสูตรและ relative links แบบ bounded document checks ไม่มี inference, model calls, scoring/rescore, dataset audit หรือ test suite ใหม่ รายละเอียดการตรวจซ้ำได้จาก diff และ source references ไม่เรียกงานเอกสารนี้ว่า execution acceptance
+- Scope/history: แยกรายงาน CIHP เก้าระบบรอบก่อนจาก controlled ROI ปัจจุบันและ CCTV; ไม่วิเคราะห์ partial scores/แก้ frozen source/config/GT/weights/predictions ไม่รบกวน worker/controller เดิม
+- Git/publication: sync เฉพาะรายงาน, STATUS, WORK_LOG ไป publication checkout เดิมบน feat/cctv-target-confusion; commit identity อยู่ใน Git history และตรวจ remote หลัง push
+- Blockers: ไม่มีสำหรับงานคำอธิบาย; การรัน/clean timing/readiness อื่นคงสถานะเดิม Next: ส่งรายงานที่อธิบายสูตรแล้ว และปล่อย batch เดิมทำงานตาม protocol จน terminal ก่อนวิเคราะห์คุณภาพรวม
+
+## 2026-11-03T15:28:11+07:00 (Asia/Bangkok) — CIHP_METRIC_DETAILED_REVIEW_20261103
+
+- การกระทำ/เหตุผล: ผู้ใช้ขอตรวจว่ารายละเอียดเพียงพอนำไปอธิบายผลได้ครบหรือไม่ ตรวจ source จริงพบว่าคำอธิบายหลักตรง แต่ต้องแสดง domain/overlap/ties/empty-output/หน่วยนับให้ชัด จึงเติมส่วนรายละเอียดในรายงานเดิมและชี้ full.py ที่ aggregate คะแนน
+- Inputs: รายงาน CIHP เก้าระบบรอบก่อน, common_view/core.py และ full.py, protocol revision2, normalized result index, canonical METRICS9ไฟล์รวม90,954bytes, COMMON_SUMMARY/PER_TARGET/PERSON_METRICS.csv
+- Outputs: คำอธิบาย mapping พร้อม IDs, confusion6×6/TP-FP-FN, global vs person-valid domains, compose native ก่อน project, geometry-only tie policy/identical-geometry limitation, no-person vs semantic-empty vs unsupported vs invalid, duplicate/contamination/background leakage, support/union/person/image units, null/legacy-primary policy และขอบเขต CIHPเก่า/controlledใหม่/CCTV
+- Verification ที่ทำจริง: canonical metrics hash/protocol/membership records9ตรง; ตรวจ54target rows จาก confusion/support/union และ18person rows จาก TP/FP/FN/Q numerator/denominator เทียบ canonical; สูตรC4/C3 และค่าปัดเศษในตารางตรง full precision;117บรรทัดตารางเดิมไม่เปลี่ยน;8protected small input hashesเดิม; relative links39รายการใช้ได้ในsource/publication ทั้งคู่
+- ขอบเขต verification: reuse exact-membership evidenceเดิม ไม่ได้ enumerate raw5000 IDs/rehash packets/อ่านGT masks/รัน scorer ใหม่ ไม่ได้รัน tests, inference หรือ GPU diagnostics; งานนี้ยืนยัน arithmetic/คำอธิบายกับสิ่งที่บันทึก ไม่รับรอง GT/anatomy/taxonomy/input-route equivalence ทุกเงื่อนไข
+- Git/publication: sync เฉพาะรายงาน STATUS WORK_LOG ไป checkoutเดิม ตรวจ staged paths/whitespace แล้ว commit/push branchเดิม; commit identityอยู่Git history ตรวจremoteหลังpush ไม่มีassets/secrets/code/configในdiff
+- Blockers/next: ไม่มีสำหรับงานเอกสาร; clean speed/controlled batchคงสถานะเดิม ส่งรายงานพร้อมขอบเขตคำอ้าง ใช้คิวเดิมโดยไม่เปิดworkerหรือวิเคราะห์partial rankings
+
+## 2026-11-04T01:25:24+07:00 (Asia/Bangkok) / 2026-11-03T18:25:24+00:00 UTC — CIHP_CCTV_SAME_SCORING_REVIEW_20261103
+
+ผู้ใช้ถามเจาะจงว่าทำไม GT/Face-Neck/aggregation ไม่ใช้วิธีเดียวกัน ตรวจ source/config/GT binding schemas/ข้อกำหนดเดิมเฉพาะที่เกี่ยวข้อง พบ aggregationต่างเป็น design choice ที่ใช้สูตรเดียวกันใน part view ได้อยู่แล้ว CIHP controlled config และ scorer มี per-GT-part IoU/count/pooled TP-FP-FN ตามmask matching0.50เป็นsecondary; CCTVprimarymean-partใช้coverage0.50ของpartial GTและFace-domainที่กันNeck/uncertainty ไม่มีCIHPderivedNeckmaskในschemaที่ตรวจ
+
+อัปเดตรายงานเปรียบเทียบเดิมให้มี reviewล่าสุด แยกก่อนcontrolledCIHPเป็นhistoricalโดยเก็บbodyเดิมครบ อธิบายผลจากFace-domain/sizeweight/matcherด้วยตัวอย่างสมมติ6ค่าที่คำนวณอิสระ และเสนอshared-part metrics/GT-part-union association revisionจากsavedartifacts โดยไม่เปลี่ยนprimary/activecode/config/GTระหว่างคิว ไม่เลือกกติกาจากVALscores ไม่อ้างpartialGTbackgroundเป็นnegativeทั้งฉากหรือแชร์Q/F1personโดยไม่มีfullpersonGT คงFaceproxyข้อจำกัดจนมีreviewedGTนิยามร่วมกัน
+
+Inputs: reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md, configs/controlled_cihp_resources.json, src/controlled_ci_hp/scoring.py, src/common_view/core.py, scripts/controlled_cihp.py/continue_controlled_cihp.py, CCTVcontrolled_roi_core/evaluation/face_neck_evaluation/selected_part_evaluation, CCTVprotocolR1/R2 และหนึ่งCIHPbindingrecord/NPZmembernames+CCTVbindingkeys Primarysourcesที่ตรวจซ้ำ: CityscapesbenchmarkmetricdefinitionsและofficialSapiens2 SEG.md pinned7e5bae8; ไม่อ้างว่าsourceรับรองprojectmapping/partmean
+
+Verification:17protectedsmallfiles(source/protocol/config/canonicalsummaryreports/index)hashunchanged, historicalreportbodyunchanged, relative links18รายการใช้ได้source/publication,6hypotheticalarithmeticcases Noimages/GTarrays/weights/predictionmasksอ่านเพิ่ม ไม่มีmodelcalls/newtests/fullscoring/rescore/bulkdatasetorpacketrehash ไม่อ้างexecutionacceptanceจากdocumentationreview หลักฐานprivate Human_Parsing_Benchmark/outputs/gt-scoring-comparison-review-20261103/VERIFICATION.json
+
+Scope/status:SHARED_SCORING_PROPOSAL_NOT_FROZEN; noactive-scientificchange ไม่มีlaunch/polling/rankinganalysis/score-drivenremapping คิวเดิมคงfrozenbounds เอกสารนี้ไม่อนุมัติannotateCIHP5000/CCTVทั้งหมดใหม่ Next:ส่งคำอธิบายและข้อเสนอชัดเจนที่ใช้savedoutputsได้;FaceGTต้องกำหนดpopulation/budget/versionก่อนงานannotationใหม่ Publication:5explicitexistingfilesตามdiff,commit/pushbranchเดิมและตรวจremote;Git historyเก็บcommitidentity
+
+## 2026-11-04T09:38:00+07:00 (Asia/Bangkok) — CPI_CONVNEXT_OOM_QUEUE_REVIEW_20261104
+
+ผู้ใช้ถามเหตุที่หยุดแล้วไปSapiens ตรวจprogress/process/tmux/controller/STATE/COMPLETION/FAILUREและtailConvNeXtlogจริง R50strict5000/metrics-hashตรง;ConvNeXtOOMในcnt_part_parser/ReLUภาพ0037051ที่4335complete(665missing-complete),20702ROIpackets/20703attemptedVALcalls,4335scores,primarynull;ไม่พบMETRICSครบชุด Controllerreturncode1แล้วเปิดSapiens04ตามMODEL_OOMcontinuepolicyที่มีอยู่ ไม่ใช่ถือว่าCPIcomplete Sapiensworker151980/controller3034452อยู่tmuxเดิม ณsnapshot80/5000failed0invalid0
+
+Errorขอเพิ่ม2.19GiBเมื่อdevicefree2.08GiB,allocated9.77/reserved11.12;poolguardไม่รับประกันallocation ไม่สรุปfragmentationหรือexternalPIDเป็นสาเหตุโดยไม่มีหลักฐาน ไม่มีGPUdiagnostic/modelcallsใหม่/scoreanalysis/testsuite/fullpacketrehash ตรวจเฉพาะterminalhashและdirectorycounts เก็บผลเดิมครบ
+
+Outputs:reports/CIHP_CONTROLLED_ROI_RUN_TH.md,STATUS,README,compactruns/cihp-controlled-resources-20261103T062248Z/CPI_CONVNEXT_OOM_REVIEW.json. Verification:9source/config/terminalartifact hashesคงเดิมหลังงานเอกสาร และR50METRICShashตรงcanonicalcompletion เผยแพร่เฉพาะ5relatedpaths. Next:คิวเดิมทำงาน;ConvNeXtคงINCOMPLETEจนreconciliation/targetedrepairต่อแยกโดยไม่discardหรือautomaticretry Gitcommit/pushbranchเดิมและตรวจremote
+
+## 2026-11-05T11:51:00+07:00 (Asia/Bangkok) — SAPIENS_INTERRUPTION_CONTINUATION_PREPARED
+
+Userexplicitlyordersresumeintmux. RealPIDsabsent/parenttmuxgone;0.8failureKeyboardInterrupt4182frames/19907acceptedROIs,19908attemptedVAL;0.4complete5000. Addednewscopedorchestrationwrapper reuseunchangedgeneratedscientificworker12substitutions/hash1349986c. Existingreconciliationvalidatesparentpackets/NPZCRC+hashes/scoreledgers/cropRGB/YOLOgeometry/checkpoint/configbindings. FirstpreparationcompletedbeforeanattempttosendSIGINT(thePIDalreadyabsent,nosignaldelivered),retainedassuperseded;freshpreparelimitsdecodedcacheoneimageandrecordsnewsourcebinding. NoGPUcallsduringprepare,noinferencererun. Reuse6completesystems;holdConvNeXtOOM4335withprimarynull.
+
+Independentmanifestsetchecks:4182reuse+818pendingframes=5000;19907reuse+4155pendingROIs=24062disjoint;allreusedROIsbelongtocompleteparentframes,interrupted0036736hasnocommittedROI. Newprocess2TRAINreadinesscallsbound4157totalfor0.8;prior16.401h+parentbytesremaincountedagainst24h/80GiB/free50GiB. CPUacceptance/scorer/inferenceunchanged,reuseexistinggatesandrequireactualTRAINparitybeforeVAL. Outputs:wrapper,runs/cihp-sapiens-resume-20261105T044738Z/compactsummary+reconciliation,existingreport/STATUS. NoGT/scorer/weights/env/sourcepolicychange,noautomaticretry;tmuxqueue0.8then1B,stopbeforeheldCPI. Nextprelaunchcommit/pushthenlaunch/firstpacketcheck;recordlaunchcommit/PIDs/logpathwithoutselfhashrewrite. Scoresnotanalyzedwhilebatchactive.
+
+## 2026-11-05T15:33:58+07:00 (Asia/Bangkok) — SAPIENS_RESUME_LAUNCH_AND_08_CLOSURE_VERIFIED
+
+Usercontinuesactivework;checkedrealprocess/tmux/artifactsbeforenewaction.Noadditionalworkerlaunched. Existingcontinuationfromlaunchcommit4cf655f111bbea0ecf0a8d97a86c26a2a5e6c2ba completed0.8at15:22:18Thai:4182reused+818newframes=exact5000unique/disjoint,19907reused+4155newROIcalls=24062. Strictcompletionmissing0duplicate0,canonicalMETRICShashmatches,assemblyreferencesparentpreserved. Samplefirstrecovered0036736NPZ/memberCRC/hashes/native29/originalgrid/ownership/config/checkpoint/protocol/scorelinkPASS. OldKeyboardInterruptattemptretainedandactivehoursaggregate19.912<24h. Noqualityscalars/ranksanalyzed.
+
+Samecontroller2096828automaticallystarted1Bat15:22:22Thai;worker2375725aliveintmuxcihp_resume_20261105T044738Z. TRAINparity2callsPASS,actualpacket0000001atomicreadback+native29+ownership+scorebindingsPASS. Snapshot17/5000failed0invalid0. CPIConvNeXt remains4335/null/OOMhold. Verify23frozen-sourcehashes, nofullrehash/rescore/GTaudit/modeldiagnosticcallsbyinspector. AddedcompactLAUNCH/LAUNCH_VERIFICATION/08closureandexistingREADME/PLAN/STATUS/report;noimages/weights/bulkpacketsinGit. Next:publishrelatedpaths,verifyremoteandendturn;existing1Bprocesscontinueswithguards,noextraCPIretry/experiments.

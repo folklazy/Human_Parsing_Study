@@ -1,3 +1,83 @@
+# Sapiens0.8ครบ5,000; Sapiens1Bรันในtmux — 2026-11-05T15:33:58+07:00
+
+**SEVEN_COMPLETE / SAPIENS1B_RUNNING / CONVNEXT_HELD_INCOMPLETE** — [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Segment`cihp-sapiens-resume-20261105T044738Z` ต่อ0.8สำเร็จ:4182parent+818new=5000unique,19907parent+4155new=24062ROIs strictcomplete missing0duplicate0/METRICShashตรง จบ15:22:18ไทย ประวัติKeyboardInterruptคงเดิม
+
+Controller2096828/1Bworker2375725aliveในtmux`cihp_resume_20261105T044738Z`;1Bเริ่ม15:22:22ไทย TRAINparity2callsและpacketแรกPASS snapshot17/5000 ณเวลาตรวจ failed0invalid0 CPIConvNeXtพัก4335/null ไม่retry. ดูสถานะปัจจุบันจาก `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/resume_controlled_cihp_sapiens.py progress --config Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/CONFIG.json` หรือattachsessionนี้ ไม่ใช้viewerparentที่RUNNINGค้าง
+
+Next:ปล่อย1Bworkerเดิมทำงาน;จบแล้วหยุดตามqueue/capเดิม ตรวจclosureภายหลังโดยไม่inferenceซ้ำ ไม่มีการวิเคราะห์qualityrankingหรือเปิดงานอื่นในรอบนี้ [Verification](runs/cihp-sapiens-resume-20261105T044738Z/LAUNCH_VERIFICATION.json)
+
+## บันทึกก่อนการยืนยันรันต่อ
+
+# Sapiens0.8 interruption continuation — 2026-11-05T11:51:00+07:00
+
+**RECONCILIATION_PASS / PREPARED_FOR_TMUX**. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Newsegment`cihp-sapiens-resume-20261105T044738Z` reuse4,182frames/19,907ROIs;pending818frames/4,155ROIs. Reuse6completeระบบไม่inferenceซ้ำ;ConvNeXtพักincomplete. คิว0.8→1Bตามกติกาเดิม ใช้scientificworkerhashเดิมและคง24h/80GiBรวมparent ไม่มีauto-retry/fallback รอTRAINparity/packetใหม่เพื่อยืนยันlaunch
+
+Next:เปิดdetachedtmux controllerพร้อมprogresswindow แล้วตรวจpacketใหม่สั้น ๆ ผลเก่า/KeyboardInterrupthistoryคงเดิม รายละเอียดconfig/identityในruns/cihp-sapiens-resume-20261105T044738Z/CONTINUATION_SUMMARY.json
+
+## บันทึกก่อนการรันต่อครั้งนี้
+
+# CPI ConvNeXt-B หยุดด้วย OOM; คิวเดิมรัน Sapiens2 0.4B — 2026-11-04T09:38:00+07:00
+
+**FIVE_COMPLETE / CONVNEXT_INCOMPLETE / SAPIENS04_RUNNING** — [รายละเอียด](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). CPI R50จบstrict5,000/5,000เมื่อ05:06:43ไทย ConvNeXtOOMภาพ0037051เมื่อ09:26:09ไทย คง4,335complete/665missing-complete/20,702committedROI packets; attemptedVAL20,703รวมfailed1,primarynull ห้ามนับว่าปิดรอบแล้ว
+
+Controller3034452รอConvNeXtออกแล้วไปSapiens0.4ตามMODEL_OOM→no-retry→next policyเดิม เริ่ม09:26:15ไทย Worker151980/tmuxcihp_resources_20261103T062248Z snapshot80/5,000ณเวลาตรวจ failed0/invalid0 ยอดปัจจุบันให้ใช้progress ไม่ใช้snapshotนี้ แก้เฉพาะรายงาน/สถานะและเพิ่มcompactevidence ไม่แตะexecution/config/resultsและไม่restart
+
+Next:คิวSapiensเดิมทำงาน; ConvNeXtต้องcontrolledreconciliation/targetedmemoryrepairแยกเมื่อดำเนินต่อ ไม่ทิ้งpartial/ไม่rerunระบบที่ครบ/ไม่ลดquality settings ไม่วิเคราะห์rankระหว่างbatch
+
+## บันทึกก่อนการตรวจOOMครั้งนี้
+
+# ทำไม CIHP/CCTV ยังใช้วิธีให้คะแนนต่างกัน — 2026-11-04T01:25:24+07:00 (Asia/Bangkok)
+
+**COMPARABILITY_REVIEW_COMPLETE / SHARED_PART_SCORING_PROPOSAL_NOT_FROZEN** — [ผลตรวจและข้อเสนอในรายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). แยกความต่างที่เป็น design choice (global เทียบ mean-part) ออกจาก GT limitations (partial annotation/ไม่มี CIHP Neck-uncertainty binding) และ matching ที่ใช้คนละสูตร CIHP รอบ controlled มี mean-part/pooled part counts เป็น secondary อยู่แล้ว จึงใช้สูตรร่วมประกอบรายงานได้ แต่ไม่อ้าง GT/matching equivalent โดยอัตโนมัติ
+
+ข้อเสนอคือคงผล/primary/คิวเดิม และเมื่อมี shared-part scoring revision ที่ชัดเจนใช้ saved masks บน CPU ด้วย mapping/domain/eligibility/association ที่ประกาศร่วมกัน ส่วน Face แบบเดียวกันจริงต้องมีคู่มือและ GT หน้า/คอ/uncertainty ในทั้งสองชุด ไม่เพิ่ม per-model ignore/weight/GT-assisted prediction การตรวจนี้ไม่อนุมัติ reannotation ทั้งชุดหรือเปิด scoring/inference เพิ่ม
+
+ตรวจ17small source/config/protocol/result filesคงhashเดิม, ตัวอย่างสมมติ6ค่า, schema GT และลิงก์รายงานผ่าน โดยไม่ดูคะแนนpartial/อ่านGT arrays/รันmodel/scorer/ตรวจpopulationซ้ำ รายงาน2พฤศจิกายนที่เขียน controlled not run ติดป้าย historical ชัดแล้ว Next: ใช้ข้อสรุปนี้อธิบายเหตุผล; รักษา batch เดิมและวิเคราะห์ผลตาม frozen protocol เมื่อ terminal
+
+## บันทึกก่อนการทบทวนวิธีให้คะแนนร่วม
+
+# อธิบายตัวชี้วัด CIHP ในรายงานเดิม — 2026-11-03T15:20:20+07:00 (Asia/Bangkok)
+
+**METRIC_EXPLANATION_VERIFIED / DOCUMENTATION_ONLY**. เพิ่มคำอธิบายภาษาง่ายใน [รายงาน CIHP เก้าระบบรอบก่อน](reports/CIHP_COMMON_NINE_RESULTS_TH.md#วิธีอ่านตัวชี้วัด-ความหมาย-ที่มา-และตัวอย่างคำนวณ): IoU, C4-P/C3, Q_C4_GT, person TP/FP/FN/F1 พร้อมที่มา สูตร ตัวหาร ตัวอย่างสมมติ และข้อจำกัด Q ที่ต้องอ่าน FP/F1 ร่วม ระบุว่า IoU เป็นสูตรมาตรฐาน ส่วนชื่อกลุ่ม C4-P/C3 และ Q เป็นนิยามโครงการ; Q เฉลี่ยคลาสที่มีใน GT หรือ prediction ของแต่ละคู่ ไม่หารสี่ทุกคน
+
+ตรวจละเอียดเพิ่ม 2026-11-03T15:28:11+07:00: นิยาม global/person valid domains, confusion 6×6, compose-before-project, geometry ties/ID fallback, semantic-empty/unsupported/invalid และ contamination ตรงกับ core.py/full.py ตรวจ canonical METRICS9ไฟล์รวม90,954bytes, CSVรายtarget54รายการและperson18รายการ, ตัวเลขที่แสดงตรง full precision, ตารางเดิม117บรรทัดคงเดิม และ relative links39รายการใช้ได้ทั้ง source/publication ใช้ exact-membership audits เดิม ไม่อ่าน masks/ไม่ rescore หรือรัน test suite ใหม่
+
+งานนี้เป็นคำอธิบายผลเก่าที่ครบ 9/9 ไม่ใช่สรุปคะแนนรอบ controlled ROI ที่กำลังรัน ไม่ได้คำนวณคะแนนใหม่หรือแก้ execution/scorer/config/GT/predictions. คิวปัจจุบันอยู่ใน tmux `cihp_resources_20261103T062248Z`; ใช้ progress command ในสถานะการรันด้านล่างตรวจจำนวนล่าสุด ไม่ใช้ snapshot เก่ามาอ้างเป็นจำนวนปัจจุบัน ขั้นถัดไป: อ่านรายงานพร้อมนิยาม และปล่อยคิวเดิมทำงานตาม gates เดิม; วิเคราะห์คุณภาพรอบใหม่เมื่อ batch terminal
+
+## บันทึกสถานะการรันก่อนหน้างานเอกสาร
+
+# Controlled CIHP resource continuation กำลังทำงาน — 2026-11-03T13:26:47.345448+07:00
+
+**FOUR_COMPLETE / CPI_R50_RUNNING**. QANet/M2FP/D2FP/RPRครบ5000ต่อระบบและreuseเดิม. CPI R50parentหยุด4frames/34ROIsด้วยphysicalfreeguardก่อนforward ไม่มีOOMtraceback. Newsegment`cihp-controlled-resources-20261103T062248Z`ใช้ownreusablepoolaccountingพร้อมthreshold1GiBเดิม เปิด13:24:57Thai/controller3034452/worker3034473ในtmux. ตรวจsnapshot14/5000ภาพ,newROIcalls54,failed0/invalid0,TRAINparityและnewpacket0000027PASS. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+ดูสถานะ `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress`. เหลือ5โมเดลรวมCPIปัจจุบัน;controllerเดินคิว5000ตามgatesเดิม. Livecleantimingpendingและวิเคราะห์rankหลังbatchterminal
+
+# Controlled CIHP resource continuation เตรียมพร้อม — 2026-11-03T13:24:44.856361+07:00
+
+**FOUR_COMPLETE / CPI_RESOURCE_CONTINUATION_PREPARED**. QANet/M2FP/D2FP/RPRครบ5000/ระบบ. คิวหยุดCPI R50ที่4frames/34ROIsก่อนforwardเพราะphysicalfreeheadroomguard ไม่พบCUDA-OOMtraceback. ReconciliationPASS,preparedownreusablecacheaccountingตามCCTVเดิมและCPU4cases×2envPASS. Freshsegment `cihp-controlled-resources-20261103T062248Z`. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). NextlaunchTRAIN/newpacketแล้วคิวเดินต่อที่population5000เดิม. Livecleantimingpending
+
+# Controlled CIHP continuation กำลังทำงาน — 2026-11-03T09:12:21.920742+07:00
+
+**CONTINUATION_RUNNING / RPR_EMPTY_OUTPUT_VERIFIED**. QANet/M2FP/D2FPครบ5000และreuseเดิม. Freshsegment `cihp-controlled-continuation-20261103T021021Z` controller2760271/worker2760310ในtmux. ตรวจ09:12:04น.RPR42/5000ภาพ(22parentreused),newVALROIcalls113,failed0/invalid0ในattemptนี้. TRAINparityPASSและภาพ0000312/emptyROI0000312_002ผ่านatomicreadback/label/ownershipแล้ว. Parentfailureคงอยู่. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+ดูสถานะด้วย `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress`. Nextcontrollerเดินคิวเดิม5000ต่อโมเดลหลังclosure/resourcegate. วิเคราะห์คุณภาพเมื่อbatchterminal;clean/live timingpending
+
+# Controlled CIHP continuation พร้อมเปิดงาน — 2026-11-03T09:11:08.068227+07:00
+
+**THREE_COMPLETE / CONTINUATION_PREPARED_RPR_GATE_PENDING**. QANet/M2FP/D2FPครบ5000ต่อระบบ. ParentหยุดRPR22frames/149acceptedROIsที่KeyErrorparsing;zero-native-detectiondecoderfixเดิมจากCCTVนำมาใช้ต่อ. CPU5cases×2environmentsPASS,reconciliation149ROIs/22framesPASS,เหลือRPR23913ROIs. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Freshsegment `cihp-controlled-continuation-20261103T021021Z`. NextเปิดdetachedcontrollerตรวจTRAIN/packetแรก;ใช้ `continue_controlled_cihp.py progress` ดูสถานะใหม่. ประชากรยัง5000,historyคงครบ,livecleantimingpending
+
+# Controlled CIHP quality batch กำลังทำงาน — 2026-11-02T19:13:53.625503+07:00
+
+**QUALITY_BATCH_RUNNING / QANET_TRAIN_GATE_PASS** — [รายงานรอบปัจจุบัน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Run `cihp-controlled-roi-20261102T120403Z` เปิดใน tmux แล้ว controller2144827 / QANetworker2144852. ตรวจเวลา19:13:14น.พบ521/5000ภาพ, failed0/invalid0, packetแรกผ่าน atomic/readback/nativeIDs/ownership/bindings และ source19รายการตรง. คิวโมเดลถัดไปอัตโนมัติหลัง closure/resource gates
+
+ใช้ `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/controlled_cihp.py progress` จากworkspace rootเพื่อดูจำนวนล่าสุด. snapshotในเอกสารมีเวลาอ้างอิง. Live/clean timingphaseยังpendingแยกจากquality. Next action:ปล่อยcontrollerเดิมเดินคิว ติดตามhealth/completenessและวิเคราะห์รวมหลังbatchterminal
+
+> **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue
+
+> **Queue/timing requirements — 2026-11-02T18:51:46.168259+07:00** กำหนดsequentialautomaticqueue,model-boundaryreconciliation,health-onlymonitoringและวิเคราะห์หลังbatchterminalแล้ว. [PLAN](PLAN.md#คิวอัตโนมัติและการเก็บเวลาแยกขั้นสำหรับ-controlled-cihp) มีstage-leveltiming,cached/livepipelineboundaries,clean timing proposalและacceptance. Implementation/readinessของcontrolledCIHPยังpending
+
+> **Comparability review — 2026-11-02T18:03:20.041685+07:00:** ตรวจ CIHP กับ CCTV90 และคำนวณ aggregation sensitivity แล้ว: input route, ownership, Face domain และหน่วยเฉลี่ยต่างกัน จึงไม่ใช่การวัดเงื่อนไขเดียวกันข้าม dataset. [รายงานตรวจละเอียด](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · audit 9 systems / 36 targets PASS; ผลเดิมคงเดิม. Controlled CIHP ROI ยังไม่รันและยังไม่ผ่าน readiness.
+
 > **New CCTV work is separate:** [CCTV_Human_Parsing_Benchmark](../CCTV_Human_Parsing_Benchmark/README.md) uses partial-annotation recall diagnostics on90images. CIHP results below remain frozen. No full-image CCTV IoU/instanceF1/overallwinner claim.
 
 # Human Parsing Benchmark — current status

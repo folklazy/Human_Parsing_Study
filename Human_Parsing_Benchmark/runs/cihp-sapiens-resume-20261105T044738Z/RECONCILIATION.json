@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-controlled-resources-20261103T062248Z",
+  "completed_models_reused": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "Sapiens2_0.4b"
+  ],
+  "accepted_frames": 4182,
+  "accepted_ROIs": 19907,
+  "partial_frame": "0036736",
+  "partial_frame_accepted_ROIs": 0,
+  "missing_ROIs": 4155,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "SAPIENS_INTERRUPTION_CONTINUATION_SAME_WORKER"
+}

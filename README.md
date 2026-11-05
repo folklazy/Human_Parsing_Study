@@ -11,6 +11,16 @@
 
 ส่วนต่างรวม0.898percentage points;ยังไม่ทดสอบนัยสำคัญทางสถิติ. Faceใช้21/35items และNeckdeliveryมี3items; GTเป็นagent-assisted reference. ผลนี้รองรับคำแนะนำสำหรับcheckpoint+configurationที่รันจริง ยังไม่ใช่productionacceptance/คำอ้างเร็วที่สุดหรือเบาที่สุด. ไม่มีmodel inferenceใหม่จากงานสรุปนี้.
 
+[Confusion matrix รายโมเดล/รายคลาส และคำอธิบาย metrics](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน) · [ภาพรวม 36 matrices](CCTV_Human_Parsing_Benchmark/reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV counts และส่วนที่พลาด](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) — สร้างจาก accepted CCTV90 statistics เดิม ไม่มี inference หรือเปลี่ยนคะแนนหลัก
+
+[ความเร็วจาก log เดิม: Mean/Median/P95 ต่อ ROI และ worker elapsed](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) — แยก clock/coverage ของ parent และ continuation; shared-GPU diagnostics ไม่ใช่ end-to-end FPS ranking
+
+[สรุปเวลาที่บันทึกได้และเวลารวมของ worker พร้อมนิยามตัวชี้วัด](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว) — แยกยอด A+B จาก worker C เพื่อไม่ให้นับซ้ำ เวลารายคลาสไม่มี แต่คุณภาพรายคลาสมีอยู่เดิม
+
+[F1 / Precision / Recall รายสี่คลาสครบเก้าโมเดล](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล) — โมเดลละ 4 F1 scores จาก pooled binary pixel counts เดิม พร้อมสูตร/ตัวหาร; ไม่เปลี่ยน primary Macro4
+
+[เวลาต่อภาพและเวลารวมทั้งชุด 90 ภาพ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) — รวมเวลาของ ROI จริงตามภาพ หกโมเดลมีข้อมูลเวลาครบ 90 ภาพ ส่วน Sapiens ครบ 84/90 ภาพและคง null สำหรับข้อมูลที่ขาด ตารางรายภาพพร้อมชื่อไฟล์เก็บเป็นส่วนตัวตามนโยบาย CCTV
+
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 
 **Historical controlled-ROI prediction collection:** [controlled person-ROI batch](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_RUN_TH.md), nine checkpoints on90CCTVimages; same predicted crops and frozenYOLOownership. Prediction collection is separate from reviewed Face/Neck GT/scoring, so new headline metrics remain null until that gate passes. See [STATUS](CCTV_Human_Parsing_Benchmark/STATUS.md) for launch/progress.

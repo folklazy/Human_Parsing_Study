@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-02T12:04:18.781236+00:00",
+  "source_hashes": {
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/__init__.py": "a0795bbdda98eb27324bb34d2d8d2601f133ef54139dc749529c89a3fbb15bc6",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/scoring.py": "3d0cd437ab3808289be0181094909d09a690f0a5f47a98d4cdb1cbacb55a77db",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/measurement.py": "4e6cc35c906cf356cd4c38765659ff7dfdd35fa77ec631c0a0867c827b796387"
+  },
+  "runner_sha256": "583f65ee18e5d1e54d736287e7fdba625aa29d80314a7710c38e5329715f6160",
+  "test_sha256": "de59c4c1db4e929041bf6d6884fffb6cc72c48fdc30400ba37952d92736f93cd",
+  "cases_per_environment": 13,
+  "environments": [
+    ".venvs/sapiens2-pilot",
+    ".venvs/parser-legacy-cu113"
+  ],
+  "cases": [
+    "perfect union",
+    "wrong class",
+    "semantic empty with valid extent",
+    "no person",
+    "duplicate",
+    "OTHER FP/FN",
+    "VOID and invalid prediction",
+    "empty GT/null JSON",
+    "asymmetric geometry/ownership",
+    "instrument exception/restoration",
+    "actual saved packet to scorer/reporter parity",
+    "ID renaming and misplaced semantics",
+    "owner unknown and C3 valid face negative"
+  ],
+  "new_model_calls": 0,
+  "new_full_scoring_passes": 0,
+  "limitations": [
+    "GPU TRAIN parity and model-specific loading are runtime gates",
+    "Inclusive native API timings retain unknown transfer/internal I/O substages",
+    "Live YOLO end-to-end/clean timing phase not implemented"
+  ]
+}

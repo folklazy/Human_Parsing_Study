@@ -1,0 +1,302 @@
+{
+  "run_id": "cihp-controlled-roi-20261102T120403Z",
+  "created_utc": "2026-11-02T12:04:04.119095+00:00",
+  "status": "FROZEN_EXECUTION_REVISION1",
+  "route": "CONTROLLED_YOLO_PERSON_ROI",
+  "protocol_id": "CIHP_CONTROLLED_ROI_C4P_R1",
+  "protocol": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py": "80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_core.py": "15561c1c560f26d8d3a565d54f1a3a07be31ddbf927059443e6a826bf83a8cdd",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py": "0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/__init__.py": "a0795bbdda98eb27324bb34d2d8d2601f133ef54139dc749529c89a3fbb15bc6",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/scoring.py": "3d0cd437ab3808289be0181094909d09a690f0a5f47a98d4cdb1cbacb55a77db",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/measurement.py": "4e6cc35c906cf356cd4c38765659ff7dfdd35fa77ec631c0a0867c827b796387",
+    "Human_Parsing_Benchmark/scripts/controlled_cihp.py": "583f65ee18e5d1e54d736287e7fdba625aa29d80314a7710c38e5329715f6160",
+    "Human_Parsing_Benchmark/src/common_view/detector_cache.py": "f1e1d94f8ca37fc4ef8834faa2f71bc12e9bab62d016c3979588286d651fa18b",
+    "Human_Parsing_Benchmark/src/common_view/full.py": "e917fdb37f0383e7755ffbde36629250093bf6d271827dea8f6d76535ad392ca"
+  },
+  "parent_config": "CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261101T115653Z/CONFIG.json",
+  "parent_config_sha256": "ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae",
+  "population": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "detector_ledger": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+  "detector_ledger_sha256": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+  "GT_expected_sums": {
+    "G_loc": 17520,
+    "G_sem_C4": 17454
+  },
+  "GT_expected_part_counts": {
+    "1": 16494,
+    "2": 15803,
+    "3": 15674,
+    "4": 10157
+  },
+  "GT_binding_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings",
+  "GT_binding_manifest_sha256": "1a6f635ffdd0da1b767a6d7279e0437130bdfdd47e510fbfdaeb9b047cc82cc0",
+  "manifest": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/INPUTS.json",
+  "manifest_sha256": "e77b5ad81ce6be8e0e6ebd88bfcec470fb4a7a69fb53cddbbd49103b6df16424",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "family": "QANet",
+      "checkpoint": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes": 277950114,
+      "source": "third_party/human_parsing/QANet",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ROI",
+      "native_reference": false,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 277950114,
+        "mtime_ns": 1604249613000000000
+      }
+    },
+    "M2FP_R101_CIHP": {
+      "model_id": "M2FP_R101_CIHP",
+      "family": "M2FP",
+      "checkpoint": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "checkpoint_bytes": 757764792,
+      "source": "third_party/human_parsing/M2FP",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "native_config": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "native_config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 757764792,
+        "mtime_ns": 1674098713000000000
+      }
+    },
+    "D2FP_R101_CIHP": {
+      "model_id": "D2FP_R101_CIHP",
+      "family": "D2FP",
+      "checkpoint": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "checkpoint_bytes": 958247405,
+      "source": "third_party/human_parsing/D2FP",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "native_config": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "native_config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 958247405,
+        "mtime_ns": 1791793193709682172
+      }
+    },
+    "RPR_CIHP": {
+      "model_id": "RPR_CIHP",
+      "family": "RP-R-CNN",
+      "checkpoint": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "checkpoint_bytes": 234931960,
+      "source": "third_party/human_parsing/RP-R-CNN",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "native_config": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "native_config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 234931960,
+        "mtime_ns": 1596877946000000000
+      }
+    },
+    "CPI_R50_CIHP": {
+      "model_id": "CPI_R50_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "checkpoint_bytes": 571901148,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 571901148,
+        "mtime_ns": 1667635140000000000
+      }
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "checkpoint_bytes": 1301413296,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 1301413296,
+        "mtime_ns": 1667619434000000000
+      }
+    },
+    "Sapiens2_0.4b": {
+      "model_id": "Sapiens2_0.4b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 1626451404,
+        "mtime_ns": 1791799814805138982
+      }
+    },
+    "Sapiens2_0.8b": {
+      "model_id": "Sapiens2_0.8b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 3310187452,
+        "mtime_ns": 1791799862520192990
+      }
+    },
+    "Sapiens2_1b": {
+      "model_id": "Sapiens2_1b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 5883353380,
+        "mtime_ns": 1791799963596790372
+      }
+    }
+  },
+  "model_order": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP",
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "warmup": {
+    "image": "CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261101T114925Z/TRAIN_WARMUP.png",
+    "png_sha256": "d7e0cc3096d3323247f33bd87ed60835d1ff95afa79db86a4e5a7f8c9c08c64d",
+    "source_image_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+    "source_detector_artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0000930.npz",
+    "crop_xyxy": [
+      201,
+      0,
+      378,
+      346
+    ],
+    "designated_box": [
+      15.454818725585938,
+      8.307385444641113,
+      161.79470825195312,
+      343.2044982910156
+    ]
+  },
+  "expected_images": 5000,
+  "ROI_count": 24062,
+  "seed": 20261028,
+  "FP32": true,
+  "AMP": false,
+  "TF32": false,
+  "external_TTA": false,
+  "batch_size": 1,
+  "context_each_side": 0.1,
+  "automatic_retry": 0,
+  "automatic_recovery": 0,
+  "fallback": false,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "minimum_free_gib": 50,
+  "max_stream_gib": 80,
+  "planning_envelope_gib": 200,
+  "max_hours": 24,
+  "required_free_MiB": {
+    "YOLO26X": 2048,
+    "QANet_CIHP_HRNetW48_512x384": 2560,
+    "M2FP_R101_CIHP": 8192,
+    "D2FP_R101_CIHP": 9216,
+    "RPR_CIHP": 6144,
+    "CPI_R50_CIHP": 14500,
+    "CPI_ConvNeXtB_CIHP": 13500,
+    "Sapiens2_0.4b": 4608,
+    "Sapiens2_0.8b": 6656,
+    "Sapiens2_1b": 9600
+  },
+  "min_forward_free_MiB": 1024,
+  "resource_queue_timeout_seconds": 600,
+  "warmup_calls_per_model": 2,
+  "warmup_purpose": "TRAIN baseline then timed equivalence, once each",
+  "model_call_limit_per_model": 24064,
+  "scoring": "C4P revision2, additional mean GT-person-part IoU at mask matching0.50",
+  "primary": "Global mIoU4; mean-part and Q_GT/person F1 secondary",
+  "analyze_only_after_batch_terminal": true,
+  "live_timing_status": "PENDING_SEPARATE_READINESS",
+  "no_score_based_retry_or_tuning": true,
+  "storage": {
+    "final_arrays_uncompressed_per_model_bytes": 12652500381,
+    "nine_model_uncompressed_bytes": 113872503429,
+    "temporary_and_candidate_peak": "MEASURE_TRAIN_BEFORE_VALIDATION",
+    "compression_ratio_assumed": null,
+    "total_storage_guaranteed": false
+  }
+}

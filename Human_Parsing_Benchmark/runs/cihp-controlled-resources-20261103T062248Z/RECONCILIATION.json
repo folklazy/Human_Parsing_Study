@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-controlled-continuation-20261103T021021Z",
+  "completed_models_reused": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP"
+  ],
+  "accepted_frames": 4,
+  "accepted_ROIs": 34,
+  "partial_frame": "0000027",
+  "partial_frame_accepted_ROIs": 3,
+  "missing_ROIs": 24028,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "OWN_REUSABLE_CUDA_CACHE_ACCOUNTING_1"
+}

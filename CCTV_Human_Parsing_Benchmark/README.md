@@ -12,6 +12,22 @@
 การคำนวณจบ9/9 จาก90ภาพ/130ROIsต่อระบบ. ใช้ Hair61 / Face21 / Upper112 / Lower96 parts โดย Face14/35รายการกันออกเหมือนกันทุกโมเดล; Neck deliveryมี3รายการ. GTเป็นagent-assisted reference ไม่ใช่expertgold และส่วนต่างยังไม่ผ่านstatistical-significance study. คำแนะนำนี้สำหรับ checkpoint+controlled YOLO person-ROI configuration ไม่ใช่ production acceptance. ไม่มีการรันใหม่หรือเปลี่ยน config จากงานสรุปนี้.
 
 
+[วิธีอ่านคะแนน CCTV แบบเข้าใจง่าย](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#วิธีอ่านคะแนนชุด-cctv-นี้) อธิบายคลาส สูตร ตัวหาร ตัวอย่าง Mean-part เทียบ pooled และวิธีอ่านเวลาต่อ ROI/ต่อภาพ พร้อมขอบเขตของแต่ละตาราง
+
+## Confusion matrix และส่วนที่พลาด
+
+[รายงานเดิม: ตารางรายคลาส พร้อมสูตรและแหล่งอ้างอิงของ metrics](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน) · [ภาพ matrix ทั้งเก้าระบบ](reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV counts/ตัวหาร](metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv)
+
+[F1 / Precision / Recall แยก Hair / Face-domain / Upper / Lower](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล): โมเดลละ 4 F1 scores รวม 36 ค่า จาก pooled pixel counts เดิม พร้อมสูตรและความต่างจาก mean-part scores; F1 เท่ากับ pooled Dice ใน domain เดียวกัน
+
+Hair / Face-domain / Upper / Lower ใช้ binary 2×2 ต่อคลาส รวม 36 matrices ในภาพเดียว แสดง TP/FP/FN/TN, Recall, พิกเซลที่พลาด และ Precision พร้อมจำนวนส่วนที่ไม่ทับ GT เลย ไม่เปลี่ยนคะแนนหลัก Mean-part IoU / Macro4 เดิม ตัวเลขเป็น selected-person part tasks บน 90 ภาพ ไม่ใช่ full-scene accuracy; Face มี 21 eligible parts และ TN เป็นส่วนเติมเต็มของ task domain
+
+[สถิติความเร็วจาก log เดิม](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม): Mean/Median/P95 ต่อ ROI และ worker elapsed ทั้ง 9 โมเดล แยก monotonic adapter timer กับ continuation UTC intervals พร้อมจำนวนตัวอย่างและขอบเขต; เป็น shared-GPU diagnostics ยังไม่ใช่ end-to-end FPS ranking
+
+[สรุปเวลาที่บันทึกได้และเวลารวมของ worker](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว): แยก A+B จาก C เพื่อไม่ให้นับเวลาซ้ำ พร้อมสูตร ตัวหาร และสัดส่วน ROI ที่มีข้อมูลเวลา
+
+[เวลาต่อภาพและเวลารวมทั้งชุด 90 ภาพ](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ): รวมเวลา ROI ของภาพนั้นจาก log จริง ไฟล์ส่วนตัว `outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv` มี 9×90 รายการพร้อมชื่อภาพ หกโมเดลมีข้อมูลเวลาครบ 90 ภาพ ส่วน Sapiens แต่ละขนาดครบ 84/90 ภาพ จึงคงเวลารวมทั้งชุดเป็น null ไม่ใช้คำนวณ FPS ของ pipeline ทั้งหมด
+
 ## ภาพรายละเอียดรายโมเดล (private)
 
 เปิด `outputs/model-detail-gallery-20261102/index.html` เพื่อเลือกดูทั้ง9โมเดลจาก6ภาพเดิม/15ROIs: RGBเทียบGTและprediction, ซูม,ปรับopacity และสลับnativeclasses/สี่เป้าหมายร่วม. ดาวน์โหลด `outputs/model-detail-gallery-20261102.zip` แล้วแตกเปิดindex.htmlได้โดยไม่ตั้งserver. Images/GT/masks/ZIPไม่ขึ้นpublicGit; [สรุปartifactsและการตรวจ](reports/MODEL_IMAGE_GALLERY.json) มีcounts/hashesและข้อจำกัด. ใช้ผลเดิม ไม่มีinference/rescore.

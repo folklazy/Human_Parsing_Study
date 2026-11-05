@@ -1,0 +1,21 @@
+{
+  "run_id": "cihp-controlled-roi-20261102T120403Z",
+  "launched_utc": "2026-11-02T12:06:08.000078+00:00",
+  "tmux_session": "cihp_controlled_20261102T120403Z",
+  "launch_commit": "371910efd8903426f05e19a376644fb4d6909a38",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/controlled_cihp.py",
+    "controller",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/controlled_cihp_quality.json"
+  ],
+  "controller_log": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/controller.log",
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "config_sha256": "ab672069027497384e9d7713933bf7dd74f7aad9c2f97c747125532103ac6eaa",
+  "scope": "9 selected checkpoints, controlled CIHP quality5000 each; TRAIN parity2/model; no automatic retries",
+  "CPU_acceptance": "Human_Parsing_Benchmark/reports/CONTROLLED_CIHP_CPU_ACCEPTANCE.json",
+  "controller_pid": 2144827,
+  "first_worker_pid": 2144852
+}

@@ -1,3 +1,13 @@
+> **Current CIHP controlled queue (2026-11-05T15:33:58+07:00):** Seven systems complete, including recovered Sapiens2 0.8B; Sapiens2 1B running in tmux `cihp_resume_20261105T044738Z`. ConvNeXt remains held incomplete. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS and progress command](STATUS.md).
+
+> **Current controlled CIHP queue (2026-11-04T09:38:00+07:00):** Five systems complete; CPI ConvNeXt-B stopped on CUDA OOM at 4,335/5,000 and remains incomplete; Sapiens2 0.4B is running in the existing tmux queue. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress` from the workspace root for live counts.
+
+> **Current controlled CIHP continuation:** QANet/M2FP/D2FP complete; RP-R-CNN empty-native decoder repaired and fresh segment running. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress` from workspace root for the combined parent/continuation state.
+
+> **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue
+
+> **Comparability review — 2026-11-02T18:03:20.041685+07:00:** ตรวจ CIHP กับ CCTV90 และคำนวณ aggregation sensitivity แล้ว: input route, ownership, Face domain และหน่วยเฉลี่ยต่างกัน จึงไม่ใช่การวัดเงื่อนไขเดียวกันข้าม dataset. [รายงานตรวจละเอียด](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · audit 9 systems / 36 targets PASS; ผลเดิมคงเดิม. Controlled CIHP ROI ยังไม่รันและยังไม่ผ่าน readiness.
+
 > **Current CCTV design:** [controlled person-ROI and Face/Neck proposal](../CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), PROPOSED_NOT_FROZEN. Derived GT/scorer/route readiness precede any new batch; CIHP frozen results are unchanged.
 
 > **CCTV status: GT_OWNER_REVIEW_REQUIRED.** [Sapiens measurement review](../CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) confirms source-owner conflicts and reports bounded fresh0.4/0.8/1B ROI diagnostics. Nine-system CCTV selection is on hold; CIHP results below remain frozen.

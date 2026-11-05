@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-controlled-roi-20261102T120403Z",
+  "completed_models_reused": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP"
+  ],
+  "accepted_frames": 22,
+  "accepted_ROIs": 149,
+  "partial_frame": "0000312",
+  "partial_frame_accepted_ROIs": 2,
+  "missing_ROIs": 23913,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "RPR_ROI_EMPTY_OUTPUT_1"
+}
