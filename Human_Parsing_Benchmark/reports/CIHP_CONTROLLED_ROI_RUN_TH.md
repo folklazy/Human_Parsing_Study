@@ -1,8 +1,12 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+> **Launch verified 2026-11-06T17:24:11.176769+07:00:** 1Bทำต่อจริงแล้ว ภาพ0036823ประกอบจาก2parentROIs+5newROIsปิดpacket/scoreสำเร็จ;native29,original375H×500W,NPZ/atomicmemberhashes,config/input/checkpointbindings,YOLOextent/scoreparityและownershipclip/scoringlinkผ่าน. Snapshot4223/5000,newVALcalls7,failed0invalid0. [Verification](../runs/cihp-sapiens1b-finish-20261106T101324Z/LAUNCH_VERIFICATION.json). ไม่มีการวิเคราะห์คะแนนระหว่างรัน
+
 ## ผู้ใช้สั่งให้ Sapiens1B ทำจนครบ: ยกเลิกเพดานเวลาเฉพาะรุ่น — 2026-11-06T17:16:27.279851+07:00
 
-สถานะ **RECONCILIATION_PASS / PREPARED_FOR_TMUX**, run `cihp-sapiens1b-finish-20261106T101324Z`. คำสั่งปัจจุบันของผู้ใช้ให้เอาข้อจำกัดเวลาออกและทำให้ครบ เป็นresource-policy amendmentที่ชัดเจน ไม่ใช่การปรับโมเดลเพื่อเพิ่มคะแนน. ใช้ตัวควบคุมใหม่ `scripts/finish_controlled_cihp_sapiens1b.py` แยกจากparent/frozenconfigs;ยกเลิกเฉพาะwall-time guardด้วย `execution_time_limit_enabled=false`, `max_hours=null`. เวลาสะสมparent86402.74051067303วินาทีคงอยู่และจะรวมกับเวลาของsegmentใหม่ในROUND_CLOSURE.json
+เปิดdetachedcontrollerเวลา17:19:03น.ไทย ด้วยlaunchcommit `50fd9b9284652ce4763614c26cdccf1c2462363f`;tmux `cihp_1b_finish_20261106T101324Z`, controller3616671/worker3616747. Process SIDอยู่ในtmuxและอยู่ต่อเมื่อSSH/Codexจบturnได้;ไม่มีworkerซ้ำ. เปลี่ยนเฉพาะviewerเก่าที่เป็นwatchให้ชี้runใหม่ ไม่ส่งสัญญาณไปยังbenchmarkworker. ใช้ `tmux attach -t cihp_1b_finish` เพื่อดูprogress window;detachด้วยCtrl+Bแล้วD. TRAINparityผ่านสองcalls และตรวจfirstnewframe0036823ผ่านเมื่อ17:24:11น.ไทย
+
+สถานะ **VALIDATION_RUNNING / FIRST_NEW_PACKET_PASS**, run `cihp-sapiens1b-finish-20261106T101324Z`. คำสั่งปัจจุบันของผู้ใช้ให้เอาข้อจำกัดเวลาออกและทำให้ครบ เป็นresource-policy amendmentที่ชัดเจน ไม่ใช่การปรับโมเดลเพื่อเพิ่มคะแนน. ใช้ตัวควบคุมใหม่ `scripts/finish_controlled_cihp_sapiens1b.py` แยกจากparent/frozenconfigs;ยกเลิกเฉพาะwall-time guardด้วย `execution_time_limit_enabled=false`, `max_hours=null`. เวลาสะสมparent86402.74051067303วินาทีคงอยู่และจะรวมกับเวลาของsegmentใหม่ในROUND_CLOSURE.json
 
 TargetedCPU6casesผ่านก่อนGPU: อนุญาตเวลาสะสมเกิน24hเมื่อamendmentปิดtimeguard;เปิดguardเดิมแล้วยังหยุดที่24h;free disk49GiB/stream81GiB/VRAMต่ำ1GiBยังหยุด;ตรวจsourceเทียบworkerเดิมแล้วเปลี่ยนเพียงเงื่อนไขtimeguard ไม่มีinference/ownership/scoringchanges. ไม่รันfullsuiteหรือGPUdiagnosticเพิ่มเพื่อแก้เรื่องเวลา
 

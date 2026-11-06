@@ -1,8 +1,12 @@
-# Sapiens1B continuation: ผู้ใช้ยกเลิกเพดานเวลา — 2026-11-06T17:16:27.279851+07:00
+# Sapiens1B รันต่อแล้วใน tmux — 2026-11-06T17:24:11.176769+07:00
 
-**RECONCILIATION_PASS / PREPARED_FOR_TMUX** — ผู้ใช้สั่งให้1Bทำจนครบโดยไม่หยุดเพราะเพดานเวลาอีกครั้ง. เตรียมrun `cihp-sapiens1b-finish-20261106T101324Z`;คิวมีเฉพาะ1B ส่วนอีก7ระบบใช้completionเดิมและCPIConvNeXtยังพัก. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+**VALIDATION_RUNNING / FIRST_NEW_PACKET_PASS / USER_TIME_CAP_REMOVED** — run `cihp-sapiens1b-finish-20261106T101324Z`;controller3616671,worker3616747,tmux `cihp_1b_finish_20261106T101324Z`. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [หลักฐานเปิดงาน](runs/cihp-sapiens1b-finish-20261106T101324Z/LAUNCH_VERIFICATION.json)
 
-ตรวจGPUว่างและไม่มีworkerซ้ำก่อนเริ่ม. TargetedCPU6casesผ่าน: generatedworkerต่างจากrevisionเดิมเพียงconditionalของtimeguard;wallcapยกเลิกแต่VRAM/disk/call/contract guardsยังอยู่. ตรวจledger/packet/NPZ/hash/input/YOLO bindingsผ่าน4222frames/20101ROIs รวม2partialROIsแล้ว;pending778frames/3961VALROIs และ2TRAINcallsตามเดิม. ยังไม่เปิดGPUในขั้นpreparation;รันเพียงIDs/ROIsที่ขาดหลังผ่านreconciliation. ห้ามแก้parentconfigย้อนหลังหรือresetเวลา86402.741วินาทีที่ใช้ไปแล้ว
+ตรวจใช้ผลเดิมผ่าน4,222ภาพ/20,101ROIs รวม2partialROIs;pendingตอนfreeze778ภาพ/3,961VALROIs. TRAINparityสองcallsผ่าน. ภาพแรกที่ทำต่อ0036823ปิดpacketและscoreสำเร็จ:7ROIs=2parent+5new,originalgrid375×500,native29/NPZ atomic hashes/config/input/checkpoint/YOLOextent-scores/ownership/scoring linksผ่าน. Snapshot17:24:11น.ไทย: **4,223/5,000ภาพ**,newVALcalls7,failed0invalid0;ตัวเลขปัจจุบันดูprogress ไม่ใช้snapshotนี้แทนlivecount
+
+ผู้ใช้ยกเลิกเพดานเวลาเฉพาะ1Bแล้ว จึงไม่หยุดซ้ำเพราะ24ชั่วโมง. เก็บเวลาparent86,402.741วินาทีรวมกับsegmentใหม่;VRAM/พื้นที่ว่าง50GiB/stream80GiB/finitecallbudget/noOOMretryยังเหมือนเดิม. Native/scorer/checkpoint/FP32/YOLO/GTไม่เปลี่ยน;7ระบบครบแล้วไม่รันซ้ำ,CPIConvNeXtยังพัก4,335/null,SAM3ไม่เปิด
+
+ดูสถานะ: `tmux attach -t cihp_1b_finish` (Ctrl+Bแล้วDเพื่อออกโดยไม่หยุดงาน). Viewerในsessionเก่า`cihp_resume_20261105T044738Z`ชี้runใหม่นี้แล้วด้วย. Logs/statusอยู่`outputs/cihp-sapiens1b-finish-20261106T101324Z/`. Workerอยู่ในdetachedtmuxและไม่ต้องให้Codexเฝ้า เมื่อจบสร้าง`ROUND_CLOSURE.json`/`SUMMARY_TH.md`อัตโนมัติ พร้อมcanonical`Sapiens2_1b/METRICS.json`เมื่อSTRICT_COMPLETEผ่าน. Next:ปล่อยworkerเดิมทำจนterminal;ไม่เปิดงานซ้ำหรือโมเดลอื่น
 
 ## สถานะก่อนผู้ใช้อนุมัติให้ทำจนครบ
 

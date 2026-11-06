@@ -506,3 +506,15 @@ Resourceamendment:1Bwalltime unlimited; preserve86402.741secondsparentelapsed,80
 ## 2026-11-06T17:18:06.896338+07:00 — SAPIENS1B_FINISH_RECONCILIATION_CLOSED
 
 Runcihp-sapiens1b-finish-20261106T101324Z. Existingcontinuationread_packetaccepted4222framepacketsand20101ROIpacketswithatomicmember/NPZhashes,source/input/geometry/native29/YOLOownershipandscoreledgerbindings;partial0036823twoROIsretained. Expected/reused/pendingdisjoint5000framesand24062ROIs;pending778frames/3961VALROIs,newcallcap3963including2TRAIN. NoGPUinferenceinpreparation. Config SHA256 recorded in runs/cihp-sapiens1b-finish-20261106T101324Z/CONTINUATION_SUMMARY.json alongwithselectedcheckpoint/config/source/environmentbindings and6CPUacceptancecases. Originalworkercomparedafteronlytimeconditionnormalizationisbyteidentical. Sourcecfgparentandallfailurehistorypreserved. Next:commit/pushscopedsource/provenanceandlaunchfreshdetached1B-onlyworker.
+
+
+## 2026-11-06T17:20:50.583729+07:00 — SAPIENS1B_FINISH_LAUNCHED
+
+Runcihp-sapiens1b-finish-20261106T101324Z;launchcommit50fd9b9284652ce4763614c26cdccf1c2462363f;detachedtmuxcihp_1b_finish_20261106T101324Z,controller3616671,worker3616747. Controlleracquiredsharedrunlockandstartsonly1B;sevencompletecheckpointsreused,CPIheld. Actual/procSIDandtmuxpanemembershipconfirmed. Repointedoldwatch-onlyviewer;nooriginalworkerwasaliveorinterrupted. stdoutcontroller.log/model.logandSTATE/CONTROLLERunderprivateoutputroot. NoSAM3orotherGPUjob. InitialstageINITIALIZING;TRAINparityandfirstnewpacketverificationpending. AutomaticROUND_CLOSURE.json/SUMMARY_TH.mdwillrecordterminalmembership/metricsandcumulativetime.
+
+
+## 2026-11-06T17:24:11.176769+07:00 — SAPIENS1B_FINISH_LAUNCH_VERIFIED
+
+Run cihp-sapiens1b-finish-20261106T101324Z. Controller3616671 and worker3616747 remain in detached tmux; seven completed systems reused and no other GPU process/model launched. TRAIN baseline/timed native parity PASS,2calls. First new frame0036823 committed from2accepted partialROI observations and5newROI calls; read_packet checked NPZ/memberhashes, native29/original375x500grid, frozenconfig/input/checkpointbindings, exactYOLOextents/scores and owned=np.where(extent,native,0), source-scorepacketlink. Snapshot4223complete,7newVALcalls (nextframealreadybegun),failed0invalid0. Verified newworker source against the actual frozen parent snapshot: byte-identical after normalizing only the time-condition amendment. Noqualityranking/GT/mapping/settings changes.
+
+Outputs: runs/cihp-sapiens1b-finish-20261106T101324Z/LAUNCH.json and LAUNCH_VERIFICATION.json, currentSTATUS/README/report. Originalexecution/scorer/config/artifacts untouched. Auto terminalreport writes ROUND_CLOSURE.json and SUMMARY_TH.md; scoreprimary only when exact5000/STRICT_COMPLETE passes. Retains86402.741secondsprior pluscurrentelapsed; no time stop, noautomaticretry/fallback, noothercheckpoint/SAM3launch. Next:leave this worker running to completion; use the repointed tmux viewer and canonicalterminalrecords.
