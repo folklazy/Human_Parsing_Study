@@ -1,3 +1,11 @@
+# Sapiens1B continuation: ผู้ใช้ยกเลิกเพดานเวลา — 2026-11-06T17:16:27.279851+07:00
+
+**RECONCILIATION_PASS / PREPARED_FOR_TMUX** — ผู้ใช้สั่งให้1Bทำจนครบโดยไม่หยุดเพราะเพดานเวลาอีกครั้ง. เตรียมrun `cihp-sapiens1b-finish-20261106T101324Z`;คิวมีเฉพาะ1B ส่วนอีก7ระบบใช้completionเดิมและCPIConvNeXtยังพัก. [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md)
+
+ตรวจGPUว่างและไม่มีworkerซ้ำก่อนเริ่ม. TargetedCPU6casesผ่าน: generatedworkerต่างจากrevisionเดิมเพียงconditionalของtimeguard;wallcapยกเลิกแต่VRAM/disk/call/contract guardsยังอยู่. ตรวจledger/packet/NPZ/hash/input/YOLO bindingsผ่าน4222frames/20101ROIs รวม2partialROIsแล้ว;pending778frames/3961VALROIs และ2TRAINcallsตามเดิม. ยังไม่เปิดGPUในขั้นpreparation;รันเพียงIDs/ROIsที่ขาดหลังผ่านreconciliation. ห้ามแก้parentconfigย้อนหลังหรือresetเวลา86402.741วินาทีที่ใช้ไปแล้ว
+
+## สถานะก่อนผู้ใช้อนุมัติให้ทำจนครบ
+
 # Sapiens1B หยุดที่เพดาน24ชั่วโมง — 2026-11-06T17:05:51.585401+07:00
 
 **STOPPED_RESOURCE_TIME_GUARD / SEVEN_COMPLETE / TWO_INCOMPLETE** — [รายงานปัจจุบัน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Sapiens1B ของ segment `cihp-sapiens-resume-20261105T044738Z` หยุด6พฤศจิกายน15:22:25น.ไทยด้วย `RESOURCE_TIME_GUARD` หลัง86,402.741วินาที; เป็นเพดานเวลา24ชั่วโมง ไม่ใช่OOM และไม่ใช่การจบ5,000ภาพ

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-sapiens-resume-20261105T044738Z",
+  "completed_models_reused": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b"
+  ],
+  "accepted_frames": 4222,
+  "accepted_ROIs": 20101,
+  "partial_frame": "0036823",
+  "partial_frame_accepted_ROIs": 2,
+  "missing_ROIs": 3961,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "SAPIENS1B_OPERATOR_TIME_CAP_REMOVED_1"
+}

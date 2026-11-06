@@ -1,5 +1,16 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## ผู้ใช้สั่งให้ Sapiens1B ทำจนครบ: ยกเลิกเพดานเวลาเฉพาะรุ่น — 2026-11-06T17:16:27.279851+07:00
+
+สถานะ **RECONCILIATION_PASS / PREPARED_FOR_TMUX**, run `cihp-sapiens1b-finish-20261106T101324Z`. คำสั่งปัจจุบันของผู้ใช้ให้เอาข้อจำกัดเวลาออกและทำให้ครบ เป็นresource-policy amendmentที่ชัดเจน ไม่ใช่การปรับโมเดลเพื่อเพิ่มคะแนน. ใช้ตัวควบคุมใหม่ `scripts/finish_controlled_cihp_sapiens1b.py` แยกจากparent/frozenconfigs;ยกเลิกเฉพาะwall-time guardด้วย `execution_time_limit_enabled=false`, `max_hours=null`. เวลาสะสมparent86402.74051067303วินาทีคงอยู่และจะรวมกับเวลาของsegmentใหม่ในROUND_CLOSURE.json
+
+TargetedCPU6casesผ่านก่อนGPU: อนุญาตเวลาสะสมเกิน24hเมื่อamendmentปิดtimeguard;เปิดguardเดิมแล้วยังหยุดที่24h;free disk49GiB/stream81GiB/VRAMต่ำ1GiBยังหยุด;ตรวจsourceเทียบworkerเดิมแล้วเปลี่ยนเพียงเงื่อนไขtimeguard ไม่มีinference/ownership/scoringchanges. ไม่รันfullsuiteหรือGPUdiagnosticเพิ่มเพื่อแก้เรื่องเวลา
+
+Reuseตามกลไกcontinuationเดิม:ตรวจframepacket/score/ledger bindings,NPZ atomic hashes,original-gridownershipและnative29/crop/inputของROIpackets แล้วfreezeaccepted/pendingก่อนlaunch. ตรวจผ่านจริง:4222completeframes/20101parentROIobservations รวม2partialROIsของ0036823;accepted/pendingdisjointและครบ5000frames/24062ROIs;pending778frames/3961VALROIs. Model-callbudgetใหม่3963=3961VAL+2TRAIN. Warmup/parityTRAINสองcallsตามfrozenworkerสำหรับprocessใหม่ แยกจากVALและไม่ใช้คะแนนเลือกsettings. คิวหยุดหลัง1B;CPIConvNeXtและSAM3.1ไม่เปิด
+
+เมื่อlaunchผ่านจะบันทึกconfig/worker/sourcehashes,launchcommit,tmux/PIDsและfirstpacketverificationใน `runs/cihp-sapiens1b-finish-20261106T101324Z/`. Canonicalpredictions/ledgerอยู่privateoutputs. หลังworkerจบตัวครอบจะสร้าง `ROUND_CLOSURE.json` และ `SUMMARY_TH.md` อัตโนมัติ โดยตรวจ5000unique/missing/duplicate/metrics hashและคงSTRICT_COMPLETE;ไม่มีautoretry/fallbackหรือการลบประวัติtimeguardเดิม
+
+
 ## สถานะปัจจุบัน: Sapiens1B หยุดที่เพดานเวลา24ชั่วโมง — 2026-11-06T17:05:51.585401+07:00
 
 **STOPPED_RESOURCE_TIME_GUARD / SEVEN_COMPLETE / TWO_INCOMPLETE.** `Sapiens2_1b` เริ่ม5พฤศจิกายน15:22:22น.ไทย และหยุด6พฤศจิกายน15:22:25น.ไทย หลัง86,402.741วินาที (24ชั่วโมง2.741วินาที). Tracebackใน `outputs/cihp-sapiens-resume-20261105T044738Z/Sapiens2_1b.log` และFAILURE.jsonตรงกันว่า `guard()` ยก `RESOURCE_TIME_GUARD` ก่อนเรียกROIถัดไป;configเดิมกำหนดmax_hours=24และรวมprior_execution_seconds. ไม่ใช่OOMและไม่ใช่การจบครบชุด Controllerบันทึกreturncode1และqueue_stopped=trueเวลา15:22:32น.ไทย

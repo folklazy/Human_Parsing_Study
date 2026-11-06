@@ -1,3 +1,5 @@
+> **Current CIHP controlled queue (2026-11-06T17:18:06.896338+07:00):** Sapiens1B continuation reconciled;4,222frames/20,101ROIs accepted,778frames/3,961VALROIs pending. User removed only1B's time cap; other resource/scientific guards stay. Fresh run `cihp-sapiens1b-finish-20261106T101324Z` prepared for tmux, not GPU-launched yet. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
+
 > **Current CIHP controlled queue (2026-11-06T17:05:51.585401+07:00):** Queue stopped. Sapiens2 1B hit the24h wall-time guard at4,222/5,000;778frames remain and primary=null. Seven systems are complete;ConvNeXt remains held at4,335. No GPU worker is running. Continuation needs packet reconciliation and an explicit time-budget amendment; the remaining tmux viewer is not a worker. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
 
 > **Historical snapshot (2026-11-05T15:33:58+07:00):** Seven systems complete, including recovered Sapiens2 0.8B; Sapiens2 1B running in tmux `cihp_resume_20261105T044738Z`. ConvNeXt remains held incomplete. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS and progress command](STATUS.md).

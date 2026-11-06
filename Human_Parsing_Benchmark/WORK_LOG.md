@@ -494,3 +494,15 @@ Inputs: frozen CONFIG.json/INPUTS.json (manifest SHA verified), terminal records
 Disclosed separate SAM3.1 labeling setup/inference on the same T4 approximately14:09–14:15 Thai, stopped14:15:48; prior statement that it did not affect the benchmark was unjustified. Causal slowdown was not measured; wall-time guard is the verified immediate stop cause. Timing remains shared-GPU diagnostics. Logs/evidence retained locally; no SAM3 restart.
 
 Blocker/next: obtain explicit per-model time-budget amendment, reconcile complete and partial ROI artifacts (current frame0036823) and create a fresh linked continuation without resetting accumulated time or repeating accepted predictions. CPIConvNeXt remains held4335/null and seven complete systems remain untouched. Git stores commit identity; no self-hash added to log.
+
+
+## 2026-11-06T17:16:27.279851+07:00 — SAPIENS1B_FINISH_AUTHORIZED / PREPARING
+
+Work/runID:cihp-sapiens1b-finish-20261106T101324Z;parent:cihp-sapiens-resume-20261105T044738Z. Current user explicitly orders completion and removes the time ceiling. Inspected no activeGPUworker/GPUcomputePID before preparation. Added a separate operator wrapper and6CPU tests exercising the actual generatedguard;allPASS. Frozen scientificworker normalized against its prior version differs only at the conditionaltimeguard. Parentconfig/source/results and seven accepted modelcompletions preserved;CPIConvNeXt/SAM3.1 not launched.
+
+Resourceamendment:1Bwalltime unlimited; preserve86402.741secondsparentelapsed,80GiB cumulative checkpointstream,50GiBfree guard,VRAMguard,finitepending-callbudget,noautomaticOOM/modelretries/fallback. Reconciliation uses existingatomic/NPZ/input/geometry/ownership/native29/scoreledgerchecks,one-imageboundedCPUcache. Expected4222parentframes/20101parentROIs including2partial;pending778frames/3961VALROIs,subjecttoactualreconciliation. Outputs:operatorwrapper,testfile,STATUS/PLAN/report. Next:freezeverifiedconfigandcompactprovenance,commit/pushlaunchsource,launchdetached1Bonly,verifyTRAINparity/firstnewpacketandhandbackwithoutcontinuouspolling.
+
+
+## 2026-11-06T17:18:06.896338+07:00 — SAPIENS1B_FINISH_RECONCILIATION_CLOSED
+
+Runcihp-sapiens1b-finish-20261106T101324Z. Existingcontinuationread_packetaccepted4222framepacketsand20101ROIpacketswithatomicmember/NPZhashes,source/input/geometry/native29/YOLOownershipandscoreledgerbindings;partial0036823twoROIsretained. Expected/reused/pendingdisjoint5000framesand24062ROIs;pending778frames/3961VALROIs,newcallcap3963including2TRAIN. NoGPUinferenceinpreparation. Config SHA256 recorded in runs/cihp-sapiens1b-finish-20261106T101324Z/CONTINUATION_SUMMARY.json alongwithselectedcheckpoint/config/source/environmentbindings and6CPUacceptancecases. Originalworkercomparedafteronlytimeconditionnormalizationisbyteidentical. Sourcecfgparentandallfailurehistorypreserved. Next:commit/pushscopedsource/provenanceandlaunchfreshdetached1B-onlyworker.
