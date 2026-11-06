@@ -1,6 +1,10 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+> **Current verified 2026-11-06T18:03:31.780614+07:00:** พัก1Bตามคำสั่งผู้ใช้ ตรวจCPI/OOMเสร็จแล้ว และเปิดคิวให้1Bทำต่อจริง;snapshot4269/5000. ภาพ0036922ใช้4parentROIs+1newROIปิดpacket/scoreสำเร็จ;TRAINparity/native29/geometry/hash/YOLOownership/scoringlinkผ่าน. CPIConvNeXtยังQUEUED4335/5000และไม่มีGPUworker;จะเริ่มหลัง1Bstrictcompleteและprocessออกเท่านั้น. [หลักฐาน](../runs/cihp-sequential-finish-20261106T105503Z/LAUNCH_VERIFICATION.json). เวลาcumulativeในclosureเป็นผลรวมactiveworker/diagnosticที่ประกาศ ไม่รวมช่วงพัก/เวลาปฏิทิน และไม่ใช่cleanend-to-end speed
+
 ## เตรียมคิว Sapiens1B → CPI ConvNeXt ตามคำสั่งผู้ใช้ — 2026-11-06T17:56:51.856783+07:00
+
+**เปิดคิวเวลา17:58:41น.ไทย:** launchcommit`b2ec732a014fafda586027ad41481f186912504b`,tmux`cihp_seq_20261106T105503Z`,queue3677294,1Bcontroller3677320/worker3677383. ตรวจSID/parentchainเป็นdetachedtmux;CPIยังQUEUED ไม่มีCPIworker. ดูด้วย `tmux attach -t cihp_seq`;viewerเก่าสองsessionชี้คิวใหม่แล้ว. Logs/statusในprivate`outputs/cihp-sequential-finish-20261106T105503Z/`;TRAINparityสองcallsผ่านและตรวจfirstnew1Bpacket0036922ผ่าน18:03:31น.ไทย:4269/5000,newVALcalls2,failed0invalid0;CPIยังQUEUED
 
 ผู้ใช้ชี้แจงให้พักSapiensก่อนเตรียมคิวและตรวจภาพOOMของCPI แล้วให้Sapiensทำต่อจนจบและต่อCPI. ส่งSIGINTหนึ่งครั้งไปworker3616747ที่ตรวจcmdlineแล้วเมื่อ6พฤศจิกายน17:41:41น.ไทยระหว่างMODEL_CALL_START เพื่อหลีกเลี่ยงpacketwrite;รอprocessออกและGPUว่างก่อนCPUfixtures/GPUdiagnostic. คงทุกpacket/partial/KeyboardInterruptและtimeguardhistory. ไม่ถือว่าoperatorpauseเป็นmodelOOM และไม่ใช้failedcounterใหม่ลบประวัติเก่า
 

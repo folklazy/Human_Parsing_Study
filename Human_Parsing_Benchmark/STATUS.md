@@ -1,10 +1,10 @@
 # คิว Sapiens1B → CPI ConvNeXt พร้อมเปิด — 2026-11-06T17:56:51.856783+07:00
 
-**CPI_DIAGNOSTIC_PASS / SEQUENTIAL_QUEUE_PREPARED** — ผู้ใช้ให้พักSapiensชั่วคราวเพื่อเตรียมCPIก่อน แล้วค่อยรันต่อเป็นลำดับ. พักworker3616747เมื่อ17:41:41น.ไทยด้วยSIGINTหนึ่งครั้งระหว่างMODEL_CALL_START;processออกแล้วและไม่มีการเขียนpacketค้าง. เก็บKeyboardInterruptและผลทุกsegmentไว้ ไม่ใช่modelOOM
+**SAPIENS_VAL_RUNNING / FIRST_NEW_PACKET_PASS / CPI_QUEUED** — ผู้ใช้ให้พักSapiensชั่วคราวเพื่อเตรียมCPIก่อน แล้วค่อยรันต่อเป็นลำดับ. พักworker3616747เมื่อ17:41:41น.ไทยด้วยSIGINTหนึ่งครั้งระหว่างMODEL_CALL_START;processออกแล้วและไม่มีการเขียนpacketค้าง. เก็บKeyboardInterruptและผลทุกsegmentไว้ ไม่ใช่modelOOM
 
-| ระบบ | ผลเดิมที่ตรวจผ่าน | เหลือภาพ / ROIใหม่ | สถานะ |
+| ระบบ | ผลเดิมที่ตรวจผ่าน | ที่เหลือตอนfreeze:ภาพ / ROIใหม่ | สถานะ |
 |---|---:|---:|---|
-| Sapiens2 1B | 4,268ภาพ /20,356ROIs รวม4partialROIs |732 /3,706|พร้อมรันต่อก่อน|
+| Sapiens2 1B | 4,268ภาพ /20,356ROIs รวม4partialROIs |732 /3,706|กำลังรันต่อ|
 | CPI ConvNeXt-B |4,335ภาพ /20,702ROIs รวม2partialROIs|665 /3,360|รอ1Bครบและprocessออก|
 | CPI R50 |5,000ภาพ|0|ครบแล้ว ไม่รันซ้ำ|
 
@@ -12,7 +12,7 @@ CPI shared-head CPU3casesและคิว/merge CPU5casesผ่าน. GPUdiag
 
 Queue`cihp-sequential-finish-20261106T105503Z`จะรัน1BครบSTRICT_COMPLETEและรอcontroller/workerออกก่อนเปิดCPI;ถ้า1Bไม่ครบคิวหยุด ไม่เปิดCPIแทรก. ตัวคิวรอchildprocessแบบblockingwait ไม่มีmodel/GPUcontext;viewerอ่านSTATEไฟล์เล็กทุก30วินาที. ยกเลิกwalltimecapในการทำให้ครบ คงVRAM/disk/callbudget/noautomaticretry. ไม่เปิดSAM3/โมเดลอื่น
 
-[รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [Queue config](runs/cihp-sequential-finish-20261106T105503Z/QUEUE_CONFIG.json) / [CPI diagnostic](runs/cihp-sequential-finish-20261106T105503Z/CPI_DIAGNOSTIC_SUMMARY.json). ยังไม่launchคิวในsnapshotนี้
+[First packet verification](runs/cihp-sequential-finish-20261106T105503Z/LAUNCH_VERIFICATION.json) / [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [Queue config](runs/cihp-sequential-finish-20261106T105503Z/QUEUE_CONFIG.json) / [CPI diagnostic](runs/cihp-sequential-finish-20261106T105503Z/CPI_DIAGNOSTIC_SUMMARY.json). เปิดคิว17:58:41น.ไทยแล้ว:queuePID3677294,1Bcontroller3677320/worker3677383อยู่ในtmux`cihp_seq_20261106T105503Z`;1BกลับมาทำVALจริงแล้ว;ตรวจ18:03:31น.ไทยสำเร็จสะสม4,269/5,000ภาพ,newVALcalls2,failed0invalid0. CPIยังไม่เปิด. ดู `tmux attach -t cihp_seq`
 
 ## ก่อนการพักเพื่อเตรียม CPI (historical snapshot)
 

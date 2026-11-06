@@ -1,0 +1,33 @@
+{
+  "queue_id": "cihp-sequential-finish-20261106T105503Z",
+  "launched_utc": "2026-11-06T10:58:41.732478+00:00",
+  "launch_commit": "b2ec732a014fafda586027ad41481f186912504b",
+  "session": "cihp_seq_20261106T105503Z",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/sequential_cihp_queue.py",
+    "run",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cihp-sequential-finish-20261106T105503Z/CONFIG.json"
+  ],
+  "config_sha256": "ec51218ea7b790e648610f8949a9432a97b995e7dd6977efdef9aca7bd844ea1",
+  "stdout_log": "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/cihp-sequential-finish-20261106T105503Z/queue.log",
+  "concurrent_GPU_workers": 1,
+  "order": [
+    "Sapiens2_1b",
+    "CPI_ConvNeXtB_CIHP"
+  ],
+  "old_readonly_viewers_repointed": [
+    "cihp_1b_finish_20261106T101324Z:1",
+    "cihp_resume_20261105T044738Z:1"
+  ],
+  "queue_pid": 3677294,
+  "sapiens_controller_pid": 3677320,
+  "sapiens_worker_pid": 3677383,
+  "sapiens_state": "VALIDATION_RUNNING",
+  "CPI_state": "QUEUED_NOT_STARTED",
+  "progress_poll_seconds": 30,
+  "first_new_packet_verified_utc": "2026-11-06T11:03:31.780614+00:00",
+  "snapshot_completed": 4269
+}
