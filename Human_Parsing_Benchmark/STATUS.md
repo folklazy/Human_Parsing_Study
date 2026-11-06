@@ -1,3 +1,13 @@
+# Sapiens1B หยุดที่เพดาน24ชั่วโมง — 2026-11-06T17:05:51.585401+07:00
+
+**STOPPED_RESOURCE_TIME_GUARD / SEVEN_COMPLETE / TWO_INCOMPLETE** — [รายงานปัจจุบัน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Sapiens1B ของ segment `cihp-sapiens-resume-20261105T044738Z` หยุด6พฤศจิกายน15:22:25น.ไทยด้วย `RESOURCE_TIME_GUARD` หลัง86,402.741วินาที; เป็นเพดานเวลา24ชั่วโมง ไม่ใช่OOM และไม่ใช่การจบ5,000ภาพ
+
+ตรวจ17:03น.ไทย: controller2096828/worker2375725ออกแล้ว ไม่มีcompute PIDบนT4; tmuxยังเหลือหน้าดูสถานะ ไม่ได้แปลว่าworkerทำงาน. ตรวจmanifest hashและmembershipของframe packets/score filesตรงกัน4,222unique IDs,เหลือ778ภาพ;20101ROI packet directoriesคงเดิม รวมpartialที่ต้องreconcile. terminalfailed=1เป็นresource-stop record,invalid=0,primary=null. การนับไฟล์ครั้งนี้ไม่ใช่NPZ acceptanceหรือfull rescoreใหม่ [หลักฐาน](runs/cihp-sapiens-resume-20261105T044738Z/SAPIENS1B_TIME_GUARD_REVIEW.json)
+
+Next:เก็บparentและpartialทั้งหมด ตรวจreconciliationก่อนfresh continuation และต้องมีการรับรองการขยายtime budgetเฉพาะ1Bก่อนlaunch ห้ามresetเวลาสะสมหรือแก้frozenconfigย้อนหลัง. ConvNeXtยังพัก4,335/nullจากOOMเดิม ไม่เปิดงานใดใหม่ในการตรวจครั้งนี้. SAM3.1ที่ใช้GPUร่วมช่วง14:09–14:15น.ไทยหยุดแล้ว;ไม่ถือว่าไม่มีผลต่อเวลา และยังไม่ได้วัดผลกระทบเชิงเหตุและผล
+
+## สถานะก่อนการตรวจเพดานเวลา (historical snapshot)
+
 # Sapiens0.8ครบ5,000; Sapiens1Bรันในtmux — 2026-11-05T15:33:58+07:00
 
 **SEVEN_COMPLETE / SAPIENS1B_RUNNING / CONVNEXT_HELD_INCOMPLETE** — [รายงาน](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Segment`cihp-sapiens-resume-20261105T044738Z` ต่อ0.8สำเร็จ:4182parent+818new=5000unique,19907parent+4155new=24062ROIs strictcomplete missing0duplicate0/METRICShashตรง จบ15:22:18ไทย ประวัติKeyboardInterruptคงเดิม

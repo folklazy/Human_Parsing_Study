@@ -1,4 +1,6 @@
-> **Current CIHP controlled queue (2026-11-05T15:33:58+07:00):** Seven systems complete, including recovered Sapiens2 0.8B; Sapiens2 1B running in tmux `cihp_resume_20261105T044738Z`. ConvNeXt remains held incomplete. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS and progress command](STATUS.md).
+> **Current CIHP controlled queue (2026-11-06T17:05:51.585401+07:00):** Queue stopped. Sapiens2 1B hit the24h wall-time guard at4,222/5,000;778frames remain and primary=null. Seven systems are complete;ConvNeXt remains held at4,335. No GPU worker is running. Continuation needs packet reconciliation and an explicit time-budget amendment; the remaining tmux viewer is not a worker. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+
+> **Historical snapshot (2026-11-05T15:33:58+07:00):** Seven systems complete, including recovered Sapiens2 0.8B; Sapiens2 1B running in tmux `cihp_resume_20261105T044738Z`. ConvNeXt remains held incomplete. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS and progress command](STATUS.md).
 
 > **Current controlled CIHP queue (2026-11-04T09:38:00+07:00):** Five systems complete; CPI ConvNeXt-B stopped on CUDA OOM at 4,335/5,000 and remains incomplete; Sapiens2 0.4B is running in the existing tmux queue. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress` from the workspace root for live counts.
 

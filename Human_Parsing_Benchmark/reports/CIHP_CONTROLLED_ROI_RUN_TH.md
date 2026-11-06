@@ -1,5 +1,21 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## สถานะปัจจุบัน: Sapiens1B หยุดที่เพดานเวลา24ชั่วโมง — 2026-11-06T17:05:51.585401+07:00
+
+**STOPPED_RESOURCE_TIME_GUARD / SEVEN_COMPLETE / TWO_INCOMPLETE.** `Sapiens2_1b` เริ่ม5พฤศจิกายน15:22:22น.ไทย และหยุด6พฤศจิกายน15:22:25น.ไทย หลัง86,402.741วินาที (24ชั่วโมง2.741วินาที). Tracebackใน `outputs/cihp-sapiens-resume-20261105T044738Z/Sapiens2_1b.log` และFAILURE.jsonตรงกันว่า `guard()` ยก `RESOURCE_TIME_GUARD` ก่อนเรียกROIถัดไป;configเดิมกำหนดmax_hours=24และรวมprior_execution_seconds. ไม่ใช่OOMและไม่ใช่การจบครบชุด Controllerบันทึกreturncode1และqueue_stopped=trueเวลา15:22:32น.ไทย
+
+ตรวจprocess/GPU/tmuxเวลา17:03น.ไทย: controller2096828กับworker2375725ไม่อยู่แล้ว,GPUไม่มีcomputePID,tmuxsessionเดิมเหลือหน้าดูสถานะเท่านั้น. ไม่มีworkerทำงานเงียบอยู่และไม่ได้เปิดworkerใหม่
+
+ตรวจsource manifest hashตรงconfigและexpected5,000unique IDs;frame directoriesที่มีCOMMIT.json/packet.json/prediction.npzและscore-file IDsตรงกัน4,222ภาพ ไม่มีIDsนอกmanifest เหลือ778ภาพ. มีROI packet directories20,101รายการ เก็บpartialของภาพ0036823ไว้ด้วย แต่ยังไม่ประกาศว่าpartialทั้งหมดผ่านreuse acceptance. `STATE/COMPLETION`ระบุfailed1,invalid0,primary=null;failed1ในครั้งนี้คือresource-stop ไม่ใช่หลักฐานmodel forwardล้มเหลว ต้องreconcileledger/partialก่อนเปิดcontinuation
+
+การตรวจครั้งนี้เป็นterminal-record/hashและfilename/membership inspection ไม่ได้full rehashNPZ,full rescoreหรือinferenceใหม่. หลักฐานพร้อมhashของterminalrecords: [SAPIENS1B_TIME_GUARD_REVIEW.json](../runs/cihp-sapiens-resume-20261105T044738Z/SAPIENS1B_TIME_GUARD_REVIEW.json). CPIConvNeXtยังคง4,335/nullจากOOMเดิม;อีก7ระบบใช้completionที่ตรวจแล้ว ไม่รันซ้ำ
+
+**การใช้GPUร่วมที่ต้องเปิดเผย:** การเตรียมและทดสอบSAM3.1สำหรับX-AnyLabelingใช้งานT4ร่วมช่วงประมาณ14:09–14:15น.ไทย และปิดเฉพาะSAM3.1เมื่อ14:15:48น.ไทย โดยเก็บlogsใน `SAM3_1_XAnyLabeling/logs/` ของworkspace. ไม่ควรกล่าวว่าไม่กระทบเวลาของbenchmark;ผลกระทบเชิงเหตุและผลยังไม่ได้วัด. เหตุหยุดโดยตรงที่ยืนยันได้คือwall-time guard ไม่ใช่หลักฐานว่าSAM3ทำให้OOMหรือทำให้หยุดทั้งหมด. Timingคงเป็นshared-resource diagnosticsและไม่ใช้จัดspeed ranking
+
+**ขั้นถัดไป:** ต้องรับรองtime-budget amendmentเฉพาะ1Bและทำcontrolled reconciliationก่อนfresh linked continuation;ห้ามresetเวลาเดิมเพื่อหลบcap ห้ามแก้frozen scientific config/precision/resolutionหรือเลือกoutputจากคะแนน. รักษา4,222complete framesกับpartialROIsไว้ ตรวจและreuseเฉพาะส่วนที่ผ่านcontract แล้วทำpendingเท่านั้น. การตรวจสาเหตุครั้งนี้ไม่ได้ขยายresource limitsหรือเปิดCPI/SAM3/modelอื่น
+
+## บันทึกก่อนการหยุดด้วยเพดานเวลา (historical snapshot)
+
 ## รันต่อสำเร็จ: Sapiens0.8ครบ และ1Bกำลังทำงาน — 2026-11-05T15:33:58+07:00
 
 **SEVEN_COMPLETE / SAPIENS1B_RUNNING / CONVNEXT_HELD_INCOMPLETE**. ต่อจากreconciliation4182ภาพ/19907ROIs เปิดtmuxเมื่อ5พ.ย.11:51:36ไทยด้วยlaunchcommit`4cf655f111bbea0ecf0a8d97a86c26a2a5e6c2ba` Controller2096828อยู่จริงในsession`cihp_resume_20261105T044738Z`. Sapiens0.8ทำเพิ่ม818ภาพ/4155ROIs จบ15:22:18ไทย ครบexact5000unique/24062ROIs missing0duplicate0 Strictcomplete/METRICShash/assemblyผ่าน;เก็บKeyboardInterrupthistoryเดิม ไม่inference4182ภาพซ้ำ เวลาทำงานรวมparent+segment=19.912ชั่วโมงยังอยู่ในcap24hเดิม

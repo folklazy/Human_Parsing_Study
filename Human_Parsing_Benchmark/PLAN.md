@@ -1,4 +1,6 @@
-> **Operational update (2026-11-05T15:33:58+07:00):** The interruption continuation recovered Sapiens0.8 to exact5,000 without repeating parent inference; the existing queue is now on1B, then stops. ConvNeXt is held incomplete. Scientific protocol and limits are unchanged. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+> **Operational update (2026-11-06T17:05:51.585401+07:00):** 1B stopped at the existing24h guard with4,222complete frame packets and778missing frames; no OOM in this stop. Seven systems remain complete;ConvNeXt remains held incomplete. Before continuation, reconcile complete/partial packets and obtain an explicit per-model time-budget amendment; preserve cumulative time and frozen scientific settings. No new inference is authorized by this status update. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+
+> **Historical operational update (2026-11-05T15:33:58+07:00):** The interruption continuation recovered Sapiens0.8 to exact5,000 without repeating parent inference; the existing queue is now on1B, then stops. ConvNeXt is held incomplete. Scientific protocol and limits are unchanged. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
 
 > **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue
 
