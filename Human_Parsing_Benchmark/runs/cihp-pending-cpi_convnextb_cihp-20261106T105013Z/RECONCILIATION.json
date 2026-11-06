@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-controlled-resources-20261103T062248Z",
+  "completed_models_reused": [],
+  "accepted_frames": 4335,
+  "accepted_ROIs": 20702,
+  "partial_frame": "0037051",
+  "partial_frame_accepted_ROIs": 2,
+  "missing_ROIs": 3360,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "OPERATOR_SEQUENTIAL_PENDING_ONLY_1"
+}

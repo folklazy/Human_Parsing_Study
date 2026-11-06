@@ -1,0 +1,25 @@
+{
+  "requested_utc": "2026-11-06T10:41:41.088532+00:00",
+  "reason": "User explicitly requests pausing Sapiens while CPI readiness/OOM preparation is completed; resume Sapiens then CPI sequentially",
+  "worker_pid": 3616747,
+  "signal": "SIGINT",
+  "state_snapshot": {
+    "completed": 4268,
+    "ROI_calls": 256,
+    "current_id": "0036922",
+    "reused_frames": 4222,
+    "reused_partial_ROIs": 2,
+    "failed": 0,
+    "invalid": 0
+  },
+  "last_event": {
+    "utc": "2026-11-06T10:41:37.945256+00:00",
+    "event": "MODEL_CALL_START",
+    "purpose": "VAL",
+    "image": "0036922",
+    "calls": 258
+  },
+  "signal_delivery_window": "MODEL_CALL_START; avoids targeting packet write phase",
+  "original_time_cap_remains_removed": true,
+  "accepted_artifacts_preserved": true
+}

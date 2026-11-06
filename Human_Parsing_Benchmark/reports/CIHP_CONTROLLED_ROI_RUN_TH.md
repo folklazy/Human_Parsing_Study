@@ -1,5 +1,22 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## เตรียมคิว Sapiens1B → CPI ConvNeXt ตามคำสั่งผู้ใช้ — 2026-11-06T17:56:51.856783+07:00
+
+ผู้ใช้ชี้แจงให้พักSapiensก่อนเตรียมคิวและตรวจภาพOOMของCPI แล้วให้Sapiensทำต่อจนจบและต่อCPI. ส่งSIGINTหนึ่งครั้งไปworker3616747ที่ตรวจcmdlineแล้วเมื่อ6พฤศจิกายน17:41:41น.ไทยระหว่างMODEL_CALL_START เพื่อหลีกเลี่ยงpacketwrite;รอprocessออกและGPUว่างก่อนCPUfixtures/GPUdiagnostic. คงทุกpacket/partial/KeyboardInterruptและtimeguardhistory. ไม่ถือว่าoperatorpauseเป็นmodelOOM และไม่ใช้failedcounterใหม่ลบประวัติเก่า
+
+**ReconciliationPASS:** 1Bรวม4222older+46new=4268frames,20101older+255new=20356acceptedROIs. Segmentที่พักมี256attemptedVALcallsแต่committed255ROIs;ไม่นำcallที่ถูกinterruptมาอ้างว่าเป็นpredictionสำเร็จ. ภาพ0036922มี4partialROIsที่ตรวจผ่าน. Pending732frames/3706VALROIs. CPIConvNeXtมี4335frames/20702acceptedROIs,partial0037051สองROIs;pending665frames/3360VALROIs. exact5000/24062ROI membershipsและaccepted/pendingdisjointตรวจจากmanifest/packet/scoreledger/NPZ/hash/input/crop/ownership ไม่ใช้counterอย่างเดียว. ไม่มีinferenceภาพที่ผ่านแล้วซ้ำ
+
+**CPI readiness:** sharednativehead numericCPUfixtures3casesผ่าน;model-boundGPUdiagnosticใช้ConvNeXtcheckpoint/configจริง3callsเท่านั้น:fixedTRAIN ROIด้วยrevision1,TRAINROIเดิมด้วยrevision3 และVAL0037051 ROIindex2ที่เคยOOMหนึ่งครั้ง. TRAINnative selectedmask/allcandidates/boxes/scores/associationตรงกัน;knownOOMprobeผ่านและอ่านnative20packetกลับได้. peakallocated7.429GiB/reserved7.764GiBของprobeเป็นdiagnosticobservation ไม่รับประกันทุกภาพและไม่ใช้จัดspeed/VRAMefficiency ranking. setupแรกจบก่อนmodelconstructionเพราะrelativepathhelper (0modelcalls) แก้pathnormalizationและรักษาหลักฐานแยกไว้ ไม่ใช่OOMretry
+
+ใช้model-localCPI_FEATURE_BRANCH_SCHEDULE_3พร้อมdependenciesCPI_FEATURE_BUFFER_REUSE_2และCPI_PERSON_CHUNK_RESTORATION_1โดยไม่แก้nativefilesบนdisk. Source/weights/nativeconfig/FP32/resolution/batch/TTA/threshold/crop/mapback/YOLO/scorerเดิม. ขอบเขตหลักฐานคือshared-headnumericcontrolsและoneTRAINoutputparity/oneknownOOMprobe;ไม่อ้างbitwiseequivalenceทั้งประชากร. ผลต่อไปเป็นconfigurationที่ประกาศimplementationhistoryชัดเจน:20702parentROIsด้วยrevision1และ3360pendingด้วยrevision3. Diagnosticoutputsไม่รวมcanonical และไม่ใช้คะแนนเลือกsettings
+
+**Queue:** `cihp-sequential-finish-20261106T105503Z` ใช้stdlib-only `scripts/sequential_cihp_queue.py`,รอchildcontrollerจบโดยไม่pollGPU/โหลดโมเดล. ต้องได้ROUND_CLOSUREstrict5000,missing/duplicate/failed/invalid0และBATCH_TERMINALของ1B แล้วcontroller/workerออก ก่อนเปิดCPI. ไม่มีparallelGPUworkers. Viewerอ่านเฉพาะSTATE/CONTROLLERไฟล์เล็กทุก30วินาที. CPUคิว/merge5casesผ่าน รวมduplicate rejectionและpartial/null/running dependencyที่ห้ามเลื่อนคิว. คิวหยุดเมื่อjobใดไม่ครบหรือerror ไม่auto-retry/fallback
+
+Resource amendmentคงแนวทางทำให้ครบโดยไม่หยุดตามwalltime;เก็บเวลาสะสม1B87757.283วินาทีและCPI15590.660วินาที (รวมdiagnostic28.339วินาที) ในfreshconfig ไม่resetcounter. 80GiBstream/50GiBfree/VRAMheadroom/finiteVAL+TRAINbudgetsเดิม. CPUsetup0callที่ไม่มีtimerระบุelapsedunknown ไม่สมมติ0. Canonicalwarmup/parity2TRAINcallsต่อfreshprocessแยกจาก3diagnosticcalls. R50และ7ระบบที่ครบไม่รันใหม่;ไม่มีSAM3/0.8/โมเดลอื่น
+
+หลักฐาน: [Queue](../runs/cihp-sequential-finish-20261106T105503Z/QUEUE_CONFIG.json), [CPI diagnostic](../runs/cihp-sequential-finish-20261106T105503Z/CPI_DIAGNOSTIC_SUMMARY.json), [1B reuse](../runs/cihp-pending-sapiens2_1b-20261106T105013Z/RECONCILIATION.json), [CPI reuse](../runs/cihp-pending-cpi_convnextb_cihp-20261106T105013Z/RECONCILIATION.json). ชุดconfigเต็ม/reusefingerprints/rawlogs/predictionsอยู่privateoutputs. Controllerจะสร้างROUND_CLOSURE.json/SUMMARY_TH.mdและcanonicalMETRICSแต่ละระบบเมื่อจบ;ไม่วิเคราะห์จัดอันดับระหว่างรัน
+
+
 > **Launch verified 2026-11-06T17:24:11.176769+07:00:** 1Bทำต่อจริงแล้ว ภาพ0036823ประกอบจาก2parentROIs+5newROIsปิดpacket/scoreสำเร็จ;native29,original375H×500W,NPZ/atomicmemberhashes,config/input/checkpointbindings,YOLOextent/scoreparityและownershipclip/scoringlinkผ่าน. Snapshot4223/5000,newVALcalls7,failed0invalid0. [Verification](../runs/cihp-sapiens1b-finish-20261106T101324Z/LAUNCH_VERIFICATION.json). ไม่มีการวิเคราะห์คะแนนระหว่างรัน
 
 ## ผู้ใช้สั่งให้ Sapiens1B ทำจนครบ: ยกเลิกเพดานเวลาเฉพาะรุ่น — 2026-11-06T17:16:27.279851+07:00

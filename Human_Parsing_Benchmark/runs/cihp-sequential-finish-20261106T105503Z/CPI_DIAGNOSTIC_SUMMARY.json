@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "model_id": "CPI_ConvNeXtB_CIHP",
+  "diagnostic_config_sha256": "05405cf4871f6b8a97bf6bab82557ecd283a5274747bbb5bbda376f603597e4f",
+  "state_sha256": "53560b37776b5a1dc5aab1384995efdb2f42165f609323c570cdc3a78f256ca0",
+  "configuration": {
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "parent_config": "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/CONFIG.json",
+    "parent_config_sha256": "f7135ec6680bfb3e922e221d4cba53751c18991362cf5807a943a95b09d5605e",
+    "checkpoint": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "checkpoint_bytes": 1301413296,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 1301413296,
+        "mtime_ns": 1667619434000000000
+      }
+    },
+    "profile": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+    "profile_sources": {
+      "Human_Parsing_Benchmark/scripts/diagnose_controlled_convnext_schedule.py": "d0a4d8eeb99d3224bd4eff3eb81b51d5da080cb37f76c2c6ecc9c3e09bef9897",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f"
+    },
+    "FP32": true,
+    "batch": 1,
+    "extra_TTA": false,
+    "diagnostic_ROI": {
+      "image_id": "0037051",
+      "index": 2
+    },
+    "call_limit": 3,
+    "purpose": "TRAIN revision1/revision3 hard-mask+candidate parity; retained OOM ROI once; diagnostic never canonical",
+    "canonical_predictions_reused": false,
+    "GT_used_in_prediction": false
+  },
+  "state": {
+    "status": "PASS",
+    "pid": 3659830,
+    "started_utc": "2026-11-06T10:48:37.602510+00:00",
+    "model_id": "CPI_ConvNeXtB_CIHP",
+    "calls": 3,
+    "canonical_VAL_calls": 0,
+    "automatic_retries": 0,
+    "config_sha256": "05405cf4871f6b8a97bf6bab82557ecd283a5274747bbb5bbda376f603597e4f",
+    "TRAIN_native_hardmask_and_candidates_parity": true,
+    "TRAIN_native_association_parity": true,
+    "known_OOM_ROI_pass": true,
+    "implementation_revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+    "profile_sources": {
+      "Human_Parsing_Benchmark/scripts/diagnose_controlled_convnext_schedule.py": "d0a4d8eeb99d3224bd4eff3eb81b51d5da080cb37f76c2c6ecc9c3e09bef9897",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+      "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f"
+    },
+    "parity_scope": "One fixed TRAIN ROI and shared-head CPU numeric fixtures; not population bitwise equivalence",
+    "geometry": {
+      "image_id": "0037051",
+      "ROI_index": 2,
+      "crop_xyxy": [
+        146,
+        6,
+        377,
+        137
+      ],
+      "crop_pixel_sha256": "b6e62bc2a89343a53ac3ad5b09837795c73e0807bbf8f22281942ad012db59b6"
+    },
+    "original_scientific_settings_unchanged": true,
+    "ended_utc": "2026-11-06T10:49:05.942048+00:00",
+    "execution_wall_seconds": 28.33939935208764
+  },
+  "calls": [
+    {
+      "purpose": "TRAIN_REVISION1",
+      "seconds": 0.8357602820033208,
+      "input_hw": [
+        346,
+        177
+      ],
+      "peak_allocated_bytes": 746681856,
+      "peak_reserved_bytes": 903872512,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi-convnext-schedule-diagnostic-20261106T1050Z/packets/TRAIN_REVISION1",
+      "packet_json_sha256": "de5628f1f440b8d35df4983f4ae968fa38ebe5bd81a694f891efc953041633b3"
+    },
+    {
+      "purpose": "TRAIN_REVISION3",
+      "seconds": 0.4691985249519348,
+      "input_hw": [
+        346,
+        177
+      ],
+      "peak_allocated_bytes": 746681856,
+      "peak_reserved_bytes": 903872512,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi-convnext-schedule-diagnostic-20261106T1050Z/packets/TRAIN_REVISION3",
+      "packet_json_sha256": "333f7d17689d54522f05925c265d4c1d9df9f9c63a6407285b4847f9a61dc75f"
+    },
+    {
+      "purpose": "VAL_KNOWN_OOM_ROI_ONCE",
+      "seconds": 1.2940133729716763,
+      "input_hw": [
+        131,
+        231
+      ],
+      "peak_allocated_bytes": 7977243648,
+      "peak_reserved_bytes": 8336179200,
+      "packet": "Human_Parsing_Benchmark/outputs/cpi-convnext-schedule-diagnostic-20261106T1050Z/packets/VAL_KNOWN_OOM_ROI_ONCE",
+      "packet_json_sha256": "99ecc1ef47d6e2fca38ee81057423282b43ff95d84b6a52f8ec20126f86c86f0"
+    }
+  ],
+  "CPU_acceptance": {
+    "status": "PASS",
+    "shared_head_numeric_cases": 3,
+    "sequential_orchestration_cases": 5
+  },
+  "earlier_setup_failure": {
+    "calls": 0,
+    "reason": "Relative path normalization before model construction",
+    "evidence": "outputs/cpi-convnext-schedule-diagnostic-20261106T1046Z/SETUP_FAILURE.json",
+    "elapsed_seconds": null
+  },
+  "not_population_bitwise_equivalence": true,
+  "canonical_VAL_calls": 0
+}

@@ -1,3 +1,5 @@
+> **Current controlled CIHP (2026-11-06T17:56:51.856783+07:00):** Sapiens was operator-paused to finish CPI readiness. Sequential1B→CPIConvNeXt queue prepared; accepted1B4268/CPI4335frames, pending732/665. CPI diagnostic passed; R50complete5000 not rerun. No parallelGPUjobs. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
+
 > **Current CIHP controlled queue (2026-11-06T17:24:11.176769+07:00):** Sapiens1B resumed and new packet verified. Snapshot4,223/5,000;reused4,222frames/20,101ROIs,failed0invalid0. User removed only1B's wall-time cap; other guards stay. `tmux attach -t cihp_1b_finish` shows the live viewer. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
 
 > **Current CIHP controlled queue (2026-11-06T17:05:51.585401+07:00):** Queue stopped. Sapiens2 1B hit the24h wall-time guard at4,222/5,000;778frames remain and primary=null. Seven systems are complete;ConvNeXt remains held at4,335. No GPU worker is running. Continuation needs packet reconciliation and an explicit time-budget amendment; the remaining tmux viewer is not a worker. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
