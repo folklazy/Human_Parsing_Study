@@ -1,3 +1,11 @@
+# ผู้ใช้ตรวจรับ annotationครบ90ภาพ — 2026-11-08T03:15:24.989704+07:00
+
+**USER_VISUAL_REVIEW_ACCEPTED**. ผู้ใช้ยืนยันว่าตรวจทั้งหมดแล้วถูกต้อง. Snapshot90JSONในAnnotations_Reviewedยังตรงhashของderivedexportทุกไฟล์ รวมภาพที่คืนแล้ว;inventorySHA256=`44db335a9969decb2dcadac27c8e62efd98917ccd49030b240839719ed9b55ac`. [Acceptance evidence](reports/ADDED_ANNOTATION_INTAKE.json) ส่วนuser_visual_acceptance;รายการไฟล์เต็มเก็บprivateในoutputs/gt-user-acceptance-20261107T201524Z/
+
+บันทึกเป็นการตรวจรับจากผู้ใช้ ไม่ใช่independentexpertcertificationหรือการfreezeevaluationprotocolเพิ่มเติม. ไม่อนุมานmissingpolygonเป็นconfirmedabsentจากคำรับรองนี้โดยอัตโนมัติ. ไม่มีการเปลี่ยนGT/metricsหรือเปิดinference/scoring. ขั้นถัดไปเป็นการจัดbindings/domainและCPUacceptanceตามกติกาที่ใช้เปรียบเทียบ ก่อนsaved-maskscoring;รักษาผลเดิมทั้งหมด
+
+## สถานะก่อนรับรองจากผู้ใช้ (historical)
+
 # คืน annotation รายการที่ผู้ใช้เผลอแก้แล้ว — 2026-11-08T03:11:28.921318+07:00
 
 **SINGLE_ANNOTATION_RESTORED_EXACT_BYTES / VISUAL_REVIEW_STOPPED_BY_USER**. ผู้ใช้ให้หยุดการตรวจทั้งชุด แจ้งว่าตรวจแล้วพอใจ และขอคืนเฉพาะcctv_0025ในAnnotations_Reviewed. ตรวจJPG/Masterคงเดิม;JSONถูกบันทึกใหม่เหลือ14shapes. สำรองฉบับก่อนคืนไว้private`outputs/annotation-restore-20261107T201128Z/`แล้วกู้15shapesจากsourceที่มีhashbindingเดิม;SHA256ตรงhistoricalannotationทุกไบต์. ไม่แตะannotationภาพอื่น/GTpackets/ผลคะแนน ไม่มีinference

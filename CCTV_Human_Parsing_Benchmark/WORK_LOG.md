@@ -268,3 +268,8 @@ Acceptance: copiedsingleHTMLtoisolateddirectorywithoutdataset;ChromiumJSdisabled
 ## 2026-11-08T03:11:28.921318+07:00 — annotation-restore-20261107T201128Z
 
 User explicitly stops broader GT review, reports all annotations checked/satisfactory, and requests restoration of one accidentally edited image's annotation. JPG/sourceMaster are hash-unchanged; only reviewedJSON differs (14instead15shapes). Backed up current bytes before restoring target only. Replayed original hash-bound annotation generator and required exact historical SHA256=291a0ba75a6a794711ec49c12ee25cbd288552fd610448d200f93038a2e36cf7 before atomic replacement/readback. Private backup/RESTORE.json retained; no sourceGT,otherannotations,packets,scientificsource/config,result or model changes. No inference/tests/fullrescore. Prior CPU review process alreadyexited; sixteenpersoncontact sheets were viewed, sceneswerepreparedbutnotviewed and findingswerenotfinalized; recordedSTOPPED_BY_USER privately rather than claiming completed expertQA. Next: user reopens selected image without saving stale in-memory edits.
+
+
+## 2026-11-08T03:15:24.989704+07:00 — gt-user-acceptance-20261107T201524Z
+
+User explicitly confirms all reviewed annotations correct after one-file restoration. RecordedUSER_VISUAL_REVIEW_ACCEPTED and a private90-fileSHA256inventory, hash44db335a9969decb2dcadac27c8e62efd98917ccd49030b240839719ed9b55ac. All90JSONbytehashesstillmatchderivedexport;noadditionalmask/labelchanges. Publicevidenceholdsaggregateacceptancewithoutannotations/images. This recordsuseracceptanceonly;doesnotclaimindependentexpertgold,resolveallmissing-targetstatesorfreezenewscoringdomain. No inference/scoring/newtests. Next: GTbindings/domain and targetedCPUacceptancebeforeplanned saved-maskevaluation.

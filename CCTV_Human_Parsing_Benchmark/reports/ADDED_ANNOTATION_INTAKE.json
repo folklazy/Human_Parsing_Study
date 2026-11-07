@@ -208,5 +208,19 @@
     "inference_calls": 0,
     "private_backup_root": "CCTV_Human_Parsing_Benchmark/outputs/annotation-restore-20261107T201128Z",
     "prior_visual_review_stopped_by_user": true
+  },
+  "user_visual_acceptance": {
+    "status": "USER_VISUAL_REVIEW_ACCEPTED",
+    "accepted_thai": "2026-11-08T03:15:24.989704+07:00",
+    "user_statement": "ได้ผมตรวจหมดเเล้วถูกต้อง",
+    "annotation_root": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/Annotations_Reviewed",
+    "images": 90,
+    "annotation_inventory_sha256": "44db335a9969decb2dcadac27c8e62efd98917ccd49030b240839719ed9b55ac",
+    "files_changed_since_export": [],
+    "accepted_by": "user",
+    "independent_expert_certification_claimed": false,
+    "evaluation_protocol_frozen_by_this_acknowledgement": false,
+    "new_scoring_or_inference_started": false,
+    "private_record": "CCTV_Human_Parsing_Benchmark/outputs/gt-user-acceptance-20261107T201524Z/ACCEPTANCE.json"
   }
 }
