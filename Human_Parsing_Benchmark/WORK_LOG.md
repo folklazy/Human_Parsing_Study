@@ -539,3 +539,14 @@ Queuecihp-sequential-finish-20261106T105503Z,launch17:58:41Thai,commitb2ec732a01
 Queuecihp-sequential-finish-20261106T105503Z;queue3677294/controller3677320/1Bworker3677383 alive in detachedtmux. TRAINparity2callsPASS;acceptedparent4268frames/20356ROIs. Firstnewframe0036922composed4parent+1newROI(total5),atomicNPZ/memberhashes/native29/originalgeometry/config/input/checkpoint/YOLOextent-scores/ownedclip/scoringlinkPASS. Snapshot4269complete,newVALcalls2(nextframebegun),failed0invalid0. VerifiedCPIpreparedrootstillhasnoCONTROLLER/worker:QUEUED,notrunning. Strict5000closureandfirstcontrollerexitgatewillstartCPI;nowalltests/diagnosticsfinishedbefore1Bresumed,nootherGPUjobs.
 
 RecordedLAUNCH_VERIFICATION.json andcurrentSTATUS/README/report;source/fullconfigsremainunchanged. Logs/packetsprivate;compactpublicprovenanceonly. Userrequestedpauseandpreparationarecomplete;SapiensresumedandCPIwillfollowautomatically. Noqualityranking/threshold/mappingchange. Next:leaveoneGPUworkerandlightqueuealone;terminalROUND_CLOSURE.json/SUMMARY_TH.mdpermodelplusQUEUE_STATE.jsonreportcompletionorstopwithoutautoretry.
+
+
+## 2026-11-08T01:22:12.700583+07:00 — cihp-controlled-nine-terminal-verification
+
+Action/reason: user supplied the newer sequential COMPLETE viewer after an obsolete queue had been consulted. Read latest queue/config/closures and process/GPU state; corrected current navigation without overwriting historical records. Queue ended 2026-11-06T22:59:30+07:00.
+
+Inputs: queue cihp-sequential-finish-20261106T105503Z; two pending segment CONFIG/ROUND_CLOSURE records; canonical COMPLETION/METRICS/ASSEMBLED_INDEX for all nine controlled configurations; source INPUTS manifest and protocol/GT bindings. Outputs: runs/cihp-sequential-finish-20261106T105503Z/TERMINAL_VERIFICATION.json, current STATUS/README/PLAN and existing controlled report.
+
+Verification: all nine have exact 5,000 parent+fresh IDs with disjoint sets; fresh scores equal packet IDs; committed-member/reference presence; strict completions, non-null primary metrics and METRICS SHA256 match; shared protocol/GT identity and frozen queue job config hashes pass. No batch worker/controller or GPU compute PID at review. Reused existing NPZ acceptance audits; no bulk NPZ rehash, rescoring, inference or scientific source/config edits.
+
+Latest two final attempts failed/invalid=0; original OOM/interruption/time-stop history preserved. ConvNeXt mixed revisions remain disclosed, not claimed population bitwise equivalent. Blockers: none for documented quality completion. Remaining work: consolidate controlled-run quality tables/analysis; live/clean timing is separately pending. No new GPU work launched. Git commit identity belongs to Git history.

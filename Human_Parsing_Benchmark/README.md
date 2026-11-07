@@ -1,3 +1,7 @@
+> **Current controlled CIHP: QUALITY_COMPLETE 9/9** (verified 2026-11-08T01:22:12.700583+07:00). Each checkpoint has exact 5,000 accepted IDs and non-null canonical primary metrics. Latest sequential queue has stopped; no inference worker remains. Controlled-results consolidation and live/clean speed measurement remain separate next steps. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+
+The older notices below are historical snapshots; use the current report above for this controlled run.
+
 > **Current controlled CIHP (2026-11-06T17:56:51.856783+07:00):** Sapiens was operator-paused to finish CPI readiness. Sequential1B→CPIConvNeXt queue launched17:58:41Thai in tmux `cihp_seq_20261106T105503Z`;1BVALIDATION_RUNNING(firstnewpacketPASS,snapshot4269/5000at18:03:31Thai),CPIqueued; accepted1B4268/CPI4335frames, pending732/665. CPI diagnostic passed; R50complete5000 not rerun. No parallelGPUjobs. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
 
 > **Current CIHP controlled queue (2026-11-06T17:24:11.176769+07:00):** Sapiens1B resumed and new packet verified. Snapshot4,223/5,000;reused4,222frames/20,101ROIs,failed0invalid0. User removed only1B's wall-time cap; other guards stay. `tmux attach -t cihp_1b_finish` shows the live viewer. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).

@@ -1,5 +1,33 @@
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
+## ปิดคิวล่าสุด: งานคุณภาพครบทั้งเก้าระบบ
+
+ตรวจเมื่อ **2026-11-08T01:22:12.700583+07:00 (Asia/Bangkok)**. คิว `cihp-sequential-finish-20261106T105503Z` เป็น COMPLETE และจบจริงเมื่อ **6 พฤศจิกายน 2026 เวลา 22:59:30 น.ไทย**. ตรวจ canonical completion/METRICS ทั้งเก้าระบบและ assembled membership จาก source manifest เดียวกัน ผ่าน exact 5,000 IDs ต่อระบบ; ไม่ใช้ counter ใน viewer เพียงอย่างเดียว. Primary metrics ไม่เป็น null และ METRICS hashes ตรงกับ completion ทุกระบบ
+
+| ระบบ (ลำดับ frozen roster) | accepted unique IDs | สถานะ STRICT_COMPLETE |
+|---|---:|---|
+| QANet_CIHP_HRNetW48_512x384 | 5,000 / 5,000 | ผ่าน |
+| M2FP_R101_CIHP | 5,000 / 5,000 | ผ่าน |
+| D2FP_R101_CIHP | 5,000 / 5,000 | ผ่าน |
+| RPR_CIHP | 5,000 / 5,000 | ผ่าน |
+| CPI_R50_CIHP | 5,000 / 5,000 | ผ่าน |
+| CPI_ConvNeXtB_CIHP | 5,000 / 5,000 | ผ่าน |
+| Sapiens2_0.4b | 5,000 / 5,000 | ผ่าน |
+| Sapiens2_0.8b | 5,000 / 5,000 | ผ่าน |
+| Sapiens2_1b | 5,000 / 5,000 | ผ่าน |
+
+**ส่วนที่คิวล่าสุดทำเพิ่ม:** 1B ใช้ 4,268 parent frames + 732 new frames; 20,356 accepted parent ROIs + 3,706 new VAL calls = 24,062 ROI observations. ConvNeXt-B ใช้ 4,335 + 665 frames; 20,702 + 3,360 ROIs = 24,062. TRAIN readiness สอง calls ต่อ process แยกจาก VAL. Final attempt failed/invalid=0 ทั้งคู่ ไม่ใช่คำกล่าวว่าไม่เคยล้มเหลว; historical OOM/interrupt/time-guard evidence คงอยู่. อีกเจ็ดระบบใช้ผลเดิม
+
+1B canonical root คือ `outputs/cihp-pending-sapiens2_1b-20261106T105013Z/Sapiens2_1b/`; ConvNeXt-B คือ `outputs/cihp-pending-cpi_convnextb_cihp-20261106T105013Z/CPI_ConvNeXtB_CIHP/`. แต่ละ root มี METRICS.json, COMPLETION.json และ ASSEMBLED_INDEX.json ที่เชื่อม parent packets; ROUND_CLOSURE.json อยู่ระดับ segment. [ดัชนีตรวจปิดรอบ](../runs/cihp-sequential-finish-20261106T105503Z/TERMINAL_VERIFICATION.json) ระบุ paths/hashes ของครบเก้าระบบ
+
+**สิ่งที่ตรวจครั้งนี้:** exact parent/fresh membership ตรง 5,000 IDs และไม่ซ้ำ, fresh score IDs ตรง packet IDs, atomic member presence, parent commit/score reference presence, METRICS/completion hashes, protocol/GT binding identity และ config hashes ของสอง jobs ตรง queue. ใช้ packet acceptance/reconciliation เดิม ไม่ bulk rehash NPZ หรือคำนวณคะแนนใหม่. ไม่พบ batch worker/controller และ GPU compute process ณ เวลาตรวจ; watch/tmux viewer ที่ยังเปิดอยู่ไม่ได้ทำ inference
+
+**ขอบเขตผล:** controlled YOLO person-ROI application pipeline, C4-P revision2, Face proxy และ Upper/Lower non-Dress ตามเดิม. ConvNeXt มี accepted ROIs จาก CPI_PERSON_CHUNK_RESTORATION_1 จำนวน 20,702 และ CPI_FEATURE_BRANCH_SCHEDULE_3 จำนวน 3,360 พร้อม dependencies ที่บันทึกไว้; parity เดิมเป็นหลักฐานเฉพาะกรณีที่ตรวจ ไม่ใช่ bitwise proof ทั้งประชากร. การตรวจ metadata ครั้งนี้ไม่เพิ่มหลักฐาน forward equivalence
+
+**งานที่ยังเหลือ:** รวมตารางและวิเคราะห์คะแนนของ controlled run จาก canonical METRICS ที่ครบแล้ว; แยกจาก [รายงาน common-nine รอบก่อน](CIHP_COMMON_NINE_RESULTS_TH.md) ซึ่งใช้ inference routes เดิม. Live/clean timing ยัง pending; quality timing เป็น diagnostics ของการใช้ GPU ร่วมและหลาย segments ไม่จัดอันดับ latency/FPS/VRAM efficiency. ไม่มี inference, training หรือการเปลี่ยน scientific config/source ในการปิดสถานะครั้งนี้
+
+## บันทึกการเปิดงานและสถานะระหว่างรันด้านล่าง (historical)
+
 > **Current verified 2026-11-06T18:03:31.780614+07:00:** พัก1Bตามคำสั่งผู้ใช้ ตรวจCPI/OOMเสร็จแล้ว และเปิดคิวให้1Bทำต่อจริง;snapshot4269/5000. ภาพ0036922ใช้4parentROIs+1newROIปิดpacket/scoreสำเร็จ;TRAINparity/native29/geometry/hash/YOLOownership/scoringlinkผ่าน. CPIConvNeXtยังQUEUED4335/5000และไม่มีGPUworker;จะเริ่มหลัง1Bstrictcompleteและprocessออกเท่านั้น. [หลักฐาน](../runs/cihp-sequential-finish-20261106T105503Z/LAUNCH_VERIFICATION.json). เวลาcumulativeในclosureเป็นผลรวมactiveworker/diagnosticที่ประกาศ ไม่รวมช่วงพัก/เวลาปฏิทิน และไม่ใช่cleanend-to-end speed
 
 ## เตรียมคิว Sapiens1B → CPI ConvNeXt ตามคำสั่งผู้ใช้ — 2026-11-06T17:56:51.856783+07:00

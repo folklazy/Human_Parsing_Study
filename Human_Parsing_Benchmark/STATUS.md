@@ -1,3 +1,22 @@
+# CIHP controlled ROI: งานคุณภาพครบ 9/9 โมเดล — 2026-11-08T01:22:12.700583+07:00
+
+**QUALITY_COMPLETE_9_OF_9 / QUEUE_STOPPED** — ตรวจจาก canonical completion และ METRICS ของทั้งเก้าระบบแล้ว: ตัวละ **5,000 unique IDs**, missing/duplicate/invalid เป็นศูนย์ และ STRICT_COMPLETE ผ่าน คะแนนหลักมีอยู่จริง; hash ของ METRICS ตรงกับ completion ที่บันทึกไว้
+
+คิว `cihp-sequential-finish-20261106T105503Z` จบเมื่อ **6 พฤศจิกายน 2026 เวลา 22:59:30 น.ไทย (Asia/Bangkok)** ไม่ใช่เวลาที่ viewer แสดงล่าสุด. Sapiens2 1B จบตรวจปิดรอบเวลา 22:21:29 น. และ CPI ConvNeXt-B เวลา 22:59:28 น. วันเดียวกัน
+
+| โมเดลที่คิวล่าสุดทำต่อ | ภาพเดิมที่รับรอง | ภาพที่ทำเพิ่ม | ผลรวม | VAL ROI calls ใหม่ |
+|---|---:|---:|---:|---:|
+| Sapiens2 1B | 4,268 | 732 | 5,000 | 3,706 |
+| CPI ConvNeXt-B | 4,335 | 665 | 5,000 | 3,360 |
+
+อีกเจ็ดระบบ รวม CPI R50 ใช้ผลที่ครบแล้ว ไม่รันซ้ำ. final attempt ของสองระบบข้างต้น failed=0/invalid=0; ประวัติ OOM, การพักงาน และ time guard ของ attempts เก่ายังคงอยู่. ตรวจ process แล้วไม่พบ controller/worker ของ batch และ GPU ไม่มี compute process ณ เวลาตรวจ; tmux/watch ที่เหลือเป็นหน้าดูสถานะ
+
+[รายงานปิดสถานะ](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) · [หลักฐานตรวจ 9 ระบบและ canonical paths/hashes](runs/cihp-sequential-finish-20261106T105503Z/TERMINAL_VERIFICATION.json)
+
+การตรวจครั้งนี้อ่าน completion/assembly, membership ของ packet/score และ hashes ของ metadata/metrics โดยใช้ acceptance เดิม ไม่ได้ inference, full rescore หรือ bulk rehash NPZ ใหม่. **ตารางเปรียบเทียบคุณภาพของ controlled run และการวัด live/clean speed ยังเป็นงานถัดไป**; ห้ามนำตาราง 9 โมเดลรอบเก่าที่ใช้ route ต่างกันมาเรียกว่าเป็นตารางของรอบนี้
+
+## สถานะก่อนปิดคิวด้านล่างเป็น historical snapshots
+
 # คิว Sapiens1B → CPI ConvNeXt พร้อมเปิด — 2026-11-06T17:56:51.856783+07:00
 
 **SAPIENS_VAL_RUNNING / FIRST_NEW_PACKET_PASS / CPI_QUEUED** — ผู้ใช้ให้พักSapiensชั่วคราวเพื่อเตรียมCPIก่อน แล้วค่อยรันต่อเป็นลำดับ. พักworker3616747เมื่อ17:41:41น.ไทยด้วยSIGINTหนึ่งครั้งระหว่างMODEL_CALL_START;processออกแล้วและไม่มีการเขียนpacketค้าง. เก็บKeyboardInterruptและผลทุกsegmentไว้ ไม่ใช่modelOOM
