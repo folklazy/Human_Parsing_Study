@@ -1,3 +1,13 @@
+# Viewer แบบเปิดไฟล์เดียวใช้งานได้แล้ว — 2026-11-08T02:33:44.406474+07:00
+
+**OFFLINE_VIEWER_VERIFIED / GT_UNCHANGED**. ใช้private `outputs/master-gt-repair-20261107T191020Z/review_offline.html` แทนindexเดิมเมื่อย้ายไปเครื่องอื่น:ฝังภาพ90ภาพและfontไทย ไม่มีJavaScript/ภาพภายนอก. ขนาดประมาณ59.2MiB ดาวน์โหลดแล้วเปิดChrome/Edge/Firefox. ภาพตัวอย่างสองจุดเปิดตรงจาก`owner_repairs_before_after.jpg`ในโฟลเดอร์เดียวกัน
+
+ทดสอบคัดลอกเฉพาะHTMLไปโฟลเดอร์ไม่มีdataset ปิดJavaScript/networkผ่าน90หัวข้อ/184embeddedJPEG/nativeexpandและภาพโหลดจริง. GT90ชุดhashesคงเดิม. [รายงาน](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) / [evidence](reports/ADDED_ANNOTATION_INTAKE.json)
+
+GTยังเป็นฉบับmechanicalrepairที่รอตรวจcoverage/contour/definitions ไม่ใช่ผลคะแนนใหม่ ไม่มีinference/scoringหรือการเปลี่ยนบริการเว็บ
+
+## สถานะก่อนแก้viewer (historical)
+
 # แก้ mask ฉบับอนุพันธ์ครบ90ภาพ — 2026-11-08T02:17:50.448008+07:00
 
 **MECHANICAL_REPAIR_COMPLETE / COVERAGE_REVIEW_PENDING / SCORING_NOT_READY**. สร้างจากAnnotations_Masterในfreshfolder `CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/`:90JSON/90PNG/90NPZ,127คน/326parts. แก้ownerที่ยืนยันแล้วสองรายการ โดยไม่เปลี่ยนverticesหรือMasterเดิม;ตรวจกรณีกางเกง7,495พิกเซลกลับเป็นowner1ทุกพิกเซลแล้ว

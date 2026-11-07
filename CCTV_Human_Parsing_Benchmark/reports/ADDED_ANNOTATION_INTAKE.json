@@ -158,5 +158,38 @@
       "geometry_review": "314cc951ebe3327a825d8f35db5aa003f316e3fa07def1c03681d36edaa95192",
       "index": "bc7add3e80496095cb0d5ca781b30a79b96ca52669e65dde3422b04d3fd35284"
     }
+  },
+  "offline_viewer": {
+    "status": "EXPORTED",
+    "created_utc": "2026-11-07T19:31:12.968490+00:00",
+    "frames": 90,
+    "file": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/review_offline.html",
+    "sha256": "94830f4de37a2cd5b48e5e6ebba1a6eb1c43b2152e37f1ee7887c2b67e5dcd98",
+    "bytes": 62053175,
+    "javascript_required": false,
+    "external_images_required": false,
+    "external_fonts_required": false,
+    "preview_max_dimension": 1280,
+    "JPEG_quality": 84,
+    "GT_packets_modified": false,
+    "inference_calls": 0,
+    "sample": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/owner_repairs_before_after.jpg",
+    "sample_sha256": "cb09ffac07693564eb67d354a57731ac9f55a8220fab5efff1d54eec72ec18fd",
+    "source_sha256": "a7b04fc405c398faba7ccca48f8768ad1ad6bec22e8881ee523036ab7947e4ad",
+    "verification": {
+      "status": "PASS",
+      "isolated_single_file_directory": true,
+      "JavaScript_enabled": false,
+      "network_offline": true,
+      "frames": 90,
+      "embedded_images": 184,
+      "external_image_urls": 0,
+      "script_tags": 0,
+      "native_details_toggle": true,
+      "two_frame_images_decoded": true,
+      "errors": []
+    },
+    "all_184_JPEG_readback": "PASS",
+    "GT_90_packet_annotation_PNG_hashes_unchanged": true
   }
 }

@@ -1,3 +1,5 @@
+> **เปิด GT viewer ฉบับใหม่:** ดาวน์โหลด `outputs/master-gt-repair-20261107T191020Z/review_offline.html` แล้วเปิดในChrome/Edge/Firefoxได้จากไฟล์เดียว มี90ภาพฝังไว้ ไม่ต้องใช้JavaScriptหรือพาธserver. ดูตัวอย่างตรงจาก `owner_repairs_before_after.jpg` ในโฟลเดอร์เดียวกัน. [ตำแหน่งและการตรวจ](STATUS.md). GT/masks/ผลคะแนนเดิมไม่เปลี่ยน.
+
 > **GT ฉบับแก้จาก Master พร้อมเปิดตรวจแล้ว:** แก้ownerสองจุดและส่งออก90ภาพในโฟลเดอร์ส่วนตัว `outputs/master-gt-repair-20261107T191020Z/` เปิด `index.html` ดูก่อน–หลังได้. ยังรอตรวจcoverage/ขอบเขต ไม่ใช่GTที่พร้อมให้คะแนนใหม่ และผลที่รายงานด้านล่างยังเป็นผลGTrevisionเดิม. [สถานะและตำแหน่งไฟล์](STATUS.md) / [รายงานการแก้](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md).
 
 # CCTV Human Parsing Benchmark

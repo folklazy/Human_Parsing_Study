@@ -1,5 +1,19 @@
 # ตรวจความเทียบกันได้ของ CIHP และ CCTV 90 ภาพ
 
+## แก้ปัญหาเปิด HTML แล้วไม่เห็นข้อมูล — 2026-11-08T02:33:44.406474+07:00
+
+**OFFLINE_VIEWER_VERIFIED / GT_UNCHANGED**. ผู้ใช้รายงานว่าHTMLไม่มีข้อมูล. ตรวจพบว่า `index.html` เดิมมีannotation90recordsจริง แต่ภาพอ้างrelativepathsไปdatasetบนserver และเมนูสร้างด้วยJavaScript. การย้ายไฟล์HTMLเดี่ยวๆหรือดูในpreviewที่ไม่รันสคริปต์จึงไม่ใช่เส้นทางเปิดที่รับรองไว้ การตรวจบนserverก่อนหน้ายังไม่ทดสอบสถานการณ์ผู้ใช้ย้ายไฟล์นี้
+
+แก้ด้วย [export_master_review_offline.py](../../CCTV_Human_Parsing_Benchmark/scripts/export_master_review_offline.py) ซึ่งสร้างไฟล์ใหม่ `outputs/master-gt-repair-20261107T191020Z/review_offline.html` ภายใต้CCTVbenchmark. ฝังrasterpreviewก่อน–หลัง90ภาพรวม184JPEGและfontไทยไว้ในHTMLเดียว ไม่มีscript/SVG/URLภาพภายนอก. ใช้HTMLdetailsเปิด–ปิดภาพโดยไม่พึ่งJavaScript และมีcropขยายสองownerrepairs. เก็บ `index.html` เดิมไว้ครบ. ไฟล์ประมาณ59.2MiBควรดาวน์โหลดแล้วเปิดChrome/Edge/Firefox ไม่พึ่งpreviewของแชท
+
+มี `owner_repairs_before_after.jpg` สำหรับเปิดสองจุดที่แก้แบบภาพโดยตรง. รูปทั้งหมดเป็นprivateartifacts ไม่ขึ้นpublicGit. รูปพรีวิวลดด้านยาวไม่เกิน1280px/JPEGquality84เพื่อดู ไม่ใช่maskสำหรับประเมิน; annotation/GTpackets/COMPLETIONและผลเดิมไม่เปลี่ยน
+
+**ตรวจรับจริง:** คัดลอกเฉพาะHTMLไปfresh temp directoryที่ไม่มีdatasetหรือassets, เปิดChromiumโดยJavaScriptdisabledและnetworkoffline:90details/184embeddedimages/0scripts/0externalimageURLs; เปิด–ปิดหัวข้อได้และภาพของทั้งoriginal/editedpanelsโหลดจริง ไม่มีpageerrors. อ่าน184JPEGกลับผ่านทุกภาพ และตรวจ90ชุดGTpacket/annotation/personPNG hashesคงเดิม. Fontไทยอยู่ในไฟล์ ไม่ต้องติดตั้งหรือdownloadเพิ่มเติม. [หลักฐานรวม](../../CCTV_Human_Parsing_Benchmark/reports/ADDED_ANNOTATION_INTAKE.json) ส่วนoffline_viewer
+
+ขั้นตอนผู้ใช้: ดาวน์โหลดreview_offline.htmlแล้วเปิดด้วยbrowser;หากต้องการดูตัวอย่างทันทีให้เปิดJPGข้างต้น. สถานะGTยังMECHANICAL_REPAIR_COMPLETE_REVIEW_PENDING ไม่ใช่scoringready. ไม่มีinference/GTrepairเพิ่มเติม/scoringหรือการเปิดwebservice/เปลี่ยนBodyExtractionappในงานแก้viewerนี้
+
+## บันทึกก่อนแก้เส้นทางเปิด viewer (historical)
+
 ## แก้ mask ฉบับอนุพันธ์ให้แล้ว — 2026-11-08T02:17:50.448008+07:00
 
 **MECHANICAL_REPAIR_COMPLETE / COVERAGE_REVIEW_PENDING / SCORING_NOT_READY**. ผู้ใช้ขอให้จัดการmaskให้ จึงเพิ่มเครื่องมือสร้างGTฉบับอนุพันธ์และส่งออกจริงจากMasterครบ90ภาพ โดยไม่ทับsource. สถานะนี้หมายถึงแก้เจ้าของที่ยืนยันแล้วและทำrepresentationให้ตรวจสอบได้ ไม่ใช่การรับรองGTทุกพิกเซลหรือผลคะแนนใหม่
