@@ -1,3 +1,11 @@
+# คืน annotation รายการที่ผู้ใช้เผลอแก้แล้ว — 2026-11-08T03:11:28.921318+07:00
+
+**SINGLE_ANNOTATION_RESTORED_EXACT_BYTES / VISUAL_REVIEW_STOPPED_BY_USER**. ผู้ใช้ให้หยุดการตรวจทั้งชุด แจ้งว่าตรวจแล้วพอใจ และขอคืนเฉพาะcctv_0025ในAnnotations_Reviewed. ตรวจJPG/Masterคงเดิม;JSONถูกบันทึกใหม่เหลือ14shapes. สำรองฉบับก่อนคืนไว้private`outputs/annotation-restore-20261107T201128Z/`แล้วกู้15shapesจากsourceที่มีhashbindingเดิม;SHA256ตรงhistoricalannotationทุกไบต์. ไม่แตะannotationภาพอื่น/GTpackets/ผลคะแนน ไม่มีinference
+
+[evidence](reports/ADDED_ANNOTATION_INTAKE.json) ส่วนsingle_annotation_restoration. ถ้ารูปยังเปิดค้างในX-AnyLabelingให้เปิดใหม่และไม่บันทึกสถานะที่ค้างทับไฟล์ที่คืนแล้ว. การตรวจภาพก่อนหน้าหยุดตามผู้ใช้;ไม่มีการประกาศindependentexpertcertificationหรือเปลี่ยนscoringreadinessในงานคืนไฟล์นี้
+
+## สถานะก่อนคืนไฟล์ (historical)
+
 # Viewer แบบเปิดไฟล์เดียวใช้งานได้แล้ว — 2026-11-08T02:33:44.406474+07:00
 
 **OFFLINE_VIEWER_VERIFIED / GT_UNCHANGED**. ใช้private `outputs/master-gt-repair-20261107T191020Z/review_offline.html` แทนindexเดิมเมื่อย้ายไปเครื่องอื่น:ฝังภาพ90ภาพและfontไทย ไม่มีJavaScript/ภาพภายนอก. ขนาดประมาณ59.2MiB ดาวน์โหลดแล้วเปิดChrome/Edge/Firefox. ภาพตัวอย่างสองจุดเปิดตรงจาก`owner_repairs_before_after.jpg`ในโฟลเดอร์เดียวกัน

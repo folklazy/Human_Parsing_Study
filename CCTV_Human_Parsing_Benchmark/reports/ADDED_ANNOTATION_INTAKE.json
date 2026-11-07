@@ -191,5 +191,22 @@
     },
     "all_184_JPEG_readback": "PASS",
     "GT_90_packet_annotation_PNG_hashes_unchanged": true
+  },
+  "single_annotation_restoration": {
+    "status": "RESTORED_EXACT_PRIOR_BYTES",
+    "checked_thai": "2026-11-08T03:11:28.921318+07:00",
+    "image_id": "cctv_0025",
+    "before_sha256": "a7f2b13a14f6035078f915a3c57f6f5f47244440906a8492d4da2a5a944739f1",
+    "restored_sha256": "291a0ba75a6a794711ec49c12ee25cbd288552fd610448d200f93038a2e36cf7",
+    "historical_binding_sha256": "39e1d7e5d2827ed012611cf98b52fd6137e2aa853a13cffbf2a06874c5a2ee44",
+    "shapes_before": 14,
+    "shapes_restored": 15,
+    "JPG_unchanged": true,
+    "Master_unchanged": true,
+    "other_annotations_modified": false,
+    "restoration_method": "Replay original derived annotation generator from bound Master/canonical; require exact historical annotation SHA256 before atomic replacement",
+    "inference_calls": 0,
+    "private_backup_root": "CCTV_Human_Parsing_Benchmark/outputs/annotation-restore-20261107T201128Z",
+    "prior_visual_review_stopped_by_user": true
   }
 }
