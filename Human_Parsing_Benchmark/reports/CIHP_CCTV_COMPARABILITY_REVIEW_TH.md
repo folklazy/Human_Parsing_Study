@@ -1,5 +1,66 @@
 # ตรวจความเทียบกันได้ของ CIHP และ CCTV 90 ภาพ
 
+## ตรวจ Annotations_Master ที่เพิ่ม person masks — 2026-11-08T01:38:24.419588+07:00
+
+**REVIEW_COMPLETE / GT_REVISION_REQUIRED / PROPOSED_NOT_FROZEN**. ตรวจตามโฟลเดอร์ที่ผู้ใช้ระบุคือ `datasets/CCTV_100_Evaluation/Annotations_Master` โดยตรง ไม่ใช้ dataset ชุดอื่นแทน. **ทำ CCTV ให้ใช้สูตร การจับคู่คน และวิธีเฉลี่ยคะแนนแบบ CIHP ได้มากขึ้น โดยไม่รัน parsing ใหม่ แต่ annotation ที่เพิ่มมายังไม่พร้อมแทน GT ที่ตรวจรับแล้วทันที**. การเพิ่ม person silhouettes ปิดช่องว่างเรื่อง extent; ไม่ได้ยืนยันว่าคลาสของทุกคนครบหรือขอบเขต Face/เสื้อผ้าตรงกับ CIHP แล้ว
+
+### สิ่งที่มีจริงและสิ่งที่ยังเหมือนเดิม
+
+| รายการใน Master | ผลที่ตรวจได้ | ความหมายต่อการประเมิน |
+|---|---|---|
+| JSON / JPG | 90 / 90 ไฟล์; image membership ตรงกับ frozen CCTV cohort; JPG ทั้ง90ตรงกับ Images แบบ byte-for-byte | ใช้ภาพและ saved prediction cohort เดิมได้ ไม่ต้องเปลี่ยน input |
+| person polygons | 133 polygons แทน127 person groups | คนหนึ่งมีหลาย polygon ได้; มี full-person reference ให้เตรียม mask-IoU matching |
+| bbox | 127 rectangles | เป็น annotation metadata อ้าง `co_detr_swin_b+sam2.1_hiera_b+`; ไม่ใช่เหตุให้เปลี่ยน frozen YOLO input/crops |
+| Hair | 69 polygons /69 person-target pairs | จำนวน raw annotations ไม่ใช่จำนวนที่ผ่าน QA แล้ว |
+| Face | 35 polygons /34 person-target pairs | ต้องรวมหลายpolygonของคนเดียวกันอย่างถูกต้อง และแก้ ownership ที่เคยตรวจพบ |
+| Upper | 129 polygons /120 person-target pairs | ต้องยืนยันว่าเป็นเสื้อผ้าตาม non-Dress definition |
+| Lower | 104 polygons /101 person-target pairs | มี owner correction เดิมที่ต้องนำมา reconcile |
+
+Master กับ `Annotations_canonical_with_person` ตรงกันทุกไฟล์ JSON. เมื่อถอด person/bbox และเปรียบเทียบ labels/owner/vertices ของสี่ targets กลับไปยัง `Annotations_canonical` พบว่า **semantic polygons เดิมไม่เปลี่ยนทั้ง90ภาพ**; hash ของ canonical JSON เดิมยังตรง frozen input bindings90/90. จึงยืนยันได้ว่าของเพิ่มคือ person/bbox/metadata ไม่ใช่หลักฐานว่าแก้ Face/Neck หรือเติม semantic coverage ครบแล้ว
+
+127 groups มี Face polygon34กลุ่ม, Hair69, Upper120, Lower101. การไม่มีpolygon **ยังแปลไม่ได้ว่า annotation ผิดหรือ target ไม่ปรากฏ**: อาจหันหลัง ถูกบัง มองไม่ชัด หรือยังไม่ได้ annotate. ต้องมีสถานะ visible-and-complete / confirmed absent / unknown ต่อคน–คลาสก่อนใช้ส่วนที่ว่างเป็น negative เพื่อคิด FP
+
+### ช่องว่างที่พบจริง
+
+| ประเด็น | หลักฐาน | ข้อเสนอ / เงื่อนไขผ่าน |
+|---|---|---|
+| เจ้าของ semantic parts ยังสืบทอดข้อผิดพลาดเดิม | Master semantic polygons ตรง source เดิมทั้งหมด; owner corrections สองรายการใน `outputs/controlled-gt-owner-20261101/GT_REVISION.json` ยังไม่ได้สะท้อนกลับ source | สร้าง GT revision แยกและ reconcile สองรายการเดิมกับ person polygons จาก RGB; ไม่ทับ Master และไม่ทิ้งผล review เดิม |
+| Person PNG กับ polygons ไม่ใช่ representation เดียวกันทุกจุด | `Full_Person_ids` ครบ90, shape/IDsตรงgroups; แต่ต่างจาก OpenCV fillPoly แบบ truncate89ภาพรวม13,454พิกเซล และต่างจากPILรวม19,718พิกเซล | ระบุ representation และ rasterization/overlap rule ที่ authoritative พร้อมhash. จำนวนต่างไม่ใช่หลักฐานว่าไฟล์เสียทั้งหมด เพราะ renderer/ขอบfloatต่างกันได้ |
+| พบ interior ownership conflict ที่ไม่ใช่แค่ขอบไม่เรียบ | กรณี `GT_OWNER_002`: PNGให้7,495พิกเซลเป็นperson2 แต่ person polygonให้เป็นperson1; ทั้ง7,495พิกเซลทับlower polygonที่sourceให้person2. เปิดดูRGBยืนยันเป็นบริเวณกางเกงของคนที่polygonกำหนดเป็นperson1 | MUST_FIX ก่อนextent/ownership scoring; ห้ามให้part-ownerเก่าทับfull-person extentแล้วถือว่าเป็นGTที่ถูกต้อง |
+| Upper metadata กว้างกว่า CIHP non-Dress | Masterระบุ `cihp_equivalent_classes=[5,6,7,10,11,12]` ซึ่งมี Dress, Torso-skin, Scarf และSkirt; protocol CIHPปัจจุบันใช้Upper5+7 และLower9+12 | ไม่ใช้รายการmetadataนี้เป็นmappingทันที. ตรวจ polygons ตามนิยามเสื้อผ้า แยก Dress/skin/scarf/unknown อย่างมีหลักฐาน; metadataผิดไม่ได้พิสูจน์ว่าทุกpolygonผิด |
+| ความครบของ semantic/scene ยังไม่รับรอง | ไม่พบ per-target absent/unknown/complete states หรือหลักฐานที่ยืนยันว่าทุกคนและทุกtargetในภาพ annotateครบในmetadataที่ตรวจ | ตรวจGT-only coverage; ทำนอกverified domainเป็นVOIDร่วมทุกโมเดล ไม่เหมาว่าง=background. หากยังไม่ครบต้องรายงานrestricted-domain ไม่อ้างfull-scene precision |
+| Provenance ของ silhouettes | bbox metadataระบุCo-DETR+SAM2.1; ไม่พบgenerator revision/review certificateในmetadataที่ตรวจ | คงเป็นmodel-assisted referenceจนมีreview record ไม่อ้างindependent expert gold. การใช้โมเดลช่วยannotateไม่ใช่เหตุให้ทิ้งข้อมูล แต่ต้องตรวจผลและบันทึกที่มา |
+
+ข้อสังเกต geometry เพิ่มเติม: person polygons ทับกัน5ภาพรวม3,224พิกเซลภายใต้PIL union-per-person; semantic polygons5ชิ้นมีรวม117พิกเซลนอกPNGของเจ้าของเมื่อ rasterizeด้วยPIL. ต้องตรวจ ownership/visible-overlap policy และเลือกbitmap authority ก่อนใช้; ไม่clipGTให้ตรงprediction. พิกัดบางpolygon/rectangleชนขอบW/H แต่ไม่มีจุดเกินขอบปิด[0,W]×[0,H] จึงไม่จัดเป็นmalformedเพียงเพราะมากกว่าindexสุดท้ายW−1/H−1
+
+### แนวทางหลัก: ปรับ CCTV เข้าหา CIHP โดยคง inference เดิม
+
+1. **ใช้ Master เป็นแหล่งannotation intake และสร้าง derived GT revision แยก**. คง127คนและ133person polygonsเป็นcandidate references; ตรวจowner/occlusionและrasterizationให้ผ่านก่อนfreeze. Person masksเก็บแยกจากsemantic labels; ไม่เอาbboxมาเติมเป็นsilhouette และไม่ย้าย semantic part ไปคนใกล้ที่สุดด้วยheuristic
+2. **กำหนด target ตาม CIHP C4-P revision2**: FaceตามCIHP reference, Hair, Upper=UpperClothes+Coat, Lower=Pants+Skirt; Dress/Apparel และสิ่งอื่นที่ยืนยันนิยามแล้วเป็นOTHER ไม่แบ่งเดรสครึ่งบน/ล่าง. C4 common IDsคือFace1/Hair2/Upper3/Lower4; เก็บBG/OTHER/VOIDแยก. ไม่สร้าง native20 subclasses ที่ไม่มีannotationจริงเพียงเพื่อให้ไฟล์ดูเหมือนCIHP
+3. **ใช้ Face-reference view เป็นตารางที่อิง CIHP**. บนCIHPใช้Face13ตามเดิม; CCTVต้องตรวจFace polygonsตามคู่มือreferenceเดียวกันและบันทึกความไม่แน่ชัด. ไม่ตัดNeckออกจากdomainอัตโนมัติในviewนี้เพียงเพราะSapiensส่งFace_Neck. PredictionบนGT non-Faceที่validยังเป็นFP. เก็บ Face-domain ที่ยกเว้นNeck/uncertaintyเดิมเป็นคนละviewและคนละresult version; ไม่สลับกันในตารางเดียว. Hard masksของSapiensยังรวมFace_Neck+facialsubpartsตามmappingเดิม ไม่ใช้GTตัดprediction
+4. **ตรวจความครบก่อนใช้ global confusion**. ภายในverified domainต้องตัดสินtargetทุกคลาสรวมknown non-targetและbackgroundได้; พื้นที่unknownเป็นVOIDที่มาจากGTและใช้เหมือนกันทุกโมเดล. Full-scene C4-P claimต้องมีcoverageของทุกคน/targetและnegativesครบทั้งฉาก. ไม่จำเป็นต้องannotateทุกnative class20/29 หากมีC4/BG/OTHER/VOIDที่ตรวจรับแล้ว แต่แค่มีfull-person silhouetteยังไม่พอ. ถ้าใช้บางdomainต้องประกาศcoverageและข้อจำกัด ไม่เรียกเท่ากับfull-sceneCIHP
+5. **ใช้ mask-IoU one-to-one matching0.50/0.75 และ geometry-canonical tie policy เดียวกับ CIHP** หลังextent/domainผ่าน. GTจำนวน127ไม่ต้องเท่ากับ130YOLOopportunities. Missed eligible GTมีsemantic contribution0; valid extentแต่semanticว่างยังเก็บเป็นคนเพื่อmatching; duplicates/unmatchedpredictionsรายงานFP/F1ในdomainที่รับรอง. G_loc/G_semคำนวณจากbindingsใหม่ ไม่คัดลอก17,520/17,454จากCIHP
+6. **ตรวจจุดเชื่อม extent กับ semantic-valid domain ก่อนนำscorerมาใช้**. `common_view.core.gt_domains` ปัจจุบันสร้างextentจาก `(Human==id) & global_valid`. หากCCTVมีunknown semantic pixelsเป็นVOIDอยู่ในfull-person silhouette การส่งplaneเข้าเดิมตรงๆจะทำextentหายบางส่วน. ต้องเลือกGT-complete domainที่ทำให้contractนี้ถูกจริง หรือเสนอsharedcontract revisionที่รับlocalization extentและsemantic-validแยกกัน พร้อมตรวจผลCIHPบนbindingsเดิม; ห้ามบอกว่าคัดลอกmatcherแล้วเท่ากันโดยยังไม่ปิดจุดนี้
+7. **ใช้วิธีรวมคะแนนเดียวกันในตารางร่วม**: global mapped confusion → IoU/P/R/F1รายtarget → C4 mean4 และC3 meanของHair/Upper/Lower; คำนวณQ_C4_GTจากmatched saved planesและตัวหารGTใหม่. Mean-part/pooled partของCCTVเดิมเก็บเป็นตารางประกอบ ไม่เอาscalarเดิมมาแปลงเป็นglobal. คงzero-union/failure/STRICT_COMPLETEตามrevisionที่รับรองก่อนscoring; ไม่มีmodel-specificignoreหรือweightsช่วยคะแนน
+
+### งานตรวจและคำนวณรอบถัดไปที่ทำได้จริง
+
+| งาน | วิธีตรวจรับ | ต้อง inference ใหม่หรือไม่ |
+|---|---|---|
+| Derived ownership/extent QA | สองowner correctionsตรงRGB; polygons↔bitmapใช้กติกาเดียว; person IDsไม่สลับ; overlap/edge/multiple componentsมีexpected outcomes | ไม่ต้อง |
+| Target coverageและFace/garment definition | ต่อคน–คลาสมีcomplete/absent/unknown; known non-targetไม่กลายเป็นBG; contour/Neck/Dress ambiguityตัดสินจากannotationหลักฐาน ไม่ดูคะแนนparser | อาจต้องannotation/reviewเพิ่ม แต่ไม่ต้องรันโมเดล |
+| GT bindingsและscorer integration | Tiny independent cases: semanticVOIDไม่ทำextentหายโดยเงียบ, missed/duplicate/semantic-empty, owner swap/ID rename,OTHER FP/FN,Face valid negative,zero-union; ตรวจsaved actualpacket→scorer→reporterจำนวนจำเป็น | CPUเท่านั้น |
+| CCTV shared scoring | ใช้saved90ภาพ/130ROIsต่อcheckpointจากทุกsegmentที่รับรอง คงYOLOcache/input geometry/native output/mapping; primarynullหากmembership/contractไม่ครบ | CPUเท่านั้น |
+| เปรียบเทียบกับCIHPล่าสุด | ใช้canonical controlled9×5000ที่ครบแล้วและsame-formula counts; เก็บผลคนละdataset/domainและไม่รวมpopulationเป็นคะแนนเดียว | ไม่ต้องรันCIHPใหม่ |
+
+**สิ่งที่ยังต้องทราบ:** recordของคนทำannotationว่าตรวจ/เติมtargetครบหรือไม่ และรายละเอียดmanual reviewของmodel-assisted silhouettes. ระหว่างที่ยังไม่มีrecordเหล่านี้ให้ถือว่ายังไม่รับรองcoverage ไม่ต้องเดาว่าmissingpolygonคือไม่ปรากฏ. รอบนี้ยังไม่freezeGT revision ไม่รันscorerและไม่อ้างว่าทั้งสองdatasetเทียบกันเหมือนทุกประการแล้ว
+
+**หลักฐานและภาพตรวจ:** [สรุปintakeและhashes](../../CCTV_Human_Parsing_Benchmark/reports/ADDED_ANNOTATION_INTAKE.json). Private galleryอยู่ `CCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z/` มี `cctv_added_annotation_review.png` (สามตัวอย่างเลือกจากmulti-person/Face ownership/night visibility ไม่ใช้คะแนนเลือก) และ `cctv_person_raster_disagreement.png` (RGBเทียบPNGกับpolygonของกรณีowner conflict). ภาพ/vertices/รายชื่อไฟล์ไม่เผยแพร่publicGit. การดูสามตัวอย่างไม่ใช่certificationขอบannotationทั้ง90ภาพ
+
+ตรวจ90JSON/90PNGและRGBhashesบนCPU, source semantic verticesเทียบcanonicalเดิม, maskshape/IDs, referencehashesและprotectedscientificfilesหกไฟล์; ไม่มีmodelinference/GPUdiagnostic/fullscoring/เปลี่ยนoriginaldatasetหรือnative/commonresults. ข้อเสนอออกแบบหลังเห็นผลเดิมแล้ว ไม่เรียกpreregisteredหรือใช้เพิ่มคะแนนให้โมเดลใด
+
+## บันทึกการทบทวนก่อนมี Annotations_Master ชุด person silhouettes (historical)
+
 ## ทบทวนเพิ่มเติม: ทำไมไม่ใช้วิธีให้คะแนนเดียวกัน
 
 **REVIEW_COMPLETE / SHARED_SCORING_PROPOSAL_NOT_FROZEN** — ตรวจจาก config และ scorer ที่รันจริง รวมถึงที่มาของข้อกำหนดเดิม งานนี้อ่าน source/metadata/bindings แบบจำกัดและตรวจตัวอย่างสมมติ ไม่รันโมเดล ไม่ให้คะแนน masks ใหม่ ไม่เปลี่ยน GT/scorer/config ที่ตรึงไว้ และไม่ใช้คะแนนบางส่วนของคิวปัจจุบันเลือกวิธีประเมิน

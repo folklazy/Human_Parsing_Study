@@ -236,3 +236,14 @@ Inputs: reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md, configs/controlled_cihp_re
 Verification:17protectedsmallfiles(source/protocol/config/canonicalsummaryreports/index)hashunchanged, historicalreportbodyunchanged, relative links18รายการใช้ได้source/publication,6hypotheticalarithmeticcases Noimages/GTarrays/weights/predictionmasksอ่านเพิ่ม ไม่มีmodelcalls/newtests/fullscoring/rescore/bulkdatasetorpacketrehash ไม่อ้างexecutionacceptanceจากdocumentationreview หลักฐานprivate Human_Parsing_Benchmark/outputs/gt-scoring-comparison-review-20261103/VERIFICATION.json
 
 Scope/status:SHARED_SCORING_PROPOSAL_NOT_FROZEN; noactive-scientificchange ไม่มีlaunch/polling/rankinganalysis/score-drivenremapping คิวเดิมคงfrozenbounds เอกสารนี้ไม่อนุมัติannotateCIHP5000/CCTVทั้งหมดใหม่ Next:ส่งคำอธิบายและข้อเสนอชัดเจนที่ใช้savedoutputsได้;FaceGTต้องกำหนดpopulation/budget/versionก่อนงานannotationใหม่ Publication:5explicitexistingfilesตามdiff,commit/pushbranchเดิมและตรวจremote;Git historyเก็บcommitidentity
+
+
+## 2026-11-08T01:38:24.419588+07:00 — annotation-intake-20261107T183824Z: Annotations_Master intake review
+
+User asks whether new CCTV annotation can align evaluation with CIHP and explicitly identifies datasets/CCTV_100_Evaluation/Annotations_Master. Read all90 JSON andFull_Person_ids PNG, protected currentGT/source bindings and historical owner corrections; checkedRGB identity against original Images. Addedfullperson133polygons/127groups; targetvertices/ownership unchanged versus90originalcanonicalJSON, whosefilehashes stillmatch frozenbindings. Master andwith_personJSON copies identical90/90.
+
+Foundhistoricalownerfixes notreflected inMaster; directPNG/polygon conflictGT_OWNER_002 has7495pixels assigned to2versus1, all coincide withsourceperson2Lower andRGBsupports person1polygon. Reportedrenderer-specific differences separately fromconfirmedownerconflict; edgeW/Hcoordinates notclassifiedasmalformed. UpperdeclaredCIHPequivalents include6/10/11/12andneeddefinition review. No evidencecertifiesallperson-targetcoverage, confirmedabsence orunknownstates.
+
+Outputs: existingHuman_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md updatedwithGT-basedproposal, CCTVSTATUS, andcompactCCTVreports/ADDED_ANNOTATION_INTAKE.json. Privateinputhashinventory/visuals inCCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z; imagesandidentifiersnotpublic. Verification: exact90membership,133/127geometrycounts,rawtargetcounts,RGB90hashes,originalcanonical90hashes and6protectedscientificfilesunchanged. No inference, scorer run, originalGT/weights/source/config mutation or newmodelstudy.
+
+Blockersbeforeharmonizedscoring: derivedowner/extentbinding, targetcoverage andFace/garmentdefinition, explicitextent-versus-semanticVOIDcontract. Proposalnotfrozen; currentCCTVresultsandCIHPcontrolled9/9remainunchanged. Next: resolveGT/CPUintegration first, thensaved-maskCPUscoring undernewresultversion. No GPUworkrequiredforGT/scorerchange.

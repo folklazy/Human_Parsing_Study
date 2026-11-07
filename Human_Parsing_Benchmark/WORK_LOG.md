@@ -550,3 +550,14 @@ Inputs: queue cihp-sequential-finish-20261106T105503Z; two pending segment CONFI
 Verification: all nine have exact 5,000 parent+fresh IDs with disjoint sets; fresh scores equal packet IDs; committed-member/reference presence; strict completions, non-null primary metrics and METRICS SHA256 match; shared protocol/GT identity and frozen queue job config hashes pass. No batch worker/controller or GPU compute PID at review. Reused existing NPZ acceptance audits; no bulk NPZ rehash, rescoring, inference or scientific source/config edits.
 
 Latest two final attempts failed/invalid=0; original OOM/interruption/time-stop history preserved. ConvNeXt mixed revisions remain disclosed, not claimed population bitwise equivalent. Blockers: none for documented quality completion. Remaining work: consolidate controlled-run quality tables/analysis; live/clean timing is separately pending. No new GPU work launched. Git commit identity belongs to Git history.
+
+
+## 2026-11-08T01:38:24.419588+07:00 — annotation-intake-20261107T183824Z: Annotations_Master intake review
+
+User asks whether new CCTV annotation can align evaluation with CIHP and explicitly identifies datasets/CCTV_100_Evaluation/Annotations_Master. Read all90 JSON andFull_Person_ids PNG, protected currentGT/source bindings and historical owner corrections; checkedRGB identity against original Images. Addedfullperson133polygons/127groups; targetvertices/ownership unchanged versus90originalcanonicalJSON, whosefilehashes stillmatch frozenbindings. Master andwith_personJSON copies identical90/90.
+
+Foundhistoricalownerfixes notreflected inMaster; directPNG/polygon conflictGT_OWNER_002 has7495pixels assigned to2versus1, all coincide withsourceperson2Lower andRGBsupports person1polygon. Reportedrenderer-specific differences separately fromconfirmedownerconflict; edgeW/Hcoordinates notclassifiedasmalformed. UpperdeclaredCIHPequivalents include6/10/11/12andneeddefinition review. No evidencecertifiesallperson-targetcoverage, confirmedabsence orunknownstates.
+
+Outputs: existingHuman_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md updatedwithGT-basedproposal, CCTVSTATUS, andcompactCCTVreports/ADDED_ANNOTATION_INTAKE.json. Privateinputhashinventory/visuals inCCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z; imagesandidentifiersnotpublic. Verification: exact90membership,133/127geometrycounts,rawtargetcounts,RGB90hashes,originalcanonical90hashes and6protectedscientificfilesunchanged. No inference, scorer run, originalGT/weights/source/config mutation or newmodelstudy.
+
+Blockersbeforeharmonizedscoring: derivedowner/extentbinding, targetcoverage andFace/garmentdefinition, explicitextent-versus-semanticVOIDcontract. Proposalnotfrozen; currentCCTVresultsandCIHPcontrolled9/9remainunchanged. Next: resolveGT/CPUintegration first, thensaved-maskCPUscoring undernewresultversion. No GPUworkrequiredforGT/scorerchange.

@@ -1,3 +1,13 @@
+# ตรวจ Master annotation ใหม่แล้ว — 2026-11-08T01:38:24.419588+07:00
+
+**ANNOTATION_INTAKE_REVIEW_COMPLETE / GT_REVISION_REQUIRED / PROPOSED_NOT_FROZEN**. ตรวจ `datasets/CCTV_100_Evaluation/Annotations_Master` ตามผู้ใช้ระบุ:90JSON/90JPG,133personpolygons/127groups,127bbox; imagebytesตรงกับcohortเดิม90/90. Semantic polygonsสี่targetsยังเหมือนcanonicalเดิมทุกภาพ จึงยังไม่ใช่GTที่ยืนยันtarget/Face/Neckครบใหม่
+
+ทำmask-IoU matchingแบบCIHPได้เมื่อextent/domainผ่าน แต่พบowner correctionsเดิมสองรายการต้องreconcile และPNGpersonmaskในกรณีGT_OWNER_002ให้กางเกง7,495พิกเซลเป็นคนละIDจากpersonpolygon. MasterUpper metadataรวมCIHP6/10/11/12ซึ่งไม่ใช่Upper non-Dress5+7;ห้ามใช้เป็นmappingทันที. Missingtargetยังไม่มีabsent/unknown/complete states จึงไม่ถือพื้นว่างเป็นnegativeทั้งภาพ
+
+[รายงานตรวจและแนวทางปรับCCTVให้สอดคล้องCIHP](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [หลักฐานintake](reports/ADDED_ANNOTATION_INTAKE.json). ภาพตรวจอยู่private `CCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z/`. Next:derivedGTrevision/reconcileowners/targetcoverageและFace-referenceview →CPUacceptance→saved-maskscoring;ไม่ต้องinferenceCIHP/CCTVใหม่หากคงinputsเดิม. รอบนี้ตรวจและจัดข้อเสนอเท่านั้น ไม่แก้Master/GT/predictions/frozenconfig/sourceหรือรันscorer ผลCCTVที่รับรองก่อนหน้ายังคงเดิม
+
+## สถานะก่อนตรวจ annotation เพิ่ม (historical snapshots)
+
 # ทำไม CIHP/CCTV ยังใช้วิธีให้คะแนนต่างกัน — 2026-11-04T01:25:24+07:00 (Asia/Bangkok)
 
 **COMPARABILITY_REVIEW_COMPLETE / SHARED_PART_SCORING_PROPOSAL_NOT_FROZEN** — [ผลตรวจและข้อเสนอในรายงานเดิม](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). แยกความต่างที่เป็น design choice (global เทียบ mean-part) ออกจาก GT limitations (partial annotation/ไม่มี CIHP Neck-uncertainty binding) และ matching ที่ใช้คนละสูตร CIHP รอบ controlled มี mean-part/pooled part counts เป็น secondary อยู่แล้ว จึงใช้สูตรร่วมประกอบรายงานได้ แต่ไม่อ้าง GT/matching equivalent โดยอัตโนมัติ
