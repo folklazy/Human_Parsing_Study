@@ -1,5 +1,34 @@
 # ตรวจความเทียบกันได้ของ CIHP และ CCTV 90 ภาพ
 
+## แก้ mask ฉบับอนุพันธ์ให้แล้ว — 2026-11-08T02:17:50.448008+07:00
+
+**MECHANICAL_REPAIR_COMPLETE / COVERAGE_REVIEW_PENDING / SCORING_NOT_READY**. ผู้ใช้ขอให้จัดการmaskให้ จึงเพิ่มเครื่องมือสร้างGTฉบับอนุพันธ์และส่งออกจริงจากMasterครบ90ภาพ โดยไม่ทับsource. สถานะนี้หมายถึงแก้เจ้าของที่ยืนยันแล้วและทำrepresentationให้ตรวจสอบได้ ไม่ใช่การรับรองGTทุกพิกเซลหรือผลคะแนนใหม่
+
+| งานที่ทำจริง | ผล |
+|---|---|
+| แก้ownerจากหลักฐานเดิม | 2polygons: Face p2→p1 และLower p2→p1; labels/verticesคงเดิม |
+| ตรวจกรณีผิดเดิมอย่างอิสระ | 7,495พิกเซลที่PNGเดิมให้person2แต่polygonให้person1 ตอนนี้เป็นperson1ทุกพิกเซล |
+| ส่งออกฉบับแก้ | 90annotationJSON,90personPNG,90atomicNPZ;127person groupsและ326person-target parts |
+| อ่านไฟล์กลับ | ทุกarray/PNGตรงกับค่าที่สร้าง; imagePathของJSON90ไฟล์เปิดไปRGBเดิมได้ |
+| ป้องกันGTปลอมจากส่วนที่ไม่มีข้อมูล | ไม่เติมBG/OTHER;182จาก508คน–คลาสtasksที่ไม่มีpolygonยังเป็นUNKNOWN |
+| ป้องกันoverlapถูกตัดสินเงียบ | เก็บทุกperson extentแยกplane; PNGใช้255เมื่อคนทับกัน รวม3,365พิกเซล ไม่ใช้IDใหญ่/เล็กเป็นผู้ชนะ |
+| ความไม่ตรงระหว่างcontours | เก็บ262partsที่มีบางพิกเซลนอกraw person polygonsรวม5,582พิกเซลเป็นรายการตรวจ ไม่clippartหรือขยายตัวคนอัตโนมัติ |
+| ป้องกันmetadataถูกใช้เกินหลักฐาน | เก็บรายการCIHPที่sourceอ้างไว้เป็นsource_claimed_cihp_equivalent_classesและNOT_CERTIFIED;ไม่ประกาศUpper/Faceequivalentจากชื่อคลาส |
+
+**ตำแหน่งใช้งาน:** `CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/`. เปิด `index.html` ดูก่อน–หลังได้ทั้ง90ภาพ; `Annotations_Reviewed/` เป็นJSONฉบับแก้สำหรับโปรแกรมannotation, `Full_Person_ids/` เป็นbitmapฉบับcandidate, `packets/` เก็บextentsและpartsแยกคน. มี `README_TH.md`, `REVIEW_QUEUE.csv` และ `GEOMETRY_REVIEW.json` อธิบายสิ่งที่ต้องตรวจต่อ. ไม่ต้องแทนไฟล์ในMasterเพื่อเปิดฉบับแก้นี้. Viewerใช้RGBเดิมผ่านrelativepath จึงไม่ใช่ZIPที่ย้ายHTMLไปเครื่องอื่นเดี่ยวๆแล้วมีภาพครบ
+
+เครื่องมือใหม่ [prepare_master_gt_revision.py](../../CCTV_Human_Parsing_Benchmark/scripts/prepare_master_gt_revision.py) แยกจากnative/common evaluatorและไม่อ่านpredictionของparser. ตรวจsourcecanonical/RGBhashesก่อนนำownerfixเก่ามาใช้;จับpolygonด้วยlabel+verticesที่ตรงกันเพียงหนึ่งรายการ ไม่ใช้กล่องใกล้ที่สุดหรือคะแนนโมเดลเลือกowner. กติกาrasterคือOpenCVfillPolyโดยfloat→int32แบบtruncateตามsemantic exporterเดิม;กำหนดcoordinatesชนขอบW/Hและoverlapอย่างเปิดเผย. Person masksใช้unionของperson componentsของคนเดียวกัน;ไม่มีbboxfill ไม่มีการเอาsemanticpartsไปเติมextentเงียบๆ
+
+ตัวเลข5,582พิกเซลกับ117พิกเซลในintakeก่อนหน้าเปรียบเทียบคนละrepresentation/renderer: รอบนี้เทียบcorrected partsกับraw person polygonsด้วยOpenCV ส่วนเดิมเทียบsourcepartsกับPNGเดิมด้วยPIL. ไม่ใช้ส่วนต่างนี้อ้างว่าความแม่นลดลงหรือเพิ่มขึ้น
+
+**สิ่งที่ตรวจจริง:** [CPU acceptance](../../CCTV_Human_Parsing_Benchmark/tests/test_master_gt_revision.py) ผ่าน8กรณี: ownerfixไม่เปลี่ยนsource/vertices,source driftต้องหยุด,extentแยกจากsemanticและunknownไม่เป็นBG,multiplecomponents/overlap,semanticconflict,partนอกextentไม่ถูกclip,bboxไม่ใช่silhouette,invalidowner/labelต้องfail. Actual90-imageexportตรวจreadback/pathsและ360sourcehashesคงเดิม;protectedscientificfilesหกไฟล์จากintakeคงเดิม. Browserตรวจ90optionsและสองภาพที่แก้จริง โหลดRGBสองpanelผ่าน ไม่มีJSerror;headlessภาพไทยใช้fontเดิมในworkspace ไม่ติดตั้งหรือดาวน์โหลด. ไม่มีinference/GPUmodel callsหรือการคำนวณคะแนน
+
+**สิ่งที่ยังไม่รับรอง:** contour/visible-overlap, coverageครบทุกtargetและคนในverifieddomain, Face-reference/Upper non-Dress semantics, การแยกconfirmed absentออกจากunknown. ข้อมูลprior_selected_part_screenในreviewqueueเป็นbase/non-Face screenเดิม ไม่ใช่ผลadjudicationของFace-reference;ห้ามใช้ค่าfalseนั้นแทนFace exclusionsที่ตรวจรับภายหลัง. GT Face/Neckเดิมยังอยู่และต้องเลือกviewให้ถูกก่อนimport ไม่ตัดคอจากpredictionด้วยGT. ดังนั้น `scoring_ready=false` และ `primary=null`;ผลCCTVเก่าและCIHPcontrolled9/9คงเดิม
+
+**ขั้นถัดไป:** ตรวจรายการgeometry/coverageจากRGBและประวัติQAที่มีอยู่ →freezeGT/domain revisionและextent/semantic-valid contract → targetedCPUactualpacketacceptance →score savedpredictionsทั้งเก้าระบบ. ไม่ต้องinferenceใหม่หากคงYOLO/input/conditioningเดิม. [หลักฐานรวม](../../CCTV_Human_Parsing_Benchmark/reports/ADDED_ANNOTATION_INTAKE.json) มีcounts/sourcehashesและขอบเขตการตรวจ
+
+## การตรวจ intake ก่อนสร้างฉบับแก้ (historical)
+
 ## ตรวจ Annotations_Master ที่เพิ่ม person masks — 2026-11-08T01:38:24.419588+07:00
 
 **REVIEW_COMPLETE / GT_REVISION_REQUIRED / PROPOSED_NOT_FROZEN**. ตรวจตามโฟลเดอร์ที่ผู้ใช้ระบุคือ `datasets/CCTV_100_Evaluation/Annotations_Master` โดยตรง ไม่ใช้ dataset ชุดอื่นแทน. **ทำ CCTV ให้ใช้สูตร การจับคู่คน และวิธีเฉลี่ยคะแนนแบบ CIHP ได้มากขึ้น โดยไม่รัน parsing ใหม่ แต่ annotation ที่เพิ่มมายังไม่พร้อมแทน GT ที่ตรวจรับแล้วทันที**. การเพิ่ม person silhouettes ปิดช่องว่างเรื่อง extent; ไม่ได้ยืนยันว่าคลาสของทุกคนครบหรือขอบเขต Face/เสื้อผ้าตรงกับ CIHP แล้ว

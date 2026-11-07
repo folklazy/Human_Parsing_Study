@@ -561,3 +561,12 @@ Foundhistoricalownerfixes notreflected inMaster; directPNG/polygon conflictGT_OW
 Outputs: existingHuman_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md updatedwithGT-basedproposal, CCTVSTATUS, andcompactCCTVreports/ADDED_ANNOTATION_INTAKE.json. Privateinputhashinventory/visuals inCCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z; imagesandidentifiersnotpublic. Verification: exact90membership,133/127geometrycounts,rawtargetcounts,RGB90hashes,originalcanonical90hashes and6protectedscientificfilesunchanged. No inference, scorer run, originalGT/weights/source/config mutation or newmodelstudy.
 
 Blockersbeforeharmonizedscoring: derivedowner/extentbinding, targetcoverage andFace/garmentdefinition, explicitextent-versus-semanticVOIDcontract. Proposalnotfrozen; currentCCTVresultsandCIHPcontrolled9/9remainunchanged. Next: resolveGT/CPUintegration first, thensaved-maskCPUscoring undernewresultversion. No GPUworkrequiredforGT/scorerchange.
+
+
+## 2026-11-08T02:17:50.448008+07:00 — master-gt-repair-20261107T191020Z
+
+User authorizes mask correction assistance. Implemented a separate GT-only builder and eight independent CPU acceptance cases, all passed. Applied exactly two existing hash/vertex-bound owner corrections to derived Master JSON; preserved target labels/vertices and all sourcefiles. Exported/read back90JSON/90PNG/90NPZ,127person groups/326parts,privatebefore-afterviewer90images. Confirmed7495previouswrong-ownerpixelsnowowner1; source360hashes andsixprotectedscientificfilesunchanged. No modeloutputsusedforGTconstruction;noinference/newscoring/weight/config/environmentchange.
+
+Outputs: CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z, existingcomparabilityreport/STATUS/README/evidenceupdated. Privatebindings/CSV/geometryreview/imagesnotpublished. Personoverlap3365pixelsreserved255; missing182tasksremainunknown;262partshave5582outside-raw-extentpixels,retainedforreviewwithoutclipping. CIHPequivalenceclaimsquarantinedasunverifiedmetadata,notpromoted. PriorFace/non-Facescreenstateskeptseparate;Face/coverageadjudicationstillrequired. Browserverifiedtwoactualrepairs,90options/RGBloaded/noJSerrors;headlessThaicapturesreuseexistingfont,noinstall/download.
+
+StatusMECHANICAL_REPAIR_COMPLETE_REVIEW_PENDING,scoring_readyfalse/primarynull;oldCCTVresults/CIHP9of9unchanged. Next:GT-onlygeometry/coverageanddefinitionreview,thenfreezebindingsandCPUscorerintegrationbeforeanynewscore. CommitidentitykeptinGithistory.

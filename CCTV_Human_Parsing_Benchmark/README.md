@@ -1,3 +1,5 @@
+> **GT ฉบับแก้จาก Master พร้อมเปิดตรวจแล้ว:** แก้ownerสองจุดและส่งออก90ภาพในโฟลเดอร์ส่วนตัว `outputs/master-gt-repair-20261107T191020Z/` เปิด `index.html` ดูก่อน–หลังได้. ยังรอตรวจcoverage/ขอบเขต ไม่ใช่GTที่พร้อมให้คะแนนใหม่ และผลที่รายงานด้านล่างยังเป็นผลGTrevisionเดิม. [สถานะและตำแหน่งไฟล์](STATUS.md) / [รายงานการแก้](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md).
+
 # CCTV Human Parsing Benchmark
 
 **ตัวหลักที่แนะนำ: Sapiens2 segmentation 1B** สำหรับคุณภาพรวมสี่เป้าหมายบน CCTV reference-domain ที่ประเมินแล้ว. คะแนน Macro4 **65.430%** สูงสุดจาก9ระบบ; QANet **64.533%** ตามหลัง0.898pp และเป็นทางเลือกเมื่อเน้น Face-domain/Upper.

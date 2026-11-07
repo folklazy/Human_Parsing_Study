@@ -90,5 +90,73 @@
     "Raster comparisons depend on the specified renderer; discrepancy alone is not universal corruption proof",
     "No model outputs inspected for choosing annotation corrections; no full-image scoring or new acceptance claimed"
   ],
-  "authoritative_intake_directory": "datasets/CCTV_100_Evaluation/Annotations_Master"
+  "authoritative_intake_directory": "datasets/CCTV_100_Evaluation/Annotations_Master",
+  "mechanical_repair": {
+    "status": "MECHANICAL_REPAIR_COMPLETE_REVIEW_PENDING",
+    "created_utc": "2026-11-07T19:10:40.780307+00:00",
+    "artifact_root": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z",
+    "counts": {
+      "images": 90,
+      "persons": 127,
+      "parts": 326,
+      "person_overlap_pixels": 3365,
+      "part_pixels_outside_own_extent": 5582
+    },
+    "owner_corrections": 2,
+    "source_sha256": "9fa345f1fccccd5d431ba5e7489cf36636b528d72b46ac09884c8def5707a41b",
+    "renderer": "OpenCV 5.0.0: float-to-int32 truncation, fillPoly",
+    "shape_coordinates": "closed image edges [0,W]x[0,H]; raster clipped by OpenCV",
+    "representation": "Per-person boolean extents authoritative for this candidate; PNG 255 means unresolved overlap",
+    "overlap_policy": "Preserve all per-person polygons; require visibility review, never numeric-ID winner",
+    "outside_person_PNG_zero": "outside annotated people; not certified semantic background",
+    "semantic_unknown": 255,
+    "semantic_bg_other_invented": false,
+    "scoring_ready": false,
+    "primary": null,
+    "coverage_review_items": 508,
+    "unknown_no_polygon": 182,
+    "source_annotations_modified": false,
+    "source_contours_modified": false,
+    "model_inference_calls": 0,
+    "expert_certified": false,
+    "private_binding_sha256": "39e1d7e5d2827ed012611cf98b52fd6137e2aa853a13cffbf2a06874c5a2ee44",
+    "verified_thai": "2026-11-08T02:17:50.448008+07:00",
+    "candidate_C4_encoding": {
+      "0": "not invented",
+      "1": "Face reference candidate",
+      "2": "Hair",
+      "3": "Upper",
+      "4": "Lower",
+      "5": "OTHER not invented",
+      "255": "unknown/conflict"
+    },
+    "CPU_acceptance": {
+      "tests_passed": 8,
+      "tests_failed": 0,
+      "command": ".venvs/sapiens2-pilot/bin/python -m unittest discover -s CCTV_Human_Parsing_Benchmark/tests -p test_master_gt_revision.py -v",
+      "test_source_sha256": "f6da62d5512c4c2b60bc4ae2ab440811e8bb9cb94f50e5fbe6404349a9fa496f"
+    },
+    "actual_readback": {
+      "frame_packets": 90,
+      "repaired_annotations": 90,
+      "person_pngs": 90,
+      "source_inputs_unchanged": 360,
+      "independent_7495_pixel_owner_conflict_resolved": true,
+      "remaining_parts_outside_own_extent": 262
+    },
+    "browser_acceptance": {
+      "status": "PASS",
+      "image_options": 90,
+      "owner_repair_examples": 2,
+      "both_RGB_panels_loaded": true,
+      "page_errors": 0,
+      "existing_Thai_font_reused_for_headless_capture": true
+    },
+    "hashes": {
+      "completion": "f4f900cb71f0a16bafeb065a5668d9726ebde5176577a4e9686ecd21c8517d51",
+      "review_queue": "af6a05bb530c8a1d0a1bce7ddf3a7a0be61c660f0771ceaacd6878e1d2604c49",
+      "geometry_review": "314cc951ebe3327a825d8f35db5aa003f316e3fa07def1c03681d36edaa95192",
+      "index": "bc7add3e80496095cb0d5ca781b30a79b96ca52669e65dde3422b04d3fd35284"
+    }
+  }
 }

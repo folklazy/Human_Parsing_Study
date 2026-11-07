@@ -1,3 +1,15 @@
+# แก้ mask ฉบับอนุพันธ์ครบ90ภาพ — 2026-11-08T02:17:50.448008+07:00
+
+**MECHANICAL_REPAIR_COMPLETE / COVERAGE_REVIEW_PENDING / SCORING_NOT_READY**. สร้างจากAnnotations_Masterในfreshfolder `CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/`:90JSON/90PNG/90NPZ,127คน/326parts. แก้ownerที่ยืนยันแล้วสองรายการ โดยไม่เปลี่ยนverticesหรือMasterเดิม;ตรวจกรณีกางเกง7,495พิกเซลกลับเป็นowner1ทุกพิกเซลแล้ว
+
+เปิด`index.html`ในโฟลเดอร์นี้เพื่อเทียบก่อน–หลังทั้ง90ภาพ; JSONฉบับแก้อยู่`Annotations_Reviewed/`และชี้RGBเดิม. CPU8casesและactualpacketreadback90ภาพผ่าน;source360hashes/protectedscientific6filesคงเดิม. เครื่องมือแยกจากinference/scorer ไม่มีmodelcallsหรือคะแนนใหม่
+
+ยังไม่รับรองcoverage:182tasksไม่มีpolygonยังเป็นunknown;personoverlap3,365pixelsไม่ตัดสินจากID;262partsมีพิกเซลบางส่วนอยู่นอกrawextentรวม5,582pixelsจึงเก็บเป็นgeometryreviewโดยไม่clip. Face/Upperdefinitionและverifieddomainsยังต้องตรวจ จึงคงscoring_ready=false/primarynullสำหรับGTrevisionใหม่นี้ ผลCCTVก่อนหน้าและCIHP9/9ไม่เปลี่ยน
+
+[รายงานเดิมพร้อมผลแก้](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [หลักฐาน](reports/ADDED_ANNOTATION_INTAKE.json). Next:GT-onlygeometry/coverageadjudication →freezebinding/domain →CPUacceptanceและsaved-maskscoring;ไม่ต้องรันโมเดลซ้ำหากinputเดิม
+
+## สถานะก่อนสร้างฉบับแก้ (historical)
+
 # ตรวจ Master annotation ใหม่แล้ว — 2026-11-08T01:38:24.419588+07:00
 
 **ANNOTATION_INTAKE_REVIEW_COMPLETE / GT_REVISION_REQUIRED / PROPOSED_NOT_FROZEN**. ตรวจ `datasets/CCTV_100_Evaluation/Annotations_Master` ตามผู้ใช้ระบุ:90JSON/90JPG,133personpolygons/127groups,127bbox; imagebytesตรงกับcohortเดิม90/90. Semantic polygonsสี่targetsยังเหมือนcanonicalเดิมทุกภาพ จึงยังไม่ใช่GTที่ยืนยันtarget/Face/Neckครบใหม่
