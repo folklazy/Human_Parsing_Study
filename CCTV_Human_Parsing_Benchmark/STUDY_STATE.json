@@ -1,1070 +1,1130 @@
 {
-  "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
-  "scope": "CCTV controlled ROI selected-part reference evaluation",
-  "updated_utc": "2026-11-03T09:03:18+00:00",
+  "status": "SHARED_REFERENCE_SCORING_COMPLETE_9_OF_9",
+  "scope": "CCTV90 shared C3-person-part mean and separate Face-local, user-reviewed reference, saved masks only",
+  "updated_utc": "2026-11-08T09:01:46.245563+00:00",
   "complete_models": 9,
   "expected_models": 9,
   "prediction_images_per_model": 90,
   "ROIs_per_model": 130,
   "eligible_parts": {
-    "Hair": 61,
-    "FaceDomain": 21,
-    "Upper": 112,
-    "Lower": 96
+    "Face_local": 35,
+    "Hair": 69,
+    "Upper": 120,
+    "Lower": 102
   },
-  "source_Face_items": 35,
-  "excluded_Face_items": 14,
-  "unknown_Neck_Face_items": 18,
-  "FaceNeck_delivery_items": 3,
-  "known_Neck_items": 3,
+  "CPU_scoring_complete": true,
+  "model_inference_rerun": false,
+  "new_model_calls_this_work_unit": 0,
+  "current_report": "../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md",
+  "current_report_sha256": "6e07a44caa134396e0c49dc0fd2224ecff9f0671063f19c4428478052016faa1",
+  "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
+  "protocol": "../Human_Parsing_Benchmark/protocol/SHARED_C3_FACE_LOCAL_V1.json",
+  "protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
   "GT_expert_certified": false,
   "full_scene_evaluation": false,
   "deployment_accepted": false,
-  "new_model_calls_this_work_unit": 0,
-  "model_inference_rerun": false,
-  "CPU_scoring_complete": true,
-  "current_report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-  "source_of_truth": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
-  "GT_summary": "reports/FACE_NECK_GT_SUMMARY.json",
-  "protocol": "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json",
-  "observed_Macro4_leader": {
-    "model": "Sapiens2_1b",
-    "score": 0.6543046381005433,
-    "runner_up": "QANet_CIHP_HRNetW48_512x384",
-    "runner_up_score": 0.6453279495171149,
-    "difference_percentage_points": 0.8976688583428372
+  "leaders": {
+    "Hair": {
+      "model_id": "Sapiens2_1b",
+      "score": 0.6239408651020795,
+      "runner_up": "Sapiens2_0.4b",
+      "delta_percentage_points": 0.8973373420150699
+    },
+    "Upper": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "score": 0.6608260529406185,
+      "runner_up": "Sapiens2_1b",
+      "delta_percentage_points": 2.3387465642298433
+    },
+    "Lower": {
+      "model_id": "Sapiens2_1b",
+      "score": 0.5928084638974814,
+      "runner_up": "QANet_CIHP_HRNetW48_512x384",
+      "delta_percentage_points": 2.3761425911054457
+    },
+    "mIoU3_part_mean": {
+      "model_id": "Sapiens2_1b",
+      "score": 0.6180626387659603,
+      "runner_up": "QANet_CIHP_HRNetW48_512x384",
+      "delta_percentage_points": 1.8812562948359979
+    },
+    "Face_local": {
+      "model_id": "Sapiens2_1b",
+      "score": 0.6949690294667353,
+      "runner_up": "Sapiens2_0.8b",
+      "delta_percentage_points": 3.3484681710094
+    }
   },
-  "Face_GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
-  "protocol_sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
-  "active_execution": false,
-  "next_action": "Use documented quality recommendation when deciding the next scoped task; no automatic new experiment",
-  "historical_references": [
-    "reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md",
-    "reports/CONTROLLED_ROI_RUN_TH.md",
-    "reports/CCTV_SELECTED_PART_RESULTS_TH.md"
-  ],
-  "recommendation": {
-    "model_id": "Sapiens2_1b",
-    "effective_route": "CONTROLLED_YOLO_PERSON_ROI",
-    "status": "RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK",
-    "record": "reports/MODEL_RECOMMENDATION.json",
-    "deployment_accepted": false,
-    "new_inference_authorized": false
-  },
-  "private_image_gallery": {
-    "viewer": "outputs/model-detail-gallery-20261102/index.html",
-    "bundle": "outputs/model-detail-gallery-20261102.zip",
-    "summary": "reports/MODEL_IMAGE_GALLERY.json",
-    "fixed_images": 6,
-    "detected_ROIs": 15,
-    "models": 9,
-    "model_calls": 0,
-    "public_images": false
-  },
-  "target_confusion_reporting": {
-    "status": "DERIVED_REPORTING_ONLY_COMPLETE",
-    "updated_utc": "2026-11-02T06:50:26.324719+00:00",
-    "updated_Asia_Bangkok": "2026-11-02T13:50:26.324719+07:00",
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "source_index": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
-    "source_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
-    "matrix_order": {
-      "GT_rows": [
-        "target",
-        "not_this_person_part"
-      ],
-      "prediction_columns": [
-        "target",
-        "not_target"
-      ],
-      "cells": [
-        [
-          "TP",
-          "FN"
-        ],
-        [
-          "FP",
-          "TN"
-        ]
-      ]
-    },
-    "models": 9,
-    "targets": [
-      "Hair",
-      "FaceDomain",
-      "Upper",
-      "Lower"
-    ],
-    "aggregate_rows": 36,
-    "GT_parts_per_model": 290,
-    "scored_JSON_records_verified": 981,
-    "part_tasks_verified": 2610,
-    "score_records_digest": "d9c3986a38a388236c6ddda91f27f7e902409256bab2de300ff282b41a353b8a",
-    "protected_canonical_artifacts_verified_unchanged": 28,
-    "source_counts_match_canonical": true,
-    "GT_support_domain_equal_across_models": true,
-    "original_primary_scores_unchanged": true,
-    "model_calls": 0,
-    "prediction_masks_read": 0,
-    "rescoring": false,
-    "TN_interpretation": "selected-person part-task complement, not full-scene background truth",
-    "aggregation": "Pooled counts per target for diagnostic ratios; original equal-part IoU and equal-target Macro4 unchanged",
-    "CPU_acceptance": {
-      "command": "python -m pytest -q CCTV_Human_Parsing_Benchmark/tests/test_target_confusion.py",
-      "passed": 8,
-      "scope": "literal counts, pooled versus mean-part aggregation, coverage versus exact mask, null precision, explicit unknown-Neck domain, invalid counts"
-    },
-    "private_verification": "outputs/target-confusion-report-20261102-final/VERIFICATION.json",
-    "figure_visually_inspected": true,
-    "public_CCTV_images": false,
-    "derived_files": [
-      {
-        "path": "scripts/report_target_confusion.py",
-        "bytes": 28529,
-        "sha256": "31af12f0c96acb4c79aea3344f572098347d0745c269902865b37a3b89a63a1a"
-      },
-      {
-        "path": "tests/test_target_confusion.py",
-        "bytes": 3473,
-        "sha256": "c7553d0a3ce072009761392fd4585e64f0258d81a9e816a74a4c93fa6db4993b"
-      },
-      {
-        "path": "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv",
-        "bytes": 7580,
-        "sha256": "5d5bb2b60b20df5d96271765bf2f980c141dc1e4ddda04457f037951e21d7827"
-      },
-      {
-        "path": "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png",
-        "bytes": 911606,
-        "sha256": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
-      },
-      {
-        "path": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-        "bytes": 43373,
-        "sha256": "381a215807b6dbcbbc708a97d59063f1955226e72470040f0753cf3a455ae185"
-      }
-    ],
-    "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00",
-    "generation_snapshot_commit": "900744d0ddae504333179feb27df4c511f8c73ef",
-    "derived_hash_scope": "Historical matrix-generation snapshot; current PRF CSV identity remains in per_class_prf_reporting and current report/presentation-generator hashes are in report_explanation_review."
-  },
-  "runtime_reporting": {
-    "status": "HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE",
-    "created_utc": "2026-11-02T08:57:24.454430+00:00",
-    "model_calls": 0,
-    "masks_read": 0,
-    "quality_scores_changed": false,
-    "speed_ranking_eligible": false,
-    "models": [
-      {
-        "model_id": "QANet_CIHP_HRNetW48_512x384",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 130,
-          "mean_ms": 76.32487598636475,
-          "median_ms": 75.17289003590122,
-          "p95_ms": 91.06191836472134,
-          "total_seconds": 9.922233878227416
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 52.863602,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 52.863602,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 9.922233878227416,
-          "full_population_mean_ms_per_image": 110.24704309141573,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 110.24704309141573,
-            "median_ms": 78.3802974910941,
-            "p95_ms": 297.61532808770414,
-            "total_seconds": 9.922233878227416
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 121.00285217350508,
-            "median_ms": 79.82213600189425,
-            "p95_ms": 312.60982489329774,
-            "total_seconds": 9.922233878227416
-          },
-          "recorded_interval_sum_seconds": 9.922233878227416,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 9.922233878227416,
-          "worker_elapsed_sum_seconds": 52.863602,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "M2FP_R101_CIHP",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 130,
-          "mean_ms": 220.18747281712982,
-          "median_ms": 224.71911952015944,
-          "p95_ms": 264.32922723470256,
-          "total_seconds": 28.624371466226876
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 72.626611,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 72.626611,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 28.624371466226876,
-          "full_population_mean_ms_per_image": 318.0485718469653,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 318.0485718469653,
-            "median_ms": 250.35442199441604,
-            "p95_ms": 861.7358266608787,
-            "total_seconds": 28.624371466226876
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 349.0777008076448,
-            "median_ms": 253.1602504896,
-            "p95_ms": 879.0304962778466,
-            "total_seconds": 28.624371466226876
-          },
-          "recorded_interval_sum_seconds": 28.624371466226876,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 28.624371466226876,
-          "worker_elapsed_sum_seconds": 72.626611,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "D2FP_R101_CIHP",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 130,
-          "mean_ms": 694.8848071006628,
-          "median_ms": 702.3465724778362,
-          "p95_ms": 858.0979895894416,
-          "total_seconds": 90.33502492308617
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 132.674134,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 132.674134,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 90.33502492308617,
-          "full_population_mean_ms_per_image": 1003.7224991454018,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 1003.7224991454019,
-            "median_ms": 813.2025780214462,
-            "p95_ms": 2752.3820048518246,
-            "total_seconds": 90.33502492308617
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 1101.6466454034899,
-            "median_ms": 824.0100530092604,
-            "p95_ms": 2782.802763264044,
-            "total_seconds": 90.33502492308617
-          },
-          "recorded_interval_sum_seconds": 90.33502492308617,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 90.33502492308617,
-          "worker_elapsed_sum_seconds": 132.674134,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "RPR_CIHP",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 1,
-          "mean_ms": 351.6329289996065,
-          "median_ms": 351.6329289996065,
-          "p95_ms": 351.6329289996065,
-          "total_seconds": 0.3516329289996065
-        },
-        "UTC_event_interval": {
-          "n": 129,
-          "mean_ms": 225.81656589147286,
-          "median_ms": 220.67899999999997,
-          "p95_ms": 307.97580000000005,
-          "total_seconds": 29.130337
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 2,
-        "unfinished_forward_starts": 1,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 10.703959,
-            "status": "STOPPED_INCOMPLETE"
-          },
-          {
-            "run_id": "cctv-roi-continuation-20261101T121138Z",
-            "worker_elapsed_seconds": 65.200003,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 75.90396199999999,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 29.481969928999607,
-          "full_population_mean_ms_per_image": 327.5774436555512,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 327.5774436555512,
-            "median_ms": 257.83,
-            "p95_ms": 802.4791499999999,
-            "total_seconds": 29.481969928999607
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 359.5362186463367,
-            "median_ms": 272.00800000000004,
-            "p95_ms": 805.15635,
-            "total_seconds": 29.481969928999607
-          },
-          "recorded_interval_sum_seconds": 29.481969928999607,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 29.481969928999607,
-          "worker_elapsed_sum_seconds": 75.90396199999999,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "CPI_R50_CIHP",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 28,
-          "mean_ms": 2806.344362755356,
-          "median_ms": 2551.307481015101,
-          "p95_ms": 5762.778591155074,
-          "total_seconds": 78.57764215714997
-        },
-        "UTC_event_interval": {
-          "n": 102,
-          "mean_ms": 3046.1721568627454,
-          "median_ms": 3372.9315,
-          "p95_ms": 5982.932449999998,
-          "total_seconds": 310.70956
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 2,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 99.918183,
-            "status": "STOPPED_INCOMPLETE"
-          },
-          {
-            "run_id": "cctv-roi-continuation-20261101T121138Z",
-            "worker_elapsed_seconds": 386.908634,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 486.826817,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 389.28720215715,
-          "full_population_mean_ms_per_image": 4325.413357301666,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 4325.413357301667,
-            "median_ms": 3673.4045,
-            "p95_ms": 11954.662149999998,
-            "total_seconds": 389.28720215715
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 4747.404904355488,
-            "median_ms": 4048.8165,
-            "p95_ms": 12083.40335,
-            "total_seconds": 389.28720215715
-          },
-          "recorded_interval_sum_seconds": 389.28720215715,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 389.28720215715,
-          "worker_elapsed_sum_seconds": 486.826817,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "CPI_ConvNeXtB_CIHP",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 27,
-          "mean_ms": 485.5992630688922,
-          "median_ms": 502.2395270061679,
-          "p95_ms": 710.5262682249304,
-          "total_seconds": 13.11118010286009
-        },
-        "UTC_event_interval": {
-          "n": 103,
-          "mean_ms": 491.92100970873787,
-          "median_ms": 456.155,
-          "p95_ms": 809.9739999999998,
-          "total_seconds": 50.667864
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 0,
-        "warmup_calls_excluded": 2,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 39.048331,
-            "status": "STOPPED_INCOMPLETE"
-          },
-          {
-            "run_id": "cctv-roi-continuation-20261101T121138Z",
-            "worker_elapsed_seconds": 100.76302,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 139.811351,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "1.10.2+cu113",
-          "CUDA_runtime": "11.3",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 90,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 82,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 0,
-          "full_population_timing_complete": true,
-          "full_population_parsing_work_seconds": 63.77904410286009,
-          "full_population_mean_ms_per_image": 708.6560455873343,
-          "complete_images_statistics": {
-            "n": 90,
-            "mean_ms": 708.6560455873343,
-            "median_ms": 542.415,
-            "p95_ms": 1797.0675499999998,
-            "total_seconds": 63.77904410286009
-          },
-          "complete_nonempty_statistics": {
-            "n": 82,
-            "mean_ms": 777.7932207665865,
-            "median_ms": 562.0386344804689,
-            "p95_ms": 1862.9639500000005,
-            "total_seconds": 63.77904410286009
-          },
-          "recorded_interval_sum_seconds": 63.77904410286009,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 130,
-          "untimed_ROIs": 0,
-          "timing_coverage": 1.0,
-          "logged_interval_sum_seconds": 63.77904410286009,
-          "worker_elapsed_sum_seconds": 139.811351,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "Sapiens2_0.4b",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 115,
-          "mean_ms": 1410.126603896345,
-          "median_ms": 1435.5090430472046,
-          "p95_ms": 1450.9731781843584,
-          "total_seconds": 162.16455944807967
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 15,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 237.99475,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 237.99475,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "2.14.0+cu130",
-          "CUDA_runtime": "13.0",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 84,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 76,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 6,
-          "full_population_timing_complete": false,
-          "full_population_parsing_work_seconds": null,
-          "full_population_mean_ms_per_image": null,
-          "complete_images_statistics": {
-            "n": 84,
-            "mean_ms": 1930.530469619996,
-            "median_ms": 1442.155308497604,
-            "p95_ms": 5277.626319273252,
-            "total_seconds": 162.16455944807967
-          },
-          "complete_nonempty_statistics": {
-            "n": 76,
-            "mean_ms": 2133.744203264206,
-            "median_ms": 1443.4727614861913,
-            "p95_ms": 5513.603371960926,
-            "total_seconds": 162.16455944807967
-          },
-          "recorded_interval_sum_seconds": 162.16455944807967,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 115,
-          "untimed_ROIs": 15,
-          "timing_coverage": 0.8846153846153846,
-          "logged_interval_sum_seconds": 162.16455944807967,
-          "worker_elapsed_sum_seconds": 237.99475,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "Sapiens2_0.8b",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 115,
-          "mean_ms": 2922.1196537569126,
-          "median_ms": 2944.6547719999216,
-          "p95_ms": 3021.3442503649276,
-          "total_seconds": 336.04376018204493
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 15,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 468.761213,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 468.761213,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "2.14.0+cu130",
-          "CUDA_runtime": "13.0",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 84,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 76,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 6,
-          "full_population_timing_complete": false,
-          "full_population_parsing_work_seconds": null,
-          "full_population_mean_ms_per_image": null,
-          "complete_images_statistics": {
-            "n": 84,
-            "mean_ms": 4000.5209545481544,
-            "median_ms": 2955.4067690041848,
-            "p95_ms": 11192.779917435822,
-            "total_seconds": 336.04376018204493
-          },
-          "complete_nonempty_statistics": {
-            "n": 76,
-            "mean_ms": 4421.62842344796,
-            "median_ms": 2966.1481415096205,
-            "p95_ms": 11614.332658762578,
-            "total_seconds": 336.04376018204493
-          },
-          "recorded_interval_sum_seconds": 336.04376018204493,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 115,
-          "untimed_ROIs": 15,
-          "timing_coverage": 0.8846153846153846,
-          "logged_interval_sum_seconds": 336.04376018204493,
-          "worker_elapsed_sum_seconds": 468.761213,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      },
-      {
-        "model_id": "Sapiens2_1b",
-        "frames": 90,
-        "ROI_population": 130,
-        "monotonic_adapter": {
-          "n": 115,
-          "mean_ms": 4143.146465376586,
-          "median_ms": 4187.459098000545,
-          "p95_ms": 4307.980177574791,
-          "total_seconds": 476.46184351830743
-        },
-        "UTC_event_interval": {
-          "n": 0,
-          "mean_ms": null,
-          "median_ms": null,
-          "p95_ms": null,
-          "total_seconds": null
-        },
-        "prior_diagnostic_ROIs_without_current_timing": 15,
-        "warmup_calls_excluded": 1,
-        "unfinished_forward_starts": 0,
-        "segments": [
-          {
-            "run_id": "cctv-controlled-roi-20261101T115653Z",
-            "worker_elapsed_seconds": 698.234244,
-            "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
-          }
-        ],
-        "worker_elapsed_seconds": 698.234244,
-        "parent_environment": {
-          "GPU": "Tesla T4",
-          "torch": "2.14.0+cu130",
-          "CUDA_runtime": "13.0",
-          "FP32": true,
-          "AMP": false,
-          "TF32": false
-        },
-        "per_image_summary": {
-          "expected_images": 90,
-          "images_with_complete_timing": 84,
-          "no_parser_ROI_images": 8,
-          "complete_nonempty_images": 76,
-          "partial_timing_images": 0,
-          "images_without_current_timer": 6,
-          "full_population_timing_complete": false,
-          "full_population_parsing_work_seconds": null,
-          "full_population_mean_ms_per_image": null,
-          "complete_images_statistics": {
-            "n": 84,
-            "mean_ms": 5672.164803789374,
-            "median_ms": 4199.611609481508,
-            "p95_ms": 15805.426033152598,
-            "total_seconds": 476.46184351830743
-          },
-          "complete_nonempty_statistics": {
-            "n": 76,
-            "mean_ms": 6269.234783135624,
-            "median_ms": 4212.975225003902,
-            "p95_ms": 16409.192980718217,
-            "total_seconds": 476.46184351830743
-          },
-          "recorded_interval_sum_seconds": 476.46184351830743,
-          "end_to_end_latency": false
-        },
-        "time_accounting": {
-          "timed_ROIs": 115,
-          "untimed_ROIs": 15,
-          "timing_coverage": 0.8846153846153846,
-          "logged_interval_sum_seconds": 476.46184351830743,
-          "worker_elapsed_sum_seconds": 698.234244,
-          "homogeneous_latency_metric": false,
-          "end_to_end": false
-        }
-      }
-    ],
-    "script_sha256": "8451f34d74ec5ff0d32201fe70a4b861f4640732cd5d7ada994f5fe7369a20f1",
-    "report_sha256": "b8e69103807b07b0958c736489f37956b240609765985f5241b8cb05a6fe33d7",
-    "resource_policy": "SHARED_GPU_QUALITY_ONLY",
-    "monotonic_ROIs": 791,
-    "UTC_event_ROIs": 334,
-    "ROI_opportunities_per_checkpoint": 130,
-    "prior_diagnostic_ROIs_without_current_timer": 45,
-    "TRAIN_warmup_calls_excluded_from_ROI_stats": 12,
-    "unfinished_failed_forward_starts": 1,
-    "statistics": {
-      "mean": "sum(seconds)/n",
-      "median": "middle observation(s)",
-      "P95": "linear interpolation at 0.95*(n-1)"
-    },
-    "source_input_files": 67,
-    "source_input_hash_digest": "5194df36408ab003bf1afc3c014bdadf5d89e387d99702caf460665d6b452fba",
-    "private_verification": "outputs/per-image-timing-report-20261102-final/VERIFICATION.json",
-    "CPU_reporting_checks_passed": 16,
-    "new_dependency_installations": 0,
-    "previous_generation_commit": "102ac82f530851d7b861f155c6c7f1212cd0babd",
-    "additive_summary": {
-      "status": "LOGGED_INTERVAL_AND_WORKER_SUMMARIES_COMPLETE",
-      "timed_ROIs": 1125,
-      "ROI_opportunities_across_nine_models": 1170,
-      "logged_interval_sum_seconds": 1586.1000096049822,
-      "worker_elapsed_sum_seconds": 2365.696684,
-      "homogeneous_latency_metric": false,
-      "worker_and_logged_intervals_must_not_be_added": true,
-      "per_class_inference_time_available": false,
-      "per_class_quality_metrics_available": true,
-      "rounding": "sum full precision before display rounding"
-    },
-    "report_sha256_scope": "Historical runtime-generation snapshot; current report/presentation-generator hashes are in report_explanation_review.",
-    "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244",
-    "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12"
-  },
-  "per_class_prf_reporting": {
-    "status": "PER_CLASS_PIXEL_PRF_COMPLETE",
-    "created_utc": "2026-11-02T08:26:29.167324+00:00",
-    "model_count": 9,
-    "targets": [
-      "Hair",
-      "FaceDomain",
-      "Upper",
-      "Lower"
-    ],
-    "model_target_pairs": 36,
-    "model_calls": 0,
-    "prediction_masks_read": 0,
-    "source_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
-    "previous_CSV_sha256": "5d5bb2b60b20df5d96271765bf2f980c141dc1e4ddda04457f037951e21d7827",
-    "CSV_sha256": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
-    "original_columns_preserved": true,
-    "report_sha256": "7ce9325287f350adf14965f19f61b270cde9962eb489770df6d546ae3916e311",
-    "script_sha256": "75dad0fb59faab54f884617de7decc38ff8e31d811b658f1e2fa7724bf32d3ac",
-    "pooled_F1_equals_existing_pooled_Dice": true,
-    "undefined_F1_count": 0,
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "CSV": "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv",
-    "aggregation": "Pool binary pixel TP/FP/FN over eligible person-part tasks for each target; one F1 per model per target",
-    "units": {
-      "CSV": "fraction0to1",
-      "Markdown": "percent"
-    },
-    "formulas": {
-      "Precision": "TP/(TP+FP)",
-      "Recall": "TP/(TP+FN)",
-      "F1": "2TP/(2TP+FP+FN)"
-    },
-    "zero_denominator": "null; positive GT with empty prediction has F1=0",
-    "per_person_F1": false,
-    "GT_parts": {
+  "active_execution": null,
+  "next_action": "Use current shared-view report; no automatic model inference/benchmark expansion",
+  "historical_four_target_state": {
+    "status": "FOUR_TARGET_EVALUATION_COMPLETE_ON_REVIEWED_GT",
+    "scope": "CCTV controlled ROI selected-part reference evaluation",
+    "updated_utc": "2026-11-03T09:03:18+00:00",
+    "complete_models": 9,
+    "expected_models": 9,
+    "prediction_images_per_model": 90,
+    "ROIs_per_model": 130,
+    "eligible_parts": {
       "Hair": 61,
       "FaceDomain": 21,
       "Upper": 112,
       "Lower": 96
     },
-    "macro4_primary_unchanged": true,
-    "CPU_reporting_checks_passed": 10,
-    "new_public_files": 0,
-    "private_verification": "outputs/per-class-prf-report-20261102/VERIFICATION.json",
-    "public_copy_reproduction": "PASS; aggregate-only public-copy execution reproduced byte-identical CSV/report without private GT/predictions",
-    "report_hash_snapshot_commit": "509cacb6807c9a29794692a5ff1645afbd9d92c4",
-    "report_sha256_scope": "PRF generation at509cacb; current report and presentation-generator hashes in report_language_review. PRF CSV/counts unchanged."
-  },
-  "per_image_timing_reporting": {
-    "status": "PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS",
-    "created_utc": "2026-11-02T08:57:24.562485+00:00",
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "report_sha256": "b8e69103807b07b0958c736489f37956b240609765985f5241b8cb05a6fe33d7",
-    "script_sha256": "8451f34d74ec5ff0d32201fe70a4b861f4640732cd5d7ada994f5fe7369a20f1",
-    "models": 9,
-    "unique_images": 90,
-    "model_image_records": 810,
-    "complete_timing_model_image_records": 792,
-    "timing_complete_models": 6,
-    "no_parser_ROI_images_per_model": 8,
-    "private_CSV": {
-      "path": "outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv",
-      "filename": "PER_IMAGE_TIMING.csv",
-      "rows": 810,
-      "sha256": "8b8721af861d512bc4dad6560f5995cef8668f10caa38bb2f787a37daf360363"
+    "source_Face_items": 35,
+    "excluded_Face_items": 14,
+    "unknown_Neck_Face_items": 18,
+    "FaceNeck_delivery_items": 3,
+    "known_Neck_items": 3,
+    "GT_expert_certified": false,
+    "full_scene_evaluation": false,
+    "deployment_accepted": false,
+    "new_model_calls_this_work_unit": 0,
+    "model_inference_rerun": false,
+    "CPU_scoring_complete": true,
+    "current_report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "source_of_truth": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
+    "GT_summary": "reports/FACE_NECK_GT_SUMMARY.json",
+    "protocol": "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json",
+    "observed_Macro4_leader": {
+      "model": "Sapiens2_1b",
+      "score": 0.6543046381005433,
+      "runner_up": "QANet_CIHP_HRNetW48_512x384",
+      "runner_up_score": 0.6453279495171149,
+      "difference_percentage_points": 0.8976688583428372
     },
-    "new_model_calls": 0,
-    "masks_images_weights_read": 0,
-    "private_per_image_identifiers_published": false,
-    "public_summary_location": "runtime_reporting.models[].per_image_summary",
-    "CPU_reporting_checks_passed": 16,
-    "units": "ms per image =sum of its actual ROI durations, seconds for dataset totals",
-    "missing_policy": "Full image null if any ROI missing timer; full-population90 total/mean null if any image incomplete. No-ROI parsing work=0, not end-to-end latency=0",
-    "prior_diagnostic_timer_exclusion": "Original pilot timer surrounds learned forward, with preprocessing/map-back outside; not interchangeable with current adapter timer",
-    "prior_diagnostic_timer_source": "scripts/run_sapiens_roi_review.py",
-    "prior_diagnostic_timer_source_sha256": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9",
-    "end_to_end_latency": false,
-    "speed_ranking_eligible": false,
-    "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12",
-    "report_sha256_scope": "Historical per-image timing-generation snapshot; current report/presentation-generator hashes are in report_explanation_review."
-  },
-  "report_formatting": {
-    "status": "TABLE_E_RENDERING_FIXED",
-    "updated_utc": "2026-11-02T09:35:57.399792+00:00",
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "report_sha256": "4a66b0ee2e7d82e276e2e312878cc917f11a3173c4894f8bac08dd5660330f79",
-    "runtime_generator_sha256": "20aeb350a169ec6ce13049d05a416978a07a24559b839d3a55cc0ca16857cb23",
-    "header_columns": 6,
-    "old_separator_columns": 7,
-    "fixed_separator_columns": 6,
-    "GitHub_GFM_before_Model_table": false,
-    "GitHub_GFM_after_Model_table": true,
-    "Chromium_rows": 9,
-    "Chromium_columns": 6,
-    "Chromium_data_cells": 54,
-    "Thai_preview_visually_inspected": true,
-    "numeric_content_unchanged": true,
-    "new_model_calls": 0,
-    "data_recomputed": false,
-    "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json",
-    "report_hash_snapshot_commit": "dac48c359e596b8c6c6c65d5de22afb09668f11f",
-    "hash_scope": "Historical formatting snapshot; current report/presentation-generator hashes are in report_explanation_review."
-  },
-  "report_language_review": {
-    "status": "THAI_WORDING_REVIEWED",
-    "updated_utc": "2026-11-02T09:54:52.799096+00:00",
-    "updated_Asia_Bangkok": "2026-11-02T16:54:52.799096+07:00",
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "report_sha256": "cb251fddde31bc84c2acb9c423294778994b09197370070afecc99deb3f346e6",
-    "generator_hashes": {
-      "report_runtime.py": "8875032c2304ac6aa9b8b21513a36b57520eadbb536339208f4208700b7e419a",
-      "report_target_confusion.py": "bd7f860380cd752cd9422f426baf3ab4e59dc7ad3cd6b7d26c4d5563eb73335e"
+    "Face_GT_binding_sha256": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
+    "protocol_sha256": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+    "active_execution": false,
+    "next_action": "Use documented quality recommendation when deciding the next scoped task; no automatic new experiment",
+    "historical_references": [
+      "reports/CONTROLLED_ROI_GT_AND_PART_RESULTS_TH.md",
+      "reports/CONTROLLED_ROI_RUN_TH.md",
+      "reports/CCTV_SELECTED_PART_RESULTS_TH.md"
+    ],
+    "recommendation": {
+      "model_id": "Sapiens2_1b",
+      "effective_route": "CONTROLLED_YOLO_PERSON_ROI",
+      "status": "RECOMMENDED_FROM_COMPLETED_CCTV_REFERENCE_BENCHMARK",
+      "record": "reports/MODEL_RECOMMENDATION.json",
+      "deployment_accepted": false,
+      "new_inference_authorized": false
     },
-    "scope": "Thai prose, headings, metric explanations, units and table headers; no numeric/statistical/scientific changes",
-    "model_data_rows_unchanged": 113,
-    "protected_files_verified_unchanged": 9,
-    "calculation_functions_AST_unchanged": true,
-    "generator_sections_match_report": true,
-    "GitHub_GFM_tables": 21,
-    "Chromium_table_E": {
+    "private_image_gallery": {
+      "viewer": "outputs/model-detail-gallery-20261102/index.html",
+      "bundle": "outputs/model-detail-gallery-20261102.zip",
+      "summary": "reports/MODEL_IMAGE_GALLERY.json",
+      "fixed_images": 6,
+      "detected_ROIs": 15,
+      "models": 9,
+      "model_calls": 0,
+      "public_images": false
+    },
+    "target_confusion_reporting": {
+      "status": "DERIVED_REPORTING_ONLY_COMPLETE",
+      "updated_utc": "2026-11-02T06:50:26.324719+00:00",
+      "updated_Asia_Bangkok": "2026-11-02T13:50:26.324719+07:00",
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "source_index": "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json",
+      "source_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+      "matrix_order": {
+        "GT_rows": [
+          "target",
+          "not_this_person_part"
+        ],
+        "prediction_columns": [
+          "target",
+          "not_target"
+        ],
+        "cells": [
+          [
+            "TP",
+            "FN"
+          ],
+          [
+            "FP",
+            "TN"
+          ]
+        ]
+      },
+      "models": 9,
+      "targets": [
+        "Hair",
+        "FaceDomain",
+        "Upper",
+        "Lower"
+      ],
+      "aggregate_rows": 36,
+      "GT_parts_per_model": 290,
+      "scored_JSON_records_verified": 981,
+      "part_tasks_verified": 2610,
+      "score_records_digest": "d9c3986a38a388236c6ddda91f27f7e902409256bab2de300ff282b41a353b8a",
+      "protected_canonical_artifacts_verified_unchanged": 28,
+      "source_counts_match_canonical": true,
+      "GT_support_domain_equal_across_models": true,
+      "original_primary_scores_unchanged": true,
+      "model_calls": 0,
+      "prediction_masks_read": 0,
+      "rescoring": false,
+      "TN_interpretation": "selected-person part-task complement, not full-scene background truth",
+      "aggregation": "Pooled counts per target for diagnostic ratios; original equal-part IoU and equal-target Macro4 unchanged",
+      "CPU_acceptance": {
+        "command": "python -m pytest -q CCTV_Human_Parsing_Benchmark/tests/test_target_confusion.py",
+        "passed": 8,
+        "scope": "literal counts, pooled versus mean-part aggregation, coverage versus exact mask, null precision, explicit unknown-Neck domain, invalid counts"
+      },
+      "private_verification": "outputs/target-confusion-report-20261102-final/VERIFICATION.json",
+      "figure_visually_inspected": true,
+      "public_CCTV_images": false,
+      "derived_files": [
+        {
+          "path": "scripts/report_target_confusion.py",
+          "bytes": 28529,
+          "sha256": "31af12f0c96acb4c79aea3344f572098347d0745c269902865b37a3b89a63a1a"
+        },
+        {
+          "path": "tests/test_target_confusion.py",
+          "bytes": 3473,
+          "sha256": "c7553d0a3ce072009761392fd4585e64f0258d81a9e816a74a4c93fa6db4993b"
+        },
+        {
+          "path": "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv",
+          "bytes": 7580,
+          "sha256": "5d5bb2b60b20df5d96271765bf2f980c141dc1e4ddda04457f037951e21d7827"
+        },
+        {
+          "path": "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png",
+          "bytes": 911606,
+          "sha256": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
+        },
+        {
+          "path": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+          "bytes": 43373,
+          "sha256": "381a215807b6dbcbbc708a97d59063f1955226e72470040f0753cf3a455ae185"
+        }
+      ],
+      "generator_verified_utc": "2026-11-02T06:52:09.685524+00:00",
+      "generation_snapshot_commit": "900744d0ddae504333179feb27df4c511f8c73ef",
+      "derived_hash_scope": "Historical matrix-generation snapshot; current PRF CSV identity remains in per_class_prf_reporting and current report/presentation-generator hashes are in report_explanation_review."
+    },
+    "runtime_reporting": {
+      "status": "HISTORICAL_TIMING_DIAGNOSTICS_COMPLETE",
+      "created_utc": "2026-11-02T08:57:24.454430+00:00",
+      "model_calls": 0,
+      "masks_read": 0,
+      "quality_scores_changed": false,
+      "speed_ranking_eligible": false,
+      "models": [
+        {
+          "model_id": "QANet_CIHP_HRNetW48_512x384",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 130,
+            "mean_ms": 76.32487598636475,
+            "median_ms": 75.17289003590122,
+            "p95_ms": 91.06191836472134,
+            "total_seconds": 9.922233878227416
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 52.863602,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 52.863602,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 9.922233878227416,
+            "full_population_mean_ms_per_image": 110.24704309141573,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 110.24704309141573,
+              "median_ms": 78.3802974910941,
+              "p95_ms": 297.61532808770414,
+              "total_seconds": 9.922233878227416
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 121.00285217350508,
+              "median_ms": 79.82213600189425,
+              "p95_ms": 312.60982489329774,
+              "total_seconds": 9.922233878227416
+            },
+            "recorded_interval_sum_seconds": 9.922233878227416,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 9.922233878227416,
+            "worker_elapsed_sum_seconds": 52.863602,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "M2FP_R101_CIHP",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 130,
+            "mean_ms": 220.18747281712982,
+            "median_ms": 224.71911952015944,
+            "p95_ms": 264.32922723470256,
+            "total_seconds": 28.624371466226876
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 72.626611,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 72.626611,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 28.624371466226876,
+            "full_population_mean_ms_per_image": 318.0485718469653,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 318.0485718469653,
+              "median_ms": 250.35442199441604,
+              "p95_ms": 861.7358266608787,
+              "total_seconds": 28.624371466226876
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 349.0777008076448,
+              "median_ms": 253.1602504896,
+              "p95_ms": 879.0304962778466,
+              "total_seconds": 28.624371466226876
+            },
+            "recorded_interval_sum_seconds": 28.624371466226876,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 28.624371466226876,
+            "worker_elapsed_sum_seconds": 72.626611,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "D2FP_R101_CIHP",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 130,
+            "mean_ms": 694.8848071006628,
+            "median_ms": 702.3465724778362,
+            "p95_ms": 858.0979895894416,
+            "total_seconds": 90.33502492308617
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 132.674134,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 132.674134,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 90.33502492308617,
+            "full_population_mean_ms_per_image": 1003.7224991454018,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 1003.7224991454019,
+              "median_ms": 813.2025780214462,
+              "p95_ms": 2752.3820048518246,
+              "total_seconds": 90.33502492308617
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 1101.6466454034899,
+              "median_ms": 824.0100530092604,
+              "p95_ms": 2782.802763264044,
+              "total_seconds": 90.33502492308617
+            },
+            "recorded_interval_sum_seconds": 90.33502492308617,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 90.33502492308617,
+            "worker_elapsed_sum_seconds": 132.674134,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "RPR_CIHP",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 1,
+            "mean_ms": 351.6329289996065,
+            "median_ms": 351.6329289996065,
+            "p95_ms": 351.6329289996065,
+            "total_seconds": 0.3516329289996065
+          },
+          "UTC_event_interval": {
+            "n": 129,
+            "mean_ms": 225.81656589147286,
+            "median_ms": 220.67899999999997,
+            "p95_ms": 307.97580000000005,
+            "total_seconds": 29.130337
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 2,
+          "unfinished_forward_starts": 1,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 10.703959,
+              "status": "STOPPED_INCOMPLETE"
+            },
+            {
+              "run_id": "cctv-roi-continuation-20261101T121138Z",
+              "worker_elapsed_seconds": 65.200003,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 75.90396199999999,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 29.481969928999607,
+            "full_population_mean_ms_per_image": 327.5774436555512,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 327.5774436555512,
+              "median_ms": 257.83,
+              "p95_ms": 802.4791499999999,
+              "total_seconds": 29.481969928999607
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 359.5362186463367,
+              "median_ms": 272.00800000000004,
+              "p95_ms": 805.15635,
+              "total_seconds": 29.481969928999607
+            },
+            "recorded_interval_sum_seconds": 29.481969928999607,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 29.481969928999607,
+            "worker_elapsed_sum_seconds": 75.90396199999999,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "CPI_R50_CIHP",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 28,
+            "mean_ms": 2806.344362755356,
+            "median_ms": 2551.307481015101,
+            "p95_ms": 5762.778591155074,
+            "total_seconds": 78.57764215714997
+          },
+          "UTC_event_interval": {
+            "n": 102,
+            "mean_ms": 3046.1721568627454,
+            "median_ms": 3372.9315,
+            "p95_ms": 5982.932449999998,
+            "total_seconds": 310.70956
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 2,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 99.918183,
+              "status": "STOPPED_INCOMPLETE"
+            },
+            {
+              "run_id": "cctv-roi-continuation-20261101T121138Z",
+              "worker_elapsed_seconds": 386.908634,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 486.826817,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 389.28720215715,
+            "full_population_mean_ms_per_image": 4325.413357301666,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 4325.413357301667,
+              "median_ms": 3673.4045,
+              "p95_ms": 11954.662149999998,
+              "total_seconds": 389.28720215715
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 4747.404904355488,
+              "median_ms": 4048.8165,
+              "p95_ms": 12083.40335,
+              "total_seconds": 389.28720215715
+            },
+            "recorded_interval_sum_seconds": 389.28720215715,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 389.28720215715,
+            "worker_elapsed_sum_seconds": 486.826817,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "CPI_ConvNeXtB_CIHP",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 27,
+            "mean_ms": 485.5992630688922,
+            "median_ms": 502.2395270061679,
+            "p95_ms": 710.5262682249304,
+            "total_seconds": 13.11118010286009
+          },
+          "UTC_event_interval": {
+            "n": 103,
+            "mean_ms": 491.92100970873787,
+            "median_ms": 456.155,
+            "p95_ms": 809.9739999999998,
+            "total_seconds": 50.667864
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 0,
+          "warmup_calls_excluded": 2,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 39.048331,
+              "status": "STOPPED_INCOMPLETE"
+            },
+            {
+              "run_id": "cctv-roi-continuation-20261101T121138Z",
+              "worker_elapsed_seconds": 100.76302,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 139.811351,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "1.10.2+cu113",
+            "CUDA_runtime": "11.3",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 90,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 82,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 0,
+            "full_population_timing_complete": true,
+            "full_population_parsing_work_seconds": 63.77904410286009,
+            "full_population_mean_ms_per_image": 708.6560455873343,
+            "complete_images_statistics": {
+              "n": 90,
+              "mean_ms": 708.6560455873343,
+              "median_ms": 542.415,
+              "p95_ms": 1797.0675499999998,
+              "total_seconds": 63.77904410286009
+            },
+            "complete_nonempty_statistics": {
+              "n": 82,
+              "mean_ms": 777.7932207665865,
+              "median_ms": 562.0386344804689,
+              "p95_ms": 1862.9639500000005,
+              "total_seconds": 63.77904410286009
+            },
+            "recorded_interval_sum_seconds": 63.77904410286009,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 130,
+            "untimed_ROIs": 0,
+            "timing_coverage": 1.0,
+            "logged_interval_sum_seconds": 63.77904410286009,
+            "worker_elapsed_sum_seconds": 139.811351,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "Sapiens2_0.4b",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 115,
+            "mean_ms": 1410.126603896345,
+            "median_ms": 1435.5090430472046,
+            "p95_ms": 1450.9731781843584,
+            "total_seconds": 162.16455944807967
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 15,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 237.99475,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 237.99475,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "2.14.0+cu130",
+            "CUDA_runtime": "13.0",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 84,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 76,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 6,
+            "full_population_timing_complete": false,
+            "full_population_parsing_work_seconds": null,
+            "full_population_mean_ms_per_image": null,
+            "complete_images_statistics": {
+              "n": 84,
+              "mean_ms": 1930.530469619996,
+              "median_ms": 1442.155308497604,
+              "p95_ms": 5277.626319273252,
+              "total_seconds": 162.16455944807967
+            },
+            "complete_nonempty_statistics": {
+              "n": 76,
+              "mean_ms": 2133.744203264206,
+              "median_ms": 1443.4727614861913,
+              "p95_ms": 5513.603371960926,
+              "total_seconds": 162.16455944807967
+            },
+            "recorded_interval_sum_seconds": 162.16455944807967,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 115,
+            "untimed_ROIs": 15,
+            "timing_coverage": 0.8846153846153846,
+            "logged_interval_sum_seconds": 162.16455944807967,
+            "worker_elapsed_sum_seconds": 237.99475,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "Sapiens2_0.8b",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 115,
+            "mean_ms": 2922.1196537569126,
+            "median_ms": 2944.6547719999216,
+            "p95_ms": 3021.3442503649276,
+            "total_seconds": 336.04376018204493
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 15,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 468.761213,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 468.761213,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "2.14.0+cu130",
+            "CUDA_runtime": "13.0",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 84,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 76,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 6,
+            "full_population_timing_complete": false,
+            "full_population_parsing_work_seconds": null,
+            "full_population_mean_ms_per_image": null,
+            "complete_images_statistics": {
+              "n": 84,
+              "mean_ms": 4000.5209545481544,
+              "median_ms": 2955.4067690041848,
+              "p95_ms": 11192.779917435822,
+              "total_seconds": 336.04376018204493
+            },
+            "complete_nonempty_statistics": {
+              "n": 76,
+              "mean_ms": 4421.62842344796,
+              "median_ms": 2966.1481415096205,
+              "p95_ms": 11614.332658762578,
+              "total_seconds": 336.04376018204493
+            },
+            "recorded_interval_sum_seconds": 336.04376018204493,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 115,
+            "untimed_ROIs": 15,
+            "timing_coverage": 0.8846153846153846,
+            "logged_interval_sum_seconds": 336.04376018204493,
+            "worker_elapsed_sum_seconds": 468.761213,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        },
+        {
+          "model_id": "Sapiens2_1b",
+          "frames": 90,
+          "ROI_population": 130,
+          "monotonic_adapter": {
+            "n": 115,
+            "mean_ms": 4143.146465376586,
+            "median_ms": 4187.459098000545,
+            "p95_ms": 4307.980177574791,
+            "total_seconds": 476.46184351830743
+          },
+          "UTC_event_interval": {
+            "n": 0,
+            "mean_ms": null,
+            "median_ms": null,
+            "p95_ms": null,
+            "total_seconds": null
+          },
+          "prior_diagnostic_ROIs_without_current_timing": 15,
+          "warmup_calls_excluded": 1,
+          "unfinished_forward_starts": 0,
+          "segments": [
+            {
+              "run_id": "cctv-controlled-roi-20261101T115653Z",
+              "worker_elapsed_seconds": 698.234244,
+              "status": "PREDICTIONS_COMPLETE_SCORING_PENDING_GT"
+            }
+          ],
+          "worker_elapsed_seconds": 698.234244,
+          "parent_environment": {
+            "GPU": "Tesla T4",
+            "torch": "2.14.0+cu130",
+            "CUDA_runtime": "13.0",
+            "FP32": true,
+            "AMP": false,
+            "TF32": false
+          },
+          "per_image_summary": {
+            "expected_images": 90,
+            "images_with_complete_timing": 84,
+            "no_parser_ROI_images": 8,
+            "complete_nonempty_images": 76,
+            "partial_timing_images": 0,
+            "images_without_current_timer": 6,
+            "full_population_timing_complete": false,
+            "full_population_parsing_work_seconds": null,
+            "full_population_mean_ms_per_image": null,
+            "complete_images_statistics": {
+              "n": 84,
+              "mean_ms": 5672.164803789374,
+              "median_ms": 4199.611609481508,
+              "p95_ms": 15805.426033152598,
+              "total_seconds": 476.46184351830743
+            },
+            "complete_nonempty_statistics": {
+              "n": 76,
+              "mean_ms": 6269.234783135624,
+              "median_ms": 4212.975225003902,
+              "p95_ms": 16409.192980718217,
+              "total_seconds": 476.46184351830743
+            },
+            "recorded_interval_sum_seconds": 476.46184351830743,
+            "end_to_end_latency": false
+          },
+          "time_accounting": {
+            "timed_ROIs": 115,
+            "untimed_ROIs": 15,
+            "timing_coverage": 0.8846153846153846,
+            "logged_interval_sum_seconds": 476.46184351830743,
+            "worker_elapsed_sum_seconds": 698.234244,
+            "homogeneous_latency_metric": false,
+            "end_to_end": false
+          }
+        }
+      ],
+      "script_sha256": "8451f34d74ec5ff0d32201fe70a4b861f4640732cd5d7ada994f5fe7369a20f1",
+      "report_sha256": "b8e69103807b07b0958c736489f37956b240609765985f5241b8cb05a6fe33d7",
+      "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+      "monotonic_ROIs": 791,
+      "UTC_event_ROIs": 334,
+      "ROI_opportunities_per_checkpoint": 130,
+      "prior_diagnostic_ROIs_without_current_timer": 45,
+      "TRAIN_warmup_calls_excluded_from_ROI_stats": 12,
+      "unfinished_failed_forward_starts": 1,
+      "statistics": {
+        "mean": "sum(seconds)/n",
+        "median": "middle observation(s)",
+        "P95": "linear interpolation at 0.95*(n-1)"
+      },
+      "source_input_files": 67,
+      "source_input_hash_digest": "5194df36408ab003bf1afc3c014bdadf5d89e387d99702caf460665d6b452fba",
+      "private_verification": "outputs/per-image-timing-report-20261102-final/VERIFICATION.json",
+      "CPU_reporting_checks_passed": 16,
+      "new_dependency_installations": 0,
+      "previous_generation_commit": "102ac82f530851d7b861f155c6c7f1212cd0babd",
+      "additive_summary": {
+        "status": "LOGGED_INTERVAL_AND_WORKER_SUMMARIES_COMPLETE",
+        "timed_ROIs": 1125,
+        "ROI_opportunities_across_nine_models": 1170,
+        "logged_interval_sum_seconds": 1586.1000096049822,
+        "worker_elapsed_sum_seconds": 2365.696684,
+        "homogeneous_latency_metric": false,
+        "worker_and_logged_intervals_must_not_be_added": true,
+        "per_class_inference_time_available": false,
+        "per_class_quality_metrics_available": true,
+        "rounding": "sum full precision before display rounding"
+      },
+      "report_sha256_scope": "Historical runtime-generation snapshot; current report/presentation-generator hashes are in report_explanation_review.",
+      "previous_report_hash_snapshot_commit": "6e2c91c028c467bc7bea558bfb4bc358ba47e244",
+      "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12"
+    },
+    "per_class_prf_reporting": {
+      "status": "PER_CLASS_PIXEL_PRF_COMPLETE",
+      "created_utc": "2026-11-02T08:26:29.167324+00:00",
+      "model_count": 9,
+      "targets": [
+        "Hair",
+        "FaceDomain",
+        "Upper",
+        "Lower"
+      ],
+      "model_target_pairs": 36,
+      "model_calls": 0,
+      "prediction_masks_read": 0,
+      "source_index_sha256": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+      "previous_CSV_sha256": "5d5bb2b60b20df5d96271765bf2f980c141dc1e4ddda04457f037951e21d7827",
+      "CSV_sha256": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
+      "original_columns_preserved": true,
+      "report_sha256": "7ce9325287f350adf14965f19f61b270cde9962eb489770df6d546ae3916e311",
+      "script_sha256": "75dad0fb59faab54f884617de7decc38ff8e31d811b658f1e2fa7724bf32d3ac",
+      "pooled_F1_equals_existing_pooled_Dice": true,
+      "undefined_F1_count": 0,
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "CSV": "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv",
+      "aggregation": "Pool binary pixel TP/FP/FN over eligible person-part tasks for each target; one F1 per model per target",
+      "units": {
+        "CSV": "fraction0to1",
+        "Markdown": "percent"
+      },
+      "formulas": {
+        "Precision": "TP/(TP+FP)",
+        "Recall": "TP/(TP+FN)",
+        "F1": "2TP/(2TP+FP+FN)"
+      },
+      "zero_denominator": "null; positive GT with empty prediction has F1=0",
+      "per_person_F1": false,
+      "GT_parts": {
+        "Hair": 61,
+        "FaceDomain": 21,
+        "Upper": 112,
+        "Lower": 96
+      },
+      "macro4_primary_unchanged": true,
+      "CPU_reporting_checks_passed": 10,
+      "new_public_files": 0,
+      "private_verification": "outputs/per-class-prf-report-20261102/VERIFICATION.json",
+      "public_copy_reproduction": "PASS; aggregate-only public-copy execution reproduced byte-identical CSV/report without private GT/predictions",
+      "report_hash_snapshot_commit": "509cacb6807c9a29794692a5ff1645afbd9d92c4",
+      "report_sha256_scope": "PRF generation at509cacb; current report and presentation-generator hashes in report_language_review. PRF CSV/counts unchanged."
+    },
+    "per_image_timing_reporting": {
+      "status": "PER_IMAGE_PARSING_WORK_REPORT_COMPLETE_WITH_TIMING_GAPS",
+      "created_utc": "2026-11-02T08:57:24.562485+00:00",
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "report_sha256": "b8e69103807b07b0958c736489f37956b240609765985f5241b8cb05a6fe33d7",
+      "script_sha256": "8451f34d74ec5ff0d32201fe70a4b861f4640732cd5d7ada994f5fe7369a20f1",
+      "models": 9,
+      "unique_images": 90,
+      "model_image_records": 810,
+      "complete_timing_model_image_records": 792,
+      "timing_complete_models": 6,
+      "no_parser_ROI_images_per_model": 8,
+      "private_CSV": {
+        "path": "outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv",
+        "filename": "PER_IMAGE_TIMING.csv",
+        "rows": 810,
+        "sha256": "8b8721af861d512bc4dad6560f5995cef8668f10caa38bb2f787a37daf360363"
+      },
+      "new_model_calls": 0,
+      "masks_images_weights_read": 0,
+      "private_per_image_identifiers_published": false,
+      "public_summary_location": "runtime_reporting.models[].per_image_summary",
+      "CPU_reporting_checks_passed": 16,
+      "units": "ms per image =sum of its actual ROI durations, seconds for dataset totals",
+      "missing_policy": "Full image null if any ROI missing timer; full-population90 total/mean null if any image incomplete. No-ROI parsing work=0, not end-to-end latency=0",
+      "prior_diagnostic_timer_exclusion": "Original pilot timer surrounds learned forward, with preprocessing/map-back outside; not interchangeable with current adapter timer",
+      "prior_diagnostic_timer_source": "scripts/run_sapiens_roi_review.py",
+      "prior_diagnostic_timer_source_sha256": "7105ff7193cc15f6f970672202ee91dfaa22fd2ef4a432b0758392d396d2e7b9",
+      "end_to_end_latency": false,
+      "speed_ranking_eligible": false,
+      "report_hash_snapshot_commit": "2a28d29cca8f8b01ce9f6dec8c0891f8844ace12",
+      "report_sha256_scope": "Historical per-image timing-generation snapshot; current report/presentation-generator hashes are in report_explanation_review."
+    },
+    "report_formatting": {
+      "status": "TABLE_E_RENDERING_FIXED",
+      "updated_utc": "2026-11-02T09:35:57.399792+00:00",
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "report_sha256": "4a66b0ee2e7d82e276e2e312878cc917f11a3173c4894f8bac08dd5660330f79",
+      "runtime_generator_sha256": "20aeb350a169ec6ce13049d05a416978a07a24559b839d3a55cc0ca16857cb23",
       "header_columns": 6,
-      "model_rows": 9
+      "old_separator_columns": 7,
+      "fixed_separator_columns": 6,
+      "GitHub_GFM_before_Model_table": false,
+      "GitHub_GFM_after_Model_table": true,
+      "Chromium_rows": 9,
+      "Chromium_columns": 6,
+      "Chromium_data_cells": 54,
+      "Thai_preview_visually_inspected": true,
+      "numeric_content_unchanged": true,
+      "new_model_calls": 0,
+      "data_recomputed": false,
+      "private_verification": "outputs/markdown-table-render-fix-20261102/VERIFICATION.json",
+      "report_hash_snapshot_commit": "dac48c359e596b8c6c6c65d5de22afb09668f11f",
+      "hash_scope": "Historical formatting snapshot; current report/presentation-generator hashes are in report_explanation_review."
     },
-    "Thai_preview_visually_inspected": true,
-    "legacy_D_anchor_preserved": true,
-    "new_model_calls": 0,
-    "data_recomputed": false,
-    "new_public_files": 0,
-    "private_verification": "outputs/report-language-review-20261102/VERIFICATION.json",
-    "hash_scope": "Historical wording-review snapshot; current report/presentation-generator hashes are in report_explanation_review."
-  },
-  "current_report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
-  "report_explanation_review": {
-    "status": "COMPLETE_DOCUMENTATION_ONLY",
-    "updated_utc": "2026-11-03T09:03:18+00:00",
-    "updated_Asia_Bangkok": "2026-11-03T16:03:18+07:00",
-    "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
-    "report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
-    "previous_report_sha256": "f0cb3164889908219cf11eb4d286f6a418c4886f9fabe5ad5ba22e3bac1437e5",
-    "generator_hashes": {
-      "report_runtime.py": "588b586111962a40dd63bf8043ce3bae6bcd752c0ef925857c1f8558b7f38229",
-      "report_target_confusion.py": "d793326e5df63c1f0a406c9d41f4ddd3b6ffdc8246de6b241f4b3fb84678abb8"
-    },
-    "scope": "Thai metric/mapping/domain/aggregation explanations and readable timing formulas; same accepted results and computation.",
-    "numeric_result_rows_unchanged": 113,
-    "protected_files_verified_unchanged": {
-      "metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6",
-      "metrics/CONTROLLED_ROI_PER_TARGET.csv": "19066d26c165263532f40e36187558a74c9f1b0f3a3611bc7f8c7ae4e08a8e25",
-      "metrics/CONTROLLED_ROI_FACE_VIEWS.csv": "516a40ee2ed829414b0d1cadf50ee1f7a7730d9fe8776e3aef884d4ec66f9548",
-      "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
-      "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
-      "reports/MODEL_RECOMMENDATION.json": "8921ea5912fb80049eb4a0f094e09cc0114023cdb68fea5921ac84f38c33f3a7",
-      "configs/CONTROLLED_ROI_SCORING_PROTOCOL.json": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
-      "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
-      "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
-    },
-    "calculation_and_control_flow_AST_unchanged": true,
-    "generator_sections_match_report": true,
-    "GitHub_GFM_tables": 22,
-    "Chromium_tables": {
-      "TIMING_DEFINITIONS": {
-        "headers": 4,
-        "rows": 8,
-        "width": 1240
+    "report_language_review": {
+      "status": "THAI_WORDING_REVIEWED",
+      "updated_utc": "2026-11-02T09:54:52.799096+00:00",
+      "updated_Asia_Bangkok": "2026-11-02T16:54:52.799096+07:00",
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "report_sha256": "cb251fddde31bc84c2acb9c423294778994b09197370070afecc99deb3f346e6",
+      "generator_hashes": {
+        "report_runtime.py": "8875032c2304ac6aa9b8b21513a36b57520eadbb536339208f4208700b7e419a",
+        "report_target_confusion.py": "bd7f860380cd752cd9422f426baf3ab4e59dc7ad3cd6b7d26c4d5563eb73335e"
       },
-      "PER_IMAGE_TABLE": {
-        "headers": 6,
-        "rows": 9,
-        "width": 1240
+      "scope": "Thai prose, headings, metric explanations, units and table headers; no numeric/statistical/scientific changes",
+      "model_data_rows_unchanged": 113,
+      "protected_files_verified_unchanged": 9,
+      "calculation_functions_AST_unchanged": true,
+      "generator_sections_match_report": true,
+      "GitHub_GFM_tables": 21,
+      "Chromium_table_E": {
+        "header_columns": 6,
+        "model_rows": 9
       },
-      "QUALITY_MAPPING": {
-        "headers": 3,
-        "rows": 4,
-        "width": 1240
-      },
-      "QUALITY_METRICS": {
-        "headers": 4,
-        "rows": 10,
-        "width": 1240
-      }
+      "Thai_preview_visually_inspected": true,
+      "legacy_D_anchor_preserved": true,
+      "new_model_calls": 0,
+      "data_recomputed": false,
+      "new_public_files": 0,
+      "private_verification": "outputs/report-language-review-20261102/VERIFICATION.json",
+      "hash_scope": "Historical wording-review snapshot; current report/presentation-generator hashes are in report_explanation_review."
     },
-    "Thai_font_loaded": true,
-    "hypothetical_example_checks": 6,
-    "relative_report_links_checked": 30,
-    "legacy_D_anchor_preserved": true,
-    "new_model_calls": 0,
-    "raw_images_masks_weights_logs_read": 0,
-    "data_rescored": false,
-    "new_public_files": 0,
-    "private_verification": "outputs/report-explanation-review-20261103/VERIFICATION.json",
-    "prior_report_hash_scope": "Older report_language_review/report_formatting values are historical snapshots, including revisions before the comparability notice. Keep their original hashes; current hash is current_report_sha256 and this entry."
+    "current_report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
+    "report_explanation_review": {
+      "status": "COMPLETE_DOCUMENTATION_ONLY",
+      "updated_utc": "2026-11-03T09:03:18+00:00",
+      "updated_Asia_Bangkok": "2026-11-03T16:03:18+07:00",
+      "report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+      "report_sha256": "49a8670fdaff9349861a8970deff036f34fe5c2abf610e4b6e08ec51272bfc01",
+      "previous_report_sha256": "f0cb3164889908219cf11eb4d286f6a418c4886f9fabe5ad5ba22e3bac1437e5",
+      "generator_hashes": {
+        "report_runtime.py": "588b586111962a40dd63bf8043ce3bae6bcd752c0ef925857c1f8558b7f38229",
+        "report_target_confusion.py": "d793326e5df63c1f0a406c9d41f4ddd3b6ffdc8246de6b241f4b3fb84678abb8"
+      },
+      "scope": "Thai metric/mapping/domain/aggregation explanations and readable timing formulas; same accepted results and computation.",
+      "numeric_result_rows_unchanged": 113,
+      "protected_files_verified_unchanged": {
+        "metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6",
+        "metrics/CONTROLLED_ROI_PER_TARGET.csv": "19066d26c165263532f40e36187558a74c9f1b0f3a3611bc7f8c7ae4e08a8e25",
+        "metrics/CONTROLLED_ROI_FACE_VIEWS.csv": "516a40ee2ed829414b0d1cadf50ee1f7a7730d9fe8776e3aef884d4ec66f9548",
+        "metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv": "533f15ea0a096e8461bba0b6f04be26094d023782bc5e13f63d2309c7246c1e8",
+        "reports/CONTROLLED_ROI_FOUR_TARGET_INDEX.json": "c8ce650a26ac77d33d392dc5fbb4297339cfda717a06a8097b17eeb501fd5e79",
+        "reports/MODEL_RECOMMENDATION.json": "8921ea5912fb80049eb4a0f094e09cc0114023cdb68fea5921ac84f38c33f3a7",
+        "configs/CONTROLLED_ROI_SCORING_PROTOCOL.json": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+        "configs/CONTROLLED_ROI_FACE_NECK_PROTOCOL.json": "3d059495524f3d1d63c487b0c201fc67fdc790aa302ab51a444ee6e695d8f9a5",
+        "reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png": "85b9076426a3a0404405edf88ebef9979cdfa58a7bc882b43e46b32ea0851d17"
+      },
+      "calculation_and_control_flow_AST_unchanged": true,
+      "generator_sections_match_report": true,
+      "GitHub_GFM_tables": 22,
+      "Chromium_tables": {
+        "TIMING_DEFINITIONS": {
+          "headers": 4,
+          "rows": 8,
+          "width": 1240
+        },
+        "PER_IMAGE_TABLE": {
+          "headers": 6,
+          "rows": 9,
+          "width": 1240
+        },
+        "QUALITY_MAPPING": {
+          "headers": 3,
+          "rows": 4,
+          "width": 1240
+        },
+        "QUALITY_METRICS": {
+          "headers": 4,
+          "rows": 10,
+          "width": 1240
+        }
+      },
+      "Thai_font_loaded": true,
+      "hypothetical_example_checks": 6,
+      "relative_report_links_checked": 30,
+      "legacy_D_anchor_preserved": true,
+      "new_model_calls": 0,
+      "raw_images_masks_weights_logs_read": 0,
+      "data_rescored": false,
+      "new_public_files": 0,
+      "private_verification": "outputs/report-explanation-review-20261103/VERIFICATION.json",
+      "prior_report_hash_scope": "Older report_language_review/report_formatting values are historical snapshots, including revisions before the comparability notice. Keep their original hashes; current hash is current_report_sha256 and this entry."
+    }
   }
 }

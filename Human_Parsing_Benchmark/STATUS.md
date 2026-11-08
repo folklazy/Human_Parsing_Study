@@ -1,3 +1,22 @@
+# Shared C3-part + Face-local ครบ 18/18 งาน
+
+ตรวจปิดรอบ: 8 พฤศจิกายน 2026 เวลา 16:01:46 น.ไทย (Asia/Bangkok)
+
+**COMPLETE / STRICT_COMPLETE_ALL_18** — CIHP 9 โมเดล × 5,000 ภาพ และ CCTV 9 โมเดล × 90 ภาพ รวม 45,810 รายการภาพ–โมเดล ไม่มี missing/duplicate/failed ใช้ saved controlled YOLO ROI packets และ checkpoint bindings เดิม ไม่มี model/YOLO inference ใหม่
+
+[รายงานหลักและตารางทั้งสอง dataset](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) สามคลาสใช้ค่าเฉลี่ย IoU รายส่วนของ GT แต่ละคน แล้วเฉลี่ย Hair/Upper/Lower เท่ากัน ส่วน Face-local ใช้กรอบ Face GT พอดีและเฉลี่ยราย GT Face แยกกัน ไม่รวมสี่คลาสเป็นคะแนนใหม่ ไม่ใช่ global C3 เดิม และไม่ใช้ Neck-ignore ของ CCTV เดิม
+
+| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
+|---|---|---|
+| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
+| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+
+ผ่าน CPU acceptance 13 กรณี, integration กับ saved packets จริง และการทดสอบ resume ตรวจสูตรจากสถิติรายส่วน 526,086 รายการอย่างอิสระ พร้อม exact membership, GT support และ checkpoint/protocol bindings ทั้งหกไฟล์ที่ป้องกันไว้และ canonical METRICS เดิมของ CIHP ทั้งเก้าโมเดลยังมี hash เดิม ไม่อ้างนัยสำคัญทางสถิติหรือใช้เวลาประเมินบน CPU จัดอันดับความเร็ว
+
+Run `shared-c3-face-local-20261108T083533Z`; private STATUS/SQLite/CONFIG/SOURCES/RESULTS อยู่ใน `Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/` CPU worker จบแล้ว ส่วนหน้าดูความคืบหน้าบน tmux อาจยังเปิดอยู่ ขั้นถัดไปคือใช้รายงานสำหรับพรีเซนต์และพิจารณาตัวเลือกตาม target ไม่มีการเปิด inference หรือขยายการทดลองอัตโนมัติ
+
+## สถานะก่อนปิดงาน (historical)
+
 # เริ่มรอบให้คะแนนร่วม C3-part และ Face-local — 2026-11-08T15:42:02.358147+07:00
 
 **SCORER_ACCEPTANCE_PASS / CPU_SCORING_RUNNING**. Userอนุมัติให้ทำทั้งCIHP5000และCCTV90จากsavedcontrolledROIpacketsเก้าcheckpoints ไม่มีinferenceใหม่. SharedprotocolV1ตรึงmapping/GT-domain/mask-IoU0.50matching/FaceGTbbox/no-margin/aggregationแล้ว;13tinyCPUcasesและactualsavedpacket9CIHPmodels+CCTV63recordsผ่าน. Resumeรักษา63เดิมและเพิ่ม9เป็น72uniqueไม่มีerrors

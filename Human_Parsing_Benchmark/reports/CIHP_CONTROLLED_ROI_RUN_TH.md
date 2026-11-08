@@ -1,3 +1,5 @@
+> **View clarification (8 November2026):** รายงานนี้เป็นผล/ประวัติของ protocol เดิม เก็บตัวเลขครบ. สำหรับตารางปัจจุบันที่ใช้C3-partและFace-localเหมือนกันในCIHP/CCTV ดู[รายงานร่วมล่าสุด](CIHP_CCTV_COMPARABILITY_REVIEW_TH.md);ห้ามนำคะแนนต่างviewมาปะปนหรือเปลี่ยนชื่อแทนกัน.
+
 # CIHP controlled person-ROI — readiness และการเดินคิว
 
 ## ปิดคิวล่าสุด: งานคุณภาพครบทั้งเก้าระบบ

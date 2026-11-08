@@ -587,3 +587,14 @@ User accepts Face-local GT-bbox scoring and requests both CIHP/CCTV to completio
 ## 2026-11-08T15:52:59.890093+07:00 — shared-c3-face-local-20261108T083533Z: detached CPU launch verified
 
 Launchcommitce1f3ff370b952ad9ba56de733b64ca6621538f7;tmuxshared_cpu_20261108T083533Z;CPUcontroller742296,worker742307. Fingerprint-checkedresume retains72integrationrecords and singlewriterSQLitecontinues. Snapshot24219/45810committedrecords,zeroerrors;CCTV90x9complete,CIHPinprogress. Frozen scientificsourcehashes unchanged,SQLitequick_checkok. No inference/GPUworker,sourceGT/oldresultsunchanged. PrivateCPU_LAUNCHwrapper automatically callsreporterafterterminal;noautomaticretry. Progressviewer15secondsreadsSTATUSonly,noqualityranking. Next: finishbatchandindependentstored-count/membershipverificationthenpublishfinaltables.
+
+
+## 2026-11-08T16:01:46.245563+07:00 — shared-c3-face-local-20261108T083533Z: saved-mask evaluation closure
+
+COMPLETE 18/18: CIHP 9 × 5,000 + CCTV 9 × 90 = 45,810 unique image–model records; missing/duplicate/failed = 0; new model calls = 0. Applied the frozen positive-person-part C3 and separate GT-box Face-local protocol. Mapping, thresholds, precision and ownership remained unchanged after freeze. Before the batch, 13 CPU acceptance cases, actual saved-packet integration (9 CIHP model examples and 63 CCTV records), and resume verification (63 retained + 9 new) passed.
+
+Verification: independently checked integer TP/FP/FN, support, union, per-part IoU and mean aggregation for 526,086 stored part records; checked exact membership, identical GT denominators/support across models, and identical checkpoint SHA across datasets. Six protected historical files and nine CIHP canonical METRICS retain their original hashes. No new mask rescore was needed to prepare the final report.
+
+Inputs: frozen protocol/source hashes, CONFIG.json and SOURCES.json under the private run directory; launch commit ce1f3ff. Outputs: current section of CIHP_CCTV_COMPARABILITY_REVIEW_TH.md, aggregate result index, two CSV tables, and a public synthetic explanation diagram. Raw SQLite/per-GT records and dataset images remain private. CPU wall time 1,148.128 s describes this resume scoring attempt, not model inference speed. Updated STATUS, PLAN, README and CCTV derived state; preserved previous native/C4/global-C3/CCTV Face-domain results as historical views. Final editorial changes clarify the calculation without changing scores or scientific behavior.
+
+Blockers: none for this scoring deliverable. Limits: different GT references and annotation boundaries; Face-local ignores predictions outside its box; CCTV evaluates annotated positive parts, not a fully labelled scene; inference timing conditions differ. Next action: use the completed report for presentation and target-specific selection. No automatic inference, annotation, uncertainty experiment or additional score view is authorized by this closure.

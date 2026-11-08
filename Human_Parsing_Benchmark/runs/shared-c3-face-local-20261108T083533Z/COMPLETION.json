@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETE_18_OF_18",
+  "checked_thai": "2026-11-08T16:01:46.245563+07:00",
+  "run_id": "shared-c3-face-local-20261108T083533Z",
+  "CIHP_models": 9,
+  "CIHP_images_each": 5000,
+  "CCTV_models": 9,
+  "CCTV_images_each": 90,
+  "image_model_records": 45810,
+  "source_protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
+  "verification": {
+    "status": "PASS",
+    "part_records_checked": 526086,
+    "checks": [
+      "Exact membership per dataset/model",
+      "Same checkpoint hashes across datasets",
+      "TP/FP/FN/union and per-part IoU from integers",
+      "Aggregate supports and GT denominators independent of model",
+      "Mean-part arithmetic",
+      "GT-person matching denominator"
+    ],
+    "new_mask_rescoring": false
+  },
+  "CPU_scoring_wall_seconds_this_resume": 1148.1278102200013,
+  "score_result_sha256": "a539aaf304ca284ebdd0c21406f732f92106fe5f9b668ac34c9a58f1d738b0d2",
+  "public_result_index_sha256": "0396a82799c8dea7de337cf70dcf44474420fce6402903df26f50bb7fe82f0b5",
+  "new_model_calls": 0,
+  "old_results_modified": false,
+  "CPU_launch_end": {
+    "returncode": 0,
+    "ended_utc": "2026-11-08T09:01:46.245563+00:00",
+    "automatic_retry": false
+  }
+}

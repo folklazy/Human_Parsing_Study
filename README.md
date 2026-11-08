@@ -1,3 +1,18 @@
+# Human Parsing Study — ผลร่วมล่าสุด CIHP/CCTV
+
+**Shared C3-part + Face-local ครบ 18/18 งาน** (8 พฤศจิกายน 2026) — CIHP 9 × 5,000 ภาพ และ CCTV 9 × 90 ภาพ ใช้ saved masks ไม่มี inference ใหม่
+
+| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
+|---|---|---|
+| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
+| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+
+[รายงานหลัก: ตารางเก้าโมเดลทั้งสอง dataset พร้อมวิธีคำนวณและข้อจำกัด](Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [ตารางเต็มก่อนปัดเศษ](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_SUMMARY.csv) · [TP/FP/FN/P/R/F1 ราย target](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_TARGET_COUNTS.csv)
+
+สามคลาสกับ Face แยกกัน ไม่มีคะแนนรวมสี่คลาสใหม่ คะแนนสูงสุดเป็นหลักฐานสำหรับเลือก configuration ไม่ใช่การรับรองใช้งานจริง รายงานเก่าด้านล่างเป็นคนละ evaluation view และยังเก็บไว้ครบ
+
+## Historical study navigation and results
+
 # Human Parsing Study
 
 **ข้อสรุป CCTV: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักด้านคุณภาพรวม** ตามเกณฑ์สี่ targets ที่กำหนดไว้และประเมินครบ9ระบบแล้ว.

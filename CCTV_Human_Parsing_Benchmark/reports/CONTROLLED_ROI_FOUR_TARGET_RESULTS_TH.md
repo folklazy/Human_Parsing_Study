@@ -1,3 +1,5 @@
+> **View clarification (8 November2026):** รายงานนี้เป็นผล/ประวัติของ protocol เดิม เก็บตัวเลขครบ. สำหรับตารางปัจจุบันที่ใช้C3-partและFace-localเหมือนกันในCIHP/CCTV ดู[รายงานร่วมล่าสุด](../../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md);ห้ามนำคะแนนต่างviewมาปะปนหรือเปลี่ยนชื่อแทนกัน.
+
 # ผลประเมิน Human Parsing บนภาพ CCTV: 9 โมเดลและ 4 ส่วนเป้าหมาย
 
 > **การเทียบกับ CIHP (2 พ.ย. 2026):** คะแนนหลักนี้เป็น mean-part IoU บน controlled person ROI และ Face domain ที่ตรวจแก้แล้ว จึงเทียบตัวเลขตรงกับ CIHP global C4-P ไม่ได้. [รายงานตรวจเงื่อนไขและผล aggregation sensitivity](../../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) ยืนยันตัวเลขเดิมและอธิบายขอบเขตคำอ้าง

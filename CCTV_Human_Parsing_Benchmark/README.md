@@ -1,3 +1,16 @@
+# ผลล่าสุด: สามคลาสหลัก + Face-local (CIHP และ CCTV)
+
+**ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference คะแนนสามคลาสกับ Face แสดงแยกกัน
+
+| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
+|---|---|---|
+| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
+| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+
+[รายงานหลักพร้อมนิยาม สูตร ข้อจำกัด และแหล่งที่มา](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [สถานะ](STATUS.md)
+
+## ประวัติรายงานและสถานะก่อนหน้า (historical views)
+
 > **เปิด GT viewer ฉบับใหม่:** ดาวน์โหลด `outputs/master-gt-repair-20261107T191020Z/review_offline.html` แล้วเปิดในChrome/Edge/Firefoxได้จากไฟล์เดียว มี90ภาพฝังไว้ ไม่ต้องใช้JavaScriptหรือพาธserver. ดูตัวอย่างตรงจาก `owner_repairs_before_after.jpg` ในโฟลเดอร์เดียวกัน. [ตำแหน่งและการตรวจ](STATUS.md). GT/masks/ผลคะแนนเดิมไม่เปลี่ยน.
 
 > **GT ฉบับแก้จาก Master พร้อมเปิดตรวจแล้ว:** แก้ownerสองจุดและส่งออก90ภาพในโฟลเดอร์ส่วนตัว `outputs/master-gt-repair-20261107T191020Z/` เปิด `index.html` ดูก่อน–หลังได้. ยังรอตรวจcoverage/ขอบเขต ไม่ใช่GTที่พร้อมให้คะแนนใหม่ และผลที่รายงานด้านล่างยังเป็นผลGTrevisionเดิม. [สถานะและตำแหน่งไฟล์](STATUS.md) / [รายงานการแก้](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md).

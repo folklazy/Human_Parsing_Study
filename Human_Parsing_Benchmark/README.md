@@ -1,3 +1,16 @@
+# ผลล่าสุด: สามคลาสหลัก + Face-local (CIHP และ CCTV)
+
+**ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference คะแนนสามคลาสกับ Face แสดงแยกกัน
+
+| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
+|---|---|---|
+| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
+| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+
+[รายงานหลักพร้อมนิยาม สูตร ข้อจำกัด และแหล่งที่มา](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [สถานะ](STATUS.md)
+
+## ประวัติรายงานและสถานะก่อนหน้า (historical views)
+
 > **Current controlled CIHP: QUALITY_COMPLETE 9/9** (verified 2026-11-08T01:22:12.700583+07:00). Each checkpoint has exact 5,000 accepted IDs and non-null canonical primary metrics. Latest sequential queue has stopped; no inference worker remains. Controlled-results consolidation and live/clean speed measurement remain separate next steps. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
 
 The older notices below are historical snapshots; use the current report above for this controlled run.
