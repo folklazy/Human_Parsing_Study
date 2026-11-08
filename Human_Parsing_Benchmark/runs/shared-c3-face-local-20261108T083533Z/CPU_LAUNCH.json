@@ -1,0 +1,30 @@
+{
+  "run_id": "shared-c3-face-local-20261108T083533Z",
+  "launched_utc": "2026-11-08T08:42:34.093893+00:00",
+  "launch_commit": "ce1f3ff370b952ad9ba56de733b64ca6621538f7",
+  "tmux_session": "shared_cpu_20261108T083533Z",
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python /home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/CPU_LAUNCH.py",
+  "log": "Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/scoring.log",
+  "status": "Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/STATUS.json",
+  "CPU_only": true,
+  "new_model_calls": 0,
+  "automatic_retry": false,
+  "scope": "Both datasets, nine saved prediction cohorts each; no other experiment",
+  "process": {
+    "pid": 742307,
+    "controller_pid": 742296,
+    "started_utc": "2026-11-08T08:42:34.103627+00:00"
+  },
+  "launch_verification": {
+    "status": "CPU_SCORING",
+    "dataset": "CIHP",
+    "current_id": "0023792",
+    "pid": 742307,
+    "updated_utc": "2026-11-08T08:52:59.890093+00:00",
+    "completed_image_model_records": 24219,
+    "expected_image_model_records": 45810,
+    "wall_seconds": 625.1402575980173,
+    "new_model_calls": 0
+  },
+  "verification_scope": "Live CPU progress and committed rows only; no partial quality ranking"
+}
