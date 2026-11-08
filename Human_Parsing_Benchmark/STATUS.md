@@ -1,3 +1,13 @@
+# เริ่มรอบให้คะแนนร่วม C3-part และ Face-local — 2026-11-08T15:42:02.358147+07:00
+
+**SCORER_ACCEPTANCE_PASS / FULL_CPU_SCORING_PREPARED**. Userอนุมัติให้ทำทั้งCIHP5000และCCTV90จากsavedcontrolledROIpacketsเก้าcheckpoints ไม่มีinferenceใหม่. SharedprotocolV1ตรึงmapping/GT-domain/mask-IoU0.50matching/FaceGTbbox/no-margin/aggregationแล้ว;13tinyCPUcasesและactualsavedpacket9CIHPmodels+CCTV63recordsผ่าน. Resumeรักษา63เดิมและเพิ่ม9เป็น72uniqueไม่มีerrors
+
+GTที่ใช้จริง:CCTV127people Hair69/Upper120/Lower102/Face35;CIHP17520people Hair15803/Upper15674/Lower10157/Face16494. C3ใหม่เป็นmeanpartIoUสามคลาส ไม่ใช่globalC3เก่า;Face-localแยกและยังนับFPภายในกรอบ. OldCCTVNeck-ignore/21FaceและoldC4/nativeผลเดิมเก็บไว้. Primaryใหม่จะพร้อมเมื่อexactpopulationผ่านSTRICT_COMPLETEเท่านั้น
+
+Run`shared-c3-face-local-20261108T083533Z`;privateoutputs`Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/` มีCONFIG/SOURCES/SQLite/STATUS. [Protocol](protocol/SHARED_C3_FACE_LOCAL_V1.json) / [รายงานหลัก](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md). ขั้นถัดไปเปิดdetachedCPUcontinuationแล้วให้คำนวณจนterminalก่อนวิเคราะห์อันดับ ไม่มีmodel/GPUworkerใหม่
+
+## สถานะก่อนรอบ shared-reference (historical)
+
 # CIHP controlled ROI: งานคุณภาพครบ 9/9 โมเดล — 2026-11-08T01:22:12.700583+07:00
 
 **QUALITY_COMPLETE_9_OF_9 / QUEUE_STOPPED** — ตรวจจาก canonical completion และ METRICS ของทั้งเก้าระบบแล้ว: ตัวละ **5,000 unique IDs**, missing/duplicate/invalid เป็นศูนย์ และ STRICT_COMPLETE ผ่าน คะแนนหลักมีอยู่จริง; hash ของ METRICS ตรงกับ completion ที่บันทึกไว้
