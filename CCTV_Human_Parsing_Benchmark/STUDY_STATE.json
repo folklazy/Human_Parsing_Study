@@ -16,7 +16,7 @@
   "model_inference_rerun": false,
   "new_model_calls_this_work_unit": 0,
   "current_report": "../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md",
-  "current_report_sha256": "7b37811d57849426f14a98189308a57664d89773c28a9fb38e6950d3f929dfdd",
+  "current_report_sha256": "f97466060c23055d39f46d74f195329c508bb21d821ac252b15547c1dfdb09d8",
   "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
   "protocol": "../Human_Parsing_Benchmark/protocol/SHARED_C3_FACE_LOCAL_V1.json",
   "protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
@@ -1137,5 +1137,12 @@
     "target_rows": 72,
     "current_report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
     "historical_confusion_preserved": true
+  },
+  "current_timing_accounting": {
+    "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
+    "field": "complete_timing_accounting",
+    "CCTV_images_with_recorded_intervals": 90,
+    "ROI_per_model": 130,
+    "heterogeneous_interval_boundaries": true
   }
 }

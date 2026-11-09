@@ -5086,5 +5086,139 @@
       "current_link_table_checks": "PASS",
       "images_opened_for_visual_check": 2
     }
+  },
+  "complete_timing_accounting": {
+    "status": "ALL_ACCEPTED_ROIS_HAVE_A_RECORDED_INTERVAL",
+    "models": {
+      "QANet_CIHP_HRNetW48_512x384": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 9.922233878227416,
+        "all_recorded_intervals_seconds": 9.922233878227416,
+        "mean_recorded_intervals_seconds_per_image": 0.11024704309141574,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "M2FP_R101_CIHP": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 28.624371466226876,
+        "all_recorded_intervals_seconds": 28.624371466226876,
+        "mean_recorded_intervals_seconds_per_image": 0.3180485718469653,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "D2FP_R101_CIHP": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 90.33502492308617,
+        "all_recorded_intervals_seconds": 90.33502492308617,
+        "mean_recorded_intervals_seconds_per_image": 1.003722499145402,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "RPR_CIHP": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 29.481969928999607,
+        "all_recorded_intervals_seconds": 29.481969928999607,
+        "mean_recorded_intervals_seconds_per_image": 0.3275774436555512,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "CPI_R50_CIHP": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 389.28720215715,
+        "all_recorded_intervals_seconds": 389.28720215715,
+        "mean_recorded_intervals_seconds_per_image": 4.325413357301667,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "CPI_ConvNeXtB_CIHP": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 0,
+        "original_forward_seconds": 0.0,
+        "original_forward_mean_ms": null,
+        "current_recorded_seconds": 63.77904410286009,
+        "all_recorded_intervals_seconds": 63.77904410286009,
+        "mean_recorded_intervals_seconds_per_image": 0.7086560455873343,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "Sapiens2_0.4b": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 15,
+        "original_forward_seconds": 17.847157,
+        "original_forward_mean_ms": 1189.8104666666666,
+        "current_recorded_seconds": 162.16455944807967,
+        "all_recorded_intervals_seconds": 180.01171644807968,
+        "mean_recorded_intervals_seconds_per_image": 2.000130182756441,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "Sapiens2_0.8b": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 15,
+        "original_forward_seconds": 38.541001,
+        "original_forward_mean_ms": 2569.400066666667,
+        "current_recorded_seconds": 336.04376018204493,
+        "all_recorded_intervals_seconds": 374.58476118204493,
+        "mean_recorded_intervals_seconds_per_image": 4.1620529020227215,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      },
+      "Sapiens2_1b": {
+        "images": 90,
+        "ROI_population": 130,
+        "timed_ROIs": 130,
+        "original_forward_ROIs": 15,
+        "original_forward_seconds": 56.024366,
+        "original_forward_mean_ms": 3734.9577333333336,
+        "current_recorded_seconds": 476.46184351830743,
+        "all_recorded_intervals_seconds": 532.4862095183074,
+        "mean_recorded_intervals_seconds_per_image": 5.916513439092305,
+        "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
+        "homogeneous_adapter_latency": false
+      }
+    },
+    "input_hashes": {
+      "CCTV_Human_Parsing_Benchmark/outputs/per-image-timing-report-20261102-final/PER_IMAGE_TIMING.csv": "8b8721af861d512bc4dad6560f5995cef8668f10caa38bb2f787a37daf360363",
+      "CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261101T115653Z/CONFIG.json": "ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae",
+      "CCTV_Human_Parsing_Benchmark/outputs/sapiens-roi-remeasurement-20261101T025855Z/Sapiens2_0.4b/ATTEMPTS.jsonl": "63ce580c0d22dc3f92a9d438481615c0b5965b2d3a876101885db93e6f24dc6c",
+      "CCTV_Human_Parsing_Benchmark/outputs/sapiens-roi-remeasurement-20261101T025855Z/Sapiens2_0.8b/ATTEMPTS.jsonl": "7d79230d27518b5281bfb748ba36cc63a2bf829b66f369fca4485b2860b817b5",
+      "CCTV_Human_Parsing_Benchmark/outputs/sapiens-roi-remeasurement-20261101T025855Z/Sapiens2_1b/ATTEMPTS.jsonl": "742d1d83f4b3ef50df4fe812e9ae6757256db4421eda10a35e04bfbc1b9b9d42"
+    },
+    "source_script_sha256": "7ceb4cd97beac859662751f8f34e1c5c12f0f097b66ace6cb014c9a7a4aa8edd",
+    "new_model_calls": 0,
+    "original_forward_scope": "FORWARD_START to FORWARD_END; preprocessing/map-back outside",
+    "original_adapter_fields_retained": true,
+    "verification": "Exact 90 images/130 ROI per model, 15 original timers disjoint from 115 current Sapiens timers; packet metadata/geometry bindings match; arithmetic cross-check passed"
   }
 }

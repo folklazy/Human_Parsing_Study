@@ -1,5 +1,7 @@
 # Shared C3-part + Face-local ครบ 18/18 งาน
 
+อัปเดตบัญชีเวลา 2026-11-09T17:51:26.842995+07:00 ตรวจคืน original forward timers ของ CCTV Sapiens แล้วครบ 90 ภาพ/130 ROI ต่อขนาด ตารางแสดงกลุ่ม A/B/C และรายละเอียดช่วงที่วัดได้
+
 อัปเดต 2026-11-09T17:40:23.483262+07:00 รายงานปัจจุบันมีหัวข้อเหมือนกันทั้ง CIHP/CCTV ครบคะแนน 4 targets, mIoU3/Macro4-local, binary confusion, Precision/Recall/F1, ส่วนที่พลาด, person matching, timing และ source bindings ดู[รายงานพร้อมภาพ matrix](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
 
 รายงานราย dataset เพิ่มตารางคะแนนสี่คลาสและเวลาต่อภาพ/เวลารวมไว้ด้านบนแล้วเมื่อ 2026-11-09T17:27:38.250271+07:00 ดู[รายงาน CCTV](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md)
@@ -19,7 +21,7 @@
 
 Run `shared-c3-face-local-20261108T083533Z`; private STATUS/SQLite/CONFIG/SOURCES/RESULTS อยู่ใน `Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/` CPU worker จบแล้ว ส่วนหน้าดูความคืบหน้าบน tmux อาจยังเปิดอยู่ ขั้นถัดไปคือใช้รายงานสำหรับพรีเซนต์และพิจารณาตัวเลือกตาม target ไม่มีการเปิด inference หรือขยายการทดลองอัตโนมัติ
 
-อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี 84/90 ภาพ จึงคงค่าเวลาทั้งชุดเป็น null ตามข้อมูลที่มี
+อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี adapter timers 84/90 ภาพ และเพิ่มบัญชีเวลา A+C ที่ตรวจผูกกับ logs เดิมครบ 90/90 ภาพแล้ว
 
 ## สถานะก่อนปิดงาน (historical)
 

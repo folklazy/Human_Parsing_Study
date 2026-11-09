@@ -585,14 +585,128 @@ def audit_dataset_reports(root):
     print(json.dumps(dict(status='REPORTS_UPDATED',part_records=checked,targets=len(rows),new_model_calls=0)))
 
 
+
+def recover_saved_timers():
+    """Account for accepted old forward intervals, preserving timing scopes."""
+    import csv
+    import math
+    index_path=H/'reports/SHARED_REFERENCE_RESULT_INDEX.json'
+    public=read(index_path)
+    state=read(C/'STUDY_STATE.json')
+    historical=state['historical_four_target_state']
+    source_csv=C/historical['per_image_timing_reporting']['private_CSV']['path']
+    if sha(source_csv)!=historical['per_image_timing_reporting']['private_CSV']['sha256']:
+        raise ValueError('Original per-image timing changed')
+    closure=read(C/'reports/CONTROLLED_ROI_COMPLETION.json')
+    config_path=C/'outputs'/closure['parent_run']/'CONFIG.json'
+    config=read(config_path)
+    with source_csv.open() as stream:
+        frames=list(csv.DictReader(stream))
+    observations={}
+    input_hashes={str(source_csv.relative_to(W)):sha(source_csv),str(config_path.relative_to(W)):sha(config_path)}
+    for model_id, reuse in config['reuse'].items():
+        if not reuse:
+            continue
+        roots={str(Path(ref['packet']).parents[1]) for ref in reuse.values()}
+        if len(roots)!=1:
+            raise ValueError('Ambiguous original timer segment')
+        ledger=W/next(iter(roots))/'ATTEMPTS.jsonl'
+        input_hashes[str(ledger.relative_to(W))]=sha(ledger)
+        pending={}
+        recovered={}
+        for line in ledger.read_text().splitlines():
+            event=json.loads(line)
+            if not str(event.get('purpose','')).startswith('ROI:'):
+                continue
+            roi_index=int(event['purpose'].split(':')[1])
+            job=f'{event["image_id"]}_roi{roi_index:03d}'
+            if job not in reuse:
+                continue
+            key=(event['call'],job)
+            if event['event']=='FORWARD_START':
+                if key in pending or job in recovered:
+                    raise ValueError('Duplicate timer attempt')
+                pending[key]=event
+            elif event['event']=='FORWARD_END':
+                start=pending.pop(key)
+                ref=reuse[job]
+                path=W/ref['packet']/'packet.json'
+                if sha(path)!=ref['metadata_sha256']:
+                    raise ValueError('Reused packet metadata drift')
+                meta=read(path)
+                if (meta['packet_sha256']!=ref['packet_sha256'] or
+                        meta['model_id']!=model_id or meta['image_id']!=event['image_id'] or
+                        meta['geometry'][roi_index]!=ref['original_geometry']):
+                    raise ValueError('Timer/reused geometry binding differs')
+                seconds=(datetime.fromisoformat(event['utc'])-datetime.fromisoformat(start['utc'])).total_seconds()
+                if not math.isfinite(seconds) or seconds<0:
+                    raise ValueError('Invalid original duration')
+                recovered[job]=dict(image_id=event['image_id'],seconds=seconds)
+        if pending or set(recovered)!=set(reuse):
+            raise ValueError('Original timer membership incomplete')
+        observations[model_id]=recovered
+    totals={}
+    for model_id in public['models']['CCTV']:
+        selected=[frame for frame in frames if frame['model_id']==model_id]
+        if len(selected)!=90 or len({frame['image_id'] for frame in selected})!=90:
+            raise ValueError('Per-image population differs')
+        original=observations.get(model_id,{})
+        values=[]
+        for frame in selected:
+            restored=[row['seconds'] for row in original.values() if row['image_id']==frame['image_id']]
+            if int(frame['timed_ROIs'])+len(restored)!=int(frame['ROI_count']):
+                raise ValueError('Double counted or missing ROI timer')
+            current=float(frame['observed_interval_ms'])/1000 if frame['observed_interval_ms'] not in ('','null') else 0.
+            values.append(math.fsum([current,*restored]))
+        old_seconds=math.fsum(row['seconds'] for row in original.values())
+        total=math.fsum(values)
+        t=public['reporting_supplement']['CCTV_timing'][model_id]
+        if not math.isclose(total,t['per_image_summary']['recorded_interval_sum_seconds']+old_seconds,abs_tol=1e-9):
+            raise ValueError('Timing accounting sum differs')
+        totals[model_id]=dict(images=90,ROI_population=130,timed_ROIs=130,
+            original_forward_ROIs=len(original),original_forward_seconds=old_seconds,
+            original_forward_mean_ms=old_seconds*1000/len(original) if original else None,
+            current_recorded_seconds=t['per_image_summary']['recorded_interval_sum_seconds'],
+            all_recorded_intervals_seconds=total,mean_recorded_intervals_seconds_per_image=total/90,
+            timer_groups='A monotonic adapter + B continuation UTC interval + C original forward UTC interval',
+            homogeneous_adapter_latency=False)
+    public['complete_timing_accounting']=dict(status='ALL_ACCEPTED_ROIS_HAVE_A_RECORDED_INTERVAL',
+        models=totals,input_hashes=input_hashes,source_script_sha256=sha(__file__),new_model_calls=0,
+        original_forward_scope='FORWARD_START to FORWARD_END; preprocessing/map-back outside',
+        original_adapter_fields_retained=True,
+        verification='Exact 90 images/130 ROI per model, 15 original timers disjoint from 115 current Sapiens timers; packet metadata/geometry bindings match; arithmetic cross-check passed')
+    index_path.write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
+    csv_path=H/'metrics/SHARED_REFERENCE_SUMMARY.csv'
+    with csv_path.open() as stream:rows=list(csv.DictReader(stream))
+    for row in rows:
+        if row['dataset']=='CCTV':
+            t=totals[row['model_id']]
+            row['recorded_interval_coverage_images']=90
+            row['recorded_interval_accounting_mean_s_per_image']=t['mean_recorded_intervals_seconds_per_image']
+            row['recorded_interval_accounting_total_s']=t['all_recorded_intervals_seconds']
+            row['recorded_interval_scope']=t['timer_groups']
+        else:
+            row['recorded_interval_coverage_images']=5000
+            row['recorded_interval_accounting_mean_s_per_image']=float(row['timing_mean_ms_per_image'])/1000
+            row['recorded_interval_accounting_total_s']=row['timing_total_seconds']
+            row['recorded_interval_scope']='A synchronized adapter_total'
+    with csv_path.open('w',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n')
+        writer.writeheader();writer.writerows(rows)
+    print(json.dumps(totals,ensure_ascii=False))
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--supplement', action='store_true', help='Add equal four-target mean and saved timing')
     mode.add_argument('--audit-reports', action='store_true', help='Publish current confusion and aligned dataset reports')
+    mode.add_argument('--recover-timing', action='store_true', help='Recover original accepted ROI forward timers as separate accounting')
     args = parser.parse_args()
-    if args.audit_reports:
+    if args.recover_timing:
+        recover_saved_timers()
+    elif args.audit_reports:
         audit_dataset_reports(args.output.resolve())
     elif args.supplement:
         supplement(args.output.resolve())
