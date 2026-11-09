@@ -41,6 +41,13 @@ CCTV ของ Sapiens แต่ละรุ่นใช้ค่าเฉลี
 
 <!-- SPEED_OVERVIEW_END -->
 
+## Confusion matrix และผลรายคลาสล่าสุด
+
+รายงานทั้งสองใช้หัวข้อเดียวกัน ครบ Precision/Recall/F1, matrix ราย target, person matching, เวลา และ provenance
+
+- [CIHP เก้าโมเดล](Human_Parsing_Benchmark/reports/CIHP_COMMON_NINE_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+- [CCTV เก้าโมเดล](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
 ## Historical study navigation and results
 
 # Human Parsing Study

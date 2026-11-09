@@ -1,5 +1,7 @@
 # ผลล่าสุด: สามคลาสหลัก + Face-local (CIHP และ CCTV)
 
+อัปเดต 2026-11-09T17:40:23.483262+07:00 รายงานปัจจุบันมีหัวข้อเหมือนกันทั้ง CIHP/CCTV ครบคะแนน 4 targets, mIoU3/Macro4-local, binary confusion, Precision/Recall/F1, ส่วนที่พลาด, person matching, timing และ source bindings ดู[รายงานพร้อมภาพ matrix](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
 **ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference รายงานสามคลาสและ Face แยกกัน พร้อม Macro4-local ที่เฉลี่ยสี่ target เท่ากัน
 
 | Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |

@@ -220,6 +220,17 @@ CCTV ใช้สถิติ runtime ที่ตรวจรับเดิม
 
 <!-- FOUR_TARGET_RUNTIME_END -->
 
+<!-- CURRENT_CONFUSION_NAVIGATION -->
+
+## Confusion matrix และข้อมูลรายคลาสล่าสุด
+
+ตรวจครบเมื่อ 2026-11-09T17:40:23.483262+07:00 โดยใช้สถิติจาก shared-reference run เดียวกับคะแนนด้านบน มี binary confusion ครบ 72 ชุดย่อย พร้อม Precision/Recall/F1, จำนวนส่วนที่ไม่ทับ GT, raw counts, person matching, timing และ source bindings รายงานราย dataset ใช้หัวข้อและคอลัมน์เดียวกัน
+
+- [CIHP เก้าโมเดล พร้อม 36 matrices](CIHP_COMMON_NINE_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+- [CCTV เก้าโมเดล พร้อม 36 matrices](../../CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
+CSV ราย target เพิ่ม TN, valid-task pixels และจำนวนส่วนที่พลาด โดยคงค่าคะแนนเดิมไว้ครบ พื้นที่ Face-local และ GT-positive person-part ของแต่ละ target เป็น domain อ้างอิงของตัวเลขเหล่านี้
+
 <!-- SHARED_REFERENCE_CURRENT_END -->
 
 ## ประวัติการตรวจและข้อเสนอก่อนรอบ shared view (historical)

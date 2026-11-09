@@ -16,7 +16,7 @@
   "model_inference_rerun": false,
   "new_model_calls_this_work_unit": 0,
   "current_report": "../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md",
-  "current_report_sha256": "8be928facc1f1c8e376dc10aaabb6607a23be1a67d8401b6b0867968e88a7553",
+  "current_report_sha256": "7b37811d57849426f14a98189308a57664d89773c28a9fb38e6950d3f929dfdd",
   "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
   "protocol": "../Human_Parsing_Benchmark/protocol/SHARED_C3_FACE_LOCAL_V1.json",
   "protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
@@ -1130,5 +1130,12 @@
   "derived_Macro4_local_leader": {
     "model_id": "Sapiens2_1b",
     "score": 0.6372892364411541
+  },
+  "current_confusion_reporting": {
+    "status": "CURRENT_SHARED_REFERENCE_72_TARGETS_COMPLETE",
+    "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
+    "target_rows": 72,
+    "current_report": "reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md",
+    "historical_confusion_preserved": true
   }
 }

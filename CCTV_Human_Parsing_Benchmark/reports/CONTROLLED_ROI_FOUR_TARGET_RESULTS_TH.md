@@ -70,6 +70,183 @@ GT รอบนี้ใช้ Face 35 ส่วนและ raw positive parts 
 
 ตรวจ 9 แถวคุณภาพและ 9 แถวเวลาในไฟล์นี้กับ canonical aggregate และ CSV ที่ 2026-11-09T17:27:38.250271+07:00 โดยใช้ค่าก่อนปัดเศษ ตรวจสูตรสี่คลาส ตัวหารภาพ timing และ null ของข้อมูลที่ขาด แหล่ง aggregate ใช้ protocol hash `5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357` ข้อมูลตัวเลขนี้เผยแพร่ร่วมกับ source/configuration และ ledger hashes ใน canonical index
 
+<!-- CURRENT_SHARED_DIAGNOSTICS_START -->
+
+## Confusion matrix และความครบของแต่ละส่วน
+
+ภาพชุดนี้สร้างจากสถิติรายส่วนของ shared-reference run ล่าสุด เก็บ binary confusion แยก target โดยแถวเป็น GT และคอลัมน์เป็น prediction เรียง target ก่อน other จึงได้ **[[TP, FN], [FP, TN]]** ตัวเลขในช่องเป็นจำนวนพิกเซล ส่วนสีและเปอร์เซ็นต์หารด้วยผลรวมของ GT แต่ละแถว
+
+![CCTV shared-reference confusion matrices](figures/SHARED_REFERENCE_TARGET_CONFUSION.png)
+
+TP คือทายส่วนที่ต้องการถูก FN คือส่วน GT ที่ทายขาด FP คือทายเกินบนส่วนอื่นในพื้นที่ประเมิน และ TN คือพื้นที่อื่นที่ทายเป็นอื่น แต่ละ target มีงานราย GT person-part ของตนเอง พิกเซลของภาพเดียวกันอาจถูกประเมินในหลายงานตามเจ้าของ GT ตารางรวมพิกเซลตามงานเหล่านี้
+
+**Recall = TP/(TP+FN)** บอกว่าเก็บพิกเซล GT ได้ครบเท่าไร **Precision = TP/(TP+FP)** บอกว่าพิกเซลที่ทายมาถูกเท่าไร และ **F1/Dice = 2TP/(2TP+FP+FN)** สรุปทั้งการทายเกินและทายขาด ค่าด้านล่างรวม counts ก่อนหาร ส่วน mean-part IoU ในตารางคะแนนเฉลี่ยแต่ละส่วนเท่ากัน
+
+| โมเดล | Target | Precision % | Recall % | F1/Dice % | GT parts | ไม่ทับ GT เลย | ในจำนวนนั้นจับคู่คนไม่ได้ |
+|---|---|---:|---:|---:|---:|---:|---:|
+| QANet | Hair | 94.461 | 79.843 | 86.539 | 69 | 13 | 11 |
+| QANet | Face_local | 96.637 | 80.017 | 87.545 | 35 | 5 | 5 |
+| QANet | Upper | 91.171 | 84.125 | 87.507 | 120 | 22 | 20 |
+| QANet | Lower | 90.867 | 66.457 | 76.768 | 102 | 21 | 16 |
+| M2FP | Hair | 96.954 | 74.869 | 84.492 | 69 | 27 | 11 |
+| M2FP | Face_local | 97.144 | 66.650 | 79.058 | 35 | 12 | 5 |
+| M2FP | Upper | 91.191 | 74.971 | 82.289 | 120 | 40 | 20 |
+| M2FP | Lower | 93.286 | 67.956 | 78.631 | 102 | 39 | 16 |
+| D2FP | Hair | 96.984 | 74.657 | 84.368 | 69 | 27 | 11 |
+| D2FP | Face_local | 96.408 | 70.496 | 81.440 | 35 | 12 | 5 |
+| D2FP | Upper | 91.777 | 71.314 | 80.262 | 120 | 48 | 20 |
+| D2FP | Lower | 92.248 | 61.155 | 73.551 | 102 | 45 | 16 |
+| RP-R-CNN | Hair | 90.656 | 67.047 | 77.084 | 69 | 26 | 11 |
+| RP-R-CNN | Face_local | 96.436 | 63.217 | 76.370 | 35 | 12 | 5 |
+| RP-R-CNN | Upper | 89.447 | 67.593 | 76.999 | 120 | 38 | 20 |
+| RP-R-CNN | Lower | 90.632 | 62.678 | 74.107 | 102 | 31 | 16 |
+| CPI R50 | Hair | 90.600 | 68.449 | 77.982 | 69 | 24 | 11 |
+| CPI R50 | Face_local | 94.804 | 72.239 | 81.997 | 35 | 13 | 5 |
+| CPI R50 | Upper | 90.912 | 64.273 | 75.306 | 120 | 40 | 20 |
+| CPI R50 | Lower | 86.270 | 58.376 | 69.633 | 102 | 39 | 16 |
+| CPI ConvNeXt-B | Hair | 85.434 | 84.743 | 85.087 | 69 | 14 | 11 |
+| CPI ConvNeXt-B | Face_local | 96.985 | 75.331 | 84.797 | 35 | 7 | 5 |
+| CPI ConvNeXt-B | Upper | 88.668 | 76.418 | 82.088 | 120 | 33 | 20 |
+| CPI ConvNeXt-B | Lower | 92.445 | 67.092 | 77.754 | 102 | 35 | 16 |
+| Sapiens2 0.4B | Hair | 93.122 | 87.353 | 90.145 | 69 | 13 | 11 |
+| Sapiens2 0.4B | Face_local | 91.330 | 88.366 | 89.824 | 35 | 5 | 5 |
+| Sapiens2 0.4B | Upper | 85.112 | 84.907 | 85.009 | 120 | 20 | 20 |
+| Sapiens2 0.4B | Lower | 85.176 | 78.717 | 81.819 | 102 | 24 | 16 |
+| Sapiens2 0.8B | Hair | 95.269 | 83.699 | 89.110 | 69 | 16 | 11 |
+| Sapiens2 0.8B | Face_local | 90.914 | 90.213 | 90.562 | 35 | 6 | 5 |
+| Sapiens2 0.8B | Upper | 86.110 | 82.466 | 84.249 | 120 | 24 | 20 |
+| Sapiens2 0.8B | Lower | 87.618 | 79.316 | 83.261 | 102 | 26 | 16 |
+| Sapiens2 1B | Hair | 95.368 | 85.929 | 90.403 | 69 | 13 | 11 |
+| Sapiens2 1B | Face_local | 91.333 | 92.214 | 91.771 | 35 | 5 | 5 |
+| Sapiens2 1B | Upper | 87.826 | 86.586 | 87.201 | 120 | 22 | 20 |
+| Sapiens2 1B | Lower | 85.245 | 85.278 | 85.261 | 102 | 20 | 16 |
+
+“ไม่ทับ GT เลย” หมายถึง TP = 0 ของส่วนที่มี GT ส่วน “จับคู่คนไม่ได้” เป็นกลุ่มย่อยของรายการเหล่านั้นและยังนับพิกเซล GT เป็น FN กรณีที่จับคู่คนได้แต่ TP = 0 อาจเป็นผลว่าง ผิดคลาส ผิดตำแหน่ง หรือผิด ownership ต้องดู masks ประกอบเพื่อแยกสาเหตุ
+
+| โมเดล | Target | TP px | FP px | FN px | TN px | GT support px | Union px | GT พิกเซลที่พลาด % |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| QANet | Hair | 195,251 | 11,449 | 49,293 | 143,666,775 | 244,544 | 255,993 | 20.157 |
+| QANet | Face_local | 42,465 | 1,478 | 10,605 | 31,929 | 53,070 | 54,548 | 19.983 |
+| QANet | Upper | 750,233 | 72,651 | 141,571 | 250,721,081 | 891,804 | 964,455 | 15.875 |
+| QANet | Lower | 247,538 | 24,881 | 124,941 | 213,968,587 | 372,479 | 397,360 | 33.543 |
+| M2FP | Hair | 183,087 | 5,752 | 61,457 | 143,672,472 | 244,544 | 250,296 | 25.131 |
+| M2FP | Face_local | 35,371 | 1,040 | 17,699 | 32,367 | 53,070 | 54,110 | 33.350 |
+| M2FP | Upper | 668,592 | 64,589 | 223,212 | 250,729,143 | 891,804 | 956,393 | 25.029 |
+| M2FP | Lower | 253,120 | 18,217 | 119,359 | 213,975,251 | 372,479 | 390,696 | 32.044 |
+| D2FP | Hair | 182,568 | 5,678 | 61,976 | 143,672,546 | 244,544 | 250,222 | 25.343 |
+| D2FP | Face_local | 37,412 | 1,394 | 15,658 | 32,013 | 53,070 | 54,464 | 29.504 |
+| D2FP | Upper | 635,980 | 56,981 | 255,824 | 250,736,751 | 891,804 | 948,785 | 28.686 |
+| D2FP | Lower | 227,790 | 19,141 | 144,689 | 213,974,327 | 372,479 | 391,620 | 38.845 |
+| RP-R-CNN | Hair | 163,959 | 16,900 | 80,585 | 143,661,324 | 244,544 | 261,444 | 32.953 |
+| RP-R-CNN | Face_local | 33,549 | 1,240 | 19,521 | 32,167 | 53,070 | 54,310 | 36.783 |
+| RP-R-CNN | Upper | 602,796 | 71,115 | 289,008 | 250,722,617 | 891,804 | 962,919 | 32.407 |
+| RP-R-CNN | Lower | 233,463 | 24,131 | 139,016 | 213,969,337 | 372,479 | 396,610 | 37.322 |
+| CPI R50 | Hair | 167,388 | 17,367 | 77,156 | 143,660,857 | 244,544 | 261,911 | 31.551 |
+| CPI R50 | Face_local | 38,337 | 2,101 | 14,733 | 31,306 | 53,070 | 55,171 | 27.761 |
+| CPI R50 | Upper | 573,191 | 57,301 | 318,613 | 250,736,431 | 891,804 | 949,105 | 35.727 |
+| CPI R50 | Lower | 217,438 | 34,605 | 155,041 | 213,958,863 | 372,479 | 407,084 | 41.624 |
+| CPI ConvNeXt-B | Hair | 207,233 | 35,332 | 37,311 | 143,642,892 | 244,544 | 279,876 | 15.257 |
+| CPI ConvNeXt-B | Face_local | 39,978 | 1,243 | 13,092 | 32,164 | 53,070 | 54,313 | 24.669 |
+| CPI ConvNeXt-B | Upper | 681,497 | 87,096 | 210,307 | 250,706,636 | 891,804 | 978,900 | 23.582 |
+| CPI ConvNeXt-B | Lower | 249,904 | 20,422 | 122,575 | 213,973,046 | 372,479 | 392,901 | 32.908 |
+| Sapiens2 0.4B | Hair | 213,617 | 15,778 | 30,927 | 143,662,446 | 244,544 | 260,322 | 12.647 |
+| Sapiens2 0.4B | Face_local | 46,896 | 4,452 | 6,174 | 28,955 | 53,070 | 57,522 | 11.634 |
+| Sapiens2 0.4B | Upper | 757,203 | 132,454 | 134,601 | 250,661,278 | 891,804 | 1,024,258 | 15.093 |
+| Sapiens2 0.4B | Lower | 293,205 | 51,031 | 79,274 | 213,942,437 | 372,479 | 423,510 | 21.283 |
+| Sapiens2 0.8B | Hair | 204,681 | 10,165 | 39,863 | 143,668,059 | 244,544 | 254,709 | 16.301 |
+| Sapiens2 0.8B | Face_local | 47,876 | 4,785 | 5,194 | 28,622 | 53,070 | 57,855 | 9.787 |
+| Sapiens2 0.8B | Upper | 735,438 | 118,632 | 156,366 | 250,675,100 | 891,804 | 1,010,436 | 17.534 |
+| Sapiens2 0.8B | Lower | 295,435 | 41,750 | 77,044 | 213,951,718 | 372,479 | 414,229 | 20.684 |
+| Sapiens2 1B | Hair | 210,133 | 10,205 | 34,411 | 143,668,019 | 244,544 | 254,749 | 14.071 |
+| Sapiens2 1B | Face_local | 48,938 | 4,644 | 4,132 | 28,763 | 53,070 | 57,714 | 7.786 |
+| Sapiens2 1B | Upper | 772,173 | 107,033 | 119,631 | 250,686,699 | 891,804 | 998,837 | 13.414 |
+| Sapiens2 1B | Lower | 317,641 | 54,982 | 54,838 | 213,938,486 | 372,479 | 427,461 | 14.722 |
+
+GT support = TP+FN และ union = TP+FP+FN สัดส่วน GT ที่พลาด = FN/(TP+FN) = 1−Recall ค่า TN อ้างอิงพื้นที่ valid ของงานนั้น และมีขนาดใหญ่มากในงานบางคลาส จึงอ่านความครบควบคู่กับ Precision/Recall/IoU ตามเป้าหมาย
+
+## การจับคู่คนและความครบถ้วนของผล
+
+ตารางนี้ใช้ YOLO extents ที่ตรึงไว้กับ common geometry matcher ทั้งเก้าโมเดล ค่า person TP คือคู่ที่ผ่าน threshold, FP คือ predicted extent ที่ไม่มีคู่ และ FN คือ GT extent ที่ไม่มีคู่ Person Precision = TP/(TP+FP), Recall = TP/(TP+FN), F1 = 2TP/(2TP+FP+FN)
+
+| โมเดล | Mask IoU threshold | GT คน | Pred คน | TP | FP | FN | Precision % | Recall % | F1 % | Ambiguous frames |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| QANet | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| M2FP | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| M2FP | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| D2FP | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| D2FP | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| RP-R-CNN | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| RP-R-CNN | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| CPI R50 | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| CPI R50 | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| CPI ConvNeXt-B | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| CPI ConvNeXt-B | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| Sapiens2 0.4B | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| Sapiens2 0.4B | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| Sapiens2 0.8B | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| Sapiens2 0.8B | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+| Sapiens2 1B | 0.5 | 127 | 130 | 104 | 26 | 23 | 80.000 | 81.890 | 80.934 | 0 |
+| Sapiens2 1B | 0.75 | 127 | 130 | 82 | 48 | 45 | 63.077 | 64.567 | 63.813 | 0 |
+
+Person metrics เท่ากันข้ามโมเดลในแต่ละ dataset เพราะใช้ YOLO extents ชุดเดียวกัน ส่วน semantic masks และคะแนนรายส่วนยังต่างกัน สำหรับ CCTV จำนวนคนที่ทายมาแต่ไม่มีคู่ GT อ้างอิงเฉพาะคนที่ annotate ไว้
+
+| โมเดล | Expected | Completed | Missing | Duplicate | STRICT_COMPLETE |
+|---|---:|---:|---:|---:|---|
+| QANet | 90 | 90 | 0 | 0 | True |
+| M2FP | 90 | 90 | 0 | 0 | True |
+| D2FP | 90 | 90 | 0 | 0 | True |
+| RP-R-CNN | 90 | 90 | 0 | 0 | True |
+| CPI R50 | 90 | 90 | 0 | 0 | True |
+| CPI ConvNeXt-B | 90 | 90 | 0 | 0 | True |
+| Sapiens2 0.4B | 90 | 90 | 0 | 0 | True |
+| Sapiens2 0.8B | 90 | 90 | 0 | 0 | True |
+| Sapiens2 1B | 90 | 90 | 0 | 0 | True |
+
+## รายละเอียด timing ที่ตรวจได้
+
+ตารางขั้นตอนใช้หน่วย ms ต่อ ROI ที่มี timer ช่วงย่อยอาจอยู่ซ้อนภายใน adapter_total ของโมเดลหนึ่ง call รองรับ native classes ทั้งหมด แล้วจึงแปลงผลเป็นสี่ target
+
+| โมเดล | Preprocess ms/ROI | Native call ms/ROI | Map-back ms/ROI | Adapter A ms/ROI (n) | Event B ms/ROI (n) |
+|---|---:|---:|---:|---:|---:|
+| QANet | null | null | null | 76.325 (130) | null (0) |
+| M2FP | null | null | null | 220.187 (130) | null (0) |
+| D2FP | null | null | null | 694.885 (130) | null (0) |
+| RP-R-CNN | null | null | null | 351.633 (1) | 225.817 (129) |
+| CPI R50 | null | null | null | 2806.344 (28) | 3046.172 (102) |
+| CPI ConvNeXt-B | null | null | null | 485.599 (27) | 491.921 (103) |
+| Sapiens2 0.4B | null | null | null | 1410.127 (115) | null (0) |
+| Sapiens2 0.8B | null | null | null | 2922.120 (115) | null (0) |
+| Sapiens2 1B | null | null | null | 4143.146 (115) | null (0) |
+
+null ของช่วงย่อยหมายถึง log ของรอบนั้นแยกขั้นตอนนี้ไม่ได้ ขอบเขต A และ B ของ CCTV อธิบายไว้ในตารางเวลาต่อภาพด้านบน CPI มี native file I/O ภายใน adapter และสภาพ GPU ร่วมถูกบันทึกไว้ใน resource policy ของ source run
+
+## ที่มาของ configuration และข้อจำกัด
+
+| โมเดล | Checkpoint SHA256 prefix | Canonical source reference | Implementation reference |
+|---|---|---|---|
+| QANet | `cf7374ea109e05c1` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/QANet_CIHP_HRNetW48_512x384/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+| M2FP | `7451e822298c8dee` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/M2FP_R101_CIHP/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+| D2FP | `acdfb2eceff57682` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/D2FP_R101_CIHP/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+| RP-R-CNN | `6b596210f3ea67c7` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-continuation-scores-20261101/RPR_CIHP/METRICS.json` | `รายละเอียดใน source config hash c336a36aea63370162ce650bc5af3ae7419e581f8f9a17c123dff6437775baa9` |
+| CPI R50 | `e58f8cb4b4fb3b75` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-continuation-scores-20261101/CPI_R50_CIHP/METRICS.json` | `รายละเอียดใน source config hash c336a36aea63370162ce650bc5af3ae7419e581f8f9a17c123dff6437775baa9` |
+| CPI ConvNeXt-B | `25b7b12527e550f1` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-continuation-scores-20261101/CPI_ConvNeXtB_CIHP/METRICS.json` | `รายละเอียดใน source config hash c336a36aea63370162ce650bc5af3ae7419e581f8f9a17c123dff6437775baa9` |
+| Sapiens2 0.4B | `b85fdb50b7d6123a` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/Sapiens2_0.4b/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+| Sapiens2 0.8B | `e7c1655b7e11678b` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/Sapiens2_0.8b/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+| Sapiens2 1B | `4b73c44963b377e9` | `CCTV_Human_Parsing_Benchmark/outputs/controlled-roi-part-diagnostics-20261101/Sapiens2_1b/METRICS.json` | `รายละเอียดใน source config hash ac329e637c840d5ae2868dfcfa25f8cf5535c331e136e6a039178ec49d8834ae` |
+
+กติกาสี่ target, Face-local, VOID/OTHER, mask matching และวิธีเฉลี่ยใช้ร่วมกันใน CIHP/CCTV โดย GT และ annotation boundaries ยังเป็น reference ของแต่ละชุด การประเมินใช้ส่วนที่มี annotation และ Face ใช้กรอบ GT ของงานนั้น คำอ้างเกี่ยวกับขอบเขตหน้า/คอและ Dress จึงอิงนิยามเหล่านี้
+
+ผลเปรียบเทียบ checkpoint พร้อม application configuration ซึ่งรวมข้อมูลฝึก adapter และ implementation revision การแก้หน่วยความจำ CPI มีหลักฐาน parity ตาม revision ของแต่ละ segment ประวัติ OOM และ interruption ยังอยู่ใน source runs การปิดผลครบเป็นสถานะของ assembled cohort
+
+[CSV ราย target พร้อม counts และตัวหาร](../../Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_TARGET_COUNTS.csv) · [Canonical index และหลักฐานการตรวจ](../../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json)
+
+<!-- CURRENT_SHARED_DIAGNOSTICS_END -->
+
+
+
+[โค้ดนิยามและการนับรายส่วน](../../Human_Parsing_Benchmark/src/common_view/reference_parts.py) เก็บสูตร จำนวน GT และการให้ศูนย์เมื่อจับคู่ไม่ได้ ส่วน Q_C4_GT ในประวัติอ้างอิง semantic person score ของ protocol เดิม รายงานปัจจุบันสรุปคุณภาพรายส่วนด้วย mean-part IoU และแสดง person extent diagnostics แยกกัน
+
 <!-- SHARED_DATASET_CURRENT_END -->
 
 ## ประวัติผลและคำอธิบายตาม protocol เดิม

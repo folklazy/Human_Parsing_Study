@@ -356,12 +356,245 @@ def supplement(root):
         CIHP_timing_coverage={mid:[t['images_with_complete_timing'],t['timed_ROIs']] for mid,t in cihp.items()})))
 
 
+
+def collect_confusion_rows(root, public):
+    """Aggregate saved task counts, preserving the accepted domains and pairing."""
+    import math
+    con = sqlite3.connect('file:'+str(root/'RESULTS.sqlite3')+'?mode=ro', uri=True)
+    totals = {}
+    membership = {}
+    checked = 0
+    for dataset, model_id, image_id, value in con.execute(
+            'SELECT dataset,model,image_id,result FROM results ORDER BY dataset,model,image_id'):
+        frame = json.loads(value)
+        if frame['image_id'] != image_id:
+            raise ValueError('Frame membership differs')
+        membership.setdefault((dataset, model_id), set()).add(image_id)
+        for part in frame['parts']:
+            key = (dataset, model_id, part['target'])
+            row = totals.setdefault(key, dict(GT_parts=0, TP=0, FP=0, FN=0, TN=0,
+                zero_overlap_parts=0, unmatched_GT_parts=0, perfect_parts=0, IoU_sum=0.))
+            if min(part[k] for k in ['TP','FP','FN','TN']) < 0:
+                raise ValueError('Negative confusion count')
+            expected_iou = part['TP']/(part['TP']+part['FP']+part['FN'])
+            if not math.isclose(expected_iou, part['IoU'], abs_tol=1e-14):
+                raise ValueError('Stored part formula differs')
+            row['GT_parts'] += 1
+            for name in ['TP','FP','FN','TN']:
+                row[name] += part[name]
+            row['zero_overlap_parts'] += int(part['TP'] == 0)
+            row['unmatched_GT_parts'] += int(part['unmatched'])
+            row['perfect_parts'] += int(part['FP'] == part['FN'] == 0)
+            row['IoU_sum'] += expected_iou
+            checked += 1
+    con.close()
+    sources = read(root/'SOURCES.json')
+    rows = []
+    for dataset in ['CIHP','CCTV']:
+        for model_id, model in public['models'][dataset].items():
+            if (not model['strict_complete'] or
+                    membership[dataset, model_id] != set(sources[dataset]['expected'])):
+                raise ValueError('Exact accepted population required')
+            for target_id, target in [(2,'Hair'),(1,'Face_local'),(3,'Upper'),(4,'Lower')]:
+                derived = totals[dataset, model_id, target_id]
+                accepted = model['targets'][target]
+                for name in ['GT_parts','TP','FP','FN','unmatched_GT_parts']:
+                    if derived[name] != accepted[name]:
+                        raise ValueError('Stored confusion differs from accepted result')
+                if not math.isclose(derived['IoU_sum']/derived['GT_parts'],
+                                    accepted['mean_part_IoU'], abs_tol=1e-12):
+                    raise ValueError('Mean-part IoU differs')
+                row = dict(dataset=dataset, model_id=model_id, target=target, **accepted,
+                    TN=derived['TN'], valid_task_pixels=sum(derived[k] for k in ['TP','FP','FN','TN']),
+                    zero_overlap_parts=derived['zero_overlap_parts'], perfect_parts=derived['perfect_parts'])
+                row['missed_GT_pixel_fraction'] = row['FN']/row['GT_pixels']
+                rows.append(row)
+        for target in ['Hair','Face_local','Upper','Lower']:
+            domains = {(r['GT_parts'],r['GT_pixels'],r['valid_task_pixels']) for r in rows
+                       if r['dataset']==dataset and r['target']==target}
+            if len(domains) != 1:
+                raise ValueError('Evaluation domain depends on model')
+    return rows, checked
+
+
+def plot_shared_confusion(rows, dataset, path):
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    import numpy as np
+    models = list(dict.fromkeys(r['model_id'] for r in rows if r['dataset']==dataset))
+    lookup = {(r['model_id'],r['target']):r for r in rows if r['dataset']==dataset}
+    targets = ['Hair','Face_local','Upper','Lower']
+    fig, axes = plt.subplots(9, 4, figsize=(17, 26))
+    for i, model in enumerate(models):
+        for j, target in enumerate(targets):
+            row = lookup[model,target]
+            matrix = np.array([[row['TP'],row['FN']],[row['FP'],row['TN']]], dtype=np.int64)
+            denominators = matrix.sum(axis=1, keepdims=True)
+            percentages = np.divide(matrix*100., denominators,
+                out=np.full((2,2),np.nan), where=denominators!=0)
+            ax = axes[i,j]
+            ax.imshow(percentages, vmin=0, vmax=100, cmap='Blues', aspect='auto')
+            for y in range(2):
+                for x in range(2):
+                    label = [['TP','FN'],['FP','TN']][y][x]
+                    percent = f'{percentages[y,x]:.2f}%' if np.isfinite(percentages[y,x]) else 'n/a'
+                    ax.text(x,y,f'{label} {matrix[y,x]:,}\n{percent}',ha='center',va='center',
+                            fontsize=8,color='white' if percentages[y,x]>55 else '#152238')
+            ax.set_title(target.replace('_','-')+f' | parts={row["GT_parts"]:,}',fontsize=10)
+            ax.set_xticks([0,1],['Pred target','Pred other'],fontsize=7)
+            ax.set_yticks([0,1],['GT target','GT other'],fontsize=7)
+            if j==0:
+                ax.set_ylabel(LABELS[i], fontsize=11, fontweight='bold', labelpad=10)
+    fig.suptitle(dataset+' | current shared-reference binary confusion | 9 models x 4 targets\n'+
+        'Cell counts + row-normalized percentages. Face-local uses tight GT boxes.',fontsize=14,y=.998)
+    fig.tight_layout(rect=[0,.025,1,.977],h_pad=1.1,w_pad=1.6)
+    fig.text(.5,.007,'Counts pool positive-person-part tasks. Task domains can reuse image pixels. '
+             'Hair/Upper/Lower use GT-valid task domains; Face uses local boxes.',
+             ha='center',fontsize=8)
+    path.parent.mkdir(parents=True,exist_ok=True)
+    fig.savefig(path,dpi=140,bbox_inches='tight',pad_inches=.15)
+    plt.close(fig)
+
+
+def current_diagnostics_section(public, rows, dataset, names, figure_link, csv_link, index_link):
+    lines = ['## Confusion matrix และความครบของแต่ละส่วน', '',
+        'ภาพชุดนี้สร้างจากสถิติรายส่วนของ shared-reference run ล่าสุด เก็บ binary confusion แยก target โดยแถวเป็น GT และคอลัมน์เป็น prediction เรียง target ก่อน other จึงได้ **[[TP, FN], [FP, TN]]** ตัวเลขในช่องเป็นจำนวนพิกเซล ส่วนสีและเปอร์เซ็นต์หารด้วยผลรวมของ GT แต่ละแถว', '',
+        f'![{dataset} shared-reference confusion matrices]({figure_link})', '',
+        'TP คือทายส่วนที่ต้องการถูก FN คือส่วน GT ที่ทายขาด FP คือทายเกินบนส่วนอื่นในพื้นที่ประเมิน และ TN คือพื้นที่อื่นที่ทายเป็นอื่น แต่ละ target มีงานราย GT person-part ของตนเอง พิกเซลของภาพเดียวกันอาจถูกประเมินในหลายงานตามเจ้าของ GT ตารางรวมพิกเซลตามงานเหล่านี้', '',
+        '**Recall = TP/(TP+FN)** บอกว่าเก็บพิกเซล GT ได้ครบเท่าไร **Precision = TP/(TP+FP)** บอกว่าพิกเซลที่ทายมาถูกเท่าไร และ **F1/Dice = 2TP/(2TP+FP+FN)** สรุปทั้งการทายเกินและทายขาด ค่าด้านล่างรวม counts ก่อนหาร ส่วน mean-part IoU ในตารางคะแนนเฉลี่ยแต่ละส่วนเท่ากัน', '',
+        '| โมเดล | Target | Precision % | Recall % | F1/Dice % | GT parts | ไม่ทับ GT เลย | ในจำนวนนั้นจับคู่คนไม่ได้ |',
+        '|---|---|---:|---:|---:|---:|---:|---:|']
+    selected = [r for r in rows if r['dataset']==dataset]
+    for r in selected:
+        lines.append(f'| {names[r["model_id"]]} | {r["target"]} | {pct(r["precision"])} | {pct(r["recall"])} | {pct(r["F1_Dice"])} | {r["GT_parts"]:,} | {r["zero_overlap_parts"]:,} | {r["unmatched_GT_parts"]:,} |')
+    lines += ['', '“ไม่ทับ GT เลย” หมายถึง TP = 0 ของส่วนที่มี GT ส่วน “จับคู่คนไม่ได้” เป็นกลุ่มย่อยของรายการเหล่านั้นและยังนับพิกเซล GT เป็น FN กรณีที่จับคู่คนได้แต่ TP = 0 อาจเป็นผลว่าง ผิดคลาส ผิดตำแหน่ง หรือผิด ownership ต้องดู masks ประกอบเพื่อแยกสาเหตุ', '',
+        '| โมเดล | Target | TP px | FP px | FN px | TN px | GT support px | Union px | GT พิกเซลที่พลาด % |',
+        '|---|---|---:|---:|---:|---:|---:|---:|---:|']
+    for r in selected:
+        lines.append(f'| {names[r["model_id"]]} | {r["target"]} | '+
+            ' | '.join(f'{r[k]:,}' for k in ['TP','FP','FN','TN','GT_pixels','union'])+
+            f' | {pct(r["missed_GT_pixel_fraction"])} |')
+    lines += ['', 'GT support = TP+FN และ union = TP+FP+FN สัดส่วน GT ที่พลาด = FN/(TP+FN) = 1−Recall ค่า TN อ้างอิงพื้นที่ valid ของงานนั้น และมีขนาดใหญ่มากในงานบางคลาส จึงอ่านความครบควบคู่กับ Precision/Recall/IoU ตามเป้าหมาย', '',
+        '## การจับคู่คนและความครบถ้วนของผล', '',
+        'ตารางนี้ใช้ YOLO extents ที่ตรึงไว้กับ common geometry matcher ทั้งเก้าโมเดล ค่า person TP คือคู่ที่ผ่าน threshold, FP คือ predicted extent ที่ไม่มีคู่ และ FN คือ GT extent ที่ไม่มีคู่ Person Precision = TP/(TP+FP), Recall = TP/(TP+FN), F1 = 2TP/(2TP+FP+FN)', '',
+        '| โมเดล | Mask IoU threshold | GT คน | Pred คน | TP | FP | FN | Precision % | Recall % | F1 % | Ambiguous frames |',
+        '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
+    for model_id in names:
+        for threshold, loc in public['models'][dataset][model_id]['localization'].items():
+            precision = loc['TP']/(loc['TP']+loc['FP']) if loc['TP']+loc['FP'] else None
+            recall = loc['TP']/(loc['TP']+loc['FN']) if loc['TP']+loc['FN'] else None
+            lines.append(f'| {names[model_id]} | {threshold} | {loc["GT"]:,} | {loc["predictions"]:,} | {loc["TP"]:,} | {loc["FP"]:,} | {loc["FN"]:,} | {pct(precision)} | {pct(recall)} | {pct(loc["F1"])} | {loc["ambiguous"]:,} |')
+    lines += ['', 'Person metrics เท่ากันข้ามโมเดลในแต่ละ dataset เพราะใช้ YOLO extents ชุดเดียวกัน ส่วน semantic masks และคะแนนรายส่วนยังต่างกัน สำหรับ CCTV จำนวนคนที่ทายมาแต่ไม่มีคู่ GT อ้างอิงเฉพาะคนที่ annotate ไว้', '',
+        '| โมเดล | Expected | Completed | Missing | Duplicate | STRICT_COMPLETE |',
+        '|---|---:|---:|---:|---:|---|']
+    for model_id in names:
+        m = public['models'][dataset][model_id]
+        lines.append(f'| {names[model_id]} | {m["expected"]:,} | {m["completed"]:,} | {m["missing"]} | {m["duplicate"]} | {m["strict_complete"]} |')
+    lines += ['', '## รายละเอียด timing ที่ตรวจได้', '',
+        'ตารางขั้นตอนใช้หน่วย ms ต่อ ROI ที่มี timer ช่วงย่อยอาจอยู่ซ้อนภายใน adapter_total ของโมเดลหนึ่ง call รองรับ native classes ทั้งหมด แล้วจึงแปลงผลเป็นสี่ target', '',
+        '| โมเดล | Preprocess ms/ROI | Native call ms/ROI | Map-back ms/ROI | Adapter A ms/ROI (n) | Event B ms/ROI (n) |',
+        '|---|---:|---:|---:|---:|---:|']
+    for model_id in names:
+        if dataset=='CIHP':
+            t=public['reporting_supplement']['CIHP_timing'][model_id]
+            stages=t['stages']
+            def stage(name):
+                return f'{stages[name]["mean_ms"]:.3f}' if name in stages else 'null'
+            native = stage('native_model_call') if 'native_model_call' in stages else stage('native_model_call_inclusive')
+            if 'parser_backbone' in stages:
+                native=stage('parser_backbone')+' + '+stage('parser_head')
+            a=f'{t["adapter"]["mean_ms"]:.3f} ({t["adapter"]["n"]:,})'
+            fields=[stage('parser_preprocess'),native,stage('parser_mapback'),a,'null (0)']
+        else:
+            t=public['reporting_supplement']['CCTV_timing'][model_id]
+            a=t['monotonic_adapter'];b=t['UTC_event_interval']
+            fields=['null','null','null',f'{a["mean_ms"]:.3f} ({a["n"]})' if a['n'] else 'null (0)',
+                    f'{b["mean_ms"]:.3f} ({b["n"]})' if b['n'] else 'null (0)']
+        lines.append(f'| {names[model_id]} | '+' | '.join(fields)+' |')
+    lines += ['', 'null ของช่วงย่อยหมายถึง log ของรอบนั้นแยกขั้นตอนนี้ไม่ได้ ขอบเขต A และ B ของ CCTV อธิบายไว้ในตารางเวลาต่อภาพด้านบน CPI มี native file I/O ภายใน adapter และสภาพ GPU ร่วมถูกบันทึกไว้ใน resource policy ของ source run', '',
+        '## ที่มาของ configuration และข้อจำกัด', '',
+        '| โมเดล | Checkpoint SHA256 prefix | Canonical source reference | Implementation reference |',
+        '|---|---|---|---|']
+    for model_id in names:
+        ref=public['source_configuration_references'][dataset][model_id]
+        impl=ref.get('implementation','รายละเอียดใน source config hash '+ref.get('source_config_sha256',''))
+        lines.append(f'| {names[model_id]} | `{ref["checkpoint_sha256"][:16]}` | `{ref.get("canonical_metrics",ref.get("canonical_reference"))}` | `{json.dumps(impl,ensure_ascii=False) if isinstance(impl,dict) else impl}` |')
+    lines += ['', 'กติกาสี่ target, Face-local, VOID/OTHER, mask matching และวิธีเฉลี่ยใช้ร่วมกันใน CIHP/CCTV โดย GT และ annotation boundaries ยังเป็น reference ของแต่ละชุด การประเมินใช้ส่วนที่มี annotation และ Face ใช้กรอบ GT ของงานนั้น คำอ้างเกี่ยวกับขอบเขตหน้า/คอและ Dress จึงอิงนิยามเหล่านี้', '',
+        'ผลเปรียบเทียบ checkpoint พร้อม application configuration ซึ่งรวมข้อมูลฝึก adapter และ implementation revision การแก้หน่วยความจำ CPI มีหลักฐาน parity ตาม revision ของแต่ละ segment ประวัติ OOM และ interruption ยังอยู่ใน source runs การปิดผลครบเป็นสถานะของ assembled cohort', '',
+        f'[CSV ราย target พร้อม counts และตัวหาร]({csv_link}) · [Canonical index และหลักฐานการตรวจ]({index_link})']
+    return '\n'.join(lines)
+
+
+def audit_dataset_reports(root):
+    import csv
+    index_path=H/'reports/SHARED_REFERENCE_RESULT_INDEX.json'
+    public=read(index_path)
+    if public['result_sha256'] != sha(root/'RESULTS.json'):
+        raise ValueError('Score bindings drifted')
+    if sha(root/'SOURCES.json') != public['sources_manifest_sha256']:
+        raise ValueError('Prediction-source bindings drifted')
+    rows,checked=collect_confusion_rows(root,public)
+    csv_path=H/'metrics/SHARED_REFERENCE_TARGET_COUNTS.csv'
+    with csv_path.open() as stream:
+        prior=list(csv.DictReader(stream))
+    lookup={(r['dataset'],r['model_id'],r['target']):r for r in rows}
+    fields=list(prior[0])+['TN','valid_task_pixels','zero_overlap_parts','perfect_parts','missed_GT_pixel_fraction']
+    fields=list(dict.fromkeys(fields))
+    with csv_path.open('w',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=fields,lineterminator='\n')
+        writer.writeheader()
+        for previous in prior:
+            r=lookup[previous['dataset'],previous['model_id'],previous['target']]
+            # Preserve all previously published aggregate values exactly.
+            merged=dict(previous,**{k:r[k] for k in fields if k not in previous})
+            writer.writerow(merged)
+    names=dict(zip(public['models']['CIHP'],LABELS))
+    figures={}
+    for dataset,folder,filename in [('CIHP',H,'CIHP_COMMON_NINE_RESULTS_TH.md'),
+                                     ('CCTV',C,'CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md')]:
+        figure=folder/'reports/figures/SHARED_REFERENCE_TARGET_CONFUSION.png'
+        plot_shared_confusion(rows,dataset,figure)
+        report=folder/'reports'/filename
+        prefix='' if dataset=='CIHP' else '../../Human_Parsing_Benchmark/'
+        csv_link='../metrics/SHARED_REFERENCE_TARGET_COUNTS.csv' if dataset=='CIHP' else prefix+'metrics/SHARED_REFERENCE_TARGET_COUNTS.csv'
+        index_link='SHARED_REFERENCE_RESULT_INDEX.json' if dataset=='CIHP' else prefix+'reports/SHARED_REFERENCE_RESULT_INDEX.json'
+        section=current_diagnostics_section(public,rows,dataset,names,
+            'figures/SHARED_REFERENCE_TARGET_CONFUSION.png',csv_link,index_link)
+        start='<!-- CURRENT_SHARED_DIAGNOSTICS_START -->'
+        end='<!-- CURRENT_SHARED_DIAGNOSTICS_END -->'
+        text=report.read_text()
+        if start in text:
+            a=text.index(start);b=text.index(end,a)+len(end)
+            text=text[:a]+text[b:]
+        insertion=text.index('<!-- SHARED_DATASET_CURRENT_END -->')
+        text=text[:insertion]+start+'\n\n'+section+'\n\n'+end+'\n\n'+text[insertion:]
+        report.write_text(text)
+        figures[dataset]=dict(path=str(figure.relative_to(W)),sha256=sha(figure))
+    public['confusion_reporting']=dict(status='CURRENT_SHARED_REFERENCE_72_TARGETS_COMPLETE',
+        created_thai=datetime.now(timezone.utc).astimezone(ZoneInfo('Asia/Bangkok')).isoformat(),
+        part_records_checked=checked, rows=rows, figures=figures,
+        matrix_order='[[TP,FN],[FP,TN]]; rows GT, columns prediction; labels target/other',
+        source_result_sha256=sha(root/'RESULTS.json'),source_config_sha256=sha(root/'CONFIG.json'),
+        source_protocol_sha256=public['protocol_sha256'],report_source_sha256=sha(__file__),
+        aggregate_CSV_sha256=sha(csv_path),new_model_calls=0,new_mask_scoring=False,
+        checks=['Exact membership for all 18 jobs','72 per-target counts match accepted scores',
+                '526086 per-task IoU formulas independently checked','Model-independent GT domains per target',
+                'Shared templated report structure for both datasets'])
+    index_path.write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(dict(status='REPORTS_UPDATED',part_records=checked,targets=len(rows),new_model_calls=0)))
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--supplement', action='store_true', help='Add equal four-target mean and saved timing')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--supplement', action='store_true', help='Add equal four-target mean and saved timing')
+    mode.add_argument('--audit-reports', action='store_true', help='Publish current confusion and aligned dataset reports')
     args = parser.parse_args()
-    if args.supplement:
+    if args.audit_reports:
+        audit_dataset_reports(args.output.resolve())
+    elif args.supplement:
         supplement(args.output.resolve())
     else:
         render(args.output.resolve())

@@ -1,5 +1,7 @@
 # Shared C3-part + Face-local ครบ 18/18 งาน
 
+อัปเดต 2026-11-09T17:40:23.483262+07:00 รายงานปัจจุบันมีหัวข้อเหมือนกันทั้ง CIHP/CCTV ครบคะแนน 4 targets, mIoU3/Macro4-local, binary confusion, Precision/Recall/F1, ส่วนที่พลาด, person matching, timing และ source bindings ดู[รายงานพร้อมภาพ matrix](reports/CIHP_COMMON_NINE_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
 รายงานราย dataset เพิ่มตารางคะแนนสี่คลาสและเวลาต่อภาพ/เวลารวมไว้ด้านบนแล้วเมื่อ 2026-11-09T17:27:38.250271+07:00 ดู[รายงาน CIHP](reports/CIHP_COMMON_NINE_RESULTS_TH.md)
 
 ตรวจปิดรอบ: 8 พฤศจิกายน 2026 เวลา 16:01:46 น.ไทย (Asia/Bangkok)

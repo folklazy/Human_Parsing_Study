@@ -1,3 +1,5 @@
+> Reporting audit 2026-11-09T17:40:23.483262+07:00. Completed shared-view confusion and aligned CIHP/CCTV report sections from saved counts. Exact 18 jobs and 72 target rows verified. Current report includes diagnostics navigation, raw counts and source hashes.
+
 > Reporting supplement 2026-11-09T17:19:52.672427+07:00. User requested equal four-target Macro4-local and saved-log timing tables. Accepted masks/scores are the inputs. Completed 18 derived summaries and CIHP/CCTV timing coverage checks. Current report contains definitions, timer scopes and source hashes.
 
 > **Shared scoring COMPLETE (2026-11-08T16:01:46.245563+07:00):** CIHP9x5000 and CCTV9x90 exact; protocol SHARED_C3_PART_FACE_LOCAL_V1,13CPUcases plus actualpacket/resume acceptance and independent526,086-part arithmetic/membership verification. Main report: reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md; no automatic new inference or extra metric experiments. Existing native/globalC3/C4 and CCTVFace-domain remain historical separate views.
