@@ -303,3 +303,8 @@ User requested recorded speed and an equal four-class mean. Added derived Macro4
 Collected CIHP synchronized adapter timings for exact 5,000 accepted frames and 24,062 ROI observations per model. Packet hash, model and checkpoint metadata must match the frame ledger. Exported per-image means, dataset sums, ROI stage coverage, and ledger hashes. CCTV A/B boundaries remain documented and Sapiens full-population timing remains null with 84/90 timed images. GPU sharing and differing timer boundaries constrain speed comparisons.
 
 Verified 18 equal-four-target means against the independent (3*C3+Face)/4 identity, 18 CSV rows, timer sum/denominator consistency, null handling, literal small duration examples, report links/table widths, unchanged 18 score aggregates, and unchanged 9 canonical CIHP METRICS hashes. No model calls were needed. Outputs extend the existing report, result index and summary CSV. Historical completion retains its original index hash at Git snapshot d73ce5d. Blockers none for this reporting scope. Next action publish the updated report.
+
+
+## 2026-11-09T17:24:39.686547+07:00 — make timing visible on entry pages
+
+User could not find the speed table. The prior numeric table is present under the shared report heading เวลาต่อภาพและเวลารวม. Added a visible nine-model seconds-per-image table and direct section link to the public root and both experiment READMEs. Values come from the existing summary CSV and canonical CCTV timing aggregates. CCTV Sapiens means use the 84 timed images, explicitly labelled 84/90. CIHP uses 5,000/5,000. Checked all 18 displayed means against stored full-precision statistics. Reporting and navigation only. Next action use the README timing table or follow its direct report link.

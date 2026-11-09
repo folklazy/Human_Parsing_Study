@@ -11,6 +11,34 @@
 
 อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี 84/90 ภาพ จึงคงค่าเวลาทั้งชุดเป็น null ตามข้อมูลที่มี
 
+<!-- SPEED_OVERVIEW_START -->
+
+## เวลาประมวลผล parsing ต่อภาพ
+
+หน่วยวินาทีต่อภาพ คำนวณจากผลรวมเวลา adapter ของทุก person ROI ในภาพ แล้วเฉลี่ยตามจำนวนภาพที่มีเวลาครบ ตารางแสดงเวลาที่บันทึกระหว่างการใช้ GPU ร่วม
+
+| โมเดล | CIHP วินาที/ภาพ | ภาพที่มีเวลา | CCTV วินาที/ภาพ | ภาพที่มีเวลา |
+|---|---:|---:|---:|---:|
+| QANet | 0.352 | 5,000/5,000 | 0.110 | 90/90 |
+| M2FP | 1.038 | 5,000/5,000 | 0.318 | 90/90 |
+| D2FP | 3.067 | 5,000/5,000 | 1.004 | 90/90 |
+| RP-R-CNN | 1.095 | 5,000/5,000 | 0.328 | 90/90 |
+| CPI R50 | 10.178 | 5,000/5,000 | 4.325 | 90/90 |
+| CPI ConvNeXt-B | 2.974 | 5,000/5,000 | 0.709 | 90/90 |
+| Sapiens2 0.4B | 6.742 | 5,000/5,000 | 1.931 | 84/90 |
+| Sapiens2 0.8B | 13.927 | 5,000/5,000 | 4.001 | 84/90 |
+| Sapiens2 1B | 19.976 | 5,000/5,000 | 5.672 | 84/90 |
+
+ตัวอย่าง QANet บน CIHP ใช้เวลา parsing รวมทุกคนในภาพเฉลี่ย 0.352 วินาที ส่วน Sapiens2 1B เฉลี่ย 19.976 วินาทีต่อภาพ จำนวน ROI ต่อภาพมีผลต่อเวลานี้
+
+CCTV ของ Sapiens แต่ละรุ่นใช้ค่าเฉลี่ยจาก 84 ภาพที่มี timing ครบ อีก 6 ภาพใช้ predictions เดิมซึ่งขาด adapter timer ของรอบนี้ ค่าเฉลี่ยดังกล่าวจึงใช้ตัวหาร 84 ภาพ
+
+ขอบเขต adapter ครอบ preprocessing, model call และ map-back ตาม implementation รวม native file I/O ของ CPI ส่วน YOLO, การส่งออก packet และการให้คะแนนอยู่ภายนอกช่วงนี้ ขอบเขต timer ของ CCTV continuation รวมงานรอ GPU และบันทึกทรัพยากรด้วย รายละเอียดและเวลารวมอยู่ในตารางเวลาของรายงานหลัก
+
+[เปิดตารางเวลารวมและรายละเอียดการจับเวลา](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#เวลาต่อภาพและเวลารวม)
+
+<!-- SPEED_OVERVIEW_END -->
+
 ## ประวัติรายงานและสถานะก่อนหน้า (historical views)
 
 > **Current controlled CIHP: QUALITY_COMPLETE 9/9** (verified 2026-11-08T01:22:12.700583+07:00). Each checkpoint has exact 5,000 accepted IDs and non-null canonical primary metrics. Latest sequential queue has stopped; no inference worker remains. Controlled-results consolidation and live/clean speed measurement remain separate next steps. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
