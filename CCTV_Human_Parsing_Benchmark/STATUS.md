@@ -1,5 +1,7 @@
 # Shared C3-part + Face-local ครบ 18/18 งาน
 
+อัปเดต 2026-11-09T18:36:49.193931+07:00 เพิ่ม ms/ROI คู่กับ s/ภาพในตารางเวลาปัจจุบันและ README ใช้ผลรวมเวลาเดียวกันพร้อมตัวหารจริง CIHP 24,062 ROI/5,000 ภาพ และ CCTV 130 ROI/90 ภาพ
+
 อัปเดตบัญชีเวลา 2026-11-09T17:51:26.842995+07:00 ตรวจคืน original forward timers ของ CCTV Sapiens แล้วครบ 90 ภาพ/130 ROI ต่อขนาด ตารางแสดงกลุ่ม A/B/C และรายละเอียดช่วงที่วัดได้
 
 อัปเดต 2026-11-09T17:40:23.483262+07:00 รายงานปัจจุบันมีหัวข้อเหมือนกันทั้ง CIHP/CCTV ครบคะแนน 4 targets, mIoU3/Macro4-local, binary confusion, Precision/Recall/F1, ส่วนที่พลาด, person matching, timing และ source bindings ดู[รายงานพร้อมภาพ matrix](reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)

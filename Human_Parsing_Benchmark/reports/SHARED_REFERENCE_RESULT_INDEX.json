@@ -5100,6 +5100,7 @@
         "current_recorded_seconds": 9.922233878227416,
         "all_recorded_intervals_seconds": 9.922233878227416,
         "mean_recorded_intervals_seconds_per_image": 0.11024704309141574,
+        "mean_recorded_intervals_ms_per_ROI": 76.32487598636475,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5113,6 +5114,7 @@
         "current_recorded_seconds": 28.624371466226876,
         "all_recorded_intervals_seconds": 28.624371466226876,
         "mean_recorded_intervals_seconds_per_image": 0.3180485718469653,
+        "mean_recorded_intervals_ms_per_ROI": 220.18747281712982,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5126,6 +5128,7 @@
         "current_recorded_seconds": 90.33502492308617,
         "all_recorded_intervals_seconds": 90.33502492308617,
         "mean_recorded_intervals_seconds_per_image": 1.003722499145402,
+        "mean_recorded_intervals_ms_per_ROI": 694.8848071006628,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5139,6 +5142,7 @@
         "current_recorded_seconds": 29.481969928999607,
         "all_recorded_intervals_seconds": 29.481969928999607,
         "mean_recorded_intervals_seconds_per_image": 0.3275774436555512,
+        "mean_recorded_intervals_ms_per_ROI": 226.78438406922774,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5152,6 +5156,7 @@
         "current_recorded_seconds": 389.28720215715,
         "all_recorded_intervals_seconds": 389.28720215715,
         "mean_recorded_intervals_seconds_per_image": 4.325413357301667,
+        "mean_recorded_intervals_ms_per_ROI": 2994.5169396703845,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5165,6 +5170,7 @@
         "current_recorded_seconds": 63.77904410286009,
         "all_recorded_intervals_seconds": 63.77904410286009,
         "mean_recorded_intervals_seconds_per_image": 0.7086560455873343,
+        "mean_recorded_intervals_ms_per_ROI": 490.6080315604622,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5178,6 +5184,7 @@
         "current_recorded_seconds": 162.16455944807967,
         "all_recorded_intervals_seconds": 180.01171644807968,
         "mean_recorded_intervals_seconds_per_image": 2.000130182756441,
+        "mean_recorded_intervals_ms_per_ROI": 1384.7055111390744,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5191,6 +5198,7 @@
         "current_recorded_seconds": 336.04376018204493,
         "all_recorded_intervals_seconds": 374.58476118204493,
         "mean_recorded_intervals_seconds_per_image": 4.1620529020227215,
+        "mean_recorded_intervals_ms_per_ROI": 2881.421239861884,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       },
@@ -5204,6 +5212,7 @@
         "current_recorded_seconds": 476.46184351830743,
         "all_recorded_intervals_seconds": 532.4862095183074,
         "mean_recorded_intervals_seconds_per_image": 5.916513439092305,
+        "mean_recorded_intervals_ms_per_ROI": 4096.047765525442,
         "timer_groups": "A monotonic adapter + B continuation UTC interval + C original forward UTC interval",
         "homogeneous_adapter_latency": false
       }
@@ -5215,7 +5224,7 @@
       "CCTV_Human_Parsing_Benchmark/outputs/sapiens-roi-remeasurement-20261101T025855Z/Sapiens2_0.8b/ATTEMPTS.jsonl": "7d79230d27518b5281bfb748ba36cc63a2bf829b66f369fca4485b2860b817b5",
       "CCTV_Human_Parsing_Benchmark/outputs/sapiens-roi-remeasurement-20261101T025855Z/Sapiens2_1b/ATTEMPTS.jsonl": "742d1d83f4b3ef50df4fe812e9ae6757256db4421eda10a35e04bfbc1b9b9d42"
     },
-    "source_script_sha256": "7ceb4cd97beac859662751f8f34e1c5c12f0f097b66ace6cb014c9a7a4aa8edd",
+    "source_script_sha256": "d419daeac64f509183711d914d29012dd3181dc2b2a3b9f68eaffbc303f928d3",
     "new_model_calls": 0,
     "original_forward_scope": "FORWARD_START to FORWARD_END; preprocessing/map-back outside",
     "original_adapter_fields_retained": true,

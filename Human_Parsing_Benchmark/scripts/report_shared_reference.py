@@ -668,6 +668,7 @@ def recover_saved_timers():
             original_forward_mean_ms=old_seconds*1000/len(original) if original else None,
             current_recorded_seconds=t['per_image_summary']['recorded_interval_sum_seconds'],
             all_recorded_intervals_seconds=total,mean_recorded_intervals_seconds_per_image=total/90,
+            mean_recorded_intervals_ms_per_ROI=total*1000/130,
             timer_groups='A monotonic adapter + B continuation UTC interval + C original forward UTC interval',
             homogeneous_adapter_latency=False)
     public['complete_timing_accounting']=dict(status='ALL_ACCEPTED_ROIS_HAVE_A_RECORDED_INTERVAL',
@@ -685,11 +686,16 @@ def recover_saved_timers():
             row['recorded_interval_accounting_mean_s_per_image']=t['mean_recorded_intervals_seconds_per_image']
             row['recorded_interval_accounting_total_s']=t['all_recorded_intervals_seconds']
             row['recorded_interval_scope']=t['timer_groups']
+            row['recorded_interval_mean_ms_per_ROI']=t['mean_recorded_intervals_ms_per_ROI']
+            row['recorded_interval_coverage_ROIs']=130
         else:
             row['recorded_interval_coverage_images']=5000
             row['recorded_interval_accounting_mean_s_per_image']=float(row['timing_mean_ms_per_image'])/1000
             row['recorded_interval_accounting_total_s']=row['timing_total_seconds']
             row['recorded_interval_scope']='A synchronized adapter_total'
+            roi=public['reporting_supplement']['CIHP_timing'][row['model_id']]['ROI_population']
+            row['recorded_interval_mean_ms_per_ROI']=float(row['timing_total_seconds'])*1000/roi
+            row['recorded_interval_coverage_ROIs']=roi
     with csv_path.open('w',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n')
         writer.writeheader();writer.writerows(rows)
