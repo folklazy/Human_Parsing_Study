@@ -313,3 +313,8 @@ User could not find the speed table. The prior numeric table is present under th
 ## 2026-11-09T17:27:38.250271+07:00 — individual report current-view update
 
 User requested that both named CIHP/CCTV reports include the same new summaries. Previously they contained a historical-view notice and link to the shared report. Added a clearly labelled current section with nine full-precision-derived target rows, mIoU3, equal Macro4-local, nine timing rows, coverage/null policies, domain/matching/aggregation definitions and canonical references. Preserved the previous report body under an explicit historical heading. Verified all generated values and links against the accepted result index/CSV and existing timing aggregates. New model calls zero. Next action publish these updated report entry points.
+
+
+## 2026-11-09T17:31:40.871508+07:00 — clarify Sapiens timing nulls
+
+User asked why Sapiens timing appeared missing. Rechecked the three original ROI-review ATTEMPTS ledgers and the current runtime aggregates. Each size retains 15 paired ROI FORWARD events. The original source places preprocessing/map-back outside that event interval. Current adapter durations cover 115 ROI across 84 fully timed images, with reported means 1.931/4.001/5.672 s per image. Added an explicit explanation beside the current CCTV timing table distinguishing measured-image means and full-90-image nulls. Inputs retained, no inference. Next action use the labelled columns and timer scopes.
