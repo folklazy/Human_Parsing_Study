@@ -1,5 +1,7 @@
 # Shared C3-part + Face-local ครบ 18/18 งาน
 
+รายงานราย dataset เพิ่มตารางคะแนนสี่คลาสและเวลาต่อภาพ/เวลารวมไว้ด้านบนแล้วเมื่อ 2026-11-09T17:27:38.250271+07:00 ดู[รายงาน CIHP](reports/CIHP_COMMON_NINE_RESULTS_TH.md)
+
 ตรวจปิดรอบ: 8 พฤศจิกายน 2026 เวลา 16:01:46 น.ไทย (Asia/Bangkok)
 
 **COMPLETE / STRICT_COMPLETE_ALL_18** — CIHP 9 โมเดล × 5,000 ภาพ และ CCTV 9 โมเดล × 90 ภาพ รวม 45,810 รายการภาพ–โมเดล ไม่มี missing/duplicate/failed ใช้ saved controlled YOLO ROI packets และ checkpoint bindings เดิม ไม่มี model/YOLO inference ใหม่

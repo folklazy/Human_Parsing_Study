@@ -1,3 +1,77 @@
+<!-- SHARED_DATASET_CURRENT_START -->
+
+# ผลล่าสุดของ CCTV — คะแนนสี่คลาสและเวลาประมวลผล
+
+อัปเดต 2026-11-09T17:27:38.250271+07:00 (Asia/Bangkok) ประเมินครบ 9 โมเดล ตัวละ 90 ภาพตาม STRICT_COMPLETE ใช้ผล shared-reference run `shared-c3-face-local-20261108T083533Z`
+
+## คะแนนรายคลาสและค่าเฉลี่ย
+
+**Macro4-local = (Hair + Face-local + Upper + Lower) ÷ 4** โดยค่ารายคลาสเป็นค่าเฉลี่ย IoU รายส่วนของ GT แต่ละคน แต่ละ target มีน้ำหนัก 25% ส่วน mIoU3 เฉลี่ย Hair/Upper/Lower เท่ากัน คำนวณค่าเฉลี่ยจากตัวเลขเต็มก่อนปัดเศษ Macro4-local เพิ่มตามคำขอผู้ใช้หลังเห็นผลแล้ว
+
+| โมเดล | Hair % | Face-local % | Upper % | Lower % | mIoU3 % | Macro4-local % | ภาพครบ |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| QANet | 56.788 | 61.813 | 66.083 | 56.905 | 59.925 | 60.397 | 90/90 |
+| M2FP | 44.413 | 46.095 | 53.519 | 46.249 | 48.061 | 47.569 | 90/90 |
+| D2FP | 45.184 | 49.550 | 47.820 | 41.053 | 44.686 | 45.902 | 90/90 |
+| RP-R-CNN | 41.571 | 45.173 | 48.570 | 42.766 | 44.302 | 44.520 | 90/90 |
+| CPI R50 | 38.460 | 46.295 | 37.882 | 36.382 | 37.575 | 39.755 | 90/90 |
+| CPI ConvNeXt-B | 56.275 | 60.603 | 50.917 | 45.959 | 51.050 | 53.438 | 90/90 |
+| Sapiens2 0.4B | 61.497 | 62.957 | 59.366 | 53.103 | 57.989 | 59.231 | 90/90 |
+| Sapiens2 0.8B | 57.699 | 66.148 | 56.881 | 54.731 | 56.437 | 58.865 | 90/90 |
+| Sapiens2 1B | 62.394 | 69.497 | 63.744 | 59.281 | 61.806 | 63.729 | 90/90 |
+
+ค่าเฉลี่ยสี่คลาสสูงสุดคือ **Sapiens2 1B 63.729%**
+
+## วิธีให้คะแนนและตัวหาร
+
+GT มี 127 คน ส่วนที่มีสิทธิ์ประเมินคือ Hair 69, Face 35, Upper 120 และ Lower 102 รายการ แต่ละคลาสเฉลี่ยเฉพาะ GT person-parts ที่มี annotation ของคลาสนั้น
+
+จับคู่คนด้วย mask IoU ตั้งแต่ 0.50 แบบหนึ่งต่อหนึ่ง เลือกจำนวนคู่สูงสุดแล้วเลือกผลรวม IoU สูงสุด ใช้รูปทรง mask ตัดสินกรณีเสมอตาม common matcher ส่วนที่มี GT แต่จับคู่คนไม่ได้มี IoU เป็นศูนย์และยังอยู่ในตัวหาร
+
+Hair/Upper/Lower ใช้พื้นที่ valid ทั้งภาพสำหรับ prediction ของคนที่จับคู่ ส่วน Face-local ใช้กรอบสี่เหลี่ยมครอบ GT Face พอดีทุกโมเดล ภายในกรอบทายเกินเป็น FP ทายขาดเป็น FN และพื้นที่นอกกรอบไม่ประเมิน กรอบนี้ใช้ให้คะแนนหลัง inference โดยคงผลทำนายต้นฉบับไว้
+
+Prediction ของ CIHP ใช้ Face ID 13 และของ Sapiens ใช้ Face_Neck พร้อมรายละเอียดใบหน้าตาม mapping ที่ตรึง Upper/Lower คง garment unions และ OTHER ของ Dress/Apparel ใช้ shared GT-valid/VOID เหมือนกันทุกโมเดล
+
+**IoU = TP/(TP+FP+FN)** โดย TP คือพิกเซลที่ทายถูก FP คือทายเกิน และ FN คือ GT ที่ทายขาด วิธีคำนวณและการจับคู่คนใช้ร่วมกันใน CIHP/CCTV ส่วนขอบเขต annotation ยังอ้างอิง GT ของแต่ละ dataset
+
+## เวลาประมวลผล parsing
+
+เวลาต่อภาพได้จากผลรวมเวลา adapter ของ ROI ทุกคนในภาพ แล้วเฉลี่ยตามภาพที่มีข้อมูลเวลาครบ หน่วย ms/ROI คือมิลลิวินาทีต่อภาพย่อยบุคคล ส่วนวินาที/ภาพคือเวลารวม parsing ของคนในภาพต้นฉบับ ภาพที่ YOLO ให้ศูนย์ ROI มีเวลาเรียก parser เท่ากับศูนย์
+
+| โมเดล | เฉลี่ยต่อภาพที่มีเวลาครบ s | ภาพที่มีเวลาครบ | เฉลี่ยต่อภาพทั้งชุด s | รวมทั้งชุด s | ผลรวมช่วงที่มี log s |
+|---|---:|---:|---:|---:|---:|
+| QANet | 0.110 | 90/90 | 0.110 | 9.922 | 9.922 |
+| M2FP | 0.318 | 90/90 | 0.318 | 28.624 | 28.624 |
+| D2FP | 1.004 | 90/90 | 1.004 | 90.335 | 90.335 |
+| RP-R-CNN | 0.328 | 90/90 | 0.328 | 29.482 | 29.482 |
+| CPI R50 | 4.325 | 90/90 | 4.325 | 389.287 | 389.287 |
+| CPI ConvNeXt-B | 0.709 | 90/90 | 0.709 | 63.779 | 63.779 |
+| Sapiens2 0.4B | 1.931 | 84/90 | null | null | 162.165 |
+| Sapiens2 0.8B | 4.001 | 84/90 | null | null | 336.044 |
+| Sapiens2 1B | 5.672 | 84/90 | null | null | 476.462 |
+
+CCTV ของ Sapiens แต่ละขนาดมี timing ครบ 84/90 ภาพ อีก 6 ภาพ reuse 15 ROI จากผลเดิมที่ใช้ timer อีกขอบเขต ค่าเฉลี่ยภาพที่มีเวลาครบใช้ตัวหาร 84 ส่วนค่าเฉลี่ยและเวลารวมทั้งชุดเป็น null
+
+เวลา A จับรอบ adapter ด้วยนาฬิกาวัดระยะเวลา เวลา B ของ continuation ใช้ event จบลบ event เริ่ม ซึ่งรวมการรอ GPU และการเขียน resource log ผลรวมช่วงที่มี log เก็บ A+B ตาม observation ที่ไม่ซ้ำกัน
+
+GT รอบนี้ใช้ Face 35 ส่วนและ raw positive parts ของ annotation ที่ผู้ใช้ตรวจรับ ค่าชุดนี้จึงใช้ตัวหารและ Face-local domain ตามกติกาปัจจุบัน รายละเอียดของ Face-domain 21 ส่วนในประวัติด้านล่างอ้างอิงการประเมินรอบเดิม
+
+เวลาของ adapter ครอบ preprocessing, model call และ map-back ตาม implementation รวม native file I/O ของ CPI ส่วน YOLO cache/crop, การส่งออก packet, การให้คะแนนและงานสีอยู่ภายนอกช่วงนี้ ทุก call ทำนาย native classes พร้อมกัน ข้อมูลเวลาจึงเป็นเวลารวมของ call
+
+จำนวน ROI ต่อภาพ การใช้ GPU ร่วม และ implementation/ขอบเขต timer มีผลต่อเวลาที่บันทึก รายงานใช้เวลาเป็น diagnostics โดยแสดง coverage ประกอบ
+
+[รายงานรวมพร้อมรายละเอียด stage timing](../../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#เวลาต่อภาพและเวลารวม) · [สูตรและข้อกำหนดร่วม](../../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#นิยามที่ใช้อธิบายร่วมกัน)
+
+[CSV ตัวเลขเต็ม](../../Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_SUMMARY.csv) · [Canonical result index](../../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json)
+
+## การตรวจตัวเลข
+
+ตรวจ 9 แถวคุณภาพและ 9 แถวเวลาในไฟล์นี้กับ canonical aggregate และ CSV ที่ 2026-11-09T17:27:38.250271+07:00 โดยใช้ค่าก่อนปัดเศษ ตรวจสูตรสี่คลาส ตัวหารภาพ timing และ null ของข้อมูลที่ขาด แหล่ง aggregate ใช้ protocol hash `5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357` ข้อมูลตัวเลขนี้เผยแพร่ร่วมกับ source/configuration และ ledger hashes ใน canonical index
+
+<!-- SHARED_DATASET_CURRENT_END -->
+
+## ประวัติผลและคำอธิบายตาม protocol เดิม
+
 > **View clarification (8 November2026):** รายงานนี้เป็นผล/ประวัติของ protocol เดิม เก็บตัวเลขครบ. สำหรับตารางปัจจุบันที่ใช้C3-partและFace-localเหมือนกันในCIHP/CCTV ดู[รายงานร่วมล่าสุด](../../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md);ห้ามนำคะแนนต่างviewมาปะปนหรือเปลี่ยนชื่อแทนกัน.
 
 # ผลประเมิน Human Parsing บนภาพ CCTV: 9 โมเดลและ 4 ส่วนเป้าหมาย

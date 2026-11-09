@@ -308,3 +308,8 @@ Verified 18 equal-four-target means against the independent (3*C3+Face)/4 identi
 ## 2026-11-09T17:24:39.686547+07:00 — make timing visible on entry pages
 
 User could not find the speed table. The prior numeric table is present under the shared report heading เวลาต่อภาพและเวลารวม. Added a visible nine-model seconds-per-image table and direct section link to the public root and both experiment READMEs. Values come from the existing summary CSV and canonical CCTV timing aggregates. CCTV Sapiens means use the 84 timed images, explicitly labelled 84/90. CIHP uses 5,000/5,000. Checked all 18 displayed means against stored full-precision statistics. Reporting and navigation only. Next action use the README timing table or follow its direct report link.
+
+
+## 2026-11-09T17:27:38.250271+07:00 — individual report current-view update
+
+User requested that both named CIHP/CCTV reports include the same new summaries. Previously they contained a historical-view notice and link to the shared report. Added a clearly labelled current section with nine full-precision-derived target rows, mIoU3, equal Macro4-local, nine timing rows, coverage/null policies, domain/matching/aggregation definitions and canonical references. Preserved the previous report body under an explicit historical heading. Verified all generated values and links against the accepted result index/CSV and existing timing aggregates. New model calls zero. Next action publish these updated report entry points.
