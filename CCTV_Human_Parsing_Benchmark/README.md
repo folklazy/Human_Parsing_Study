@@ -1,13 +1,15 @@
 # ผลล่าสุด: สามคลาสหลัก + Face-local (CIHP และ CCTV)
 
-**ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference คะแนนสามคลาสกับ Face แสดงแยกกัน
+**ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference รายงานสามคลาสและ Face แยกกัน พร้อม Macro4-local ที่เฉลี่ยสี่ target เท่ากัน
 
-| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
-|---|---|---|
-| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
-| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+| Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |
+|---|---|---|---|
+| CIHP | Sapiens2 0.4B 73.163% | M2FP 81.423% | **M2FP 75.018%** |
+| CCTV | Sapiens2 1B 61.806% | Sapiens2 1B 69.497% | **Sapiens2 1B 63.729%** |
 
 [รายงานหลักพร้อมนิยาม สูตร ข้อจำกัด และแหล่งที่มา](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [สถานะ](STATUS.md)
+
+อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี 84/90 ภาพ จึงคงค่าเวลาทั้งชุดเป็น null ตามข้อมูลที่มี
 
 ## ประวัติรายงานและสถานะก่อนหน้า (historical views)
 

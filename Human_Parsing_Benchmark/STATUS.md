@@ -4,16 +4,18 @@
 
 **COMPLETE / STRICT_COMPLETE_ALL_18** — CIHP 9 โมเดล × 5,000 ภาพ และ CCTV 9 โมเดล × 90 ภาพ รวม 45,810 รายการภาพ–โมเดล ไม่มี missing/duplicate/failed ใช้ saved controlled YOLO ROI packets และ checkpoint bindings เดิม ไม่มี model/YOLO inference ใหม่
 
-[รายงานหลักและตารางทั้งสอง dataset](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) สามคลาสใช้ค่าเฉลี่ย IoU รายส่วนของ GT แต่ละคน แล้วเฉลี่ย Hair/Upper/Lower เท่ากัน ส่วน Face-local ใช้กรอบ Face GT พอดีและเฉลี่ยราย GT Face แยกกัน ไม่รวมสี่คลาสเป็นคะแนนใหม่ ไม่ใช่ global C3 เดิม และไม่ใช้ Neck-ignore ของ CCTV เดิม
+[รายงานหลักและตารางทั้งสอง dataset](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) สามคลาสใช้ค่าเฉลี่ย IoU รายส่วนของ GT แต่ละคน แล้วเฉลี่ย Hair/Upper/Lower เท่ากัน ส่วน Face-local ใช้กรอบ Face GT พอดีและเฉลี่ยราย GT Face แยกกัน เพิ่ม Macro4-local เป็นค่าเฉลี่ยสี่ target ตามคำขอผู้ใช้ ไม่ใช่ global C3 เดิม และไม่ใช้ Neck-ignore ของ CCTV เดิม
 
-| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
-|---|---|---|
-| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
-| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+| Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |
+|---|---|---|---|
+| CIHP | Sapiens2 0.4B 73.163% | M2FP 81.423% | **M2FP 75.018%** |
+| CCTV | Sapiens2 1B 61.806% | Sapiens2 1B 69.497% | **Sapiens2 1B 63.729%** |
 
 ผ่าน CPU acceptance 13 กรณี, integration กับ saved packets จริง และการทดสอบ resume ตรวจสูตรจากสถิติรายส่วน 526,086 รายการอย่างอิสระ พร้อม exact membership, GT support และ checkpoint/protocol bindings ทั้งหกไฟล์ที่ป้องกันไว้และ canonical METRICS เดิมของ CIHP ทั้งเก้าโมเดลยังมี hash เดิม ไม่อ้างนัยสำคัญทางสถิติหรือใช้เวลาประเมินบน CPU จัดอันดับความเร็ว
 
 Run `shared-c3-face-local-20261108T083533Z`; private STATUS/SQLite/CONFIG/SOURCES/RESULTS อยู่ใน `Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z/` CPU worker จบแล้ว ส่วนหน้าดูความคืบหน้าบน tmux อาจยังเปิดอยู่ ขั้นถัดไปคือใช้รายงานสำหรับพรีเซนต์และพิจารณาตัวเลือกตาม target ไม่มีการเปิด inference หรือขยายการทดลองอัตโนมัติ
+
+อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี 84/90 ภาพ จึงคงค่าเวลาทั้งชุดเป็น null ตามข้อมูลที่มี
 
 ## สถานะก่อนปิดงาน (historical)
 

@@ -16,7 +16,7 @@
   "model_inference_rerun": false,
   "new_model_calls_this_work_unit": 0,
   "current_report": "../Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md",
-  "current_report_sha256": "6e07a44caa134396e0c49dc0fd2224ecff9f0671063f19c4428478052016faa1",
+  "current_report_sha256": "8be928facc1f1c8e376dc10aaabb6607a23be1a67d8401b6b0867968e88a7553",
   "source_of_truth": "../Human_Parsing_Benchmark/reports/SHARED_REFERENCE_RESULT_INDEX.json",
   "protocol": "../Human_Parsing_Benchmark/protocol/SHARED_C3_FACE_LOCAL_V1.json",
   "protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
@@ -1126,5 +1126,9 @@
       "private_verification": "outputs/report-explanation-review-20261103/VERIFICATION.json",
       "prior_report_hash_scope": "Older report_language_review/report_formatting values are historical snapshots, including revisions before the comparability notice. Keep their original hashes; current hash is current_report_sha256 and this entry."
     }
+  },
+  "derived_Macro4_local_leader": {
+    "model_id": "Sapiens2_1b",
+    "score": 0.6372892364411541
   }
 }

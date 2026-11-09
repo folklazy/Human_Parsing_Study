@@ -2,14 +2,16 @@
 
 **Shared C3-part + Face-local ครบ 18/18 งาน** (8 พฤศจิกายน 2026) — CIHP 9 × 5,000 ภาพ และ CCTV 9 × 90 ภาพ ใช้ saved masks ไม่มี inference ใหม่
 
-| Dataset | สามคลาสหลัก: คะแนนสูงสุด | Face-local: คะแนนสูงสุด |
-|---|---|---|
-| CIHP | Sapiens2 0.4B — 73.163% | M2FP — 81.423% |
-| CCTV | Sapiens2 1B — 61.806% | Sapiens2 1B — 69.497% |
+| Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |
+|---|---|---|---|
+| CIHP | Sapiens2 0.4B 73.163% | M2FP 81.423% | **M2FP 75.018%** |
+| CCTV | Sapiens2 1B 61.806% | Sapiens2 1B 69.497% | **Sapiens2 1B 63.729%** |
 
 [รายงานหลัก: ตารางเก้าโมเดลทั้งสอง dataset พร้อมวิธีคำนวณและข้อจำกัด](Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [ตารางเต็มก่อนปัดเศษ](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_SUMMARY.csv) · [TP/FP/FN/P/R/F1 ราย target](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_TARGET_COUNTS.csv)
 
-สามคลาสกับ Face แยกกัน ไม่มีคะแนนรวมสี่คลาสใหม่ คะแนนสูงสุดเป็นหลักฐานสำหรับเลือก configuration ไม่ใช่การรับรองใช้งานจริง รายงานเก่าด้านล่างเป็นคนละ evaluation view และยังเก็บไว้ครบ
+เพิ่ม Macro4-local ซึ่งเฉลี่ย Hair, Face-local, Upper และ Lower เท่ากัน คะแนนสูงสุดเป็นหลักฐานสำหรับเลือก configuration ไม่ใช่การรับรองใช้งานจริง รายงานเก่าด้านล่างเป็นคนละ evaluation view และยังเก็บไว้ครบ
+
+รายงานหลักเพิ่มเวลาต่อภาพและเวลารวมจาก logs พร้อม coverage และขอบเขตของ adapter/native call แล้ว
 
 ## Historical study navigation and results
 

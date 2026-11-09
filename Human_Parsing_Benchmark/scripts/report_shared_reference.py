@@ -155,5 +155,213 @@ def render(root):
     print(json.dumps(dict(status=result['status'],report=str(report.relative_to(W)),datasets=list(result['models']),model_calls=0)),flush=True)
 
 
-if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True);a=p.parse_args();render(a.output.resolve())
+
+def timing_statistics(values):
+    """Summarize measured intervals. Missing observations retain null values."""
+    import math
+    if any(not math.isfinite(value) or value < 0 for value in values):
+        raise ValueError('Invalid saved duration')
+    return dict(n=len(values), total_seconds=math.fsum(values) if values else None,
+                mean_ms=math.fsum(values)*1000/len(values) if values else None)
+
+
+def collect_cihp_timing(models):
+    """Bind committed frame timers to the accepted packet metadata, without masks."""
+    result = {}
+    inputs = {}
+    for model_id, model in models.items():
+        packet_paths = model['packets']
+        roots = sorted({str(Path(path).parents[1]) for path in packet_paths.values()})
+        accepted = {}
+        for relative_root in roots:
+            ledger = W/relative_root/'ATTEMPTS.jsonl'
+            inputs[str(ledger.relative_to(W))] = sha(ledger)
+            with ledger.open() as stream:
+                for line in stream:
+                    event = json.loads(line)
+                    image_id = event.get('image_id')
+                    if event.get('event') != 'FRAME_COMMITTED' or image_id not in packet_paths:
+                        continue
+                    if str(Path(packet_paths[image_id]).parents[1]) != relative_root:
+                        continue
+                    if image_id in accepted:
+                        raise ValueError('Duplicate accepted frame timing')
+                    metadata = read(W/packet_paths[image_id]/'packet.json')
+                    if (metadata['packet_sha256'] != event['packet_sha256'] or
+                            metadata['model_id'] != model_id or
+                            metadata['checkpoint_sha256'] != model['checkpoint_sha256']):
+                        raise ValueError('Timer does not bind to accepted packet')
+                    accepted[image_id] = event
+        if set(accepted) != set(packet_paths):
+            raise ValueError('Accepted population lacks frame ledger records')
+        adapter, image_times = [], []
+        stages = {}
+        roi_count = 0
+        for event in accepted.values():
+            count = event['ROI_count']
+            roi_count += count
+            observed = []
+            identities = set()
+            for roi in event['ROI_timings']:
+                identity = roi['opportunity_id']
+                if identity in identities:
+                    raise ValueError('Duplicate ROI timing')
+                identities.add(identity)
+                values = {}
+                for span in roi.get('measurements', {}).get('spans', []):
+                    if span['status'] == 'COMPLETE':
+                        values.setdefault(span['stage'], []).append(span['seconds'])
+                if 'adapter_total' in values:
+                    if len(values['adapter_total']) != 1:
+                        raise ValueError('Ambiguous adapter interval')
+                    observed.extend(values['adapter_total'])
+                for stage, intervals in values.items():
+                    stages.setdefault(stage, []).append(sum(intervals))
+            if len(observed) > count:
+                raise ValueError('More timers than accepted ROI opportunities')
+            adapter.extend(observed)
+            if len(observed) == count:
+                image_times.append(sum(observed))
+        full = len(image_times) == len(packet_paths)
+        result[model_id] = dict(expected_images=len(packet_paths), ROI_population=roi_count,
+            timed_ROIs=len(adapter), adapter=timing_statistics(adapter),
+            images_with_complete_timing=len(image_times), complete_images=timing_statistics(image_times),
+            full_population_mean_ms_per_image=timing_statistics(image_times)['mean_ms'] if full else None,
+            full_population_parsing_work_seconds=timing_statistics(image_times)['total_seconds'] if full else None,
+            recorded_interval_sum_seconds=timing_statistics(adapter)['total_seconds'],
+            stages={name: timing_statistics(values) for name, values in stages.items()},
+            accepted_segments=roots, speed_ranking_eligible=False)
+    return result, inputs
+
+
+def supplement(root):
+    """Add user-requested equal four-target summary and existing timing evidence."""
+    import csv
+    index_path = H/'reports/SHARED_REFERENCE_RESULT_INDEX.json'
+    public = read(index_path)
+    if public['status'] != 'COMPLETE' or public['result_sha256'] != sha(root/'RESULTS.json'):
+        raise ValueError('Complete accepted score binding required')
+    sources = read(root/'SOURCES.json')
+    if sha(root/'SOURCES.json') != public['sources_manifest_sha256']:
+        raise ValueError('Source manifest drift')
+    cihp, timer_inputs = collect_cihp_timing(sources['CIHP']['models'])
+    state_path = C/'STUDY_STATE.json'
+    state = read(state_path)
+    cctv = {model['model_id']: model for model in state['historical_four_target_state']['runtime_reporting']['models']}
+    order = list(public['models']['CIHP'])
+    names = dict(zip(order, LABELS))
+    now = datetime.now(timezone.utc).astimezone(ZoneInfo('Asia/Bangkok')).isoformat()
+    lines = ['## ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้',
+        f'เพิ่มตามคำขอผู้ใช้เมื่อ {now} โดยใช้คะแนนและ timing ที่บันทึกแล้ว',
+        '**Macro4-local = (Hair mean-part IoU + Face-local IoU + Upper mean-part IoU + Lower mean-part IoU) ÷ 4** แต่ละคลาสมีน้ำหนัก 25% คำนวณจากค่าก่อนปัดเศษ โดย Face ใช้พื้นที่ภายในกรอบ GT Face ส่วนอีกสามคลาสใช้พื้นที่ valid ของงานรายส่วน ผลรวมนี้สรุปคุณภาพสี่ target ตามขอบเขตดังกล่าว ผู้ใช้ขอเพิ่มค่าเฉลี่ยหลังเห็นผลแล้ว จึงบันทึกเป็น derived summary แยกจาก primary mIoU3 ที่ตรึงไว้',
+        '| Dataset | โมเดล | Hair % | Face-local % | Upper % | Lower % | Macro4-local % |',
+        '|---|---|---:|---:|---:|---:|---:|']
+    leaders = {}
+    summary_rows = []
+    for dataset in ['CIHP', 'CCTV']:
+        for model_id in order:
+            model = public['models'][dataset][model_id]
+            values = [model['targets'][target]['mean_part_IoU'] for target in ['Hair','Face_local','Upper','Lower']]
+            score = sum(values)/4 if model['strict_complete'] and all(value is not None for value in values) else None
+            model['derived_Macro4_local'] = score
+            lines.append(f'| {dataset} | {names[model_id]} | '+ ' | '.join(pct(value) for value in values)+f' | {pct(score)} |')
+            if dataset == 'CIHP':
+                timing = cihp[model_id]
+            else:
+                previous = cctv[model_id]
+                timing = dict(previous['per_image_summary'], ROI_population=previous['ROI_population'],
+                    timed_ROIs=previous['time_accounting']['timed_ROIs'],
+                    worker_elapsed_seconds=previous['time_accounting']['worker_elapsed_sum_seconds'])
+            summary_rows.append(dict(dataset=dataset, model_id=model_id, completed=model['completed'],
+                expected=model['expected'], strict_complete=model['strict_complete'],
+                Hair=values[0], Upper=values[2], Lower=values[3],
+                mIoU3_part_mean=model['primary_mIoU3_part_mean'], Face_local_IoU=values[1],
+                Macro4_local=score, timing_complete_images=timing['images_with_complete_timing'],
+                timing_mean_ms_per_image=timing['full_population_mean_ms_per_image'],
+                timing_total_seconds=timing['full_population_parsing_work_seconds']))
+        winner = max(order, key=lambda mid: public['models'][dataset][mid]['derived_Macro4_local'])
+        leaders[dataset] = dict(model_id=winner, score=public['models'][dataset][winner]['derived_Macro4_local'])
+    lines += ['', 'ค่าเฉลี่ยสี่คลาสสูงสุดใน CIHP คือ '+names[leaders['CIHP']['model_id']]+' '+pct(leaders['CIHP']['score'])+'% และใน CCTV คือ '+names[leaders['CCTV']['model_id']]+' '+pct(leaders['CCTV']['score'])+'%',
+        '', '### เวลาต่อภาพและเวลารวม', '',
+        'ROI คือภาพย่อยของบุคคลหนึ่งรายการ เวลา parsing ต่อภาพได้จากผลรวม adapter ของทุก ROI ในภาพนั้น ค่าเฉลี่ยต่อภาพทั้งชุดนำผลรวมนี้หารจำนวนภาพ รวมภาพที่ YOLO ให้ศูนย์ ROI ซึ่งมีเวลาเรียก parser เท่ากับศูนย์ ส่วนภาพที่มี ROI แต่ขาด timer เก็บเป็น null แต่ละ call ทำนาย native classes พร้อมกัน แล้วจึงแปลงเป็นสี่ target จึงมีเวลารวมต่อ ROI', '',
+        '| Dataset | โมเดล | ภาพที่มีเวลาครบ | ROI ที่มีเวลา | เฉลี่ยต่อภาพทั้งชุด ms | รวม parsing ทั้งชุด s | รวมช่วงที่มี log s |',
+        '|---|---|---:|---:|---:|---:|---:|']
+    def number(value):
+        return f'{value:.3f}' if value is not None else 'null'
+    for dataset in ['CIHP', 'CCTV']:
+        for model_id in order:
+            if dataset == 'CIHP':
+                t = cihp[model_id]
+            else:
+                t = dict(cctv[model_id]['per_image_summary'],
+                    ROI_population=cctv[model_id]['ROI_population'],
+                    timed_ROIs=cctv[model_id]['time_accounting']['timed_ROIs'])
+            lines.append(f'| {dataset} | {names[model_id]} | {t["images_with_complete_timing"]}/{t["expected_images"]} | {t["timed_ROIs"]}/{t["ROI_population"]} | '+
+                ' | '.join(number(t[k]) for k in ['full_population_mean_ms_per_image','full_population_parsing_work_seconds','recorded_interval_sum_seconds'])+' |')
+    lines += ['', 'CIHP ใช้ synchronized adapter_total จาก FRAME_COMMITTED ของ accepted segments จับเวลาด้วยนาฬิกาวัดระยะเวลาและรอ CUDA ที่ขอบ span ตรวจเวลาได้ครบ 5,000 ภาพและ 24,062 ROI ต่อโมเดล โดยใช้เฉพาะ frame record ที่ผูกกับ accepted packet ของภาพนั้น ผลรวมนี้นับช่วง adapter ที่สำเร็จของแต่ละ ROI หนึ่งครั้ง', '',
+        'CCTV ใช้สถิติ runtime ที่ตรวจรับเดิม เวลา A จับรอบ adapter ด้วยนาฬิกาวัดระยะเวลา เวลา B ใช้ event จบลบ event เริ่มของ continuation ซึ่งรวมการรอ GPU และการเขียน resource log ด้วย ผลรวม A+B ใช้เป็นบัญชีช่วงเวลาที่บันทึกได้ Sapiens นำผลเดิม 15 ROI จาก 6 ภาพกลับมาใช้ จึงมี timing ครบ 84/90 ภาพ เวลา native forward จากรอบเก่ามีขอบเขตอีกแบบและเก็บแยกไว้', '',
+        'ภายใน adapter รวม preprocessing การส่งข้อมูล การคำนวณโมเดล และ map-back ตาม implementation ของแต่ละตัว CPI รวม native file I/O ด้วย ช่วงนี้อยู่หลัง YOLO cache/crop ที่ใช้ร่วมกัน ขั้นนำ mask ไปวางบนภาพ กำหนด ownership ส่งออก packet ให้คะแนน และสกัดสีอยู่ภายนอก adapter การใช้ GPU ร่วมและหลาย segments มีผลต่อเวลาที่สังเกต จึงรายงานเป็น timing diagnostics', '',
+        '### รายละเอียดช่วงเวลาที่ CIHP บันทึกได้', '',
+        'แต่ละช่องแสดงค่าเฉลี่ย ms ต่อ ROI ที่มี timer ของช่วงนั้น พร้อมจำนวน ROI ในวงเล็บ ช่วงย่อยอยู่ภายใน adapter_total และบางช่วงซ้อนกัน ตารางคงช่วง native call แบบ inclusive ตามที่ instrument ไว้', '',
+        '| โมเดล | เตรียม input | native call หรือ backbone+head | map-back | adapter รวม |',
+        '|---|---:|---:|---:|---:|']
+    for model_id in order:
+        stages = cihp[model_id]['stages']
+        def cell(stage):
+            row = stages.get(stage)
+            return f'{row["mean_ms"]:.3f} ({row["n"]:,})' if row else 'null'
+        native = cell('native_model_call') if 'native_model_call' in stages else cell('native_model_call_inclusive')
+        if 'parser_backbone' in stages and 'parser_head' in stages:
+            native = cell('parser_backbone')+' + '+cell('parser_head')
+        lines.append(f'| {names[model_id]} | {cell("parser_preprocess")} | {native} | {cell("parser_mapback")} | {cell("adapter_total")} |')
+    lines += ['', '[ขอบเขตเวลาและบัญชี worker ของ CCTV](../../CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) · [การจับเวลา CIHP](../src/controlled_ci_hp/measurement.py) · [จุดบันทึกต่อภาพ](../scripts/controlled_cihp.py)', '',
+        'ไฟล์ aggregate index เก็บ hash ของ ledgers และผลสรุปแยกตาม stage ส่วน summary CSV เพิ่ม Macro4-local และเวลาต่อภาพพร้อม coverage ให้ตรวจค่าก่อนปัดเศษได้']
+    formatted = []
+    previous_table = False
+    for line in lines:
+        is_table = line.startswith('|')
+        if formatted and line and formatted[-1] and not (is_table and previous_table):
+            formatted.append('')
+        formatted.append(line)
+        previous_table = is_table
+    block = '\n'.join(formatted)
+    report = H/'reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md'
+    text = report.read_text()
+    marker_start = '<!-- FOUR_TARGET_RUNTIME_START -->'
+    marker_end = '<!-- FOUR_TARGET_RUNTIME_END -->'
+    if marker_start in text:
+        start = text.index(marker_start)
+        end = text.index(marker_end, start)+len(marker_end)
+        text = text[:start]+text[end:]
+    text = text.replace('ค่าเฉลี่ยสามคลาสและ Face-local แสดงแยกกัน ไม่มีคะแนนถ่วงน้ำหนักรวมสี่คลาสใหม่.',
+        'ตารางนี้แสดงค่าเฉลี่ยสามคลาสและ Face-local แยกกัน ส่วน Macro4-local ที่ผู้ใช้ขอเพิ่มอยู่ในตารางถัดไป')
+    text = text.replace('รายงานคะแนนสูงสุดราย target ค่าเฉลี่ยสามคลาส และ Face แยกกัน ไม่มีคะแนนรวมสี่คลาสใหม่ ตัวเลือกที่แนะนำอ้างอิง reference ชุดนี้ ยังไม่ใช่การรับรองสำหรับใช้งานจริง.',
+        'อ่านคะแนนราย target และค่าเฉลี่ยสามคลาสประกอบ Macro4-local ที่เพิ่มตามคำขอผู้ใช้ เพื่อพิจารณา configuration ตามเป้าหมายงาน')
+    text = text.replace(END, marker_start+'\n\n'+block+'\n\n'+marker_end+'\n\n'+END)
+    report.write_text(text)
+    csv_path = H/'metrics/SHARED_REFERENCE_SUMMARY.csv'
+    with csv_path.open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(summary_rows[0]), lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(summary_rows)
+    public['reporting_supplement'] = dict(created_thai=now,
+        Macro4_local_definition='Equal mean of Hair, Face-local, Upper, Lower mean-part IoUs',
+        user_requested_post_results=True, leaders=leaders,
+        CIHP_timing=cihp, CCTV_timing=cctv, timing_input_hashes=timer_inputs,
+        CCTV_runtime_snapshot_sha256=hashlib.sha256(json.dumps(state['historical_four_target_state']['runtime_reporting'], sort_keys=True).encode()).hexdigest(),
+        report_source_sha256=sha(__file__),
+        score_statistics_sha256=sha(root/'RESULTS.json'), new_model_calls=0)
+    index_path.write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(dict(status='REPORT_SUPPLEMENT_COMPLETE', leaders=leaders,
+        CIHP_timing_coverage={mid:[t['images_with_complete_timing'],t['timed_ROIs']] for mid,t in cihp.items()})))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--supplement', action='store_true', help='Add equal four-target mean and saved timing')
+    args = parser.parse_args()
+    if args.supplement:
+        supplement(args.output.resolve())
+    else:
+        render(args.output.resolve())
