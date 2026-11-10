@@ -1,0 +1,27 @@
+{
+  "run_id": "cihp-controlled-continuation-20261103T021021Z",
+  "parent_run": "cihp-controlled-roi-20261102T120403Z",
+  "launched_utc": "2026-11-03T02:11:17.223506+00:00",
+  "tmux_session": "cihp_cont_20261103T021021Z",
+  "command": [
+    "/home/skyaidev/folk/Human-Body-Extraction/.venvs/sapiens2-pilot/bin/python",
+    "-u",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py",
+    "controller",
+    "--config",
+    "/home/skyaidev/folk/Human-Body-Extraction/Human_Parsing_Benchmark/configs/controlled_cihp_continuation.json"
+  ],
+  "launch_commit": "66c6a5b05b3c926deb3cb276cb75e9eb8cf91ca1",
+  "config_sha256": "2164912a6f94679daf0e074d6342d4bcbff1d1ca2720b1f4b8d3dede9b6807f7",
+  "controller_log": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/controller.log",
+  "reused_models": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP"
+  ],
+  "RPR_reused_frames": 22,
+  "RPR_reused_ROIs": 149,
+  "RPR_pending_ROIs": 23913,
+  "controller_pid": 2760271,
+  "first_worker_pid": 2760310
+}

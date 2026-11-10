@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "parent_run": "cihp-sapiens1b-finish-20261106T101324Z",
+  "completed_models_reused": [],
+  "accepted_frames": 4268,
+  "accepted_ROIs": 20356,
+  "partial_frame": "0036922",
+  "partial_frame_accepted_ROIs": 4,
+  "missing_ROIs": 3706,
+  "failure_preserved": true,
+  "model_inference_calls": 0,
+  "source_revision": "OPERATOR_SEQUENTIAL_PENDING_ONLY_1"
+}

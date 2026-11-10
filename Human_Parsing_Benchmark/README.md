@@ -1,3 +1,72 @@
+# ผลล่าสุด: สามคลาสหลัก + Face-local (CIHP และ CCTV)
+
+อัปเดตบัญชีเวลา 2026-11-09T17:51:26.842995+07:00 ตรวจคืน original forward timers ของ CCTV Sapiens แล้วครบ 90 ภาพ/130 ROI ต่อขนาด ตารางแสดงกลุ่ม A/B/C และรายละเอียดช่วงที่วัดได้
+
+อัปเดต 2026-11-09T17:40:23.483262+07:00 รายงานปัจจุบันมีหัวข้อเหมือนกันทั้ง CIHP/CCTV ครบคะแนน 4 targets, mIoU3/Macro4-local, binary confusion, Precision/Recall/F1, ส่วนที่พลาด, person matching, timing และ source bindings ดู[รายงานพร้อมภาพ matrix](reports/CIHP_COMMON_NINE_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
+**ครบทั้งเก้า checkpoints ในสอง dataset** — CIHP 5,000 และ CCTV 90 ภาพต่อโมเดล ใช้ saved predictions ไม่มี inference ใหม่ ทั้งสองชุดใช้กติกาจับคู่คน สูตร วิธีเฉลี่ย และการให้คะแนนในกรอบ Face GT เดียวกัน แต่ GT ยังเป็นคนละ reference รายงานสามคลาสและ Face แยกกัน พร้อม Macro4-local ที่เฉลี่ยสี่ target เท่ากัน
+
+| Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |
+|---|---|---|---|
+| CIHP | Sapiens2 0.4B 73.163% | M2FP 81.423% | **M2FP 75.018%** |
+| CCTV | Sapiens2 1B 61.806% | Sapiens2 1B 69.497% | **Sapiens2 1B 63.729%** |
+
+[รายงานหลักพร้อมนิยาม สูตร ข้อจำกัด และแหล่งที่มา](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [สถานะ](STATUS.md)
+
+อัปเดต 2026-11-09T17:19:52.672427+07:00 เพิ่มค่าเฉลี่ยสี่คลาสและตารางเวลาต่อภาพ/เวลารวมจาก logs ใน[รายงานเดิม](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#ค่าเฉลี่ยสี่คลาสและเวลาจากการรันที่บันทึกไว้) CIHP มี timing ครบ 5,000 ภาพต่อโมเดล ส่วน CCTV Sapiens มี adapter timers 84/90 ภาพ และเพิ่มบัญชีเวลา A+C ที่ตรวจผูกกับ logs เดิมครบ 90/90 ภาพแล้ว
+
+<!-- SPEED_OVERVIEW_START -->
+
+## เวลาประมวลผล parsing ต่อภาพ
+
+**ต่อ ROI** คือเวลาต่อภาพย่อยบุคคลที่ YOLO ตรวจพบหนึ่งรายการ คำนวณผลรวมช่วงเวลาที่บันทึก ÷ จำนวน ROI แล้วคูณ 1,000 เพื่อแสดงเป็น ms ส่วน **ต่อภาพ** นำผลรวมช่วงเวลาเดียวกัน ÷ จำนวนภาพต้นฉบับ แสดงเป็นวินาที CIHP ใช้ตัวหาร 24,062 ROI / 5,000 ภาพ และ CCTV ใช้ 130 ROI / 90 ภาพต่อโมเดล
+
+ลิงก์ที่มี commit `2863d64` เปิด snapshot เดิม ซึ่ง CCTV Sapiens เฉลี่ยเฉพาะ 84 ภาพที่มี adapter timer ได้ 1.931/4.001/5.672 s ต่อภาพ ส่วนตารางปัจจุบันรวมช่วง forward เดิมอีก 15 ROI แล้วหาร 90 ภาพ ได้ 2.000/4.162/5.917 s ต่อภาพ ตัวเลขเปลี่ยนจากการรวมช่วงเวลาและตัวหารที่ต่างกัน ทั้งสองชุดยังมีแหล่งอ้างอิงเดิมอยู่ใน canonical index
+
+| โมเดล | CIHP ms/ROI | CIHP s/ภาพ | CCTV ms/ROI | CCTV s/ภาพ |
+|---|---:|---:|---:|---:|
+| QANet | 73.198 | 0.352 | 76.325 | 0.110 |
+| M2FP | 215.623 | 1.038 | 220.187 | 0.318 |
+| D2FP | 637.258 | 3.067 | 694.885 | 1.004 |
+| RP-R-CNN | 227.574 | 1.095 | 226.784 | 0.328 |
+| CPI R50 | 2115.034 | 10.178 | 2994.517 | 4.325 |
+| CPI ConvNeXt-B | 617.921 | 2.974 | 490.608 | 0.709 |
+| Sapiens2 0.4B | 1400.994 | 6.742 | 1384.706 | 2.000 |
+| Sapiens2 0.8B | 2893.889 | 13.927 | 2881.421 | 4.162 |
+| Sapiens2 1B | 4150.924 | 19.976 | 4096.048 | 5.917 |
+
+ตัวอย่าง QANet บน CIHP ใช้เวลา parsing รวมทุกคนในภาพเฉลี่ย 0.352 วินาที ส่วน Sapiens2 1B เฉลี่ย 19.976 วินาทีต่อภาพ จำนวน ROI ต่อภาพมีผลต่อเวลานี้
+
+CCTV ของ Sapiens รวม 115 adapter timers กับ 15 original forward intervals ครบ 90 ภาพแล้ว โดย preprocessing/map-back ของ 15 ROI เดิมอยู่นอกช่วงนั้น ตารางนี้เป็นบัญชีเวลาตามขอบเขต A+C
+
+ขอบเขต adapter ครอบ preprocessing, model call และ map-back ตาม implementation รวม native file I/O ของ CPI ส่วน YOLO, การส่งออก packet และการให้คะแนนอยู่ภายนอกช่วงนี้ ขอบเขต timer ของ CCTV continuation รวมงานรอ GPU และบันทึกทรัพยากรด้วย รายละเอียดและเวลารวมอยู่ในตารางเวลาของรายงานหลัก
+
+[เปิดตารางเวลารวมและรายละเอียดการจับเวลา](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#เวลาต่อภาพและเวลารวม)
+
+<!-- SPEED_OVERVIEW_END -->
+
+## ประวัติรายงานและสถานะก่อนหน้า (historical views)
+
+> **Current controlled CIHP: QUALITY_COMPLETE 9/9** (verified 2026-11-08T01:22:12.700583+07:00). Each checkpoint has exact 5,000 accepted IDs and non-null canonical primary metrics. Latest sequential queue has stopped; no inference worker remains. Controlled-results consolidation and live/clean speed measurement remain separate next steps. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+
+The older notices below are historical snapshots; use the current report above for this controlled run.
+
+> **Current controlled CIHP (2026-11-06T17:56:51.856783+07:00):** Sapiens was operator-paused to finish CPI readiness. Sequential1B→CPIConvNeXt queue launched17:58:41Thai in tmux `cihp_seq_20261106T105503Z`;1BVALIDATION_RUNNING(firstnewpacketPASS,snapshot4269/5000at18:03:31Thai),CPIqueued; accepted1B4268/CPI4335frames, pending732/665. CPI diagnostic passed; R50complete5000 not rerun. No parallelGPUjobs. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
+
+> **Current CIHP controlled queue (2026-11-06T17:24:11.176769+07:00):** Sapiens1B resumed and new packet verified. Snapshot4,223/5,000;reused4,222frames/20,101ROIs,failed0invalid0. User removed only1B's wall-time cap; other guards stay. `tmux attach -t cihp_1b_finish` shows the live viewer. [STATUS](STATUS.md) / [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md).
+
+> **Current CIHP controlled queue (2026-11-06T17:05:51.585401+07:00):** Queue stopped. Sapiens2 1B hit the24h wall-time guard at4,222/5,000;778frames remain and primary=null. Seven systems are complete;ConvNeXt remains held at4,335. No GPU worker is running. Continuation needs packet reconciliation and an explicit time-budget amendment; the remaining tmux viewer is not a worker. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md).
+
+> **Historical snapshot (2026-11-05T15:33:58+07:00):** Seven systems complete, including recovered Sapiens2 0.8B; Sapiens2 1B running in tmux `cihp_resume_20261105T044738Z`. ConvNeXt remains held incomplete. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS and progress command](STATUS.md).
+
+> **Current controlled CIHP queue (2026-11-04T09:38:00+07:00):** Five systems complete; CPI ConvNeXt-B stopped on CUDA OOM at 4,335/5,000 and remains incomplete; Sapiens2 0.4B is running in the existing tmux queue. [Report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py progress` from the workspace root for live counts.
+
+> **Current controlled CIHP continuation:** QANet/M2FP/D2FP complete; RP-R-CNN empty-native decoder repaired and fresh segment running. [Current report](reports/CIHP_CONTROLLED_ROI_RUN_TH.md) / [STATUS](STATUS.md). Use `.venvs/sapiens2-pilot/bin/python Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py progress` from workspace root for the combined parent/continuation state.
+
+> **Controlled CIHP implementation — 2026-11-02T19:05:31.621985+07:00** CPU acceptance13casesผ่านสองenvironments; frozenqualitymanifest5000frames/24,062ROIs×9พร้อม. GPU TRAINgateยังpendingก่อนVAL. [รายงานรอบใหม่](reports/CIHP_CONTROLLED_ROI_RUN_TH.md). Live/clean speedphaseยังpendingแยกจากqualityqueue
+
+> **Comparability review — 2026-11-02T18:03:20.041685+07:00:** ตรวจ CIHP กับ CCTV90 และคำนวณ aggregation sensitivity แล้ว: input route, ownership, Face domain และหน่วยเฉลี่ยต่างกัน จึงไม่ใช่การวัดเงื่อนไขเดียวกันข้าม dataset. [รายงานตรวจละเอียด](reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · audit 9 systems / 36 targets PASS; ผลเดิมคงเดิม. Controlled CIHP ROI ยังไม่รันและยังไม่ผ่าน readiness.
+
 > **Current CCTV design:** [controlled person-ROI and Face/Neck proposal](../CCTV_Human_Parsing_Benchmark/CONTROLLED_ROI_PROTOCOL_TH.md), PROPOSED_NOT_FROZEN. Derived GT/scorer/route readiness precede any new batch; CIHP frozen results are unchanged.
 
 > **CCTV status: GT_OWNER_REVIEW_REQUIRED.** [Sapiens measurement review](../CCTV_Human_Parsing_Benchmark/reports/SAPIENS2_MEASUREMENT_REVIEW_TH.md) confirms source-owner conflicts and reports bounded fresh0.4/0.8/1B ROI diagnostics. Nine-system CCTV selection is on hold; CIHP results below remain frozen.

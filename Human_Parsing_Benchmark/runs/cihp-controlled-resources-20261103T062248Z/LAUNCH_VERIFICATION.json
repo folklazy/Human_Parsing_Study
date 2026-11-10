@@ -1,0 +1,53 @@
+{
+  "status": "RESOURCE_CONTINUATION_RUNNING_FIRST_NEW_PACKET_VERIFIED",
+  "run_id": "cihp-controlled-resources-20261103T062248Z",
+  "checked_utc": "2026-11-03T06:26:47.191782+00:00",
+  "controller_pid": 3034452,
+  "worker_pid": 3034473,
+  "model_id": "CPI_R50_CIHP",
+  "observed_completed_frames": 14,
+  "reused_parent_frames": 4,
+  "reused_parent_ROIs": 34,
+  "observed_new_VAL_ROI_calls": 54,
+  "observed_failed": 0,
+  "observed_invalid": 0,
+  "readiness": {
+    "status": "PASS",
+    "TRAIN_calls": 2,
+    "original_vs_instrumented_native_hard_masks": "IDENTICAL_ON_TRAIN_ROI",
+    "resource_observation": {
+      "utc": "2026-11-03T06:25:17.043544+00:00",
+      "GPU": "GPU-568de064-e614-a45c-96c3-dbd80b8db026, 5057, 9855, 0, 56, 1590, 5000",
+      "compute_processes": "3034473, 5054",
+      "GPU_query_returncode": 0,
+      "process_query_returncode": 0,
+      "load_average": [
+        0.86083984375,
+        0.671875,
+        0.4931640625
+      ]
+    },
+    "projected_storage_bytes": 16299031056.25,
+    "estimate_limitation": "One TRAIN ROI, larger candidate sets remain guarded",
+    "native_classes": 20,
+    "model_details_sha256": "56e59ca8b0d36dda34b7246bea57b4e3608ec5da0fb6819cb1522dd9fddaef34"
+  },
+  "current_memory_guard": {
+    "device_free_bytes": 858521600,
+    "allocated_bytes": 189412864,
+    "reserved_bytes": 13314818048,
+    "own_reusable_pool_bytes": 13125405184,
+    "effective_available_bytes": 13983926784,
+    "contiguous_allocation_guaranteed": false
+  },
+  "first_new_packet": {
+    "image_id": "0000027",
+    "packet_sha256": "45bbf6f074cc2a34784703c1ab96ab2a9dc634113aaf138190f31461b9dc01c3",
+    "atomic_member_and_NPZ_hashes": "PASS",
+    "ownership": "PASS"
+  },
+  "source_scientific_settings": "UNCHANGED",
+  "runtime_amendment": "device_free plus own reserved minus own allocated, same1024MiBguard",
+  "historical_resource_stop_preserved": true,
+  "quality_ranking_analysis": "DEFERRED_UNTIL_BATCH_TERMINAL"
+}

@@ -1,0 +1,101 @@
+{
+  "run_id": "shared-c3-face-local-20261108T083533Z",
+  "created_utc": "2026-11-08T08:36:48.424440+00:00",
+  "status": "FROZEN_BEFORE_NEW_SCORES",
+  "protocol": "Human_Parsing_Benchmark/protocol/SHARED_C3_FACE_LOCAL_V1.json",
+  "protocol_sha256": "5cecc46446b4c33f5da56cd639c1b829f2c477c616873e7d1a42b5c09cea6357",
+  "mapping": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "mapping_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "sources_sha256": "5dcfb7c99049b8d593dc70f8a6bd6372a0a5f453b96a2ca3ca4121c31ba072ac",
+  "source_hashes": {
+    "Human_Parsing_Benchmark/scripts/shared_reference_evaluation.py": "a99e4d8ef25879b415a46eb8f06fc00fe14c51b2ebc863f2efd0eb512f64bf95",
+    "Human_Parsing_Benchmark/src/common_view/reference_parts.py": "44d73dda9f692ee59be9ef8448a96c6a65c3ee2d0347b9cdecec661f14ea8913",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde"
+  },
+  "tests_sha256": "6d89a6119ef74bd2f930c5c80269f100204130f996edcf7b13ec2d7aa2702198",
+  "CPU_acceptance_cases": 13,
+  "GT_summary": {
+    "CCTV": {
+      "images": 90,
+      "GT_persons": 127,
+      "raw_positive_parts": {
+        "2": 69,
+        "3": 120,
+        "4": 102,
+        "1": 35
+      },
+      "eligible_positive_parts": {
+        "2": 69,
+        "3": 120,
+        "4": 102,
+        "1": 35
+      },
+      "GT_support": {
+        "2": 244544,
+        "3": 891804,
+        "4": 372479,
+        "1": 53070
+      },
+      "semantic_VOID_or_unknown_owner_pixels": 9481
+    },
+    "CIHP": {
+      "images": 5000,
+      "GT_persons": 17520,
+      "raw_positive_parts": {
+        "1": 16494,
+        "2": 15803,
+        "3": 15674,
+        "4": 10157
+      },
+      "eligible_positive_parts": {
+        "1": 16494,
+        "2": 15803,
+        "3": 15674,
+        "4": 10157
+      },
+      "GT_support": {
+        "1": 37932488,
+        "2": 40760850,
+        "3": 148199276,
+        "4": 38702345
+      },
+      "semantic_VOID_or_unknown_owner_pixels": 0
+    }
+  },
+  "model_order": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP",
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "user_acceptance_sha256": "f77c96aabd42276c1261974c9caccd60e49ed0d43ddae4780748f2c9267a8207",
+  "minimum_free_GiB": 50,
+  "precision_and_native_inference": "Unchanged saved observations; zero inference calls",
+  "new_model_calls": 0,
+  "CPU_integration": {
+    "status": "PASS",
+    "CCTV_committed_image_model_records": 63,
+    "CCTV_errors": 0,
+    "CIHP_bound_example_models": [
+      "QANet_CIHP_HRNetW48_512x384",
+      "M2FP_R101_CIHP",
+      "D2FP_R101_CIHP",
+      "RPR_CIHP",
+      "CPI_R50_CIHP",
+      "CPI_ConvNeXtB_CIHP",
+      "Sapiens2_0.4b",
+      "Sapiens2_0.8b",
+      "Sapiens2_1b"
+    ],
+    "CIHP_C3_count_parity_checked": true,
+    "CPU_tiny_cases": 13,
+    "new_model_calls": 0,
+    "resume_check": "PASS: 63 committed retained, exactly9 new,72 unique,0errors"
+  },
+  "private_artifact_root": "Human_Parsing_Benchmark/outputs/shared-c3-face-local-20261108T083533Z"
+}

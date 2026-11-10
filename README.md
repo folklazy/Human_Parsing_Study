@@ -1,3 +1,57 @@
+# Human Parsing Study — ผลร่วมล่าสุด CIHP/CCTV
+
+**Shared C3-part + Face-local ครบ 18/18 งาน** (8 พฤศจิกายน 2026) — CIHP 9 × 5,000 ภาพ และ CCTV 9 × 90 ภาพ ใช้ saved masks ไม่มี inference ใหม่
+
+| Dataset | สามคลาสหลัก | Face-local | ค่าเฉลี่ยสี่คลาส Macro4-local |
+|---|---|---|---|
+| CIHP | Sapiens2 0.4B 73.163% | M2FP 81.423% | **M2FP 75.018%** |
+| CCTV | Sapiens2 1B 61.806% | Sapiens2 1B 69.497% | **Sapiens2 1B 63.729%** |
+
+[รายงานหลัก: ตารางเก้าโมเดลทั้งสอง dataset พร้อมวิธีคำนวณและข้อจำกัด](Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md) · [ตารางเต็มก่อนปัดเศษ](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_SUMMARY.csv) · [TP/FP/FN/P/R/F1 ราย target](Human_Parsing_Benchmark/metrics/SHARED_REFERENCE_TARGET_COUNTS.csv)
+
+เพิ่ม Macro4-local ซึ่งเฉลี่ย Hair, Face-local, Upper และ Lower เท่ากัน คะแนนสูงสุดเป็นหลักฐานสำหรับเลือก configuration ไม่ใช่การรับรองใช้งานจริง รายงานเก่าด้านล่างเป็นคนละ evaluation view และยังเก็บไว้ครบ
+
+รายงานหลักเพิ่มเวลาต่อภาพและเวลารวมจาก logs พร้อม coverage และขอบเขตของ adapter/native call แล้ว
+
+<!-- SPEED_OVERVIEW_START -->
+
+## เวลาประมวลผล parsing ต่อภาพ
+
+**ต่อ ROI** คือเวลาต่อภาพย่อยบุคคลที่ YOLO ตรวจพบหนึ่งรายการ คำนวณผลรวมช่วงเวลาที่บันทึก ÷ จำนวน ROI แล้วคูณ 1,000 เพื่อแสดงเป็น ms ส่วน **ต่อภาพ** นำผลรวมช่วงเวลาเดียวกัน ÷ จำนวนภาพต้นฉบับ แสดงเป็นวินาที CIHP ใช้ตัวหาร 24,062 ROI / 5,000 ภาพ และ CCTV ใช้ 130 ROI / 90 ภาพต่อโมเดล
+
+ลิงก์ที่มี commit `2863d64` เปิด snapshot เดิม ซึ่ง CCTV Sapiens เฉลี่ยเฉพาะ 84 ภาพที่มี adapter timer ได้ 1.931/4.001/5.672 s ต่อภาพ ส่วนตารางปัจจุบันรวมช่วง forward เดิมอีก 15 ROI แล้วหาร 90 ภาพ ได้ 2.000/4.162/5.917 s ต่อภาพ ตัวเลขเปลี่ยนจากการรวมช่วงเวลาและตัวหารที่ต่างกัน ทั้งสองชุดยังมีแหล่งอ้างอิงเดิมอยู่ใน canonical index
+
+| โมเดล | CIHP ms/ROI | CIHP s/ภาพ | CCTV ms/ROI | CCTV s/ภาพ |
+|---|---:|---:|---:|---:|
+| QANet | 73.198 | 0.352 | 76.325 | 0.110 |
+| M2FP | 215.623 | 1.038 | 220.187 | 0.318 |
+| D2FP | 637.258 | 3.067 | 694.885 | 1.004 |
+| RP-R-CNN | 227.574 | 1.095 | 226.784 | 0.328 |
+| CPI R50 | 2115.034 | 10.178 | 2994.517 | 4.325 |
+| CPI ConvNeXt-B | 617.921 | 2.974 | 490.608 | 0.709 |
+| Sapiens2 0.4B | 1400.994 | 6.742 | 1384.706 | 2.000 |
+| Sapiens2 0.8B | 2893.889 | 13.927 | 2881.421 | 4.162 |
+| Sapiens2 1B | 4150.924 | 19.976 | 4096.048 | 5.917 |
+
+ตัวอย่าง QANet บน CIHP ใช้เวลา parsing รวมทุกคนในภาพเฉลี่ย 0.352 วินาที ส่วน Sapiens2 1B เฉลี่ย 19.976 วินาทีต่อภาพ จำนวน ROI ต่อภาพมีผลต่อเวลานี้
+
+CCTV ของ Sapiens รวม adapter timers 115 ROI และ original forward intervals 15 ROI ครบ 90 ภาพ ตารางแสดงบัญชีช่วงเวลาตามขอบเขต A+C โดย preprocessing/map-back ของ original intervals อยู่นอกช่วงที่วัด
+
+ขอบเขต adapter ครอบ preprocessing, model call และ map-back ตาม implementation รวม native file I/O ของ CPI ส่วน YOLO, การส่งออก packet และการให้คะแนนอยู่ภายนอกช่วงนี้ ขอบเขต timer ของ CCTV continuation รวมงานรอ GPU และบันทึกทรัพยากรด้วย รายละเอียดและเวลารวมอยู่ในตารางเวลาของรายงานหลัก
+
+[เปิดตารางเวลารวมและรายละเอียดการจับเวลา](Human_Parsing_Benchmark/reports/CIHP_CCTV_COMPARABILITY_REVIEW_TH.md#เวลาต่อภาพและเวลารวม)
+
+<!-- SPEED_OVERVIEW_END -->
+
+## Confusion matrix และผลรายคลาสล่าสุด
+
+รายงานทั้งสองใช้หัวข้อเดียวกัน ครบ Precision/Recall/F1, matrix ราย target, person matching, เวลา และ provenance
+
+- [CIHP เก้าโมเดล](Human_Parsing_Benchmark/reports/CIHP_COMMON_NINE_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+- [CCTV เก้าโมเดล](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และความครบของแต่ละส่วน)
+
+## Historical study navigation and results
+
 # Human Parsing Study
 
 **ข้อสรุป CCTV: แนะนำ Sapiens2 segmentation 1B เป็นตัวหลักด้านคุณภาพรวม** ตามเกณฑ์สี่ targets ที่กำหนดไว้และประเมินครบ9ระบบแล้ว.
@@ -10,6 +64,16 @@
 [รายงานฉบับเต็ม: เหตุผลเลือก รุ่น/checkpoint/config และข้อจำกัด](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md) · [CSVทั้งเก้าระบบ](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv) · [Recommendation JSON](CCTV_Human_Parsing_Benchmark/reports/MODEL_RECOMMENDATION.json) · [สถานะ](CCTV_Human_Parsing_Benchmark/STATUS.md)
 
 ส่วนต่างรวม0.898percentage points;ยังไม่ทดสอบนัยสำคัญทางสถิติ. Faceใช้21/35items และNeckdeliveryมี3items; GTเป็นagent-assisted reference. ผลนี้รองรับคำแนะนำสำหรับcheckpoint+configurationที่รันจริง ยังไม่ใช่productionacceptance/คำอ้างเร็วที่สุดหรือเบาที่สุด. ไม่มีmodel inferenceใหม่จากงานสรุปนี้.
+
+[Confusion matrix รายโมเดล/รายคลาส และคำอธิบาย metrics](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#confusion-matrix-และการเก็บส่วนที่ต้องการครบแค่ไหน) · [ภาพรวม 36 matrices](CCTV_Human_Parsing_Benchmark/reports/figures/CONTROLLED_ROI_TARGET_CONFUSION.png) · [CSV counts และส่วนที่พลาด](CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_TARGET_CONFUSION.csv) — สร้างจาก accepted CCTV90 statistics เดิม ไม่มี inference หรือเปลี่ยนคะแนนหลัก
+
+[ความเร็วจาก log เดิม: Mean/Median/P95 ต่อ ROI และ worker elapsed](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#ความเร็วและเวลาประมวลผลจาก-log-เดิม) — แยก clock/coverage ของ parent และ continuation; shared-GPU diagnostics ไม่ใช่ end-to-end FPS ranking
+
+[สรุปเวลาที่บันทึกได้และเวลารวมของ worker พร้อมนิยามตัวชี้วัด](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#d-ตารางสรุปรวม--บวกค่าที่มี-log-แล้ว) — แยกยอด A+B จาก worker C เพื่อไม่ให้นับซ้ำ เวลารายคลาสไม่มี แต่คุณภาพรายคลาสมีอยู่เดิม
+
+[F1 / Precision / Recall รายสี่คลาสครบเก้าโมเดล](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#f1-score-แยก-4-คลาสต่อโมเดล) — โมเดลละ 4 F1 scores จาก pooled binary pixel counts เดิม พร้อมสูตร/ตัวหาร; ไม่เปลี่ยน primary Macro4
+
+[เวลาต่อภาพและเวลารวมทั้งชุด 90 ภาพ](CCTV_Human_Parsing_Benchmark/reports/CONTROLLED_ROI_FOUR_TARGET_RESULTS_TH.md#e-เวลาต่อหนึ่งภาพ-และรวมทั้ง-90-ภาพ) — รวมเวลาของ ROI จริงตามภาพ หกโมเดลมีข้อมูลเวลาครบ 90 ภาพ ส่วน Sapiens ครบ 84/90 ภาพและคง null สำหรับข้อมูลที่ขาด ตารางรายภาพพร้อมชื่อไฟล์เก็บเป็นส่วนตัวตามนโยบาย CCTV
 
 Earlierdatedmilestonesbelowarehistoricalsnapshots;followthecompletionreportandSTATUSforcurrentstate.
 

@@ -1,0 +1,226 @@
+{
+  "work_id": "annotation-intake-20261107T183824Z",
+  "checked_utc": "2026-11-07T18:38:24.419588+00:00",
+  "status": "REVIEW_COMPLETE_GT_REVISION_REQUIRED",
+  "proposal_status": "PROPOSED_NOT_FROZEN",
+  "scope": "GT-only annotation intake; no prediction scoring or inference",
+  "dataset_root": "datasets/CCTV_100_Evaluation",
+  "input_inventory_sha256": "b8f4845c4732fcf68d9e09a511665d8c953a4196e4a3768aab589022e73cc889",
+  "counts": {
+    "images": 90,
+    "person_groups": 127,
+    "RGB_byte_identical": 90,
+    "master_with_person_byte_identical": 90,
+    "semantic_geometry_unchanged_images": 90,
+    "polygon_person_overlap_images": 5,
+    "polygon_person_overlap_pixels": 3224,
+    "polygons_beyond_closed_image_edges": 0,
+    "part_pixels_PIL": 1573238,
+    "part_pixels_outside_PNG_owner_PIL": 117,
+    "part_polygons_with_outside_PNG_owner_PIL": 5,
+    "PNG_vs_cv2_truncate_different_images": 89,
+    "PNG_vs_cv2_truncate_different_pixels": 13454,
+    "PNG_vs_PIL_different_pixels": 19718,
+    "original_canonical_hashes_equal_frozen_input_bindings": 90
+  },
+  "native_polygon_labels": {
+    "bbox": 127,
+    "person": 133,
+    "lower": 104,
+    "upper": 129,
+    "hair": 69,
+    "face": 35
+  },
+  "person_target_pairs_before_historical_owner_fixes": {
+    "hair": 69,
+    "upper": 120,
+    "lower": 101,
+    "face": 34
+  },
+  "declared_CIHP_equivalents": {
+    "lower": {
+      "[9, 12]": 104
+    },
+    "upper": {
+      "[5, 6, 7, 10, 11, 12]": 129
+    },
+    "hair": {
+      "[2]": 69
+    },
+    "face": {
+      "[13]": 35
+    }
+  },
+  "historical_owner_corrections": {
+    "count": 2,
+    "source_semantic_polygons_unchanged": true,
+    "replacement_GT_must_reconcile_existing_derived_owner_fixes": true
+  },
+  "confirmed_owner_conflict": {
+    "historical_issue": "GT_OWNER_002",
+    "PNG_owner": 2,
+    "person_polygon_owner": 1,
+    "conflicting_pixels_cv2_truncation": 7495,
+    "all_conflicting_pixels_in_source_lower_group_2": true,
+    "reviewed_RGB": true
+  },
+  "provenance": {
+    "bbox_detector_source": "co_detr_swin_b+sam2.1_hiera_b+",
+    "model_assisted_reference_not_independent_gold": true,
+    "generation_source_or_review_certificate_not_found_in_examined_dataset_metadata": true
+  },
+  "protected_hashes": {
+    "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "CCTV_Human_Parsing_Benchmark/configs/CONTROLLED_ROI_SCORING_PROTOCOL.json": "297e07012397c19b7768efa3d395e2b44e50a1263d8d5fba6a01dccee8cd722d",
+    "CCTV_Human_Parsing_Benchmark/outputs/face-neck-gt-frozen-20261101/FACE_NECK_GT_BINDING.json": "7ab921096a111abf835857f9af1348928b0ad8effdcf0bc6ba72fbb138bea130",
+    "CCTV_Human_Parsing_Benchmark/outputs/controlled-gt-owner-20261101/GT_REVISION.json": "c5f41b3e6157e4eb976e53500d1530eae2c21aa2347354f76e73cca602ba23ee",
+    "CCTV_Human_Parsing_Benchmark/metrics/CONTROLLED_ROI_FOUR_TARGET_RESULTS.csv": "26697bcca845c01a586c04263fb1d597fd04d15b10c8febda50ea5cfbcc40fe6"
+  },
+  "private_artifacts": "CCTV_Human_Parsing_Benchmark/outputs/annotation-intake-20261107T183824Z",
+  "gallery_files": [
+    "cctv_added_annotation_review.png",
+    "cctv_person_raster_disagreement.png"
+  ],
+  "public_images_permitted": false,
+  "limits": [
+    "Semantic masks/vertices unchanged does not certify target boundary equivalence",
+    "No declaration proving all visible people/targets completely annotated",
+    "No explicit absent versus unknown state for every missing target",
+    "Raster comparisons depend on the specified renderer; discrepancy alone is not universal corruption proof",
+    "No model outputs inspected for choosing annotation corrections; no full-image scoring or new acceptance claimed"
+  ],
+  "authoritative_intake_directory": "datasets/CCTV_100_Evaluation/Annotations_Master",
+  "mechanical_repair": {
+    "status": "MECHANICAL_REPAIR_COMPLETE_REVIEW_PENDING",
+    "created_utc": "2026-11-07T19:10:40.780307+00:00",
+    "artifact_root": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z",
+    "counts": {
+      "images": 90,
+      "persons": 127,
+      "parts": 326,
+      "person_overlap_pixels": 3365,
+      "part_pixels_outside_own_extent": 5582
+    },
+    "owner_corrections": 2,
+    "source_sha256": "9fa345f1fccccd5d431ba5e7489cf36636b528d72b46ac09884c8def5707a41b",
+    "renderer": "OpenCV 5.0.0: float-to-int32 truncation, fillPoly",
+    "shape_coordinates": "closed image edges [0,W]x[0,H]; raster clipped by OpenCV",
+    "representation": "Per-person boolean extents authoritative for this candidate; PNG 255 means unresolved overlap",
+    "overlap_policy": "Preserve all per-person polygons; require visibility review, never numeric-ID winner",
+    "outside_person_PNG_zero": "outside annotated people; not certified semantic background",
+    "semantic_unknown": 255,
+    "semantic_bg_other_invented": false,
+    "scoring_ready": false,
+    "primary": null,
+    "coverage_review_items": 508,
+    "unknown_no_polygon": 182,
+    "source_annotations_modified": false,
+    "source_contours_modified": false,
+    "model_inference_calls": 0,
+    "expert_certified": false,
+    "private_binding_sha256": "39e1d7e5d2827ed012611cf98b52fd6137e2aa853a13cffbf2a06874c5a2ee44",
+    "verified_thai": "2026-11-08T02:17:50.448008+07:00",
+    "candidate_C4_encoding": {
+      "0": "not invented",
+      "1": "Face reference candidate",
+      "2": "Hair",
+      "3": "Upper",
+      "4": "Lower",
+      "5": "OTHER not invented",
+      "255": "unknown/conflict"
+    },
+    "CPU_acceptance": {
+      "tests_passed": 8,
+      "tests_failed": 0,
+      "command": ".venvs/sapiens2-pilot/bin/python -m unittest discover -s CCTV_Human_Parsing_Benchmark/tests -p test_master_gt_revision.py -v",
+      "test_source_sha256": "f6da62d5512c4c2b60bc4ae2ab440811e8bb9cb94f50e5fbe6404349a9fa496f"
+    },
+    "actual_readback": {
+      "frame_packets": 90,
+      "repaired_annotations": 90,
+      "person_pngs": 90,
+      "source_inputs_unchanged": 360,
+      "independent_7495_pixel_owner_conflict_resolved": true,
+      "remaining_parts_outside_own_extent": 262
+    },
+    "browser_acceptance": {
+      "status": "PASS",
+      "image_options": 90,
+      "owner_repair_examples": 2,
+      "both_RGB_panels_loaded": true,
+      "page_errors": 0,
+      "existing_Thai_font_reused_for_headless_capture": true
+    },
+    "hashes": {
+      "completion": "f4f900cb71f0a16bafeb065a5668d9726ebde5176577a4e9686ecd21c8517d51",
+      "review_queue": "af6a05bb530c8a1d0a1bce7ddf3a7a0be61c660f0771ceaacd6878e1d2604c49",
+      "geometry_review": "314cc951ebe3327a825d8f35db5aa003f316e3fa07def1c03681d36edaa95192",
+      "index": "bc7add3e80496095cb0d5ca781b30a79b96ca52669e65dde3422b04d3fd35284"
+    }
+  },
+  "offline_viewer": {
+    "status": "EXPORTED",
+    "created_utc": "2026-11-07T19:31:12.968490+00:00",
+    "frames": 90,
+    "file": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/review_offline.html",
+    "sha256": "94830f4de37a2cd5b48e5e6ebba1a6eb1c43b2152e37f1ee7887c2b67e5dcd98",
+    "bytes": 62053175,
+    "javascript_required": false,
+    "external_images_required": false,
+    "external_fonts_required": false,
+    "preview_max_dimension": 1280,
+    "JPEG_quality": 84,
+    "GT_packets_modified": false,
+    "inference_calls": 0,
+    "sample": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/owner_repairs_before_after.jpg",
+    "sample_sha256": "cb09ffac07693564eb67d354a57731ac9f55a8220fab5efff1d54eec72ec18fd",
+    "source_sha256": "a7b04fc405c398faba7ccca48f8768ad1ad6bec22e8881ee523036ab7947e4ad",
+    "verification": {
+      "status": "PASS",
+      "isolated_single_file_directory": true,
+      "JavaScript_enabled": false,
+      "network_offline": true,
+      "frames": 90,
+      "embedded_images": 184,
+      "external_image_urls": 0,
+      "script_tags": 0,
+      "native_details_toggle": true,
+      "two_frame_images_decoded": true,
+      "errors": []
+    },
+    "all_184_JPEG_readback": "PASS",
+    "GT_90_packet_annotation_PNG_hashes_unchanged": true
+  },
+  "single_annotation_restoration": {
+    "status": "RESTORED_EXACT_PRIOR_BYTES",
+    "checked_thai": "2026-11-08T03:11:28.921318+07:00",
+    "image_id": "cctv_0025",
+    "before_sha256": "a7f2b13a14f6035078f915a3c57f6f5f47244440906a8492d4da2a5a944739f1",
+    "restored_sha256": "291a0ba75a6a794711ec49c12ee25cbd288552fd610448d200f93038a2e36cf7",
+    "historical_binding_sha256": "39e1d7e5d2827ed012611cf98b52fd6137e2aa853a13cffbf2a06874c5a2ee44",
+    "shapes_before": 14,
+    "shapes_restored": 15,
+    "JPG_unchanged": true,
+    "Master_unchanged": true,
+    "other_annotations_modified": false,
+    "restoration_method": "Replay original derived annotation generator from bound Master/canonical; require exact historical annotation SHA256 before atomic replacement",
+    "inference_calls": 0,
+    "private_backup_root": "CCTV_Human_Parsing_Benchmark/outputs/annotation-restore-20261107T201128Z",
+    "prior_visual_review_stopped_by_user": true
+  },
+  "user_visual_acceptance": {
+    "status": "USER_VISUAL_REVIEW_ACCEPTED",
+    "accepted_thai": "2026-11-08T03:15:24.989704+07:00",
+    "user_statement": "ได้ผมตรวจหมดเเล้วถูกต้อง",
+    "annotation_root": "CCTV_Human_Parsing_Benchmark/outputs/master-gt-repair-20261107T191020Z/Annotations_Reviewed",
+    "images": 90,
+    "annotation_inventory_sha256": "44db335a9969decb2dcadac27c8e62efd98917ccd49030b240839719ed9b55ac",
+    "files_changed_since_export": [],
+    "accepted_by": "user",
+    "independent_expert_certification_claimed": false,
+    "evaluation_protocol_frozen_by_this_acknowledgement": false,
+    "new_scoring_or_inference_started": false,
+    "private_record": "CCTV_Human_Parsing_Benchmark/outputs/gt-user-acceptance-20261107T201524Z/ACCEPTANCE.json"
+  }
+}

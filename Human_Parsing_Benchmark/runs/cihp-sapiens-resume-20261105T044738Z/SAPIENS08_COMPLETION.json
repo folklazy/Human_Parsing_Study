@@ -1,0 +1,33 @@
+{
+  "status": "STRICT_COMPLETE",
+  "observed_Asia_Bangkok": "2026-11-05T15:33:58+07:00",
+  "strict_complete": true,
+  "expected_unique": 5000,
+  "parent_frames": 4182,
+  "new_frames": 818,
+  "missing": 0,
+  "duplicate": 0,
+  "parent_ROIs": 19907,
+  "new_ROI_calls": 4155,
+  "total_accepted_ROIs": 24062,
+  "metrics_sha256": "4e85340b27dd3b1be27840e170a39e84b08dc2f73a85d842afc683b5a95d21a0",
+  "completion_sha256": "07165fe8d3fd36f15d2bdd42005cbba02cf1fc2bcded4245622e860e03617698",
+  "assembly_sha256": "37383c362b557476aec05f2ca76beca33a5573bcc9d45e2da55c095091cc8a29",
+  "historical_KeyboardInterrupt_preserved": true,
+  "active_hours_parent_plus_continuation": 19.911571480858353,
+  "sample_packet_check": {
+    "packet": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/Sapiens2_0.8b/packets/0036736",
+    "packet_NPZ_sha256": "8e9126a557d22d24541f02466238cc3b7f58438082996d9d88f44462f6086125",
+    "metadata_sha256": "53896784855c20284994d697ea1f2522e79380920b3554d0747491b4b97b535f",
+    "commit_sha256": "decffec794e8fcf1aaeedf32f28878610d5623afb1730fd85d605ff0d3241075",
+    "score_sha256": "801a68579aa0cebec4f1351c40353fa3aa4fe5da91a273f6c306b5a69bf51728",
+    "native29_original_grid_readback": true,
+    "ownership_matches_saved_YOLO_extent": true,
+    "config_checkpoint_protocol_bindings_match": true,
+    "readiness_sha256": "3213b147ad28a525c769e2f8fd5dfaea306011c3dc5494b67bab4db54a512a9d",
+    "TRAIN_parity": "PASS"
+  },
+  "primary_values_not_copied_during_health_monitoring": true,
+  "canonical_metrics_path": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/Sapiens2_0.8b/METRICS.json",
+  "full_private_assembly": "Human_Parsing_Benchmark/outputs/cihp-sapiens-resume-20261105T044738Z/Sapiens2_0.8b/ASSEMBLED_INDEX.json"
+}

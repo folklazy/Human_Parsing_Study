@@ -1,0 +1,726 @@
+{
+  "run_id": "cihp-controlled-resources-20261103T062248Z",
+  "created_utc": "2026-11-03T06:22:48.562895+00:00",
+  "status": "FROZEN_CONTROLLED_CONTINUATION",
+  "route": "CONTROLLED_YOLO_PERSON_ROI",
+  "protocol_id": "CIHP_CONTROLLED_ROI_C4P_R1",
+  "protocol": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "protocol_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "source_hashes": {
+    "CCTV_Human_Parsing_Benchmark/scripts/benchmark.py": "4ad35a615f146d9cc2a75fb99e3bb45ebf78308bca90442b3c56b6f7b5927d9a",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/adapters.py": "6a8836d965290900073f825026eb98f98e0b703a1db97d6b304932218ae1bf99",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/data.py": "1fddef23c4d029a8c89b593ffd4f5c83f0d5f1838c8211516437f73d93c90134",
+    "Human_Parsing_Benchmark/src/common_view/core.py": "9d1c10d6b009ba472c66dbcc9450628f860eed684c1df068d09262e15c239dde",
+    "Human_Parsing_Benchmark/src/common_view/packets.py": "9e57df271801ba59e4cb6bbc930662fdeebcf3dc796ddcbfdd6918e60a48856e",
+    "Human_Parsing_Benchmark/src/common_view/sapiens_route.py": "b000f68d7553ffdd8f935d3654e0dddb5a5290066d09b565f470ed63d7df1a7d",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_memory.py": "41268106ec8a64c6d2f16491913cde5554f8750ed2c6a6c8f2f25f0b7b5b5ab9",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_memory.py": "045712b47c88c9079b5fd07d6ff07250548fa49d74bb4c95caf26b5f6cb79234",
+    "Human_Parsing_Benchmark/src/cihp_benchmark/cpi_feature_schedule.py": "e62ab98de53647e333f199e2568024b9ab6992ca6afe050377eaa32a3ed5886f",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi.py": "80beee1424b81f1d5855f5b859884abb1b63566324308b64f6eb64b45af39158",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_core.py": "15561c1c560f26d8d3a565d54f1a3a07be31ddbf927059443e6a826bf83a8cdd",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_models.py": "0db6acadddfd81fda0dcf782fba221d92614f824009021f773d9784429da958c",
+    "CCTV_Human_Parsing_Benchmark/scripts/sapiens_input_variants.py": "f6c16febac6de4c6602efab60db545b6a00e3cd47af873ba330573f88dde7304",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/__init__.py": "a0795bbdda98eb27324bb34d2d8d2601f133ef54139dc749529c89a3fbb15bc6",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/scoring.py": "3d0cd437ab3808289be0181094909d09a690f0a5f47a98d4cdb1cbacb55a77db",
+    "Human_Parsing_Benchmark/src/controlled_ci_hp/measurement.py": "4e6cc35c906cf356cd4c38765659ff7dfdd35fa77ec631c0a0867c827b796387",
+    "Human_Parsing_Benchmark/scripts/controlled_cihp.py": "583f65ee18e5d1e54d736287e7fdba625aa29d80314a7710c38e5329715f6160",
+    "Human_Parsing_Benchmark/src/common_view/detector_cache.py": "f1e1d94f8ca37fc4ef8834faa2f71bc12e9bab62d016c3979588286d651fa18b",
+    "Human_Parsing_Benchmark/src/common_view/full.py": "e917fdb37f0383e7755ffbde36629250093bf6d271827dea8f6d76535ad392ca",
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py": "d1707c4e3dc111f3948d8731675981c5e278d906bbb15eb5144a830ba8641f4e",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_continuation.py": "4b6b4307a7848ed8fec9ecac2b90a800be89b7e2c58a5cff37199b4bcef867b5",
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py": "0781167e38fd0c2beb8e708ef34bfa5919082213ce74cc1b1cb1a16bf949690e"
+  },
+  "parent_config": "Human_Parsing_Benchmark/configs/controlled_cihp_continuation.json",
+  "parent_config_sha256": "2164912a6f94679daf0e074d6342d4bcbff1d1ca2720b1f4b8d3dede9b6807f7",
+  "population": "Human_Parsing_Benchmark/manifests/CIHP_NATIVE_VALIDATION.json",
+  "population_sha256": "0bf366ae6fcde0967f915e1803bc08dbce94de5753e3dea9f0dbe5aa570083d7",
+  "detector_ledger": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/first-cohort-benchmark-20261016T094257313856Z/execution_restored_detector_v1/YOLO26X_FROZEN/FRAMES.jsonl",
+  "detector_ledger_sha256": "dbaf3637e342cf0944bf95b289f546497a6509f053a0eb6aaebbcd31a0d31e72",
+  "GT_expected_sums": {
+    "G_loc": 17520,
+    "G_sem_C4": 17454
+  },
+  "GT_expected_part_counts": {
+    "1": 16494,
+    "2": 15803,
+    "3": 15674,
+    "4": 10157
+  },
+  "GT_binding_root": "Human_Parsing_MHPv2_Study/outputs/cihp_native/cihp-native-six-20261028T034103254470Z/common_view/common-c4p-pilot-20261029T010410394659Z/gt_bindings",
+  "GT_binding_manifest_sha256": "1a6f635ffdd0da1b767a6d7279e0437130bdfdd47e510fbfdaeb9b047cc82cc0",
+  "manifest": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/INPUTS.json",
+  "manifest_sha256": "e77b5ad81ce6be8e0e6ebd88bfcec470fb4a7a69fb53cddbbd49103b6df16424",
+  "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z",
+  "models": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "model_id": "QANet_CIHP_HRNetW48_512x384",
+      "family": "QANet",
+      "checkpoint": "models/human_parsing/qanet/QANet_CIHP_HRNetW48_512x384/weights_latest.pth",
+      "checkpoint_sha256": "cf7374ea109e05c18f06f9b6aa4747336914fa0523663b01cc771513c1cec365",
+      "checkpoint_bytes": 277950114,
+      "source": "third_party/human_parsing/QANet",
+      "source_commit": "61615c4491979569771020bc4beff86d63974829",
+      "native_config": "Human_Parsing_MHPv2_Study/provenance/RUN_MANIFESTS/implementation-handoff-20261015T063548Z/native_smoke/configs/QANet_CIHP_HRNetW48_512x384.yaml",
+      "native_config_sha256": "7a6dedb38c7f7a5add292c6a8587ac2c9a04a2cf111d69af47e059046d2a3f11",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ROI",
+      "native_reference": false,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 277950114,
+        "mtime_ns": 1604249613000000000
+      }
+    },
+    "M2FP_R101_CIHP": {
+      "model_id": "M2FP_R101_CIHP",
+      "family": "M2FP",
+      "checkpoint": "models/human_parsing/m2fp/M2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "7451e822298c8dee3781444ebd490bc43f192ca135b66ada841f16245746bad1",
+      "checkpoint_bytes": 757764792,
+      "source": "third_party/human_parsing/M2FP",
+      "source_commit": "17a89decacfca347ed18bed66baec7a5847ea43c",
+      "native_config": "third_party/human_parsing/M2FP/configs/cihp/m2fp_R101_bs16_265k.yaml",
+      "native_config_sha256": "c0e0b243100f9e3163cc88eaec6112dd918ca9526575976852ce3633541475a4",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 757764792,
+        "mtime_ns": 1674098713000000000
+      }
+    },
+    "D2FP_R101_CIHP": {
+      "model_id": "D2FP_R101_CIHP",
+      "family": "D2FP",
+      "checkpoint": "models/human_parsing/d2fp/D2FP_R101_CIHP/model.pth",
+      "checkpoint_sha256": "acdfb2eceff5768235c944a5342189303c0bb9b2512aff2a79c6cf1f5129359e",
+      "checkpoint_bytes": 958247405,
+      "source": "third_party/human_parsing/D2FP",
+      "source_commit": "9d415948de94b1a0bb74b18cfdace68dcd75acb8",
+      "native_config": "third_party/human_parsing/D2FP/configs/cihp/d2fp_R101_bs4_1060k_prior100.yaml",
+      "native_config_sha256": "968b590f4f877f1a7c739031211ecd220a45c33989650c88d31088c17464a291",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 958247405,
+        "mtime_ns": 1791793193709682172
+      }
+    },
+    "RPR_CIHP": {
+      "model_id": "RPR_CIHP",
+      "family": "RP-R-CNN",
+      "checkpoint": "models/human_parsing/rp_r_cnn/RPR_CIHP/model.pth",
+      "checkpoint_sha256": "6b596210f3ea67c79aae94c4769716b3cd41d781e2dbf36e0900c1b020721d98",
+      "checkpoint_bytes": 234931960,
+      "source": "third_party/human_parsing/RP-R-CNN",
+      "source_commit": "dfcc227723d4bf6566356cda4513a84ed9a8ba30",
+      "native_config": "Human_Parsing_CCIHP_10_Image_Pilot/configs/RPR_CIHP.yaml",
+      "native_config_sha256": "44f4c4d08b917c9e141104cc225863231ceb0fac5c84566a22e04d3c793b6bd2",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 234931960,
+        "mtime_ns": 1596877946000000000
+      }
+    },
+    "CPI_R50_CIHP": {
+      "model_id": "CPI_R50_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_R50_CIHP/model.pth",
+      "checkpoint_sha256": "e58f8cb4b4fb3b7513e4dd2efb2c8aece07fd237404789204b8b9863f2b7cf35",
+      "checkpoint_bytes": 571901148,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_r50_inter_8_135k_cihp.py",
+      "native_config_sha256": "62b39d8753d5ce8afc137fab5857757024e999ac49a3023645c239a8c4511575",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 571901148,
+        "mtime_ns": 1667635140000000000
+      }
+    },
+    "CPI_ConvNeXtB_CIHP": {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "family": "CPI-Parser",
+      "checkpoint": "models/human_parsing/cpi_parser/CPI_ConvNeXtB_CIHP/model.pth",
+      "checkpoint_sha256": "25b7b12527e550f161b7ad538bd9300a74a0ae73c59a2dfb392ad22161a318c5",
+      "checkpoint_bytes": 1301413296,
+      "source": "third_party/human_parsing/CPI-Parser",
+      "source_commit": "d62cae523ba913fec4a7fda5816bc1d96bbf644d",
+      "native_config": "third_party/human_parsing/CPI-Parser/configs/COSParser/causal_parser_convnext_b_inter_8_135k_cihp.py",
+      "native_config_sha256": "3756068bcc364afcdec9c385d11872f59f92661a98d1eb9bf1e83851f9b29117",
+      "environment": ".venvs/parser-legacy-cu113",
+      "route": "YOLO_ASSOCIATED_NATIVE_FRAME",
+      "native_reference": true,
+      "phase": "CIHP_SIX",
+      "native_semantic_classes": 20,
+      "current_status": "TRAIN_ROUTE_PASS_NOT_VALIDATION_COMPLETE",
+      "checkpoint_stat": {
+        "size": 1301413296,
+        "mtime_ns": 1667619434000000000
+      }
+    },
+    "Sapiens2_0.4b": {
+      "model_id": "Sapiens2_0.4b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.4b/sapiens2_0.4b_seg.safetensors",
+      "checkpoint_sha256": "b85fdb50b7d6123a967d5ee4a505e222baff8d2f7ad6bbf353578c1a61dfbac9",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.4b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "f4bd201e0293278807e2a8c02e700163972d095df9288beede84aabfee1725d5",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 1626451404,
+        "mtime_ns": 1791799814805138982
+      }
+    },
+    "Sapiens2_0.8b": {
+      "model_id": "Sapiens2_0.8b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/0.8b/sapiens2_0.8b_seg.safetensors",
+      "checkpoint_sha256": "e7c1655b7e11678ba200d4ce743be13aeb97eb5ce0a0907f8e6817aabe6b2eec",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_0.8b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "967f27e2a596da57cb87598412197138eb73674d4e83c12ccab73e41c0df738a",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 3310187452,
+        "mtime_ns": 1791799862520192990
+      }
+    },
+    "Sapiens2_1b": {
+      "model_id": "Sapiens2_1b",
+      "family": "Sapiens2",
+      "checkpoint": "models/human_parsing/sapiens2/1b/sapiens2_1b_seg.safetensors",
+      "checkpoint_sha256": "4b73c44963b377e93fcb4c4053f72a189836a22d05e12c30383046b9cd3c5bd4",
+      "native_config": "third_party/human_parsing/sapiens2/sapiens/dense/configs/seg/shutterstock_goliath/sapiens2_1b_seg_shutterstock_goliath-1024x768.py",
+      "native_config_sha256": "d33d8802741cb7b0cddc09ac3b2f780a801932bdeb88dc097c22a43996fef61d",
+      "source": "third_party/human_parsing/sapiens2",
+      "source_commit": "7e5bae88456ac418ff0e58e74106c9fe192055d4",
+      "environment": ".venvs/sapiens2-pilot",
+      "route": "SAPIENS_FRAME_YOLO_MASK_OWNERSHIP",
+      "checkpoint_stat": {
+        "size": 5883353380,
+        "mtime_ns": 1791799963596790372
+      }
+    }
+  },
+  "model_order": [
+    "QANet_CIHP_HRNetW48_512x384",
+    "M2FP_R101_CIHP",
+    "D2FP_R101_CIHP",
+    "RPR_CIHP",
+    "CPI_R50_CIHP",
+    "CPI_ConvNeXtB_CIHP",
+    "Sapiens2_0.4b",
+    "Sapiens2_0.8b",
+    "Sapiens2_1b"
+  ],
+  "warmup": {
+    "image": "CCTV_Human_Parsing_Benchmark/outputs/cctv-controlled-roi-20261101T114925Z/TRAIN_WARMUP.png",
+    "png_sha256": "d7e0cc3096d3323247f33bd87ed60835d1ff95afa79db86a4e5a7f8c9c08c64d",
+    "source_image_sha256": "1f73eb94009d6db53cdf420ddf4ceb398bb8a49117cbcd37c78fa148e78f346a",
+    "source_detector_artifact": "provenance/RUN_MANIFESTS/first-cohort-integration-closure-20261016T084320790538Z/fresh_train_v1/YOLO26X_FROZEN/0000930.npz",
+    "crop_xyxy": [
+      201,
+      0,
+      378,
+      346
+    ],
+    "designated_box": [
+      15.454818725585938,
+      8.307385444641113,
+      161.79470825195312,
+      343.2044982910156
+    ]
+  },
+  "expected_images": 5000,
+  "ROI_count": 24062,
+  "seed": 20261028,
+  "FP32": true,
+  "AMP": false,
+  "TF32": false,
+  "external_TTA": false,
+  "batch_size": 1,
+  "context_each_side": 0.1,
+  "automatic_retry": 0,
+  "automatic_recovery": 0,
+  "fallback": false,
+  "resource_policy": "SHARED_GPU_QUALITY_ONLY",
+  "minimum_free_gib": 50,
+  "max_stream_gib": 80,
+  "planning_envelope_gib": 200,
+  "max_hours": 24,
+  "required_free_MiB": {
+    "YOLO26X": 2048,
+    "QANet_CIHP_HRNetW48_512x384": 2560,
+    "M2FP_R101_CIHP": 8192,
+    "D2FP_R101_CIHP": 9216,
+    "RPR_CIHP": 6144,
+    "CPI_R50_CIHP": 14500,
+    "CPI_ConvNeXtB_CIHP": 13500,
+    "Sapiens2_0.4b": 4608,
+    "Sapiens2_0.8b": 6656,
+    "Sapiens2_1b": 9600
+  },
+  "min_forward_free_MiB": 1024,
+  "resource_queue_timeout_seconds": 600,
+  "warmup_calls_per_model": 2,
+  "warmup_purpose": "TRAIN baseline then timed equivalence, once each",
+  "model_call_limit_per_model": 24064,
+  "scoring": "C4P revision2, additional mean GT-person-part IoU at mask matching0.50",
+  "primary": "Global mIoU4; mean-part and Q_GT/person F1 secondary",
+  "analyze_only_after_batch_terminal": true,
+  "live_timing_status": "PENDING_SEPARATE_READINESS",
+  "no_score_based_retry_or_tuning": true,
+  "storage": {
+    "final_arrays_uncompressed_per_model_bytes": 12652500381,
+    "nine_model_uncompressed_bytes": 113872503429,
+    "temporary_and_candidate_peak": "MEASURE_TRAIN_BEFORE_VALIDATION",
+    "compression_ratio_assumed": null,
+    "total_storage_guaranteed": false
+  },
+  "completed_sources": {
+    "QANet_CIHP_HRNetW48_512x384": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/QANet_CIHP_HRNetW48_512x384",
+      "completion_sha256": "aa4c3828ef108ac55e46b3a839c6713d08b2dfb8a8cb224bd14182731b4f8df4",
+      "metrics_sha256": "ebfd2f366c8c414a0682b41a2552a756089d0f493a737a027edeede7722d23b4"
+    },
+    "M2FP_R101_CIHP": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/M2FP_R101_CIHP",
+      "completion_sha256": "270e3fd6ec426d6de50e35d2b1ddff2ca53127d0e29d74c8e0e749d410165b8e",
+      "metrics_sha256": "322e05ad497f27a48e0592a4be76ca43330b778bc881ee4aeef542302a0462d9"
+    },
+    "D2FP_R101_CIHP": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-roi-20261102T120403Z/D2FP_R101_CIHP",
+      "completion_sha256": "8cb3fd638356e3f9ad9307acb9da8c8e3d5b3248223a7137dee3c1907e410641",
+      "metrics_sha256": "15f036415c908f27303998f276211c51298fea8d16be49d0eda9449866ca2069"
+    },
+    "RPR_CIHP": {
+      "root": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/RPR_CIHP",
+      "completion_sha256": "2dd4a03eaeeb941b0f8aed7f3a271c222113e5ced70d7c617090447216106b9a",
+      "metrics_sha256": "136ba5949cbec12a93d6f826f958e119c887f9132ee98356b68cd29ec47ccf08"
+    }
+  },
+  "reuse_frames": {
+    "CPI_R50_CIHP": {
+      "0000001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/packets/0000001",
+        "members": {
+          "prediction.npz": "e924e691c7c0f7a91badb0fd39fea18cb42cccea2f1bdc8c4a88da783f78aa44",
+          "COMMIT.json": "fce1cee0d80c3c055cf8cfbdaf642f311dfa9ce2f5f69a3282e8f9c9f775187e",
+          "packet.json": "a9a1ae89573bcc9ae2578fdbb980e9ebc1a270e7982dd72a01edaa43ef373b1e"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/scores/0000001.json",
+        "score_sha256": "5286c06ffc55a0888bf6cf382e8ce36a1dadd78db78ec46737b86768cca74daf"
+      },
+      "0000003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/packets/0000003",
+        "members": {
+          "prediction.npz": "72f69f43db9895e09ec6680cd84073795f933c8e10b6fbc5fd926febac2f7a7a",
+          "COMMIT.json": "c11c72ce59bf1905ff464f499508301751ab37dedc1de34e68aa615902ef5236",
+          "packet.json": "3b5926c40f075dcf3123fbd74b0fdf905d1d4c1eef78f299fb2370f744e6753e"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/scores/0000003.json",
+        "score_sha256": "4d4398f52cbdc4816178350116cc3eea19f39523ec17903b0961ae5c3dd9ae4d"
+      },
+      "0000004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/packets/0000004",
+        "members": {
+          "prediction.npz": "059c6fa57d5ed2d14d9c23b6be5b747145d0e5f4ea952e9e57e69c428503679e",
+          "COMMIT.json": "45b3236cf6d154df210c11f2fa4e2977754da1c2bbcf5b42bcafcd7eba0ec50e",
+          "packet.json": "8c78bc6636f16273e1fa465d75268653d46d300cc1646f865d0b4cf625e02806"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/scores/0000004.json",
+        "score_sha256": "46f9dd3ed1953d49935ab1eeeb695afd7ddc75e2726ba51857a80da4934f4090"
+      },
+      "0000018": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/packets/0000018",
+        "members": {
+          "prediction.npz": "bb377102413047d20a9a92bb3c99c107b9896b3bae4127bdfdb881d010eb3bd1",
+          "COMMIT.json": "92ffc24981019e4a614f540a23175836025fcc38e229b650c225d006bc94aff3",
+          "packet.json": "e689e08d7f3182eeb9e07b2ee804624af3c221ec35a3291302927d8782bb91cc"
+        },
+        "score_path": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/scores/0000018.json",
+        "score_sha256": "aaa069782a01676cb87f85f155e953a780c1747fb6d785cc093ba8563ece88ed"
+      }
+    }
+  },
+  "reuse_ROIs": {
+    "CPI_R50_CIHP": {
+      "0000001_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000001_000",
+        "members": {
+          "prediction.npz": "fb4f7ab206c591608c489889a0fd146fa1517e4526bc162d606bbf4eb87e1d98",
+          "COMMIT.json": "973bd580ae2ae6b9a8d791cd3e479e9561a5ecceca487d1548cd252fe3c1d4fc",
+          "packet.json": "64d378c17c0665b015a87fc1626f8beb119351f10902a60a6c04b1e5374fb7ae"
+        }
+      },
+      "0000001_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000001_001",
+        "members": {
+          "prediction.npz": "e1067c0ccc1a64ecde7f8325f0b3ae01f84282bb8618072a4fee4f30dcc19742",
+          "COMMIT.json": "aad36feffce7567b26a3b79a0f7834bac83320c0021ffc496c1d836df0c7ffac",
+          "packet.json": "a0772f81124667efd4ffd18f9b67b5f580cb129eb8c13669e337daf24b48b8ef"
+        }
+      },
+      "0000001_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000001_002",
+        "members": {
+          "prediction.npz": "d4e9c704353dc4b0980f2c83bf0e949785cda87f252f7a33869726bd28f45d7a",
+          "COMMIT.json": "e3725043a47b6aa6d9ca48b005ae53c145bf1ede672cb47a6395063684441ce9",
+          "packet.json": "0b220694937fdc9bf219d2c1f7c7c90cb5fde5a0ace23bd06205d426a08aa317"
+        }
+      },
+      "0000001_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000001_003",
+        "members": {
+          "prediction.npz": "ffbf08c41b20bfb7e1e3bee3c63b51926c759b9a25fd6d7c4d0207a512a212c3",
+          "COMMIT.json": "96052ea49d9064e7617eea872e13180e64aa88941363187d42a95c7e89eb906c",
+          "packet.json": "44ccb97fb4e2bfe4cd6627d9effa0f99ffea6a21bd737585695cd6bbf9aad315"
+        }
+      },
+      "0000003_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_000",
+        "members": {
+          "prediction.npz": "21509b810730acdf0afe15362aeccd76a4012b05674545f6baba23bc8de3dd5a",
+          "COMMIT.json": "56410080cfeec2bcb15d9a7d42254acbb5a2768f3699afb5c7ef8f5780b866ad",
+          "packet.json": "ea4939aa3b38306080e7052f05c71921da02d67fc1ee740e8db885d48857c36f"
+        }
+      },
+      "0000003_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_001",
+        "members": {
+          "prediction.npz": "c0f282359b185fa9b9864767418bddbd8988f11646f1d96f5a6fb44e576c372f",
+          "COMMIT.json": "c2d36e2650e062b78dc512eabe4f9669619251d963428acc7f1263a9ae164f6f",
+          "packet.json": "9312877d3a311f67f5dc829ec7801a61d435f357d057fe0d756cbbf65bd9d827"
+        }
+      },
+      "0000003_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_002",
+        "members": {
+          "prediction.npz": "d8eefe6611f7156b0760c4db62967bc8a4ea72984a2fe0070f22a51304ff9978",
+          "COMMIT.json": "cb62a32bcff10e5ec0ebb9b61097039282fa9daa041840702113689a6851d775",
+          "packet.json": "d0b5ba12d7083e6f143055d63c67665e700c3e3974f9f5acb23098b52cb5dc71"
+        }
+      },
+      "0000003_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_003",
+        "members": {
+          "prediction.npz": "780fd332c26c86f02a1b6285ca0edf16cefadc54b96e228d5432e46e2f7a8dd5",
+          "COMMIT.json": "0fc974fffc5ea2a73db59e4355fb5794e7aba2c1747ea8a0de00d08892a4e55d",
+          "packet.json": "1e4a229e676a365a3db68ae5f897ed299faffab8b239e3bd683abcd0efad753f"
+        }
+      },
+      "0000003_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_004",
+        "members": {
+          "prediction.npz": "91c5c8d13b3d90483da08ce00afd328bfff20efc0509fd0c6bf08887648e4155",
+          "COMMIT.json": "593812aa89a45a0c7ce4dc96efd86b502433aede0617d744fb9fbeec1bb827fc",
+          "packet.json": "8a0db4f3379b5cee24e45100d56562954a0ab6964f2a1f15baa640e9c074e69f"
+        }
+      },
+      "0000003_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_005",
+        "members": {
+          "prediction.npz": "8727eca7c2a7a858582e891a7f70da5deb4ea4a569a2db0163482a310ae12c49",
+          "COMMIT.json": "fbc61fde9a917f43dad5d5ab4c11fabdc1aa21863271aa2deb5f1fe759adb9b7",
+          "packet.json": "d49efcdf549d4efed92cf9b0aee2e4fabf0910991480372ec0f4079036ea454c"
+        }
+      },
+      "0000003_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_006",
+        "members": {
+          "prediction.npz": "dcdf16ea9e18753ad8db7c19961c81e964b874aba1c26c1ca03084d14ace3800",
+          "COMMIT.json": "b985f81422aebe71dfc4a31059090696ac50ff7972e541c78e0f2f8063271cbd",
+          "packet.json": "5abb5b72e17df05325cd30fc04d4dfd32dfbeb6234de002af960c249ce1e18c7"
+        }
+      },
+      "0000003_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_007",
+        "members": {
+          "prediction.npz": "191da4b6403546bb58a8feab9be7493262aa88482b84eb55a5037a94eca074f7",
+          "COMMIT.json": "53059b864b71816b47303a897d22258da2a8dafb317bff62ab10f14827828132",
+          "packet.json": "71d627c7fcde20371d21ba72601d0f5cc042e930d526992a3210f79b4db7fe52"
+        }
+      },
+      "0000003_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000003_008",
+        "members": {
+          "prediction.npz": "c7a9e237c38acbb557950e278fa38c2e9acf2f803072dc537dc8ad4f1e58e5df",
+          "COMMIT.json": "349ff92f582952159105784420425ac9c5195aeeafcdc07312af817d5b5b4cac",
+          "packet.json": "b657766bf5cb44c639a37d31840acbb5f234b9cbde6b803e5afbeaed06af1543"
+        }
+      },
+      "0000004_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000004_000",
+        "members": {
+          "prediction.npz": "649189f2566b0c73a3db2be2e1420a479bf2edd00160623e727ae5e0af821d9d",
+          "COMMIT.json": "2aa1748ce7d4c2e03b3fbdc7f5b56688e0bedfbafbc48ddff718a4c6cedff607",
+          "packet.json": "2e2a60f6f9f16059875c079492714ecdbd5d5fc8e61cd4d56868a68288789a49"
+        }
+      },
+      "0000004_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000004_001",
+        "members": {
+          "prediction.npz": "0f67a6ceed706da984cabae676b26bad18027aae34eb3c1806397230bbf26d10",
+          "COMMIT.json": "374b226cde34d7e9610b7c977efac9e91c7f25d0a472cd94cc6780e128041c2e",
+          "packet.json": "3ca5af76556923191bfa617db2884836b6864e80d06e16fdf85a9467c3e8f733"
+        }
+      },
+      "0000004_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000004_002",
+        "members": {
+          "prediction.npz": "b2099fa39ec0f7cd577b5a6c636c40eea9eb50254acc5dff577990fe600ee0cf",
+          "COMMIT.json": "c6d26061b07ced44820f48d542bf8f44e6108f40b85ecc2238e5c59b46e76910",
+          "packet.json": "07650ad74fd2d48df75067f21a2ffddecb19e925215f426c0ea2465376c30117"
+        }
+      },
+      "0000004_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000004_003",
+        "members": {
+          "prediction.npz": "a13b913f4343f090ba08564c2a83f9b9b7375f907990642a69bf17d38326d55f",
+          "COMMIT.json": "5f803188e503dccaf0ed4d8d08f32d0554d159c18a3b51922bbdd2b52bdd9eaa",
+          "packet.json": "fe24ffc09350fe6aebe3d9f2de66c7db4700fe74ff9c49dd92f235c9b479e232"
+        }
+      },
+      "0000018_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_000",
+        "members": {
+          "prediction.npz": "0eff663a9116a8a85d70f4aca4ccdaabee03ed5956341c4e75a2a513dc533577",
+          "COMMIT.json": "d2100e4f7e9ca64fc0f54ac9cd6ae0eadbbddc8a5188441bd377c74d6b2c3a1f",
+          "packet.json": "475972e69b996b1366f1eeca8130786f71d29de98f47f0233f1426e1b8c07e83"
+        }
+      },
+      "0000018_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_001",
+        "members": {
+          "prediction.npz": "1a08532173762131871b4c5e68ec372d0af4fa6d5afe9036ff5f962a917a3b07",
+          "COMMIT.json": "583fd6cbe6f70fc83aca7da0a77fe55f393962c7c66d07a56022d916f5f52cb7",
+          "packet.json": "28b30061f74b48376cff3e5ac811981c51bdc2185cf08a3d09631eed1a8e1c37"
+        }
+      },
+      "0000018_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_002",
+        "members": {
+          "prediction.npz": "e4ebcb824dbf825dbd7fb43c453bab5f84c2f3360e338a94c11d36e62899f11e",
+          "COMMIT.json": "55c890dd64978613166e9cd1e946a239f30642e9711c4226ae78fdcb6d6769f5",
+          "packet.json": "52ed6c1140a1f6f5613dabd37f32064f29843db10ebdfce639a6902f00ef5d30"
+        }
+      },
+      "0000018_003": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_003",
+        "members": {
+          "prediction.npz": "543f36d09589ec38e1e900b00dc76a541ff90fcb602e04d76c266950db0a531d",
+          "COMMIT.json": "23148329ac9364b66f921fb57f73b8a49bf370215f87d628f92bc166befc7cba",
+          "packet.json": "31787732d2e4e8ae137de42895098a6dbddd4933b57f39627461585eca4d9f49"
+        }
+      },
+      "0000018_004": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_004",
+        "members": {
+          "prediction.npz": "cf674c0e82a33708dec8ac9399a42964db90a2f71f202bdeca3bc52a9b18c0e1",
+          "COMMIT.json": "4e437b98e07bd93517071acafd1d461f7b9bf417f61636ccb97e3c33f96cd723",
+          "packet.json": "bc33fd1b7dcb95039cdb104f7084587787c2cbe6d40b5042df4fc3f408f975ea"
+        }
+      },
+      "0000018_005": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_005",
+        "members": {
+          "prediction.npz": "28184e766f386b30252e1b170d2b76b05a1341db6ff45bb891918bf9a8bd80bf",
+          "COMMIT.json": "2c81c5acff26812d1167b949c2b3d37bf98e023f5f6fd867e0a03fd36fff8c70",
+          "packet.json": "d1150c8ab0dce6725b4f9b11d775484d34705b1f3122fc54148ccadb4e12d1d3"
+        }
+      },
+      "0000018_006": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_006",
+        "members": {
+          "prediction.npz": "ac9fdfad2761afbb30fba7a3b51defc13326a34905377f065276799df2bf6945",
+          "COMMIT.json": "72c09a6c6d5e64520dd17a02f4e4363fbebdf294b2580a2b0d91335a06b3d283",
+          "packet.json": "a441a64d740458b600c9fd50acae342be1547e70e5c5303d66d0b2b47ab819f5"
+        }
+      },
+      "0000018_007": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_007",
+        "members": {
+          "prediction.npz": "b606a287b89f1c9dbfbd40aca8133ba476d644aaa4a6134e3fc629ace6f33474",
+          "COMMIT.json": "c2cca876498951f44ddc01f2c774171eaf9872e790f6f929557f69983429c0ab",
+          "packet.json": "193fa17cfc3d439a21d80a0dadd4033d3b90e8b20908b47d1b32ca22d4c3e3b1"
+        }
+      },
+      "0000018_008": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_008",
+        "members": {
+          "prediction.npz": "c7e587265c992cd19f83916957b331ec712568c3fc7bf18ef0072697c78a821e",
+          "COMMIT.json": "347ee99803df582a1fceca695a8fe8236166c659fb78269de33a6ed811d58536",
+          "packet.json": "63ea84f8a4654b0fad0459dd46bcf0c3859b0ab955849da3fc552861a5f50903"
+        }
+      },
+      "0000018_009": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_009",
+        "members": {
+          "prediction.npz": "b976b5f011772f95ba58340521bf619313bc901562f2446c4fe7bebd48f5ef94",
+          "COMMIT.json": "0382d51fe2ebe3812e740a4b51cd8799f141e411e10bf955411a805a6c45e4f6",
+          "packet.json": "45b44032db3f55efe8c2ee15b5315071adda9901f318cfc969aead0d004f6a32"
+        }
+      },
+      "0000018_010": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_010",
+        "members": {
+          "prediction.npz": "94e71cb795f069921231bbc155cf853bacf9f19f0dee7a2b6686df5001064201",
+          "COMMIT.json": "e65008deedd76ca345d3c578c0019dd5e57877be4a605db21fb647748c84b8c7",
+          "packet.json": "3a87ffe3a2d684ad54fd78c219a899be962b786af449134d1a99754b462e41cb"
+        }
+      },
+      "0000018_011": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_011",
+        "members": {
+          "prediction.npz": "eae4f7a6bfbd9f84a98f6d6027d6f78eda1db6d64ea3e6c3caf3b2a3894dc292",
+          "COMMIT.json": "901b6915d6641e294728cc358986aa66562b749c1c86ed0ff536392110af0187",
+          "packet.json": "bd630010f3d02ab5e44ac9145b334c105f9b35794685572ca7e1959f5acd7ef0"
+        }
+      },
+      "0000018_012": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_012",
+        "members": {
+          "prediction.npz": "7f156c634d2dbf39d1aafd582b5a9477e1b08acd5ef0afc6a9c75ad33af878da",
+          "COMMIT.json": "9ffc58c0a8efe399fcbdb7202a2207da7eb9aecc78c2d48f0d2121a09dc30ed5",
+          "packet.json": "ace6e2b92843733616e9101cd5d0c03398550563eacf49b74833ad951a451133"
+        }
+      },
+      "0000018_013": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000018_013",
+        "members": {
+          "prediction.npz": "258c7e7e8f17e92667144be6527979f36f3119182cf78e4354e411ef7a9d1fdc",
+          "COMMIT.json": "fd71b531c0352e44a66df7bf1965c79fa873f2129a54d4ab5e62e241f5c7d66a",
+          "packet.json": "d18822ee6d9a7bf6218108a4572e15194b9eddb69167ea53df838565cfe8e019"
+        }
+      },
+      "0000027_000": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000027_000",
+        "members": {
+          "prediction.npz": "3557a2d142d3ae7ee865b7aa61452cf6de17797c9a8e37196aba2a3729a8536a",
+          "COMMIT.json": "f7397f7359ebd702f3635bd0cbd0578c1bb37a4638af1e72edceae2ff8a2c305",
+          "packet.json": "a63aeaa106d69839cfa6fea9372a1f5a2b71f4ad9f899adf6db18335174af000"
+        }
+      },
+      "0000027_001": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000027_001",
+        "members": {
+          "prediction.npz": "b92b5bf8c1dfcc1fda710804e454202a652aa381ed6ad22cebffa913461c2ff0",
+          "COMMIT.json": "e2479a98158851e944bd94e0fb8c47fcd0f38d00ac6751846851b9103d7174a9",
+          "packet.json": "4e3ff571022c4e3b43f46bc992f7aecb3250f23e974d21a2f2469c32bbe0351e"
+        }
+      },
+      "0000027_002": {
+        "packet": "Human_Parsing_Benchmark/outputs/cihp-controlled-continuation-20261103T021021Z/CPI_R50_CIHP/roi_packets/0000027_002",
+        "members": {
+          "prediction.npz": "043bfa386bba01d2ed1324397582d1a4c2b6feb0c2449753cd8c926a8b9f68fa",
+          "COMMIT.json": "157b50baf205dffff7fe7b2ac1a412814bf5631855a3e87d6659d596ac1fcf04",
+          "packet.json": "9daee94cc5e73ac4330435f3fae9a7a6dba2d2ee85b39e002e0eac4b146615e5"
+        }
+      }
+    }
+  },
+  "prior_execution_seconds": {
+    "CPI_R50_CIHP": 72.28077489102725
+  },
+  "prior_stream_bytes": {
+    "CPI_R50_CIHP": 1763199
+  },
+  "pending_call_limits": {
+    "QANet_CIHP_HRNetW48_512x384": 24064,
+    "M2FP_R101_CIHP": 24064,
+    "D2FP_R101_CIHP": 24064,
+    "RPR_CIHP": 24064,
+    "CPI_R50_CIHP": 24030,
+    "CPI_ConvNeXtB_CIHP": 24064,
+    "Sapiens2_0.4b": 24064,
+    "Sapiens2_0.8b": 24064,
+    "Sapiens2_1b": 24064
+  },
+  "continuation_reason": "Own reusable CUDA cache accounting; same1GiB headroom/no allocator or scientific changes",
+  "parent_failure_sha256": "0291e93fb4894a4c67cbb277e2191e9bdfed4cf925ec7d8e5f6aba547fcb53c6",
+  "generated_worker": "Human_Parsing_Benchmark/outputs/cihp-controlled-resources-20261103T062248Z/WORKER_REVISION2.py",
+  "generated_worker_sha256": "1349986cdc9bcf044dabedfd036dd05aef1c67169db959f0b97976762ac66eac",
+  "source_substitutions": [
+    [
+      "    from controlled_roi_models import CropModel",
+      "    CropModel = model_factory"
+    ],
+    [
+      "if time.monotonic()-started > config['max_hours']*3600:",
+      "if time.monotonic()-started+config['prior_execution_seconds'].get(mid,0) > config['max_hours']*3600:"
+    ],
+    [
+      "if max(bytes_written, measured_storage[0]) > config['max_stream_gib']*2**30:",
+      "if max(bytes_written, measured_storage[0])+config['prior_stream_bytes'].get(mid,0) > config['max_stream_gib']*2**30:"
+    ],
+    [
+      "calls >= config['model_call_limit_per_model']:",
+      "calls >= config['pending_call_limits'][mid]:"
+    ],
+    [
+      "            result = model.infer(rgb, path, box)",
+      "            from controlled_roi_models import CropModel as OriginalModel\n            result = OriginalModel.infer(model, rgb, path, box)"
+    ],
+    [
+      "            m, d = frame['member'], frame['detector']\n            iid = m['id']",
+      "            m, d = frame['member'], frame['detector']\n            iid = m['id']\n            reused_frame = config['reuse_frames'].get(mid, {}).get(iid)\n            if reused_frame:\n                verify_reuse(reused_frame)\n                score_path = W/reused_frame['score_path']\n                if sha(score_path) != reused_frame['score_sha256']:\n                    raise ValueError('Parent saved scores changed')\n                evaluation = read(score_path)\n                accumulate(evaluation, iid, accumulator, part_sums)\n                state['completed'] += 1\n                state['reused_frames'] = state.get('reused_frames',0)+1\n                emit(ledger, event='PARENT_FRAME_REUSED', image_id=iid,\n                     parent_packet=reused_frame['packet'], parent_score_sha256=sha(score_path))\n                save()\n                continue"
+    ],
+    [
+      "                (native, candidates, details), timing = infer(crop, path, designated, 'VAL')",
+      "                key = iid+'_%03d'%j\n                reference = config['reuse_ROIs'].get(mid, {}).get(key)\n                if reference:\n                    reused_meta, reused_arrays = verify_reuse(reference)\n                    native = reused_arrays['native_crop_mask']\n                    candidates = reused_arrays['native_candidate_masks']\n                    details = dict(reused_meta['geometry'])\n                    details['parent_reuse_reference'] = reference['packet']\n                    timing = dict(reused_meta['timing'], origin='PARENT_OBSERVATION',\n                                  current_frame_wall_includes_this_forward=False)\n                    state['reused_partial_ROIs'] = state.get('reused_partial_ROIs',0)+1\n                else:\n                    (native, candidates, details), timing = infer(crop, path, designated, 'VAL')"
+    ],
+    [
+      "                roi = write_packet(output/'roi_packets', iid+'_%03d'%j,",
+      "                roi = (W/reference['packet']) if reference else write_packet(output/'roi_packets', iid+'_%03d'%j,"
+    ],
+    [
+      "                bytes_written += sum(p.stat().st_size for p in roi.iterdir() if p.is_file())",
+      "                if not reference:\n                    bytes_written += sum(p.stat().st_size for p in roi.iterdir() if p.is_file())"
+    ],
+    [
+      "        if actual_ids != set(manifest['expected_ids']) or state['ROI_calls'] != config['ROI_count']:",
+      "        actual_ids |= set(config['reuse_frames'].get(mid,{}))\n        reused_ROI_count = len(config['reuse_ROIs'].get(mid,{}))\n        if actual_ids != set(manifest['expected_ids']) or state['ROI_calls']+reused_ROI_count != config['ROI_count']:"
+    ],
+    [
+      "        state.update(status='COMPLETE', primary=result['primary'], ended_utc=utc())",
+      "        assembled = dict(parent_config=config['parent_config'], config_sha256=sha(cp),\n                         expected_ids=manifest['expected_ids'],\n                         parent_frames=config['reuse_frames'].get(mid,{}),\n                         new_packet_root=rel(output/'packets'),\n                         effective_implementation='RPR_ROI_EMPTY_OUTPUT_1' if mid=='RPR_CIHP' else 'PARENT_MODEL_BEHAVIOR',\n                         accepted_ROIs_by_revision={'PARENT':len(config['reuse_ROIs'].get(mid,{})),\n                                                    'CONTINUATION':state['ROI_calls']})\n        atomic(output/'ASSEMBLED_INDEX.json', assembled)\n        state.update(status='COMPLETE', primary=result['primary'], ended_utc=utc())"
+    ],
+    [
+      "        if torch.cuda.mem_get_info()[0] < config['min_forward_free_MiB']*2**20:",
+      "        from controlled_roi_continuation import reusable_memory\n        memory = reusable_memory(torch.cuda.mem_get_info()[0], torch.cuda.memory_allocated(),\n                                 torch.cuda.memory_reserved())\n        state['last_memory_guard'] = memory\n        if memory['effective_available_bytes'] < config['min_forward_free_MiB']*2**20:"
+    ]
+  ],
+  "historical_attempt": {
+    "failed_image": "0000027",
+    "successful_frames": 4,
+    "successful_ROIs": 34,
+    "attempted_VAL_calls": 34,
+    "TRAIN_calls": 2,
+    "retained": true
+  }
+}

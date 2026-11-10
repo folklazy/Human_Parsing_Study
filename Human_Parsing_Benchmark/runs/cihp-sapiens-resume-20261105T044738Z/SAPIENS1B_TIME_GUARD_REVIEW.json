@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-06T17:05:51.585401+07:00",
+  "run_id": "cihp-sapiens-resume-20261105T044738Z",
+  "model_id": "Sapiens2_1b",
+  "status": "STOPPED_RESOURCE_TIME_GUARD_REQUIRES_RECONCILIATION",
+  "manifest_sha256": "e77b5ad81ce6be8e0e6ebd88bfcec470fb4a7a69fb53cddbbd49103b6df16424",
+  "expected_unique_ids": 5000,
+  "frame_packet_directories_with_required_files": 4222,
+  "score_file_ids": 4222,
+  "membership_sets_equal": true,
+  "unknown_ids": 0,
+  "missing_frame_ids": 778,
+  "missing_ids_sha256": "985efab553e63698fd607efbf275fc994f577f9c8e2dd14313ff404cc8e9565d",
+  "roi_packet_directories": 20101,
+  "max_hours": 24,
+  "execution_wall_seconds": 86402.74051067303,
+  "started_utc": "2026-11-05T08:22:22.672558+00:00",
+  "ended_utc": "2026-11-06T08:22:25.406578+00:00",
+  "terminal_error": "RuntimeError('RESOURCE_TIME_GUARD')",
+  "failed_counter": 1,
+  "invalid_counter": 0,
+  "primary": null,
+  "inspection_scope": "Manifest hash, terminal records, frame packet filenames/required member presence and score-ID membership only; not a fresh NPZ/content/hash acceptance or full rescore. Partial ROI packets retained for controlled reconciliation.",
+  "sam31_overlap": "Separate SAM3.1 labeling setup/inference shared the T4 approximately 2026-11-06 14:09–14:15 Asia/Bangkok; stopped at 14:15:48. Causal slowdown not measured. Immediate stop is configured wall-time guard, not evidence of OOM.",
+  "next_action": "Keep all artifacts; reconcile frame and partial ROI packets and obtain an explicit per-model time-budget amendment before launching a fresh linked continuation; do not reset the accumulated 24h counter. No new GPU work launched.",
+  "source_record_sha256": {
+    "CONFIG.json": "04135c71b6ed41c4a8456443420ecd6cd5f0a095664c1e5dd2a4f8fe645ccbce",
+    "Sapiens2_1b/STATE.json": "b36b015723d19cddba3b02432c5e4a4e6f606ff49a0a71450664b8eda5ced51d",
+    "Sapiens2_1b/COMPLETION.json": "cdf286f79d5a9d71f5819e581af92ad0fa56e61d8e7de7125186beae96070a85",
+    "Sapiens2_1b/FAILURE.json": "bf1dbcca8c44fb063be81c6d67ce027daed5761ad228bd98f33d82f694b05fe1",
+    "Sapiens2_1b.log": "203da663cd5a1e1ab24ea2a2203b85431cb0a04b5388491651ce31e888fe93fb"
+  }
+}

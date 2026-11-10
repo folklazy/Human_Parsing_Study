@@ -1,0 +1,82 @@
+{
+  "protocol_id": "SHARED_C3_PART_FACE_LOCAL_V1",
+  "status": "FROZEN_FOR_USER_AUTHORIZED_SAVED_MASK_SCORING",
+  "frozen_utc": "2026-11-08T08:35:24.430876+00:00",
+  "user_authority": "User approves shared Hair/Upper/Lower plus GT-Face-box local IoU on both CIHP and CCTV; no model inference",
+  "post_hoc": true,
+  "preregistered": false,
+  "datasets": {
+    "CIHP": 5000,
+    "CCTV": 90
+  },
+  "checkpoints": 9,
+  "mapping_source": "Human_Parsing_Benchmark/protocol/CIHP_SAPIENS_COMMON_VIEW_REVISION2.json",
+  "mapping_sha256": "7fb101672407d465885efcc00202af927e93cd422daeae42bf215cbe504cd33d",
+  "targets": {
+    "1": "Face_local",
+    "2": "Hair",
+    "3": "Upper",
+    "4": "Lower"
+  },
+  "prediction_contract": "Original-grid integer per-person planes/extents/scores; preserve native ownership. Recognized OTHER includes Dress/Apparel. Unknown or prediction255 is contract failure. No prediction edited from GT.",
+  "matching": {
+    "source": "common_view.core.match_geometry",
+    "IoU_threshold_primary": 0.5,
+    "supplementary_threshold": 0.75,
+    "objective": "maximum cardinality, then sum mask IoU, geometry-canonical deterministic ties; identical geometry fallback and ambiguity reported",
+    "GT_extents_independent_of_semantic_VOID": true,
+    "scores_not_used_to_pick_GT_assignment": true
+  },
+  "GT": {
+    "CIHP": "Frozen native20+Human IDs; source255 VOID, semantic owner unknown (category>0 human0) excluded from semantic tasks; localization extent=(human==pid)&source valid",
+    "CCTV": "User-accepted original-grid derived person/part masks, 127 reference persons. All positive part masks used, no prior 61/21/112/96 exclusions imported. Shared semantic VOID=GT person-overlap OR cross-target semantic overlap. No global-scene negatives inferred. Missing target polygon is not a negative/absent test.",
+    "eligibility": "One union mask per GT person+target; eligible iff positive support in shared semantic-valid domain. Count parts before/after shared VOID.",
+    "person_extent_note": "CCTV reference quality accepted by user; not independent expert gold; this run does not change GT geometry to improve detector matching"
+  },
+  "C3": {
+    "task": "Positive GT-person-part overlap for Hair/Upper/Lower on original-grid semantic-valid domain; other pixels in the matched person plane remain negative for this owner-specific part task",
+    "aggregation": "mean IoU across eligible GT person-parts within each target, then equal mean of three target means",
+    "name": "mIoU3_part_mean",
+    "not_equivalent_to": "Frozen global C3 or whole-scene semantic mIoU",
+    "Face_remains_valid_non_target": true,
+    "missed_GT_person": "GT part remains in denominator with IoU0",
+    "unmatched_predictions": "Not directly penalized in part mean; report GT-reference localization FP/F1 separately"
+  },
+  "Face_local": {
+    "box": "Tight axis-aligned bbox of raw GT Face mask BEFORE shared VOID; max x/y plus1 exclusive; no margin",
+    "domain": "bbox AND same GT-only semantic-valid mask for every model",
+    "prediction": "CIHP Face13, or Sapiens Face_Neck3+24..28, using unchanged common projection",
+    "counts": "TP=(G&P&D), FP=(~G&P&D), FN=(G&~P&D); outside D ignored, never intersect prediction with GT shape",
+    "aggregation": "Mean IoU across all eligible GT-person Face masks; unmatched GT person contributes0",
+    "not_claimed": "Anatomical face-only equivalence, face detection without GT boxes, or penalty for overprediction outside GT box",
+    "CCTV_previous_Neck_ignore": "Not imported. No model-specific Neck exclusion; native predictions preserved.",
+    "separate_from_C3": true
+  },
+  "reporting": {
+    "primary": [
+      "mIoU3_part_mean",
+      "Face_local_IoU_separate"
+    ],
+    "per_target": [
+      "mean_part_IoU",
+      "pooled_IoU",
+      "precision",
+      "recall",
+      "F1_Dice",
+      "TP",
+      "FP",
+      "FN",
+      "GT_support",
+      "union",
+      "eligible_parts",
+      "unmatched_GT_parts"
+    ],
+    "no_new_weighted_overall": true,
+    "comparison_unit": "Pretrained checkpoint + frozen YOLO-controlled application configuration",
+    "dataset_scores_not_pooled": true,
+    "timing": "New CPU scoring wall time is not model inference speed; no latency/FPS/VRAM ranking"
+  },
+  "completeness": "STRICT_COMPLETE exact expected image IDs separately for each dataset/checkpoint; primary null on missing/duplicate/invalid/errors",
+  "execution": "CPU streaming, immutable source bindings, single writer lock, SQLite unique keys+FULL sync, atomic per-image transactions, explicit fingerprint-checked resume. No inference/training/OOM retries/fallback.",
+  "source_results_preserved": true
+}

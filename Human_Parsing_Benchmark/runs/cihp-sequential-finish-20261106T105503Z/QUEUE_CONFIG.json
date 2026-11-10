@@ -1,0 +1,37 @@
+{
+  "queue_id": "cihp-sequential-finish-20261106T105503Z",
+  "created_utc": "2026-11-06T10:55:03.991774+00:00",
+  "jobs": [
+    {
+      "model_id": "Sapiens2_1b",
+      "config": "Human_Parsing_Benchmark/outputs/cihp-pending-sapiens2_1b-20261106T105013Z/CONFIG.json",
+      "config_sha256": "781dd986926381c45a4922c744fe1c8872a98edbb08e50c0c18003bca08d2db1",
+      "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-pending-sapiens2_1b-20261106T105013Z",
+      "accepted_frames": 4268,
+      "pending_frames": 732,
+      "accepted_ROIs": 20356,
+      "pending_ROIs": 3706,
+      "implementation_revision": "PARENT_MODEL_BEHAVIOR",
+      "prior_execution_seconds": 87757.28309033113
+    },
+    {
+      "model_id": "CPI_ConvNeXtB_CIHP",
+      "config": "Human_Parsing_Benchmark/outputs/cihp-pending-cpi_convnextb_cihp-20261106T105013Z/CONFIG.json",
+      "config_sha256": "70d6b730307c29bf70a948d86833b6e4c69acb8aa724bc39b3ec0680d1b8c6a4",
+      "artifact_root": "Human_Parsing_Benchmark/outputs/cihp-pending-cpi_convnextb_cihp-20261106T105013Z",
+      "accepted_frames": 4335,
+      "pending_frames": 665,
+      "accepted_ROIs": 20702,
+      "pending_ROIs": 3360,
+      "implementation_revision": "CPI_FEATURE_BRANCH_SCHEDULE_3",
+      "prior_execution_seconds": 15590.660091415048
+    }
+  ],
+  "controller_python": ".venvs/sapiens2-pilot/bin/python",
+  "runner": "Human_Parsing_Benchmark/scripts/resume_controlled_cihp_pending.py",
+  "queue_source_sha256": "de5df6c9f79f447d716f5e5dd022863a95f8b8bb2a25e5a3fa7e67beed578ab2",
+  "order": "Sapiens2_1b COMPLETE and exited -> CPI_ConvNeXtB_CIHP",
+  "concurrent_GPU_workers": 1,
+  "automatic_retries": 0,
+  "progress_poll_seconds": 30
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-03T06:23:27.155687+00:00",
+  "cases_per_environment": 4,
+  "environments": [
+    ".venvs/parser-legacy-cu113",
+    ".venvs/sapiens2-pilot"
+  ],
+  "source_hashes": {
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp_resources.py": "0781167e38fd0c2beb8e708ef34bfa5919082213ce74cc1b1cb1a16bf949690e",
+    "Human_Parsing_Benchmark/tests/test_controlled_cihp_resources.py": "ace58203025a66dea581722a9bf24be93290bcbfc955817cf58bbf77843fad36",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_continuation.py": "4b6b4307a7848ed8fec9ecac2b90a800be89b7e2c58a5cff37199b4bcef867b5"
+  },
+  "memory_equation": "device_free + own_reserved - own_allocated",
+  "threshold_MiB": 1024,
+  "own_allocated_excluded": true,
+  "contiguous_allocation_guaranteed": false,
+  "inherited_guard_constants": {
+    "stream_GiB": 80,
+    "free_disk_GiB": 50,
+    "execution_hours": 24,
+    "queue_timeout_seconds": 600
+  },
+  "new_model_calls": 0,
+  "model_OOM_retry": 0,
+  "precision_resolution_thresholds_unchanged": true,
+  "reconciliation": {
+    "status": "PASS",
+    "parent_run": "cihp-controlled-continuation-20261103T021021Z",
+    "completed_models_reused": [
+      "QANet_CIHP_HRNetW48_512x384",
+      "M2FP_R101_CIHP",
+      "D2FP_R101_CIHP",
+      "RPR_CIHP"
+    ],
+    "accepted_frames": 4,
+    "accepted_ROIs": 34,
+    "partial_frame": "0000027",
+    "partial_frame_accepted_ROIs": 3,
+    "missing_ROIs": 24028,
+    "failure_preserved": true,
+    "model_inference_calls": 0,
+    "source_revision": "OWN_REUSABLE_CUDA_CACHE_ACCOUNTING_1"
+  }
+}

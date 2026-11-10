@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-03T02:10:26.145232+00:00",
+  "tests_per_environment": 5,
+  "environments": [
+    ".venvs/parser-legacy-cu113",
+    ".venvs/sapiens2-pilot"
+  ],
+  "cases": [
+    "empty native count0 skips parsing field",
+    "nonempty missing parsing fails",
+    "bounded pending/time/storage source substitutions",
+    "atomic reuse hash drift rejected",
+    "saved score accumulation literal denominators"
+  ],
+  "source_hashes": {
+    "Human_Parsing_Benchmark/scripts/continue_controlled_cihp.py": "d1707c4e3dc111f3948d8731675981c5e278d906bbb15eb5144a830ba8641f4e",
+    "Human_Parsing_Benchmark/tests/test_controlled_cihp_continuation.py": "5a7155e0d6e4cefb7eb5853caeacea15bd838033e7c57e0599cf5fb3f9273fd6",
+    "CCTV_Human_Parsing_Benchmark/scripts/controlled_roi_continuation.py": "4b6b4307a7848ed8fec9ecac2b90a800be89b7e2c58a5cff37199b4bcef867b5"
+  },
+  "reconciliation": {
+    "status": "PASS",
+    "parent_run": "cihp-controlled-roi-20261102T120403Z",
+    "completed_models_reused": [
+      "QANet_CIHP_HRNetW48_512x384",
+      "M2FP_R101_CIHP",
+      "D2FP_R101_CIHP"
+    ],
+    "accepted_frames": 22,
+    "accepted_ROIs": 149,
+    "partial_frame": "0000312",
+    "partial_frame_accepted_ROIs": 2,
+    "missing_ROIs": 23913,
+    "failure_preserved": true,
+    "model_inference_calls": 0,
+    "source_revision": "RPR_ROI_EMPTY_OUTPUT_1"
+  },
+  "original_scientific_inputs": "checkpoint/input/context/precision/preprocessing/TTA/ownership/mapping/GT/scorer unchanged",
+  "inherited_CPU_acceptance": "Human_Parsing_Benchmark/reports/CONTROLLED_CIHP_CPU_ACCEPTANCE.json",
+  "GPU_status": "TRAIN original-vs-fixed parity gate pending; failed ROI will be attempted once canonically",
+  "parent_history_retained": true,
+  "automatic_model_retry": 0,
+  "historical_RPR_VAL_calls": 150,
+  "historical_RPR_TRAIN_calls": 2,
+  "new_RPR_VAL_call_cap": 23913,
+  "new_RPR_TRAIN_call_cap": 2,
+  "max_RPR_attempt_calls_including_failure": 24067,
+  "limitations": [
+    "Parity sample supports tested nonempty path, no population-wide bitwise claim",
+    "Empty native prediction is scored normally, no GT omission or filled silhouette"
+  ]
+}
